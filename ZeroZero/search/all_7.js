@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['mouse_5fmode_5fhidden_0',['MOUSE_MODE_HIDDEN',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eafe48ffa222eb6cfcf2cd40e7a368ecc7',1,'z0']]],
-  ['mouse_5fmode_5fhidden_5fcaptured_1',['MOUSE_MODE_HIDDEN_CAPTURED',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eabbf8e0d256d8baa4e7f3f87d2c5d9be9',1,'z0']]],
-  ['mouse_5fmode_5fvisible_2',['MOUSE_MODE_VISIBLE',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75ea6d5dddd6c75f45a84dba7e13ded072db',1,'z0']]],
-  ['mouse_5fmode_5fvisible_5fcaptured_3',['MOUSE_MODE_VISIBLE_CAPTURED',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eacd74913c314282b8ddada01ef4fec689',1,'z0']]],
-  ['mousebutton_4',['MouseButton',['../constants_8h.html#a2a9543b764a37cf88ddde13d4dd9fd7d',1,'z0']]],
-  ['mousemode_5',['MouseMode',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75e',1,'z0']]],
-  ['msaa_6',['MSAA',['../constants_8h.html#afd09cc074c192aea75e7e7fb09f618eb',1,'z0']]],
-  ['msaa_7',['msaa',['../structz0_1_1_application_config.html#a63fdffb03737eedfebfa6ae891c29cc4',1,'z0::ApplicationConfig']]]
+  ['key_0',['Key',['../constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73',1,'z0']]],
+  ['key_5fmodifier_5falt_1',['KEY_MODIFIER_ALT',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc',1,'z0']]],
+  ['key_5fmodifier_5fcontrol_2',['KEY_MODIFIER_CONTROL',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38',1,'z0']]],
+  ['key_5fmodifier_5fshift_3',['KEY_MODIFIER_SHIFT',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da057141873e9fc51dcf286874a2034d2c',1,'z0']]],
+  ['keymodifier_4',['KeyModifier',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493d',1,'z0']]]
 ];

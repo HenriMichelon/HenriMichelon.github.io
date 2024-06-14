@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['process_5fmode_5falways_0',['PROCESS_MODE_ALWAYS',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a7e6afc9ea784cc9e2cbe53e63c486ec4',1,'z0']]],
-  ['process_5fmode_5fdisabled_1',['PROCESS_MODE_DISABLED',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a107f2d6c56c0e769994569519ddbde3f',1,'z0']]],
-  ['process_5fmode_5finherit_2',['PROCESS_MODE_INHERIT',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a3bea71de09a509d885d1b8066f3e1a8c',1,'z0']]],
-  ['process_5fmode_5fpausable_3',['PROCESS_MODE_PAUSABLE',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365af7be55176fdb35a2b2153107da854a35',1,'z0']]],
-  ['process_5fmode_5fwhen_5fpaused_4',['PROCESS_MODE_WHEN_PAUSED',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365aa97575ba53a1b0db3e3c757660d29bba',1,'z0']]]
+  ['input_5fevent_5fgamepad_5fbutton_0',['INPUT_EVENT_GAMEPAD_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaeea50e557283275cde1915bc2ee35c21',1,'z0']]],
+  ['input_5fevent_5fkey_1',['INPUT_EVENT_KEY',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf09f2e0e408caf4f871bca463f892534',1,'z0']]],
+  ['input_5fevent_5fmouse_5fbutton_2',['INPUT_EVENT_MOUSE_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf7c6e14b73d1e04a50485506b665b982',1,'z0']]],
+  ['input_5fevent_5fmouse_5fmotion_3',['INPUT_EVENT_MOUSE_MOTION',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faa73867efefd5ecc227aeda2c64a1a5adc',1,'z0']]]
 ];

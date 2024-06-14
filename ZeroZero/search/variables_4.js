@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamma_0',['gamma',['../structz0_1_1_application_config.html#ae34539f972008757d38ddc88e60e91fb',1,'z0::ApplicationConfig']]]
+  ['gamma_0',['gamma',['../structz0_1_1_application_config.html#a44978e15ba7fdb6b664ea10411fbe69d',1,'z0::ApplicationConfig']]]
 ];

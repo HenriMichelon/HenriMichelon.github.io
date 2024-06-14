@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gamepadaxis_0',['GamepadAxis',['../constants_8h.html#a241e63088464229603aa137d639e489c',1,'z0']]],
-  ['gamepadaxisjoystick_1',['GamepadAxisJoystick',['../constants_8h.html#a9ce2c18c4326107e43a1496dc19a00ff',1,'z0']]],
-  ['gamepadbutton_2',['GamepadButton',['../constants_8h.html#a8bb81cd7eae72ecd483e59b6585d1976',1,'z0']]]
+  ['gamepadaxis_0',['GamepadAxis',['../constants_8h.html#a2f6dea2b13a0a246a2c7fbed4cf05c8e',1,'z0']]],
+  ['gamepadaxisjoystick_1',['GamepadAxisJoystick',['../constants_8h.html#aab3907749b4d4887fa2b3a0ecc03798d',1,'z0']]],
+  ['gamepadbutton_2',['GamepadButton',['../constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596f',1,'z0']]]
 ];

@@ -1,14 +1,18 @@
 var searchData=
 [
-  ['gamepadaxis_0',['GamepadAxis',['../constants_8h.html#a241e63088464229603aa137d639e489c',1,'z0']]],
-  ['gamepadaxisjoystick_1',['GamepadAxisJoystick',['../constants_8h.html#a9ce2c18c4326107e43a1496dc19a00ff',1,'z0']]],
-  ['gamepadbutton_2',['GamepadButton',['../constants_8h.html#a8bb81cd7eae72ecd483e59b6585d1976',1,'z0']]],
-  ['gamma_3',['gamma',['../structz0_1_1_application_config.html#ae34539f972008757d38ddc88e60e91fb',1,'z0::ApplicationConfig']]],
-  ['get_4',['get',['../classz0_1_1_application.html#a60d5a4ebf6a9b4b405b58006a34f6a18',1,'z0::Application']]],
-  ['getconfig_5',['getConfig',['../classz0_1_1_application.html#acad53f4b2e0af57d4187fc8155c66ef1',1,'z0::Application']]],
-  ['getfps_6',['getFPS',['../classz0_1_1_application.html#ae7ed3c9688efa47c274b1e5ca6733216',1,'z0::Application']]],
-  ['getgravity_7',['getGravity',['../classz0_1_1_application.html#add8086edb0b5ff941cfe5e4b2c760774',1,'z0::Application']]],
-  ['getheight_8',['getHeight',['../classz0_1_1_window.html#ada40f8f10f021cf55b9c71d577634d4e',1,'z0::Window']]],
-  ['getwidth_9',['getWidth',['../classz0_1_1_window.html#a11999f4b5bc0c7783a83f73bc7446da1',1,'z0::Window']]],
-  ['getwindow_10',['getWindow',['../classz0_1_1_application.html#a654f322acdc1f457890607d6af4e4b6d',1,'z0::Application']]]
+  ['gamepadaxis_0',['GamepadAxis',['../constants_8h.html#a2f6dea2b13a0a246a2c7fbed4cf05c8e',1,'z0']]],
+  ['gamepadaxisjoystick_1',['GamepadAxisJoystick',['../constants_8h.html#aab3907749b4d4887fa2b3a0ecc03798d',1,'z0']]],
+  ['gamepadbutton_2',['GamepadButton',['../constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596f',1,'z0']]],
+  ['gamma_3',['gamma',['../structz0_1_1_application_config.html#a44978e15ba7fdb6b664ea10411fbe69d',1,'z0::ApplicationConfig']]],
+  ['get_4',['get',['../classz0_1_1_application.html#aae6e8e10b0079e2597afed1ef245edbf',1,'z0::Application']]],
+  ['getconfig_5',['getConfig',['../classz0_1_1_application.html#a16c0b850bb6155c4b32ef3d3b55cd80a',1,'z0::Application']]],
+  ['getconnectedjoypads_6',['getConnectedJoypads',['../classz0_1_1_input.html#a3260587c6016e67cc4197d355ae1fa95',1,'z0::Input']]],
+  ['getfps_7',['getFPS',['../classz0_1_1_application.html#a7ab50866951aa9591052e13d4bc3d894',1,'z0::Application']]],
+  ['getgamepadvector_8',['getGamepadVector',['../classz0_1_1_input.html#a0b30c69fa4c16e48e3603882257d592d',1,'z0::Input']]],
+  ['getgravity_9',['getGravity',['../classz0_1_1_application.html#a65a449ef4b95351bb4d7bdf34edeb04b',1,'z0::Application']]],
+  ['getheight_10',['getHeight',['../classz0_1_1_window.html#a41bfc989babe0999be4037c5b68119b5',1,'z0::Window']]],
+  ['getjoypadname_11',['getJoypadName',['../classz0_1_1_input.html#af21f72c264eb8132460cf0082ed50362',1,'z0::Input']]],
+  ['getkeyboardvector_12',['getKeyboardVector',['../classz0_1_1_input.html#ae01d8e5398390c43e8d89f52bd204564',1,'z0::Input']]],
+  ['getwidth_13',['getWidth',['../classz0_1_1_window.html#aca1b996bfd42e4d13365709e3fcab072',1,'z0::Window']]],
+  ['getwindow_14',['getWindow',['../classz0_1_1_application.html#a5e04b7e7c40c3a4d6480de6a075eceb1',1,'z0::Application']]]
 ];

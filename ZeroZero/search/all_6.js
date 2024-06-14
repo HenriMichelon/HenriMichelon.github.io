@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['key_0',['Key',['../constants_8h.html#a3e09d6252f42524e93c090cee7d04b79',1,'z0']]],
-  ['keymodifier_1',['KeyModifier',['../constants_8h.html#a15fbf27c49290921867eeca0237392ac',1,'z0']]]
+  ['input_0',['Input',['../classz0_1_1_input.html',1,'z0']]],
+  ['input_5fevent_5fgamepad_5fbutton_1',['INPUT_EVENT_GAMEPAD_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaeea50e557283275cde1915bc2ee35c21',1,'z0']]],
+  ['input_5fevent_5fkey_2',['INPUT_EVENT_KEY',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf09f2e0e408caf4f871bca463f892534',1,'z0']]],
+  ['input_5fevent_5fmouse_5fbutton_3',['INPUT_EVENT_MOUSE_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf7c6e14b73d1e04a50485506b665b982',1,'z0']]],
+  ['input_5fevent_5fmouse_5fmotion_4',['INPUT_EVENT_MOUSE_MOTION',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faa73867efefd5ecc227aeda2c64a1a5adc',1,'z0']]],
+  ['inputeventtype_5',['InputEventType',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95fa',1,'z0']]],
+  ['installation_6',['Installation',['../index.html#install_sec',1,'']]],
+  ['intersect_7',['intersect',['../structz0_1_1_rect.html#a0f8e33eb47d6f6c1220ebe9d4b67305b',1,'z0::Rect']]],
+  ['isgamepad_8',['isGamepad',['../classz0_1_1_input.html#a6955d0a1d3d4cd01ef018fc50b06174b',1,'z0::Input']]],
+  ['isgamepadbuttonpressed_9',['isGamepadButtonPressed',['../classz0_1_1_input.html#a432c67430842463a385586c9ca74c8b7',1,'z0::Input']]],
+  ['iskeyjustpressed_10',['isKeyJustPressed',['../classz0_1_1_input.html#a81955d2b4d9a17c8bf88060a957c6139',1,'z0::Input']]],
+  ['iskeyjustreleased_11',['isKeyJustReleased',['../classz0_1_1_input.html#a0f3e046b5165de030eb976928cc9cbc3',1,'z0::Input']]],
+  ['iskeypressed_12',['isKeyPressed',['../classz0_1_1_input.html#ae86665d7f8778af8a840a1a6562ce96a',1,'z0::Input']]],
+  ['ismousebuttonjustpressed_13',['isMouseButtonJustPressed',['../classz0_1_1_input.html#aa5c17ee856968e478eec91d4365b3ddd',1,'z0::Input']]],
+  ['ismousebuttonjustreleased_14',['isMouseButtonJustReleased',['../classz0_1_1_input.html#a8c1182c0f8f14f7c582d278608e2538c',1,'z0::Input']]],
+  ['ismousebuttonpressed_15',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]],
+  ['ispaused_16',['isPaused',['../classz0_1_1_application.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'z0::Application']]]
 ];
