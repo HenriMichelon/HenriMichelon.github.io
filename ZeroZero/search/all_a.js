@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removewindow_0',['removeWindow',['../classz0_1_1_application.html#a0f4a41b2b9a1821cba1eb1ee1dcbde16',1,'z0::Application']]]
+  ['quit_0',['quit',['../classz0_1_1_application.html#ade47531bc6d4acaf7b87b809e269178e',1,'z0::Application']]]
 ];

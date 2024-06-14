@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tostring_0',['toString',['../classz0_1_1_object.html#a137d518cbb1487ac0479206fa8a3b414',1,'z0::Object::toString()'],['../classz0_1_1_window.html#a73c2cb07f57aa8c590943623316de215',1,'z0::Window::toString()']]],
-  ['transform_5fbasis_1',['TRANSFORM_BASIS',['../constants_8h.html#a54499baf296b6b0a301f383a9717c031',1,'z0']]]
+  ['setpaused_0',['setPaused',['../classz0_1_1_application.html#a55ba9b045bde0c08812aa2b780894246',1,'z0::Application']]],
+  ['setrootnode_1',['setRootNode',['../classz0_1_1_application.html#ae82559e87d22c79bb643e28a65f99abc',1,'z0::Application']]]
 ];

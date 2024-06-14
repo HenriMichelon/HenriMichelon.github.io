@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['window_0',['Window',['../classz0_1_1_window.html',1,'z0']]],
-  ['window_5fclear_5fcolor_1',['WINDOW_CLEAR_COLOR',['../constants_8h.html#afa654ee17e8ae4db11bbd44b6b338541',1,'z0']]],
-  ['windowheight_2',['windowHeight',['../structz0_1_1_application_config.html#a0b63db942e274d1fc110e47e30d5b83c',1,'z0::ApplicationConfig']]],
-  ['windowmode_3',['windowMode',['../structz0_1_1_application_config.html#a143421b6fe54a60e0b807790b5dc74d8',1,'z0::ApplicationConfig']]],
-  ['windowwidth_4',['windowWidth',['../structz0_1_1_application_config.html#afb565e9d0f82bf6dde1353c8d1ccb81c',1,'z0::ApplicationConfig']]]
+  ['vec2zero_0',['VEC2ZERO',['../constants_8h.html#a66d11f46ee6d855bc6b9c592461d0ac2',1,'z0']]],
+  ['vec3zero_1',['VEC3ZERO',['../constants_8h.html#a7ca8f990bf318c038cb40a7a7de68807',1,'z0']]],
+  ['vector_5fscale_2',['VECTOR_SCALE',['../constants_8h.html#ac2cac74baa447da64d9700113e913fe5',1,'z0']]]
 ];

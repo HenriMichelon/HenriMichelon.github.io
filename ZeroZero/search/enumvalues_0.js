@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['process_5fmode_5falways_0',['PROCESS_MODE_ALWAYS',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a7e6afc9ea784cc9e2cbe53e63c486ec4',1,'z0']]],
-  ['process_5fmode_5fdisabled_1',['PROCESS_MODE_DISABLED',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a107f2d6c56c0e769994569519ddbde3f',1,'z0']]],
-  ['process_5fmode_5finherit_2',['PROCESS_MODE_INHERIT',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365a3bea71de09a509d885d1b8066f3e1a8c',1,'z0']]],
-  ['process_5fmode_5fpausable_3',['PROCESS_MODE_PAUSABLE',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365af7be55176fdb35a2b2153107da854a35',1,'z0']]],
-  ['process_5fmode_5fwhen_5fpaused_4',['PROCESS_MODE_WHEN_PAUSED',['../constants_8h.html#a7ff11ceefe58dd868af6eef1fa913365aa97575ba53a1b0db3e3c757660d29bba',1,'z0']]]
+  ['mouse_5fmode_5fhidden_0',['MOUSE_MODE_HIDDEN',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eafe48ffa222eb6cfcf2cd40e7a368ecc7',1,'z0']]],
+  ['mouse_5fmode_5fhidden_5fcaptured_1',['MOUSE_MODE_HIDDEN_CAPTURED',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eabbf8e0d256d8baa4e7f3f87d2c5d9be9',1,'z0']]],
+  ['mouse_5fmode_5fvisible_2',['MOUSE_MODE_VISIBLE',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75ea6d5dddd6c75f45a84dba7e13ded072db',1,'z0']]],
+  ['mouse_5fmode_5fvisible_5fcaptured_3',['MOUSE_MODE_VISIBLE_CAPTURED',['../constants_8h.html#a681f1534759e9c6e6c2c17f12943a75eacd74913c314282b8ddada01ef4fec689',1,'z0']]]
 ];

@@ -4,6 +4,7 @@ var classz0_1_1_application =
     [ "addWindow", "classz0_1_1_application.html#ae1a42800d1675ad07a259f50608552ef", null ],
     [ "getConfig", "classz0_1_1_application.html#acad53f4b2e0af57d4187fc8155c66ef1", null ],
     [ "getFPS", "classz0_1_1_application.html#ae7ed3c9688efa47c274b1e5ca6733216", null ],
+    [ "getGravity", "classz0_1_1_application.html#add8086edb0b5ff941cfe5e4b2c760774", null ],
     [ "getWindow", "classz0_1_1_application.html#a654f322acdc1f457890607d6af4e4b6d", null ],
     [ "isPaused", "classz0_1_1_application.html#aabee3fb85fd8b3969fe2f6e31e876ff5", null ],
     [ "quit", "classz0_1_1_application.html#ade47531bc6d4acaf7b87b809e269178e", null ],
