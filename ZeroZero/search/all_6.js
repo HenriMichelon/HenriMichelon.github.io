@@ -20,5 +20,6 @@ var searchData=
   ['ismousebuttonjustreleased_17',['isMouseButtonJustReleased',['../classz0_1_1_input.html#a8c1182c0f8f14f7c582d278608e2538c',1,'z0::Input']]],
   ['ismousebuttonpressed_18',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]],
   ['ispaused_19',['isPaused',['../classz0_1_1_application.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'z0::Application']]],
-  ['ispressed_20',['isPressed',['../classz0_1_1_input_event_key.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventKey::isPressed()'],['../classz0_1_1_input_event_gamepad_button.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventGamepadButton::isPressed()']]]
+  ['ispressed_20',['isPressed',['../classz0_1_1_input_event_key.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventKey::isPressed()'],['../classz0_1_1_input_event_gamepad_button.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventGamepadButton::isPressed()']]],
+  ['isvisible_21',['isVisible',['../classz0_1_1_g_window.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'z0::GWindow']]]
 ];
