@@ -5,6 +5,7 @@ var annotated_dup =
       [ "ApplicationConfig", "structz0_1_1_application_config.html", "structz0_1_1_application_config" ],
       [ "Color", "structz0_1_1_color.html", "structz0_1_1_color" ],
       [ "GManager", "classz0_1_1_g_manager.html", "classz0_1_1_g_manager" ],
+      [ "GText", "classz0_1_1_g_text.html", null ],
       [ "GWindow", "classz0_1_1_g_window.html", "classz0_1_1_g_window" ],
       [ "Input", "classz0_1_1_input.html", null ],
       [ "InputEvent", "classz0_1_1_input_event.html", "classz0_1_1_input_event" ],

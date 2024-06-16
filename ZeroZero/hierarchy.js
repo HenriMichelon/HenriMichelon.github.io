@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
     [ "Color", "structz0_1_1_color.html", null ],
+    [ "GText", "classz0_1_1_g_text.html", null ],
     [ "GWindow", "classz0_1_1_g_window.html", null ],
     [ "Input", "classz0_1_1_input.html", null ],
     [ "Loader", "classz0_1_1_loader.html", null ],

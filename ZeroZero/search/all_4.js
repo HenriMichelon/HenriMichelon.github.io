@@ -57,5 +57,6 @@ var searchData=
   ['getx_54',['getX',['../classz0_1_1_input_event_mouse_motion.html#a1da8aa3a43aa06db29c286dc0a87987a',1,'z0::InputEventMouseMotion::getX()'],['../classz0_1_1_input_event_mouse_button.html#a1da8aa3a43aa06db29c286dc0a87987a',1,'z0::InputEventMouseButton::getX()']]],
   ['gety_55',['getY',['../classz0_1_1_input_event_mouse_motion.html#a0a3f71b2c1cfb1387019fc4c32f9994c',1,'z0::InputEventMouseMotion::getY()'],['../classz0_1_1_input_event_mouse_button.html#a0a3f71b2c1cfb1387019fc4c32f9994c',1,'z0::InputEventMouseButton::getY()']]],
   ['gmanager_56',['GManager',['../classz0_1_1_g_manager.html',1,'z0']]],
-  ['gwindow_57',['GWindow',['../classz0_1_1_g_window.html',1,'GWindow'],['../classz0_1_1_g_window.html#a826765dcff7d9d14dc2cec34de1678bb',1,'z0::GWindow::GWindow()']]]
+  ['gtext_57',['GText',['../classz0_1_1_g_text.html',1,'z0']]],
+  ['gwindow_58',['GWindow',['../classz0_1_1_g_window.html',1,'GWindow'],['../classz0_1_1_g_window.html#a826765dcff7d9d14dc2cec34de1678bb',1,'z0::GWindow::GWindow()']]]
 ];
