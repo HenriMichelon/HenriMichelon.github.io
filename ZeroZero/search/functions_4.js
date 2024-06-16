@@ -9,5 +9,6 @@ var searchData=
   ['ismousebuttonjustpressed_6',['isMouseButtonJustPressed',['../classz0_1_1_input.html#aa5c17ee856968e478eec91d4365b3ddd',1,'z0::Input']]],
   ['ismousebuttonjustreleased_7',['isMouseButtonJustReleased',['../classz0_1_1_input.html#a8c1182c0f8f14f7c582d278608e2538c',1,'z0::Input']]],
   ['ismousebuttonpressed_8',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]],
-  ['ispaused_9',['isPaused',['../classz0_1_1_application.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'z0::Application']]]
+  ['ispaused_9',['isPaused',['../classz0_1_1_application.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'z0::Application']]],
+  ['ispressed_10',['isPressed',['../classz0_1_1_input_event_key.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventKey::isPressed()'],['../classz0_1_1_input_event_gamepad_button.html#a56b841b42db654e1d60230b2b22683cf',1,'z0::InputEventGamepadButton::isPressed()']]]
 ];

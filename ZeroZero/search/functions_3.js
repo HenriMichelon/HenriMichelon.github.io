@@ -4,11 +4,16 @@ var searchData=
   ['getconfig_1',['getConfig',['../classz0_1_1_application.html#a16c0b850bb6155c4b32ef3d3b55cd80a',1,'z0::Application']]],
   ['getconnectedjoypads_2',['getConnectedJoypads',['../classz0_1_1_input.html#a3260587c6016e67cc4197d355ae1fa95',1,'z0::Input']]],
   ['getfps_3',['getFPS',['../classz0_1_1_application.html#a7ab50866951aa9591052e13d4bc3d894',1,'z0::Application']]],
-  ['getgamepadvector_4',['getGamepadVector',['../classz0_1_1_input.html#a0b30c69fa4c16e48e3603882257d592d',1,'z0::Input']]],
-  ['getgravity_5',['getGravity',['../classz0_1_1_application.html#a65a449ef4b95351bb4d7bdf34edeb04b',1,'z0::Application']]],
-  ['getheight_6',['getHeight',['../classz0_1_1_window.html#a41bfc989babe0999be4037c5b68119b5',1,'z0::Window']]],
-  ['getjoypadname_7',['getJoypadName',['../classz0_1_1_input.html#af21f72c264eb8132460cf0082ed50362',1,'z0::Input']]],
-  ['getkeyboardvector_8',['getKeyboardVector',['../classz0_1_1_input.html#ae01d8e5398390c43e8d89f52bd204564',1,'z0::Input']]],
-  ['getwidth_9',['getWidth',['../classz0_1_1_window.html#aca1b996bfd42e4d13365709e3fcab072',1,'z0::Window']]],
-  ['getwindow_10',['getWindow',['../classz0_1_1_application.html#a5e04b7e7c40c3a4d6480de6a075eceb1',1,'z0::Application']]]
+  ['getgamepadbutton_4',['getGamepadButton',['../classz0_1_1_input_event_gamepad_button.html#a4d0a979e59136b8a3cb39809e8974458',1,'z0::InputEventGamepadButton']]],
+  ['getgamepadvector_5',['getGamepadVector',['../classz0_1_1_input.html#a0b30c69fa4c16e48e3603882257d592d',1,'z0::Input']]],
+  ['getgravity_6',['getGravity',['../classz0_1_1_application.html#a65a449ef4b95351bb4d7bdf34edeb04b',1,'z0::Application']]],
+  ['getheight_7',['getHeight',['../classz0_1_1_window.html#a41bfc989babe0999be4037c5b68119b5',1,'z0::Window']]],
+  ['getjoypadname_8',['getJoypadName',['../classz0_1_1_input.html#af21f72c264eb8132460cf0082ed50362',1,'z0::Input']]],
+  ['getkey_9',['getKey',['../classz0_1_1_input_event_key.html#a6099bd7b01d96be4c1c812d2cd3b4e54',1,'z0::InputEventKey']]],
+  ['getkeyboardvector_10',['getKeyboardVector',['../classz0_1_1_input.html#ae01d8e5398390c43e8d89f52bd204564',1,'z0::Input']]],
+  ['getmodifiers_11',['getModifiers',['../classz0_1_1_input_event_key.html#ab8f99a1ccd9832faabeee792bc5702e2',1,'z0::InputEventKey']]],
+  ['getrepeatcount_12',['getRepeatCount',['../classz0_1_1_input_event_key.html#a19fd8257dad198d816cdfdcc824652ff',1,'z0::InputEventKey']]],
+  ['gettype_13',['getType',['../classz0_1_1_input_event.html#a1184cba09842cb1adfe07e2e64d71954',1,'z0::InputEvent']]],
+  ['getwidth_14',['getWidth',['../classz0_1_1_window.html#aca1b996bfd42e4d13365709e3fcab072',1,'z0::Window']]],
+  ['getwindow_15',['getWindow',['../classz0_1_1_application.html#a5e04b7e7c40c3a4d6480de6a075eceb1',1,'z0::Application']]]
 ];

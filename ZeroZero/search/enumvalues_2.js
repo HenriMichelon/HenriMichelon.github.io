@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['key_5fmodifier_5falt_0',['KEY_MODIFIER_ALT',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc',1,'z0']]],
-  ['key_5fmodifier_5fcontrol_1',['KEY_MODIFIER_CONTROL',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38',1,'z0']]],
-  ['key_5fmodifier_5fshift_2',['KEY_MODIFIER_SHIFT',['../constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da057141873e9fc51dcf286874a2034d2c',1,'z0']]]
+  ['input_5fevent_5fgamepad_5fbutton_0',['INPUT_EVENT_GAMEPAD_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaeea50e557283275cde1915bc2ee35c21',1,'z0']]],
+  ['input_5fevent_5fkey_1',['INPUT_EVENT_KEY',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf09f2e0e408caf4f871bca463f892534',1,'z0']]],
+  ['input_5fevent_5fmouse_5fbutton_2',['INPUT_EVENT_MOUSE_BUTTON',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faaf7c6e14b73d1e04a50485506b665b982',1,'z0']]],
+  ['input_5fevent_5fmouse_5fmotion_3',['INPUT_EVENT_MOUSE_MOTION',['../constants_8h.html#a2b2905130ee6827c925a34fe221b95faa73867efefd5ecc227aeda2c64a1a5adc',1,'z0']]]
 ];

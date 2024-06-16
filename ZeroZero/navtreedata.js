@@ -26,6 +26,10 @@ var NAVTREE =
 [
   [ "ZeroZero", "index.html", [
     [ "User Documentation", "index.html", "index" ],
+    [ "Namespace Members", "namespacemembers.html", [
+      [ "All", "namespacemembers.html", null ],
+      [ "Functions", "namespacemembers_func.html", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -44,7 +48,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"structz0_1_1_color.html#a994b96c4819e03d80fab905648c07d2f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
