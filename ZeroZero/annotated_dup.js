@@ -10,6 +10,8 @@ var annotated_dup =
       [ "InputEvent", "classz0_1_1_input_event.html", "classz0_1_1_input_event" ],
       [ "InputEventGamepadButton", "classz0_1_1_input_event_gamepad_button.html", "classz0_1_1_input_event_gamepad_button" ],
       [ "InputEventKey", "classz0_1_1_input_event_key.html", "classz0_1_1_input_event_key" ],
+      [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", "classz0_1_1_input_event_mouse_button" ],
+      [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", "classz0_1_1_input_event_mouse_motion" ],
       [ "Loader", "classz0_1_1_loader.html", null ],
       [ "Object", "classz0_1_1_object.html", "classz0_1_1_object" ],
       [ "Rect", "structz0_1_1_rect.html", "structz0_1_1_rect" ],

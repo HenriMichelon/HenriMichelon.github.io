@@ -10,7 +10,9 @@ var hierarchy =
       [ "GManager", "classz0_1_1_g_manager.html", null ],
       [ "InputEvent", "classz0_1_1_input_event.html", [
         [ "InputEventGamepadButton", "classz0_1_1_input_event_gamepad_button.html", null ],
-        [ "InputEventKey", "classz0_1_1_input_event_key.html", null ]
+        [ "InputEventKey", "classz0_1_1_input_event_key.html", null ],
+        [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", null ],
+        [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", null ]
       ] ],
       [ "Resource", "classz0_1_1_resource.html", null ],
       [ "Window", "classz0_1_1_window.html", null ]
