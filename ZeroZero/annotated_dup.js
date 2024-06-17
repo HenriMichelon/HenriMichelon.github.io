@@ -14,6 +14,7 @@ var annotated_dup =
       [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", "classz0_1_1_input_event_mouse_button" ],
       [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", "classz0_1_1_input_event_mouse_motion" ],
       [ "Loader", "classz0_1_1_loader.html", null ],
+      [ "Node", "classz0_1_1_node.html", "classz0_1_1_node" ],
       [ "Object", "classz0_1_1_object.html", "classz0_1_1_object" ],
       [ "Rect", "structz0_1_1_rect.html", "structz0_1_1_rect" ],
       [ "Resource", "classz0_1_1_resource.html", "classz0_1_1_resource" ],
