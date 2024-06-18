@@ -138,8 +138,73 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac995383efa231ecb0725b059afce0d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ef4d4f0e404eddbc46e41389042ef3" id="r_ad5ef4d4f0e404eddbc46e41389042ef3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5ef4d4f0e404eddbc46e41389042ef3">onInput</a> (<a class="el" href="classz0_1_1_input_event.html">InputEvent</a> &amp;inputEvent)</td></tr>
 <tr class="separator:ad5ef4d4f0e404eddbc46e41389042ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0740679b72db7ae6abb9fc48b25c0a" id="r_a7c0740679b72db7ae6abb9fc48b25c0a"><td class="memItemLeft" align="right" valign="top">const mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c0740679b72db7ae6abb9fc48b25c0a">getTransformLocal</a> () const</td></tr>
+<tr class="separator:a7c0740679b72db7ae6abb9fc48b25c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e5529d17426969bd76fcb3b80221a3" id="r_a02e5529d17426969bd76fcb3b80221a3"><td class="memItemLeft" align="right" valign="top">mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02e5529d17426969bd76fcb3b80221a3">getTransformGlobal</a> () const</td></tr>
+<tr class="separator:a02e5529d17426969bd76fcb3b80221a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde249fc77213cefd74b711382bffd89" id="r_acde249fc77213cefd74b711382bffd89"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde249fc77213cefd74b711382bffd89">toGlobal</a> (vec3 local) const</td></tr>
+<tr class="separator:acde249fc77213cefd74b711382bffd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67404cfd749850c280b938553fce7e90" id="r_a67404cfd749850c280b938553fce7e90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67404cfd749850c280b938553fce7e90">translate</a> (vec3 localOffset)</td></tr>
+<tr class="separator:a67404cfd749850c280b938553fce7e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df0a0c2f6b4d34b44c7c9f60f9f96c1" id="r_a8df0a0c2f6b4d34b44c7c9f60f9f96c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8df0a0c2f6b4d34b44c7c9f60f9f96c1">setPositionGlobal</a> (vec3 position)</td></tr>
+<tr class="separator:a8df0a0c2f6b4d34b44c7c9f60f9f96c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a386ce624f44e778ee752b99319a7ca" id="r_a8a386ce624f44e778ee752b99319a7ca"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a386ce624f44e778ee752b99319a7ca">getPositionGlobal</a> () const</td></tr>
+<tr class="separator:a8a386ce624f44e778ee752b99319a7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d657c51846d0c104e4f1614e3dc689" id="r_a42d657c51846d0c104e4f1614e3dc689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d657c51846d0c104e4f1614e3dc689">rotateX</a> (float angle)</td></tr>
+<tr class="separator:a42d657c51846d0c104e4f1614e3dc689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27be02acacb53bf2a010488a051b25a9" id="r_a27be02acacb53bf2a010488a051b25a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27be02acacb53bf2a010488a051b25a9">rotateY</a> (float angle)</td></tr>
+<tr class="separator:a27be02acacb53bf2a010488a051b25a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a7537526f3ae676af7cca05157c7e3" id="r_aa2a7537526f3ae676af7cca05157c7e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2a7537526f3ae676af7cca05157c7e3">rotateZ</a> (float angle)</td></tr>
+<tr class="separator:aa2a7537526f3ae676af7cca05157c7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba1f493709fbf49ef4a559113399b53" id="r_abba1f493709fbf49ef4a559113399b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abba1f493709fbf49ef4a559113399b53">setRotation</a> (quat quat)</td></tr>
+<tr class="separator:abba1f493709fbf49ef4a559113399b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4c4dacf0e1d8bb563230bc0bbece69" id="r_a7d4c4dacf0e1d8bb563230bc0bbece69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d4c4dacf0e1d8bb563230bc0bbece69">setRotationX</a> (float angle)</td></tr>
+<tr class="separator:a7d4c4dacf0e1d8bb563230bc0bbece69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7010e81bb2e089587baed2cfc011786" id="r_ab7010e81bb2e089587baed2cfc011786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7010e81bb2e089587baed2cfc011786">setRotationY</a> (float angle)</td></tr>
+<tr class="separator:ab7010e81bb2e089587baed2cfc011786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504c4b0b83b9ee4bace4e66b10c1f315" id="r_a504c4b0b83b9ee4bace4e66b10c1f315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a504c4b0b83b9ee4bace4e66b10c1f315">setRotationZ</a> (float angle)</td></tr>
+<tr class="separator:a504c4b0b83b9ee4bace4e66b10c1f315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf59fbf2605d48ab018593418822a564" id="r_acf59fbf2605d48ab018593418822a564"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf59fbf2605d48ab018593418822a564">getRotation</a> () const</td></tr>
+<tr class="separator:acf59fbf2605d48ab018593418822a564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a795c100a9fb823fdfca80b33d73929" id="r_a0a795c100a9fb823fdfca80b33d73929"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a795c100a9fb823fdfca80b33d73929">getRotationX</a> () const</td></tr>
+<tr class="separator:a0a795c100a9fb823fdfca80b33d73929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fd057679dbb34530daa376abcf45e7" id="r_a17fd057679dbb34530daa376abcf45e7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17fd057679dbb34530daa376abcf45e7">getRotationY</a> () const</td></tr>
+<tr class="separator:a17fd057679dbb34530daa376abcf45e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2add690e2f19a3c247cc551d2e28556d" id="r_a2add690e2f19a3c247cc551d2e28556d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2add690e2f19a3c247cc551d2e28556d">getRotationZ</a> () const</td></tr>
+<tr class="separator:a2add690e2f19a3c247cc551d2e28556d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2808797d87cb7a755f7535c5a04b7b" id="r_acf2808797d87cb7a755f7535c5a04b7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf2808797d87cb7a755f7535c5a04b7b">setScale</a> (vec3 scale)</td></tr>
+<tr class="separator:acf2808797d87cb7a755f7535c5a04b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f941af079f26c306ef54824d140936" id="r_ae7f941af079f26c306ef54824d140936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7f941af079f26c306ef54824d140936">setScale</a> (float scale)</td></tr>
+<tr class="separator:ae7f941af079f26c306ef54824d140936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fddd47ca962f874d10775a454f0286" id="r_a26fddd47ca962f874d10775a454f0286"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26fddd47ca962f874d10775a454f0286">getScale</a> () const</td></tr>
+<tr class="separator:a26fddd47ca962f874d10775a454f0286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108eba1dbccbd4ecb5a2d310616bcc66" id="r_a108eba1dbccbd4ecb5a2d310616bcc66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a108eba1dbccbd4ecb5a2d310616bcc66">getProcessMode</a> () const</td></tr>
+<tr class="separator:a108eba1dbccbd4ecb5a2d310616bcc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c12dd37c76ad351007a647704fcc32" id="r_a29c12dd37c76ad351007a647704fcc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c12dd37c76ad351007a647704fcc32">setProcessMode</a> (<a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a> mode)</td></tr>
+<tr class="separator:a29c12dd37c76ad351007a647704fcc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83943e04f0ee0a5a38208278b97fc780" id="r_a83943e04f0ee0a5a38208278b97fc780"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83943e04f0ee0a5a38208278b97fc780">isProcessed</a> () const</td></tr>
+<tr class="separator:a83943e04f0ee0a5a38208278b97fc780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2926b5f07de0982ac20d7da2a59321ab" id="r_a2926b5f07de0982ac20d7da2a59321ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classz0_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2926b5f07de0982ac20d7da2a59321ab">getParent</a> () const</td></tr>
+<tr class="separator:a2926b5f07de0982ac20d7da2a59321ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb88f6cee86607266ea86151dc287340" id="r_adb88f6cee86607266ea86151dc287340"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb88f6cee86607266ea86151dc287340">addChild</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;child)</td></tr>
+<tr class="separator:adb88f6cee86607266ea86151dc287340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b19b4c247bfddbc78ee6710e508dbe2" id="r_a4b19b4c247bfddbc78ee6710e508dbe2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b19b4c247bfddbc78ee6710e508dbe2">removeChild</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;child)</td></tr>
+<tr class="separator:a4b19b4c247bfddbc78ee6710e508dbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760b298572124d03528a05c75a40af57" id="r_a760b298572124d03528a05c75a40af57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a760b298572124d03528a05c75a40af57">removeAllChildren</a> ()</td></tr>
+<tr class="separator:a760b298572124d03528a05c75a40af57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d5af83a7ccd140e6961474acb74a64" id="r_a34d5af83a7ccd140e6961474acb74a64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34d5af83a7ccd140e6961474acb74a64">haveChild</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;child, bool recursive) const</td></tr>
+<tr class="separator:a34d5af83a7ccd140e6961474acb74a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a59a4ed865a7c574e9439a7b06e79b5" id="r_a4a59a4ed865a7c574e9439a7b06e79b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a59a4ed865a7c574e9439a7b06e79b5">printTree</a> (int tab=0) const</td></tr>
+<tr class="separator:a4a59a4ed865a7c574e9439a7b06e79b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc18036adaea83856c3e6069e90a3f97" id="r_acc18036adaea83856c3e6069e90a3f97"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc18036adaea83856c3e6069e90a3f97">toString</a> () const override</td></tr>
 <tr class="separator:acc18036adaea83856c3e6069e90a3f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95bc6369673e4f113ed3fc9d34d00f22" id="r_a95bc6369673e4f113ed3fc9d34d00f22"><td class="memItemLeft" align="right" valign="top">id_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95bc6369673e4f113ed3fc9d34d00f22">getId</a> () const</td></tr>
+<tr class="separator:a95bc6369673e4f113ed3fc9d34d00f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ce4f2a1d52bb65a537a5dfa48b11c09" id="r_a4ce4f2a1d52bb65a537a5dfa48b11c09"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ce4f2a1d52bb65a537a5dfa48b11c09">duplicate</a> ()</td></tr>
+<tr class="separator:a4ce4f2a1d52bb65a537a5dfa48b11c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2136ba9451fa824affb448f4bb66f183" id="r_a2136ba9451fa824affb448f4bb66f183"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2136ba9451fa824affb448f4bb66f183"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2136ba9451fa824affb448f4bb66f183">findFirstChild</a> (bool recursive=true) const</td></tr>
+<tr class="separator:a2136ba9451fa824affb448f4bb66f183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7d0d5367c2bd0ffca74029c22845c3b4" name="a7d0d5367c2bd0ffca74029c22845c3b4"></a>
@@ -187,6 +252,380 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adb88f6cee86607266ea86151dc287340" name="adb88f6cee86607266ea86151dc287340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb88f6cee86607266ea86151dc287340">&#9670;&#160;</a></span>addChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool addChild </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>child</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a child node. Nodes can have any number of children, but a child can have only one parent. Child nodes are automatically deleted when the parent node is deleted, so an entire scene can be removed by deleting its topmost node. </p>
+
+</div>
+</div>
+<a id="a4ce4f2a1d52bb65a537a5dfa48b11c09" name="a4ce4f2a1d52bb65a537a5dfa48b11c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ce4f2a1d52bb65a537a5dfa48b11c09">&#9670;&#160;</a></span>duplicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; duplicate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Duplicate a node. Warning : not implemented on all nodes types, check documentation for the node type before using it. </p>
+
+</div>
+</div>
+<a id="a2136ba9451fa824affb448f4bb66f183" name="a2136ba9451fa824affb448f4bb66f183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2136ba9451fa824affb448f4bb66f183">&#9670;&#160;</a></span>findFirstChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * findFirstChild </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>recursive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find the first child by is type </p>
+
+</div>
+</div>
+<a id="a95bc6369673e4f113ed3fc9d34d00f22" name="a95bc6369673e4f113ed3fc9d34d00f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bc6369673e4f113ed3fc9d34d00f22">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">id_t getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the unique ID of this node </p>
+
+</div>
+</div>
+<a id="a2926b5f07de0982ac20d7da2a59321ab" name="a2926b5f07de0982ac20d7da2a59321ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2926b5f07de0982ac20d7da2a59321ab">&#9670;&#160;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classz0_1_1_node.html">Node</a> * getParent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the node's parent in the scene tree </p>
+
+</div>
+</div>
+<a id="a8a386ce624f44e778ee752b99319a7ca" name="a8a386ce624f44e778ee752b99319a7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a386ce624f44e778ee752b99319a7ca">&#9670;&#160;</a></span>getPositionGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 getPositionGlobal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the world space position </p>
+
+</div>
+</div>
+<a id="a108eba1dbccbd4ecb5a2d310616bcc66" name="a108eba1dbccbd4ecb5a2d310616bcc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108eba1dbccbd4ecb5a2d310616bcc66">&#9670;&#160;</a></span>getProcessMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a> getProcessMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the node's processing behavior. To check if the node can process in its current mode, use <a class="el" href="#a83943e04f0ee0a5a38208278b97fc780">isProcessed()</a>. </p>
+
+</div>
+</div>
+<a id="acf59fbf2605d48ab018593418822a564" name="acf59fbf2605d48ab018593418822a564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf59fbf2605d48ab018593418822a564">&#9670;&#160;</a></span>getRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 getRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the rotation of the local transformation </p>
+
+</div>
+</div>
+<a id="a0a795c100a9fb823fdfca80b33d73929" name="a0a795c100a9fb823fdfca80b33d73929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a795c100a9fb823fdfca80b33d73929">&#9670;&#160;</a></span>getRotationX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getRotationX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the X axis rotation of the local transformation </p>
+
+</div>
+</div>
+<a id="a17fd057679dbb34530daa376abcf45e7" name="a17fd057679dbb34530daa376abcf45e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fd057679dbb34530daa376abcf45e7">&#9670;&#160;</a></span>getRotationY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getRotationY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the Y axis rotation of the local transformation </p>
+
+</div>
+</div>
+<a id="a2add690e2f19a3c247cc551d2e28556d" name="a2add690e2f19a3c247cc551d2e28556d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2add690e2f19a3c247cc551d2e28556d">&#9670;&#160;</a></span>getRotationZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getRotationZ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the Z axis rotation of the local transformation </p>
+
+</div>
+</div>
+<a id="a26fddd47ca962f874d10775a454f0286" name="a26fddd47ca962f874d10775a454f0286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fddd47ca962f874d10775a454f0286">&#9670;&#160;</a></span>getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 getScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the scale part of the local transformation. </p>
+
+</div>
+</div>
+<a id="a02e5529d17426969bd76fcb3b80221a3" name="a02e5529d17426969bd76fcb3b80221a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e5529d17426969bd76fcb3b80221a3">&#9670;&#160;</a></span>getTransformGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mat4 getTransformGlobal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the world space transformation matrix </p>
+
+</div>
+</div>
+<a id="a7c0740679b72db7ae6abb9fc48b25c0a" name="a7c0740679b72db7ae6abb9fc48b25c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c0740679b72db7ae6abb9fc48b25c0a">&#9670;&#160;</a></span>getTransformLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const mat4 &amp; getTransformLocal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the local space transformation matrix </p>
+
+</div>
+</div>
+<a id="a34d5af83a7ccd140e6961474acb74a64" name="a34d5af83a7ccd140e6961474acb74a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d5af83a7ccd140e6961474acb74a64">&#9670;&#160;</a></span>haveChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool haveChild </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>child</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>recursive</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return true if the node have this child </p>
+
+</div>
+</div>
+<a id="a83943e04f0ee0a5a38208278b97fc780" name="a83943e04f0ee0a5a38208278b97fc780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83943e04f0ee0a5a38208278b97fc780">&#9670;&#160;</a></span>isProcessed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isProcessed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if the node is processed and receive input callbacks </p>
+
+</div>
+</div>
 <a id="a185f888b7aabbe08c3c1c6a76669b75e" name="a185f888b7aabbe08c3c1c6a76669b75e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a185f888b7aabbe08c3c1c6a76669b75e">&#9670;&#160;</a></span>onEnterScene()</h2>
 
@@ -343,6 +782,300 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4a59a4ed865a7c574e9439a7b06e79b5" name="a4a59a4ed865a7c574e9439a7b06e79b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a59a4ed865a7c574e9439a7b06e79b5">&#9670;&#160;</a></span>printTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printTree </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tab</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Recursively print the node tree in the log system </p>
+
+</div>
+</div>
+<a id="a760b298572124d03528a05c75a40af57" name="a760b298572124d03528a05c75a40af57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a760b298572124d03528a05c75a40af57">&#9670;&#160;</a></span>removeAllChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeAllChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes all children nodes. The nodes, along with their children <b>can</b> be deleted depending on their reference counters. </p>
+
+</div>
+</div>
+<a id="a4b19b4c247bfddbc78ee6710e508dbe2" name="a4b19b4c247bfddbc78ee6710e508dbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b19b4c247bfddbc78ee6710e508dbe2">&#9670;&#160;</a></span>removeChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeChild </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>child</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes a child node. The node, along with its children <b>can</b> be deleted depending on their reference counter. </p>
+
+</div>
+</div>
+<a id="a42d657c51846d0c104e4f1614e3dc689" name="a42d657c51846d0c104e4f1614e3dc689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d657c51846d0c104e4f1614e3dc689">&#9670;&#160;</a></span>rotateX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotateX </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the X axis by angle in radians. </p>
+
+</div>
+</div>
+<a id="a27be02acacb53bf2a010488a051b25a9" name="a27be02acacb53bf2a010488a051b25a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27be02acacb53bf2a010488a051b25a9">&#9670;&#160;</a></span>rotateY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotateY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the Y axis by angle in radians. </p>
+
+</div>
+</div>
+<a id="aa2a7537526f3ae676af7cca05157c7e3" name="aa2a7537526f3ae676af7cca05157c7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a7537526f3ae676af7cca05157c7e3">&#9670;&#160;</a></span>rotateZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotateZ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the Z axis by angle in radians. </p>
+
+</div>
+</div>
+<a id="a8df0a0c2f6b4d34b44c7c9f60f9f96c1" name="a8df0a0c2f6b4d34b44c7c9f60f9f96c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df0a0c2f6b4d34b44c7c9f60f9f96c1">&#9670;&#160;</a></span>setPositionGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setPositionGlobal </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the world space position </p>
+
+</div>
+</div>
+<a id="a29c12dd37c76ad351007a647704fcc32" name="a29c12dd37c76ad351007a647704fcc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c12dd37c76ad351007a647704fcc32">&#9670;&#160;</a></span>setProcessMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProcessMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Change the node's processing behavior. </p>
+
+</div>
+</div>
+<a id="abba1f493709fbf49ef4a559113399b53" name="abba1f493709fbf49ef4a559113399b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba1f493709fbf49ef4a559113399b53">&#9670;&#160;</a></span>setRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRotation </td>
+          <td>(</td>
+          <td class="paramtype">quat</td>          <td class="paramname"><span class="paramname"><em>quat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the local transformation </p>
+
+</div>
+</div>
+<a id="a7d4c4dacf0e1d8bb563230bc0bbece69" name="a7d4c4dacf0e1d8bb563230bc0bbece69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4c4dacf0e1d8bb563230bc0bbece69">&#9670;&#160;</a></span>setRotationX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRotationX </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the X axis rotation of the local transformation by angle in radians. </p>
+
+</div>
+</div>
+<a id="ab7010e81bb2e089587baed2cfc011786" name="ab7010e81bb2e089587baed2cfc011786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7010e81bb2e089587baed2cfc011786">&#9670;&#160;</a></span>setRotationY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRotationY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the Y axis rotation of the local transformation by angle in radians. </p>
+
+</div>
+</div>
+<a id="a504c4b0b83b9ee4bace4e66b10c1f315" name="a504c4b0b83b9ee4bace4e66b10c1f315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504c4b0b83b9ee4bace4e66b10c1f315">&#9670;&#160;</a></span>setRotationZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRotationZ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the Z axis rotation of the local transformation by angle in radians. </p>
+
+</div>
+</div>
+<a id="ae7f941af079f26c306ef54824d140936" name="ae7f941af079f26c306ef54824d140936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f941af079f26c306ef54824d140936">&#9670;&#160;</a></span>setScale() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Scale part of the local transformation with the same value on each axis </p>
+
+</div>
+</div>
+<a id="acf2808797d87cb7a755f7535c5a04b7b" name="acf2808797d87cb7a755f7535c5a04b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2808797d87cb7a755f7535c5a04b7b">&#9670;&#160;</a></span>setScale() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setScale </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scale part of the local transformation. </p>
+
+</div>
+</div>
+<a id="acde249fc77213cefd74b711382bffd89" name="acde249fc77213cefd74b711382bffd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde249fc77213cefd74b711382bffd89">&#9670;&#160;</a></span>toGlobal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 toGlobal </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>local</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Transforms a local vector from this node's local space to world space. </p>
+
+</div>
+</div>
 <a id="acc18036adaea83856c3e6069e90a3f97" name="acc18036adaea83856c3e6069e90a3f97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc18036adaea83856c3e6069e90a3f97">&#9670;&#160;</a></span>toString()</h2>
 
@@ -368,6 +1101,24 @@ Public Member Functions</h2></td></tr>
 <p>Convert the objet to a readable text </p>
 
 <p>Reimplemented from <a class="el" href="classz0_1_1_object.html#a55458af6f75832809652f64d2c949332">Object</a>.</p>
+
+</div>
+</div>
+<a id="a67404cfd749850c280b938553fce7e90" name="a67404cfd749850c280b938553fce7e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67404cfd749850c280b938553fce7e90">&#9670;&#160;</a></span>translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void translate </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>localOffset</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Changes the node's position by the given offset vector in local space. </p>
 
 </div>
 </div>
