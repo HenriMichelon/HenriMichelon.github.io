@@ -29,7 +29,8 @@ var classz0_1_1_g_widget =
       [ "LINE", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7ab023460c84f774a219d46ccf4665994c", null ],
       [ "FRAME", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a200c1bcf1eaa8635daa3cbb5fdd2ebb6", null ],
       [ "BUTTON", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a7d67f007544f534278ecca3cdca12565", null ],
-      [ "TOGGLEBUTTON", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a54bd1062ac1565ebb66198e2ee1fca02", null ]
+      [ "TOGGLEBUTTON", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a54bd1062ac1565ebb66198e2ee1fca02", null ],
+      [ "TEXT", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a9a4a47c1606e295076055a9cc4373197", null ]
     ] ],
     [ "GWidget", "classz0_1_1_g_widget.html#a61e7c00972a47874fdeb42f287a59859", null ],
     [ "add", "classz0_1_1_g_widget.html#ab1d8f380d99216f714bd26ed33424f00", null ],
