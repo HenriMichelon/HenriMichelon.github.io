@@ -5,9 +5,9 @@ var indexSectionsWithContent =
   2: "s",
   3: "ct",
   4: "acdfghilnopqrst",
-  5: "acdeghmtvwxy",
-  6: "cgikmptw",
-  7: "cgikmptw",
+  5: "acdeghlmtvwxy",
+  6: "cgiklmptw",
+  7: "cgiklmptw",
   8: "du"
 };
 

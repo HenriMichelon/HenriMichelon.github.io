@@ -128,6 +128,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a5773202ab7ffd1746de9d527927198a3a86e54441ec4f5de9841812556deb3aa8">WINDOW_MODE_FULLSCREEN</a> = 3
  }</td></tr>
 <tr class="separator:a5773202ab7ffd1746de9d527927198a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b16a45ad1fb3cce2dda3ad2f59bb5d" id="r_a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5d">LoggingMode</a> { <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c">LOGGING_NONE</a> = 0
+, <b>LOGGING_WINDOW</b> = 0x01
+, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05">LOGGING_FILE</a> = 0x10
+ }</td></tr>
+<tr class="separator:a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cbf4a39c3f0df11adfce73774f8a5a" id="r_a10cbf4a39c3f0df11adfce73774f8a5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> { <a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5aadda207ad42b7a029f04c5a872b1450cc">MSAA_AUTO</a> = 0
 , <a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5aaa78499fd37bdc6fe2c60117d10e76385">MSAA_2X</a> = VK_SAMPLE_COUNT_2_BIT
 , <a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5aa3a0480f73ceadd57861a721efaf89173">MSAA_4X</a> = VK_SAMPLE_COUNT_4_BIT
@@ -627,6 +632,27 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38" name="a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38"></a>KEY_MODIFIER_CONTROL&#160;</td><td class="fielddoc"><p>Left &amp; right control keys. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc" name="a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc"></a>KEY_MODIFIER_ALT&#160;</td><td class="fielddoc"><p>Left &amp; right alt keys. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a27b16a45ad1fb3cce2dda3ad2f59bb5d" name="a27b16a45ad1fb3cce2dda3ad2f59bb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b16a45ad1fb3cce2dda3ad2f59bb5d">&#9670;&#160;</a></span>LoggingMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum LoggingMode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Where to log message using the <a class="el" href="tools_8h.html#a606b4dda67a44b470717b494219b60dc">z0::log()</a> function </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c"></a>LOGGING_NONE&#160;</td><td class="fielddoc"><p>Disable logging. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05"></a>LOGGING_FILE&#160;</td><td class="fielddoc"><p>Log the messages into a file named 'log.txt' </p>
 </td></tr>
 </table>
 

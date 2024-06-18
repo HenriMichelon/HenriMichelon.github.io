@@ -6,6 +6,7 @@ var structz0_1_1_application_config =
     [ "defaultFontSize", "structz0_1_1_application_config.html#a23b61c0297583a91da32d566801fc18f", null ],
     [ "exposure", "structz0_1_1_application_config.html#a1ed8bc015f764ea37e8b2c5ca201ee15", null ],
     [ "gamma", "structz0_1_1_application_config.html#a44978e15ba7fdb6b664ea10411fbe69d", null ],
+    [ "loggingMode", "structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd", null ],
     [ "msaa", "structz0_1_1_application_config.html#a58daf641d993a02e7806fe8b763fad6c", null ],
     [ "windowHeight", "structz0_1_1_application_config.html#a09caaefd7e6a6272b099c33e11b60a33", null ],
     [ "windowMode", "structz0_1_1_application_config.html#ac9cbcb24d11d6cc7b73cfadac22dcced", null ],

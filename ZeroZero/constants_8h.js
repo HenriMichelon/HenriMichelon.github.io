@@ -152,6 +152,10 @@ var constants_8h =
       [ "KEY_MODIFIER_CONTROL", "constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38", null ],
       [ "KEY_MODIFIER_ALT", "constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc", null ]
     ] ],
+    [ "LoggingMode", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5d", [
+      [ "LOGGING_NONE", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c", null ],
+      [ "LOGGING_FILE", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05", null ]
+    ] ],
     [ "MouseButton", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711", [
       [ "MOUSE_BUTTON_LEFT", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a3c2e62b97b30d850c5539d0f3a6d0958", null ],
       [ "MOUSE_BUTTON_RIGHT", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a5b61e63e73f15ed6af97d5cd3124bc6f", null ],

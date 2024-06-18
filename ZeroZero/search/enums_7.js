@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowmode_0',['WindowMode',['../constants_8h.html#a5773202ab7ffd1746de9d527927198a3',1,'z0']]]
+  ['transparency_0',['Transparency',['../constants_8h.html#a184209e78f6ae891384d08a38b1ec557',1,'z0']]]
 ];
