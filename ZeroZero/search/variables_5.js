@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height_0',['height',['../structz0_1_1_rect.html#a48083b65ac9a863566dc3e3fff09a5b4',1,'z0::Rect']]]
+  ['gamma_0',['gamma',['../structz0_1_1_application_config.html#a44978e15ba7fdb6b664ea10411fbe69d',1,'z0::ApplicationConfig']]]
 ];

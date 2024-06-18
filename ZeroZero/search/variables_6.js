@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loggingmode_0',['loggingMode',['../structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd',1,'z0::ApplicationConfig']]]
+  ['height_0',['height',['../structz0_1_1_rect.html#a48083b65ac9a863566dc3e3fff09a5b4',1,'z0::Rect']]]
 ];

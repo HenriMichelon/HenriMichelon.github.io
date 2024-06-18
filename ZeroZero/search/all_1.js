@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['close_0',['close',['../classz0_1_1_window.html#a5ae591df94fc66ccb85cbb6565368bca',1,'z0::Window']]],
-  ['color_1',['Color',['../structz0_1_1_color.html',1,'Color'],['../structz0_1_1_color.html#abd29795c8e82b4d67967e6f410c8ac2f',1,'z0::Color::Color()=default'],['../structz0_1_1_color.html#ac3147b2885a1eeb981da2c21e07ee28f',1,'z0::Color::Color(vec4 c)'],['../structz0_1_1_color.html#a994b96c4819e03d80fab905648c07d2f',1,'z0::Color::Color(vec3 c)'],['../structz0_1_1_color.html#a3a16ce43c0187e22831a1b768002fd73',1,'z0::Color::Color(float r, float g, float b, float a)'],['../structz0_1_1_color.html#a83b0cedfb6ce76cc35b79da9fdcbefe1',1,'z0::Color::Color(float r, float g, float b)']]],
-  ['color_2',['color',['../structz0_1_1_color.html#a886c13bd5a32c945624abe944ab6235d',1,'z0::Color']]],
-  ['connect_3',['connect',['../classz0_1_1_object.html#a83ba0ec5a921163099d3125c662f47da',1,'z0::Object::connect()'],['../classz0_1_1_signal.html#a96a0773a7afa12b6a52028d4f466a46b',1,'z0::Signal::connect()']]],
-  ['constants_2eh_4',['constants.h',['../constants_8h.html',1,'']]],
-  ['contact_5',['Contact',['../index.html#contact_sec',1,'']]],
-  ['contains_6',['contains',['../structz0_1_1_rect.html#abfffb020b77fb6e1933bf4f2d503f3c6',1,'z0::Rect::contains(float x, float y) const'],['../structz0_1_1_rect.html#a03b33bb8ce2d3adfd63e622b295916a6',1,'z0::Rect::contains(const Rect &amp;) const']]],
-  ['cullmode_7',['CullMode',['../constants_8h.html#a9602dcbc7b9991767e322a6f55541e8a',1,'z0']]],
-  ['cullmode_5fback_8',['CULLMODE_BACK',['../constants_8h.html#a9602dcbc7b9991767e322a6f55541e8aa5c59eb925012767ea0a34bd5d5c65d8f',1,'z0']]],
-  ['cullmode_5fdisabled_9',['CULLMODE_DISABLED',['../constants_8h.html#a9602dcbc7b9991767e322a6f55541e8aa29d0a8227eaaca2a786dee06af4df7df',1,'z0']]],
-  ['cullmode_5ffront_10',['CULLMODE_FRONT',['../constants_8h.html#a9602dcbc7b9991767e322a6f55541e8aa39ea81be79ff90eab44f70262c87a55c',1,'z0']]]
+  ['bottom_0',['BOTTOM',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10eba8c371f4e766fb2c49c219bbc88989461',1,'z0::GWidget']]],
+  ['bottomcenter_1',['BOTTOMCENTER',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10eba253e7e6384536023dd5af077579af7f1',1,'z0::GWidget']]],
+  ['bottomleft_2',['BOTTOMLEFT',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10ebad5f47d81f3b6da3f75262e9edb457677',1,'z0::GWidget']]],
+  ['bottomright_3',['BOTTOMRIGHT',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10ebae07d29cb15df2facf4bc3e9c766feee9',1,'z0::GWidget']]],
+  ['box_4',['BOX',['../classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a311c29de5b0fd16d11c0cf1f98a73370',1,'z0::GWidget']]],
+  ['button_5',['BUTTON',['../classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a7d67f007544f534278ecca3cdca12565',1,'z0::GWidget']]],
+  ['button_6',['button',['../structz0_1_1_g_event_mouse.html#a26b9a03c639a856e34c2d8bec26ce611',1,'z0::GEventMouse']]]
 ];
