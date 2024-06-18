@@ -129,7 +129,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a5773202ab7ffd1746de9d527927198a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27b16a45ad1fb3cce2dda3ad2f59bb5d" id="r_a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5d">LoggingMode</a> { <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c">LOGGING_NONE</a> = 0
-, <b>LOGGING_WINDOW</b> = 0x01
+, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3">LOGGING_WINDOW</a> = 0x01
 , <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05">LOGGING_FILE</a> = 0x10
  }</td></tr>
 <tr class="separator:a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -651,6 +651,8 @@ Variables</h2></td></tr>
 <p>Where to log message using the <a class="el" href="tools_8h.html#a606b4dda67a44b470717b494219b60dc">z0::log()</a> function </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c"></a>LOGGING_NONE&#160;</td><td class="fielddoc"><p>Disable logging. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3"></a>LOGGING_WINDOW&#160;</td><td class="fielddoc"><p>Open an external window (on the first screen if you have multiple screen) to display the log messages. Log message appearance in the window can be deferred to the next frame if the log message is sent from a thread different from the main thread </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05"></a>LOGGING_FILE&#160;</td><td class="fielddoc"><p>Log the messages into a file named 'log.txt' </p>
 </td></tr>

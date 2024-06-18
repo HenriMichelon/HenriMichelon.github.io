@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['node_0',['Node',['../classz0_1_1_node.html#a7d0d5367c2bd0ffca74029c22845c3b4',1,'z0::Node::Node(const Node &amp;)'],['../classz0_1_1_node.html#aed2660fa45c1f3367d85cf27ede56ab8',1,'z0::Node::Node(string name=&quot;Node&quot;)']]]
+  ['loadmodelfromfile_0',['loadModelFromFile',['../classz0_1_1_loader.html#aab371de82dd5a8f8d29d98656940e530',1,'z0::Loader']]],
+  ['log_1',['log',['../tools_8h.html#a606b4dda67a44b470717b494219b60dc',1,'z0']]]
 ];

@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['to_5fstring_0',['to_string',['../namespacestd.html#ae0f0a21101d5d0994e51fd48adf0988a',1,'std::to_string(vec3 vec)'],['../namespacestd.html#a44c40940355e3be189ab50e6bd7510c5',1,'std::to_string(vec2 vec)'],['../namespacestd.html#a90a178632ed65055dd7d3357111be962',1,'std::to_string(vec4 vec)']]],
-  ['toglobal_1',['toGlobal',['../classz0_1_1_node.html#acde249fc77213cefd74b711382bffd89',1,'z0::Node']]],
-  ['tostring_2',['toString',['../classz0_1_1_node.html#acc18036adaea83856c3e6069e90a3f97',1,'z0::Node::toString()'],['../classz0_1_1_object.html#a55458af6f75832809652f64d2c949332',1,'z0::Object::toString()'],['../classz0_1_1_resource.html#acc18036adaea83856c3e6069e90a3f97',1,'z0::Resource::toString()'],['../classz0_1_1_window.html#acc18036adaea83856c3e6069e90a3f97',1,'z0::Window::toString()']]],
-  ['translate_3',['translate',['../classz0_1_1_node.html#a67404cfd749850c280b938553fce7e90',1,'z0::Node']]]
+  ['setfocusedwidget_0',['setFocusedWidget',['../classz0_1_1_g_window.html#aef0a4f942c86f62cd596d15927a3e8c4',1,'z0::GWindow']]],
+  ['setheight_1',['setHeight',['../classz0_1_1_g_window.html#a90a0d679a4dffb138d598c580521f4c4',1,'z0::GWindow']]],
+  ['setmousemode_2',['setMouseMode',['../classz0_1_1_input.html#a8eac23c37b97a8cf0a3d0c85f0e703f9',1,'z0::Input']]],
+  ['setpaused_3',['setPaused',['../classz0_1_1_application.html#aafab2fafdec7ae38b9da6676ccf01e77',1,'z0::Application']]],
+  ['setpos_4',['setPos',['../classz0_1_1_g_window.html#a279e5bc017600c39f350b9477b2d8985',1,'z0::GWindow::setPos(float x, float y)'],['../classz0_1_1_g_window.html#adeff71084302c3d3f01d6f4448a6cc9a',1,'z0::GWindow::setPos(vec2 pos)']]],
+  ['setpositionglobal_5',['setPositionGlobal',['../classz0_1_1_node.html#a8df0a0c2f6b4d34b44c7c9f60f9f96c1',1,'z0::Node']]],
+  ['setprocessmode_6',['setProcessMode',['../classz0_1_1_node.html#a29c12dd37c76ad351007a647704fcc32',1,'z0::Node']]],
+  ['setrootnode_7',['setRootNode',['../classz0_1_1_application.html#a31fe371606b14a3f6b42788d31740c81',1,'z0::Application']]],
+  ['setrotation_8',['setRotation',['../classz0_1_1_node.html#abba1f493709fbf49ef4a559113399b53',1,'z0::Node']]],
+  ['setrotationx_9',['setRotationX',['../classz0_1_1_node.html#a7d4c4dacf0e1d8bb563230bc0bbece69',1,'z0::Node']]],
+  ['setrotationy_10',['setRotationY',['../classz0_1_1_node.html#ab7010e81bb2e089587baed2cfc011786',1,'z0::Node']]],
+  ['setrotationz_11',['setRotationZ',['../classz0_1_1_node.html#a504c4b0b83b9ee4bace4e66b10c1f315',1,'z0::Node']]],
+  ['setscale_12',['setScale',['../classz0_1_1_node.html#acf2808797d87cb7a755f7535c5a04b7b',1,'z0::Node::setScale(vec3 scale)'],['../classz0_1_1_node.html#ae7f941af079f26c306ef54824d140936',1,'z0::Node::setScale(float scale)']]],
+  ['setstyle_13',['setStyle',['../classz0_1_1_g_window.html#a06cba66fe0894486e117ffc991cfcba8',1,'z0::GWindow']]],
+  ['settransparency_14',['setTransparency',['../classz0_1_1_g_window.html#a27b33e5e59dc9181cd74d70c68451192',1,'z0::GWindow']]],
+  ['setvisible_15',['setVisible',['../classz0_1_1_g_window.html#a3d832a4ecb222f0b19b3ae14c6b07f77',1,'z0::GWindow']]],
+  ['setwidget_16',['setWidget',['../classz0_1_1_g_window.html#a3a620b8b984b93c63d0ac360bfe1683b',1,'z0::GWindow']]],
+  ['setwidth_17',['setWidth',['../classz0_1_1_g_window.html#ad184083542f5af76dc2ec58bbb48d9e5',1,'z0::GWindow']]],
+  ['setx_18',['setX',['../classz0_1_1_g_window.html#a29cff27de7a20dec4a4a53cf56e3e73a',1,'z0::GWindow']]],
+  ['sety_19',['setY',['../classz0_1_1_g_window.html#a206f05ae1c5d3145a61e9ce6c9d81e07',1,'z0::GWindow']]],
+  ['show_20',['show',['../classz0_1_1_g_window.html#a4b148f40a95444d5669406b918ad2f52',1,'z0::GWindow']]],
+  ['split_21',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]]
 ];

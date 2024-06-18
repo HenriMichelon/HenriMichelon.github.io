@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findfirstchild_0',['findFirstChild',['../classz0_1_1_node.html#a2136ba9451fa824affb448f4bb66f183',1,'z0::Node']]]
+  ['emit_0',['emit',['../classz0_1_1_object.html#a083e1f8b37b345a9adacad1828f817b1',1,'z0::Object']]]
 ];

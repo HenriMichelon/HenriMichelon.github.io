@@ -102,6 +102,7 @@ $(function(){initNavTree('classz0_1_1_object.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classz0_1_1_object-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Object Class Reference</div></div>
 </div><!--header-->
@@ -133,8 +134,137 @@ Inheritance diagram for Object:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a55458af6f75832809652f64d2c949332" id="r_a55458af6f75832809652f64d2c949332"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55458af6f75832809652f64d2c949332">toString</a> () const</td></tr>
 <tr class="separator:a55458af6f75832809652f64d2c949332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a34d7e418e40a9b7407814b58871c6592" id="r_a34d7e418e40a9b7407814b58871c6592"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34d7e418e40a9b7407814b58871c6592">connect</a> (const string &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
+<tr class="separator:a34d7e418e40a9b7407814b58871c6592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3b0a2ef1f6304dd47fc36095253b50" id="r_a1a3b0a2ef1f6304dd47fc36095253b50"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a3b0a2ef1f6304dd47fc36095253b50">disconnect</a> (const string &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
+<tr class="separator:a1a3b0a2ef1f6304dd47fc36095253b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083e1f8b37b345a9adacad1828f817b1" id="r_a083e1f8b37b345a9adacad1828f817b1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a083e1f8b37b345a9adacad1828f817b1">emit</a> (const string &amp;name, Signal::Parameters *params=nullptr)</td></tr>
+<tr class="separator:a083e1f8b37b345a9adacad1828f817b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a34d7e418e40a9b7407814b58871c6592" name="a34d7e418e40a9b7407814b58871c6592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d7e418e40a9b7407814b58871c6592">&#9670;&#160;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void connect </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classz0_1_1_object.html">Object</a> *</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Signal::Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Connects a signal by name to a member function </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>signal name. Unique for the application </td></tr>
+    <tr><td class="paramname">object</td><td>object containing the member function to connect </td></tr>
+    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="#a083e1f8b37b345a9adacad1828f817b1">emit()</a> is called </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a3b0a2ef1f6304dd47fc36095253b50" name="a1a3b0a2ef1f6304dd47fc36095253b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3b0a2ef1f6304dd47fc36095253b50">&#9670;&#160;</a></span>disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void disconnect </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classz0_1_1_object.html">Object</a> *</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Signal::Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect a signal by name from a member function </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>signal name. Unique for the application </td></tr>
+    <tr><td class="paramname">object</td><td>object containing the member function to disconnect </td></tr>
+    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="#a083e1f8b37b345a9adacad1828f817b1">emit()</a> is called </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a083e1f8b37b345a9adacad1828f817b1" name="a083e1f8b37b345a9adacad1828f817b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a083e1f8b37b345a9adacad1828f817b1">&#9670;&#160;</a></span>emit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void emit </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Signal::Parameters *</td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Emit a signal by name </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>signal name </td></tr>
+    <tr><td class="paramname">params</td><td>parameters to pass to the function connected to the signal </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a55458af6f75832809652f64d2c949332" name="a55458af6f75832809652f64d2c949332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55458af6f75832809652f64d2c949332">&#9670;&#160;</a></span>toString()</h2>
 

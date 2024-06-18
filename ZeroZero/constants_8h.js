@@ -154,6 +154,7 @@ var constants_8h =
     ] ],
     [ "LoggingMode", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5d", [
       [ "LOGGING_NONE", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c", null ],
+      [ "LOGGING_WINDOW", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3", null ],
       [ "LOGGING_FILE", "constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05", null ]
     ] ],
     [ "MouseButton", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711", [
