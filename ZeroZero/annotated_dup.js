@@ -18,6 +18,7 @@ var annotated_dup =
       [ "Object", "classz0_1_1_object.html", "classz0_1_1_object" ],
       [ "Rect", "structz0_1_1_rect.html", "structz0_1_1_rect" ],
       [ "Resource", "classz0_1_1_resource.html", "classz0_1_1_resource" ],
+      [ "Signal", "classz0_1_1_signal.html", "classz0_1_1_signal" ],
       [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ]
     ] ]
 ];

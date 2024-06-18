@@ -19,5 +19,7 @@ var hierarchy =
       [ "Resource", "classz0_1_1_resource.html", null ],
       [ "Window", "classz0_1_1_window.html", null ]
     ] ],
-    [ "Rect", "structz0_1_1_rect.html", null ]
+    [ "Parameters", "structz0_1_1_signal_1_1_parameters.html", null ],
+    [ "Rect", "structz0_1_1_rect.html", null ],
+    [ "Signal", "classz0_1_1_signal.html", null ]
 ];

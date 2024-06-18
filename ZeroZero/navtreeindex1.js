@@ -1,5 +1,10 @@
 var NAVTREEINDEX1 =
 {
+"constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a3b922025c26b38585ab140c7e40b291c":[2,0,0,0,0,5,76],
+"constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a3c069efeb1638c2ab0d2a50ff45b529f":[2,0,0,0,0,5,24],
+"constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a3d24a3f2d5bad01abd32bee373c4e8aa":[2,0,0,0,0,5,65],
+"constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a41d1aa573d29ca6a9eb429a680dc53cd":[2,0,0,0,0,5,26],
+"constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a4789cb1577c6b157cca51831266d2e71":[2,0,0,0,0,5,98],
 "constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a480a807305121d41673b8c208898f497":[2,0,0,0,0,5,42],
 "constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a48e7f8451e9031a9243bca0d7f09e71a":[2,0,0,0,0,5,83],
 "constants_8h.html#ab3c7af4820830f9166ede9e5623c4e73a4ec980867be1d5bded2bccdee2ebd601":[2,0,0,0,0,5,25],
@@ -82,6 +87,7 @@ var NAVTREEINDEX1 =
 "files.html":[2,0],
 "functions.html":[1,3,0],
 "functions_func.html":[1,3,1],
+"functions_type.html":[1,3,3],
 "functions_vars.html":[1,3,2],
 "hierarchy.html":[1,2],
 "index.html":[],
@@ -117,6 +123,7 @@ var NAVTREEINDEX1 =
 "structz0_1_1_rect.html#abfffb020b77fb6e1933bf4f2d503f3c6":[1,0,0,15,1],
 "structz0_1_1_rect.html#ad0da36b2558901e21e7a30f6c227a45e":[1,0,0,15,5],
 "structz0_1_1_rect.html#ae426f00e82704fa09578f5446e22d915":[1,0,0,15,4],
+"structz0_1_1_signal_1_1_parameters.html":[1,0,0,17,0],
 "tools_8h.html":[2,0,0,0,1],
 "tools_8h.html#a44c40940355e3be189ab50e6bd7510c5":[2,0,0,0,1,5],
 "tools_8h.html#a606b4dda67a44b470717b494219b60dc":[2,0,0,0,1,1],

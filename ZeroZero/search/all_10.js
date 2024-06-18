@@ -21,6 +21,7 @@ var searchData=
   ['setx_18',['setX',['../classz0_1_1_g_window.html#a29cff27de7a20dec4a4a53cf56e3e73a',1,'z0::GWindow']]],
   ['sety_19',['setY',['../classz0_1_1_g_window.html#a206f05ae1c5d3145a61e9ce6c9d81e07',1,'z0::GWindow']]],
   ['show_20',['show',['../classz0_1_1_g_window.html#a4b148f40a95444d5669406b918ad2f52',1,'z0::GWindow']]],
-  ['split_21',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]],
-  ['std_22',['std',['../namespacestd.html',1,'']]]
+  ['signal_21',['Signal',['../classz0_1_1_signal.html',1,'z0']]],
+  ['split_22',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]],
+  ['std_23',['std',['../namespacestd.html',1,'']]]
 ];
