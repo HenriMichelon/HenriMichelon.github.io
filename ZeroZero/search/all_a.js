@@ -6,7 +6,7 @@ var searchData=
   ['lefttop_3',['LEFTTOP',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10eba120eb1862504eeceab40c2412bf79503',1,'z0::GWidget']]],
   ['line_4',['LINE',['../classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7ab023460c84f774a219d46ccf4665994c',1,'z0::GWidget']]],
   ['loader_5',['Loader',['../classz0_1_1_loader.html',1,'z0']]],
-  ['loadfromfile_6',['loadFromFile',['../classz0_1_1_image.html#ac6c8d208d8e25899c544079aecbf28c1',1,'z0::Image']]],
+  ['loadfromfile_6',['loadFromFile',['../classz0_1_1_cubemap.html#a53ccc68e2e20cd377a2217ff2d55c840',1,'z0::Cubemap::loadFromFile(const string &amp;filepath, const string &amp;ext)'],['../classz0_1_1_cubemap.html#aa305a6f95be4c1963cd98ae8f62b8da2',1,'z0::Cubemap::loadFromFile(const string &amp;filepath)'],['../classz0_1_1_image.html#ac6c8d208d8e25899c544079aecbf28c1',1,'z0::Image::loadFromFile()']]],
   ['loadmodelfromfile_7',['loadModelFromFile',['../classz0_1_1_loader.html#aab371de82dd5a8f8d29d98656940e530',1,'z0::Loader']]],
   ['log_8',['log',['../tools_8h.html#a606b4dda67a44b470717b494219b60dc',1,'z0']]],
   ['logging_5ffile_9',['LOGGING_FILE',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05',1,'z0']]],

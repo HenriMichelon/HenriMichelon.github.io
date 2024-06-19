@@ -34,11 +34,12 @@ var searchData=
   ['shape_31',['Shape',['../classz0_1_1_shape.html',1,'z0']]],
   ['show_32',['show',['../classz0_1_1_g_widget.html#a97aa6a78672cf55fca0ba8f641675dd3',1,'z0::GWidget::show()'],['../classz0_1_1_g_window.html#a4b148f40a95444d5669406b918ad2f52',1,'z0::GWindow::show()']]],
   ['signal_33',['Signal',['../classz0_1_1_signal.html',1,'z0']]],
-  ['split_34',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]],
-  ['standardmaterial_35',['StandardMaterial',['../classz0_1_1_standard_material.html',1,'z0']]],
-  ['state_36',['state',['../structz0_1_1_g_event_state.html#af8ec6e123570f44094bcf2cb02b478f4',1,'z0::GEventState']]],
-  ['staticcompoundshape_37',['StaticCompoundShape',['../classz0_1_1_static_compound_shape.html',1,'z0']]],
-  ['std_38',['std',['../namespacestd.html',1,'']]],
-  ['subshape_39',['SubShape',['../structz0_1_1_sub_shape.html',1,'z0']]],
-  ['surface_40',['Surface',['../structz0_1_1_surface.html',1,'z0']]]
+  ['skybox_34',['Skybox',['../classz0_1_1_skybox.html',1,'Skybox'],['../classz0_1_1_skybox.html#a13e417f38d66aefe3683a6120e6653e3',1,'z0::Skybox::Skybox(const string &amp;filename, const string &amp;fileext)'],['../classz0_1_1_skybox.html#a1597c952d0dc64b800fb9bf0f8f99439',1,'z0::Skybox::Skybox(const string &amp;filename)']]],
+  ['split_35',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]],
+  ['standardmaterial_36',['StandardMaterial',['../classz0_1_1_standard_material.html',1,'z0']]],
+  ['state_37',['state',['../structz0_1_1_g_event_state.html#af8ec6e123570f44094bcf2cb02b478f4',1,'z0::GEventState']]],
+  ['staticcompoundshape_38',['StaticCompoundShape',['../classz0_1_1_static_compound_shape.html',1,'z0']]],
+  ['std_39',['std',['../namespacestd.html',1,'']]],
+  ['subshape_40',['SubShape',['../structz0_1_1_sub_shape.html',1,'z0']]],
+  ['surface_41',['Surface',['../structz0_1_1_surface.html',1,'z0']]]
 ];

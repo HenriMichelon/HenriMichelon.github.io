@@ -23,7 +23,9 @@ var hierarchy =
         [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", null ],
         [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", null ]
       ] ],
-      [ "Node", "classz0_1_1_node.html", null ],
+      [ "Node", "classz0_1_1_node.html", [
+        [ "Skybox", "classz0_1_1_skybox.html", null ]
+      ] ],
       [ "Resource", "classz0_1_1_resource.html", [
         [ "Cubemap", "classz0_1_1_cubemap.html", null ],
         [ "Font", "classz0_1_1_font.html", null ],

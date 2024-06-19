@@ -30,5 +30,6 @@ var searchData=
   ['setx_27',['setX',['../classz0_1_1_g_window.html#a29cff27de7a20dec4a4a53cf56e3e73a',1,'z0::GWindow']]],
   ['sety_28',['setY',['../classz0_1_1_g_window.html#a206f05ae1c5d3145a61e9ce6c9d81e07',1,'z0::GWindow']]],
   ['show_29',['show',['../classz0_1_1_g_widget.html#a97aa6a78672cf55fca0ba8f641675dd3',1,'z0::GWidget::show()'],['../classz0_1_1_g_window.html#a4b148f40a95444d5669406b918ad2f52',1,'z0::GWindow::show()']]],
-  ['split_30',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]]
+  ['skybox_30',['Skybox',['../classz0_1_1_skybox.html#a13e417f38d66aefe3683a6120e6653e3',1,'z0::Skybox::Skybox(const string &amp;filename, const string &amp;fileext)'],['../classz0_1_1_skybox.html#a1597c952d0dc64b800fb9bf0f8f99439',1,'z0::Skybox::Skybox(const string &amp;filename)']]],
+  ['split_31',['split',['../tools_8h.html#a9820c5694fdc49b5c5d11edfbec0de27',1,'z0']]]
 ];
