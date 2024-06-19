@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['input_0',['Input',['../classz0_1_1_input.html',1,'z0']]],
-  ['inputevent_1',['InputEvent',['../classz0_1_1_input_event.html',1,'z0']]],
-  ['inputeventgamepadbutton_2',['InputEventGamepadButton',['../classz0_1_1_input_event_gamepad_button.html',1,'z0']]],
-  ['inputeventkey_3',['InputEventKey',['../classz0_1_1_input_event_key.html',1,'z0']]],
-  ['inputeventmousebutton_4',['InputEventMouseButton',['../classz0_1_1_input_event_mouse_button.html',1,'z0']]],
-  ['inputeventmousemotion_5',['InputEventMouseMotion',['../classz0_1_1_input_event_mouse_motion.html',1,'z0']]]
+  ['gevent_0',['GEvent',['../classz0_1_1_g_event.html',1,'z0']]],
+  ['geventclick_1',['GEventClick',['../structz0_1_1_g_event_click.html',1,'z0']]],
+  ['geventkeyb_2',['GEventKeyb',['../structz0_1_1_g_event_keyb.html',1,'z0']]],
+  ['geventmouse_3',['GEventMouse',['../structz0_1_1_g_event_mouse.html',1,'z0']]],
+  ['geventstate_4',['GEventState',['../structz0_1_1_g_event_state.html',1,'z0']]],
+  ['gmanager_5',['GManager',['../classz0_1_1_g_manager.html',1,'z0']]],
+  ['gtext_6',['GText',['../classz0_1_1_g_text.html',1,'z0']]],
+  ['gwidget_7',['GWidget',['../classz0_1_1_g_widget.html',1,'z0']]],
+  ['gwindow_8',['GWindow',['../classz0_1_1_g_window.html',1,'z0']]]
 ];

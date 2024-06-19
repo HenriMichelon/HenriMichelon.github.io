@@ -19,7 +19,10 @@ var hierarchy =
         [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", null ]
       ] ],
       [ "Node", "classz0_1_1_node.html", null ],
-      [ "Resource", "classz0_1_1_resource.html", null ],
+      [ "Resource", "classz0_1_1_resource.html", [
+        [ "Font", "classz0_1_1_font.html", null ],
+        [ "Image", "classz0_1_1_image.html", null ]
+      ] ],
       [ "Window", "classz0_1_1_window.html", null ]
     ] ],
     [ "Parameters", "structz0_1_1_signal_1_1_parameters.html", [

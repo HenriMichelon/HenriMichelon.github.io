@@ -8,7 +8,9 @@ var searchData=
   ['removeallchildren_5',['removeAllChildren',['../classz0_1_1_node.html#a760b298572124d03528a05c75a40af57',1,'z0::Node']]],
   ['removechild_6',['removeChild',['../classz0_1_1_node.html#a4b19b4c247bfddbc78ee6710e508dbe2',1,'z0::Node']]],
   ['removewindow_7',['removeWindow',['../classz0_1_1_application.html#a2ea601efd0047ec9e4670553137d5bd1',1,'z0::Application']]],
-  ['rotatex_8',['rotateX',['../classz0_1_1_node.html#a42d657c51846d0c104e4f1614e3dc689',1,'z0::Node']]],
-  ['rotatey_9',['rotateY',['../classz0_1_1_node.html#a27be02acacb53bf2a010488a051b25a9',1,'z0::Node']]],
-  ['rotatez_10',['rotateZ',['../classz0_1_1_node.html#aa2a7537526f3ae676af7cca05157c7e3',1,'z0::Node']]]
+  ['rendertobitmap_8',['renderToBitmap',['../classz0_1_1_font.html#a6b137a694c4acd82be73c865fb505944',1,'z0::Font']]],
+  ['rendertoimage_9',['renderToImage',['../classz0_1_1_font.html#adaf894330682b6db5638fd4a97010704',1,'z0::Font']]],
+  ['rotatex_10',['rotateX',['../classz0_1_1_node.html#a42d657c51846d0c104e4f1614e3dc689',1,'z0::Node']]],
+  ['rotatey_11',['rotateY',['../classz0_1_1_node.html#a27be02acacb53bf2a010488a051b25a9',1,'z0::Node']]],
+  ['rotatez_12',['rotateZ',['../classz0_1_1_node.html#aa2a7537526f3ae676af7cca05157c7e3',1,'z0::Node']]]
 ];
