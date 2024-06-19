@@ -107,7 +107,7 @@ $(function(){initNavTree('classz0_1_1_font.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A font resource to render text in bitmaps. A font is a combination of a font file name and a size. Supports true type font files (cf <a href="https://github.com/nothings/stb/blob/master/stb_truetype.h">https://github.com/nothings/stb/blob/master/stb_truetype.h</a>) The font size is automatically scaled based on the resolution, from a base resolution of 640x480 (14 is 14 pixels height in this resolution) </p>
+<div class="textblock"><p>A font resource to render text in bitmaps. A font is a combination of a font file name and a size. Supports true type font files (cf <a href="https://github.com/nothings/stb/blob/master/stb_truetype.h">https://github.com/nothings/stb/blob/master/stb_truetype.h</a>). The font size is automatically scaled based on the resolution, from a base resolution of 1920x1080 (14 is 14 pixels height in this resolution) </p>
 </div>
 <p><code>#include &lt;font.h&gt;</code></p>
 <div class="dynheader">
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25df9f3d1dffcbc9f1ae20bf3e220369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b137a694c4acd82be73c865fb505944" id="r_a6b137a694c4acd82be73c865fb505944"><td class="memItemLeft" align="right" valign="top">vector&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b137a694c4acd82be73c865fb505944">renderToBitmap</a> (const string &amp;text, float &amp;width, float &amp;height)</td></tr>
 <tr class="separator:a6b137a694c4acd82be73c865fb505944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf894330682b6db5638fd4a97010704" id="r_adaf894330682b6db5638fd4a97010704"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf894330682b6db5638fd4a97010704">renderToImage</a> (const Device &amp;device, const string &amp;text)</td></tr>
+<tr class="memitem:adaf894330682b6db5638fd4a97010704" id="r_adaf894330682b6db5638fd4a97010704"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf894330682b6db5638fd4a97010704">renderToImage</a> (const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;device, const string &amp;text)</td></tr>
 <tr class="separator:adaf894330682b6db5638fd4a97010704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be5acce99b7e3a9703feb5c6e7f0841" id="r_a7be5acce99b7e3a9703feb5c6e7f0841"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be5acce99b7e3a9703feb5c6e7f0841">getFontName</a> () const</td></tr>
 <tr class="separator:a7be5acce99b7e3a9703feb5c6e7f0841"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,7 +184,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a font resource </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>: font file path, relative to the application working directory </td></tr>
-    <tr><td class="paramname">size</td><td>: size in pixels on a base resolution of 640x480 </td></tr>
+    <tr><td class="paramname">size</td><td>: height in pixels on a base resolution of 1920x1080 </td></tr>
   </table>
   </dd>
 </dl>
@@ -315,7 +315,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt; renderToImage </td>
           <td>(</td>
-          <td class="paramtype">const Device &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

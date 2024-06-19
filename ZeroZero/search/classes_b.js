@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_0',['Window',['../classz0_1_1_window.html',1,'z0']]]
+  ['parameters_0',['Parameters',['../structz0_1_1_signal_1_1_parameters.html',1,'z0::Signal']]]
 ];
