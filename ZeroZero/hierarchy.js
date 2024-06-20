@@ -24,6 +24,7 @@ var hierarchy =
       [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
     ] ],
     [ "Buffer", "classz0_1_1_buffer.html", null ],
+    [ "Collision", "structz0_1_1_collision_object_1_1_collision.html", null ],
     [ "Color", "structz0_1_1_color.html", null ],
     [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
     [ "DescriptorSetLayout", "classz0_1_1_descriptor_set_layout.html", null ],
@@ -68,6 +69,7 @@ var hierarchy =
         ] ],
         [ "Environment", "classz0_1_1_environment.html", null ],
         [ "Light", "classz0_1_1_light.html", [
+          [ "DirectionalLight", "classz0_1_1_directional_light.html", null ],
           [ "OmniLight", "classz0_1_1_omni_light.html", [
             [ "SpotLight", "classz0_1_1_spot_light.html", null ]
           ] ]

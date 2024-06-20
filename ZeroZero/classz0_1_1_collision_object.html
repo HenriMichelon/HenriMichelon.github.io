@@ -101,12 +101,14 @@ $(function(){initNavTree('classz0_1_1_collision_object.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classz0_1_1_collision_object-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CollisionObject Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for 3D physics objects </p>
+<div class="textblock"><p>Base class for 3D physics objects. <a class="el" href="classz0_1_1_object.html">Object</a> A can detect a contact with object B only if object B is in any of the layers that object A scans (mask value) </p>
 </div>
 <p><code>#include &lt;collision_object.h&gt;</code></p>
 <div class="dynheader">
@@ -124,8 +126,37 @@ Inheritance diagram for CollisionObject:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1_collision_object_1_1_collision.html">Collision</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a45c512296b36eedaf874f9c824bbf29f" id="r_a45c512296b36eedaf874f9c824bbf29f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c512296b36eedaf874f9c824bbf29f">getCollisionLayer</a> () const</td></tr>
+<tr class="separator:a45c512296b36eedaf874f9c824bbf29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0438dcaa14bd0702a7837d26acb62ee5" id="r_a0438dcaa14bd0702a7837d26acb62ee5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0438dcaa14bd0702a7837d26acb62ee5">getCollistionMask</a> () const</td></tr>
+<tr class="separator:a0438dcaa14bd0702a7837d26acb62ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1e540ad97cd8dc949137785f1ff8fd" id="r_ace1e540ad97cd8dc949137785f1ff8fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace1e540ad97cd8dc949137785f1ff8fd">haveCollisionLayer</a> (uint32_t layer) const</td></tr>
+<tr class="separator:ace1e540ad97cd8dc949137785f1ff8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd697efcded0e099922a2a448da613d" id="r_a3cd697efcded0e099922a2a448da613d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cd697efcded0e099922a2a448da613d">haveCollisionMask</a> (uint32_t mask) const</td></tr>
+<tr class="separator:a3cd697efcded0e099922a2a448da613d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdb047967acd566814324547973522d" id="r_acbdb047967acd566814324547973522d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbdb047967acd566814324547973522d">setCollistionLayer</a> (uint32_t layer, bool value)</td></tr>
+<tr class="separator:acbdb047967acd566814324547973522d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b1c298353be91cb3490b0d4d432cf7" id="r_aa6b1c298353be91cb3490b0d4d432cf7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6b1c298353be91cb3490b0d4d432cf7">setCollistionMask</a> (uint32_t layer, bool value)</td></tr>
+<tr class="separator:aa6b1c298353be91cb3490b0d4d432cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e92ea05aee2fbe40cbf9fb15ee5c676" id="r_a7e92ea05aee2fbe40cbf9fb15ee5c676"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e92ea05aee2fbe40cbf9fb15ee5c676">shouldCollide</a> (uint32_t layer) const</td></tr>
+<tr class="separator:a7e92ea05aee2fbe40cbf9fb15ee5c676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7622cc079325a6394f88919af262a5" id="r_a0e7622cc079325a6394f88919af262a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e7622cc079325a6394f88919af262a5">onCollisionStarts</a> (const <a class="el" href="structz0_1_1_collision_object_1_1_collision.html">Collision</a> collision)</td></tr>
+<tr class="separator:a0e7622cc079325a6394f88919af262a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce729a74fdb67b267866663d20c5023" id="r_acce729a74fdb67b267866663d20c5023"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acce729a74fdb67b267866663d20c5023">setVelocity</a> (vec3 velocity)</td></tr>
+<tr class="separator:acce729a74fdb67b267866663d20c5023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af845917f483db6b9c329f5bd02e75ebd" id="r_af845917f483db6b9c329f5bd02e75ebd"><td class="memItemLeft" align="right" valign="top">virtual vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af845917f483db6b9c329f5bd02e75ebd">getVelocity</a> () const</td></tr>
+<tr class="separator:af845917f483db6b9c329f5bd02e75ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b5fe8d13450fa616d9734344fb887d" id="r_af9b5fe8d13450fa616d9734344fb887d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b5fe8d13450fa616d9734344fb887d">applyForce</a> (vec3 force)</td></tr>
+<tr class="separator:af9b5fe8d13450fa616d9734344fb887d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a77955925d7ad544856a761a447316b" id="r_a0a77955925d7ad544856a761a447316b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a77955925d7ad544856a761a447316b">applyForce</a> (vec3 force, vec3 position)</td></tr>
+<tr class="separator:a0a77955925d7ad544856a761a447316b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_node.html">Node</a></td></tr>
 <tr class="memitem:a7d0d5367c2bd0ffca74029c22845c3b4 inherit pub_methods_classz0_1_1_node" id="r_a7d0d5367c2bd0ffca74029c22845c3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a7d0d5367c2bd0ffca74029c22845c3b4">Node</a> (const <a class="el" href="classz0_1_1_node.html">Node</a> &amp;)</td></tr>
 <tr class="separator:a7d0d5367c2bd0ffca74029c22845c3b4 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +249,295 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ab97d14517721c2c8efa60143e6eda0d1 inherit pub_methods_classz0_1_1_object" id="r_ab97d14517721c2c8efa60143e6eda0d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#ab97d14517721c2c8efa60143e6eda0d1">emit</a> (const string &amp;name, <a class="el" href="structz0_1_1_signal_1_1_parameters.html">Signal::Parameters</a> *params=nullptr)</td></tr>
 <tr class="separator:ab97d14517721c2c8efa60143e6eda0d1 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af9b5fe8d13450fa616d9734344fb887d" name="af9b5fe8d13450fa616d9734344fb887d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b5fe8d13450fa616d9734344fb887d">&#9670;&#160;</a></span>applyForce() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void applyForce </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add force (unit: N) at center of mass for the next time step, will be reset after the next physics update </p>
+
+</div>
+</div>
+<a id="a0a77955925d7ad544856a761a447316b" name="a0a77955925d7ad544856a761a447316b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a77955925d7ad544856a761a447316b">&#9670;&#160;</a></span>applyForce() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void applyForce </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>force</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>position</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add force (unit: N) at <code>position</code> for the next time step, will be reset after the next physics update </p>
+
+</div>
+</div>
+<a id="a45c512296b36eedaf874f9c824bbf29f" name="a45c512296b36eedaf874f9c824bbf29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c512296b36eedaf874f9c824bbf29f">&#9670;&#160;</a></span>getCollisionLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getCollisionLayer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The physics layers this <a class="el" href="classz0_1_1_collision_object.html">CollisionObject</a> is in. </p>
+
+</div>
+</div>
+<a id="a0438dcaa14bd0702a7837d26acb62ee5" name="a0438dcaa14bd0702a7837d26acb62ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0438dcaa14bd0702a7837d26acb62ee5">&#9670;&#160;</a></span>getCollistionMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getCollistionMask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The physics layers this <a class="el" href="classz0_1_1_collision_object.html">CollisionObject</a> scans. </p>
+
+</div>
+</div>
+<a id="af845917f483db6b9c329f5bd02e75ebd" name="af845917f483db6b9c329f5bd02e75ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af845917f483db6b9c329f5bd02e75ebd">&#9670;&#160;</a></span>getVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual vec3 getVelocity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the linear velocity </p>
+
+<p>Reimplemented in <a class="el" href="classz0_1_1_character.html#aff4540c8caf13971f46b1106f4f2802d">Character</a>.</p>
+
+</div>
+</div>
+<a id="ace1e540ad97cd8dc949137785f1ff8fd" name="ace1e540ad97cd8dc949137785f1ff8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1e540ad97cd8dc949137785f1ff8fd">&#9670;&#160;</a></span>haveCollisionLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool haveCollisionLayer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <code>true</code> if the object is in the <code>layer</code> </p>
+
+</div>
+</div>
+<a id="a3cd697efcded0e099922a2a448da613d" name="a3cd697efcded0e099922a2a448da613d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd697efcded0e099922a2a448da613d">&#9670;&#160;</a></span>haveCollisionMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool haveCollisionMask </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <code>true</code> if the object have the <code>mask</code> </p>
+
+</div>
+</div>
+<a id="a0e7622cc079325a6394f88919af262a5" name="a0e7622cc079325a6394f88919af262a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7622cc079325a6394f88919af262a5">&#9670;&#160;</a></span>onCollisionStarts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCollisionStarts </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structz0_1_1_collision_object_1_1_collision.html">Collision</a></td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called when antoher body collides with the object, with respect to the layer/mask values </p>
+
+</div>
+</div>
+<a id="acbdb047967acd566814324547973522d" name="acbdb047967acd566814324547973522d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdb047967acd566814324547973522d">&#9670;&#160;</a></span>setCollistionLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setCollistionLayer </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds or removes a collision layer </p>
+
+</div>
+</div>
+<a id="aa6b1c298353be91cb3490b0d4d432cf7" name="aa6b1c298353be91cb3490b0d4d432cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b1c298353be91cb3490b0d4d432cf7">&#9670;&#160;</a></span>setCollistionMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setCollistionMask </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds or removes a collision mask </p>
+
+</div>
+</div>
+<a id="acce729a74fdb67b267866663d20c5023" name="acce729a74fdb67b267866663d20c5023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce729a74fdb67b267866663d20c5023">&#9670;&#160;</a></span>setVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setVelocity </td>
+          <td>(</td>
+          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>velocity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the linear velocity </p>
+
+<p>Reimplemented in <a class="el" href="classz0_1_1_character.html#a2ca8f946ca65062626f34ed613d6ec80">Character</a>.</p>
+
+</div>
+</div>
+<a id="a7e92ea05aee2fbe40cbf9fb15ee5c676" name="a7e92ea05aee2fbe40cbf9fb15ee5c676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e92ea05aee2fbe40cbf9fb15ee5c676">&#9670;&#160;</a></span>shouldCollide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool shouldCollide </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <code>true</code> if the object can collide with an object with the layer <code>layer</code> </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
