@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['material_0',['Material',['../classz0_1_1_material.html',1,'z0']]],
-  ['mesh_1',['Mesh',['../classz0_1_1_mesh.html',1,'z0']]]
+  ['light_0',['Light',['../classz0_1_1_light.html',1,'z0']]],
+  ['loader_1',['Loader',['../classz0_1_1_loader.html',1,'z0']]]
 ];

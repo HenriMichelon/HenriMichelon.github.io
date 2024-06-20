@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rect_0',['Rect',['../structz0_1_1_rect.html',1,'z0']]],
-  ['resource_1',['Resource',['../classz0_1_1_resource.html',1,'z0']]]
+  ['parameters_0',['Parameters',['../structz0_1_1_signal_1_1_parameters.html',1,'z0::Signal']]],
+  ['physicsbody_1',['PhysicsBody',['../classz0_1_1_physics_body.html',1,'z0']]]
 ];

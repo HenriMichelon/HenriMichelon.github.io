@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['transparency_0',['Transparency',['../constants_8h.html#a184209e78f6ae891384d08a38b1ec557',1,'z0']]],
-  ['type_1',['Type',['../classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7',1,'z0::GWidget']]]
+  ['state_0',['State',['../classz0_1_1_g_check_widget.html#a5d74787dedbc4e11c1ab15bf487e61f8',1,'z0::GCheckWidget']]]
 ];
