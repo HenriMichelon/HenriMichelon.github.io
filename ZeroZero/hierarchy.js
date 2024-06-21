@@ -79,13 +79,13 @@ var hierarchy =
         [ "Skybox", "classz0_1_1_skybox.html", null ]
       ] ],
       [ "Resource", "classz0_1_1_resource.html", [
-        [ "Cubemap", "classz0_1_1_cubemap.html", null ],
-        [ "Font", "classz0_1_1_font.html", null ],
-        [ "Image", "classz0_1_1_image.html", null ],
-        [ "Material", "classz0_1_1_material.html", [
+        [ "BaseMaterial", "classz0_1_1_base_material.html", [
           [ "ShaderMaterial", "classz0_1_1_shader_material.html", null ],
           [ "StandardMaterial", "classz0_1_1_standard_material.html", null ]
         ] ],
+        [ "Cubemap", "classz0_1_1_cubemap.html", null ],
+        [ "Font", "classz0_1_1_font.html", null ],
+        [ "Image", "classz0_1_1_image.html", null ],
         [ "Mesh", "classz0_1_1_mesh.html", null ],
         [ "Shape", "classz0_1_1_shape.html", [
           [ "BoxShape", "classz0_1_1_box_shape.html", null ],
@@ -110,5 +110,6 @@ var hierarchy =
     [ "Signal", "classz0_1_1_signal.html", null ],
     [ "SubShape", "structz0_1_1_sub_shape.html", null ],
     [ "Surface", "structz0_1_1_surface.html", null ],
+    [ "TextureTransform", "structz0_1_1_standard_material_1_1_texture_transform.html", null ],
     [ "Vertex", "structz0_1_1_vertex.html", null ]
 ];

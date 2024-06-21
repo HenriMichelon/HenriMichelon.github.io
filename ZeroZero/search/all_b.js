@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['material_0',['Material',['../classz0_1_1_material.html',1,'z0']]],
+  ['max_5fparameters_0',['MAX_PARAMETERS',['../classz0_1_1_shader_material.html#ad300914fd0d979a9a97906e0a87ab435',1,'z0::ShaderMaterial']]],
   ['mesh_1',['Mesh',['../classz0_1_1_mesh.html',1,'z0']]],
   ['meshinstance_2',['MeshInstance',['../classz0_1_1_mesh_instance.html',1,'z0']]],
   ['mouse_5fbutton_5fleft_3',['MOUSE_BUTTON_LEFT',['../constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a3c2e62b97b30d850c5539d0f3a6d0958',1,'z0']]],
