@@ -10,10 +10,11 @@ var searchData=
   ['signal_7',['Signal',['../classz0_1_1_signal.html',1,'z0']]],
   ['simplepostprocessingrenderer_8',['SimplePostprocessingRenderer',['../classz0_1_1_simple_postprocessing_renderer.html',1,'z0']]],
   ['skybox_9',['Skybox',['../classz0_1_1_skybox.html',1,'z0']]],
-  ['spotlight_10',['SpotLight',['../classz0_1_1_spot_light.html',1,'z0']]],
-  ['standardmaterial_11',['StandardMaterial',['../classz0_1_1_standard_material.html',1,'z0']]],
-  ['staticbody_12',['StaticBody',['../classz0_1_1_static_body.html',1,'z0']]],
-  ['staticcompoundshape_13',['StaticCompoundShape',['../classz0_1_1_static_compound_shape.html',1,'z0']]],
-  ['subshape_14',['SubShape',['../structz0_1_1_sub_shape.html',1,'z0']]],
-  ['surface_15',['Surface',['../structz0_1_1_surface.html',1,'z0']]]
+  ['sphereshape_10',['SphereShape',['../classz0_1_1_sphere_shape.html',1,'z0']]],
+  ['spotlight_11',['SpotLight',['../classz0_1_1_spot_light.html',1,'z0']]],
+  ['standardmaterial_12',['StandardMaterial',['../classz0_1_1_standard_material.html',1,'z0']]],
+  ['staticbody_13',['StaticBody',['../classz0_1_1_static_body.html',1,'z0']]],
+  ['staticcompoundshape_14',['StaticCompoundShape',['../classz0_1_1_static_compound_shape.html',1,'z0']]],
+  ['subshape_15',['SubShape',['../structz0_1_1_sub_shape.html',1,'z0']]],
+  ['surface_16',['Surface',['../structz0_1_1_surface.html',1,'z0']]]
 ];

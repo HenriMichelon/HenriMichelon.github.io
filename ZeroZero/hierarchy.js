@@ -24,7 +24,6 @@ var hierarchy =
       [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
     ] ],
     [ "Buffer", "classz0_1_1_buffer.html", null ],
-    [ "Collision", "structz0_1_1_collision_object_1_1_collision.html", null ],
     [ "Color", "structz0_1_1_color.html", null ],
     [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
     [ "DescriptorSetLayout", "classz0_1_1_descriptor_set_layout.html", null ],
@@ -62,6 +61,7 @@ var hierarchy =
         [ "Camera", "classz0_1_1_camera.html", null ],
         [ "CollisionObject", "classz0_1_1_collision_object.html", [
           [ "Character", "classz0_1_1_character.html", null ],
+          [ "CollisionArea", "classz0_1_1_collision_area.html", null ],
           [ "PhysicsBody", "classz0_1_1_physics_body.html", [
             [ "RigidBody", "classz0_1_1_rigid_body.html", null ],
             [ "StaticBody", "classz0_1_1_static_body.html", null ]
@@ -90,6 +90,8 @@ var hierarchy =
         [ "Shape", "classz0_1_1_shape.html", [
           [ "BoxShape", "classz0_1_1_box_shape.html", null ],
           [ "ConvexHullShape", "classz0_1_1_convex_hull_shape.html", null ],
+          [ "MeshShape", "classz0_1_1_mesh_shape.html", null ],
+          [ "SphereShape", "classz0_1_1_sphere_shape.html", null ],
           [ "StaticCompoundShape", "classz0_1_1_static_compound_shape.html", null ]
         ] ],
         [ "Texture", "classz0_1_1_texture.html", [
@@ -100,6 +102,7 @@ var hierarchy =
     ] ],
     [ "OutlineMaterials", "classz0_1_1_outline_materials.html", null ],
     [ "Parameters", "structz0_1_1_signal_1_1_parameters.html", [
+      [ "Collision", "structz0_1_1_collision_object_1_1_collision.html", null ],
       [ "GEventClick", "structz0_1_1_g_event_click.html", null ],
       [ "GEventKeyb", "structz0_1_1_g_event_keyb.html", null ],
       [ "GEventMouse", "structz0_1_1_g_event_mouse.html", null ],

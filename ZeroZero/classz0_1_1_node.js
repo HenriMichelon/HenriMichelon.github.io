@@ -9,6 +9,7 @@ var classz0_1_1_node =
     [ "getParent", "classz0_1_1_node.html#a2926b5f07de0982ac20d7da2a59321ab", null ],
     [ "getPositionGlobal", "classz0_1_1_node.html#a8a386ce624f44e778ee752b99319a7ca", null ],
     [ "getProcessMode", "classz0_1_1_node.html#a108eba1dbccbd4ecb5a2d310616bcc66", null ],
+    [ "getRightVector", "classz0_1_1_node.html#a850d8c3ae0a8fee8b369009a66a8e3d1", null ],
     [ "getRotation", "classz0_1_1_node.html#acf59fbf2605d48ab018593418822a564", null ],
     [ "getRotationX", "classz0_1_1_node.html#a0a795c100a9fb823fdfca80b33d73929", null ],
     [ "getRotationY", "classz0_1_1_node.html#a17fd057679dbb34530daa376abcf45e7", null ],

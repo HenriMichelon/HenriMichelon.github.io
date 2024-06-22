@@ -20,5 +20,6 @@ var searchData=
   ['rigidbody_17',['RigidBody',['../classz0_1_1_rigid_body.html',1,'z0']]],
   ['rotatex_18',['rotateX',['../classz0_1_1_node.html#a42d657c51846d0c104e4f1614e3dc689',1,'z0::Node']]],
   ['rotatey_19',['rotateY',['../classz0_1_1_node.html#a27be02acacb53bf2a010488a051b25a9',1,'z0::Node']]],
-  ['rotatez_20',['rotateZ',['../classz0_1_1_node.html#aa2a7537526f3ae676af7cca05157c7e3',1,'z0::Node']]]
+  ['rotatez_20',['rotateZ',['../classz0_1_1_node.html#aa2a7537526f3ae676af7cca05157c7e3',1,'z0::Node']]],
+  ['rotation_21',['rotation',['../structz0_1_1_sub_shape.html#a748697685bbb042a4356f2403dcc4185',1,'z0::SubShape']]]
 ];
