@@ -98,6 +98,9 @@ var hierarchy =
           [ "ImageTexture", "classz0_1_1_image_texture.html", null ]
         ] ]
       ] ],
+      [ "Tween", "classz0_1_1_tween.html", [
+        [ "PropertyTween< T >", "classz0_1_1_property_tween.html", null ]
+      ] ],
       [ "Window", "classz0_1_1_window.html", null ]
     ] ],
     [ "OutlineMaterials", "classz0_1_1_outline_materials.html", null ],

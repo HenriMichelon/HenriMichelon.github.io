@@ -13,7 +13,7 @@ var annotated_dup =
       [ "Buffer", "classz0_1_1_buffer.html", null ],
       [ "Camera", "classz0_1_1_camera.html", "classz0_1_1_camera" ],
       [ "Character", "classz0_1_1_character.html", "classz0_1_1_character" ],
-      [ "CollisionArea", "classz0_1_1_collision_area.html", null ],
+      [ "CollisionArea", "classz0_1_1_collision_area.html", "classz0_1_1_collision_area" ],
       [ "CollisionObject", "classz0_1_1_collision_object.html", "classz0_1_1_collision_object" ],
       [ "Color", "structz0_1_1_color.html", "structz0_1_1_color" ],
       [ "ColorFrameBuffer", "classz0_1_1_color_frame_buffer.html", null ],
@@ -26,7 +26,7 @@ var annotated_dup =
       [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
       [ "Device", "classz0_1_1_device.html", null ],
       [ "DirectionalLight", "classz0_1_1_directional_light.html", "classz0_1_1_directional_light" ],
-      [ "Environment", "classz0_1_1_environment.html", null ],
+      [ "Environment", "classz0_1_1_environment.html", "classz0_1_1_environment" ],
       [ "Font", "classz0_1_1_font.html", "classz0_1_1_font" ],
       [ "GBox", "classz0_1_1_g_box.html", null ],
       [ "GButton", "classz0_1_1_g_button.html", null ],
@@ -64,6 +64,7 @@ var annotated_dup =
       [ "OmniLight", "classz0_1_1_omni_light.html", "classz0_1_1_omni_light" ],
       [ "OutlineMaterials", "classz0_1_1_outline_materials.html", null ],
       [ "PhysicsBody", "classz0_1_1_physics_body.html", "classz0_1_1_physics_body" ],
+      [ "PropertyTween", "classz0_1_1_property_tween.html", "classz0_1_1_property_tween" ],
       [ "RayCast", "classz0_1_1_ray_cast.html", null ],
       [ "Rect", "structz0_1_1_rect.html", "structz0_1_1_rect" ],
       [ "Resource", "classz0_1_1_resource.html", "classz0_1_1_resource" ],
@@ -86,6 +87,7 @@ var annotated_dup =
       [ "SubShape", "structz0_1_1_sub_shape.html", "structz0_1_1_sub_shape" ],
       [ "Surface", "structz0_1_1_surface.html", null ],
       [ "Texture", "classz0_1_1_texture.html", "classz0_1_1_texture" ],
+      [ "Tween", "classz0_1_1_tween.html", "classz0_1_1_tween" ],
       [ "Vertex", "structz0_1_1_vertex.html", null ],
       [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ]
     ] ]

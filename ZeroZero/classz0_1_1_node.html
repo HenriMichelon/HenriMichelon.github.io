@@ -222,6 +222,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2136ba9451fa824affb448f4bb66f183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a850d8c3ae0a8fee8b369009a66a8e3d1" id="r_a850d8c3ae0a8fee8b369009a66a8e3d1"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850d8c3ae0a8fee8b369009a66a8e3d1">getRightVector</a> () const</td></tr>
 <tr class="separator:a850d8c3ae0a8fee8b369009a66a8e3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa663d32ed1ee575023e5b4f2c64b2573" id="r_aa663d32ed1ee575023e5b4f2c64b2573"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa663d32ed1ee575023e5b4f2c64b2573"><td class="memTemplItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_tween.html">Tween</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa663d32ed1ee575023e5b4f2c64b2573">createPropertyTween</a> (<a class="el" href="classz0_1_1_property_tween.html">PropertyTween</a>&lt; T &gt;::Setter set, T initial, T final, float duration)</td></tr>
+<tr class="separator:aa663d32ed1ee575023e5b4f2c64b2573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf04318a13e5bdf66da6ae747a1b410" id="r_acbf04318a13e5bdf66da6ae747a1b410"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acbf04318a13e5bdf66da6ae747a1b410"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbf04318a13e5bdf66da6ae747a1b410">killTween</a> (shared_ptr&lt; <a class="el" href="classz0_1_1_tween.html">Tween</a> &gt; &amp;tween)</td></tr>
+<tr class="separator:acbf04318a13e5bdf66da6ae747a1b410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
 <tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="classz0_1_1_signal.html#a1b5aa0555b5fa30dcc022298f504ab0b">Signal::Handler</a> handler)</td></tr>
 <tr class="separator:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +297,48 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Adds a child node. Nodes can have any number of children, but a child can have only one parent. </p>
+
+</div>
+</div>
+<a id="aa663d32ed1ee575023e5b4f2c64b2573" name="aa663d32ed1ee575023e5b4f2c64b2573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa663d32ed1ee575023e5b4f2c64b2573">&#9670;&#160;</a></span>createPropertyTween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classz0_1_1_tween.html">Tween</a> &gt; createPropertyTween </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classz0_1_1_property_tween.html">PropertyTween</a>&lt; T &gt;::Setter</td>          <td class="paramname"><span class="paramname"><em>set</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>initial</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>final</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classz0_1_1_tween.html">Tween</a> to tweens a property of the node between an <code>initial</code> value and <code>final</code> value in a span of time equal to <code>duration</code>, in seconds. </p>
 
 </div>
 </div>
@@ -665,6 +713,34 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Returns true if the node is processed and receive input callbacks </p>
+
+</div>
+</div>
+<a id="acbf04318a13e5bdf66da6ae747a1b410" name="acbf04318a13e5bdf66da6ae747a1b410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf04318a13e5bdf66da6ae747a1b410">&#9670;&#160;</a></span>killTween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void killTween </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; <a class="el" href="classz0_1_1_tween.html">Tween</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tween</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the <code>tween</code> from the processing list </p>
 
 </div>
 </div>

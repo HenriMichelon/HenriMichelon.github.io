@@ -10,5 +10,6 @@ var searchData=
   ['process_5fmode_5finherit_7',['PROCESS_MODE_INHERIT',['../constants_8h.html#a9497f05feca4052f94601fd951dbf384a17ea044eedbd3ba4ee61619e1f6b74d5',1,'z0']]],
   ['process_5fmode_5fpausable_8',['PROCESS_MODE_PAUSABLE',['../constants_8h.html#a9497f05feca4052f94601fd951dbf384a3d0c39b45e0f5e42fe3c685952924b64',1,'z0']]],
   ['process_5fmode_5fwhen_5fpaused_9',['PROCESS_MODE_WHEN_PAUSED',['../constants_8h.html#a9497f05feca4052f94601fd951dbf384ae5c0eaaa7a5e69dfa1a1f88d8a71110a',1,'z0']]],
-  ['processmode_10',['ProcessMode',['../constants_8h.html#a9497f05feca4052f94601fd951dbf384',1,'z0']]]
+  ['processmode_10',['ProcessMode',['../constants_8h.html#a9497f05feca4052f94601fd951dbf384',1,'z0']]],
+  ['propertytween_11',['PropertyTween',['../classz0_1_1_property_tween.html',1,'PropertyTween&lt; T &gt;'],['../classz0_1_1_property_tween.html#aed69c2e1103d6cfef8ba2e0f9667b966',1,'z0::PropertyTween::PropertyTween(Object *node, Setter set, T initial, T final, float duration)'],['../classz0_1_1_property_tween.html#a15e78ef6f255574d6595cf7c034b1740',1,'z0::PropertyTween::PropertyTween(const shared_ptr&lt; Object &gt; &amp;node, Setter set, T initial, T final, float duration)']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_0',['Node',['../classz0_1_1_node.html#a7d0d5367c2bd0ffca74029c22845c3b4',1,'z0::Node::Node(const Node &amp;)'],['../classz0_1_1_node.html#aed2660fa45c1f3367d85cf27ede56ab8',1,'z0::Node::Node(string name=&quot;Node&quot;)']]]
+  ['meshshape_0',['MeshShape',['../classz0_1_1_mesh_shape.html#a3af573c7b5071f0c387248626db8ff4b',1,'z0::MeshShape::MeshShape(Node *, const string &amp;resName=&quot;MeshShape&quot;)'],['../classz0_1_1_mesh_shape.html#ad9d4c767062bdd8975ba8b735f83da2e',1,'z0::MeshShape::MeshShape(const shared_ptr&lt; Node &gt; &amp;, const string &amp;resName=&quot;MeshShape&quot;)']]]
 ];
