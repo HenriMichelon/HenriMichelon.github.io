@@ -20,7 +20,7 @@ var classz0_1_1_node =
     [ "getTransformLocal", "classz0_1_1_node.html#a7c0740679b72db7ae6abb9fc48b25c0a", null ],
     [ "haveChild", "classz0_1_1_node.html#a34d5af83a7ccd140e6961474acb74a64", null ],
     [ "isProcessed", "classz0_1_1_node.html#a83943e04f0ee0a5a38208278b97fc780", null ],
-    [ "killTween", "classz0_1_1_node.html#acbf04318a13e5bdf66da6ae747a1b410", null ],
+    [ "killTween", "classz0_1_1_node.html#a0130abf0d9bd88d9ff4fdedd8b67ecef", null ],
     [ "onEnterScene", "classz0_1_1_node.html#a185f888b7aabbe08c3c1c6a76669b75e", null ],
     [ "onExitScene", "classz0_1_1_node.html#ab26c148081cee0e39b4b61070c304a51", null ],
     [ "onInput", "classz0_1_1_node.html#ad5ef4d4f0e404eddbc46e41389042ef3", null ],

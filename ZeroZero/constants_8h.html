@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ZeroZero: C:/Users/z/Documents/zero_zero/include/z0/constants.h File Reference</title>
+<title>ZeroZero: C:/Users/hmich/Documents/GitHub/zero_zero/include/z0/constants.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -129,8 +129,9 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a5773202ab7ffd1746de9d527927198a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27b16a45ad1fb3cce2dda3ad2f59bb5d" id="r_a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5d">LoggingMode</a> { <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c">LOGGING_NONE</a> = 0
-, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3">LOGGING_WINDOW</a> = 0x01
-, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05">LOGGING_FILE</a> = 0x10
+, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3">LOGGING_WINDOW</a> = 0x001
+, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05">LOGGING_FILE</a> = 0x010
+, <a class="el" href="#a27b16a45ad1fb3cce2dda3ad2f59bb5daffdcdb1a729dc124975a2cff0d592fdc">LOGGING_STDOUT</a> = 0x100
  }</td></tr>
 <tr class="separator:a27b16a45ad1fb3cce2dda3ad2f59bb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10cbf4a39c3f0df11adfce73774f8a5a" id="r_a10cbf4a39c3f0df11adfce73774f8a5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> { <a class="el" href="#a10cbf4a39c3f0df11adfce73774f8a5aadda207ad42b7a029f04c5a872b1450cc">MSAA_AUTO</a> = 0
@@ -655,6 +656,8 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3"></a>LOGGING_WINDOW&#160;</td><td class="fielddoc"><p>Open an external window (on the first screen if you have multiple screen) to display the log messages. Log message appearance in the window can be deferred to the next frame if the log message is sent from a thread different from the main thread </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05" name="a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05"></a>LOGGING_FILE&#160;</td><td class="fielddoc"><p>Log the messages into a file named 'log.txt' </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a27b16a45ad1fb3cce2dda3ad2f59bb5daffdcdb1a729dc124975a2cff0d592fdc" name="a27b16a45ad1fb3cce2dda3ad2f59bb5daffdcdb1a729dc124975a2cff0d592fdc"></a>LOGGING_STDOUT&#160;</td><td class="fielddoc"><p>Log the messages to std::cout. WIN32 applications needs to be linked with <code>-mconsole</code> </p>
 </td></tr>
 </table>
 

@@ -13,7 +13,8 @@ var searchData=
   ['log_10',['log',['../tools_8h.html#a606b4dda67a44b470717b494219b60dc',1,'z0']]],
   ['logging_5ffile_11',['LOGGING_FILE',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da383e7e4b3bd34fe578a86c6c12a24f05',1,'z0']]],
   ['logging_5fnone_12',['LOGGING_NONE',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da919fb492d4ae8bafab2970c3f361277c',1,'z0']]],
-  ['logging_5fwindow_13',['LOGGING_WINDOW',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3',1,'z0']]],
-  ['loggingmode_14',['LoggingMode',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5d',1,'z0']]],
-  ['loggingmode_15',['loggingMode',['../structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd',1,'z0::ApplicationConfig']]]
+  ['logging_5fstdout_13',['LOGGING_STDOUT',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5daffdcdb1a729dc124975a2cff0d592fdc',1,'z0']]],
+  ['logging_5fwindow_14',['LOGGING_WINDOW',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3',1,'z0']]],
+  ['loggingmode_15',['LoggingMode',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5d',1,'z0']]],
+  ['loggingmode_16',['loggingMode',['../structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd',1,'z0::ApplicationConfig']]]
 ];

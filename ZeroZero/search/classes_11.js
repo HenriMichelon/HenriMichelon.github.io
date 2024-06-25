@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_0',['Window',['../classz0_1_1_window.html',1,'z0']]]
+  ['vertex_0',['Vertex',['../structz0_1_1_vertex.html',1,'z0']]]
 ];

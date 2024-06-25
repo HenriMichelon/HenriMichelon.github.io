@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['mesh_0',['Mesh',['../classz0_1_1_mesh.html',1,'z0']]],
-  ['meshinstance_1',['MeshInstance',['../classz0_1_1_mesh_instance.html',1,'z0']]],
-  ['meshshape_2',['MeshShape',['../classz0_1_1_mesh_shape.html',1,'z0']]]
+  ['light_0',['Light',['../classz0_1_1_light.html',1,'z0']]],
+  ['loader_1',['Loader',['../classz0_1_1_loader.html',1,'z0']]]
 ];

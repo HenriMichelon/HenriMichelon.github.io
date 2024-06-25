@@ -63,6 +63,7 @@ var hierarchy =
           [ "Character", "classz0_1_1_character.html", null ],
           [ "CollisionArea", "classz0_1_1_collision_area.html", null ],
           [ "PhysicsBody", "classz0_1_1_physics_body.html", [
+            [ "KinematicBody", "classz0_1_1_kinematic_body.html", null ],
             [ "RigidBody", "classz0_1_1_rigid_body.html", null ],
             [ "StaticBody", "classz0_1_1_static_body.html", null ]
           ] ]
