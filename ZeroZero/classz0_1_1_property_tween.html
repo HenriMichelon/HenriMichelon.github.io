@@ -130,10 +130,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aed69c2e1103d6cfef8ba2e0f9667b966" id="r_aed69c2e1103d6cfef8ba2e0f9667b966"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed69c2e1103d6cfef8ba2e0f9667b966">PropertyTween</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *node, <a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a> set, T initial, T final, float duration)</td></tr>
-<tr class="separator:aed69c2e1103d6cfef8ba2e0f9667b966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15e78ef6f255574d6595cf7c034b1740" id="r_a15e78ef6f255574d6595cf7c034b1740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15e78ef6f255574d6595cf7c034b1740">PropertyTween</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_object.html">Object</a> &gt; &amp;node, <a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a> set, T initial, T final, float duration)</td></tr>
-<tr class="separator:a15e78ef6f255574d6595cf7c034b1740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1f1ec98e999f58b95f62cc46b9def4" id="r_a9f1f1ec98e999f58b95f62cc46b9def4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f1f1ec98e999f58b95f62cc46b9def4">PropertyTween</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *obj, <a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a> set, T initial, T final, float duration, <a class="el" href="constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283">TransitionType</a> type=<a class="el" href="constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283a20ced00df10bdfb691b2866737e1c2e7">TRANS_LINEAR</a>)</td></tr>
+<tr class="separator:a9f1f1ec98e999f58b95f62cc46b9def4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ad6429942eca417a5d31b6b4c6d023" id="r_a72ad6429942eca417a5d31b6b4c6d023"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72ad6429942eca417a5d31b6b4c6d023">PropertyTween</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_object.html">Object</a> &gt; &amp;obj, <a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a> set, T initial, T final, float duration)</td></tr>
+<tr class="separator:a72ad6429942eca417a5d31b6b4c6d023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9cfc9ddd5694678d9cb2e16166aa6cd" id="r_aa9cfc9ddd5694678d9cb2e16166aa6cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9cfc9ddd5694678d9cb2e16166aa6cd">update</a> (float deltaTime) override</td></tr>
 <tr class="separator:aa9cfc9ddd5694678d9cb2e16166aa6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
@@ -165,8 +165,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aed69c2e1103d6cfef8ba2e0f9667b966" name="aed69c2e1103d6cfef8ba2e0f9667b966"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed69c2e1103d6cfef8ba2e0f9667b966">&#9670;&#160;</a></span>PropertyTween() <span class="overload">[1/2]</span></h2>
+<a id="a9f1f1ec98e999f58b95f62cc46b9def4" name="a9f1f1ec98e999f58b95f62cc46b9def4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1f1ec98e999f58b95f62cc46b9def4">&#9670;&#160;</a></span>PropertyTween() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +179,69 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classz0_1_1_property_tween.html">PropertyTween</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classz0_1_1_object.html">Object</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classz0_1_1_object.html">Object</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a></td>          <td class="paramname"><span class="paramname"><em>set</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>initial</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>final</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283">TransitionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283a20ced00df10bdfb691b2866737e1c2e7">TRANS_LINEAR</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="classz0_1_1_tween.html">Tween</a> to tweens a property of an <a class="el" href="classz0_1_1_object.html">Object</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Target <a class="el" href="classz0_1_1_object.html">Object</a> </td></tr>
+    <tr><td class="paramname">set</td><td>Setter to call on the <a class="el" href="classz0_1_1_object.html">Object</a> </td></tr>
+    <tr><td class="paramname">initial</td><td>Initial value </td></tr>
+    <tr><td class="paramname">final</td><td>Final value </td></tr>
+    <tr><td class="paramname">duration</td><td>Animation duration in seconds </td></tr>
+    <tr><td class="paramname">type</td><td>Transition type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a72ad6429942eca417a5d31b6b4c6d023" name="a72ad6429942eca417a5d31b6b4c6d023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ad6429942eca417a5d31b6b4c6d023">&#9670;&#160;</a></span>PropertyTween() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classz0_1_1_property_tween.html">PropertyTween</a> </td>
+          <td>(</td>
+          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classz0_1_1_object.html">Object</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,54 +270,17 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classz0_1_1_tween.html">Tween</a> to tweens a property of <code>node</code> between an <code>initial</code> value and <code>final</code> value in a span of time equal to <code>duration</code>, in seconds. </p>
-
-</div>
-</div>
-<a id="a15e78ef6f255574d6595cf7c034b1740" name="a15e78ef6f255574d6595cf7c034b1740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15e78ef6f255574d6595cf7c034b1740">&#9670;&#160;</a></span>PropertyTween() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classz0_1_1_property_tween.html">PropertyTween</a> </td>
-          <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classz0_1_1_object.html">Object</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a35f9c15fd3642ea464341c256f5647d7">Setter</a></td>          <td class="paramname"><span class="paramname"><em>set</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>initial</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>final</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Create a <a class="el" href="classz0_1_1_tween.html">Tween</a> to tweens a property of an <code>node</code> between an <code>initial</code> value and <code>final</code> value in a span of time equal to <code>duration</code>, in seconds. </p>
+<p>Create a <a class="el" href="classz0_1_1_tween.html">Tween</a> to tweens a property of an <a class="el" href="classz0_1_1_object.html">Object</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Target <a class="el" href="classz0_1_1_object.html">Object</a> </td></tr>
+    <tr><td class="paramname">set</td><td>Setter to call on the <a class="el" href="classz0_1_1_object.html">Object</a> </td></tr>
+    <tr><td class="paramname">initial</td><td>Initial value </td></tr>
+    <tr><td class="paramname">final</td><td>Final value </td></tr>
+    <tr><td class="paramname">duration</td><td>Animation duration in seconds </td></tr>
+    <tr><td class="paramname">type</td><td>Transition type </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -284,7 +309,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Interpolate the property. If the <a class="el" href="classz0_1_1_tween.html">Tween</a> have been created manually you need to call <a class="el" href="#aa9cfc9ddd5694678d9cb2e16166aa6cd">update()</a> in your <a class="el" href="classz0_1_1_node.html#ac995383efa231ecb0725b059afce0d6f">Node::onPhysicsProcess()</a> function. Do not call it if the <a class="el" href="classz0_1_1_tween.html">Tween</a> have been created with <a class="el" href="classz0_1_1_node.html#aa663d32ed1ee575023e5b4f2c64b2573">Node::createPropertyTween()</a>. </p><dl class="section return"><dt>Returns</dt><dd><code>false</code> if the tween is running </dd></dl>
+<p>Interpolate the property. If the <a class="el" href="classz0_1_1_tween.html">Tween</a> have been created manually you need to call <a class="el" href="#aa9cfc9ddd5694678d9cb2e16166aa6cd">update()</a> in a <a class="el" href="classz0_1_1_node.html#ac995383efa231ecb0725b059afce0d6f">Node::onPhysicsProcess()</a> function. <em>Do not call it</em> if the <a class="el" href="classz0_1_1_tween.html">Tween</a> have been created with <a class="el" href="classz0_1_1_node.html#aa663d32ed1ee575023e5b4f2c64b2573">Node::createPropertyTween()</a>. </p><dl class="section return"><dt>Returns</dt><dd><code>false</code> if the tween is running </dd></dl>
 
 <p>Implements <a class="el" href="classz0_1_1_tween.html#a95e1f31d28523f7d8a48f8f6040a5a40">Tween</a>.</p>
 

@@ -182,6 +182,9 @@ var constants_8h =
       [ "PROCESS_MODE_ALWAYS", "constants_8h.html#a9497f05feca4052f94601fd951dbf384a576b869a2cc987106ea5fdef5758bb25", null ],
       [ "PROCESS_MODE_DISABLED", "constants_8h.html#a9497f05feca4052f94601fd951dbf384a8d0d7e9b2f4550ae35058950ac53f7b7", null ]
     ] ],
+    [ "TransitionType", "constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283", [
+      [ "TRANS_LINEAR", "constants_8h.html#a4e38d9519e74e10eccdfda5c5b92b283a20ced00df10bdfb691b2866737e1c2e7", null ]
+    ] ],
     [ "Transparency", "constants_8h.html#a184209e78f6ae891384d08a38b1ec557", [
       [ "TRANSPARENCY_DISABLED", "constants_8h.html#a184209e78f6ae891384d08a38b1ec557ac0fcb108ad021876d2e92db95944dfb1", null ],
       [ "TRANSPARENCY_ALPHA", "constants_8h.html#a184209e78f6ae891384d08a38b1ec557a03f58faccb38e28526bf782938449daa", null ],
