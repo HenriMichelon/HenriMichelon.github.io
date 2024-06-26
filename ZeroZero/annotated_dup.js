@@ -89,6 +89,7 @@ var annotated_dup =
       [ "Surface", "structz0_1_1_surface.html", null ],
       [ "Texture", "classz0_1_1_texture.html", "classz0_1_1_texture" ],
       [ "Tween", "classz0_1_1_tween.html", "classz0_1_1_tween" ],
+      [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
       [ "Vertex", "structz0_1_1_vertex.html", null ],
       [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ]
     ] ]

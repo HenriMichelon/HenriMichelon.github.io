@@ -118,5 +118,6 @@ var hierarchy =
     [ "SubShape", "structz0_1_1_sub_shape.html", null ],
     [ "Surface", "structz0_1_1_surface.html", null ],
     [ "TextureTransform", "structz0_1_1_standard_material_1_1_texture_transform.html", null ],
+    [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
     [ "Vertex", "structz0_1_1_vertex.html", null ]
 ];
