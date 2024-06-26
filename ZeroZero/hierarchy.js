@@ -1,7 +1,13 @@
 var hierarchy =
 [
     [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
-    [ "BaseFrameBuffer", "classz0_1_1_base_frame_buffer.html", [
+    [ "Buffer", "classz0_1_1_buffer.html", null ],
+    [ "Color", "structz0_1_1_color.html", null ],
+    [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
+    [ "DescriptorSetLayout", "classz0_1_1_descriptor_set_layout.html", null ],
+    [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
+    [ "Device", "classz0_1_1_device.html", null ],
+    [ "FrameBuffer", "classz0_1_1_frame_buffer.html", [
       [ "ColorFrameBuffer", "classz0_1_1_color_frame_buffer.html", null ],
       [ "DepthFrameBuffer", "classz0_1_1_depth_frame_buffer.html", null ],
       [ "SampledFrameBuffer", "classz0_1_1_sampled_frame_buffer.html", [
@@ -9,26 +15,6 @@ var hierarchy =
         [ "ShadowMapFrameBuffer", "classz0_1_1_shadow_map_frame_buffer.html", null ]
       ] ]
     ] ],
-    [ "BaseRenderer", "classz0_1_1_base_renderer.html", [
-      [ "BaseModelsRenderer", "classz0_1_1_base_models_renderer.html", [
-        [ "SceneRenderer", "classz0_1_1_scene_renderer.html", null ]
-      ] ],
-      [ "BasePostprocessingRenderer", "classz0_1_1_base_postprocessing_renderer.html", [
-        [ "SimplePostprocessingRenderer", "classz0_1_1_simple_postprocessing_renderer.html", null ]
-      ] ],
-      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
-    ] ],
-    [ "BaseRenderpass", "classz0_1_1_base_renderpass.html", [
-      [ "BaseModelsRenderer", "classz0_1_1_base_models_renderer.html", null ],
-      [ "BasePostprocessingRenderer", "classz0_1_1_base_postprocessing_renderer.html", null ],
-      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
-    ] ],
-    [ "Buffer", "classz0_1_1_buffer.html", null ],
-    [ "Color", "structz0_1_1_color.html", null ],
-    [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
-    [ "DescriptorSetLayout", "classz0_1_1_descriptor_set_layout.html", null ],
-    [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
-    [ "Device", "classz0_1_1_device.html", null ],
     [ "GEvent", "classz0_1_1_g_event.html", null ],
     [ "Input", "classz0_1_1_input.html", null ],
     [ "Loader", "classz0_1_1_loader.html", null ],
@@ -80,13 +66,13 @@ var hierarchy =
         [ "Skybox", "classz0_1_1_skybox.html", null ]
       ] ],
       [ "Resource", "classz0_1_1_resource.html", [
-        [ "BaseMaterial", "classz0_1_1_base_material.html", [
-          [ "ShaderMaterial", "classz0_1_1_shader_material.html", null ],
-          [ "StandardMaterial", "classz0_1_1_standard_material.html", null ]
-        ] ],
         [ "Cubemap", "classz0_1_1_cubemap.html", null ],
         [ "Font", "classz0_1_1_font.html", null ],
         [ "Image", "classz0_1_1_image.html", null ],
+        [ "Material", "classz0_1_1_material.html", [
+          [ "ShaderMaterial", "classz0_1_1_shader_material.html", null ],
+          [ "StandardMaterial", "classz0_1_1_standard_material.html", null ]
+        ] ],
         [ "Mesh", "classz0_1_1_mesh.html", null ],
         [ "Shape", "classz0_1_1_shape.html", [
           [ "BoxShape", "classz0_1_1_box_shape.html", null ],
@@ -113,6 +99,20 @@ var hierarchy =
       [ "GEventState", "structz0_1_1_g_event_state.html", null ]
     ] ],
     [ "Rect", "structz0_1_1_rect.html", null ],
+    [ "Renderer", "classz0_1_1_renderer.html", [
+      [ "ModelsRenderer", "classz0_1_1_models_renderer.html", [
+        [ "SceneRenderer", "classz0_1_1_scene_renderer.html", null ]
+      ] ],
+      [ "PostprocessingRenderer", "classz0_1_1_postprocessing_renderer.html", [
+        [ "SimplePostprocessingRenderer", "classz0_1_1_simple_postprocessing_renderer.html", null ]
+      ] ],
+      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
+    ] ],
+    [ "Renderpass", "classz0_1_1_renderpass.html", [
+      [ "ModelsRenderer", "classz0_1_1_models_renderer.html", null ],
+      [ "PostprocessingRenderer", "classz0_1_1_postprocessing_renderer.html", null ],
+      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
+    ] ],
     [ "Shader", "classz0_1_1_shader.html", null ],
     [ "Signal", "classz0_1_1_signal.html", null ],
     [ "SubShape", "structz0_1_1_sub_shape.html", null ],

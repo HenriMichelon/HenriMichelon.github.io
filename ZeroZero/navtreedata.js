@@ -48,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classz0_1_1_input_event_mouse_motion.html#a0a3f71b2c1cfb1387019fc4c32f9994c",
+"classz0_1_1_light.html#a75ad1a3fd9270874a295659129eda737",
 "constants_8h.html#a9497f05feca4052f94601fd951dbf384ae5c0eaaa7a5e69dfa1a1f88d8a71110a"
 ];
 
