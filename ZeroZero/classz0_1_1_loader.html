@@ -115,12 +115,50 @@ $(function(){initNavTree('classz0_1_1_loader.html',''); initResizable(true); });
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aab371de82dd5a8f8d29d98656940e530" id="r_aab371de82dd5a8f8d29d98656940e530"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab371de82dd5a8f8d29d98656940e530">loadModelFromFile</a> (const filesystem::path &amp;filepath, bool forceBackFaceCulling=false)</td></tr>
 <tr class="separator:aab371de82dd5a8f8d29d98656940e530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079a51d801ea160efdaa5965355343df" id="r_a079a51d801ea160efdaa5965355343df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a079a51d801ea160efdaa5965355343df">addSceneFromFile</a> (<a class="el" href="classz0_1_1_node.html">Node</a> *parent, const filesystem::path &amp;filepath)</td></tr>
+<tr class="separator:a079a51d801ea160efdaa5965355343df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b28720653a4a18b3e3cc3a79ad561c4" id="r_a7b28720653a4a18b3e3cc3a79ad561c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b28720653a4a18b3e3cc3a79ad561c4">addSceneFromFile</a> (shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;parent, const filesystem::path &amp;filepath)</td></tr>
 <tr class="separator:a7b28720653a4a18b3e3cc3a79ad561c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a079a51d801ea160efdaa5965355343df" name="a079a51d801ea160efdaa5965355343df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a079a51d801ea160efdaa5965355343df">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void addSceneFromFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classz0_1_1_node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const filesystem::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates new instances of nodes described in a JSON file and add them to the parent's tree </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td><a class="el" href="classz0_1_1_node.html">Node</a> to add the new nodes to </td></tr>
+    <tr><td class="paramname">filepath</td><td>path of the glTF file, relative to the application path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7b28720653a4a18b3e3cc3a79ad561c4" name="a7b28720653a4a18b3e3cc3a79ad561c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b28720653a4a18b3e3cc3a79ad561c4">&#9670;&#160;</a></span>addSceneFromFile()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b28720653a4a18b3e3cc3a79ad561c4">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
