@@ -8,5 +8,6 @@ var searchData=
   ['boxshape_5',['BoxShape',['../classz0_1_1_box_shape.html',1,'BoxShape'],['../classz0_1_1_box_shape.html#ae4ee9776e078e382cb746a24a9e34e15',1,'z0::BoxShape::BoxShape()']]],
   ['buffer_6',['Buffer',['../classz0_1_1_buffer.html',1,'z0']]],
   ['button_7',['BUTTON',['../classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a7d67f007544f534278ecca3cdca12565',1,'z0::GWidget']]],
-  ['button_8',['button',['../structz0_1_1_g_event_mouse.html#a26b9a03c639a856e34c2d8bec26ce611',1,'z0::GEventMouse']]]
+  ['button_8',['button',['../structz0_1_1_g_event_mouse_button.html#a26b9a03c639a856e34c2d8bec26ce611',1,'z0::GEventMouseButton']]],
+  ['buttonsstate_9',['buttonsState',['../structz0_1_1_g_event_mouse_move.html#a30a423a4bfa9647061e32feaa54682d3',1,'z0::GEventMouseMove']]]
 ];

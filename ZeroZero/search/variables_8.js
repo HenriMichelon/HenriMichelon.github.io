@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loggingmode_0',['loggingMode',['../structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd',1,'z0::ApplicationConfig']]]
+  ['loggingmode_0',['loggingMode',['../structz0_1_1_application_config.html#a8e8bfd33fe426adec0df71779773a5ec',1,'z0::ApplicationConfig']]]
 ];

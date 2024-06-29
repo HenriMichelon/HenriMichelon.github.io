@@ -161,7 +161,14 @@ var constants_8h =
     [ "MouseButton", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711", [
       [ "MOUSE_BUTTON_LEFT", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a3c2e62b97b30d850c5539d0f3a6d0958", null ],
       [ "MOUSE_BUTTON_RIGHT", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a5b61e63e73f15ed6af97d5cd3124bc6f", null ],
-      [ "MOUSE_BUTTON_MIDDLE", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a9b37b35bcb71185dafcb151b3dde9a06", null ]
+      [ "MOUSE_BUTTON_MIDDLE", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711a9b37b35bcb71185dafcb151b3dde9a06", null ],
+      [ "MOUSE_BUTTON_WHEEL", "constants_8h.html#ac1ec3647c005eacad401b06e7e18f711ad08222029ffdd63d4ac0a18eff2beb09", null ]
+    ] ],
+    [ "MouseCursor", "constants_8h.html#a1d321f70023d9a5dbd2a2add15ac6e6b", [
+      [ "MOUSE_CURSOR_ARROW", "constants_8h.html#a1d321f70023d9a5dbd2a2add15ac6e6ba80853a9db59140cf033011d12c2039c5", null ],
+      [ "MOUSE_CURSOR_WAIT", "constants_8h.html#a1d321f70023d9a5dbd2a2add15ac6e6baf184120c9a46bd736e54a2ee7d1004cd", null ],
+      [ "MOUSE_CURSOR_RESIZE_H", "constants_8h.html#a1d321f70023d9a5dbd2a2add15ac6e6bac800379bb479239b56ed24801b642bf7", null ],
+      [ "MOUSE_CURSOR_RESIZE_V", "constants_8h.html#a1d321f70023d9a5dbd2a2add15ac6e6ba15b72d26c524d2f4c8a2d90fd9d48c3c", null ]
     ] ],
     [ "MouseMode", "constants_8h.html#a034ae8169a2202325de4ef39ffd3e431", [
       [ "MOUSE_MODE_VISIBLE", "constants_8h.html#a034ae8169a2202325de4ef39ffd3e431af0474e256659c10b9101f4ff97628ce3", null ],

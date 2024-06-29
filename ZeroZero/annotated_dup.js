@@ -29,7 +29,8 @@ var annotated_dup =
       [ "GEvent", "classz0_1_1_g_event.html", null ],
       [ "GEventClick", "structz0_1_1_g_event_click.html", "structz0_1_1_g_event_click" ],
       [ "GEventKeyb", "structz0_1_1_g_event_keyb.html", "structz0_1_1_g_event_keyb" ],
-      [ "GEventMouse", "structz0_1_1_g_event_mouse.html", "structz0_1_1_g_event_mouse" ],
+      [ "GEventMouseButton", "structz0_1_1_g_event_mouse_button.html", "structz0_1_1_g_event_mouse_button" ],
+      [ "GEventMouseMove", "structz0_1_1_g_event_mouse_move.html", "structz0_1_1_g_event_mouse_move" ],
       [ "GEventState", "structz0_1_1_g_event_state.html", "structz0_1_1_g_event_state" ],
       [ "GFrame", "classz0_1_1_g_frame.html", null ],
       [ "GLine", "classz0_1_1_g_line.html", null ],
@@ -47,6 +48,7 @@ var annotated_dup =
       [ "InputEvent", "classz0_1_1_input_event.html", "classz0_1_1_input_event" ],
       [ "InputEventGamepadButton", "classz0_1_1_input_event_gamepad_button.html", "classz0_1_1_input_event_gamepad_button" ],
       [ "InputEventKey", "classz0_1_1_input_event_key.html", "classz0_1_1_input_event_key" ],
+      [ "InputEventMouse", "classz0_1_1_input_event_mouse.html", "classz0_1_1_input_event_mouse" ],
       [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", "classz0_1_1_input_event_mouse_button" ],
       [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", "classz0_1_1_input_event_mouse_motion" ],
       [ "KinematicBody", "classz0_1_1_kinematic_body.html", "classz0_1_1_kinematic_body" ],
@@ -91,6 +93,7 @@ var annotated_dup =
       [ "Tween", "classz0_1_1_tween.html", "classz0_1_1_tween" ],
       [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
       [ "Vertex", "structz0_1_1_vertex.html", null ],
+      [ "Viewport", "classz0_1_1_viewport.html", "classz0_1_1_viewport" ],
       [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ]
     ] ]
 ];

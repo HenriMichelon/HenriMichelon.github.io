@@ -116,23 +116,15 @@ Inheritance diagram for Node:</div>
  <div class="center">
   <img src="classz0_1_1_node.png" usemap="#Node_map" alt=""/>
   <map id="Node_map" name="Node_map">
-<area href="classz0_1_1_object.html" alt="Object" shape="rect" coords="385,0,485,24"/>
-<area href="classz0_1_1_camera.html" alt="Camera" shape="rect" coords="0,112,100,136"/>
-<area href="classz0_1_1_collision_object.html" alt="CollisionObject" shape="rect" coords="110,112,210,136"/>
-<area href="classz0_1_1_environment.html" alt="Environment" shape="rect" coords="220,112,320,136"/>
-<area href="classz0_1_1_light.html" alt="Light" shape="rect" coords="385,112,485,136"/>
-<area href="classz0_1_1_mesh_instance.html" alt="MeshInstance" shape="rect" coords="495,112,595,136"/>
-<area href="classz0_1_1_ray_cast.html" alt="RayCast" shape="rect" coords="605,112,705,136"/>
-<area href="classz0_1_1_skybox.html" alt="Skybox" shape="rect" coords="715,112,815,136"/>
-<area href="classz0_1_1_character.html" alt="Character" shape="rect" coords="0,168,100,192"/>
-<area href="classz0_1_1_collision_area.html" alt="CollisionArea" shape="rect" coords="110,168,210,192"/>
-<area href="classz0_1_1_physics_body.html" alt="PhysicsBody" shape="rect" coords="220,168,320,192"/>
-<area href="classz0_1_1_directional_light.html" alt="DirectionalLight" shape="rect" coords="330,168,430,192"/>
-<area href="classz0_1_1_omni_light.html" alt="OmniLight" shape="rect" coords="440,168,540,192"/>
-<area href="classz0_1_1_kinematic_body.html" alt="KinematicBody" shape="rect" coords="110,224,210,248"/>
-<area href="classz0_1_1_rigid_body.html" alt="RigidBody" shape="rect" coords="220,224,320,248"/>
-<area href="classz0_1_1_static_body.html" alt="StaticBody" shape="rect" coords="330,224,430,248"/>
-<area href="classz0_1_1_spot_light.html" alt="SpotLight" shape="rect" coords="440,224,540,248"/>
+<area href="classz0_1_1_object.html" alt="Object" shape="rect" coords="0,0,97,24"/>
+<area href="classz0_1_1_camera.html" alt="Camera" shape="rect" coords="107,112,204,136"/>
+<area href="classz0_1_1_collision_object.html" alt="CollisionObject" shape="rect" coords="107,168,204,192"/>
+<area href="classz0_1_1_environment.html" alt="Environment" shape="rect" coords="107,224,204,248"/>
+<area href="classz0_1_1_light.html" alt="Light" shape="rect" coords="107,280,204,304"/>
+<area href="classz0_1_1_mesh_instance.html" alt="MeshInstance" shape="rect" coords="107,336,204,360"/>
+<area href="classz0_1_1_ray_cast.html" alt="RayCast" shape="rect" coords="107,392,204,416"/>
+<area href="classz0_1_1_skybox.html" alt="Skybox" shape="rect" coords="107,448,204,472"/>
+<area href="classz0_1_1_viewport.html" alt="Viewport" shape="rect" coords="107,504,204,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -338,7 +330,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -351,6 +343,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; duplicate </td>
@@ -359,6 +354,11 @@ template&lt;typename T &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Duplicates a node. Warning : not implemented on all nodes types, check documentation for the node type before using it. </p>
 
@@ -384,7 +384,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -410,7 +410,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -436,7 +436,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -462,7 +462,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -488,7 +488,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -501,6 +501,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">vec3 getRightVector </td>
@@ -509,6 +512,11 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns the normalized right vector </p>
 
@@ -519,6 +527,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">vec3 getRotation </td>
@@ -527,6 +538,11 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns the rotation of the local transformation </p>
 
@@ -550,7 +566,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -576,7 +592,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -602,7 +618,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -615,6 +631,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">vec3 getScale </td>
@@ -623,6 +642,11 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns the scale part of the local transformation. </p>
 
@@ -646,7 +670,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -672,7 +696,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -685,6 +709,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool haveChild </td>
@@ -697,6 +724,11 @@ template&lt;typename T &gt; </div>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>recursive</em></span>&#160;) const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns true if the node have this child </p>
 
@@ -707,6 +739,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool isProcessed </td>
@@ -715,6 +750,11 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Returns true if the node is processed and receive input callbacks </p>
 
@@ -1116,7 +1156,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Sets a property by is name and value. Currently not all properties in all nodes classes are supported. </p>
 
-<p>Reimplemented in <a class="el" href="classz0_1_1_directional_light.html#ac4a1d2e49be60bd4e614d05e4db933b1">DirectionalLight</a>, and <a class="el" href="classz0_1_1_environment.html#ac4a1d2e49be60bd4e614d05e4db933b1">Environment</a>.</p>
+<p>Reimplemented in <a class="el" href="classz0_1_1_directional_light.html#ac4a1d2e49be60bd4e614d05e4db933b1">DirectionalLight</a>, <a class="el" href="classz0_1_1_environment.html#ac4a1d2e49be60bd4e614d05e4db933b1">Environment</a>, and <a class="el" href="classz0_1_1_skybox.html#ac4a1d2e49be60bd4e614d05e4db933b1">Skybox</a>.</p>
 
 </div>
 </div>
@@ -1241,6 +1281,9 @@ template&lt;typename T &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">vec3 toGlobal </td>
@@ -1249,6 +1292,11 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Transforms a local vector from this node's local space to world space. </p>
 
@@ -1272,7 +1320,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

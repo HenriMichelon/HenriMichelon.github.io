@@ -16,5 +16,5 @@ var searchData=
   ['logging_5fstdout_13',['LOGGING_STDOUT',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5daffdcdb1a729dc124975a2cff0d592fdc',1,'z0']]],
   ['logging_5fwindow_14',['LOGGING_WINDOW',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5da03278b0e042ad0091d25c2a3dd090cb3',1,'z0']]],
   ['loggingmode_15',['LoggingMode',['../constants_8h.html#a27b16a45ad1fb3cce2dda3ad2f59bb5d',1,'z0']]],
-  ['loggingmode_16',['loggingMode',['../structz0_1_1_application_config.html#a08253972d3cfae820816c9e032d8f9bd',1,'z0::ApplicationConfig']]]
+  ['loggingmode_16',['loggingMode',['../structz0_1_1_application_config.html#a8e8bfd33fe426adec0df71779773a5ec',1,'z0::ApplicationConfig']]]
 ];

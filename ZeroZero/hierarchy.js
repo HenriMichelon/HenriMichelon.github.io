@@ -40,8 +40,10 @@ var hierarchy =
       [ "InputEvent", "classz0_1_1_input_event.html", [
         [ "InputEventGamepadButton", "classz0_1_1_input_event_gamepad_button.html", null ],
         [ "InputEventKey", "classz0_1_1_input_event_key.html", null ],
-        [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", null ],
-        [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", null ]
+        [ "InputEventMouse", "classz0_1_1_input_event_mouse.html", [
+          [ "InputEventMouseButton", "classz0_1_1_input_event_mouse_button.html", null ],
+          [ "InputEventMouseMotion", "classz0_1_1_input_event_mouse_motion.html", null ]
+        ] ]
       ] ],
       [ "Node", "classz0_1_1_node.html", [
         [ "Camera", "classz0_1_1_camera.html", null ],
@@ -63,7 +65,8 @@ var hierarchy =
         ] ],
         [ "MeshInstance", "classz0_1_1_mesh_instance.html", null ],
         [ "RayCast", "classz0_1_1_ray_cast.html", null ],
-        [ "Skybox", "classz0_1_1_skybox.html", null ]
+        [ "Skybox", "classz0_1_1_skybox.html", null ],
+        [ "Viewport", "classz0_1_1_viewport.html", null ]
       ] ],
       [ "Resource", "classz0_1_1_resource.html", [
         [ "Cubemap", "classz0_1_1_cubemap.html", null ],
@@ -95,7 +98,8 @@ var hierarchy =
       [ "Collision", "structz0_1_1_collision_object_1_1_collision.html", null ],
       [ "GEventClick", "structz0_1_1_g_event_click.html", null ],
       [ "GEventKeyb", "structz0_1_1_g_event_keyb.html", null ],
-      [ "GEventMouse", "structz0_1_1_g_event_mouse.html", null ],
+      [ "GEventMouseButton", "structz0_1_1_g_event_mouse_button.html", null ],
+      [ "GEventMouseMove", "structz0_1_1_g_event_mouse_move.html", null ],
       [ "GEventState", "structz0_1_1_g_event_state.html", null ]
     ] ],
     [ "Rect", "structz0_1_1_rect.html", null ],
