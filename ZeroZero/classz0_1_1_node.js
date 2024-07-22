@@ -6,6 +6,7 @@ var classz0_1_1_node =
     [ "createPropertyTween", "classz0_1_1_node.html#aa663d32ed1ee575023e5b4f2c64b2573", null ],
     [ "duplicate", "classz0_1_1_node.html#a4ce4f2a1d52bb65a537a5dfa48b11c09", null ],
     [ "findFirstChild", "classz0_1_1_node.html#a2136ba9451fa824affb448f4bb66f183", null ],
+    [ "getChildren", "classz0_1_1_node.html#a11f31f11b485fc3a335361b56410a864", null ],
     [ "getId", "classz0_1_1_node.html#a95bc6369673e4f113ed3fc9d34d00f22", null ],
     [ "getParent", "classz0_1_1_node.html#a2926b5f07de0982ac20d7da2a59321ab", null ],
     [ "getPositionGlobal", "classz0_1_1_node.html#a8a386ce624f44e778ee752b99319a7ca", null ],

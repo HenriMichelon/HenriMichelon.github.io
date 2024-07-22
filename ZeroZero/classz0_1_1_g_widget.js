@@ -30,13 +30,15 @@ var classz0_1_1_g_widget =
       [ "FRAME", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a200c1bcf1eaa8635daa3cbb5fdd2ebb6", null ],
       [ "BUTTON", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a7d67f007544f534278ecca3cdca12565", null ],
       [ "TOGGLEBUTTON", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a54bd1062ac1565ebb66198e2ee1fca02", null ],
-      [ "TEXT", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a9a4a47c1606e295076055a9cc4373197", null ]
+      [ "TEXT", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a9a4a47c1606e295076055a9cc4373197", null ],
+      [ "TEXTEDIT", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7ae339f213f33a6406eb707ab9909ffde7", null ],
+      [ "SCROLLBAR", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7a95f321f7f597a08478ddfd6fbb763a2f", null ],
+      [ "TREEVIEW", "classz0_1_1_g_widget.html#a1d1cfd8ffb84e947f82999c682b666a7ad5cf99e0badd6a5708940df15417c6ff", null ]
     ] ],
     [ "GWidget", "classz0_1_1_g_widget.html#a61e7c00972a47874fdeb42f287a59859", null ],
     [ "add", "classz0_1_1_g_widget.html#ab1d8f380d99216f714bd26ed33424f00", null ],
     [ "enable", "classz0_1_1_g_widget.html#a3ca96a66a9b79d8bfb28cf30091a9985", null ],
     [ "getAlignment", "classz0_1_1_g_widget.html#ab48a26814c052dbce1a585359d326e2a", null ],
-    [ "getData", "classz0_1_1_g_widget.html#aa3f8e26a236b231d3a3ec8531b9d32b1", null ],
     [ "getFont", "classz0_1_1_g_widget.html#af4304561ebd11da68e8e12845005efd3", null ],
     [ "getGroupIndex", "classz0_1_1_g_widget.html#a5fa73c75f0c5372deee8c84d301049c0", null ],
     [ "getHeight", "classz0_1_1_g_widget.html#ae07ffc83c6e2586b09157cacd623819b", null ],
@@ -45,6 +47,7 @@ var classz0_1_1_g_widget =
     [ "getRect", "classz0_1_1_g_widget.html#afd5a67fdaafd0367d3a64ba5df4e6dd6", null ],
     [ "getTransparency", "classz0_1_1_g_widget.html#af35a92acd6612de2992b73b68ca3a561", null ],
     [ "getType", "classz0_1_1_g_widget.html#a97c56d51eec84be3e856eb0ca6ebd3d4", null ],
+    [ "getUserData", "classz0_1_1_g_widget.html#a3e3aa64d72ec3b4d94e64b96362c475a", null ],
     [ "getWidth", "classz0_1_1_g_widget.html#aaad368cfd9ea3cf64fbc091bd886f729", null ],
     [ "isDrawBackground", "classz0_1_1_g_widget.html#a0c87dea3054681e697991441ff566b4b", null ],
     [ "isEnabled", "classz0_1_1_g_widget.html#aacb819fb241851fd9fc045271baa4034", null ],
@@ -54,7 +57,6 @@ var classz0_1_1_g_widget =
     [ "remove", "classz0_1_1_g_widget.html#a72e3ccb0d8efa54f2f7d8aef21c18898", null ],
     [ "removeAll", "classz0_1_1_g_widget.html#a4e62c805a8478320f1e650e6a635b31a", null ],
     [ "setAlignment", "classz0_1_1_g_widget.html#a7fb9c97d247db419b2eb6df57e4669af", null ],
-    [ "setData", "classz0_1_1_g_widget.html#a3f3179f3831ad38c61d54ca0d7b0e498", null ],
     [ "setDrawBackground", "classz0_1_1_g_widget.html#a7b6d55c992f77c831e0846184fae92dc", null ],
     [ "setFont", "classz0_1_1_g_widget.html#af2def7f56866fb30b98bdf60e0641662", null ],
     [ "setGroupIndex", "classz0_1_1_g_widget.html#abe07fdf952a5dbc8406b8b65fbfb203a", null ],
@@ -65,5 +67,6 @@ var classz0_1_1_g_widget =
     [ "setResource", "classz0_1_1_g_widget.html#a69cb3b89c679999c8b497af4540fc591", null ],
     [ "setSize", "classz0_1_1_g_widget.html#ade30b86e018d9a3a1a1345c40f5ffe9c", null ],
     [ "setTransparency", "classz0_1_1_g_widget.html#a3036ecf7f95e331d5ead63ecc618a446", null ],
+    [ "setUserData", "classz0_1_1_g_widget.html#a1409bb36f8699d1e907a4a6013dd951c", null ],
     [ "show", "classz0_1_1_g_widget.html#a97aa6a78672cf55fca0ba8f641675dd3", null ]
 ];

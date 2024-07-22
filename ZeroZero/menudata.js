@@ -98,6 +98,18 @@ var menudata={children:[
 {text:"y",url:"functions_vars.html#index_y"}]},
 {text:"Typedefs",url:"functions_type.html"},
 {text:"Enumerations",url:"functions_enum.html"},
-{text:"Enumerator",url:"functions_eval.html"}]}]},
+{text:"Enumerator",url:"functions_eval.html",children:[
+{text:"b",url:"functions_eval.html#index_b"},
+{text:"c",url:"functions_eval.html#index_c"},
+{text:"f",url:"functions_eval.html#index_f"},
+{text:"h",url:"functions_eval.html#index_h"},
+{text:"l",url:"functions_eval.html#index_l"},
+{text:"p",url:"functions_eval.html#index_p"},
+{text:"r",url:"functions_eval.html#index_r"},
+{text:"s",url:"functions_eval.html#index_s"},
+{text:"t",url:"functions_eval.html#index_t"},
+{text:"u",url:"functions_eval.html#index_u"},
+{text:"v",url:"functions_eval.html#index_v"},
+{text:"w",url:"functions_eval.html#index_w"}]}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}

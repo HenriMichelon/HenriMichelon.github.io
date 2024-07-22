@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"constants_8h.html#a743f60968fa58cdae68b31a1a3eb493d":[2,0,0,0,0,6],
+"constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da057141873e9fc51dcf286874a2034d2c":[2,0,0,0,0,6,0],
+"constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da4374a32353bd9831ac1252039b73ed38":[2,0,0,0,0,6,1],
+"constants_8h.html#a743f60968fa58cdae68b31a1a3eb493da7cdf606b4c60404ae7eff32d2aa124cc":[2,0,0,0,0,6,2],
 "constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596f":[2,0,0,0,0,3],
 "constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596fa26b5988449a61474e6a9e387461ab5e0":[2,0,0,0,0,3,16],
 "constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596fa2d5721d05e679bbf96387c5ee74a04a0":[2,0,0,0,0,3,7],
@@ -20,6 +24,7 @@ var NAVTREEINDEX2 =
 "constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596faeaf302b45006c2c3759fdf184427cd11":[2,0,0,0,0,3,9],
 "constants_8h.html#a7a2d71f78acae0c6efa38d7f1fea596faf9e2fc8cd164b99b79c211600b3cdf43":[2,0,0,0,0,3,8],
 "constants_8h.html#a7a6c3afd9a353ea10e02388b70ef6b35":[2,0,0,0,0,16],
+"constants_8h.html#a888a6e33db865036225f34fe0f67a81c":[2,0,0,0,0,26],
 "constants_8h.html#a8fef8f20d9338a17801bc8e3aafe0ea5":[2,0,0,0,0,22],
 "constants_8h.html#a9497f05feca4052f94601fd951dbf384":[2,0,0,0,0,12],
 "constants_8h.html#a9497f05feca4052f94601fd951dbf384a17ea044eedbd3ba4ee61619e1f6b74d5":[2,0,0,0,0,12,0],
@@ -232,6 +237,7 @@ var NAVTREEINDEX2 =
 "structz0_1_1_color.html#a994b96c4819e03d80fab905648c07d2f":[1,0,0,8,2],
 "structz0_1_1_color.html#abd29795c8e82b4d67967e6f410c8ac2f":[1,0,0,8,0],
 "structz0_1_1_color.html#ac3147b2885a1eeb981da2c21e07ee28f":[1,0,0,8,1],
+"structz0_1_1_g_event.html":[1,0,0,25],
 "structz0_1_1_g_event_click.html":[1,0,0,26],
 "structz0_1_1_g_event_click.html#a5923b9221705546ddd88c92230707bd5":[1,0,0,26,0],
 "structz0_1_1_g_event_keyb.html":[1,0,0,27],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "structz0_1_1_g_event_mouse_button.html#aa4f0d3eebc3c443f9be81bf48561a217":[1,0,0,28,3],
 "structz0_1_1_g_event_mouse_button.html#ad0da36b2558901e21e7a30f6c227a45e":[1,0,0,28,2],
 "structz0_1_1_g_event_mouse_move.html":[1,0,0,29],
-"structz0_1_1_g_event_mouse_move.html#a30a423a4bfa9647061e32feaa54682d3":[1,0,0,29,0],
-"structz0_1_1_g_event_mouse_move.html#a5923b9221705546ddd88c92230707bd5":[1,0,0,29,1],
-"structz0_1_1_g_event_mouse_move.html#aa4f0d3eebc3c443f9be81bf48561a217":[1,0,0,29,3],
-"structz0_1_1_g_event_mouse_move.html#ad0da36b2558901e21e7a30f6c227a45e":[1,0,0,29,2],
-"structz0_1_1_g_event_state.html":[1,0,0,30],
-"structz0_1_1_g_event_state.html#af8ec6e123570f44094bcf2cb02b478f4":[1,0,0,30,0],
-"structz0_1_1_rect.html":[1,0,0,66]
+"structz0_1_1_g_event_mouse_move.html#a30a423a4bfa9647061e32feaa54682d3":[1,0,0,29,0]
 };

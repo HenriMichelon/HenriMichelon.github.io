@@ -214,5 +214,6 @@ var constants_8h =
     [ "VEC2ZERO", "constants_8h.html#a7189719fa344761c3332d6f51c88c323", null ],
     [ "VEC3ZERO", "constants_8h.html#aaa9bcab016244948da568bb338829e92", null ],
     [ "VECTOR_SCALE", "constants_8h.html#a02cf95d2588145b040ccfa45fa3c3b67", null ],
+    [ "VECTOR_SIZE", "constants_8h.html#a888a6e33db865036225f34fe0f67a81c", null ],
     [ "WINDOW_CLEAR_COLOR", "constants_8h.html#a55cd615a6c9219381561c71620cabe18", null ]
 ];

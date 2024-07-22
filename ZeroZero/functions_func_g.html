@@ -113,6 +113,7 @@ $(function(){initNavTree('functions_func_g.html',''); initResizable(true); });
 <li>getAttenuation()&#160;:&#160;<a class="el" href="classz0_1_1_omni_light.html#a12d6af5d4eafc6b46700c1f7d90bccc6">OmniLight</a></li>
 <li>getButtonsState()&#160;:&#160;<a class="el" href="classz0_1_1_input_event_mouse.html#af04122e397fe142bba08186058e079d0">InputEventMouse</a></li>
 <li>getCastShadows()&#160;:&#160;<a class="el" href="classz0_1_1_light.html#a75ad1a3fd9270874a295659129eda737">Light</a></li>
+<li>getChildren()&#160;:&#160;<a class="el" href="classz0_1_1_node.html#a11f31f11b485fc3a335361b56410a864">Node</a></li>
 <li>getCollider()&#160;:&#160;<a class="el" href="classz0_1_1_ray_cast.html#aa8568e26cb8d3bf87c59abd600313cc6">RayCast</a></li>
 <li>getCollisionLayer()&#160;:&#160;<a class="el" href="classz0_1_1_collision_object.html#a45c512296b36eedaf874f9c824bbf29f">CollisionObject</a></li>
 <li>getCollisionPoint()&#160;:&#160;<a class="el" href="classz0_1_1_ray_cast.html#a2081661bfd54be41815f0be7df9dff35">RayCast</a></li>
@@ -124,7 +125,6 @@ $(function(){initNavTree('functions_func_g.html',''); initResizable(true); });
 <li>getCubemap()&#160;:&#160;<a class="el" href="classz0_1_1_skybox.html#a4b11e49f824e8610cdd9cc307030caed">Skybox</a></li>
 <li>getCullMode()&#160;:&#160;<a class="el" href="classz0_1_1_material.html#a58a3ece90ef1bf69c081a151112b6c2a">Material</a></li>
 <li>getCutOff()&#160;:&#160;<a class="el" href="classz0_1_1_spot_light.html#abd8c118bd304be82dc4002196529db88">SpotLight</a></li>
-<li>getData()&#160;:&#160;<a class="el" href="classz0_1_1_g_widget.html#aa3f8e26a236b231d3a3ec8531b9d32b1">GWidget</a></li>
 <li>getDedicatedVideoMemory()&#160;:&#160;<a class="el" href="classz0_1_1_application.html#a68a2f94837efc59deb6ce27c893f2afd">Application</a></li>
 <li>getDefaultFont()&#160;:&#160;<a class="el" href="classz0_1_1_g_manager.html#ac452096a8141ebd38358dbf0ed2cffc9">GManager</a>, <a class="el" href="classz0_1_1_g_window.html#ac452096a8141ebd38358dbf0ed2cffc9">GWindow</a></li>
 <li>getDirection()&#160;:&#160;<a class="el" href="classz0_1_1_directional_light.html#ac69797906127ada1c2a7aa8fd9bebdb6">DirectionalLight</a>, <a class="el" href="classz0_1_1_spot_light.html#a8ff9b19d5a8ac9566c097b17da73de4f">SpotLight</a></li>
@@ -177,7 +177,7 @@ $(function(){initNavTree('functions_func_g.html',''); initResizable(true); });
 <li>getRotationY()&#160;:&#160;<a class="el" href="classz0_1_1_node.html#a17fd057679dbb34530daa376abcf45e7">Node</a></li>
 <li>getRotationZ()&#160;:&#160;<a class="el" href="classz0_1_1_node.html#a2add690e2f19a3c247cc551d2e28556d">Node</a></li>
 <li>getScale()&#160;:&#160;<a class="el" href="classz0_1_1_node.html#a26fddd47ca962f874d10775a454f0286">Node</a></li>
-<li>getSize()&#160;:&#160;<a class="el" href="classz0_1_1_font.html#a25df9f3d1dffcbc9f1ae20bf3e220369">Font</a>, <a class="el" href="classz0_1_1_image.html#a88514e2ab634cfe56f85d7cadfff12c2">Image</a>, <a class="el" href="classz0_1_1_texture.html#ad87cb5e576694a7891ec3fda3006ea15">Texture</a></li>
+<li>getSize()&#160;:&#160;<a class="el" href="classz0_1_1_font.html#a25df9f3d1dffcbc9f1ae20bf3e220369">Font</a>, <a class="el" href="classz0_1_1_g_text.html#a09f39b2634734973fd109a741ec821ff">GText</a>, <a class="el" href="classz0_1_1_image.html#a88514e2ab634cfe56f85d7cadfff12c2">Image</a>, <a class="el" href="classz0_1_1_texture.html#ad87cb5e576694a7891ec3fda3006ea15">Texture</a></li>
 <li>getSpecularIntensity()&#160;:&#160;<a class="el" href="classz0_1_1_light.html#a483a0ab538b2d1efffa010d955b20056">Light</a></li>
 <li>getSpecularTexture()&#160;:&#160;<a class="el" href="classz0_1_1_standard_material.html#ace73831a8666ecade19235a27f26d8a9">StandardMaterial</a></li>
 <li>getState()&#160;:&#160;<a class="el" href="classz0_1_1_g_check_widget.html#a8e52bcaecc271b1b57c4608da2d4b11e">GCheckWidget</a></li>
@@ -188,7 +188,8 @@ $(function(){initNavTree('functions_func_g.html',''); initResizable(true); });
 <li>getTransparency()&#160;:&#160;<a class="el" href="classz0_1_1_g_widget.html#af35a92acd6612de2992b73b68ca3a561">GWidget</a>, <a class="el" href="classz0_1_1_material.html#a8aa156550d474248087644d6c5eeb74c">Material</a></li>
 <li>getType()&#160;:&#160;<a class="el" href="classz0_1_1_g_widget.html#a97c56d51eec84be3e856eb0ca6ebd3d4">GWidget</a>, <a class="el" href="classz0_1_1_input_event.html#a1184cba09842cb1adfe07e2e64d71954">InputEvent</a></li>
 <li>getUpVector()&#160;:&#160;<a class="el" href="classz0_1_1_character.html#a8f0bed3b0cea9b9ac556e97b175bfb60">Character</a></li>
-<li>getVectorRatio()&#160;:&#160;<a class="el" href="classz0_1_1_application.html#abd058ed17a46fda838899fbd2e313c72">Application</a></li>
+<li>getUserData()&#160;:&#160;<a class="el" href="classz0_1_1_g_widget.html#a3e3aa64d72ec3b4d94e64b96362c475a">GWidget</a></li>
+<li>getVectorRatio()&#160;:&#160;<a class="el" href="classz0_1_1_application.html#a265179f70ac64006a67619faf59dfcb2">Application</a></li>
 <li>getVelocity()&#160;:&#160;<a class="el" href="classz0_1_1_character.html#aff4540c8caf13971f46b1106f4f2802d">Character</a>, <a class="el" href="classz0_1_1_collision_object.html#af845917f483db6b9c329f5bd02e75ebd">CollisionObject</a></li>
 <li>getVertFileName()&#160;:&#160;<a class="el" href="classz0_1_1_shader_material.html#aa51f08dc98c0e96c5a9bc80d6bbf5222">ShaderMaterial</a></li>
 <li>getVideoMemoryUsage()&#160;:&#160;<a class="el" href="classz0_1_1_application.html#a7f39c7172215bf36b2e55a3a98235e44">Application</a></li>
