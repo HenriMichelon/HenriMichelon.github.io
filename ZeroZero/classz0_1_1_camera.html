@@ -103,14 +103,12 @@ $(function(){initNavTree('classz0_1_1_camera.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classz0_1_1_camera-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Camera Class Reference</div></div>
+  <div class="headertitle"><div class="title">Camera Class Reference<span class="mlabels"><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module___z0.html">Z0</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classz0_1_1_camera.html">Camera</a> node, displays from a point of view. </p>
-</div>
-<p><code>#include &lt;camera.h&gt;</code></p>
-<div class="dynheader">
+</div><div class="dynheader">
 Inheritance diagram for Camera:</div>
 <div class="dyncontent">
  <div class="center">
@@ -127,59 +125,59 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9cefca7380f4b6cb3c31b6f195c30521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a354c7d206ec624b9bdbb81f3b788f826" id="r_a354c7d206ec624b9bdbb81f3b788f826"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a354c7d206ec624b9bdbb81f3b788f826">isActive</a> () const</td></tr>
 <tr class="separator:a354c7d206ec624b9bdbb81f3b788f826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09f6f7c0a0c6479db355b5c51f3a91aa" id="r_a09f6f7c0a0c6479db355b5c51f3a91aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09f6f7c0a0c6479db355b5c51f3a91aa">setOrthographicProjection</a> (float left, float right, float top, float bottom, float near, float far)</td></tr>
-<tr class="separator:a09f6f7c0a0c6479db355b5c51f3a91aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5228ce2b555e898088c6a5f06a37688b" id="r_a5228ce2b555e898088c6a5f06a37688b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5228ce2b555e898088c6a5f06a37688b">setPerspectiveProjection</a> (float fov, float near, float far)</td></tr>
-<tr class="separator:a5228ce2b555e898088c6a5f06a37688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ba87cb77802b74bbcf2414a34726e6" id="r_ac7ba87cb77802b74bbcf2414a34726e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7ba87cb77802b74bbcf2414a34726e6">setOrthographicProjection</a> (const float left, const float right, const float top, const float bottom, const float _near, const float _far)</td></tr>
+<tr class="separator:ac7ba87cb77802b74bbcf2414a34726e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d7ae61e9f050da02063fab8a6386ce" id="r_a75d7ae61e9f050da02063fab8a6386ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75d7ae61e9f050da02063fab8a6386ce">setPerspectiveProjection</a> (const float _fov, const float _near, const float _far)</td></tr>
+<tr class="separator:a75d7ae61e9f050da02063fab8a6386ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9889d655a35a41b0b073a9af23b3a05c" id="r_a9889d655a35a41b0b073a9af23b3a05c"><td class="memItemLeft" align="right" valign="top">const mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9889d655a35a41b0b073a9af23b3a05c">getProjection</a> ()</td></tr>
 <tr class="separator:a9889d655a35a41b0b073a9af23b3a05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2679d5abd71c58927931e1abd8f86de" id="r_ad2679d5abd71c58927931e1abd8f86de"><td class="memItemLeft" align="right" valign="top">const mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2679d5abd71c58927931e1abd8f86de">getView</a> () const</td></tr>
 <tr class="separator:ad2679d5abd71c58927931e1abd8f86de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c30609d40d98400caa4c92213b01383" id="r_a2c30609d40d98400caa4c92213b01383"><td class="memItemLeft" align="right" valign="top">vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c30609d40d98400caa4c92213b01383">unproject</a> (vec3 worldCoords)</td></tr>
-<tr class="separator:a2c30609d40d98400caa4c92213b01383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a31d7c51764dadb31c2f20aa4cef9b9" id="r_a9a31d7c51764dadb31c2f20aa4cef9b9"><td class="memItemLeft" align="right" valign="top">vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a31d7c51764dadb31c2f20aa4cef9b9">unproject</a> (const vec3 worldCoords)</td></tr>
+<tr class="separator:a9a31d7c51764dadb31c2f20aa4cef9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_node.html">Node</a></td></tr>
-<tr class="memitem:a7d0d5367c2bd0ffca74029c22845c3b4 inherit pub_methods_classz0_1_1_node" id="r_a7d0d5367c2bd0ffca74029c22845c3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a7d0d5367c2bd0ffca74029c22845c3b4">Node</a> (const <a class="el" href="classz0_1_1_node.html">Node</a> &amp;)</td></tr>
-<tr class="separator:a7d0d5367c2bd0ffca74029c22845c3b4 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2660fa45c1f3367d85cf27ede56ab8 inherit pub_methods_classz0_1_1_node" id="r_aed2660fa45c1f3367d85cf27ede56ab8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#aed2660fa45c1f3367d85cf27ede56ab8">Node</a> (string name=&quot;Node&quot;)</td></tr>
-<tr class="separator:aed2660fa45c1f3367d85cf27ede56ab8 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6c9ad08249b7235fb351868f296a34 inherit pub_methods_classz0_1_1_node" id="r_aaa6c9ad08249b7235fb351868f296a34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#aaa6c9ad08249b7235fb351868f296a34">Node</a> (const <a class="el" href="classz0_1_1_node.html">Node</a> &amp;orig)</td></tr>
+<tr class="separator:aaa6c9ad08249b7235fb351868f296a34 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9def7f174c0f77838445b9faca2453f inherit pub_methods_classz0_1_1_node" id="r_ad9def7f174c0f77838445b9faca2453f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ad9def7f174c0f77838445b9faca2453f">Node</a> (string nodeName=&quot;Node&quot;)</td></tr>
+<tr class="separator:ad9def7f174c0f77838445b9faca2453f inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37ece2e002c960665a87c6a8b6034e7 inherit pub_methods_classz0_1_1_node" id="r_aa37ece2e002c960665a87c6a8b6034e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#aa37ece2e002c960665a87c6a8b6034e7">onReady</a> ()</td></tr>
 <tr class="separator:aa37ece2e002c960665a87c6a8b6034e7 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185f888b7aabbe08c3c1c6a76669b75e inherit pub_methods_classz0_1_1_node" id="r_a185f888b7aabbe08c3c1c6a76669b75e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a185f888b7aabbe08c3c1c6a76669b75e">onEnterScene</a> ()</td></tr>
 <tr class="separator:a185f888b7aabbe08c3c1c6a76669b75e inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab26c148081cee0e39b4b61070c304a51 inherit pub_methods_classz0_1_1_node" id="r_ab26c148081cee0e39b4b61070c304a51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ab26c148081cee0e39b4b61070c304a51">onExitScene</a> ()</td></tr>
 <tr class="separator:ab26c148081cee0e39b4b61070c304a51 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567e68d5a95712fc1511be8e08dcae36 inherit pub_methods_classz0_1_1_node" id="r_a567e68d5a95712fc1511be8e08dcae36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a567e68d5a95712fc1511be8e08dcae36">onProcess</a> (float alpha)</td></tr>
-<tr class="separator:a567e68d5a95712fc1511be8e08dcae36 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac995383efa231ecb0725b059afce0d6f inherit pub_methods_classz0_1_1_node" id="r_ac995383efa231ecb0725b059afce0d6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ac995383efa231ecb0725b059afce0d6f">onPhysicsProcess</a> (float delta)</td></tr>
-<tr class="separator:ac995383efa231ecb0725b059afce0d6f inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a582f0ef642493a4b1fdd830feeb78c33 inherit pub_methods_classz0_1_1_node" id="r_a582f0ef642493a4b1fdd830feeb78c33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a582f0ef642493a4b1fdd830feeb78c33">onProcess</a> (const float alpha)</td></tr>
+<tr class="separator:a582f0ef642493a4b1fdd830feeb78c33 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61aa85e3def5dba892d133a111cc4581 inherit pub_methods_classz0_1_1_node" id="r_a61aa85e3def5dba892d133a111cc4581"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a61aa85e3def5dba892d133a111cc4581">onPhysicsProcess</a> (const float delta)</td></tr>
+<tr class="separator:a61aa85e3def5dba892d133a111cc4581 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ef4d4f0e404eddbc46e41389042ef3 inherit pub_methods_classz0_1_1_node" id="r_ad5ef4d4f0e404eddbc46e41389042ef3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ad5ef4d4f0e404eddbc46e41389042ef3">onInput</a> (<a class="el" href="classz0_1_1_input_event.html">InputEvent</a> &amp;inputEvent)</td></tr>
 <tr class="separator:ad5ef4d4f0e404eddbc46e41389042ef3 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c0740679b72db7ae6abb9fc48b25c0a inherit pub_methods_classz0_1_1_node" id="r_a7c0740679b72db7ae6abb9fc48b25c0a"><td class="memItemLeft" align="right" valign="top">const mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a7c0740679b72db7ae6abb9fc48b25c0a">getTransformLocal</a> () const</td></tr>
 <tr class="separator:a7c0740679b72db7ae6abb9fc48b25c0a inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e5529d17426969bd76fcb3b80221a3 inherit pub_methods_classz0_1_1_node" id="r_a02e5529d17426969bd76fcb3b80221a3"><td class="memItemLeft" align="right" valign="top">mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a02e5529d17426969bd76fcb3b80221a3">getTransformGlobal</a> () const</td></tr>
 <tr class="separator:a02e5529d17426969bd76fcb3b80221a3 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde249fc77213cefd74b711382bffd89 inherit pub_methods_classz0_1_1_node" id="r_acde249fc77213cefd74b711382bffd89"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#acde249fc77213cefd74b711382bffd89">toGlobal</a> (vec3 local) const</td></tr>
-<tr class="separator:acde249fc77213cefd74b711382bffd89 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67404cfd749850c280b938553fce7e90 inherit pub_methods_classz0_1_1_node" id="r_a67404cfd749850c280b938553fce7e90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a67404cfd749850c280b938553fce7e90">translate</a> (vec3 localOffset)</td></tr>
-<tr class="separator:a67404cfd749850c280b938553fce7e90 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8df0a0c2f6b4d34b44c7c9f60f9f96c1 inherit pub_methods_classz0_1_1_node" id="r_a8df0a0c2f6b4d34b44c7c9f60f9f96c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a8df0a0c2f6b4d34b44c7c9f60f9f96c1">setPositionGlobal</a> (vec3 position)</td></tr>
-<tr class="separator:a8df0a0c2f6b4d34b44c7c9f60f9f96c1 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9435240d5c60c243b449233338ca28 inherit pub_methods_classz0_1_1_node" id="r_a0f9435240d5c60c243b449233338ca28"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a0f9435240d5c60c243b449233338ca28">toGlobal</a> (const vec3 local) const</td></tr>
+<tr class="separator:a0f9435240d5c60c243b449233338ca28 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95599b12d52c272e391823aa31c19d6 inherit pub_methods_classz0_1_1_node" id="r_ab95599b12d52c272e391823aa31c19d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ab95599b12d52c272e391823aa31c19d6">translate</a> (const vec3 localOffset)</td></tr>
+<tr class="separator:ab95599b12d52c272e391823aa31c19d6 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a7a341c5de08fa9a273e02429bae9a inherit pub_methods_classz0_1_1_node" id="r_a24a7a341c5de08fa9a273e02429bae9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a24a7a341c5de08fa9a273e02429bae9a">setPositionGlobal</a> (const vec3 position)</td></tr>
+<tr class="separator:a24a7a341c5de08fa9a273e02429bae9a inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a386ce624f44e778ee752b99319a7ca inherit pub_methods_classz0_1_1_node" id="r_a8a386ce624f44e778ee752b99319a7ca"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a8a386ce624f44e778ee752b99319a7ca">getPositionGlobal</a> () const</td></tr>
 <tr class="separator:a8a386ce624f44e778ee752b99319a7ca inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d657c51846d0c104e4f1614e3dc689 inherit pub_methods_classz0_1_1_node" id="r_a42d657c51846d0c104e4f1614e3dc689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a42d657c51846d0c104e4f1614e3dc689">rotateX</a> (float angle)</td></tr>
-<tr class="separator:a42d657c51846d0c104e4f1614e3dc689 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27be02acacb53bf2a010488a051b25a9 inherit pub_methods_classz0_1_1_node" id="r_a27be02acacb53bf2a010488a051b25a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a27be02acacb53bf2a010488a051b25a9">rotateY</a> (float angle)</td></tr>
-<tr class="separator:a27be02acacb53bf2a010488a051b25a9 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a7537526f3ae676af7cca05157c7e3 inherit pub_methods_classz0_1_1_node" id="r_aa2a7537526f3ae676af7cca05157c7e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#aa2a7537526f3ae676af7cca05157c7e3">rotateZ</a> (float angle)</td></tr>
-<tr class="separator:aa2a7537526f3ae676af7cca05157c7e3 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba1f493709fbf49ef4a559113399b53 inherit pub_methods_classz0_1_1_node" id="r_abba1f493709fbf49ef4a559113399b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#abba1f493709fbf49ef4a559113399b53">setRotation</a> (quat quat)</td></tr>
-<tr class="separator:abba1f493709fbf49ef4a559113399b53 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d4c4dacf0e1d8bb563230bc0bbece69 inherit pub_methods_classz0_1_1_node" id="r_a7d4c4dacf0e1d8bb563230bc0bbece69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a7d4c4dacf0e1d8bb563230bc0bbece69">setRotationX</a> (float angle)</td></tr>
-<tr class="separator:a7d4c4dacf0e1d8bb563230bc0bbece69 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7010e81bb2e089587baed2cfc011786 inherit pub_methods_classz0_1_1_node" id="r_ab7010e81bb2e089587baed2cfc011786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ab7010e81bb2e089587baed2cfc011786">setRotationY</a> (float angle)</td></tr>
-<tr class="separator:ab7010e81bb2e089587baed2cfc011786 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504c4b0b83b9ee4bace4e66b10c1f315 inherit pub_methods_classz0_1_1_node" id="r_a504c4b0b83b9ee4bace4e66b10c1f315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a504c4b0b83b9ee4bace4e66b10c1f315">setRotationZ</a> (float angle)</td></tr>
-<tr class="separator:a504c4b0b83b9ee4bace4e66b10c1f315 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd13e7ac0c37de25436c655d5573185a inherit pub_methods_classz0_1_1_node" id="r_abd13e7ac0c37de25436c655d5573185a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#abd13e7ac0c37de25436c655d5573185a">rotateX</a> (const float angle)</td></tr>
+<tr class="separator:abd13e7ac0c37de25436c655d5573185a inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1949a2a2d4710a7e71a57f42593977f inherit pub_methods_classz0_1_1_node" id="r_ac1949a2a2d4710a7e71a57f42593977f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ac1949a2a2d4710a7e71a57f42593977f">rotateY</a> (const float angle)</td></tr>
+<tr class="separator:ac1949a2a2d4710a7e71a57f42593977f inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567700e5c0058d493fa08d1d4a3516ee inherit pub_methods_classz0_1_1_node" id="r_a567700e5c0058d493fa08d1d4a3516ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a567700e5c0058d493fa08d1d4a3516ee">rotateZ</a> (const float angle)</td></tr>
+<tr class="separator:a567700e5c0058d493fa08d1d4a3516ee inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b44047443bd04c54c47ba913ed30cbc inherit pub_methods_classz0_1_1_node" id="r_a0b44047443bd04c54c47ba913ed30cbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a0b44047443bd04c54c47ba913ed30cbc">setRotation</a> (const quat quater)</td></tr>
+<tr class="separator:a0b44047443bd04c54c47ba913ed30cbc inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2b27e63d019c650ac86c8a07615084 inherit pub_methods_classz0_1_1_node" id="r_a9d2b27e63d019c650ac86c8a07615084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a9d2b27e63d019c650ac86c8a07615084">setRotationX</a> (const float angle)</td></tr>
+<tr class="separator:a9d2b27e63d019c650ac86c8a07615084 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8800ea0cf9a0526e8333804cebba9e4b inherit pub_methods_classz0_1_1_node" id="r_a8800ea0cf9a0526e8333804cebba9e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a8800ea0cf9a0526e8333804cebba9e4b">setRotationY</a> (const float angle)</td></tr>
+<tr class="separator:a8800ea0cf9a0526e8333804cebba9e4b inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df1ba7c7baf8317b5f7d6095444bed8 inherit pub_methods_classz0_1_1_node" id="r_a3df1ba7c7baf8317b5f7d6095444bed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a3df1ba7c7baf8317b5f7d6095444bed8">setRotationZ</a> (const float angle)</td></tr>
+<tr class="separator:a3df1ba7c7baf8317b5f7d6095444bed8 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf59fbf2605d48ab018593418822a564 inherit pub_methods_classz0_1_1_node" id="r_acf59fbf2605d48ab018593418822a564"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#acf59fbf2605d48ab018593418822a564">getRotation</a> () const</td></tr>
 <tr class="separator:acf59fbf2605d48ab018593418822a564 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a795c100a9fb823fdfca80b33d73929 inherit pub_methods_classz0_1_1_node" id="r_a0a795c100a9fb823fdfca80b33d73929"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a0a795c100a9fb823fdfca80b33d73929">getRotationX</a> () const</td></tr>
@@ -188,16 +186,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a17fd057679dbb34530daa376abcf45e7 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2add690e2f19a3c247cc551d2e28556d inherit pub_methods_classz0_1_1_node" id="r_a2add690e2f19a3c247cc551d2e28556d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a2add690e2f19a3c247cc551d2e28556d">getRotationZ</a> () const</td></tr>
 <tr class="separator:a2add690e2f19a3c247cc551d2e28556d inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2808797d87cb7a755f7535c5a04b7b inherit pub_methods_classz0_1_1_node" id="r_acf2808797d87cb7a755f7535c5a04b7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#acf2808797d87cb7a755f7535c5a04b7b">setScale</a> (vec3 scale)</td></tr>
-<tr class="separator:acf2808797d87cb7a755f7535c5a04b7b inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f941af079f26c306ef54824d140936 inherit pub_methods_classz0_1_1_node" id="r_ae7f941af079f26c306ef54824d140936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ae7f941af079f26c306ef54824d140936">setScale</a> (float scale)</td></tr>
-<tr class="separator:ae7f941af079f26c306ef54824d140936 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87efe660a3afa6a39e2659c4a390b694 inherit pub_methods_classz0_1_1_node" id="r_a87efe660a3afa6a39e2659c4a390b694"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a87efe660a3afa6a39e2659c4a390b694">setScale</a> (const vec3 scale)</td></tr>
+<tr class="separator:a87efe660a3afa6a39e2659c4a390b694 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab96b89ab2c8b253cb6c76d3ea65ab0 inherit pub_methods_classz0_1_1_node" id="r_a5ab96b89ab2c8b253cb6c76d3ea65ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a5ab96b89ab2c8b253cb6c76d3ea65ab0">setScale</a> (const float scale)</td></tr>
+<tr class="separator:a5ab96b89ab2c8b253cb6c76d3ea65ab0 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fddd47ca962f874d10775a454f0286 inherit pub_methods_classz0_1_1_node" id="r_a26fddd47ca962f874d10775a454f0286"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a26fddd47ca962f874d10775a454f0286">getScale</a> () const</td></tr>
 <tr class="separator:a26fddd47ca962f874d10775a454f0286 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a108eba1dbccbd4ecb5a2d310616bcc66 inherit pub_methods_classz0_1_1_node" id="r_a108eba1dbccbd4ecb5a2d310616bcc66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a108eba1dbccbd4ecb5a2d310616bcc66">getProcessMode</a> () const</td></tr>
+<tr class="memitem:a108eba1dbccbd4ecb5a2d310616bcc66 inherit pub_methods_classz0_1_1_node" id="r_a108eba1dbccbd4ecb5a2d310616bcc66"><td class="memItemLeft" align="right" valign="top">ProcessMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a108eba1dbccbd4ecb5a2d310616bcc66">getProcessMode</a> () const</td></tr>
 <tr class="separator:a108eba1dbccbd4ecb5a2d310616bcc66 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c12dd37c76ad351007a647704fcc32 inherit pub_methods_classz0_1_1_node" id="r_a29c12dd37c76ad351007a647704fcc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a29c12dd37c76ad351007a647704fcc32">setProcessMode</a> (<a class="el" href="constants_8h.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a> mode)</td></tr>
-<tr class="separator:a29c12dd37c76ad351007a647704fcc32 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83dd31fea0c6e52cc6f71c25c7fc2b5 inherit pub_methods_classz0_1_1_node" id="r_aa83dd31fea0c6e52cc6f71c25c7fc2b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#aa83dd31fea0c6e52cc6f71c25c7fc2b5">setProcessMode</a> (const ProcessMode mode)</td></tr>
+<tr class="separator:aa83dd31fea0c6e52cc6f71c25c7fc2b5 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83943e04f0ee0a5a38208278b97fc780 inherit pub_methods_classz0_1_1_node" id="r_a83943e04f0ee0a5a38208278b97fc780"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a83943e04f0ee0a5a38208278b97fc780">isProcessed</a> () const</td></tr>
 <tr class="separator:a83943e04f0ee0a5a38208278b97fc780 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2926b5f07de0982ac20d7da2a59321ab inherit pub_methods_classz0_1_1_node" id="r_a2926b5f07de0982ac20d7da2a59321ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classz0_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a2926b5f07de0982ac20d7da2a59321ab">getParent</a> () const</td></tr>
@@ -208,10 +206,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4b19b4c247bfddbc78ee6710e508dbe2 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a760b298572124d03528a05c75a40af57 inherit pub_methods_classz0_1_1_node" id="r_a760b298572124d03528a05c75a40af57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a760b298572124d03528a05c75a40af57">removeAllChildren</a> ()</td></tr>
 <tr class="separator:a760b298572124d03528a05c75a40af57 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34d5af83a7ccd140e6961474acb74a64 inherit pub_methods_classz0_1_1_node" id="r_a34d5af83a7ccd140e6961474acb74a64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a34d5af83a7ccd140e6961474acb74a64">haveChild</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;child, bool recursive) const</td></tr>
-<tr class="separator:a34d5af83a7ccd140e6961474acb74a64 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a59a4ed865a7c574e9439a7b06e79b5 inherit pub_methods_classz0_1_1_node" id="r_a4a59a4ed865a7c574e9439a7b06e79b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a4a59a4ed865a7c574e9439a7b06e79b5">printTree</a> (int tab=0) const</td></tr>
-<tr class="separator:a4a59a4ed865a7c574e9439a7b06e79b5 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a89b133eca645fdf486697bbaea892 inherit pub_methods_classz0_1_1_node" id="r_a47a89b133eca645fdf486697bbaea892"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a47a89b133eca645fdf486697bbaea892">haveChild</a> (const shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;child, const bool recursive) const</td></tr>
+<tr class="separator:a47a89b133eca645fdf486697bbaea892 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48d6429aa51fbeb299acafd990a01c0 inherit pub_methods_classz0_1_1_node" id="r_ac48d6429aa51fbeb299acafd990a01c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#ac48d6429aa51fbeb299acafd990a01c0">printTree</a> (const int tab=0) const</td></tr>
+<tr class="separator:ac48d6429aa51fbeb299acafd990a01c0 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc18036adaea83856c3e6069e90a3f97 inherit pub_methods_classz0_1_1_node" id="r_acc18036adaea83856c3e6069e90a3f97"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#acc18036adaea83856c3e6069e90a3f97">toString</a> () const override</td></tr>
 <tr class="separator:acc18036adaea83856c3e6069e90a3f97 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95bc6369673e4f113ed3fc9d34d00f22 inherit pub_methods_classz0_1_1_node" id="r_a95bc6369673e4f113ed3fc9d34d00f22"><td class="memItemLeft" align="right" valign="top">id_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a95bc6369673e4f113ed3fc9d34d00f22">getId</a> () const</td></tr>
@@ -232,10 +230,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfa8114428e4ac90b10ae5c119dbc14f inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af17621c2c136d4a27d15b0fe6b4d09b1 inherit pub_methods_classz0_1_1_node" id="r_af17621c2c136d4a27d15b0fe6b4d09b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#af17621c2c136d4a27d15b0fe6b4d09b1">setName</a> (const string &amp;nodeName)</td></tr>
 <tr class="separator:af17621c2c136d4a27d15b0fe6b4d09b1 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f31f11b485fc3a335361b56410a864 inherit pub_methods_classz0_1_1_node" id="r_a11f31f11b485fc3a335361b56410a864"><td class="memItemLeft" align="right" valign="top">const list&lt; shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_node.html#a11f31f11b485fc3a335361b56410a864">getChildren</a> () const</td></tr>
+<tr class="separator:a11f31f11b485fc3a335361b56410a864 inherit pub_methods_classz0_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
-<tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="classz0_1_1_signal.html#a1b5aa0555b5fa30dcc022298f504ab0b">Signal::Handler</a> handler)</td></tr>
+<tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
 <tr class="separator:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object" id="r_aef1cefb710442f7087a4a4d00f4fd528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#aef1cefb710442f7087a4a4d00f4fd528">disconnect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="classz0_1_1_signal.html#a1b5aa0555b5fa30dcc022298f504ab0b">Signal::Handler</a> handler)</td></tr>
+<tr class="memitem:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object" id="r_aef1cefb710442f7087a4a4d00f4fd528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#aef1cefb710442f7087a4a4d00f4fd528">disconnect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
 <tr class="separator:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1_object" id="r_ad8d0436f166a3557eca32fe201a5857b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#ad8d0436f166a3557eca32fe201a5857b">emit</a> (const Signal::signal &amp;name, <a class="el" href="structz0_1_1_signal_1_1_parameters.html">Signal::Parameters</a> *params=nullptr)</td></tr>
 <tr class="separator:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,7 +259,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -286,7 +286,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -312,7 +312,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -338,51 +338,59 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns <code>true</code> if the camera is the currently active camera for the current scene. Use <a class="el" href="classz0_1_1_application.html#aab7a546ae6ac042c410ff02f04a7e569">Application::activateCamera()</a> to activate a camera </p>
+<p>Returns <code>true</code> if the camera is the currently active camera for the current scene. Use Application::activateCamera() to activate a camera </p>
 
 </div>
 </div>
-<a id="a09f6f7c0a0c6479db355b5c51f3a91aa" name="a09f6f7c0a0c6479db355b5c51f3a91aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09f6f7c0a0c6479db355b5c51f3a91aa">&#9670;&#160;</a></span>setOrthographicProjection()</h2>
+<a id="ac7ba87cb77802b74bbcf2414a34726e6" name="ac7ba87cb77802b74bbcf2414a34726e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ba87cb77802b74bbcf2414a34726e6">&#9670;&#160;</a></span>setOrthographicProjection()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void setOrthographicProjection </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>near</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>_near</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>far</em></span>&#160;)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>_far</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Sets the camera projection to orthogonal mode. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -394,32 +402,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5228ce2b555e898088c6a5f06a37688b" name="a5228ce2b555e898088c6a5f06a37688b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5228ce2b555e898088c6a5f06a37688b">&#9670;&#160;</a></span>setPerspectiveProjection()</h2>
+<a id="a75d7ae61e9f050da02063fab8a6386ce" name="a75d7ae61e9f050da02063fab8a6386ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d7ae61e9f050da02063fab8a6386ce">&#9670;&#160;</a></span>setPerspectiveProjection()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void setPerspectiveProjection </td>
           <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fov</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>_fov</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>near</em></span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>_near</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>far</em></span>&#160;)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>_far</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Sets the camera projection to perspective mode. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fov</td><td>field of view angle in radians </td></tr>
+    <tr><td class="paramname">fov</td><td>field of view angle in degrees </td></tr>
     <tr><td class="paramname">near</td><td>nearest clip plane </td></tr>
     <tr><td class="paramname">far</td><td>farthest clip plane </td></tr>
   </table>
@@ -428,8 +444,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c30609d40d98400caa4c92213b01383" name="a2c30609d40d98400caa4c92213b01383"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c30609d40d98400caa4c92213b01383">&#9670;&#160;</a></span>unproject()</h2>
+<a id="a9a31d7c51764dadb31c2f20aa4cef9b9" name="a9a31d7c51764dadb31c2f20aa4cef9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a31d7c51764dadb31c2f20aa4cef9b9">&#9670;&#160;</a></span>unproject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,13 +456,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">vec2 unproject </td>
           <td>(</td>
-          <td class="paramtype">vec3</td>          <td class="paramname"><span class="paramname"><em>worldCoords</em></span></td><td>)</td>
+          <td class="paramtype">const vec3</td>          <td class="paramname"><span class="paramname"><em>worldCoords</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

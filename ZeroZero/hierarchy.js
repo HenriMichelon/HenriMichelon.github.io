@@ -15,7 +15,10 @@ var hierarchy =
         [ "ShadowMapFrameBuffer", "classz0_1_1_shadow_map_frame_buffer.html", null ]
       ] ]
     ] ],
-    [ "GEvent", "classz0_1_1_g_event.html", null ],
+    [ "hash< vec2 >", "structstd_1_1hash_3_01vec2_01_4.html", null ],
+    [ "hash< vec3 >", "structstd_1_1hash_3_01vec3_01_4.html", null ],
+    [ "hash< vec4 >", "structstd_1_1hash_3_01vec4_01_4.html", null ],
+    [ "hash< z0::Vertex >", "structstd_1_1hash_3_01z0_1_1_vertex_01_4.html", null ],
     [ "Input", "classz0_1_1_input.html", null ],
     [ "Loader", "classz0_1_1_loader.html", null ],
     [ "Object", "classz0_1_1_object.html", [
@@ -96,11 +99,15 @@ var hierarchy =
     [ "OutlineMaterials", "classz0_1_1_outline_materials.html", null ],
     [ "Parameters", "structz0_1_1_signal_1_1_parameters.html", [
       [ "Collision", "structz0_1_1_collision_object_1_1_collision.html", null ],
-      [ "GEventClick", "structz0_1_1_g_event_click.html", null ],
-      [ "GEventKeyb", "structz0_1_1_g_event_keyb.html", null ],
-      [ "GEventMouseButton", "structz0_1_1_g_event_mouse_button.html", null ],
-      [ "GEventMouseMove", "structz0_1_1_g_event_mouse_move.html", null ],
-      [ "GEventState", "structz0_1_1_g_event_state.html", null ]
+      [ "GEvent", "structz0_1_1_g_event.html", [
+        [ "GEventClick", "structz0_1_1_g_event_click.html", null ],
+        [ "GEventKeyb", "structz0_1_1_g_event_keyb.html", null ],
+        [ "GEventMouseButton", "structz0_1_1_g_event_mouse_button.html", null ],
+        [ "GEventMouseMove", "structz0_1_1_g_event_mouse_move.html", null ],
+        [ "GEventRange", "structz0_1_1_g_event_range.html", null ],
+        [ "GEventState", "structz0_1_1_g_event_state.html", null ],
+        [ "GEventValue", "structz0_1_1_g_event_value.html", null ]
+      ] ]
     ] ],
     [ "Rect", "structz0_1_1_rect.html", null ],
     [ "Renderer", "classz0_1_1_renderer.html", [

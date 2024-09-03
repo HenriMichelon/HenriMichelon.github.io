@@ -105,14 +105,12 @@ $(function(){initNavTree('classz0_1_1_signal.html',''); initResizable(true); });
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classz0_1_1_signal-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Signal Class Reference</div></div>
+  <div class="headertitle"><div class="title">Signal Class Reference<span class="mlabels"><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module___z0.html">Z0</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A signal of an <a class="el" href="classz0_1_1_object.html">Object</a> </p>
-</div>
-<p><code>#include &lt;signal.h&gt;</code></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a></td></tr>
@@ -125,12 +123,12 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a96a0773a7afa12b6a52028d4f466a46b" id="r_a96a0773a7afa12b6a52028d4f466a46b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a0773a7afa12b6a52028d4f466a46b">connect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="#a1b5aa0555b5fa30dcc022298f504ab0b">Handler</a> handler)</td></tr>
+<tr class="memitem:a96a0773a7afa12b6a52028d4f466a46b" id="r_a96a0773a7afa12b6a52028d4f466a46b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a0773a7afa12b6a52028d4f466a46b">connect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, Handler handler)</td></tr>
 <tr class="separator:a96a0773a7afa12b6a52028d4f466a46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27455f2958656fb4e282d70d275e20c0" id="r_a27455f2958656fb4e282d70d275e20c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27455f2958656fb4e282d70d275e20c0">disconnect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="#a1b5aa0555b5fa30dcc022298f504ab0b">Handler</a> handler)</td></tr>
+<tr class="memitem:a27455f2958656fb4e282d70d275e20c0" id="r_a27455f2958656fb4e282d70d275e20c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27455f2958656fb4e282d70d275e20c0">disconnect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, Handler handler)</td></tr>
 <tr class="separator:a27455f2958656fb4e282d70d275e20c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63386e2de8fe2157411e277b9c4c56ca" id="r_a63386e2de8fe2157411e277b9c4c56ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63386e2de8fe2157411e277b9c4c56ca">emit</a> (<a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *param)</td></tr>
-<tr class="separator:a63386e2de8fe2157411e277b9c4c56ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be8ffb1045a72d22b3feb4b297e97bb" id="r_a3be8ffb1045a72d22b3feb4b297e97bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be8ffb1045a72d22b3feb4b297e97bb">emit</a> (<a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *params) const</td></tr>
+<tr class="separator:a3be8ffb1045a72d22b3feb4b297e97bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1b5aa0555b5fa30dcc022298f504ab0b" name="a1b5aa0555b5fa30dcc022298f504ab0b"></a>
@@ -138,11 +136,19 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">typedef void(Object::* Handler) (<a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Callable member function </p>
 
@@ -154,6 +160,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void connect </td>
@@ -163,14 +172,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a1b5aa0555b5fa30dcc022298f504ab0b">Handler</a></td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+          <td class="paramtype">Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Connects a member function to the signal </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>object containing the member function to connect </td></tr>
-    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="#a63386e2de8fe2157411e277b9c4c56ca">emit()</a> is called </td></tr>
+    <tr><td class="paramname">handler</td><td>the member function to call when emit() is called </td></tr>
   </table>
   </dd>
 </dl>
@@ -182,6 +196,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void disconnect </td>
@@ -191,33 +208,46 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a1b5aa0555b5fa30dcc022298f504ab0b">Handler</a></td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+          <td class="paramtype">Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Disconnects a member function to the signal </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>object containing the member function to connect </td></tr>
-    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="#a63386e2de8fe2157411e277b9c4c56ca">emit()</a> is called </td></tr>
+    <tr><td class="paramname">handler</td><td>the member function to call when emit() is called </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a63386e2de8fe2157411e277b9c4c56ca" name="a63386e2de8fe2157411e277b9c4c56ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63386e2de8fe2157411e277b9c4c56ca">&#9670;&#160;</a></span>emit()</h2>
+<a id="a3be8ffb1045a72d22b3feb4b297e97bb" name="a3be8ffb1045a72d22b3feb4b297e97bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be8ffb1045a72d22b3feb4b297e97bb">&#9670;&#160;</a></span>emit()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void emit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *</td>          <td class="paramname"><span class="paramname"><em>params</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Emits the signal by calling all the connected functions in the connect order </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
