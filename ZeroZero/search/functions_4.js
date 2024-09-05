@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['emit_0',['emit',['../classz0_1_1_object.html#ad8d0436f166a3557eca32fe201a5857b',1,'z0::Object::emit()'],['../classz0_1_1_signal.html#a63386e2de8fe2157411e277b9c4c56ca',1,'z0::Signal::emit()']]],
-  ['enable_1',['enable',['../classz0_1_1_g_widget.html#a3ca96a66a9b79d8bfb28cf30091a9985',1,'z0::GWidget']]],
-  ['environment_2',['Environment',['../classz0_1_1_environment.html#aff4850f049f8b155e205208a5161b62a',1,'z0::Environment']]]
+  ['setmousecursor_0',['setMouseCursor',['../classz0_1_1_input.html#aa50a331ce900ce796b8b95c208d19678',1,'z0::Input']]],
+  ['setmousemode_1',['setMouseMode',['../classz0_1_1_input.html#a8eac23c37b97a8cf0a3d0c85f0e703f9',1,'z0::Input']]],
+  ['setoutlined_2',['setOutlined',['../classz0_1_1_mesh_instance.html#a3a9efc00f38f5aa6009ce9caea593b12',1,'z0::MeshInstance']]],
+  ['setoutlinematerial_3',['setOutlineMaterial',['../classz0_1_1_mesh_instance.html#a42d55c8caaa80a87f85e648e525f4d05',1,'z0::MeshInstance']]]
 ];
