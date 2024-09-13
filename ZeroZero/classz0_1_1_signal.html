@@ -123,10 +123,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a96a0773a7afa12b6a52028d4f466a46b" id="r_a96a0773a7afa12b6a52028d4f466a46b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a0773a7afa12b6a52028d4f466a46b">connect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, Handler handler)</td></tr>
-<tr class="separator:a96a0773a7afa12b6a52028d4f466a46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27455f2958656fb4e282d70d275e20c0" id="r_a27455f2958656fb4e282d70d275e20c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27455f2958656fb4e282d70d275e20c0">disconnect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, Handler handler)</td></tr>
-<tr class="separator:a27455f2958656fb4e282d70d275e20c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1710716db7c1017702396d45cd1b90e1" id="r_a1710716db7c1017702396d45cd1b90e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1710716db7c1017702396d45cd1b90e1">connect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, const Handler handler)</td></tr>
+<tr class="separator:a1710716db7c1017702396d45cd1b90e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68f667473f94883cc15b89194cd26f98" id="r_a68f667473f94883cc15b89194cd26f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68f667473f94883cc15b89194cd26f98">disconnect</a> (<a class="el" href="classz0_1_1_object.html">Object</a> *object, const Handler handler)</td></tr>
+<tr class="separator:a68f667473f94883cc15b89194cd26f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3be8ffb1045a72d22b3feb4b297e97bb" id="r_a3be8ffb1045a72d22b3feb4b297e97bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be8ffb1045a72d22b3feb4b297e97bb">emit</a> (<a class="el" href="structz0_1_1_signal_1_1_parameters.html">Parameters</a> *params) const</td></tr>
 <tr class="separator:a3be8ffb1045a72d22b3feb4b297e97bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -155,8 +155,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a96a0773a7afa12b6a52028d4f466a46b" name="a96a0773a7afa12b6a52028d4f466a46b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96a0773a7afa12b6a52028d4f466a46b">&#9670;&#160;</a></span>connect()</h2>
+<a id="a1710716db7c1017702396d45cd1b90e1" name="a1710716db7c1017702396d45cd1b90e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1710716db7c1017702396d45cd1b90e1">&#9670;&#160;</a></span>connect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+          <td class="paramtype">const Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -191,8 +191,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a27455f2958656fb4e282d70d275e20c0" name="a27455f2958656fb4e282d70d275e20c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27455f2958656fb4e282d70d275e20c0">&#9670;&#160;</a></span>disconnect()</h2>
+<a id="a68f667473f94883cc15b89194cd26f98" name="a68f667473f94883cc15b89194cd26f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f667473f94883cc15b89194cd26f98">&#9670;&#160;</a></span>disconnect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
+          <td class="paramtype">const Handler</td>          <td class="paramname"><span class="paramname"><em>handler</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -251,7 +251,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Emits the signal by calling all the connected functions in the connect order </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>signal name </td></tr>
     <tr><td class="paramname">params</td><td>parameters to pass to the function connected to the signal </td></tr>
   </table>
   </dd>
