@@ -1,4 +1,4 @@
 var modules_dup =
 [
-    [ "Z0", "module___z0.html", "module___z0" ]
+    [ "z0", "module__z0.html", "module__z0" ]
 ];

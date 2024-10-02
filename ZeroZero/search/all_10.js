@@ -5,7 +5,7 @@ var searchData=
   ['setmousecursor_2',['setMouseCursor',['../classz0_1_1_input.html#aa50a331ce900ce796b8b95c208d19678',1,'z0::Input']]],
   ['setmousemode_3',['setMouseMode',['../classz0_1_1_input.html#a8eac23c37b97a8cf0a3d0c85f0e703f9',1,'z0::Input']]],
   ['setoutlined_4',['setOutlined',['../classz0_1_1_mesh_instance.html#a3a9efc00f38f5aa6009ce9caea593b12',1,'z0::MeshInstance']]],
-  ['setoutlinematerial_5',['setOutlineMaterial',['../classz0_1_1_mesh_instance.html#a42d55c8caaa80a87f85e648e525f4d05',1,'z0::MeshInstance']]],
+  ['setoutlinematerial_5',['setOutlineMaterial',['../classz0_1_1_mesh_instance.html#af52739770e581b351a5e8164e6777480',1,'z0::MeshInstance']]],
   ['shader_6',['Shader',['../classz0_1_1_shader.html',1,'z0']]],
   ['shadermaterial_7',['ShaderMaterial',['../classz0_1_1_shader_material.html',1,'z0']]],
   ['shadowmapframebuffer_8',['ShadowMapFrameBuffer',['../classz0_1_1_shadow_map_frame_buffer.html',1,'z0']]],

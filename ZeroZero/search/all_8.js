@@ -12,12 +12,12 @@ var searchData=
   ['installation_9',['Installation',['../index.html#install_sec',1,'']]],
   ['isgamepad_10',['isGamepad',['../classz0_1_1_input.html#a6955d0a1d3d4cd01ef018fc50b06174b',1,'z0::Input']]],
   ['isgamepadbuttonpressed_11',['isGamepadButtonPressed',['../classz0_1_1_input.html#a432c67430842463a385586c9ca74c8b7',1,'z0::Input']]],
-  ['iskeyjustpressed_12',['isKeyJustPressed',['../classz0_1_1_input.html#a3d402529012814d9837012218cabf047',1,'z0::Input']]],
-  ['iskeyjustreleased_13',['isKeyJustReleased',['../classz0_1_1_input.html#a3e05ace10a16649c67a5bc6dfc9bcc27',1,'z0::Input']]],
-  ['iskeypressed_14',['isKeyPressed',['../classz0_1_1_input.html#acf11aad9807d654efc2bf9c3c27d7cb3',1,'z0::Input']]],
-  ['ismousebuttonjustpressed_15',['isMouseButtonJustPressed',['../classz0_1_1_input.html#a45efba78cf28c5a9aa762e09d2e0ac02',1,'z0::Input']]],
-  ['ismousebuttonjustreleased_16',['isMouseButtonJustReleased',['../classz0_1_1_input.html#aacb5709bb65507f3ce363990c611cb9b',1,'z0::Input']]],
-  ['ismousebuttonpressed_17',['isMouseButtonPressed',['../classz0_1_1_input.html#acc2b610251fea769b9e69fa8d78973dd',1,'z0::Input']]],
+  ['iskeyjustpressed_12',['isKeyJustPressed',['../classz0_1_1_input.html#a81955d2b4d9a17c8bf88060a957c6139',1,'z0::Input']]],
+  ['iskeyjustreleased_13',['isKeyJustReleased',['../classz0_1_1_input.html#a0f3e046b5165de030eb976928cc9cbc3',1,'z0::Input']]],
+  ['iskeypressed_14',['isKeyPressed',['../classz0_1_1_input.html#ae86665d7f8778af8a840a1a6562ce96a',1,'z0::Input']]],
+  ['ismousebuttonjustpressed_15',['isMouseButtonJustPressed',['../classz0_1_1_input.html#aa5c17ee856968e478eec91d4365b3ddd',1,'z0::Input']]],
+  ['ismousebuttonjustreleased_16',['isMouseButtonJustReleased',['../classz0_1_1_input.html#a8c1182c0f8f14f7c582d278608e2538c',1,'z0::Input']]],
+  ['ismousebuttonpressed_17',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]],
   ['isoutlined_18',['isOutlined',['../classz0_1_1_mesh_instance.html#a64feaeebe1e1f4ba35d230b9f60b1aeb',1,'z0::MeshInstance']]],
   ['isvalid_19',['isValid',['../classz0_1_1_mesh_instance.html#a5bc2a781be2586924afce4e4a4ea6697',1,'z0::MeshInstance']]]
 ];
