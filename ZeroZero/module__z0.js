@@ -44,7 +44,6 @@ var module__z0 =
     [ "Vertex", "structz0_1_1_vertex.html", null ],
     [ "Surface", "structz0_1_1_surface.html", null ],
     [ "Mesh", "classz0_1_1_mesh.html", null ],
-    [ "hash< z0::Vertex >", "structstd_1_1hash_3_01z0_1_1_vertex_01_4.html", null ],
     [ "SubShape", "structz0_1_1_sub_shape.html", null ],
     [ "Loader", "classz0_1_1_loader.html", null ],
     [ "StaticBody", "classz0_1_1_static_body.html", null ],

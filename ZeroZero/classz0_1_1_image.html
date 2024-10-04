@@ -122,8 +122,8 @@ Inheritance diagram for Image:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f5c07e8549aaf6324c0eeeb725f5c43" id="r_a5f5c07e8549aaf6324c0eeeb725f5c43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f5c07e8549aaf6324c0eeeb725f5c43">Image</a> (const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;device, const string &amp;name, const uint32_t width, const uint32_t height, const VkDeviceSize imageSize, const void *data, const VkFormat format=VK_FORMAT_R8G8B8A8_SRGB, const VkImageTiling tiling=VK_IMAGE_TILING_OPTIMAL, const VkSamplerAddressMode samplerAddressMode=VK_SAMPLER_ADDRESS_MODE_REPEAT, const bool noMipmaps=false)</td></tr>
-<tr class="separator:a5f5c07e8549aaf6324c0eeeb725f5c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426a3cfc3a8d906d9fa7b315fa1c4ef2" id="r_a426a3cfc3a8d906d9fa7b315fa1c4ef2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a426a3cfc3a8d906d9fa7b315fa1c4ef2">Image</a> (const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;device, const string &amp;name, uint32_t width, uint32_t height, VkDeviceSize imageSize, const void *data, VkFormat format=VK_FORMAT_R8G8B8A8_SRGB, VkImageTiling tiling=VK_IMAGE_TILING_OPTIMAL, VkSamplerAddressMode samplerAddressMode=VK_SAMPLER_ADDRESS_MODE_REPEAT, bool noMipmaps=false)</td></tr>
+<tr class="separator:a426a3cfc3a8d906d9fa7b315fa1c4ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1b996bfd42e4d13365709e3fcab072" id="r_aca1b996bfd42e4d13365709e3fcab072"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca1b996bfd42e4d13365709e3fcab072">getWidth</a> () const</td></tr>
 <tr class="separator:aca1b996bfd42e4d13365709e3fcab072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bfc989babe0999be4037c5b68119b5" id="r_a41bfc989babe0999be4037c5b68119b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41bfc989babe0999be4037c5b68119b5">getHeight</a> () const</td></tr>
@@ -155,8 +155,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acc18036adaea83856c3e6069e90a3f97 inherit pro_methods_classz0_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5f5c07e8549aaf6324c0eeeb725f5c43" name="a5f5c07e8549aaf6324c0eeeb725f5c43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f5c07e8549aaf6324c0eeeb725f5c43">&#9670;&#160;</a></span>Image()</h2>
+<a id="a426a3cfc3a8d906d9fa7b315fa1c4ef2" name="a426a3cfc3a8d906d9fa7b315fa1c4ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426a3cfc3a8d906d9fa7b315fa1c4ef2">&#9670;&#160;</a></span>Image()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,17 +177,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkDeviceSize</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
+          <td class="paramtype">VkDeviceSize</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -197,27 +197,27 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkFormat</td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_FORMAT_R8G8B8A8_SRGB</span>, </td>
+          <td class="paramtype">VkFormat</td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_FORMAT_R8G8B8A8_SRGB</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkImageTiling</td>          <td class="paramname"><span class="paramname"><em>tiling</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_IMAGE_TILING_OPTIMAL</span>, </td>
+          <td class="paramtype">VkImageTiling</td>          <td class="paramname"><span class="paramname"><em>tiling</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_IMAGE_TILING_OPTIMAL</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VkSamplerAddressMode</td>          <td class="paramname"><span class="paramname"><em>samplerAddressMode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_SAMPLER_ADDRESS_MODE_REPEAT</span>, </td>
+          <td class="paramtype">VkSamplerAddressMode</td>          <td class="paramname"><span class="paramname"><em>samplerAddressMode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">VK_SAMPLER_ADDRESS_MODE_REPEAT</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>noMipmaps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>noMipmaps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -336,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
