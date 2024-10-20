@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "AABB", "structz0_1_1_a_a_b_b.html", null ],
     [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
     [ "Buffer", "classz0_1_1_buffer.html", null ],
     [ "Color", "structz0_1_1_color.html", null ],
@@ -66,7 +67,6 @@ var hierarchy =
             [ "SpotLight", "classz0_1_1_spot_light.html", null ]
           ] ]
         ] ],
-        [ "MeshInstance", "classz0_1_1_mesh_instance.html", null ],
         [ "RayCast", "classz0_1_1_ray_cast.html", null ],
         [ "Skybox", "classz0_1_1_skybox.html", null ],
         [ "Viewport", "classz0_1_1_viewport.html", null ]

@@ -7,7 +7,5 @@ var searchData=
   ['iskeypressed_4',['isKeyPressed',['../classz0_1_1_input.html#ae86665d7f8778af8a840a1a6562ce96a',1,'z0::Input']]],
   ['ismousebuttonjustpressed_5',['isMouseButtonJustPressed',['../classz0_1_1_input.html#aa5c17ee856968e478eec91d4365b3ddd',1,'z0::Input']]],
   ['ismousebuttonjustreleased_6',['isMouseButtonJustReleased',['../classz0_1_1_input.html#a8c1182c0f8f14f7c582d278608e2538c',1,'z0::Input']]],
-  ['ismousebuttonpressed_7',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]],
-  ['isoutlined_8',['isOutlined',['../classz0_1_1_mesh_instance.html#a64feaeebe1e1f4ba35d230b9f60b1aeb',1,'z0::MeshInstance']]],
-  ['isvalid_9',['isValid',['../classz0_1_1_mesh_instance.html#a5bc2a781be2586924afce4e4a4ea6697',1,'z0::MeshInstance']]]
+  ['ismousebuttonpressed_7',['isMouseButtonPressed',['../classz0_1_1_input.html#a60a46ae5c945f9c57fcc969ba67e120b',1,'z0::Input']]]
 ];

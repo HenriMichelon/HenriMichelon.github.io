@@ -7,6 +7,7 @@ var annotated_dup =
       [ "hash< z0::Vertex >", "structstd_1_1hash_3_01z0_1_1_vertex_01_4.html", null ]
     ] ],
     [ "z0", null, [
+      [ "AABB", "structz0_1_1_a_a_b_b.html", null ],
       [ "Application", "classz0_1_1_application.html", null ],
       [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
       [ "BoxShape", "classz0_1_1_box_shape.html", null ],
@@ -64,7 +65,6 @@ var annotated_dup =
       [ "Loader", "classz0_1_1_loader.html", null ],
       [ "Material", "classz0_1_1_material.html", null ],
       [ "Mesh", "classz0_1_1_mesh.html", null ],
-      [ "MeshInstance", "classz0_1_1_mesh_instance.html", "classz0_1_1_mesh_instance" ],
       [ "MeshShape", "classz0_1_1_mesh_shape.html", null ],
       [ "ModelsRenderer", "classz0_1_1_models_renderer.html", null ],
       [ "Node", "classz0_1_1_node.html", null ],
