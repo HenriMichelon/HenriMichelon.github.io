@@ -111,16 +111,16 @@ $(function(){initNavTree('classz0_1_1_loader.html',''); initResizable(true); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a291e647f21be41b6695eacbf94ecf6bb" id="r_a291e647f21be41b6695eacbf94ecf6bb"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a291e647f21be41b6695eacbf94ecf6bb">loadModelFromFile</a> (const filesystem::path &amp;filepath, bool forceBackFaceCulling=false, bool commandLineMode=false)</td></tr>
-<tr class="separator:a291e647f21be41b6695eacbf94ecf6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0998aa14a4ed34b60846dd7a3552865" id="r_ab0998aa14a4ed34b60846dd7a3552865"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0998aa14a4ed34b60846dd7a3552865">addSceneFromFile</a> (<a class="el" href="classz0_1_1_node.html">Node</a> *parent, const filesystem::path &amp;filepath, bool editorMode=false)</td></tr>
-<tr class="separator:ab0998aa14a4ed34b60846dd7a3552865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb0ab5439907958cefbee82d5a2e0271" id="r_abb0ab5439907958cefbee82d5a2e0271"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb0ab5439907958cefbee82d5a2e0271">addSceneFromFile</a> (shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;parent, const filesystem::path &amp;filepath, bool editorMode=false)</td></tr>
-<tr class="separator:abb0ab5439907958cefbee82d5a2e0271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b98530c567e020d0e63926ab151bd7" id="r_a41b98530c567e020d0e63926ab151bd7"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41b98530c567e020d0e63926ab151bd7">loadModelFromFile</a> (const filesystem::path &amp;filepath, bool forceBackFaceCulling=false, bool loadTextures=true)</td></tr>
+<tr class="separator:a41b98530c567e020d0e63926ab151bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af678cc15311a2d54ed2c3253989cec4b" id="r_af678cc15311a2d54ed2c3253989cec4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af678cc15311a2d54ed2c3253989cec4b">addSceneFromFile</a> (<a class="el" href="classz0_1_1_node.html">Node</a> *parent, const filesystem::path &amp;filepath, bool loadTextures=true)</td></tr>
+<tr class="separator:af678cc15311a2d54ed2c3253989cec4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dbcd984f4fca08e1ded0f1bae3b5c4" id="r_a05dbcd984f4fca08e1ded0f1bae3b5c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05dbcd984f4fca08e1ded0f1bae3b5c4">addSceneFromFile</a> (shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; &amp;parent, const filesystem::path &amp;filepath, bool loadTextures=true)</td></tr>
+<tr class="separator:a05dbcd984f4fca08e1ded0f1bae3b5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab0998aa14a4ed34b60846dd7a3552865" name="ab0998aa14a4ed34b60846dd7a3552865"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0998aa14a4ed34b60846dd7a3552865">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[1/2]</span></h2>
+<a id="af678cc15311a2d54ed2c3253989cec4b" name="af678cc15311a2d54ed2c3253989cec4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af678cc15311a2d54ed2c3253989cec4b">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +141,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>editorMode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loadTextures</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -161,8 +161,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abb0ab5439907958cefbee82d5a2e0271" name="abb0ab5439907958cefbee82d5a2e0271"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb0ab5439907958cefbee82d5a2e0271">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[2/2]</span></h2>
+<a id="a05dbcd984f4fca08e1ded0f1bae3b5c4" name="a05dbcd984f4fca08e1ded0f1bae3b5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05dbcd984f4fca08e1ded0f1bae3b5c4">&#9670;&#160;</a></span>addSceneFromFile() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +183,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>editorMode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loadTextures</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -203,8 +203,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a291e647f21be41b6695eacbf94ecf6bb" name="a291e647f21be41b6695eacbf94ecf6bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a291e647f21be41b6695eacbf94ecf6bb">&#9670;&#160;</a></span>loadModelFromFile()</h2>
+<a id="a41b98530c567e020d0e63926ab151bd7" name="a41b98530c567e020d0e63926ab151bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b98530c567e020d0e63926ab151bd7">&#9670;&#160;</a></span>loadModelFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,7 +225,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>commandLineMode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loadTextures</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -238,7 +238,7 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">filepath</td><td>path of the glTF file, relative to the application path </td></tr>
     <tr><td class="paramname">forceBackFaceCulling</td><td>set the z0::CullMode to CULLMODE_BACK even if the material is double-sided (default is CULLMODE_DISABLED for double sided materials) </td></tr>
-    <tr><td class="paramname">commandLineMode</td><td>do not load image </td></tr>
+    <tr><td class="paramname">loadTextures</td><td>do not load image </td></tr>
   </table>
   </dd>
 </dl>

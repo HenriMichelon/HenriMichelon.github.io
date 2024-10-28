@@ -115,19 +115,14 @@ Inheritance diagram for Cubemap:</div>
  <div class="center">
   <img src="classz0_1_1_cubemap.png" usemap="#Cubemap_map" alt=""/>
   <map id="Cubemap_map" name="Cubemap_map">
-<area href="classz0_1_1_resource.html" alt="Resource" shape="rect" coords="0,56,66,80"/>
-<area href="classz0_1_1_object.html" alt="Object" shape="rect" coords="0,0,66,24"/>
+<area href="classz0_1_1_resource.html" alt="Resource" shape="rect" coords="0,56,135,80"/>
+<area href="classz0_1_1_object.html" alt="Object" shape="rect" coords="0,0,135,24"/>
+<area href="classz0_1_1_environment_cubemap.html" alt="EnvironmentCubemap" shape="rect" coords="0,168,135,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b50314a15da991852c1bb00c51d82d6" id="r_a0b50314a15da991852c1bb00c51d82d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b50314a15da991852c1bb00c51d82d6">Cubemap</a> (const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;device, uint32_t width, uint32_t height, VkDeviceSize imageSize, const vector&lt; unsigned char * &gt; &amp;data, const string &amp;name=&quot;Cubemap&quot;)</td></tr>
-<tr class="separator:a0b50314a15da991852c1bb00c51d82d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d5b36ed82b298a42a8443021be3f23" id="r_aa0d5b36ed82b298a42a8443021be3f23"><td class="memItemLeft" align="right" valign="top">VkImage &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0d5b36ed82b298a42a8443021be3f23">getImage</a> ()</td></tr>
-<tr class="separator:aa0d5b36ed82b298a42a8443021be3f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd834f009c2fe847abc865fbecd03b77" id="r_acd834f009c2fe847abc865fbecd03b77"><td class="memItemLeft" align="right" valign="top">VkImageView &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd834f009c2fe847abc865fbecd03b77">getImageView</a> ()</td></tr>
-<tr class="separator:acd834f009c2fe847abc865fbecd03b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1b996bfd42e4d13365709e3fcab072" id="r_aca1b996bfd42e4d13365709e3fcab072"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca1b996bfd42e4d13365709e3fcab072">getWidth</a> () const</td></tr>
 <tr class="separator:aca1b996bfd42e4d13365709e3fcab072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bfc989babe0999be4037c5b68119b5" id="r_a41bfc989babe0999be4037c5b68119b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41bfc989babe0999be4037c5b68119b5">getHeight</a> () const</td></tr>
@@ -149,14 +144,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad776bbbad0535ef424486f982a371733" id="r_ad776bbbad0535ef424486f982a371733"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad776bbbad0535ef424486f982a371733">create</a> (uint32_t width, uint32_t height, uint32_t imageSize, const vector&lt; unsigned char * &gt; &amp;data, const string &amp;name=&quot;Cubemap&quot;)</td></tr>
+<tr class="separator:ad776bbbad0535ef424486f982a371733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae62eedbbfca0a83855ddd2722ad57e39" id="r_ae62eedbbfca0a83855ddd2722ad57e39"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae62eedbbfca0a83855ddd2722ad57e39">loadFromFile</a> (const string &amp;filename, const string &amp;fileext)</td></tr>
 <tr class="separator:ae62eedbbfca0a83855ddd2722ad57e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca925d2ed16358159e75e4c6625028e" id="r_a4ca925d2ed16358159e75e4c6625028e"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ca925d2ed16358159e75e4c6625028e">loadFromFile</a> (const string &amp;filename)</td></tr>
 <tr class="separator:a4ca925d2ed16358159e75e4c6625028e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0b50314a15da991852c1bb00c51d82d6" name="a0b50314a15da991852c1bb00c51d82d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b50314a15da991852c1bb00c51d82d6">&#9670;&#160;</a></span>Cubemap()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad776bbbad0535ef424486f982a371733" name="ad776bbbad0535ef424486f982a371733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad776bbbad0535ef424486f982a371733">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,13 +162,8 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> </td>
+          <td class="memname">static shared_ptr&lt; <a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> &gt; create </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
         </tr>
         <tr>
@@ -182,7 +174,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">VkDeviceSize</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>imageSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -197,13 +189,12 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Creates a <a class="el" href="classz0_1_1_cubemap.html">Cubemap</a> from 6 images stored in CPU memory. The images <b>must</b> have the same sizes </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">device</td><td>: the GPU where the image will be stored </td></tr>
     <tr><td class="paramname">width</td><td>: width in pixels of the images </td></tr>
     <tr><td class="paramname">height</td><td>: height in pixels of the images </td></tr>
     <tr><td class="paramname">imageSize</td><td>: size of each image in bytes </td></tr>
@@ -215,7 +206,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a41bfc989babe0999be4037c5b68119b5" name="a41bfc989babe0999be4037c5b68119b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41bfc989babe0999be4037c5b68119b5">&#9670;&#160;</a></span>getHeight()</h2>
 
@@ -239,58 +229,6 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the height in pixels of each image </p>
-
-</div>
-</div>
-<a id="aa0d5b36ed82b298a42a8443021be3f23" name="aa0d5b36ed82b298a42a8443021be3f23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0d5b36ed82b298a42a8443021be3f23">&#9670;&#160;</a></span>getImage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">VkImage &amp; getImage </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the Vulkan image resource </p>
-
-</div>
-</div>
-<a id="acd834f009c2fe847abc865fbecd03b77" name="acd834f009c2fe847abc865fbecd03b77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd834f009c2fe847abc865fbecd03b77">&#9670;&#160;</a></span>getImageView()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">VkImageView &amp; getImageView </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the Vulkan image view resource </p>
 
 </div>
 </div>
@@ -338,7 +276,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -377,7 +315,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">export</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

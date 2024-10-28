@@ -7,9 +7,7 @@ var searchData=
   ['collisionarea_4',['CollisionArea',['../classz0_1_1_collision_area.html',1,'z0']]],
   ['collisionobject_5',['CollisionObject',['../classz0_1_1_collision_object.html',1,'z0']]],
   ['color_6',['Color',['../structz0_1_1_color.html',1,'z0']]],
-  ['colorframebuffer_7',['ColorFrameBuffer',['../classz0_1_1_color_frame_buffer.html',1,'z0']]],
-  ['colorframebufferhdr_8',['ColorFrameBufferHDR',['../classz0_1_1_color_frame_buffer_h_d_r.html',1,'z0']]],
-  ['contact_9',['Contact',['../index.html#contact_sec',1,'']]],
-  ['convexhullshape_10',['ConvexHullShape',['../classz0_1_1_convex_hull_shape.html',1,'z0']]],
-  ['cubemap_11',['Cubemap',['../classz0_1_1_cubemap.html',1,'z0']]]
+  ['contact_7',['Contact',['../index.html#contact_sec',1,'']]],
+  ['convexhullshape_8',['ConvexHullShape',['../classz0_1_1_convex_hull_shape.html',1,'z0']]],
+  ['cubemap_9',['Cubemap',['../classz0_1_1_cubemap.html',1,'z0']]]
 ];

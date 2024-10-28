@@ -2,24 +2,12 @@ var hierarchy =
 [
     [ "AABB", "structz0_1_1_a_a_b_b.html", null ],
     [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
-    [ "Buffer", "classz0_1_1_buffer.html", null ],
     [ "Color", "structz0_1_1_color.html", null ],
     [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
-    [ "DescriptorSetLayout", "classz0_1_1_descriptor_set_layout.html", null ],
     [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
-    [ "Device", "classz0_1_1_device.html", null ],
-    [ "FrameBuffer", "classz0_1_1_frame_buffer.html", [
-      [ "ColorFrameBuffer", "classz0_1_1_color_frame_buffer.html", null ],
-      [ "DepthFrameBuffer", "classz0_1_1_depth_frame_buffer.html", null ],
-      [ "SampledFrameBuffer", "classz0_1_1_sampled_frame_buffer.html", [
-        [ "ColorFrameBufferHDR", "classz0_1_1_color_frame_buffer_h_d_r.html", null ],
-        [ "ShadowMapFrameBuffer", "classz0_1_1_shadow_map_frame_buffer.html", null ]
-      ] ]
-    ] ],
     [ "hash< vec2 >", "structstd_1_1hash_3_01vec2_01_4.html", null ],
     [ "hash< vec3 >", "structstd_1_1hash_3_01vec3_01_4.html", null ],
     [ "hash< vec4 >", "structstd_1_1hash_3_01vec4_01_4.html", null ],
-    [ "hash< z0::Vertex >", "structstd_1_1hash_3_01z0_1_1_vertex_01_4.html", null ],
     [ "Input", "classz0_1_1_input.html", null ],
     [ "Loader", "classz0_1_1_loader.html", null ],
     [ "Object", "classz0_1_1_object.html", [
@@ -72,9 +60,13 @@ var hierarchy =
         [ "Viewport", "classz0_1_1_viewport.html", null ]
       ] ],
       [ "Resource", "classz0_1_1_resource.html", [
-        [ "Cubemap", "classz0_1_1_cubemap.html", null ],
+        [ "Cubemap", "classz0_1_1_cubemap.html", [
+          [ "EnvironmentCubemap", "classz0_1_1_environment_cubemap.html", null ]
+        ] ],
         [ "Font", "classz0_1_1_font.html", null ],
-        [ "Image", "classz0_1_1_image.html", null ],
+        [ "Image", "classz0_1_1_image.html", [
+          [ "VulkanImage", "classz0_1_1_vulkan_image.html", null ]
+        ] ],
         [ "Material", "classz0_1_1_material.html", [
           [ "ShaderMaterial", "classz0_1_1_shader_material.html", null ],
           [ "StandardMaterial", "classz0_1_1_standard_material.html", null ]
@@ -110,25 +102,10 @@ var hierarchy =
       ] ]
     ] ],
     [ "Rect", "structz0_1_1_rect.html", null ],
-    [ "Renderer", "classz0_1_1_renderer.html", [
-      [ "ModelsRenderer", "classz0_1_1_models_renderer.html", [
-        [ "SceneRenderer", "classz0_1_1_scene_renderer.html", null ]
-      ] ],
-      [ "PostprocessingRenderer", "classz0_1_1_postprocessing_renderer.html", [
-        [ "SimplePostprocessingRenderer", "classz0_1_1_simple_postprocessing_renderer.html", null ]
-      ] ],
-      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
-    ] ],
-    [ "Renderpass", "classz0_1_1_renderpass.html", [
-      [ "ModelsRenderer", "classz0_1_1_models_renderer.html", null ],
-      [ "PostprocessingRenderer", "classz0_1_1_postprocessing_renderer.html", null ],
-      [ "ShadowMapRenderer", "classz0_1_1_shadow_map_renderer.html", null ]
-    ] ],
-    [ "Shader", "classz0_1_1_shader.html", null ],
     [ "Signal", "classz0_1_1_signal.html", null ],
     [ "SubShape", "structz0_1_1_sub_shape.html", null ],
     [ "Surface", "structz0_1_1_surface.html", null ],
-    [ "TextureTransform", "structz0_1_1_standard_material_1_1_texture_transform.html", null ],
+    [ "TextureInfo", "structz0_1_1_standard_material_1_1_texture_info.html", null ],
     [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
     [ "Vertex", "structz0_1_1_vertex.html", null ]
 ];

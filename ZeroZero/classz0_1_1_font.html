@@ -127,8 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a25df9f3d1dffcbc9f1ae20bf3e220369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6658df9a03319d5bcf18ccdef4ea381" id="r_ac6658df9a03319d5bcf18ccdef4ea381"><td class="memItemLeft" align="right" valign="top">vector&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6658df9a03319d5bcf18ccdef4ea381">renderToBitmap</a> (const string &amp;text, float &amp;wwidth, float &amp;hheight)</td></tr>
 <tr class="separator:ac6658df9a03319d5bcf18ccdef4ea381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf894330682b6db5638fd4a97010704" id="r_adaf894330682b6db5638fd4a97010704"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf894330682b6db5638fd4a97010704">renderToImage</a> (const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;device, const string &amp;text)</td></tr>
-<tr class="separator:adaf894330682b6db5638fd4a97010704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cf8330f82ebc1571ba05b95ed5969e" id="r_ac5cf8330f82ebc1571ba05b95ed5969e"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5cf8330f82ebc1571ba05b95ed5969e">renderToImage</a> (const string &amp;text)</td></tr>
+<tr class="separator:ac5cf8330f82ebc1571ba05b95ed5969e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be5acce99b7e3a9703feb5c6e7f0841" id="r_a7be5acce99b7e3a9703feb5c6e7f0841"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be5acce99b7e3a9703feb5c6e7f0841">getFontName</a> () const</td></tr>
 <tr class="separator:a7be5acce99b7e3a9703feb5c6e7f0841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac25b235d4b218e80d5e0262b6ecb3db8" id="r_ac25b235d4b218e80d5e0262b6ecb3db8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac25b235d4b218e80d5e0262b6ecb3db8">getFontSize</a> () const</td></tr>
@@ -304,7 +304,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Renders a string into a RGBA bitmap (stored in CPU memory). Glyphs are white with alpha channel mapped to the glyphs geometry </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Renders a string into an RGBA bitmap (stored in CPU memory). Glyphs are white with alpha channel mapped to the glyphs geometry </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>: text to render </td></tr>
     <tr><td class="paramname">wwidth</td><td>: width of the resulting bitmap </td></tr>
@@ -316,8 +316,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adaf894330682b6db5638fd4a97010704" name="adaf894330682b6db5638fd4a97010704"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaf894330682b6db5638fd4a97010704">&#9670;&#160;</a></span>renderToImage()</h2>
+<a id="ac5cf8330f82ebc1571ba05b95ed5969e" name="ac5cf8330f82ebc1571ba05b95ed5969e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cf8330f82ebc1571ba05b95ed5969e">&#9670;&#160;</a></span>renderToImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,12 +328,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">shared_ptr&lt; <a class="el" href="classz0_1_1_image.html">Image</a> &gt; renderToImage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classz0_1_1_device.html">Device</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -342,9 +338,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Renders a string into a RGBA <a class="el" href="classz0_1_1_image.html">Image</a> resource (stored in GPU memory). Glyphs are white with alpha channel mapped to the glyphs geometry </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Renders a string into an RGBA <a class="el" href="classz0_1_1_image.html">Image</a> resource (stored in GPU memory). Glyphs are white with alpha channel mapped to the glyphs geometry </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">device</td><td>: GPU where the <a class="el" href="classz0_1_1_image.html">Image</a> will be stored </td></tr>
     <tr><td class="paramname">text</td><td>: text to render </td></tr>
   </table>
   </dd>
