@@ -104,7 +104,7 @@ $(function(){initNavTree('classz0_1_1_application.html',''); initResizable(true)
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classz0_1_1_application-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Application Class Reference<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module__z0.html">z0</a></div></div></div>
+  <div class="headertitle"><div class="title">Application Class Reference<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module__z0_8_application.html">z0.Application</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -160,9 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5652f459f959ceb8162913a551dfc068" id="r_a5652f459f959ceb8162913a551dfc068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5652f459f959ceb8162913a551dfc068">callDeferred</a> (std::function&lt; void()&gt; func)</td></tr>
 <tr class="separator:a5652f459f959ceb8162913a551dfc068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
-<tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
+<tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="classz0_1_1_signal.html#a1b5aa0555b5fa30dcc022298f504ab0b">Signal::Handler</a> handler)</td></tr>
 <tr class="separator:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object" id="r_aef1cefb710442f7087a4a4d00f4fd528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#aef1cefb710442f7087a4a4d00f4fd528">disconnect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
+<tr class="memitem:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object" id="r_aef1cefb710442f7087a4a4d00f4fd528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#aef1cefb710442f7087a4a4d00f4fd528">disconnect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, <a class="el" href="classz0_1_1_signal.html#a1b5aa0555b5fa30dcc022298f504ab0b">Signal::Handler</a> handler)</td></tr>
 <tr class="separator:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1_object" id="r_ad8d0436f166a3557eca32fe201a5857b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#ad8d0436f166a3557eca32fe201a5857b">emit</a> (const Signal::signal &amp;name, <a class="el" href="structz0_1_1_signal_1_1_parameters.html">Signal::Parameters</a> *params=nullptr)</td></tr>
 <tr class="separator:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,9 +180,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void activateCamera </td>
@@ -191,11 +188,6 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Changes the current camera </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -211,9 +203,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void add </td>
@@ -222,11 +211,6 @@ Static Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Adds a GUI window to the window manager for display </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -242,9 +226,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void callDeferred </td>
@@ -253,11 +234,6 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Add a lambda expression in the deferred calls queue.<br  />
  They will be called before the next frame, after the scene pre-drawing updates where nodes are added/removed from the drawing lists (for all the frames in flight). </p>
@@ -282,7 +258,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -308,7 +284,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -334,7 +310,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -360,7 +336,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -386,7 +362,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -412,7 +388,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -438,7 +414,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -464,7 +440,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -490,7 +466,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -516,7 +492,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -542,7 +518,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -568,7 +544,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -581,9 +557,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void quit </td>
@@ -592,11 +565,6 @@ Static Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Exits the application by closing the window (will wait for the current frame to be terminated) </p>
 
@@ -607,9 +575,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void remove </td>
@@ -618,11 +583,6 @@ Static Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Removes the window from the window manager </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -638,9 +598,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void setPaused </td>
@@ -649,11 +606,6 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Pause or resume the current scene </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -673,9 +625,6 @@ Static Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void setRootNode </td>
@@ -684,11 +633,6 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Changes the current scene </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -717,7 +661,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

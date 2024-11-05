@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_0',['toString',['../classz0_1_1_window.html#acc18036adaea83856c3e6069e90a3f97',1,'z0::Window']]]
+  ['findfirstchild_0',['findFirstChild',['../classz0_1_1_node.html#ad0a438e54b31448a8674ec359282b9b1',1,'z0::Node::findFirstChild(const string &amp;name) const'],['../classz0_1_1_node.html#ae7908ba583d2cd9a77582903d8033b81',1,'z0::Node::findFirstChild(const bool recursive=true) const']]]
 ];
