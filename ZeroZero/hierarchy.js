@@ -64,9 +64,7 @@ var hierarchy =
           [ "EnvironmentCubemap", "classz0_1_1_environment_cubemap.html", null ]
         ] ],
         [ "Font", "classz0_1_1_font.html", null ],
-        [ "Image", "classz0_1_1_image.html", [
-          [ "VulkanImage", "classz0_1_1_vulkan_image.html", null ]
-        ] ],
+        [ "Image", "classz0_1_1_image.html", null ],
         [ "Material", "classz0_1_1_material.html", [
           [ "ShaderMaterial", "classz0_1_1_shader_material.html", null ],
           [ "StandardMaterial", "classz0_1_1_standard_material.html", null ]
@@ -107,5 +105,7 @@ var hierarchy =
     [ "Surface", "structz0_1_1_surface.html", null ],
     [ "TextureInfo", "structz0_1_1_standard_material_1_1_texture_info.html", null ],
     [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
-    [ "Vertex", "structz0_1_1_vertex.html", null ]
+    [ "Vertex", "structz0_1_1_vertex.html", null ],
+    [ "VirtualFS", "classz0_1_1_virtual_f_s.html", null ],
+    [ "ZScene", "classz0_1_1_z_scene.html", null ]
 ];

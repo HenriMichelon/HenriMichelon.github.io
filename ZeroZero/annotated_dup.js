@@ -85,7 +85,8 @@ var annotated_dup =
       [ "TypeRegistry", "classz0_1_1_type_registry.html", null ],
       [ "Vertex", "structz0_1_1_vertex.html", null ],
       [ "Viewport", "classz0_1_1_viewport.html", null ],
-      [ "VulkanImage", "classz0_1_1_vulkan_image.html", null ],
-      [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ]
+      [ "VirtualFS", "classz0_1_1_virtual_f_s.html", null ],
+      [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ],
+      [ "ZScene", "classz0_1_1_z_scene.html", null ]
     ] ]
 ];

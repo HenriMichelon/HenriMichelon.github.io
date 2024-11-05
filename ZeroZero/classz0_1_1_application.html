@@ -155,6 +155,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aefb42b2280901f021bda742cfe69f4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a265179f70ac64006a67619faf59dfcb2" id="r_a265179f70ac64006a67619faf59dfcb2"><td class="memItemLeft" align="right" valign="top">const vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a265179f70ac64006a67619faf59dfcb2">getVectorRatio</a> () const</td></tr>
 <tr class="separator:a265179f70ac64006a67619faf59dfcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3de62904cb0fce51fbe513fc3e0b845" id="r_ac3de62904cb0fce51fbe513fc3e0b845"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3de62904cb0fce51fbe513fc3e0b845">getAspectRatio</a> () const =0</td></tr>
+<tr class="separator:ac3de62904cb0fce51fbe513fc3e0b845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5652f459f959ceb8162913a551dfc068" id="r_a5652f459f959ceb8162913a551dfc068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5652f459f959ceb8162913a551dfc068">callDeferred</a> (std::function&lt; void()&gt; func)</td></tr>
+<tr class="separator:a5652f459f959ceb8162913a551dfc068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
 <tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
 <tr class="separator:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,6 +237,33 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5652f459f959ceb8162913a551dfc068" name="a5652f459f959ceb8162913a551dfc068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5652f459f959ceb8162913a551dfc068">&#9670;&#160;</a></span>callDeferred()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void callDeferred </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add a lambda expression in the deferred calls queue.<br  />
+ They will be called before the next frame, after the scene pre-drawing updates where nodes are added/removed from the drawing lists (for all the frames in flight). </p>
+
+</div>
+</div>
 <a id="aae6e8e10b0079e2597afed1ef245edbf" name="aae6e8e10b0079e2597afed1ef245edbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae6e8e10b0079e2597afed1ef245edbf">&#9670;&#160;</a></span>get()</h2>
 
@@ -282,6 +313,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the video adapter description </p>
+
+</div>
+</div>
+<a id="ac3de62904cb0fce51fbe513fc3e0b845" name="ac3de62904cb0fce51fbe513fc3e0b845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3de62904cb0fce51fbe513fc3e0b845">&#9670;&#160;</a></span>getAspectRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float getAspectRatio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the rendering window aspect ratio </p>
 
 </div>
 </div>

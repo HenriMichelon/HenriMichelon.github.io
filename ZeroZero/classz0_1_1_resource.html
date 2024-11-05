@@ -123,7 +123,6 @@ Inheritance diagram for Resource:</div>
 <area href="classz0_1_1_shape.html" alt="Shape" shape="rect" coords="745,112,884,136"/>
 <area href="classz0_1_1_texture.html" alt="Texture" shape="rect" coords="1043,112,1182,136"/>
 <area href="classz0_1_1_environment_cubemap.html" alt="EnvironmentCubemap" shape="rect" coords="0,168,139,192"/>
-<area href="classz0_1_1_vulkan_image.html" alt="VulkanImage" shape="rect" coords="298,168,437,192"/>
 <area href="classz0_1_1_shader_material.html" alt="ShaderMaterial" shape="rect" coords="596,168,735,192"/>
 <area href="classz0_1_1_standard_material.html" alt="StandardMaterial" shape="rect" coords="596,224,735,248"/>
 <area href="classz0_1_1_box_shape.html" alt="BoxShape" shape="rect" coords="894,168,1033,192"/>
@@ -143,6 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a43f65f5d191c125b0b52028fdbf0f364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc18036adaea83856c3e6069e90a3f97" id="r_acc18036adaea83856c3e6069e90a3f97"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc18036adaea83856c3e6069e90a3f97">toString</a> () const override</td></tr>
 <tr class="separator:acc18036adaea83856c3e6069e90a3f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a79f23fc7079cd883280958bf94a9d" id="r_a24a79f23fc7079cd883280958bf94a9d"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classz0_1_1_resource.html">Resource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24a79f23fc7079cd883280958bf94a9d">duplicate</a> () const</td></tr>
+<tr class="separator:a24a79f23fc7079cd883280958bf94a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classz0_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1_object.html">Object</a></td></tr>
 <tr class="memitem:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object" id="r_abb2ebe880ed08d1dec1470041d8d4da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1_object.html#abb2ebe880ed08d1dec1470041d8d4da7">connect</a> (const Signal::signal &amp;name, <a class="el" href="classz0_1_1_object.html">Object</a> *object, Signal::Handler handler)</td></tr>
 <tr class="separator:abb2ebe880ed08d1dec1470041d8d4da7 inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +153,32 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a24a79f23fc7079cd883280958bf94a9d" name="a24a79f23fc7079cd883280958bf94a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a79f23fc7079cd883280958bf94a9d">&#9670;&#160;</a></span>duplicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual shared_ptr&lt; <a class="el" href="classz0_1_1_resource.html">Resource</a> &gt; duplicate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Duplicates a resource. Warning : not implemented on all resources types, check documentation for the resource type before using it. </p>
+
+</div>
+</div>
 <a id="a95bc6369673e4f113ed3fc9d34d00f22" name="a95bc6369673e4f113ed3fc9d34d00f22"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95bc6369673e4f113ed3fc9d34d00f22">&#9670;&#160;</a></span>getId()</h2>
 
