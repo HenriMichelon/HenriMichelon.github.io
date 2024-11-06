@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ZeroZero: ZScene Class Reference</title>
+<title>ZeroZero: GlTF Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classz0_1_1_z_scene.html',''); initResizable(true); });
+$(function(){initNavTree('classz0_1_1_gl_t_f.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -101,36 +101,57 @@ $(function(){initNavTree('classz0_1_1_z_scene.html',''); initResizable(true); })
 
 <div class="header">
   <div class="summary">
-<a href="classz0_1_1_z_scene-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ZScene Class Reference<span class="mlabels"><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module__z0_8_z_scene.html">z0.ZScene</a></div></div></div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classz0_1_1_gl_t_f-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">GlTF Class Reference<span class="mlabels"><span class="mlabel">export</span></span><div class="ingroups">module <a class="el" href="module__z0_8_gl_t_f.html">z0.GlTF</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classz0_1_1_z_scene.html">ZScene</a> binary file format : <br  />
- Header : global header<br  />
- array&lt;ImageHeader + array&lt;MipLevelHeader, mipLevels&gt;, imagesCount&gt; : images headers<br  />
- array&lt;TextureHeader, texturesCount&gt; : textures headers<br  />
- array&lt;MaterialHeader, materialsCount&gt; : materials headers<br  />
- array&lt;MeshHeader + array&lt;SurfaceInfo, surfacesCount&gt; + array&lt;DataInfo, surfacesCount * uvsCount&gt;, meshesCount&gt; : meshes headers<br  />
- array&lt;NodeHeader + array&lt;uint32_t, childrenCount&gt;, nodesCount&gt; : nodes headers<br  />
- uint32_t : indicesCount<br  />
- array&lt;uint32_t, indicesCount&gt; : indices<br  />
- uint32_t : positionsCount<br  />
- array&lt;vec3, positionsCount&gt; : positions<br  />
- uint32_t : normalsCount<br  />
- array&lt;vec3, normalsCount&gt; : normals<br  />
- uint32_t : uvsCount<br  />
- array&lt;vec2, uvsCount&gt; : uvs<br  />
- uint32_t : tangentsCount<br  />
- array&lt;vec4, tangentsCount&gt; : tangents<br  />
- array&lt;BCn compressed image, imagesCount&gt; : images<br  />
- </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>glTF scene loading </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a959eb6ad1bd2111baf6ec056f97a7778" id="r_a959eb6ad1bd2111baf6ec056f97a7778"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a959eb6ad1bd2111baf6ec056f97a7778">load</a> (const string &amp;filepath)</td></tr>
+<tr class="separator:a959eb6ad1bd2111baf6ec056f97a7778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a959eb6ad1bd2111baf6ec056f97a7778" name="a959eb6ad1bd2111baf6ec056f97a7778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959eb6ad1bd2111baf6ec056f97a7778">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static shared_ptr&lt; <a class="el" href="classz0_1_1_node.html">Node</a> &gt; load </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">nodiscard</span><span class="mlabel">export</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load a glTF scene </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>path of the (binary) glTF file, relative to the application path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>z0</b></li><li class="navelem"><a class="el" href="classz0_1_1_z_scene.html">ZScene</a></li>
+    <li class="navelem"><b>z0</b></li><li class="navelem"><a class="el" href="classz0_1_1_gl_t_f.html">GlTF</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

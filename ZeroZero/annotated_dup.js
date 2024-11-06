@@ -36,6 +36,7 @@ var annotated_dup =
       [ "GEventValue", "structz0_1_1_g_event_value.html", null ],
       [ "GFrame", "classz0_1_1_g_frame.html", null ],
       [ "GLine", "classz0_1_1_g_line.html", null ],
+      [ "GlTF", "classz0_1_1_gl_t_f.html", null ],
       [ "GManager", "classz0_1_1_g_manager.html", null ],
       [ "GPanel", "classz0_1_1_g_panel.html", null ],
       [ "GResource", "classz0_1_1_g_resource.html", null ],

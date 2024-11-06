@@ -5,6 +5,7 @@ var hierarchy =
     [ "Color", "structz0_1_1_color.html", null ],
     [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
     [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
+    [ "GlTF", "classz0_1_1_gl_t_f.html", null ],
     [ "hash< vec2 >", "structstd_1_1hash_3_01vec2_01_4.html", null ],
     [ "hash< vec3 >", "structstd_1_1hash_3_01vec3_01_4.html", null ],
     [ "hash< vec4 >", "structstd_1_1hash_3_01vec4_01_4.html", null ],
