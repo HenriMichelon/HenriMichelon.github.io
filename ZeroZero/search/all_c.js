@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['node_0',['Node',['../classz0_1_1_node.html',1,'Node'],['../classz0_1_1_node.html#aaa6c9ad08249b7235fb351868f296a34',1,'z0::Node::Node(const Node &amp;orig)'],['../classz0_1_1_node.html#adc3171bbdddc2056fa36a7d2b239be55',1,'z0::Node::Node(const string &amp;nodeName=&quot;Node&quot;, Type type=NODE)']]]
+  ['node_0',['Node',['../classz0_1_1_node.html',1,'Node'],['../classz0_1_1_node.html#aaa6c9ad08249b7235fb351868f296a34',1,'z0::Node::Node(const Node &amp;orig)'],['../classz0_1_1_node.html#adc3171bbdddc2056fa36a7d2b239be55',1,'z0::Node::Node(const string &amp;nodeName=&quot;Node&quot;, Type type=NODE)']]],
+  ['nodeheader_1',['NodeHeader',['../structz0_1_1_z_scene_1_1_node_header.html',1,'z0::ZScene']]]
 ];

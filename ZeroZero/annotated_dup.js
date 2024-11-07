@@ -5,7 +5,7 @@ var annotated_dup =
       [ "hash< vec3 >", "structstd_1_1hash_3_01vec3_01_4.html", null ],
       [ "hash< vec4 >", "structstd_1_1hash_3_01vec4_01_4.html", null ]
     ] ],
-    [ "z0", null, [
+    [ "z0", "namespacez0.html", [
       [ "AABB", "structz0_1_1_a_a_b_b.html", null ],
       [ "Application", "classz0_1_1_application.html", "classz0_1_1_application" ],
       [ "ApplicationConfig", "structz0_1_1_application_config.html", null ],
@@ -17,8 +17,6 @@ var annotated_dup =
       [ "Color", "structz0_1_1_color.html", null ],
       [ "ConvexHullShape", "classz0_1_1_convex_hull_shape.html", null ],
       [ "Cubemap", "classz0_1_1_cubemap.html", null ],
-      [ "DescriptorPool", "classz0_1_1_descriptor_pool.html", null ],
-      [ "DescriptorWriter", "classz0_1_1_descriptor_writer.html", null ],
       [ "DirectionalLight", "classz0_1_1_directional_light.html", null ],
       [ "Environment", "classz0_1_1_environment.html", null ],
       [ "EnvironmentCubemap", "classz0_1_1_environment_cubemap.html", null ],
@@ -47,7 +45,7 @@ var annotated_dup =
       [ "GWindow", "classz0_1_1_g_window.html", "classz0_1_1_g_window" ],
       [ "Image", "classz0_1_1_image.html", null ],
       [ "ImageTexture", "classz0_1_1_image_texture.html", null ],
-      [ "Input", "classz0_1_1_input.html", null ],
+      [ "Input", "classz0_1_1_input.html", "classz0_1_1_input" ],
       [ "InputEvent", "classz0_1_1_input_event.html", null ],
       [ "InputEventGamepadButton", "classz0_1_1_input_event_gamepad_button.html", null ],
       [ "InputEventKey", "classz0_1_1_input_event_key.html", null ],
@@ -88,6 +86,6 @@ var annotated_dup =
       [ "Viewport", "classz0_1_1_viewport.html", null ],
       [ "VirtualFS", "classz0_1_1_virtual_f_s.html", null ],
       [ "Window", "classz0_1_1_window.html", "classz0_1_1_window" ],
-      [ "ZScene", "classz0_1_1_z_scene.html", null ]
+      [ "ZScene", "classz0_1_1_z_scene.html", "classz0_1_1_z_scene" ]
     ] ]
 ];

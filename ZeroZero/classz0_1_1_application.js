@@ -3,6 +3,7 @@ var classz0_1_1_application =
     [ "activateCamera", "classz0_1_1_application.html#aab7a546ae6ac042c410ff02f04a7e569", null ],
     [ "add", "classz0_1_1_application.html#a5b6fa9f805a5960de75ef6499b809cfa", null ],
     [ "callDeferred", "classz0_1_1_application.html#a5652f459f959ceb8162913a551dfc068", null ],
+    [ "get", "classz0_1_1_application.html#aae6e8e10b0079e2597afed1ef245edbf", null ],
     [ "getAdapterDescription", "classz0_1_1_application.html#a8e340c324e545519a8fdf327574fc395", null ],
     [ "getAspectRatio", "classz0_1_1_application.html#ac3de62904cb0fce51fbe513fc3e0b845", null ],
     [ "getConfig", "classz0_1_1_application.html#a16c0b850bb6155c4b32ef3d3b55cd80a", null ],

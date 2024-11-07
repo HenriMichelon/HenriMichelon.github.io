@@ -10,5 +10,6 @@ var searchData=
   ['staticbody_7',['StaticBody',['../classz0_1_1_static_body.html',1,'z0']]],
   ['staticcompoundshape_8',['StaticCompoundShape',['../classz0_1_1_static_compound_shape.html',1,'z0']]],
   ['subshape_9',['SubShape',['../structz0_1_1_sub_shape.html',1,'z0']]],
-  ['surface_10',['Surface',['../structz0_1_1_surface.html',1,'z0']]]
+  ['surface_10',['Surface',['../structz0_1_1_surface.html',1,'z0']]],
+  ['surfaceinfo_11',['SurfaceInfo',['../structz0_1_1_z_scene_1_1_surface_info.html',1,'z0::ZScene']]]
 ];

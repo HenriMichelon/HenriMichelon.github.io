@@ -24,8 +24,8 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Modules",url:"modules.html",children:[
-{text:"Modules List",url:"modules.html"}]},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
@@ -82,4 +82,6 @@ var menudata={children:[
 {text:"s",url:"functions_eval.html#index_s"},
 {text:"t",url:"functions_eval.html#index_t"},
 {text:"v",url:"functions_eval.html#index_v"},
-{text:"w",url:"functions_eval.html#index_w"}]}]}]}]}
+{text:"w",url:"functions_eval.html#index_w"}]}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"}]}]}

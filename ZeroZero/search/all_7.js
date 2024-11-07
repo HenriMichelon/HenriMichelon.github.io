@@ -6,5 +6,8 @@ var searchData=
   ['hash_3c_20vec4_20_3e_3',['hash&lt; vec4 &gt;',['../structstd_1_1hash_3_01vec4_01_4.html',1,'std']]],
   ['havechild_4',['haveChild',['../classz0_1_1_node.html#a34d5af83a7ccd140e6961474acb74a64',1,'z0::Node']]],
   ['hcenter_5',['HCENTER',['../classz0_1_1_g_widget.html#a9ec7336b25490918b6535c95730e10eba9395d6535fe3fe88769a9eb0b3a1850d',1,'z0::GWidget']]],
-  ['hide_6',['hide',['../classz0_1_1_g_window.html#ade42eb4da4eb77db85a8d1e4b92e7be4',1,'z0::GWindow']]]
+  ['header_6',['Header',['../structz0_1_1_z_scene_1_1_header.html',1,'z0::ZScene']]],
+  ['hidden_7',['HIDDEN',['../namespacez0.html#a034ae8169a2202325de4ef39ffd3e431a347e628a8f72626a0611ef842fe9d304',1,'z0']]],
+  ['hidden_5fcaptured_8',['HIDDEN_CAPTURED',['../namespacez0.html#a034ae8169a2202325de4ef39ffd3e431a5426fb06b4832223f4d3bc6875c15004',1,'z0']]],
+  ['hide_9',['hide',['../classz0_1_1_g_window.html#ade42eb4da4eb77db85a8d1e4b92e7be4',1,'z0::GWindow']]]
 ];
