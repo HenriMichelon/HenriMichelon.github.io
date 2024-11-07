@@ -108,6 +108,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Font.html">Font</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1Frustum.html">Frustum</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1GBox.html">GBox</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1GButton.html">GButton</a></td></tr>
@@ -179,6 +181,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Material.html">Material</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Mesh.html">Mesh</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1MeshInstance.html">MeshInstance</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1MeshShape.html">MeshShape</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,6 +499,10 @@ Enums</h2></td></tr>
 <a class="el" href="namespacez0.html#a1d321f70023d9a5dbd2a2add15ac6e6ba6a0494d0911f7d30fa384da58c5c07f6">RESIZE_V</a> = 3
  }</td></tr>
 <tr class="separator:a1d321f70023d9a5dbd2a2add15ac6e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f6b18e781e3c412e7d243f7de6aa5c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacez0.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> { <a class="el" href="namespacez0.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">R8G8B8A8_SRGB</a> = 0, 
+<a class="el" href="namespacez0.html#a22f6b18e781e3c412e7d243f7de6aa5caf55c1c722034e92213df328d31e33c62">R8G8B8A8_UNORM</a> = 1
+ }</td></tr>
+<tr class="separator:a22f6b18e781e3c412e7d243f7de6aa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -732,6 +740,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a22f6b18e781e3c412e7d243f7de6aa5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacez0.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Images pixel format </p>
+<table class="fieldtable">
+<tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2"></a>R8G8B8A8_SRGB&#160;</td><td class="fielddoc"><p>32 bits with alpha channel in the sRGB color space </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22f6b18e781e3c412e7d243f7de6aa5caf55c1c722034e92213df328d31e33c62"></a>R8G8B8A8_UNORM&#160;</td><td class="fielddoc"><p>32 bits with alpha channel in the lineara color space </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="a2b2905130ee6827c925a34fe221b95fa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -786,7 +821,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ab3c7af4820830f9166ede9e5623c4e73af92cd55661a716ee7466f960896041e3"></a>KEY_COMMA&#160;</td><td class="fielddoc"><p>, </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab3c7af4820830f9166ede9e5623c4e73a7680b8131b831989b5068d0832b99bd4"></a>KEY_PERIOD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab3c7af4820830f9166ede9e5623c4e73a7680b8131b831989b5068d0832b99bd4"></a>KEY_PERIOD&#160;</td><td class="fielddoc"><p>$. </p>
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ab3c7af4820830f9166ede9e5623c4e73abc6aa00a14ba7f0fe4c315557765c748"></a>KEY_QUESTIONMARK&#160;</td><td class="fielddoc"><p>? </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ab3c7af4820830f9166ede9e5623c4e73a6b30f8af6c880e1aca01b91aa13c6ff9"></a>KEY_0&#160;</td><td class="fielddoc"><p>0 </p>
@@ -1872,7 +1908,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacez0.html">z0</a></li>
-    <li class="footer">Generated on jeu. nov. 7 2024 19:30:38 for ZeroZero &nbsp; by
+    <li class="footer">Generated on jeu. nov. 7 2024 21:32:23 for ZeroZero &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -83,23 +83,15 @@ Inheritance diagram for Node:</div>
  <div class="center">
   <img src="classz0_1_1Node.png" usemap="#Node_map" alt=""/>
   <map id="Node_map" name="Node_map">
-<area href="classz0_1_1Object.html" alt="Object" shape="rect" coords="385,0,485,24"/>
-<area href="classz0_1_1Camera.html" alt="Camera" shape="rect" coords="0,112,100,136"/>
-<area href="classz0_1_1CollisionObject.html" alt="CollisionObject" shape="rect" coords="110,112,210,136"/>
-<area href="classz0_1_1Environment.html" alt="Environment" shape="rect" coords="220,112,320,136"/>
-<area href="classz0_1_1Light.html" alt="Light" shape="rect" coords="385,112,485,136"/>
-<area href="classz0_1_1RayCast.html" alt="RayCast" shape="rect" coords="495,112,595,136"/>
-<area href="classz0_1_1Skybox.html" alt="Skybox" shape="rect" coords="605,112,705,136"/>
-<area href="classz0_1_1Viewport.html" alt="Viewport" shape="rect" coords="715,112,815,136"/>
-<area href="classz0_1_1Character.html" alt="Character" shape="rect" coords="0,168,100,192"/>
-<area href="classz0_1_1CollisionArea.html" alt="CollisionArea" shape="rect" coords="110,168,210,192"/>
-<area href="classz0_1_1PhysicsBody.html" alt="PhysicsBody" shape="rect" coords="220,168,320,192"/>
-<area href="classz0_1_1DirectionalLight.html" alt="DirectionalLight" shape="rect" coords="330,168,430,192"/>
-<area href="classz0_1_1OmniLight.html" alt="OmniLight" shape="rect" coords="440,168,540,192"/>
-<area href="classz0_1_1KinematicBody.html" alt="KinematicBody" shape="rect" coords="110,224,210,248"/>
-<area href="classz0_1_1RigidBody.html" alt="RigidBody" shape="rect" coords="220,224,320,248"/>
-<area href="classz0_1_1StaticBody.html" alt="StaticBody" shape="rect" coords="330,224,430,248"/>
-<area href="classz0_1_1SpotLight.html" alt="SpotLight" shape="rect" coords="440,224,540,248"/>
+<area href="classz0_1_1Object.html" alt="Object" shape="rect" coords="0,0,97,24"/>
+<area href="classz0_1_1Camera.html" alt="Camera" shape="rect" coords="107,112,204,136"/>
+<area href="classz0_1_1CollisionObject.html" alt="CollisionObject" shape="rect" coords="107,168,204,192"/>
+<area href="classz0_1_1Environment.html" alt="Environment" shape="rect" coords="107,224,204,248"/>
+<area href="classz0_1_1Light.html" alt="Light" shape="rect" coords="107,280,204,304"/>
+<area href="classz0_1_1MeshInstance.html" alt="MeshInstance" shape="rect" coords="107,336,204,360"/>
+<area href="classz0_1_1RayCast.html" alt="RayCast" shape="rect" coords="107,392,204,416"/>
+<area href="classz0_1_1Skybox.html" alt="Skybox" shape="rect" coords="107,448,204,472"/>
+<area href="classz0_1_1Viewport.html" alt="Viewport" shape="rect" coords="107,504,204,528"/>
   </map>
  </div></div>
 <table class="memberdecls">
@@ -133,6 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02e5529d17426969bd76fcb3b80221a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde249fc77213cefd74b711382bffd89"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#acde249fc77213cefd74b711382bffd89">toGlobal</a> (vec3 local) const</td></tr>
 <tr class="separator:acde249fc77213cefd74b711382bffd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4347bf48760cbfe7132a54ecd43063df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a4347bf48760cbfe7132a54ecd43063df">setPosition</a> (vec3 position)</td></tr>
+<tr class="separator:a4347bf48760cbfe7132a54ecd43063df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f6fa661c9b591931753bbf388495d7"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#ae8f6fa661c9b591931753bbf388495d7">getPosition</a> () const</td></tr>
+<tr class="separator:ae8f6fa661c9b591931753bbf388495d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67404cfd749850c280b938553fce7e90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a67404cfd749850c280b938553fce7e90">translate</a> (vec3 localOffset)</td></tr>
 <tr class="separator:a67404cfd749850c280b938553fce7e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8df0a0c2f6b4d34b44c7c9f60f9f96c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a8df0a0c2f6b4d34b44c7c9f60f9f96c1">setPositionGlobal</a> (vec3 position)</td></tr>
@@ -185,6 +181,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a760b298572124d03528a05c75a40af57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34d5af83a7ccd140e6961474acb74a64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a34d5af83a7ccd140e6961474acb74a64">haveChild</a> (const shared_ptr&lt; Node &gt; &amp;child, bool recursive) const</td></tr>
 <tr class="separator:a34d5af83a7ccd140e6961474acb74a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fda9023e028bb498fb4a5b125661d4"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#ae2fda9023e028bb498fb4a5b125661d4">getChild</a> (const string &amp;name) const</td></tr>
+<tr class="separator:ae2fda9023e028bb498fb4a5b125661d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04bc392d9411d79871e257873ffec36d"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a04bc392d9411d79871e257873ffec36d">getNode</a> (const string &amp;path) const</td></tr>
+<tr class="separator:a04bc392d9411d79871e257873ffec36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5de2a75caf4d2e9f00c4882afce698c"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#ac5de2a75caf4d2e9f00c4882afce698c">findFirstChild</a> (const string &amp;name) const</td></tr>
 <tr class="separator:ac5de2a75caf4d2e9f00c4882afce698c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a59a4ed865a7c574e9439a7b06e79b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a4a59a4ed865a7c574e9439a7b06e79b5">printTree</a> (int tab=0) const</td></tr>
@@ -232,6 +232,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef1cefb710442f7087a4a4d00f4fd528 inherit pub_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Object.html#ad8d0436f166a3557eca32fe201a5857b">emit</a> (const Signal::signal &amp;name, <a class="el" href="structz0_1_1Signal_1_1Parameters.html">Signal::Parameters</a> *params=nullptr)</td></tr>
 <tr class="separator:ad8d0436f166a3557eca32fe201a5857b inherit pub_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classz0_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classz0_1_1Object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classz0_1_1Object.html">Object</a></td></tr>
+<tr class="memitem:a92987edca57ffedc1ffd31d9296a21dc inherit pub_static_methods_classz0_1_1Object"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a92987edca57ffedc1ffd31d9296a21dc inherit pub_static_methods_classz0_1_1Object"><td class="memTemplItemLeft" align="right" valign="top">static constexpr Signal::Handler&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classz0_1_1Object.html#a92987edca57ffedc1ffd31d9296a21dc">SignalHandler</a> (const T handler)</td></tr>
+<tr class="separator:a92987edca57ffedc1ffd31d9296a21dc inherit pub_static_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaa6c9ad08249b7235fb351868f296a34"></a>
@@ -451,6 +458,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae2fda9023e028bb498fb4a5b125661d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;Node&gt; getChild </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the child node by is name. Not recursive </p>
+
+</div>
+</div>
 <a class="anchor" id="af4b2abbe4b939b9d3c2f7964520bef7c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -595,6 +627,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a04bc392d9411d79871e257873ffec36d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;Node&gt; getNode </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the child node by is absolute path </p>
+
+</div>
+</div>
 <a class="anchor" id="a9befa2165ace7d22f7fff8163d6efca2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -616,6 +673,30 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the node's parent in the scene tree </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8f6fa661c9b591931753bbf388495d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3 getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the local space position (relative to parent) </p>
 
 </div>
 </div>
@@ -1275,6 +1356,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4347bf48760cbfe7132a54ecd43063df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setPosition </td>
+          <td>(</td>
+          <td class="paramtype">vec3&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the local space position (relative to parent) </p>
+
+</div>
+</div>
 <a class="anchor" id="a8df0a0c2f6b4d34b44c7c9f60f9f96c1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1358,7 +1464,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets a property by is name and value. Currently, not all properties in all nodes classes are supported. </p>
 
-<p>Reimplemented in <a class="el" href="classz0_1_1CollisionObject.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::CollisionObject::setProperty()</a>, <a class="el" href="classz0_1_1SpotLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::SpotLight::setProperty()</a>, <a class="el" href="classz0_1_1Skybox.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Skybox::setProperty()</a>, <a class="el" href="classz0_1_1Light.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Light::setProperty()</a>, <a class="el" href="classz0_1_1OmniLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::OmniLight::setProperty()</a>, <a class="el" href="classz0_1_1PhysicsBody.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::PhysicsBody::setProperty()</a>, <a class="el" href="classz0_1_1RigidBody.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::RigidBody::setProperty()</a>, <a class="el" href="classz0_1_1Environment.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Environment::setProperty()</a>, <a class="el" href="classz0_1_1DirectionalLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::DirectionalLight::setProperty()</a></p>
+<p>Reimplemented in <a class="el" href="classz0_1_1CollisionObject.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::CollisionObject::setProperty()</a>, <a class="el" href="classz0_1_1SpotLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::SpotLight::setProperty()</a>, <a class="el" href="classz0_1_1Light.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Light::setProperty()</a>, <a class="el" href="classz0_1_1Skybox.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Skybox::setProperty()</a>, <a class="el" href="classz0_1_1OmniLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::OmniLight::setProperty()</a>, <a class="el" href="classz0_1_1PhysicsBody.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::PhysicsBody::setProperty()</a>, <a class="el" href="classz0_1_1RigidBody.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::RigidBody::setProperty()</a>, <a class="el" href="classz0_1_1Environment.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::Environment::setProperty()</a>, <a class="el" href="classz0_1_1DirectionalLight.html#ac4a1d2e49be60bd4e614d05e4db933b1">z0::DirectionalLight::setProperty()</a></p>
 
 </div>
 </div>
@@ -1540,16 +1646,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/z/Documents/zero_zero/src/z0/nodes/node.cppm</li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacez0.html">z0</a></li><li class="navelem"><a class="el" href="classz0_1_1Node.html">Node</a></li>
-    <li class="footer">Generated on jeu. nov. 7 2024 19:30:38 for ZeroZero &nbsp; by
+    <li class="footer">Generated on jeu. nov. 7 2024 21:32:23 for ZeroZero &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

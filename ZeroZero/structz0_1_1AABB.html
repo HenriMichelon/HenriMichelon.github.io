@@ -66,6 +66,8 @@ $(document).ready(function(){initNavTree('structz0_1_1AABB.html',''); initResiza
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structz0_1_1AABB-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">AABB Struct Reference</div>
@@ -74,17 +76,113 @@ $(document).ready(function(){initNavTree('structz0_1_1AABB.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespacez0.html#a7a2d71f78acae0c6efa38d7f1fea596fa7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> 3D axis-aligned bounding box. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/z/Documents/zero_zero/src/z0/aabb.cppm</li>
-</ul>
+<div class="textblock"><p>A 3D axis-aligned bounding box. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2048c2a9713da7a445032fb3593a59d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1AABB.html#a2048c2a9713da7a445032fb3593a59d8">AABB</a> () = default</td></tr>
+<tr class="separator:a2048c2a9713da7a445032fb3593a59d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e09415206aa54fb2d905fc6048de08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1AABB.html#aa5e09415206aa54fb2d905fc6048de08">AABB</a> (const vec3 &amp;min, const vec3 &amp;max)</td></tr>
+<tr class="separator:aa5e09415206aa54fb2d905fc6048de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af90b9f7204a52d2298846eff38197e"><td class="memItemLeft" align="right" valign="top">AABB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1AABB.html#a0af90b9f7204a52d2298846eff38197e">toGlobal</a> (const mat4 &amp;transform) const</td></tr>
+<tr class="separator:a0af90b9f7204a52d2298846eff38197e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a57fbd7e783e12489887f880116ce4ae2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57fbd7e783e12489887f880116ce4ae2"></a>
+vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1AABB.html#a57fbd7e783e12489887f880116ce4ae2">min</a> {}</td></tr>
+<tr class="memdesc:a57fbd7e783e12489887f880116ce4ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">leftmost corner <br /></td></tr>
+<tr class="separator:a57fbd7e783e12489887f880116ce4ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902e653ea504086efa5e4e3d44a0e2ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a902e653ea504086efa5e4e3d44a0e2ac"></a>
+vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structz0_1_1AABB.html#a902e653ea504086efa5e4e3d44a0e2ac">max</a> {}</td></tr>
+<tr class="memdesc:a902e653ea504086efa5e4e3d44a0e2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">rightmost corner <br /></td></tr>
+<tr class="separator:a902e653ea504086efa5e4e3d44a0e2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2048c2a9713da7a445032fb3593a59d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AABB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an empty bounding box </p>
+
+</div>
+</div>
+<a class="anchor" id="aa5e09415206aa54fb2d905fc6048de08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AABB </td>
+          <td>(</td>
+          <td class="paramtype">const vec3 &amp;&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vec3 &amp;&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a bounding box </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0af90b9f7204a52d2298846eff38197e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AABB toGlobal </td>
+          <td>(</td>
+          <td class="paramtype">const mat4 &amp;&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply the given transform to the bounding box </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacez0.html">z0</a></li><li class="navelem"><a class="el" href="structz0_1_1AABB.html">AABB</a></li>
-    <li class="footer">Generated on jeu. nov. 7 2024 19:30:38 for ZeroZero &nbsp; by
+    <li class="footer">Generated on jeu. nov. 7 2024 21:32:23 for ZeroZero &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
