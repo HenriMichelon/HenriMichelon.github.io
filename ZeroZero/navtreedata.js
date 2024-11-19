@@ -145,6 +145,9 @@ var NAVTREE =
             [ "getHeight", "classz0_1_1Cubemap.html#a41bfc989babe0999be4037c5b68119b5", null ],
             [ "getWidth", "classz0_1_1Cubemap.html#aca1b996bfd42e4d13365709e3fcab072", null ]
           ] ],
+          [ "CylinderShape", "classz0_1_1CylinderShape.html", [
+            [ "CylinderShape", "classz0_1_1CylinderShape.html#a25681b45e0e4149421ea8de9ade2040f", null ]
+          ] ],
           [ "DebugConfig", "structz0_1_1DebugConfig.html", [
             [ "drawBoundingBox", "structz0_1_1DebugConfig.html#a16aa08a5990279e7265e4e2f24650983", null ],
             [ "drawCenterOfMassTransform", "structz0_1_1DebugConfig.html#af99beb927c7d94df46dc2be42b5f60a9", null ],
@@ -675,7 +678,7 @@ var NAVTREE =
             [ "shouldClose", "classz0_1_1Window.html#a831069e29b711e34bb2044bfdc7b5a51", null ],
             [ "toString", "classz0_1_1Window.html#acc18036adaea83856c3e6069e90a3f97", null ]
           ] ],
-          [ "ZScene", "classz0_1_1ZScene.html", null ]
+          [ "ZRes", "classz0_1_1ZRes.html", null ]
         ] ]
       ] ],
       [ "Class Index", "classes.html", null ],
@@ -753,6 +756,7 @@ var NAVTREE =
             [ "Shape", "classz0_1_1Shape.html", [
               [ "BoxShape", "classz0_1_1BoxShape.html", null ],
               [ "ConvexHullShape", "classz0_1_1ConvexHullShape.html", null ],
+              [ "CylinderShape", "classz0_1_1CylinderShape.html", null ],
               [ "MeshShape", "classz0_1_1MeshShape.html", null ],
               [ "SphereShape", "classz0_1_1SphereShape.html", null ],
               [ "StaticCompoundShape", "classz0_1_1StaticCompoundShape.html", null ]
@@ -787,7 +791,7 @@ var NAVTREE =
         [ "TypeRegistry", "classz0_1_1TypeRegistry.html", null ],
         [ "Vertex", "structz0_1_1Vertex.html", null ],
         [ "VirtualFS", "classz0_1_1VirtualFS.html", null ],
-        [ "ZScene", "classz0_1_1ZScene.html", null ]
+        [ "ZRes", "classz0_1_1ZRes.html", null ]
       ] ]
     ] ]
   ] ]
@@ -796,8 +800,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classz0_1_1InputEventMouse.html#a1da8aa3a43aa06db29c286dc0a87987a",
-"structz0_1_1ApplicationConfig.html#a38ec5156c32b8d8abe509f46139b44cc"
+"classz0_1_1InputEventMouse.html",
+"structz0_1_1ApplicationConfig.html#a1ed8bc015f764ea37e8b2c5ca201ee15"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
