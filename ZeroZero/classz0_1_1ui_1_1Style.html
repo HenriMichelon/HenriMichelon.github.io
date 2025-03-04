@@ -52,6 +52,8 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classz0_1_1ui_1_1Style-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Style Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
@@ -60,19 +62,30 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> drawing base class </p>
+<div class="textblock"><p>UI <a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> drawing style base class </p>
 </div><div class="dynheader">
 Inheritance diagram for Style:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classz0_1_1ui_1_1Style.png" usemap="#Style_map" alt=""/>
   <map id="Style_map" name="Style_map">
-<area href="classz0_1_1Object.html" alt="Object" shape="rect" coords="0,0,49,24"/>
+<area href="classz0_1_1Object.html" alt="Object" shape="rect" coords="0,0,81,24"/>
+<area href="classz0_1_1ui_1_1StyleClassic.html" alt="StyleClassic" shape="rect" coords="0,112,81,136"/>
   </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a363a8e4ffd9673708953014af6873ad7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#a363a8e4ffd9673708953014af6873ad7">addResource</a> (<a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> &amp;widget, const string &amp;resources) = 0</td></tr>
+<tr class="separator:a363a8e4ffd9673708953014af6873ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dab1c6bd844241c28b2e1f3fd24ea8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#a9dab1c6bd844241c28b2e1f3fd24ea8c">setOption</a> (const string &amp;name, const string &amp;value)</td></tr>
+<tr class="separator:a9dab1c6bd844241c28b2e1f3fd24ea8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0777daf2a7c6b5cc82d692eacdce26"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#adf0777daf2a7c6b5cc82d692eacdce26">getOption</a> (const string &amp;name) const</td></tr>
+<tr class="separator:adf0777daf2a7c6b5cc82d692eacdce26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900b0d9479da9bc166f407c96d88c0a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#a900b0d9479da9bc166f407c96d88c0a4">resize</a> (<a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> &amp;widget, <a class="el" href="structz0_1_1ui_1_1Rect.html">Rect</a> &amp;rect, <a class="el" href="classz0_1_1ui_1_1Resource.html">Resource</a> &amp;resources) = 0</td></tr>
+<tr class="separator:a900b0d9479da9bc166f407c96d88c0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51d406352e76c830c9d50382a33469ba"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classz0_1_1Font.html">Font</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#a51d406352e76c830c9d50382a33469ba">getFont</a> () const</td></tr>
+<tr class="separator:a51d406352e76c830c9d50382a33469ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classz0_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classz0_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classz0_1_1Object.html">Object</a></td></tr>
 <tr class="memitem:a579b003a1ba1245a7df4211306856aee inherit pub_methods_classz0_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Object.html#a579b003a1ba1245a7df4211306856aee">connect</a> (const Signal::signal &amp;name, const <a class="el" href="classz0_1_1Signal.html#a220824176016286d99374f7f99187a18">Signal::Handler</a> &amp;handler)</td></tr>
 <tr class="separator:a579b003a1ba1245a7df4211306856aee inherit pub_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -82,11 +95,217 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:adada8d5b4c8a33b40c183380963fad35 inherit pub_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55458af6f75832809652f64d2c949332 inherit pub_methods_classz0_1_1Object"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Object.html#a55458af6f75832809652f64d2c949332">toString</a> () const</td></tr>
 <tr class="separator:a55458af6f75832809652f64d2c949332 inherit pub_methods_classz0_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac61e4ed7b4469b8b8704dfb487c78129"><td class="memItemLeft" align="right" valign="top">static shared_ptr&lt; Style &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1ui_1_1Style.html#ac61e4ed7b4469b8b8704dfb487c78129">create</a> (const string &amp;name=&quot;vector&quot;)</td></tr>
+<tr class="separator:ac61e4ed7b4469b8b8704dfb487c78129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a363a8e4ffd9673708953014af6873ad7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void addResource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> &amp;&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>resources</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a resource from a resources description string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widget</td><td>: widget to ass resources string to </td></tr>
+    <tr><td class="paramname">resources</td><td>: string that describe the resources of a widget </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classz0_1_1ui_1_1StyleClassic.html#a6c3a37108ab7f213a176c967ae46b30c">z0::ui::StyleClassic::addResource()</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ac61e4ed7b4469b8b8704dfb487c78129"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static shared_ptr&lt;Style&gt; create </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;vector&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new UI drawing style renderer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>: style name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a51d406352e76c830c9d50382a33469ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt;<a class="el" href="classz0_1_1Font.html">Font</a>&gt; getFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the default font for the style. </p>
+
+</div>
+</div>
+<a class="anchor" id="adf0777daf2a7c6b5cc82d692eacdce26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string getOption </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a style-specific option value </p>
+
+</div>
+</div>
+<a class="anchor" id="a900b0d9479da9bc166f407c96d88c0a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classz0_1_1ui_1_1Widget.html">Widget</a> &amp;&#160;</td>
+          <td class="paramname"><em>widget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structz0_1_1ui_1_1Rect.html">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classz0_1_1ui_1_1Resource.html">Resource</a> &amp;&#160;</td>
+          <td class="paramname"><em>resources</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adjusts a widget size to style specific constraints </p>
+
+<p>Implemented in <a class="el" href="classz0_1_1ui_1_1StyleClassic.html#a234de3c49f9c96de81f25551529a8979">z0::ui::StyleClassic::resize()</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a9dab1c6bd844241c28b2e1f3fd24ea8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setOption </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets a style-specific option </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on jeu. févr. 27 2025 20:50:25 for ZeroZero Game Engine &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on mar. mars 4 2025 16:25:39 for ZeroZero Game Engine &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
