@@ -87,8 +87,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a414a474c3692cc4d589beaba87b010b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc3f23e552a99ba1d07b8891150aa81"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Camera.html#a8dc3f23e552a99ba1d07b8891150aa81">getView</a> () const</td></tr>
 <tr class="separator:a8dc3f23e552a99ba1d07b8891150aa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c30609d40d98400caa4c92213b01383"><td class="memItemLeft" align="right" valign="top">vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Camera.html#a2c30609d40d98400caa4c92213b01383">unproject</a> (vec3 worldCoords)</td></tr>
-<tr class="separator:a2c30609d40d98400caa4c92213b01383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefab5c25e455e8ce6e9f993762554fcd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Camera.html#aefab5c25e455e8ce6e9f993762554fcd">getNearDistance</a> () const</td></tr>
 <tr class="separator:aefab5c25e455e8ce6e9f993762554fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a456c69775463bbc3aff891e96bff9725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Camera.html#a456c69775463bbc3aff891e96bff9725">setNearDistance</a> (float distance)</td></tr>
@@ -136,6 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af542137705aabf900ab071bd426a39ad inherit pub_methods_classz0_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a386ce624f44e778ee752b99319a7ca inherit pub_methods_classz0_1_1Node"><td class="memItemLeft" align="right" valign="top">vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a8a386ce624f44e778ee752b99319a7ca">getPositionGlobal</a> () const</td></tr>
 <tr class="separator:a8a386ce624f44e778ee752b99319a7ca inherit pub_methods_classz0_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8638071b2899a748d9987fcf6c77ab70 inherit pub_methods_classz0_1_1Node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a8638071b2899a748d9987fcf6c77ab70">rotate</a> (quat quaternion)</td></tr>
+<tr class="separator:a8638071b2899a748d9987fcf6c77ab70 inherit pub_methods_classz0_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7511370551bb20c32a45f6928e80b9d5 inherit pub_methods_classz0_1_1Node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a7511370551bb20c32a45f6928e80b9d5">rotateTowards</a> (const quat &amp;targetRotation, float maxAngle)</td></tr>
+<tr class="separator:a7511370551bb20c32a45f6928e80b9d5 inherit pub_methods_classz0_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d657c51846d0c104e4f1614e3dc689 inherit pub_methods_classz0_1_1Node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a42d657c51846d0c104e4f1614e3dc689">rotateX</a> (float angle)</td></tr>
 <tr class="separator:a42d657c51846d0c104e4f1614e3dc689 inherit pub_methods_classz0_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27be02acacb53bf2a010488a051b25a9 inherit pub_methods_classz0_1_1Node"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classz0_1_1Node.html#a27be02acacb53bf2a010488a051b25a9">rotateY</a> (float angle)</td></tr>
@@ -376,6 +378,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the 2D coordinates in the rendering <a class="el" href="classz0_1_1Window.html">Window</a> that maps to the given 3D point in world space.</p>
 <p>Returns the camera near clipping distance </p>
 
 </div>
@@ -600,35 +603,10 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2c30609d40d98400caa4c92213b01383"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vec2 unproject </td>
-          <td>(</td>
-          <td class="paramtype">vec3&#160;</td>
-          <td class="paramname"><em>worldCoords</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the 2D coordinates in the rendering <a class="el" href="classz0_1_1Window.html">Window</a> that maps to the given 3D point in world space. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on mar. mars 4 2025 16:25:39 for ZeroZero Game Engine &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on lun. mars 24 2025 14:09:08 for ZeroZero Game Engine &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
