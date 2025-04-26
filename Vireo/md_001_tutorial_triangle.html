@@ -50,6 +50,7 @@
 <p>This tutorial will teach you the basics of using the Vireo Rendering Hardware Interface. Vireo is an open source library written in modern C++ that implements a common abstraction layer over multiple 3D graphics APIs.</p>
 <p>Like modern graphics API, Vireo is a low-level library but is designed to be less verbose, at the price of reduced flexibility.</p>
 <p>This tutorial assumes that the reader already knows the basic concepts of the modern graphics API like Vulkan or DirectX 12, like pipelines, descriptors, resources, buffers, barriers, ...</p>
+<p>Sources of the tutorial are available at <a href="https://github.com/HenriMichelon/vireo_tutorial_1">https://github.com/HenriMichelon/vireo_tutorial_1</a></p>
 <h2>Development environment</h2>
 <p>Since Vireo currently only supports Microsoft Windows this tutorial assumes that you use this operating system.</p>
 <p>We will be using CMake which means that you can use <a href="https://visualstudio.microsoft.com/fr/">Microsoft Visual Studio</a> or <a href="https://www.jetbrains.com/clion/">Jetbrains CLion</a> to edit and compile your code. Note that you need to install the CMake component for Visual Studio.</p>
@@ -248,14 +249,119 @@ frameData.commandList-&gt;endRendering();
 viewports_scissors.png</div></div>
     <p>We need to record the commands to set the viewports &amp; scissors at the start of the render pass : </p><pre class="fragment">...
 frameData.commandList-&gt;beginRendering(renderingConfig);
-frameData.commandList-&gt;setViewports(1, {swapChain-&gt;getExtent()});
-frameData.commandList-&gt;setScissors(1, {swapChain-&gt;getExtent()});
+frameData.commandList-&gt;setViewport(swapChain-&gt;getExtent());
+frameData.commandList-&gt;setScissors(swapChain-&gt;getExtent());
 // commands will be recorded and submitted here
 ...
-</pre> </div></div><!-- contents -->
+</pre> <h2>Vertex data</h2>
+<p>Our triangle vertices will be hard-coded into the application. Add the struct describing a vertex composed of a XYZ position and an RGB color in your class interface: </p><pre class="fragment">struct Vertex {
+    glm::vec3 pos;
+    glm::vec3 color;
+};
+</pre><p> Add the triangle data with some nice RGB gradients: </p><pre class="fragment">std::vector&lt;Vertex&gt; triangleVertices{
+    { { 0.0f, 0.25f, 0.0f }, { 1.0f, 0.0f, 0.0f} },
+    { { 0.25f, -0.25f, 0.0f }, { 0.0f, 1.0f, 0.0f } },
+    { { -0.25f, -0.25f, 0.0f }, { 0.0f, 0.0f, 1.0f } }
+};
+</pre><p> The next step is to tell the graphic API how to pass this data format to the vertex shader once it's been uploaded into GPU memory. We have to describe each field of the <code>Vertex</code> struct : </p><pre class="fragment">const std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{
+    {"POSITION", vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, pos)},
+    {"COLOR",    vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, color)}
+};
+</pre><p> This vector is used to create the vertex layout for the future pipeline. Add the following code before the for loop in the <code>onInit()</code> method: </p><pre class="fragment">...
+const auto vertexLayout = vireo-&gt;createVertexLayout(sizeof(Vertex), vertexAttributes);
+
+for (auto&amp; frameData : framesData) {
+...
+</pre><p> We are done with the vertex layout. Now we have to upload the vertex data into the VRAM in a <code>VERTEX</code> buffer. Add the buffer field to your application : </p><pre class="fragment">std::shared_ptr&lt;vireo::Buffer&gt; vertexBuffer;
+</pre><p> In the <code>onInit()</code> method, just before the <code>createVertexLayout()</code> line, add the buffer creation : </p><pre class="fragment">vertexBuffer = vireo-&gt;createBuffer(
+   vireo::BufferType::VERTEX,
+   sizeof(Vertex),
+   triangleVertices.size());
+</pre><p> We will use a <code>TRANSFER</code> command list to upload the vertex data into the VRAM. You can use a <code>GRAPHIC</code>command list for that but the <code>TRANSFER</code> command buffers and submit queues can take advantage of DMA transfers.</p>
+<p>In the <code>onInit()</code> method, just after the buffer creation add the command allocator and command list creation : </p><pre class="fragment">const auto uploadCommandAllocator = vireo-&gt;createCommandAllocator(vireo::CommandType::TRANSFER);
+const auto uploadCommandList = uploadCommandAllocator-&gt;createCommandList();
+</pre><p> Followed by the recording of the upload command : </p><pre class="fragment">uploadCommandList-&gt;begin();
+uploadCommandList-&gt;upload(vertexBuffer, &amp;triangleVertices[0]);
+uploadCommandList-&gt;end();
+</pre><p> Then the submission of the commands using a <code>TRANSFER</code> submit queue : </p><pre class="fragment">const auto transferQueue = vireo-&gt;createSubmitQueue(vireo::CommandType::TRANSFER);
+transferQueue-&gt;submit({uploadCommandList});
+</pre><p> Since the upload operation is asynchronous, we have to wait for the command to finish before terminating the <code>onInit()</code> method. Add the following code at the end of the method : </p><pre class="fragment">transferQueue-&gt;waitIdle();
+uploadCommandList-&gt;cleanup();
+</pre><p> By adding this line at the end of the method, the upload operation will be executed while we continue to create our pipeline.</p>
+<p>Note that we call the <code>cleanup()</code> method to clear the temporary (staging) buffer used for the host-to-device copy of the vertex data. The asynchronous nature of the operating means that we have to wait for the end of the operation to free the host-visible allocated memory. This is done automatically in the command list destructor, but we added this call in the tutorial for clarification.</p>
+<h2>The graphic pipeline</h2>
+<p>The graphics pipeline is the sequence of operations that take the vertices and textures of your meshes all the way to the pixels in the render targets. You can learn more about graphics pipelines in the <a href="https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Introduction">Vulkan tutorial</a>. To create a graphic pipeline, we need :</p><ul>
+<li>The vertex layout</li>
+<li>The shader(s) module(s)</li>
+<li>The list of resources (buffers, images, sampler, ...) used by the shaders</li>
+<li>The configuration of the pipeline</li>
+</ul>
+<h3>Shader modules</h3>
+<p>We will use the <a href="https://shader-slang.org/">Slang shader language</a> to write our shaders. By using Slang we will have only one code for all the supported graphics API.</p>
+<p>The <code>CMakeLists.txt</code> file supports the compilation of the shaders in the SPIR-V and DXIL intermediates formats.</p>
+<p>Add a new <code>shaders</code> directory under the <code>src</code> directory, then add a new <code>triangle_color.slang</code> file into the <code>shaders</code> directory with the following content : </p><pre class="fragment">struct VertexInput {
+   float3 position : POSITION;
+   float3 color    : COLOR;
+};
+
+struct VertexOutput {
+   float4 position : SV_POSITION;
+   float3 color    : COLOR;
+};
+
+VertexOutput vertexMain(VertexInput input) {
+   VertexOutput output;
+   output.position = float4(input.position, 1.0) ;
+   output.color = input.color;
+   return output;
+}
+
+float4 fragmentMain(VertexOutput input) : SV_TARGET {
+   return float4(input.color, 1.0);
+}
+</pre><p> The <code>POSITION</code> and <code>COLOR</code> attributes in the <code>VertexInput</code> struct refers to the fields of the <code>vertexAttributes</code> array. Since Vulkan does not use textual attributes names but binding indices the fields must be in the same order in the struct and in the array.</p>
+<p>The fragment shader uses the RGB vertex color to produce a nice gradient.</p>
+<p>Reload the CMake project to add the new shader code to the list of shaders to compile then build the <code>shaders</code> target.</p>
+<p>If you look into the <code>shaders</code> directory in the root of your project you will see four files with the compiled vertex and fragment shaders, both in SPIR-V and DXIL :</p>
+<div class="image">
+<img src="compiled_shaders.png" alt=""/>
+<div class="caption">
+compiled_shaders.png</div></div>
+    <p>Now we can load the shaders in our <code>onInit()</code> method, just after the vertex layout creation : </p><pre class="fragment">...
+const auto vertexLayout = vireo-&gt;createVertexLayout(sizeof(Vertex), vertexAttributes);
+const auto vertexShader = vireo-&gt;createShaderModule("shaders/triangle_color.vert");
+const auto fragmentShader = vireo-&gt;createShaderModule("shaders/triangle_color.frag");
+...
+</pre><h3>Pipeline creation</h3>
+<p>The graphic pipeline configuration is described in a <a href="https://henrimichelon.github.io/Vireo/structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> struct.</p>
+<p>For rendering in a color attachment you need :</p><ul>
+<li>The color format of the attachment</li>
+<li>The color blending configuration for this attachment</li>
+</ul>
+<p>Add a basic configuration in your application with only one color attachment : </p><pre class="fragment">const vireo::GraphicPipelineConfiguration pipelineConfig {
+   .colorRenderFormats = {vireo::ImageFormat::R8G8B8A8_SRGB},
+   .colorBlendDesc = {{}}
+};
+</pre><p> Then add the pipeline field : </p><pre class="fragment">std::shared_ptr&lt;vireo::Pipeline&gt; pipeline;
+</pre><p> and the pipeline creation just after the shader modules creation in <code>onInit()</code>: </p><pre class="fragment">pipeline = vireo-&gt;createGraphicPipeline(
+    vireo-&gt;createPipelineResources({}, {}),
+    vertexLayout,
+    vertexShader,
+    fragmentShader,
+    pipelineConfig);
+</pre><p> We use an empty pipeline resource object since our shader only uses the vertex input described by the vertex layout.</p>
+<h2>Drawing</h2>
+<p>It's time to draw our triangle!</p>
+<p>Add the drawing commands recording in the <code>onRender()</code> method between <code>setScissors()</code> and <code>endRendering()</code> : </p><pre class="fragment">frameData.commandList-&gt;bindPipeline(pipeline);
+frameData.commandList-&gt;bindVertexBuffer(vertexBuffer);
+frameData.commandList-&gt;draw(triangleVertices.size());
+</pre><p> If you did everything correctly up to this point, then you should now see something resembling the following when you run your program.</p>
+<p>With Vulkan : <img src="triangle_color_vk.png" alt="" class="inline" title="triangle_color_vk.png"/>    </p>
+<p>With DirectX : <img src="triangle_color_dx.png" alt="" class="inline" title="triangle_color_dx.png"/>     </p>
+</div></div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on ven. avr. 25 2025 23:36:32 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on sam. avr. 26 2025 22:30:18 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>

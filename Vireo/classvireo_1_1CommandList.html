@@ -106,10 +106,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbf42c05f74289eb98698b991098a9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f46fd3e533a7e8f05ea95bef12a4b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a16f46fd3e533a7e8f05ea95bef12a4b7">drawIndexed</a> (uint32_t indexCountPerInstance, uint32_t instanceCount=1, uint32_t firstIndex=0, uint32_t vertexOffset=0, uint32_t firstInstance=0) const = 0</td></tr>
 <tr class="separator:a16f46fd3e533a7e8f05ea95bef12a4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fbed0299c67392cae7fb2382410898"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#ad5fbed0299c67392cae7fb2382410898">setViewports</a> (uint32_t count, const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;extent) const = 0</td></tr>
-<tr class="separator:ad5fbed0299c67392cae7fb2382410898"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50c27ff7e00ca6fe35639bdefa186b9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a50c27ff7e00ca6fe35639bdefa186b9f">setScissors</a> (uint32_t count, const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;extent) const = 0</td></tr>
-<tr class="separator:a50c27ff7e00ca6fe35639bdefa186b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1994ddbe987019dcd798bf230be0087a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a1994ddbe987019dcd798bf230be0087a">setViewports</a> (const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;extents) const = 0</td></tr>
+<tr class="separator:a1994ddbe987019dcd798bf230be0087a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a281342181dfdfffb58eeb976944cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#af3a281342181dfdfffb58eeb976944cf">setScissors</a> (const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;extents) const = 0</td></tr>
+<tr class="separator:af3a281342181dfdfffb58eeb976944cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c859e0513879972037d439bab8d6259"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a3c859e0513879972037d439bab8d6259">setViewport</a> (const <a class="el" href="structvireo_1_1Extent.html">Extent</a> &amp;extent) const = 0</td></tr>
+<tr class="separator:a3c859e0513879972037d439bab8d6259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45840fdf0d65e69f4b4fa2c97b896ccd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a45840fdf0d65e69f4b4fa2c97b896ccd">setScissors</a> (const <a class="el" href="structvireo_1_1Extent.html">Extent</a> &amp;extent) const = 0</td></tr>
+<tr class="separator:a45840fdf0d65e69f4b4fa2c97b896ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00539a85f2268bd28b31e747fc146bac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a00539a85f2268bd28b31e747fc146bac">barrier</a> (const shared_ptr&lt; const <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;image, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> oldState, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> newState) const = 0</td></tr>
 <tr class="separator:a00539a85f2268bd28b31e747fc146bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92d99e31b682845d1c9a7cbc02ae6b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aa92d99e31b682845d1c9a7cbc02ae6b7">barrier</a> (const shared_ptr&lt; const <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt; &amp;renderTarget, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> oldState, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> newState) const = 0</td></tr>
@@ -1099,7 +1103,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a50c27ff7e00ca6fe35639bdefa186b9f"></a>
+<a class="anchor" id="a45840fdf0d65e69f4b4fa2c97b896ccd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1109,19 +1113,9 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void setScissors </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>extent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">const <a class="el" href="structvireo_1_1Extent.html">Extent</a> &amp;&#160;</td>
+          <td class="paramname"><em>extent</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1132,7 +1126,6 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the scissors for a command list </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">count</td><td>The number of scissors whose parameters are updated by the command </td></tr>
     <tr><td class="paramname">extent</td><td>An array of <code><a class="el" href="structvireo_1_1Extent.html">Extent</a></code> structures specifying viewport parameters. </td></tr>
   </table>
   </dd>
@@ -1140,7 +1133,67 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad5fbed0299c67392cae7fb2382410898"></a>
+<a class="anchor" id="af3a281342181dfdfffb58eeb976944cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setScissors </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extents</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the scissors for a command list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extents</td><td>An array of <code><a class="el" href="structvireo_1_1Extent.html">Extent</a></code> structures specifying viewport parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c859e0513879972037d439bab8d6259"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setViewport </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structvireo_1_1Extent.html">Extent</a> &amp;&#160;</td>
+          <td class="paramname"><em>extent</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the viewport for a command list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extent</td><td>An array of <code><a class="el" href="structvireo_1_1Extent.html">Extent</a></code> structures specifying viewport parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1994ddbe987019dcd798bf230be0087a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1150,19 +1203,9 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void setViewports </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const vector&lt; <a class="el" href="structvireo_1_1Extent.html">Extent</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>extent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramname"><em>extents</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1173,8 +1216,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the viewports for a command list </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">count</td><td>The number of viewports whose parameters are updated by the command </td></tr>
-    <tr><td class="paramname">extent</td><td>An array of <code><a class="el" href="structvireo_1_1Extent.html">Extent</a></code> structures specifying viewport parameters. </td></tr>
+    <tr><td class="paramname">extents</td><td>An array of <code><a class="el" href="structvireo_1_1Extent.html">Extent</a></code> structures specifying viewport parameters. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1301,7 +1343,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on ven. avr. 25 2025 23:36:32 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on sam. avr. 26 2025 22:30:18 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
