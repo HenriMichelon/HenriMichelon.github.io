@@ -23,7 +23,7 @@
    <div id="projectname">Vireo RHI
       &#160;<span id="projectnumber">v0.0</span>
    </div>
-   <div id="projectbrief">Vireo Rendering Hardware Interface</div>
+   <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
   </td>
  </tr>
  </tbody>
@@ -142,11 +142,11 @@ struct FrameData {
     std::shared_ptr&lt;vireo::Fence&gt; inFlightFence;
 };
 std::vector&lt;FrameData&gt; framesData{FRAMES_IN_FLIGHT};
-</pre><p> Create the fences after the queue creation : </p><pre class="fragment">for (auto&amp; frameData : framesData) {
+</pre><p> Create the fences after the queue creation in the <code>onInit()</code> method : </p><pre class="fragment">for (auto&amp; frameData : framesData) {
     frameData.inFlightFence = vireo-&gt;createFence();
 }
-</pre><p>It's time to create the swap chain. Add a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1SwapChain.html">SwapChain</a> field : </p><pre class="fragment">std::shared_ptr&lt;vireo::SwapChain&gt; swapChain;
-</pre><p> We need the window handle to create the swap chain. The window is created by the <code>Win32Application</code> and the os-specific handle is stored in the <code>windowHandle</code> field of the base <code>Application</code> class. We can use this field to create the swap chain, just after the <code>graphicQueue</code> creation: </p><pre class="fragment">swapChain = vireo-&gt;createSwapChain(
+</pre><p>It's time to create the swap chain. Add a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1SwapChain.html">SwapChain</a> field to your application interface: </p><pre class="fragment">std::shared_ptr&lt;vireo::SwapChain&gt; swapChain;
+</pre><p> We need the window handle to create the swap chain. The window is created by the <code>Win32Application</code> and the os-specific handle is stored in the <code>windowHandle</code> field of the base <code>Application</code> class. We can use this field to create the swap chain, just after the <code>graphicQueue</code> creation, in the <code>onInit()</code> method : </p><pre class="fragment">swapChain = vireo-&gt;createSwapChain(
     vireo::ImageFormat::R8G8B8A8_SRGB,
     graphicQueue,
     windowHandle,
@@ -259,12 +259,12 @@ frameData.commandList-&gt;setScissors(swapChain-&gt;getExtent());
     glm::vec3 pos;
     glm::vec3 color;
 };
-</pre><p> Add the triangle data with some nice RGB gradients: </p><pre class="fragment">std::vector&lt;Vertex&gt; triangleVertices{
+</pre><p> Add the triangle data with a different color for each vertex, after the <code>Vertex</code> struct: </p><pre class="fragment">std::vector&lt;Vertex&gt; triangleVertices{
     { { 0.0f, 0.25f, 0.0f }, { 1.0f, 0.0f, 0.0f} },
     { { 0.25f, -0.25f, 0.0f }, { 0.0f, 1.0f, 0.0f } },
     { { -0.25f, -0.25f, 0.0f }, { 0.0f, 0.0f, 1.0f } }
 };
-</pre><p> The next step is to tell the graphic API how to pass this data format to the vertex shader once it's been uploaded into GPU memory. We have to describe each field of the <code>Vertex</code> struct : </p><pre class="fragment">const std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{
+</pre><p> The next step is to tell the graphic API how to pass this data format to the vertex shader once it's been uploaded into GPU memory. We have to describe each field of the <code>Vertex</code> struct using <a href="https://henrimichelon.github.io/Vireo/structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a>, after the triangle data: </p><pre class="fragment">const std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{
     {"POSITION", vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, pos)},
     {"COLOR",    vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, color)}
 };
@@ -288,19 +288,19 @@ uploadCommandList-&gt;end();
 transferQueue-&gt;submit({uploadCommandList});
 </pre><p> Since the upload operation is asynchronous, we have to wait for the command to finish before terminating the <code>onInit()</code> method. Add the following code at the end of the method : </p><pre class="fragment">transferQueue-&gt;waitIdle();
 uploadCommandList-&gt;cleanup();
-</pre><p> By adding this line at the end of the method, the upload operation will be executed while we continue to create our pipeline.</p>
+</pre><p> By adding the <code>waitIdle()</code> at the end of the method, the upload operation will be executed while we continue to create our pipeline.</p>
 <p>Note that we call the <code>cleanup()</code> method to clear the temporary (staging) buffer used for the host-to-device copy of the vertex data. The asynchronous nature of the operating means that we have to wait for the end of the operation to free the host-visible allocated memory. This is done automatically in the command list destructor, but we added this call in the tutorial for clarification.</p>
 <h2>The graphic pipeline</h2>
 <p>The graphics pipeline is the sequence of operations that take the vertices and textures of your meshes all the way to the pixels in the render targets. You can learn more about graphics pipelines in the <a href="https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Introduction">Vulkan tutorial</a>. To create a graphic pipeline, we need :</p><ul>
 <li>The vertex layout</li>
 <li>The shader(s) module(s)</li>
-<li>The list of resources (buffers, images, sampler, ...) used by the shaders</li>
+<li>The list of resources (uniform buffers, images, samplers, ...) used by the shaders</li>
 <li>The configuration of the pipeline</li>
 </ul>
 <h3>Shader modules</h3>
 <p>We will use the <a href="https://shader-slang.org/">Slang shader language</a> to write our shaders. By using Slang we will have only one code for all the supported graphics API.</p>
 <p>The <code>CMakeLists.txt</code> file supports the compilation of the shaders in the SPIR-V and DXIL intermediates formats.</p>
-<p>Add a new <code>shaders</code> directory under the <code>src</code> directory, then add a new <code>triangle_color.slang</code> file into the <code>shaders</code> directory with the following content : </p><pre class="fragment">struct VertexInput {
+<p>Add a new <code>shaders</code> directory under the <code>src</code> directory, then add a new <code>triangle_color.slang</code> file into the <code>src/shaders</code> directory with the following content : </p><pre class="fragment">struct VertexInput {
    float3 position : POSITION;
    float3 color    : COLOR;
 };
@@ -321,7 +321,7 @@ float4 fragmentMain(VertexOutput input) : SV_TARGET {
    return float4(input.color, 1.0);
 }
 </pre><p> The <code>POSITION</code> and <code>COLOR</code> attributes in the <code>VertexInput</code> struct refers to the fields of the <code>vertexAttributes</code> array. Since Vulkan does not use textual attributes names but binding indices the fields must be in the same order in the struct and in the array.</p>
-<p>The fragment shader uses the RGB vertex color to produce a nice gradient.</p>
+<p>The fragment shader uses the vertex color to produce a nice RGB gradient (the GPU calculates the color interpolation for each fragment/pixel from the vertices colors).</p>
 <p>Reload the CMake project to add the new shader code to the list of shaders to compile then build the <code>shaders</code> target.</p>
 <p>If you look into the <code>shaders</code> directory in the root of your project you will see four files with the compiled vertex and fragment shaders, both in SPIR-V and DXIL :</p>
 <div class="image">
@@ -367,10 +367,12 @@ triangle_color_vk.png</div></div>
 <img src="triangle_color_dx.png" alt=""/>
 <div class="caption">
 triangle_color_dx.png</div></div>
-     </div></div><!-- contents -->
+    <h2>What's next ?</h2>
+<p>Explore the <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples repository</a> for other examples (uniforms, push constants, compute pipeline, MSAA, depth pre-pass, post-processing effects, ...) </p>
+</div></div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on lun. avr. 28 2025 08:25:05 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on lun. avr. 28 2025 10:10:12 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
