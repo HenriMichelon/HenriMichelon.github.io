@@ -107,11 +107,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a778affa9da7460ef345fc4a7a8e2d78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef9fc6655cbd33a726ed7446e3fe7d6"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a2ef9fc6655cbd33a726ed7446e3fe7d6">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=1.0f, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
 <tr class="separator:a2ef9fc6655cbd33a726ed7446e3fe7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a012469ba0acab3ce2712c7e34d08c8c9">getPhysicalDevice</a> () const</td></tr>
+<tr class="separator:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130131cf643a17be360d2e2ac080b279"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279">getDevice</a> () const</td></tr>
+<tr class="separator:a130131cf643a17be360d2e2ac080b279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814a430e8b35e683186c96d1c358f400"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a814a430e8b35e683186c96d1c358f400">getInstance</a> () const</td></tr>
+<tr class="separator:a814a430e8b35e683186c96d1c358f400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f5113654b231e26fdd6db273612d73b"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; Vireo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a5f5113654b231e26fdd6db273612d73b">create</a> (<a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a> backend)</td></tr>
 <tr class="separator:a5f5113654b231e26fdd6db273612d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cbf3a223060c85ff273d534b21059a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a80cbf3a223060c85ff273d534b21059a">isBackendSupported</a> (<a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a> backend)</td></tr>
+<tr class="separator:a80cbf3a223060c85ff273d534b21059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -1073,6 +1081,99 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a130131cf643a17be360d2e2ac080b279"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a814a430e8b35e683186c96d1c358f400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a012469ba0acab3ce2712c7e34d08c8c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getPhysicalDevice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a80cbf3a223060c85ff273d534b21059a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool isBackendSupported </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a>&#160;</td>
+          <td class="paramname"><em>backend</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a11a419f32ea9186bbea006c34f2d5a8e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1160,7 +1261,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on sam. avr. 26 2025 22:44:27 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on lun. avr. 28 2025 08:25:05 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>

@@ -74,20 +74,23 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a01bc09bbc59df02badad0c3501ac4916"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#a01bc09bbc59df02badad0c3501ac4916">multisampledRenderTarget</a> {nullptr}</td></tr>
 <tr class="memdesc:a01bc09bbc59df02badad0c3501ac4916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multisampled color attachment. <code>nullptr</code> if <a class="el" href="namespacevireo.html#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> is disabled for the current pipeline.  <a href="#a01bc09bbc59df02badad0c3501ac4916">More...</a><br /></td></tr>
 <tr class="separator:a01bc09bbc59df02badad0c3501ac4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa844c7ecb6d67f9f3af154f174682095"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#aa844c7ecb6d67f9f3af154f174682095">clearColor</a> {true}</td></tr>
-<tr class="memdesc:aa844c7ecb6d67f9f3af154f174682095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the color attachment if <code>true</code>  <a href="#aa844c7ecb6d67f9f3af154f174682095">More...</a><br /></td></tr>
-<tr class="separator:aa844c7ecb6d67f9f3af154f174682095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d08106244b2ae57346a62b1e6da1372"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#a6d08106244b2ae57346a62b1e6da1372">clearColorValue</a> { .color = {0.0f, 0.0f, 0.0f, 0.0f} }</td></tr>
-<tr class="memdesc:a6d08106244b2ae57346a62b1e6da1372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color clear value.  <a href="#a6d08106244b2ae57346a62b1e6da1372">More...</a><br /></td></tr>
-<tr class="separator:a6d08106244b2ae57346a62b1e6da1372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635d456eef4e390c55ba64dd43cd4978"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#a635d456eef4e390c55ba64dd43cd4978">clear</a> {false}</td></tr>
+<tr class="memdesc:a635d456eef4e390c55ba64dd43cd4978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the color attachment if <code>true</code>  <a href="#a635d456eef4e390c55ba64dd43cd4978">More...</a><br /></td></tr>
+<tr class="separator:a635d456eef4e390c55ba64dd43cd4978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7d6ad1f38312ad6e720457c8ad6f8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#abc7d6ad1f38312ad6e720457c8ad6f8e">clearValue</a> { .color = {0.0f, 0.0f, 0.0f, 0.0f} }</td></tr>
+<tr class="memdesc:abc7d6ad1f38312ad6e720457c8ad6f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color clear value.  <a href="#abc7d6ad1f38312ad6e720457c8ad6f8e">More...</a><br /></td></tr>
+<tr class="separator:abc7d6ad1f38312ad6e720457c8ad6f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fa398fd6ecf9b53c3ea8902945ae5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1RenderTargetDesc.html#a50fa398fd6ecf9b53c3ea8902945ae5a">discardAfterRender</a> {false}</td></tr>
+<tr class="memdesc:a50fa398fd6ecf9b53c3ea8902945ae5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard the content after rendering.  <a href="#a50fa398fd6ecf9b53c3ea8902945ae5a">More...</a><br /></td></tr>
+<tr class="separator:a50fa398fd6ecf9b53c3ea8902945ae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aa844c7ecb6d67f9f3af154f174682095"></a>
+<a class="anchor" id="a635d456eef4e390c55ba64dd43cd4978"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool clearColor {true}</td>
+          <td class="memname">bool clear {false}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -96,17 +99,31 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6d08106244b2ae57346a62b1e6da1372"></a>
+<a class="anchor" id="abc7d6ad1f38312ad6e720457c8ad6f8e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearColorValue { .color = {0.0f, 0.0f, 0.0f, 0.0f} }</td>
+          <td class="memname"><a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearValue { .color = {0.0f, 0.0f, 0.0f, 0.0f} }</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Color clear value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a50fa398fd6ecf9b53c3ea8902945ae5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool discardAfterRender {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Discard the content after rendering. </p>
 
 </div>
 </div>
@@ -155,7 +172,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on sam. avr. 26 2025 22:44:27 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on lun. avr. 28 2025 08:25:05 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
