@@ -71,42 +71,44 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a59cc6c2feafd79f6bbc327679215bac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a419f32ea9186bbea006c34f2d5a8e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a11a419f32ea9186bbea006c34f2d5a8e">waitIdle</a> ()</td></tr>
 <tr class="separator:a11a419f32ea9186bbea006c34f2d5a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ec4367f0fdd1bdc6f9cf983d2cdd8d9"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a2ec4367f0fdd1bdc6f9cf983d2cdd8d9">createSwapChain</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, const shared_ptr&lt; const <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt; &amp;presentQueue, void *windowHandle, <a class="el" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0ee">PresentMode</a> presentMode=PresentMode::VSYNC, uint32_t framesInFlight=2) const = 0</td></tr>
-<tr class="separator:a2ec4367f0fdd1bdc6f9cf983d2cdd8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4fce1aac2056ea6e925a66b7eb22429"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aa4fce1aac2056ea6e925a66b7eb22429">createSubmitQueue</a> (<a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> commandType, const wstring &amp;name=L&quot;SubmitQueue&quot;) const = 0</td></tr>
-<tr class="separator:aa4fce1aac2056ea6e925a66b7eb22429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b915a500366fae027a02bf17fef9026"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Fence.html">Fence</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a3b915a500366fae027a02bf17fef9026">createFence</a> (const wstring &amp;name=L&quot;Fence&quot;) const = 0</td></tr>
-<tr class="separator:a3b915a500366fae027a02bf17fef9026"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7184259c0beb593eb46275684d91c1c"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ac7184259c0beb593eb46275684d91c1c">createCommandAllocator</a> (<a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> type) const = 0</td></tr>
-<tr class="separator:ac7184259c0beb593eb46275684d91c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea8b9f9d857ce841edf556743204b1e5"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aea8b9f9d857ce841edf556743204b1e5">createVertexLayout</a> (size_t size, const vector&lt; <a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a> &gt; &amp;attributesDescriptions) const = 0</td></tr>
-<tr class="separator:aea8b9f9d857ce841edf556743204b1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af218637c84cce880cb4da10fbe7a5ea8"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#af218637c84cce880cb4da10fbe7a5ea8">createShaderModule</a> (const string &amp;fileName) const = 0</td></tr>
-<tr class="separator:af218637c84cce880cb4da10fbe7a5ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae6f2e8cd48b87eabaa02dc2bac1854"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aaae6f2e8cd48b87eabaa02dc2bac1854">createPipelineResources</a> (const vector&lt; shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&gt; &amp;descriptorLayouts, const <a class="el" href="structvireo_1_1PushConstantsDesc.html">PushConstantsDesc</a> &amp;pushConstant={}, const wstring &amp;name=L&quot;PipelineResource&quot;) const = 0</td></tr>
-<tr class="separator:aaae6f2e8cd48b87eabaa02dc2bac1854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca3f1157c4b866357a0a6d2bd4e8ab2e"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1ComputePipeline.html">ComputePipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aca3f1157c4b866357a0a6d2bd4e8ab2e">createComputePipeline</a> (const shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;pipelineResources, const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;shader, const wstring &amp;name=L&quot;ComputePipeline&quot;) const = 0</td></tr>
-<tr class="separator:aca3f1157c4b866357a0a6d2bd4e8ab2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae914438f575de3a8e7fabf6551feb208"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1GraphicPipeline.html">GraphicPipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ae914438f575de3a8e7fabf6551feb208">createGraphicPipeline</a> (const shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;pipelineResources, const shared_ptr&lt; const <a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a> &gt; &amp;vertexInputLayout, const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;vertexShader, const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;fragmentShader, const <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> &amp;configuration, const wstring &amp;name=L&quot;GraphicPipeline&quot;) const = 0</td></tr>
-<tr class="separator:ae914438f575de3a8e7fabf6551feb208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8c92a3e2d78cf19077b72e990d43d5c"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ab8c92a3e2d78cf19077b72e990d43d5c">createBuffer</a> (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">BufferType</a> type, size_t size, size_t count=1, const wstring &amp;name=L&quot;Buffer&quot;) const = 0</td></tr>
-<tr class="separator:ab8c92a3e2d78cf19077b72e990d43d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1ab8f4985febb817fd95ae85c43ab47"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad1ab8f4985febb817fd95ae85c43ab47">createImage</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, uint32_t mipLevels=1, uint32_t arraySize=1, const wstring &amp;name=L&quot;Image&quot;) const = 0</td></tr>
-<tr class="separator:ad1ab8f4985febb817fd95ae85c43ab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd9703a3025aa9b3ae528fb563a66335"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#abd9703a3025aa9b3ae528fb563a66335">createReadWriteImage</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, uint32_t mipLevels=1, uint32_t arraySize=1, const wstring &amp;name=L&quot;RWImage&quot;) const = 0</td></tr>
-<tr class="separator:abd9703a3025aa9b3ae528fb563a66335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85463b50d6ceae93c7eb4e2ad80738e6"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a85463b50d6ceae93c7eb4e2ad80738e6">createRenderTarget</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, <a class="el" href="namespacevireo.html#a639c740f69368f9fe25a4f7409a16384">RenderTargetType</a> type=RenderTargetType::COLOR, <a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearValue={}, <a class="el" href="namespacevireo.html#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> msaa=MSAA::NONE, const wstring &amp;name=L&quot;RenderTarget&quot;) const = 0</td></tr>
-<tr class="separator:a85463b50d6ceae93c7eb4e2ad80738e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37be0a208f3762a03371b01f751787d1"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a37be0a208f3762a03371b01f751787d1">createRenderTarget</a> (const shared_ptr&lt; const <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt; &amp;swapChain, <a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearValue={}, <a class="el" href="namespacevireo.html#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> msaa=MSAA::NONE, const wstring &amp;name=L&quot;RenderTarget&quot;) const = 0</td></tr>
-<tr class="separator:a37be0a208f3762a03371b01f751787d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2aad1b31cbf7adbb5503cfaf2932a5e"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad2aad1b31cbf7adbb5503cfaf2932a5e">createDescriptorLayout</a> (const wstring &amp;name=L&quot;DescriptorLayout&quot;) = 0</td></tr>
-<tr class="separator:ad2aad1b31cbf7adbb5503cfaf2932a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78846acfab5cf580bf4c45fce1f3e660"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a78846acfab5cf580bf4c45fce1f3e660">createSamplerDescriptorLayout</a> (const wstring &amp;name=L&quot;createSamplerDescriptorLayout&quot;) = 0</td></tr>
-<tr class="separator:a78846acfab5cf580bf4c45fce1f3e660"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778affa9da7460ef345fc4a7a8e2d78e"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a778affa9da7460ef345fc4a7a8e2d78e">createDescriptorSet</a> (const shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;layout, const wstring &amp;name=L&quot;DescriptorSet&quot;) = 0</td></tr>
-<tr class="separator:a778affa9da7460ef345fc4a7a8e2d78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ef9fc6655cbd33a726ed7446e3fe7d6"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a2ef9fc6655cbd33a726ed7446e3fe7d6">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=1.0f, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
-<tr class="separator:a2ef9fc6655cbd33a726ed7446e3fe7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fe4410f37954c2e05ff87f370c1887"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ab7fe4410f37954c2e05ff87f370c1887">createSwapChain</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt; &amp;presentQueue, void *windowHandle, <a class="el" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0ee">PresentMode</a> presentMode=PresentMode::VSYNC, uint32_t framesInFlight=2) const = 0</td></tr>
+<tr class="separator:ab7fe4410f37954c2e05ff87f370c1887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2945b364ea7c3978aa1c1e6706abf3bd"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a2945b364ea7c3978aa1c1e6706abf3bd">createSubmitQueue</a> (<a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> commandType, const std::wstring &amp;name=L&quot;SubmitQueue&quot;) const = 0</td></tr>
+<tr class="separator:a2945b364ea7c3978aa1c1e6706abf3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aef3be17670442d7b908ebb408355f2"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Fence.html">Fence</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a8aef3be17670442d7b908ebb408355f2">createFence</a> (bool createSignaled=false, const std::wstring &amp;name=L&quot;Fence&quot;) const = 0</td></tr>
+<tr class="separator:a8aef3be17670442d7b908ebb408355f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8e7ba7e45bfd388f338b5ada62cb0c"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Semaphore.html">Semaphore</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c">createSemaphore</a> (<a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824a">SemaphoreType</a> type, const std::wstring &amp;name=L&quot;Semaphore&quot;) const = 0</td></tr>
+<tr class="separator:a9a8e7ba7e45bfd388f338b5ada62cb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca0900ac9674fe7f6d90b504f63b257"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a9ca0900ac9674fe7f6d90b504f63b257">createCommandAllocator</a> (<a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a> type) const = 0</td></tr>
+<tr class="separator:a9ca0900ac9674fe7f6d90b504f63b257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7261cac5cb82702c34b49cffc08c8f74"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a7261cac5cb82702c34b49cffc08c8f74">createVertexLayout</a> (size_t size, const std::vector&lt; <a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a> &gt; &amp;attributesDescriptions) const = 0</td></tr>
+<tr class="separator:a7261cac5cb82702c34b49cffc08c8f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad525756f14bc5eeacfb8000edcbfa746"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad525756f14bc5eeacfb8000edcbfa746">createShaderModule</a> (const std::string &amp;fileName) const = 0</td></tr>
+<tr class="separator:ad525756f14bc5eeacfb8000edcbfa746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2694c5cce82ee9d6ee3a17e454f650"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a1a2694c5cce82ee9d6ee3a17e454f650">createPipelineResources</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&gt; &amp;descriptorLayouts={}, const <a class="el" href="structvireo_1_1PushConstantsDesc.html">PushConstantsDesc</a> &amp;pushConstant={}, const std::wstring &amp;name=L&quot;PipelineResource&quot;) const = 0</td></tr>
+<tr class="separator:a1a2694c5cce82ee9d6ee3a17e454f650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534e5105e1fb9923046076185657b177"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1ComputePipeline.html">ComputePipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a534e5105e1fb9923046076185657b177">createComputePipeline</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;pipelineResources, const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;shader, const std::wstring &amp;name=L&quot;ComputePipeline&quot;) const = 0</td></tr>
+<tr class="separator:a534e5105e1fb9923046076185657b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e09ff8f0ade6c4276dcf48e9910466d"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1GraphicPipeline.html">GraphicPipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a4e09ff8f0ade6c4276dcf48e9910466d">createGraphicPipeline</a> (const <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> &amp;configuration, const std::wstring &amp;name=L&quot;GraphicPipeline&quot;) const = 0</td></tr>
+<tr class="separator:a4e09ff8f0ade6c4276dcf48e9910466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf08ffb53e73cecc3dbdb367b6dfca2"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aadf08ffb53e73cecc3dbdb367b6dfca2">createBuffer</a> (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">BufferType</a> type, size_t size, size_t count=1, const std::wstring &amp;name=L&quot;Buffer&quot;) const = 0</td></tr>
+<tr class="separator:aadf08ffb53e73cecc3dbdb367b6dfca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15fb317160440594ccf02dd086023129"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a15fb317160440594ccf02dd086023129">createImage</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, uint32_t mipLevels=1, uint32_t arraySize=1, const std::wstring &amp;name=L&quot;Image&quot;) const = 0</td></tr>
+<tr class="separator:a15fb317160440594ccf02dd086023129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e46b88e0e1285c1020d4c6e9bc8d0b"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a01e46b88e0e1285c1020d4c6e9bc8d0b">createReadWriteImage</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, uint32_t mipLevels=1, uint32_t arraySize=1, const std::wstring &amp;name=L&quot;RWImage&quot;) const = 0</td></tr>
+<tr class="separator:a01e46b88e0e1285c1020d4c6e9bc8d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa98f15a476f5e615ec473e709903bbb"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#aaa98f15a476f5e615ec473e709903bbb">createRenderTarget</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, uint32_t width, uint32_t height, <a class="el" href="namespacevireo.html#a639c740f69368f9fe25a4f7409a16384">RenderTargetType</a> type=RenderTargetType::COLOR, <a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearValue={}, <a class="el" href="namespacevireo.html#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> msaa=MSAA::NONE, const std::wstring &amp;name=L&quot;RenderTarget&quot;) const = 0</td></tr>
+<tr class="separator:aaa98f15a476f5e615ec473e709903bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c8e1381d3157ac234a4c4716389d73"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ac0c8e1381d3157ac234a4c4716389d73">createRenderTarget</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt; &amp;swapChain, <a class="el" href="namespacevireo.html#a5656f41393bc01f9f04ce091e4b8fe1c">ClearValue</a> clearValue={}, <a class="el" href="namespacevireo.html#a10cbf4a39c3f0df11adfce73774f8a5a">MSAA</a> msaa=MSAA::NONE, const std::wstring &amp;name=L&quot;RenderTarget&quot;) const = 0</td></tr>
+<tr class="separator:ac0c8e1381d3157ac234a4c4716389d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf561dca9fbe02ceed1797c8e2d42a1"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#afdf561dca9fbe02ceed1797c8e2d42a1">createDescriptorLayout</a> (const std::wstring &amp;name=L&quot;DescriptorLayout&quot;) = 0</td></tr>
+<tr class="separator:afdf561dca9fbe02ceed1797c8e2d42a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fb950592c00c0467285b00b93214ff"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a70fb950592c00c0467285b00b93214ff">createSamplerDescriptorLayout</a> (const std::wstring &amp;name=L&quot;createSamplerDescriptorLayout&quot;) = 0</td></tr>
+<tr class="separator:a70fb950592c00c0467285b00b93214ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0882cec496ac701115a20cdd81692e26"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a0882cec496ac701115a20cdd81692e26">createDescriptorSet</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;layout, const std::wstring &amp;name=L&quot;DescriptorSet&quot;) = 0</td></tr>
+<tr class="separator:a0882cec496ac701115a20cdd81692e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e1b74bd38d400a76071dba086c4d6a"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad9e1b74bd38d400a76071dba086c4d6a">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=1.0f, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
+<tr class="separator:ad9e1b74bd38d400a76071dba086c4d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a012469ba0acab3ce2712c7e34d08c8c9">getPhysicalDevice</a> () const</td></tr>
 <tr class="separator:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130131cf643a17be360d2e2ac080b279"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279">getDevice</a> () const</td></tr>
@@ -116,19 +118,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f5113654b231e26fdd6db273612d73b"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; Vireo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a5f5113654b231e26fdd6db273612d73b">create</a> (<a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a> backend)</td></tr>
-<tr class="separator:a5f5113654b231e26fdd6db273612d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182f874336d2992e9cd06e11661e2ddb"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; Vireo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a182f874336d2992e9cd06e11661e2ddb">create</a> (<a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a> backend)</td></tr>
+<tr class="separator:a182f874336d2992e9cd06e11661e2ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80cbf3a223060c85ff273d534b21059a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a80cbf3a223060c85ff273d534b21059a">isBackendSupported</a> (<a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a> backend)</td></tr>
 <tr class="separator:a80cbf3a223060c85ff273d534b21059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac8bf571bdb04aa2a6f8f3557b54475b9"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classvireo_1_1Instance.html">Instance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ac8bf571bdb04aa2a6f8f3557b54475b9">instance</a></td></tr>
-<tr class="separator:ac8bf571bdb04aa2a6f8f3557b54475b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc378636834da272101d7ab97a24ec56"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classvireo_1_1PhysicalDevice.html">PhysicalDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#adc378636834da272101d7ab97a24ec56">physicalDevice</a></td></tr>
-<tr class="separator:adc378636834da272101d7ab97a24ec56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0f9e6e8e1d5e2fcc735f96671f7a2a9"><td class="memItemLeft" align="right" valign="top">shared_ptr&lt; <a class="el" href="classvireo_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ae0f9e6e8e1d5e2fcc735f96671f7a2a9">device</a></td></tr>
-<tr class="separator:ae0f9e6e8e1d5e2fcc735f96671f7a2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7170f6526554e5c2f194fa6192e7df92"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1Instance.html">Instance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a7170f6526554e5c2f194fa6192e7df92">instance</a></td></tr>
+<tr class="separator:a7170f6526554e5c2f194fa6192e7df92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9943eb40fc3c415b639d4bb111e062"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1PhysicalDevice.html">PhysicalDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a2c9943eb40fc3c415b639d4bb111e062">physicalDevice</a></td></tr>
+<tr class="separator:a2c9943eb40fc3c415b639d4bb111e062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05df00df285711767ba02dd25642c78"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1Device.html">Device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#af05df00df285711767ba02dd25642c78">device</a></td></tr>
+<tr class="separator:af05df00df285711767ba02dd25642c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a59cc6c2feafd79f6bbc327679215bac0"></a>
@@ -155,7 +157,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5f5113654b231e26fdd6db273612d73b"></a>
+<a class="anchor" id="a182f874336d2992e9cd06e11661e2ddb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -163,7 +165,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static unique_ptr&lt;Vireo&gt; create </td>
+          <td class="memname">static std::shared_ptr&lt;Vireo&gt; create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1">Backend</a>&#160;</td>
           <td class="paramname"><em>backend</em></td><td>)</td>
@@ -180,7 +182,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab8c92a3e2d78cf19077b72e990d43d5c"></a>
+<a class="anchor" id="aadf08ffb53e73cecc3dbdb367b6dfca2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -188,7 +190,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1Buffer.html">Buffer</a>&gt; createBuffer </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Buffer.html">Buffer</a>&gt; createBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">BufferType</a>&#160;</td>
           <td class="paramname"><em>type</em>, </td>
@@ -208,7 +210,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;Buffer&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -235,7 +237,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac7184259c0beb593eb46275684d91c1c"></a>
+<a class="anchor" id="a9ca0900ac9674fe7f6d90b504f63b257"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -243,7 +245,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a>&gt; createCommandAllocator </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a>&gt; createCommandAllocator </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -265,7 +267,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aca3f1157c4b866357a0a6d2bd4e8ab2e"></a>
+<a class="anchor" id="a534e5105e1fb9923046076185657b177"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,21 +275,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1ComputePipeline.html">ComputePipeline</a>&gt; createComputePipeline </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1ComputePipeline.html">ComputePipeline</a>&gt; createComputePipeline </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pipelineResources</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>shader</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;ComputePipeline&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -313,7 +315,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad2aad1b31cbf7adbb5503cfaf2932a5e"></a>
+<a class="anchor" id="afdf561dca9fbe02ceed1797c8e2d42a1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -321,9 +323,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a>&gt; createDescriptorLayout </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a>&gt; createDescriptorLayout </td>
           <td>(</td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;DescriptorLayout&quot;</code></td><td>)</td>
           <td></td>
         </tr>
@@ -343,7 +345,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a778affa9da7460ef345fc4a7a8e2d78e"></a>
+<a class="anchor" id="a0882cec496ac701115a20cdd81692e26"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -351,15 +353,15 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a>&gt; createDescriptorSet </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a>&gt; createDescriptorSet </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>layout</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;DescriptorSet&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -384,7 +386,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b915a500366fae027a02bf17fef9026"></a>
+<a class="anchor" id="a8aef3be17670442d7b908ebb408355f2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -392,11 +394,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1Fence.html">Fence</a>&gt; createFence </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Fence.html">Fence</a>&gt; createFence </td>
           <td>(</td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
-          <td class="paramname"><em>name</em> = <code>L&quot;Fence&quot;</code></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createSignaled</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>L&quot;Fence&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -407,6 +419,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a fence for CPU/GPU synchronization </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">createSignaled</td><td>Create the fence in signaled state </td></tr>
     <tr><td class="paramname">name</td><td>Object name for debug </td></tr>
   </table>
   </dd>
@@ -414,7 +427,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae914438f575de3a8e7fabf6551feb208"></a>
+<a class="anchor" id="a4e09ff8f0ade6c4276dcf48e9910466d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -422,39 +435,15 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1GraphicPipeline.html">GraphicPipeline</a>&gt; createGraphicPipeline </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1GraphicPipeline.html">GraphicPipeline</a>&gt; createGraphicPipeline </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pipelineResources</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vertexInputLayout</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vertexShader</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>fragmentShader</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> &amp;&#160;</td>
           <td class="paramname"><em>configuration</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;GraphicPipeline&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -471,10 +460,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a graphic pipeline. At least one shader must be used. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classvireo_1_1PipelineResources.html">pipelineResources</a></td><td>Resources for the shaders </td></tr>
-    <tr><td class="paramname"><a class="el" href="classvireo_1_1VertexInputLayout.html">vertexInputLayout</a></td><td>Description of the input vertices </td></tr>
-    <tr><td class="paramname">vertexShader</td><td>Shader for the vertex shader </td></tr>
-    <tr><td class="paramname">fragmentShader</td><td>Shader for the fragment/pixel shader </td></tr>
     <tr><td class="paramname">configuration</td><td><a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> configuration </td></tr>
     <tr><td class="paramname">name</td><td>Object name for debug </td></tr>
   </table>
@@ -483,7 +468,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad1ab8f4985febb817fd95ae85c43ab47"></a>
+<a class="anchor" id="a15fb317160440594ccf02dd086023129"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -491,7 +476,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1Image.html">Image</a>&gt; createImage </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Image.html">Image</a>&gt; createImage </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -523,7 +508,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;Image&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -552,7 +537,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaae6f2e8cd48b87eabaa02dc2bac1854"></a>
+<a class="anchor" id="a1a2694c5cce82ee9d6ee3a17e454f650"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -560,10 +545,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a>&gt; createPipelineResources </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a>&gt; createPipelineResources </td>
           <td>(</td>
-          <td class="paramtype">const vector&lt; shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>descriptorLayouts</em>, </td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>descriptorLayouts</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -574,7 +559,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;PipelineResource&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -600,7 +585,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abd9703a3025aa9b3ae528fb563a66335"></a>
+<a class="anchor" id="a01e46b88e0e1285c1020d4c6e9bc8d0b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -608,7 +593,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1Image.html">Image</a>&gt; createReadWriteImage </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Image.html">Image</a>&gt; createReadWriteImage </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -640,7 +625,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;RWImage&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -669,7 +654,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a37be0a208f3762a03371b01f751787d1"></a>
+<a class="anchor" id="ac0c8e1381d3157ac234a4c4716389d73"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -677,9 +662,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a>&gt; createRenderTarget </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a>&gt; createRenderTarget </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>swapChain</em>, </td>
         </tr>
         <tr>
@@ -697,7 +682,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;RenderTarget&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -724,7 +709,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a85463b50d6ceae93c7eb4e2ad80738e6"></a>
+<a class="anchor" id="aaa98f15a476f5e615ec473e709903bbb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -732,7 +717,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a>&gt; createRenderTarget </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1RenderTarget.html">RenderTarget</a>&gt; createRenderTarget </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -770,7 +755,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;RenderTarget&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -800,7 +785,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2ef9fc6655cbd33a726ed7446e3fe7d6"></a>
+<a class="anchor" id="ad9e1b74bd38d400a76071dba086c4d6a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -808,7 +793,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1Sampler.html">Sampler</a>&gt; createSampler </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Sampler.html">Sampler</a>&gt; createSampler </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a>&#160;</td>
           <td class="paramname"><em>minFilter</em>, </td>
@@ -877,7 +862,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a78846acfab5cf580bf4c45fce1f3e660"></a>
+<a class="anchor" id="a70fb950592c00c0467285b00b93214ff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -885,9 +870,9 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a>&gt; createSamplerDescriptorLayout </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a>&gt; createSamplerDescriptorLayout </td>
           <td>(</td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;createSamplerDescriptorLayout&quot;</code></td><td>)</td>
           <td></td>
         </tr>
@@ -907,7 +892,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af218637c84cce880cb4da10fbe7a5ea8"></a>
+<a class="anchor" id="a9a8e7ba7e45bfd388f338b5ada62cb0c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -915,9 +900,50 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; createShaderModule </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1Semaphore.html">Semaphore</a>&gt; createSemaphore </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824a">SemaphoreType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>L&quot;Semaphore&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a semaphore for GPU/GPU synchronization </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="classvireo_1_1Semaphore.html">Semaphore</a> type </td></tr>
+    <tr><td class="paramname">name</td><td>Object name for debug </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad525756f14bc5eeacfb8000edcbfa746"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; createShaderModule </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -937,7 +963,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa4fce1aac2056ea6e925a66b7eb22429"></a>
+<a class="anchor" id="a2945b364ea7c3978aa1c1e6706abf3bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -945,7 +971,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a>&gt; createSubmitQueue </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a>&gt; createSubmitQueue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">CommandType</a>&#160;</td>
           <td class="paramname"><em>commandType</em>, </td>
@@ -953,7 +979,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const wstring &amp;&#160;</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>L&quot;SubmitQueue&quot;</code>&#160;</td>
         </tr>
         <tr>
@@ -978,7 +1004,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2ec4367f0fdd1bdc6f9cf983d2cdd8d9"></a>
+<a class="anchor" id="ab7fe4410f37954c2e05ff87f370c1887"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -986,7 +1012,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a>&gt; createSwapChain </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a>&gt; createSwapChain </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
           <td class="paramname"><em>format</em>, </td>
@@ -994,7 +1020,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>presentQueue</em>, </td>
         </tr>
         <tr>
@@ -1040,7 +1066,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aea8b9f9d857ce841edf556743204b1e5"></a>
+<a class="anchor" id="a7261cac5cb82702c34b49cffc08c8f74"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1048,7 +1074,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a>&gt; createVertexLayout </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a>&gt; createVertexLayout </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
@@ -1056,7 +1082,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const vector&lt; <a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>attributesDescriptions</em>&#160;</td>
         </tr>
         <tr>
@@ -1198,7 +1224,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae0f9e6e8e1d5e2fcc735f96671f7a2a9"></a>
+<a class="anchor" id="af05df00df285711767ba02dd25642c78"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1206,7 +1232,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="classvireo_1_1Device.html">Device</a>&gt; device</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1Device.html">Device</a>&gt; device</td>
         </tr>
       </table>
   </td>
@@ -1218,7 +1244,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8bf571bdb04aa2a6f8f3557b54475b9"></a>
+<a class="anchor" id="a7170f6526554e5c2f194fa6192e7df92"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1226,7 +1252,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="classvireo_1_1Instance.html">Instance</a>&gt; instance</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1Instance.html">Instance</a>&gt; instance</td>
         </tr>
       </table>
   </td>
@@ -1238,7 +1264,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adc378636834da272101d7ab97a24ec56"></a>
+<a class="anchor" id="a2c9943eb40fc3c415b639d4bb111e062"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1246,7 +1272,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">shared_ptr&lt;<a class="el" href="classvireo_1_1PhysicalDevice.html">PhysicalDevice</a>&gt; physicalDevice</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1PhysicalDevice.html">PhysicalDevice</a>&gt; physicalDevice</td>
         </tr>
       </table>
   </td>
@@ -1261,7 +1287,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on lun. avr. 28 2025 10:10:12 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on mar. avr. 29 2025 13:22:03 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>

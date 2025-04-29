@@ -68,10 +68,10 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb83a854bf8d34bf39c12aad1fb726f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#aeb83a854bf8d34bf39c12aad1fb726f8">reset</a> () const = 0</td></tr>
 <tr class="separator:aeb83a854bf8d34bf39c12aad1fb726f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bdf138588547f0945cf2d34f9a8cc53"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#a6bdf138588547f0945cf2d34f9a8cc53">createCommandList</a> (const shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;pipeline) const = 0</td></tr>
-<tr class="separator:a6bdf138588547f0945cf2d34f9a8cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a37d8b8d118e8f6727c96a128c528ab"><td class="memItemLeft" align="right" valign="top">virtual shared_ptr&lt; <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#a2a37d8b8d118e8f6727c96a128c528ab">createCommandList</a> () const = 0</td></tr>
-<tr class="separator:a2a37d8b8d118e8f6727c96a128c528ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f97d15dc39f8f3dec75c54584e15750"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#a7f97d15dc39f8f3dec75c54584e15750">createCommandList</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;pipeline) const = 0</td></tr>
+<tr class="separator:a7f97d15dc39f8f3dec75c54584e15750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16a2d577cbe040ddb146be53b8fa63a"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#ac16a2d577cbe040ddb146be53b8fa63a">createCommandList</a> () const = 0</td></tr>
+<tr class="separator:ac16a2d577cbe040ddb146be53b8fa63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5455bf1adf536b2e021ef5d9d143db5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#af5455bf1adf536b2e021ef5d9d143db5">~CommandAllocator</a> () = default</td></tr>
 <tr class="separator:af5455bf1adf536b2e021ef5d9d143db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9801a52fd19207a55590b30d3803f48"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandAllocator.html#ac9801a52fd19207a55590b30d3803f48">getCommandListType</a> () const</td></tr>
@@ -131,7 +131,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2a37d8b8d118e8f6727c96a128c528ab"></a>
+<a class="anchor" id="ac16a2d577cbe040ddb146be53b8fa63a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -139,7 +139,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1CommandList.html">CommandList</a>&gt; createCommandList </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1CommandList.html">CommandList</a>&gt; createCommandList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -155,7 +155,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6bdf138588547f0945cf2d34f9a8cc53"></a>
+<a class="anchor" id="a7f97d15dc39f8f3dec75c54584e15750"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -163,9 +163,9 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual shared_ptr&lt;<a class="el" href="classvireo_1_1CommandList.html">CommandList</a>&gt; createCommandList </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1CommandList.html">CommandList</a>&gt; createCommandList </td>
           <td>(</td>
-          <td class="paramtype">const shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pipeline</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -176,7 +176,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a new graphic command lists </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns a new graphic command list </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pipeline</td><td>Associate pipeline </td></tr>
   </table>
@@ -236,7 +236,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on lun. avr. 28 2025 10:10:12 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on mar. avr. 29 2025 13:22:03 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>

@@ -115,6 +115,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Sampler.html">Sampler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Semaphore.html">Semaphore</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a></td></tr>
@@ -391,9 +393,35 @@ Enums</h2></td></tr>
 <tr class="separator:a6b257efc0b0cd2a722f23dcf0b0519a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22fa67f5720e9bfbd075bd088285c531"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531">ShaderStage</a> { <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a5fb1f955b45e38e31789286a1790398d">ALL</a>, 
 <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a0c3e47aef93a7f244f41ab309a33634b">VERTEX</a>, 
-<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a7345a249ed5c2f850d85dc1727c24716">FRAGMENT</a>
+<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a7345a249ed5c2f850d85dc1727c24716">FRAGMENT</a>, 
+<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531aac404d7ce6ca5862e9b8a2641fbafd90">COMPUTE</a>
  }</td></tr>
 <tr class="separator:a22fa67f5720e9bfbd075bd088285c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a6f68a4c9f786cf3809e71b5669b04"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04">WaitStage</a> { <br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04ab50339a10e1de285ac99d4c3990b8693">NONE</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a809aa84e55885d0da0204414a776f91c">PIPELINE_TOP</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04aa8d58304214171127a082a5b70bdea85">VERTEX_INPUT</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a9861721c6c2dfbdc35d20746c386a090">VERTEX_SHADER</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04aaeb90b6ced5af97c297f3272b9d3398d">DEPTH_STENCIL_TEST_BEFORE_FRAGMENT_SHADER</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04aaf58ae9f6cade42be9607c7298fd97d1">FRAGMENT_SHADER</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04ae52ac1f5472f42d232faaf48732c1308">DEPTH_STENCIL_TEST_AFTER_FRAGMENT_SHADER</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04ae2b40fc417b60f090c0f080be40a5a5c">COLOR_OUTPUT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04ae6ae2d0a1bee9d966dcae11a201a3c56">COMPUTE_SHADER</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04aeb5ddb3b6096fb90ff720d9c3e2a6628">TRANSFER</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a08ad966e43371e0c05d25c3a139b47b2">PIPELINE_BOTTOM</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a1b88f31774becdfc8ccef062b2496f5b">ALL_GRAPHICS</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a72229b4c1470bb2d993053e61ab2f74a">ALL_COMMANDS</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04ae8606d021da140a92c7eba8d9b8af84f">COPY</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a573e40e343fcf195f090139de652c482">RESOLV</a>, 
+<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04afceb4f1763a5a673cad9b33713e8f265">BLIT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a813461e0c58e7ad59a2fd83ca2237fec">CLEAR</a>
+<br />
+ }</td></tr>
+<tr class="separator:a14a6f68a4c9f786cf3809e71b5669b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ee7da93cb9c170c97d8e60f3187705"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> { <br />
 &#160;&#160;<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a0db45d2a4141101bdfe48e3314cfbca3">UNDEFINED</a>, 
 <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705ab61773b9b3968a9988d765d728985862">GENERAL</a>, 
@@ -431,29 +459,19 @@ Enums</h2></td></tr>
 <a class="el" href="namespacevireo.html#a9232558a2a69950ad6c60a99827b7ccdaac404d7ce6ca5862e9b8a2641fbafd90">COMPUTE</a>
  }</td></tr>
 <tr class="separator:a9232558a2a69950ad6c60a99827b7ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bff641386b62aac37ca086b4b93824a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824a">SemaphoreType</a> { <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452">BINARY</a>, 
+<a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">TIMELINE</a>
+ }</td></tr>
+<tr class="separator:a4bff641386b62aac37ca086b4b93824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Vireo_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a></td></tr>
-<tr class="separator:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3834002056a426f10460f2266277e63a"><td class="memItemLeft" align="right" valign="top">export module&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Vireo_8ixx.html#a3834002056a426f10460f2266277e63a">vireo</a></td></tr>
 <tr class="separator:a3834002056a426f10460f2266277e63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42436df41e711844c18d77cbb46197af"><td class="memItemLeft" align="right" valign="top">export import vireo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Vireo_8ixx.html#a42436df41e711844c18d77cbb46197af">tools</a></td></tr>
 <tr class="separator:a42436df41e711844c18d77cbb46197af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a96e5f0eca87c2426370e0897ac7b8ca6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">module</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a42436df41e711844c18d77cbb46197af"></a>
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +499,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <hr class="footer"/><address class="footer"><small>
-Generated on lun. avr. 28 2025 10:10:12 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
+Generated on mar. avr. 29 2025 13:22:03 for Vireo RHI &nbsp; by &#160;<a href="https://www.copperspice.com/documentation-doxypress.html">
 <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0
 </small></address>
 </body>
