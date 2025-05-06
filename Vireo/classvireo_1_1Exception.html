@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 2.0.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vireo: PhysicalDevice Class Reference</title>
+<title>Vireo: Exception Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,37 +61,36 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classvireo_1_1PhysicalDevice.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classvireo_1_1Exception.html',''); initResizable(); });
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="classvireo_1_1PhysicalDevice-members.html">List of all members</a>  </div>
+<a href="classvireo_1_1Exception-members.html">List of all members</a>  </div>
   <div class="headertitle">
-    <div class="title">PhysicalDevice Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+    <div class="title">Exception Class Reference</div>
   </div>
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A physical device object (adapter) </p>
-</div><table class="memberdecls">
+<div class="dynheader">
+Inheritance diagram for Exception:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classvireo_1_1Exception.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a94345c3a92a173f42c5b61fcc7240d80"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1PhysicalDevice.html#a94345c3a92a173f42c5b61fcc7240d80">~PhysicalDevice</a> () = default</td></tr>
-<tr class="separator:a94345c3a92a173f42c5b61fcc7240d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc9a81a5bb21326ba6504b0bf763e8d"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structvireo_1_1PhysicalDeviceDesc.html">PhysicalDeviceDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1PhysicalDevice.html#a6cc9a81a5bb21326ba6504b0bf763e8d">getDescription</a> () const = 0</td></tr>
-<tr class="separator:a6cc9a81a5bb21326ba6504b0bf763e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0b6f457287ae397513ea5deb7d5bc431"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1PhysicalDevice.html#a0b6f457287ae397513ea5deb7d5bc431">PhysicalDevice</a> () = default</td></tr>
-<tr class="separator:a0b6f457287ae397513ea5deb7d5bc431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad951c450f749673d3b967230f126f205"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ad951c450f749673d3b967230f126f205"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvireo_1_1Exception.html#ad951c450f749673d3b967230f126f205">Exception</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="separator:ad951c450f749673d3b967230f126f205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1c33909e01e1dfc85617cf2477d3eb"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Exception.html#aac1c33909e01e1dfc85617cf2477d3eb">what</a> () const noexcept override</td></tr>
+<tr class="separator:aac1c33909e01e1dfc85617cf2477d3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a94345c3a92a173f42c5b61fcc7240d80"></a>
+<a class="anchor" id="ad951c450f749673d3b967230f126f205"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -99,38 +98,16 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~PhysicalDevice </td>
+          <td class="memname">Exception </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0b6f457287ae397513ea5deb7d5bc431"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PhysicalDevice </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -138,7 +115,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6cc9a81a5bb21326ba6504b0bf763e8d"></a>
+<a class="anchor" id="aac1c33909e01e1dfc85617cf2477d3eb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,7 +123,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="structvireo_1_1PhysicalDeviceDesc.html">PhysicalDeviceDesc</a> getDescription </td>
+          <td class="memname">const char* what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -154,11 +131,10 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the graphic adapter description </p>
 
 </div>
 </div>
@@ -167,7 +143,7 @@ Protected Member Functions</h2></td></tr>
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1PhysicalDevice.html">PhysicalDevice</a></li>
+    <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Exception.html">Exception</a></li>
     <li class="footer">Generated on mar. mai 6 2025 22:21:33 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>

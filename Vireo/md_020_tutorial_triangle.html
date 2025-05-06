@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 2.0.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vireo: Vireo RHI &quot;Hello Triangle&quot; tutorial</title>
+<title>Vireo: &quot;Hello Triangle&quot; tutorial</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,7 +59,7 @@ $(document).ready(function(){initNavTree('md_020_tutorial_triangle.html',''); in
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-    <div class="title">Vireo RHI "Hello Triangle" tutorial </div>
+    <div class="title">"Hello Triangle" tutorial </div>
   </div>
   <div class="clear-floats"></div>
 </div><!--header-->
@@ -132,14 +132,14 @@ backend_select.png</div></div>
 <div class="caption">
 empty_window.png</div></div>
     <h2>The Vireo class</h2>
-<p>The <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1Vireo.html">Vireo</a> class encapsulate the creation of the various objects needed by the graphics API such as the physical adapter and the logical device. The instance of the <code>Vireo</code> class is stored in the <code>vireo</code> field of the base <code>Application</code> class of your project. The creation of the instance is done in the os-specific main class (<code>Win32Application</code> for Windows) of your project after the user selects the runtime backend :</p>
+<p>The <a href="classvireo_1_1Vireo.html"><code>Vireo</code></a> class encapsulate the creation of the various objects needed by the graphics API such as the physical adapter and the logical device. The instance of the <code>Vireo</code> class is stored in the <code>vireo</code> field of the base <code>Application</code> class of your project. The creation of the instance is done in the os-specific main class (<code>Win32Application</code> for Windows) of your project after the user selects the runtime backend :</p>
 <div class="image">
 <img src="backend_select.png" alt=""/>
 <div class="caption">
 backend_select.png</div></div>
-    <p>The <code>Vireo</code> class is the main class of the library; You need an instance of this class to create all the library objects.</p>
+    <p>The <a href="classvireo_1_1Vireo.html"><code>Vireo</code></a> class is the main class of the library; You need an instance of this class to create all the library objects.</p>
 <h2>The submission queue</h2>
-<p>Most operations performed with graphics API, like draw commands and memory operations, are asynchronously executed by submitting them to a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1SubmitQueue.html">SubmitQueue</a>. Queues are allocated from <a href="https://henrimichelon.github.io/Vireo/namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">command types</a>, where each type supports a specific set of operations in its queues. For example, there could be separate queue families for graphics, compute and memory transfer operations.</p>
+<p>Most operations performed with graphics API, like draw commands and memory operations, are asynchronously executed by submitting them to a <a href="classvireo_1_1SubmitQueue.html"><code>SubmitQueue</code></a>. Queues are allocated from <a href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352">command types</a>, where each type supports a specific set of operations in its queues. For example, there could be separate queue families for graphics, compute and memory transfer operations.</p>
 <p>Add a submission queue field to your application : </p><pre class="fragment">...
 private:
     std::shared_ptr&lt;vireo::SubmitQueue&gt; graphicQueue;
@@ -154,7 +154,7 @@ private:
 </pre> <h2>The swap chain</h2>
 <p>The swap chain is a collection of frame buffers. Its basic purpose is to ensure that the image that we're currently rendering to is different from the one that is currently on the screen. This is important to make sure that only complete images are shown. Every time we want to draw a frame we have to ask the swap chain to provide us with an image to render to. When we've finished drawing a frame, the image is returned to the swap chain for it to be presented to the screen at some point.</p>
 <p>We need a synchronization mechanism when we use a swap chain since the modern graphics API executes commands asynchronously: we have to wait for the GPU to finish the submitted work before reusing a frame buffer.</p>
-<p>The CPU/GPU synchronization is done with a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1Fence.html">Fence</a> object. Since we can have multiple frames in flight (the GPU can render in multiple frame buffers in parallel), we need one <code>Fence</code> per frame buffer.</p>
+<p>The CPU/GPU synchronization is done with a <a href="classvireo_1_1Fence.html"><code>Fence</code></a> object. Since we can have multiple frames in flight (the GPU can render in multiple frame buffers in parallel), we need one <code>Fence</code> per frame buffer.</p>
 <p>Add a <code>FrameData</code> <code>struct</code> and a <code>vector</code> of <code>FrameData</code> to your application: </p><pre class="fragment">static constexpr auto FRAMES_IN_FLIGHT{2};
 struct FrameData {
     std::shared_ptr&lt;vireo::Fence&gt; inFlightFence;
@@ -163,7 +163,7 @@ std::vector&lt;FrameData&gt; framesData{FRAMES_IN_FLIGHT};
 </pre><p> Create the fences after the queue creation in the <code>onInit()</code> method : </p><pre class="fragment">for (auto&amp; frameData : framesData) {
     frameData.inFlightFence = vireo-&gt;createFence(true);
 }
-</pre><p>It's time to create the swap chain. Add a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1SwapChain.html">SwapChain</a> field to your application interface: </p><pre class="fragment">std::shared_ptr&lt;vireo::SwapChain&gt; swapChain;
+</pre><p>It's time to create the swap chain. Add a <a href="classvireo_1_1SwapChain.html"><code>SwapChain</code></a> field to your application interface: </p><pre class="fragment">std::shared_ptr&lt;vireo::SwapChain&gt; swapChain;
 </pre><p> We need the window handle to create the swap chain. The window is created by the <code>Win32Application</code> and the os-specific handle is stored in the <code>windowHandle</code> field of the base <code>Application</code> class. We can use this field to create the swap chain, just after the <code>graphicQueue</code> creation, in the <code>onInit()</code> method : </p><pre class="fragment">swapChain = vireo-&gt;createSwapChain(
     vireo::ImageFormat::R8G8B8A8_SRGB,
     graphicQueue,
@@ -189,7 +189,7 @@ std::vector&lt;FrameData&gt; framesData{FRAMES_IN_FLIGHT};
 </pre> <h2>Commands allocators and command lists</h2>
 <p>We can't execute the application now because the swap chain image needs to be ready to be presented by the GPU before calling <code>present()</code>. To make this frame buffer ready to be presented, we have to use a pipeline barrier to synchronize resource like image between the different stages of a GPU pipeline.</p>
 <p>A pipeline barrier is a GPU synchronization primitive that guarantees that any writes performed by those earlier stages are made visible (and available) to reads or writes in the later stages.</p>
-<p>A pipeline barrier is created on the GPU with the help of a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1CommandList.html">CommandList</a> and a command list is allocated by a <a href="https://henrimichelon.github.io/Vireo/classvireo_1_1CommandAllocator.html">CommandAllocator</a>.</p>
+<p>A pipeline barrier is created on the GPU with the help of a <a href="classvireo_1_1CommandList.html"><code>CommandList</code></a> and a command list is allocated by a <a href="classvireo_1_1CommandAllocator.html"><code>CommandAllocator</code></a>.</p>
 <p>The command list will also be used to record pipeline and drawing commands for execution by the GPU.</p>
 <p>Since we can render multiple frames in flight, we need one allocator and one list per frame: </p><pre class="fragment">...
 struct FrameData {
@@ -282,7 +282,7 @@ frameData.commandList-&gt;setScissors(swapChain-&gt;getExtent());
     { {  0.5f, -0.5f, 0.0f }, { 0.0f, 1.0f, 0.0f } },
     { { -0.5f, -0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f } }
 };
-</pre><p> The next step is to tell the graphic API how to pass this data format to the vertex shader once it's been uploaded into GPU memory. We have to describe each field of the <code>Vertex</code> struct using <a href="https://henrimichelon.github.io/Vireo/structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a>, after the triangle data: </p><pre class="fragment">const std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{
+</pre><p> The next step is to tell the graphic API how to pass this data format to the vertex shader once it's been uploaded into GPU memory. We have to describe each field of the <code>Vertex</code> struct using <a href="structvireo_1_1VertexAttributeDesc.html"><code>VertexAttributeDesc</code></a>, after the triangle data: </p><pre class="fragment">const std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{
     {"POSITION", vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, pos)},
     {"COLOR",    vireo::AttributeFormat::R32G32B32_FLOAT, offsetof(Vertex, color)}
 };
@@ -391,7 +391,7 @@ triangle_color_dx.png</div></div>
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on mar. mai 6 2025 21:48:54 for Vireo &nbsp; by
+    <li class="footer">Generated on mar. mai 6 2025 22:21:33 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

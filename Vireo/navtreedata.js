@@ -3,7 +3,8 @@ var NAVTREE =
   [ "Vireo", "index.html", [
     [ "Vireo user documentation", "md_000_vireo.html", null ],
     [ "Building Vireo RHI", "md_010_build.html", null ],
-    [ "Vireo RHI \"Hello Triangle\" tutorial", "md_020_tutorial_triangle.html", null ],
+    [ "\"Hello Triangle\" tutorial", "md_020_tutorial_triangle.html", null ],
+    [ "Vireo concepts", "md_100_concepts.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
         [ "vireo", "namespacevireo.html", [
@@ -119,6 +120,10 @@ var NAVTREE =
           [ "Device", "classvireo_1_1Device.html", [
             [ "~Device", "classvireo_1_1Device.html#ac31b8af5d051873b0b54428958e6e1b1", null ],
             [ "Device", "classvireo_1_1Device.html#a43701d9a19f5bd389b1bd01b74acaf4d", null ]
+          ] ],
+          [ "Exception", "classvireo_1_1Exception.html", [
+            [ "Exception", "classvireo_1_1Exception.html#ad951c450f749673d3b967230f126f205", null ],
+            [ "what", "classvireo_1_1Exception.html#aac1c33909e01e1dfc85617cf2477d3eb", null ]
           ] ],
           [ "Extent", "structvireo_1_1Extent.html", [
             [ "height", "structvireo_1_1Extent.html#a6ad4f820ce4e75cda0686fcaad5168be", null ],
@@ -334,6 +339,9 @@ var NAVTREE =
       ] ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", [
+        [ "std::exception", null, [
+          [ "Exception", "classvireo_1_1Exception.html", null ]
+        ] ],
         [ "Buffer", "classvireo_1_1Buffer.html", null ],
         [ "ClearValue", "unionvireo_1_1ClearValue.html", null ],
         [ "ColorBlendDesc", "structvireo_1_1ColorBlendDesc.html", null ],
@@ -376,7 +384,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structvireo_1_1GraphicPipelineConfiguration.html#aa521be8e92f296956a1ac3ada4f29399"
+"structvireo_1_1GraphicPipelineConfiguration.html#a67602ccceac0004976673c395daca90d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
