@@ -32,16 +32,24 @@ var NAVTREE =
       [ "Resources Descriptors", "manual_040_00_descriptors.html", [
         [ "Descriptor Layout", "manual_040_01_descriptor_layout.html", null ],
         [ "Descriptor Set", "manual_040_02_descriptor_set.html", null ],
-        [ "Pipeline Resources", "manual_040_03_pipeline_resources.html", null ]
+        [ "Push constants", "manual_040_03_push_constants.html", null ],
+        [ "Pipeline Resources", "manual_040_04_pipeline_resources.html", null ]
       ] ],
       [ "Command Lists", "manual_050_00_commands.html", null ],
       [ "Submission queues", "manual_060_00_queues.html", null ],
       [ "Shaders", "manual_070_00_shaders.html", null ],
-      [ "Pipelines", "manual_080_00_pipelines.html", null ],
-      [ "Synchronization", "manual_090_00_synchronization.html", null ],
-      [ "Rendering", "manual_100_00_renderpass.html", null ]
+      [ "Pipelines", "manual_080_00_pipelines.html", [
+        [ "Graphics Pipelines", "manual_080_01_graphic_pipelines.html", null ],
+        [ "Compute Pipelines", "manual_080_02_compute_pipelines.html", null ]
+      ] ],
+      [ "Synchronization", "manual_090_00_synchronization.html", [
+        [ "Fences", "manual_090_01_fences.html", null ],
+        [ "Semaphores", "manual_090_02_semaphores.html", null ],
+        [ "Memory barriers", "manual_090_03_barriers.html", null ]
+      ] ],
+      [ "Render pass", "manual_100_00_renderpass.html", null ],
+      [ "Swap Chains", "manual_110_00_swapchain.html", null ]
     ] ],
-    [ "Swap Chains", "manual_100_10_swapchain.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
         [ "vireo", "namespacevireo.html", [
@@ -421,7 +429,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"structvireo_1_1DepthClearValue.html"
+"structvireo_1_1ColorBlendDesc.html#a54e5195feebb7656631acce141ac1b63"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
