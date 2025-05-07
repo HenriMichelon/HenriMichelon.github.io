@@ -1,10 +1,30 @@
 var NAVTREE =
 [
   [ "Vireo", "index.html", [
-    [ "Vireo user documentation", "md_000_vireo.html", null ],
-    [ "Building Vireo RHI", "md_010_build.html", null ],
-    [ "\"Hello Triangle\" tutorial", "md_020_tutorial_triangle.html", null ],
-    [ "Vireo concepts", "md_100_concepts.html", null ],
+    [ "About", "about.html", null ],
+    [ "Getting Started", "getting_started.html", [
+      [ "Building Vireo", "gs_010_build.html", null ],
+      [ "\"Hello Triangle\" tutorial", "gs_020_tutorial_1.html", [
+        [ "Development environment", "tutorial_1_01_devenv.html", null ],
+        [ "Setting up the project", "tutorial_1_02_project.html", null ],
+        [ "The Vireo class", "tutorial_1_03_vireo_class.html", null ],
+        [ "The submission queue", "tutorial_1_04_queues.html", null ],
+        [ "The swap chain", "tutorial_1_05_swapchain.html", null ],
+        [ "Commands allocators and command lists", "tutorial_1_06_commands.html", null ],
+        [ "Render pass", "tutorial_1_07_renderpass.html", null ],
+        [ "Viewports and scissors", "tutorial_1_08_viewport.html", null ],
+        [ "Vertex data", "tutorial_1_09_vertex_data.html", null ],
+        [ "The graphic pipeline", "tutorial_1_10_pipeline.html", null ],
+        [ "Shader modules", "tutorial_1_11_shaders.html", null ],
+        [ "Pipeline creation", "tutorial_1_12_pipeline_config.html", null ],
+        [ "Drawing", "tutorial_1_13_drawing.html", null ],
+        [ "What\'s next?", "tutorial_1_14_conclusion.html", null ]
+      ] ]
+    ] ],
+    [ "Manual", "manual.html", [
+      [ "The Vireo class", "manual_010_vireo_class.html", null ],
+      [ "Backend instances, physical devices and logical devices", "manual_020_devices.html", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
         [ "vireo", "namespacevireo.html", [
@@ -383,8 +403,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"structvireo_1_1GraphicPipelineConfiguration.html#a67602ccceac0004976673c395daca90d"
+"about.html",
+"structvireo_1_1GraphicPipelineConfiguration.html#a5dd38ab71aff7188d4f5b430be25c9f2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
