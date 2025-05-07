@@ -23,7 +23,12 @@ var NAVTREE =
     ] ],
     [ "Manual", "manual.html", [
       [ "The Vireo class", "manual_010_vireo_class.html", null ],
-      [ "Backend instances, physical devices and logical devices", "manual_020_devices.html", null ]
+      [ "Backend instances, physical devices and logical devices", "manual_020_devices.html", null ],
+      [ "Resources", "manual_030_00_resources.html", [
+        [ "Memory buffers", "manual_030_01_resources.html", null ],
+        [ "Images", "manual_030_02_resources.html", null ],
+        [ "Image samplers", "manual_030_03_resources.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
@@ -39,7 +44,7 @@ var NAVTREE =
             [ "getType", "classvireo_1_1Buffer.html#ad210334d8ff0b83b000130dfcaac2faf", null ],
             [ "map", "classvireo_1_1Buffer.html#ab787505118207f731de3eed5a7c1d7c9", null ],
             [ "unmap", "classvireo_1_1Buffer.html#ab6614885bbf62415cd62371d7d94b301", null ],
-            [ "write", "classvireo_1_1Buffer.html#a2280f6331de3a75c8df6acb74b68316e", null ],
+            [ "write", "classvireo_1_1Buffer.html#a43210bfeb974e1020ee27b98bf14cd0f", null ],
             [ "bufferSize", "classvireo_1_1Buffer.html#a7be887a2ca0a258cf6b368d32fd87487", null ],
             [ "instanceCount", "classvireo_1_1Buffer.html#a03769e76e974fc0a517627ea030c81f9", null ],
             [ "instanceSize", "classvireo_1_1Buffer.html#af34c811ab25184584ba84d327ce867fc", null ],
@@ -404,7 +409,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"structvireo_1_1GraphicPipelineConfiguration.html#a5dd38ab71aff7188d4f5b430be25c9f2"
+"structvireo_1_1GraphicPipelineConfiguration.html#a1b45dd5b84c41e5322d45980f1f572fe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

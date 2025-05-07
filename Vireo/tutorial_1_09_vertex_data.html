@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('tutorial_1_09_vertex_data.html',''); i
 <div class="line">uploadCommandList-&gt;cleanup();</div>
 </div><!-- end fragment -->
 <p>By adding the <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a> at the end of the method, the upload operation will be executed while we continue to create our pipeline.</p>
-<p>Note that we call the <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> method to clear the temporary (staging) buffer used for the host-to-device copy of the vertex data. The asynchronous nature of the operating means that we have to wait for the end of the operation to free the host-visible allocated memory. This is done automatically in the command list destructor, but we added this call in the tutorial for clarification.</p>
+<p>Note that we call the <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> method to clear the temporary (staging) buffer used for the host-to-device copy of the vertex data. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory. This is done automatically in the command list destructor, but we added this call in the tutorial for clarification.</p>
 <p>Next : <a class="el" href="tutorial_1_10_pipeline.html">The graphic pipeline</a> </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('tutorial_1_09_vertex_data.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_tutorial_1.html">&quot;Hello Triangle&quot; tutorial</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 10:49:38 for Vireo &nbsp; by
+    <li class="footer">Generated on mer. mai 7 2025 14:00:28 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

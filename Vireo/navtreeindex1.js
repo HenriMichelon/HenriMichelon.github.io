@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"structvireo_1_1GraphicPipelineConfiguration.html#a1b45dd5b84c41e5322d45980f1f572fe":[3,0,0,14,15],
+"structvireo_1_1GraphicPipelineConfiguration.html#a2aaafa081f8918bcd435a82d974ef512":[3,0,0,14,8],
+"structvireo_1_1GraphicPipelineConfiguration.html#a58daf641d993a02e7806fe8b763fad6c":[3,0,0,14,18],
+"structvireo_1_1GraphicPipelineConfiguration.html#a59b235a6b16f59d681662eb6d0eef83d":[3,0,0,14,1],
 "structvireo_1_1GraphicPipelineConfiguration.html#a5dd38ab71aff7188d4f5b430be25c9f2":[3,0,0,14,9],
 "structvireo_1_1GraphicPipelineConfiguration.html#a6281a90a5be8bff2d6afadd355c97cff":[3,0,0,14,23],
 "structvireo_1_1GraphicPipelineConfiguration.html#a659310043f298c09243889f6a1e0701a":[3,0,0,14,17],

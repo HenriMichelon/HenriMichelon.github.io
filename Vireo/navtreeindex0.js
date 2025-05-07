@@ -5,8 +5,8 @@ var NAVTREEINDEX0 =
 "classes.html":[3,1],
 "classvireo_1_1Buffer.html":[3,0,0,0],
 "classvireo_1_1Buffer.html#a03769e76e974fc0a517627ea030c81f9":[3,0,0,0,12],
-"classvireo_1_1Buffer.html#a2280f6331de3a75c8df6acb74b68316e":[3,0,0,0,10],
 "classvireo_1_1Buffer.html#a2a0c94e27b7fe4f968d16e44711f8383":[3,0,0,0,3],
+"classvireo_1_1Buffer.html#a43210bfeb974e1020ee27b98bf14cd0f":[3,0,0,0,10],
 "classvireo_1_1Buffer.html#a4733e816d7c9350929e2d24ef660e324":[3,0,0,0,4],
 "classvireo_1_1Buffer.html#a52d7b79d707b2535952cb263ce9bbbe5":[3,0,0,0,2],
 "classvireo_1_1Buffer.html#a5ac6cf5a5123e40167383798584f10ad":[3,0,0,0,14],
@@ -224,6 +224,10 @@ var NAVTREEINDEX0 =
 "manual.html":[2],
 "manual_010_vireo_class.html":[2,0],
 "manual_020_devices.html":[2,1],
+"manual_030_00_resources.html":[2,2],
+"manual_030_01_resources.html":[2,2,0],
+"manual_030_02_resources.html":[2,2,1],
+"manual_030_03_resources.html":[2,2,2],
 "namespacevireo.html":[3,0,0],
 "pages.html":[],
 "structvireo_1_1ColorBlendDesc.html":[3,0,0,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "structvireo_1_1GraphicPipelineConfiguration.html#a0a778d1f35890bd62d1b54212bf0fc46":[3,0,0,14,21],
 "structvireo_1_1GraphicPipelineConfiguration.html#a0c612171960a136d461b35fc35e85020":[3,0,0,14,22],
 "structvireo_1_1GraphicPipelineConfiguration.html#a1944b0918378af218375dd45c1f191d1":[3,0,0,14,12],
-"structvireo_1_1GraphicPipelineConfiguration.html#a1a148f03cb706e1df2d5da7c157a3dee":[3,0,0,14,4],
-"structvireo_1_1GraphicPipelineConfiguration.html#a1b45dd5b84c41e5322d45980f1f572fe":[3,0,0,14,15],
-"structvireo_1_1GraphicPipelineConfiguration.html#a2aaafa081f8918bcd435a82d974ef512":[3,0,0,14,8],
-"structvireo_1_1GraphicPipelineConfiguration.html#a58daf641d993a02e7806fe8b763fad6c":[3,0,0,14,18],
-"structvireo_1_1GraphicPipelineConfiguration.html#a59b235a6b16f59d681662eb6d0eef83d":[3,0,0,14,1]
+"structvireo_1_1GraphicPipelineConfiguration.html#a1a148f03cb706e1df2d5da7c157a3dee":[3,0,0,14,4]
 };
