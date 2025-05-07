@@ -64,7 +64,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classvireo_1_1Image.html">Image</a> class represent multidimensional arrays of data which can be used for various purposes (e.g. attachments, textures), by binding them to a graphics or compute pipeline via descriptor sets, or by directly specifying them as parameters to certain commands.</p>
+<div class="textblock"><p>The <a class="el" href="classvireo_1_1Image.html">Image</a> class represent multidimensional arrays of data which can be used for various purposes (e.g. attachments, textures), by binding them to a graphics or compute pipeline via <a class="el" href="manual_040_00_descriptors.html">descriptor sets</a>, or by directly specifying them as parameters to certain commands.</p>
 <p>An image have a <a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">pixel format</a>. Vireo supports images formats that are commons to both Vulkan and DirectX, so it's safe to use any of theses formats without compromising portability.</p>
 <p>They are created with <a class="el" href="classvireo_1_1Vireo.html#a15fb317160440594ccf02dd086023129">vireo::Vireo::createImage</a>. You need to provide the format, the width and height in number of pixels, the number of mips level (e.g. for mipmaps) and the size of the image array (e.g. 6 for a cubemap) :</p>
 <div class="fragment"><div class="line">texture = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createImage(<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">vireo::ImageFormat::R8G8B8A8_SRGB</a>, 512, 512, 1, 1, L<span class="stringliteral">&quot;CheckerBoardTexture&quot;</span>);</div>
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 14:00:28 for Vireo &nbsp; by
+    <li class="footer">Generated on mer. mai 7 2025 15:24:08 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

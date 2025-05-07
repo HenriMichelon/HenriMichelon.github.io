@@ -64,7 +64,7 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> class represent linear arrays of data which are used for various purposes by binding them to a graphics or compute pipeline via descriptor sets or certain commands or by directly specifying them as parameters to certain commands.</p>
+<div class="textblock"><p>The <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> class represent linear arrays of data which are used for various purposes by binding them to a graphics or compute pipeline via <a class="el" href="manual_040_00_descriptors.html">descriptor sets</a> or certain commands or by directly specifying them as parameters to certain commands.</p>
 <p>Thera are four types of buffers :</p><ul>
 <li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> : used to store vertex data for the vertex shaders, used by the GPU when drawing primitives.</li>
 <li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a> : used to store vertex index data for the vertex shaders, used by the GPU when drawing primitives.</li>
@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 <h2>Uploading data into VRAM</h2>
 <p>For device-memory buffers (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a>) you need to instruct the GPU to copy data from a temporary, host-accessible (staging) buffer to the destination buffer.</p>
 <p>By using the <a class="el" href="classvireo_1_1CommandList.html#a814ae10770e0a9ac5f5c1102c41a29d8">vireo::CommandList::upload</a> methods you can easily upload data into a buffer. The <code>upload</code> method will take care of the staging buffer and temporary copy of the data for you.</p>
-<p>The GPU commands recorded with a <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> are executed asynchronously by the GPU. Once you have uploaded all of the data using one <a class="el" href="classvireo_1_1CommandList.html">CommandList</a> you need to call <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> on this <code>CommandList</code> to clear the temporary (staging) buffers used for the host-to-device transfers. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory, which mean you have to call <code>cleanup</code> only after the submit queue have finished the commands execution by blocking the CPU-side with <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a>.</p>
+<p>The GPU commands recorded with a <a class="el" href="manual_050_00_commands.html">CommandList</a> are executed asynchronously by the GPU. Once you have uploaded all of the data using one<code>CommandList</code> you need to call <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> on this <code>CommandList</code> to clear the temporary (staging) buffers used for the host-to-device transfers. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory, which mean you have to call <code>cleanup</code> only after the <a class="el" href="manual_060_00_queues.html">submit queue</a> have finished the commands execution by blocking the CPU-side with <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Since the call to <code>cleanup</code> is done automatically in the command list destructor, you only have to call it explicitly on non-temporary command lists.</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Example of a vertex buffer upload</span></div>
 <div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 14:00:28 for Vireo &nbsp; by
+    <li class="footer">Generated on mer. mai 7 2025 15:24:08 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

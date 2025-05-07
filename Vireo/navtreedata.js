@@ -28,8 +28,20 @@ var NAVTREE =
         [ "Memory buffers", "manual_030_01_resources.html", null ],
         [ "Images", "manual_030_02_resources.html", null ],
         [ "Image samplers", "manual_030_03_resources.html", null ]
-      ] ]
+      ] ],
+      [ "Resources Descriptors", "manual_040_00_descriptors.html", [
+        [ "Descriptor Layout", "manual_040_01_descriptor_layout.html", null ],
+        [ "Descriptor Set", "manual_040_02_descriptor_set.html", null ],
+        [ "Pipeline Resources", "manual_040_03_pipeline_resources.html", null ]
+      ] ],
+      [ "Command Lists", "manual_050_00_commands.html", null ],
+      [ "Submission queues", "manual_060_00_queues.html", null ],
+      [ "Shaders", "manual_070_00_shaders.html", null ],
+      [ "Pipelines", "manual_080_00_pipelines.html", null ],
+      [ "Synchronization", "manual_090_00_synchronization.html", null ],
+      [ "Rendering", "manual_100_00_renderpass.html", null ]
     ] ],
+    [ "Swap Chains", "manual_100_10_swapchain.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
         [ "vireo", "namespacevireo.html", [
@@ -409,7 +421,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"structvireo_1_1GraphicPipelineConfiguration.html#a1b45dd5b84c41e5322d45980f1f572fe"
+"structvireo_1_1DepthClearValue.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

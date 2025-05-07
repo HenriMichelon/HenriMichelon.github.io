@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('manual_030_03_resources.html',''); ini
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> class represent the state of an image sampler which is used by the GPU to read image data and apply filtering and other transformations for the shader.</p>
 <p>You can't do much with a sampler on the CPU side beside creating them, they are exclusively used in the shaders.</p>
-<p>The main difference in managing samplers in Vireo compared to some graphics API is when you bind them to a pipeline using descriptor sets : for portability reasons you need a specific descriptor set that can only have samplers (no buffer and no image).</p>
+<p>The main difference in managing samplers in Vireo compared to some graphics API is when you bind them to a pipeline using <a class="el" href="manual_040_00_descriptors.html">descriptor sets</a> : for portability reasons you need a specific descriptor set that can only have samplers (no buffer and no image).</p>
 <p>Samplers are created with <a class="el" href="classvireo_1_1Vireo.html#ad9e1b74bd38d400a76071dba086c4d6a">vireo::Vireo::createSampler</a> : </p><div class="fragment"><div class="line"><span class="comment">// Create all of our static samplers</span></div>
 <div class="line">samplers.push_back(<a class="code" href="namespacevireo.html">vireo</a>-&gt;createSampler(</div>
 <div class="line">    <a class="code" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474baad135772d7cf93dd0ccf9d2474b34e6a" title="Nearest filtering. ">vireo::Filter::NEAREST</a>,</div>
@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('manual_030_03_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 14:00:28 for Vireo &nbsp; by
+    <li class="footer">Generated on mer. mai 7 2025 15:24:08 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
