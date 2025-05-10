@@ -64,17 +64,85 @@ $(document).ready(function(){initNavTree('manual_050_00_commands.html',''); init
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Command lists are objects used to record commands which can be subsequently submitted to a <a class="el" href="manual_060_00_queues.html">submission queue</a> for execution.</p>
+<div class="textblock"><p><a class="el" href="classvireo_1_1CommandList.html">Command lists</a> are objects used to record commands which can be subsequently submitted to a <a class="el" href="manual_060_00_queues.html">submission queue</a> for execution.</p>
 <p>Recorded commands include commands to bind pipelines and <a class="el" href="manual_040_00_descriptors.html">descriptor sets</a> to the command list, commands to modify the GPU state, commands to draw (for graphics rendering), commands to dispatch (for compute), commands to copy <a class="el" href="manual_030_00_resources.html">buffers and images</a>, and other commands.</p>
 <p>Each command list manages state independently of other command lists. Unless otherwise specified, and without explicit synchronization, the various commands submitted to a <a class="el" href="manual_060_00_queues.html">submission queue</a> via command lists may execute in arbitrary order relative to each other, and/or concurrently.</p>
-<p>...More to come... </p>
-</div></div><!-- contents -->
+<h2>Command allocators</h2>
+<p>Command lists are created from <a class="el" href="classvireo_1_1CommandAllocator.html">command allocators</a>. A <a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a> is used to allocate datas needed by command lists and to reset them before use.</p>
+<p>For portability (between graphics API) reasons you can only reset command lists from command allocator, which mean that you reset all command lists created by the corresponding allocator.</p>
+<p>And since command allocators can't be shared between threads you typically need one command allocator and a least one command list per worker or frame thread. But don't worry about that, command allocators are cheap and command list allocations ara fast and doing it from multiple allocators in parallel scales well.</p>
+<p>If you use threads, record commands in parallel, but submit in one place; use fences/semaphores to coordinate when it’s safe to reset.</p>
+<h2>Creating a command list</h2>
+<p>First create a <a class="el" href="classvireo_1_1CommandAllocator.html">CommandAllocator</a> then create a <a class="el" href="classvireo_1_1CommandList.html">CommandList</a>. Command lists are created ready-to-use, you don't need to reset them explicitly if you need a one-time command list (e.g. for memory transfers).</p>
+<div class="fragment"><div class="line"><span class="comment">// Create a command list</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
+</div><!-- end fragment -->
+<h2>Using a command list</h2>
+<p>There is two typical use of command list :</p><ul>
+<li>One-time command list : for buffer, image transfer or one-time execution of a compute shader</li>
+<li>Per frame command list : for rendering</li>
+</ul>
+<p>For both cases you start a command recording session with <a class="el" href="classvireo_1_1CommandList.html#a9d8433d072337e25242ff5d22773ab26">vireo::CommandList::begin</a> and end the recording session with <a class="el" href="classvireo_1_1CommandList.html#aea5bef9f8eaa5046c3c3104b35a712d4">vireo::CommandList::end</a>. Then you need to submit the work to the GPU using <a class="el" href="manual_060_00_queues.html">Submission queues</a>.</p>
+<h3>One-time command list</h3>
+<p>For one-time command list you create them, use them, submit them, wait for the end of the execution then destroy them :</p>
+<div class="fragment"><div class="line"><span class="comment">// Example of a using a one-time command list</span></div>
+<div class="line"><span class="comment">// In a local scope for objects destruction</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Create a command list</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
+<div class="line"> </div>
+<div class="line">    uploadCommandList-&gt;begin();</div>
+<div class="line">    ...</div>
+<div class="line">    <span class="comment">// Record command here</span></div>
+<div class="line">    ...</div>
+<div class="line">    uploadCommandList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Execute the commands</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    transferQueue-&gt;submit({uploadCommandList});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Wait for the commands to executed by the GPU</span></div>
+<div class="line">    transferQueue-&gt;waitIdle();</div>
+<div class="line">} <span class="comment">// commands allocator, list and queue are destroyed</span></div>
+</div><!-- end fragment -->
+<h3>Other command list</h3>
+<p>When rendering you generally need a least one command allocator and one command list per frame if you do not want to wait on the CPU side at the end of each frame. Having one command list per frame and waiting for the previous frame to be presented at the <b>start</b> of each frame allow you to do more work on the CPU side (e.g. processing the physic) between frames and you can also have multiple frames in flight.</p>
+<p>For this type of use you have to :</p><ul>
+<li>Allocate one command allocator and at least one command list per frame during the initialization phase</li>
+<li>Reset the command allocator at the start of the frame</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Typical command list use inside a frame rendering function</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get the current frame data</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; frame = framesData[swapChain-&gt;getCurrentFrameIndex()];</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Reset the frame command allocator and all the command lists for this frame</span></div>
+<div class="line">frame.commandAllocator-&gt;reset();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Begin a command recording session</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; cmdList = frame.commandList;</div>
+<div class="line">cmdList-&gt;begin();</div>
+<div class="line">...</div>
+<div class="line"><span class="comment">// Record drawing commands</span></div>
+<div class="line">...</div>
+<div class="line">cmdList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit all command lists before presenting</span></div>
+<div class="line">graphicQueue-&gt;submit(frame.inFlightFence, swapChain, {cmdList});</div>
+<div class="line"> </div>
+<div class="line">...</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li>
-    <li class="footer">Generated on sam. mai 10 2025 17:57:00 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 10 2025 19:14:53 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

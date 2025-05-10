@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('manual_040_03_push_constants.html','')
 <div class="contents">
 <div class="textblock"><p>A Push constant is a tiny block of GPU-visible memory (with a limit to 128 or 256 bytes, depending on the graphic API and the drivers) embedded directly in command lists. It's ideal for frequently-changing, small pieces of data (e.g. material index, small transform matrices, flags).</p>
 <h2>Declaring a push constant</h2>
-<p>Push constant are not objects, they don't need to be created like other Vireo object. They are just small structs, matrix or small arrays. Just define your data like any CPU-side data then create the description of the data by declaring a <a class="el" href="structvireo_1_1PushConstantsDesc.html">vireo::PushConstantsDesc</a>.</p>
+<p>Push constant are not objects, they don't need to be created like other Vireo objects. They are just small structs, matrix or small arrays. Just define your data like any CPU-side data then create the description of the data by declaring a <a class="el" href="structvireo_1_1PushConstantsDesc.html">vireo::PushConstantsDesc</a>.</p>
 <p>Example of a push constant struct used to specify which model and which material to use in a shader : </p><div class="fragment"><div class="line"><span class="keyword">struct </span>PushConstants {</div>
 <div class="line">    uint32_t modelIndex;</div>
 <div class="line">    uint32_t materialIndex;</div>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('manual_040_03_push_constants.html','')
 </div><!-- end fragment -->
 <p>The push constant will be bound to the first free set/space number : if you have two descriptor layouts in the pipeline resource the push constant will be bound to the set <code>2</code> (and the binding <code>0</code> since Vireo currently only support one push constant per pipeline resources).</p>
 <h2>Using a push constant</h2>
-<p>During the render pass update the data then copy the data in the <a class="el" href="manual_050_00_commands.html">command list</a> :</p>
+<p>During the render pass update the data then copy the data in the <a class="el" href="manual_050_00_commands.html">command list</a> using <a class="el" href="classvireo_1_1CommandList.html#a544932598c54739d02736fea07d89d5f">vireo::CommandList::pushConstants</a> :</p>
 <div class="fragment"><div class="line">pushConstants.modelIndex = Scene::MODEL_OPAQUE;</div>
 <div class="line">pushConstants.materialIndex = Scene::MATERIAL_ROCKS;</div>
 <div class="line">cmdList-&gt;pushConstants(pipelineConfig.resources, pushConstantsDesc, &amp;pushConstants);</div>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('manual_040_03_push_constants.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_040_00_descriptors.html">Resources Descriptors</a></li>
-    <li class="footer">Generated on sam. mai 10 2025 17:57:00 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 10 2025 19:14:53 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
