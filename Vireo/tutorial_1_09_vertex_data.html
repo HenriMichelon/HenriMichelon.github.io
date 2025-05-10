@@ -97,9 +97,9 @@ $(document).ready(function(){initNavTree('tutorial_1_09_vertex_data.html',''); i
 <div class="line">   <span class="keyword">sizeof</span>(Vertex),</div>
 <div class="line">   triangleVertices.size());</div>
 </div><!-- end fragment -->
-<p>We will use a <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command list to upload the vertex data into the VRAM. You can use a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352a930d8d2d00ae0f554c96edc5739801e1">vireo::CommandType::GRAPHIC</a> command list for that but the <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command buffers and submit queues can take advantage of DMA transfers.</p>
+<p>We will use a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command list to upload the vertex data into the VRAM. You can use a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352a930d8d2d00ae0f554c96edc5739801e1">vireo::CommandType::GRAPHIC</a> command list for that but the <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command buffers and submit queues can take advantage of DMA transfers.</p>
 <p>In the <code>onInit()</code> method, just after the buffer creation add the command allocator and command list creation :</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
 </div><!-- end fragment -->
 <p>Followed by the recording of the upload command :</p>
@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('tutorial_1_09_vertex_data.html',''); i
 <div class="line">uploadCommandList-&gt;upload(vertexBuffer, &amp;triangleVertices[0]);</div>
 <div class="line">uploadCommandList-&gt;end();</div>
 </div><!-- end fragment -->
-<p>Then the submission of the commands using a <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> submit queue :</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<p>Then the submission of the commands using a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> submit queue :</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line">transferQueue-&gt;submit({uploadCommandList});</div>
 </div><!-- end fragment -->
 <p>Since the upload operation is asynchronous, we have to wait for the command to finish before terminating the <code>onInit()</code> method. Add the following code at the end of the method :</p>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('tutorial_1_09_vertex_data.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_tutorial_1.html">&quot;Hello Triangle&quot; tutorial</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 22:07:52 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 10 2025 17:57:00 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

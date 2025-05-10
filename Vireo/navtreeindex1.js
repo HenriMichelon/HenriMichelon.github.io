@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"structvireo_1_1ColorBlendDesc.html#a4c7705f140d6c299cf1465a86b2107db":[3,0,0,2,5],
 "structvireo_1_1ColorBlendDesc.html#a54e5195feebb7656631acce141ac1b63":[3,0,0,2,6],
 "structvireo_1_1ColorBlendDesc.html#aceaf767ff5ba26d5df6a66fb4969bcc6":[3,0,0,2,3],
 "structvireo_1_1ColorBlendDesc.html#ad4a19e6f7c4ddd59f4cf51a7bbf3da52":[3,0,0,2,4],

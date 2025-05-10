@@ -71,9 +71,48 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 </div><!-- end fragment -->
 <p>The last parameter is the resource name used when you debug the rendering process with tools like <a href="https://renderdoc.org/">RenderDoc</a>.</p>
 <h2>Uploading an image</h2>
-<p>To be accessible by the GPU and the shader an image needs to be uploaded into video memory (VRAM). First you need to copy the image data into a temporary, host-accessible (staging) buffer, then you ask the GPU to execute a copy of the data to the image in device-only memory (memory only accessible by the GPU).</p>
-<p>Since it's common to use the same staging buffer to upload all of the same size, same format textures there is no equivalent to the <a class="el" href="manual_030_01_resources.html">upload command for memory buffer</a>. You have to handle the staging buffer by yourself.</p>
-<div class="fragment"><div class="line"><span class="comment">// Example of a texture upload</span></div>
+<p>To be accessible by the GPU and the shader an image needs to be uploaded into video memory (VRAM).</p>
+<p>Like for memory buffers there is two methods to upload an image into the GPU memory :</p><ul>
+<li>Using <code>upload()</code> : the easy way</li>
+<li>Using <code>copy()</code>: the flexible way</li>
+</ul>
+<h3>using upload()</h3>
+<p>By using the <a class="el" href="classvireo_1_1CommandList.html#a814ae10770e0a9ac5f5c1102c41a29d8">vireo::CommandList::upload</a> or <a class="el" href="classvireo_1_1CommandList.html#a766f76733030bb94e154e8b5e7354a50">vireo::CommandList::uploadArray</a> methods you can easily upload data into a buffer. The <code>upload</code> methods will take care of the staging buffer and temporary copy of the data for you, which can be tricky if you have multiple mip levels or multiples image layers.</p>
+<p>The GPU commands recorded with a <a class="el" href="manual_050_00_commands.html">CommandList</a> are executed asynchronously by the GPU. Once you have uploaded all of the data using one<code>CommandList</code> you need to call <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> on this <code>CommandList</code> to clear the temporary (staging) buffers used for the host-to-device transfers. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory, which mean you have to call <code>cleanup</code> only after the <a class="el" href="manual_060_00_queues.html">submit queue</a> have finished the commands execution by blocking the CPU-side with <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>Since the call to <code>cleanup</code> is done automatically in the command list destructor, you only have to call it explicitly on non-temporary command lists.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Example of a texture upload using upload()</span></div>
+<div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Load texture data from the disk</span></div>
+<div class="line">    <span class="keyword">auto</span>* pixels = .... <span class="comment">// insert the call to your preferred image loading library</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Allocate the texture in device-only memory</span></div>
+<div class="line">    texture = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createImage(<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">vireo::ImageFormat::R8G8B8A8_SRGB</a>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create a command list</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
+<div class="line"> </div>
+<div class="line">    uploadCommandList-&gt;begin();</div>
+<div class="line">    <span class="comment">// insert a memory barrier to prepare the image to be written</span></div>
+<div class="line">    uploadCommandList-&gt;barrier(texture, <a class="code" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1a0db45d2a4141101bdfe48e3314cfbca3" title="Not used. ">vireo::ResourceState::UNDEFINED</a>, <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705aba1c00f34d04b40f9e1eddd20de122de" title="Used as a destination image of a transfer/copy/blit command. ">vireo::ResourceState::COPY_DST</a>);</div>
+<div class="line">    <span class="comment">// record copy command</span></div>
+<div class="line">    uploadCommandList-&gt;upload(stagingBuffer, texture);</div>
+<div class="line">    uploadCommandList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Execute the copy command</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    transferQueue-&gt;submit({uploadCommandList});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Wait for the command to executed by the GPU</span></div>
+<div class="line">    transferQueue-&gt;waitIdle();</div>
+<div class="line">} <span class="comment">// cleanup() is automatically called</span></div>
+</div><!-- end fragment -->
+<dl class="section note"><dt>Note</dt><dd>It's more efficient to load the image data from the disk directly into the staging buffer by using the <a class="el" href="classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b">mapped address</a>, but you need to use the <code>copy()</code> method below.</dd></dl>
+<h3>using copy()</h3>
+<p>This method can be useful if you want to write data directly into the staging buffer to avoid a CPU-to-CPU transfer or if you need to copy one mip level independently from the others.</p>
+<p>When using <a class="el" href="classvireo_1_1CommandList.html#a61bf6fe693baf625d5596310bd50f0f5">vireo::CommandList::copy</a> you need to copy the image data into a temporary, host-accessible (staging) buffer, then you ask the GPU to copy the data to the image in device-only memory (memory only accessible by the GPU). Remember that you have to keep the staging buffer alive until the copy command have been executed (you may need to wait on the CPU side for the completion of the commands on the submit queue).</p>
+<div class="fragment"><div class="line"><span class="comment">// Example of a texture upload using copy()</span></div>
 <div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Load texture data from the disk</span></div>
@@ -83,14 +122,14 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div class="line">    texture = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createImage(<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">vireo::ImageFormat::R8G8B8A8_SRGB</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Allocate the staging buffer in host-accessible memory</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> stagingBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::BufferType::TRANSFER</a>, texture-&gt;getImageSize());</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> stagingBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::BufferType::TRANSFER</a>, texture-&gt;getImageSize());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Copy the image data into the staging buffer</span></div>
 <div class="line">    stagingBuffer-&gt;map();</div>
 <div class="line">    stagingBuffer-&gt;write(pixels);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create a command list</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
 <div class="line"> </div>
 <div class="line">    uploadCommandList-&gt;begin();</div>
@@ -101,12 +140,12 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div class="line">    uploadCommandList-&gt;end();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Execute the copy command</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line">    transferQueue-&gt;submit({uploadCommandList});</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Wait for the command to executed by the GPU</span></div>
 <div class="line">    transferQueue-&gt;waitIdle();</div>
-<div class="line">} <span class="comment">// unmap() is automatically called on the staging buffer</span></div>
+<div class="line">} <span class="comment">// unmap() is automatically called on the staging buffer and the staging buffer destroyed</span></div>
 </div><!-- end fragment -->
 <dl class="section note"><dt>Note</dt><dd>It's more efficient to load the image data from the disk directly into the staging buffer by using the <a class="el" href="classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b">mapped address</a>. </dd></dl>
 </div></div><!-- contents -->
@@ -115,7 +154,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 22:07:52 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 10 2025 17:57:00 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

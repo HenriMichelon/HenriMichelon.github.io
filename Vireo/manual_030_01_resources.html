@@ -69,22 +69,24 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 <li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> : used to store vertex data for the vertex shaders, used by the GPU when drawing primitives.</li>
 <li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a> : used to store vertex index data for the vertex shaders, used by the GPU when drawing primitives.</li>
 <li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">vireo::BufferType::UNIFORM</a> : used to share various data such as struct or arrays with any shaders</li>
-<li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::BufferType::TRANSFER</a> : used to upload data in device-only memory (memory only accessible by the GPU) from the CPU.</li>
+<li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e">vireo::BufferType::BUFFER_TRANSFER</a> : used to upload vertex and index data in device-only memory (memory only accessible by the GPU) from the CPU.</li>
+<li><a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa684523a9e791cf89558328e144e61b79">vireo::BufferType::IMAGE_TRANSFER</a> : used to upload image data in device-only memory (memory only accessible by the GPU) from the CPU.</li>
 </ul>
 <p>Depending on their type theses buffers are located in :</p><ul>
 <li>Device-only memory (memory only accessible by the GPU) : <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a></li>
-<li>Host-accessible memory (memory accessible by the GPU and the CPU) : <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">vireo::BufferType::UNIFORM</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::BufferType::TRANSFER</a></li>
+<li>Host-accessible memory (memory accessible by the GPU and the CPU) : <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">vireo::BufferType::UNIFORM</a>, <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e">vireo::BufferType::BUFFER_TRANSFER</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa684523a9e791cf89558328e144e61b79">vireo::BufferType::IMAGE_TRANSFER</a></li>
 </ul>
+<p>There is two types of TRANSER buffers to take into account the difference of memory alignment between various graphics API.</p>
 <h2>Creating a buffer</h2>
 <p>Buffers are created using <a class="el" href="classvireo_1_1Vireo.html#aadf08ffb53e73cecc3dbdb367b6dfca2">vireo::Vireo::createBuffer</a> by specifying the <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">type</a>, the size in bytes of each element (data block) and the number of elements :</p>
 <div class="fragment"><div class="line">frame.materialUniform = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2" title="Used for shader uniform (in host visible memory) ">vireo::BufferType::UNIFORM</a>, <span class="keyword">sizeof</span>(Material), scene.getMaterials().size());</div>
 </div><!-- end fragment -->
-<p>Each instance of the elements in the buffer <b>can</b> need to be memory aligned. The alignment depends on the type of buffer and the graphic API (Vulkan and DirectX can uses different values). When creating the buffer the alignment is automatically calculated:</p><ul>
+<p>Each instance of the elements in the buffer <b>can</b> be memory aligned. The alignment depends on the type of buffer and the graphic API (Vulkan and DirectX can uses different values). When creating the buffer the alignment is automatically calculated:</p><ul>
 <li>The <a class="el" href="classvireo_1_1Buffer.html#a4733e816d7c9350929e2d24ef660e324">vireo::Buffer::getInstanceSizeAligned</a> returns the aligned size in bytes of each element,</li>
 <li>The <a class="el" href="classvireo_1_1Buffer.html#a5c1d89d2d5cd83b98e9053def9afdc99">vireo::Buffer::getSize</a> returns the total size of the buffer in VRAM with each element memory aligned.</li>
 </ul>
 <h2>Writing data into buffers</h2>
-<p>For host-accessible buffers (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">vireo::BufferType::UNIFORM</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::BufferType::TRANSFER</a>) data can be written directly from the CPU by <b>mapping</b> them with <a class="el" href="classvireo_1_1Buffer.html#ab787505118207f731de3eed5a7c1d7c9">vireo::Buffer::map</a>. To "map memory" means to obtain a CPU pointer to a device (GPU) memory, to be able to read from it or write to it in CPU code.</p>
+<p>For host-accessible buffers (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">vireo::BufferType::UNIFORM</a>, <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa684523a9e791cf89558328e144e61b79">vireo::BufferType::IMAGE_TRANSFER</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e">vireo::BufferType::BUFFER_TRANSFER</a>) data can be written directly from the CPU by <b>mapping</b> them with <a class="el" href="classvireo_1_1Buffer.html#ab787505118207f731de3eed5a7c1d7c9">vireo::Buffer::map</a>. To "map memory" means to obtain a CPU pointer to a device (GPU) memory, to be able to read from it or write to it in CPU code.</p>
 <p>Once the buffer is mapped, data can be written with <a class="el" href="classvireo_1_1Buffer.html#a43210bfeb974e1020ee27b98bf14cd0f">vireo::Buffer::write</a>. This method take care of the alignment of the element if you write the whole buffer by using <a class="el" href="classvireo_1_1Buffer.html#a8ece8a4ec9f37e2f57460b4e04d96b71">vireo::Buffer::WHOLE_SIZE</a> size. If you use a different size or an offset you are responsible for the alignment of the source data.</p>
 <p>Once you have written the data you can <b>unmap</b> the buffer memory with <a class="el" href="classvireo_1_1Buffer.html#ab6614885bbf62415cd62371d7d94b301">vireo::Buffer::unmap</a>.</p>
 <div class="fragment"><div class="line">frame.materialUniform-&gt;map();</div>
@@ -93,18 +95,23 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 </div><!-- end fragment -->
 <dl class="section note"><dt>Note</dt><dd>You can leave the memory mapped until the end the execution of the application (for uniform buffers whose content change each frame for example). The <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> destructor will take care of unmapping the memory.</dd></dl>
 <h2>Uploading data into VRAM</h2>
+<p>There is two methods to upload data into the GPU memory :</p><ul>
+<li>Using <code>upload()</code> : the easy way</li>
+<li>Using <code>copy()</code>: the flexible way</li>
+</ul>
+<h3>using upload()</h3>
 <p>For device-memory buffers (<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> and <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a>) you need to instruct the GPU to copy data from a temporary, host-accessible (staging) buffer to the destination buffer.</p>
 <p>By using the <a class="el" href="classvireo_1_1CommandList.html#a814ae10770e0a9ac5f5c1102c41a29d8">vireo::CommandList::upload</a> methods you can easily upload data into a buffer. The <code>upload</code> method will take care of the staging buffer and temporary copy of the data for you.</p>
 <p>The GPU commands recorded with a <a class="el" href="manual_050_00_commands.html">CommandList</a> are executed asynchronously by the GPU. Once you have uploaded all of the data using one<code>CommandList</code> you need to call <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> on this <code>CommandList</code> to clear the temporary (staging) buffers used for the host-to-device transfers. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory, which mean you have to call <code>cleanup</code> only after the <a class="el" href="manual_060_00_queues.html">submit queue</a> have finished the commands execution by blocking the CPU-side with <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Since the call to <code>cleanup</code> is done automatically in the command list destructor, you only have to call it explicitly on non-temporary command lists.</dd></dl>
-<div class="fragment"><div class="line"><span class="comment">// Example of a vertex buffer upload</span></div>
+<div class="fragment"><div class="line"><span class="comment">// Example of a vertex buffer upload using upload()</span></div>
 <div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Allocate the buffer</span></div>
 <div class="line">    vertexBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b" title="Used to store vertices (in device local memory) ">vireo::BufferType::VERTEX</a>, <span class="keyword">sizeof</span>(Vertex), triangleVertices.size());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create a command list</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Upload data into a temporary buffer and record the copy command</span></div>
@@ -113,21 +120,59 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 <div class="line">    uploadCommandList-&gt;end();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Execute the copy command</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628" title="Used for copy operations (in host visible memory) ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
 <div class="line">    transferQueue-&gt;submit({uploadCommandList});</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Wait for the command to executed by the GPU</span></div>
 <div class="line">    transferQueue-&gt;waitIdle();</div>
 <div class="line">} <span class="comment">// cleanup() is automatically called</span></div>
 </div><!-- end fragment -->
-<p>We have used a <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command list to upload the vertex data in this example but you can use a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352a930d8d2d00ae0f554c96edc5739801e1">vireo::CommandType::GRAPHIC</a> command list for that. The <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfaeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command lists and submit queues can take advantage of DMA transfers. Some GPU have only one queue for both transfer and graphics operation, so the use of a specific transfer queue is not guaranteed. Also, the transfer only queues can't do some operations like pipeline barriers on images. </p>
-</div></div><!-- contents -->
+<p>We have used a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command list to upload the vertex data in this example but you can use a <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352a930d8d2d00ae0f554c96edc5739801e1">vireo::CommandType::GRAPHIC</a> command list for that. The <a class="el" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628">vireo::CommandType::TRANSFER</a> command lists and submit queues can take advantage of DMA transfers. Some GPU have only one queue for both transfer and graphics operation, so the use of a specific transfer queue is not guaranteed. Also, the transfer only queues can't do some operations like pipeline barriers on images.</p>
+<h3>using copy()</h3>
+<p>If you need to take care of the staging buffer yourself or if you need to copy the data with different source or destination offset you have to use <a class="el" href="classvireo_1_1CommandList.html#a61bf6fe693baf625d5596310bd50f0f5">vireo::CommandList::copy</a>.</p>
+<p>To use this method you need to :</p><ul>
+<li>Create a staging buffer of type <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e">vireo::BufferType::BUFFER_TRANSFER</a></li>
+<li>Write data into this buffer</li>
+<li>Create the destination buffer of type <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">vireo::BufferType::VERTEX</a> or <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">vireo::BufferType::INDEX</a></li>
+<li>Record the copy command to instruct the GPU to copy data from the staging buffer to the destination buffer</li>
+<li>Keep the staging buffer alive until the copy command have been executed (you may need to wait on the CPU side for the completion of the commands on the submit queue).</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Example of a vertex buffer upload using copy()</span></div>
+<div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Allocate and fill the staging buffer</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> stagingBufferVertex = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e" title="Used for vertex and index buffers copy operations (in host visible memory) ">vireo::BufferType::BUFFER_TRANSFER</a>, <span class="keyword">sizeof</span>(Vertex), triangleVertices.size());</div>
+<div class="line">    stagingBufferVertex-&gt;map();</div>
+<div class="line">    stagingBufferVertex-&gt;write(triangleVertices.data());</div>
+<div class="line">    stagingBufferVertex-&gt;unmap();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Allocate the destination buffer</span></div>
+<div class="line">    vertexBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b" title="Used to store vertices (in device local memory) ">vireo::BufferType::VERTEX</a>, <span class="keyword">sizeof</span>(Vertex), triangleVertices.size());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create a command list</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandAllocator = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createCommandAllocator(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> uploadCommandList = uploadCommandAllocator-&gt;createCommandList();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Record the copy command</span></div>
+<div class="line">    uploadCommandList-&gt;begin();</div>
+<div class="line">    uploadCommandList-&gt;copy(stagingBufferVertex, vertexBuffer);</div>
+<div class="line">    uploadCommandList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Execute the copy command</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> transferQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::CommandType::TRANSFER</a>);</div>
+<div class="line">    transferQueue-&gt;submit({uploadCommandList});</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Wait for the command to executed by the GPU</span></div>
+<div class="line">    transferQueue-&gt;waitIdle();</div>
+<div class="line">} <span class="comment">// the staging buffer is automatically destroyed</span></div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on mer. mai 7 2025 22:07:52 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 10 2025 17:57:00 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

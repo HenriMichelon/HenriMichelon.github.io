@@ -111,6 +111,7 @@ var NAVTREE =
             [ "bindVertexBuffer", "classvireo_1_1CommandList.html#a0f3dd16f20f1b53955e945eb9902be66", null ],
             [ "bindVertexBuffers", "classvireo_1_1CommandList.html#aa4dcfdc4d3b6a44813d95585da2af5a6", null ],
             [ "cleanup", "classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a511d733515949ebe3f3f6405b059ad0a", null ],
             [ "copy", "classvireo_1_1CommandList.html#a61bf6fe693baf625d5596310bd50f0f5", null ],
             [ "copy", "classvireo_1_1CommandList.html#ae747aaaebbf76235a11c8d22ee3fac0f", null ],
             [ "copy", "classvireo_1_1CommandList.html#a569b56acb8adf2e9a1db6546cdb4b4b0", null ],
@@ -429,7 +430,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"structvireo_1_1ColorBlendDesc.html#a54e5195feebb7656631acce141ac1b63"
+"structvireo_1_1ColorBlendDesc.html#a4c7705f140d6c299cf1465a86b2107db"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
