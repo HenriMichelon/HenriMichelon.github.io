@@ -64,15 +64,72 @@ $(document).ready(function(){initNavTree('manual_110_00_swapchain.html',''); ini
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A swapchain is the GPU–window system bridge: a queue of images you render into and then present to the screen. It manages double- or triple-buffering under the hood, letting you render ahead of vsync and avoid tearing.</p>
-<p>...More to come... </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>A <a class="el" href="classvireo_1_1SwapChain.html">swapchain</a> is the GPU–window system bridge: a queue of images you render into and then present to the screen. It manages double- or triple-buffering under the hood and provide the application mechanisms to wait for the frame to be presented and which frame in currently rendering.</p>
+<p>A CPU/GPU synchronization must be used to ensure that the image we want to use is ready to be used and a GPU/GPU synchronization to ensure that the rendering of the frame is terminated before presenting the image to the screen.</p>
+<p>The CPU/GPU synchronization is done with a <a class="el" href="manual_090_01_fences.html">fence</a> and the GPU/GPU synchronization is done internally by the <a class="el" href="classvireo_1_1SwapChain.html">SwapChain</a> and <a class="el" href="classvireo_1_1SubmitQueue.html">SubmitQueue</a> classes for portability between graphic API.</p>
+<h2>Creating a swap chain</h2>
+<p>To create a swap chain we need :</p><ul>
+<li>The os-specific window handle to indicate to the swap chain where to present the image.</li>
+<li>A <a class="el" href="classvireo_1_1SubmitQueue.html">submit queue</a> to use for presenting and synchronizing with the rendering.</li>
+<li>The <a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">image format</a> for the frame buffers.</li>
+<li>The <a class="el" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0ee">presentation mode</a>.</li>
+<li>Optionally, the number of frames in flight the application wants (two by default).</li>
+</ul>
+<p>There is two presentation modes :</p><ul>
+<li><a class="el" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0eeae35884a2445bc4ae2df52f188763273c">vireo::PresentMode::IMMEDIATE</a> : the presentation occurs immediately, there is no synchronization. Tearing may occurs.</li>
+<li><a class="el" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0eea7f9044a0830fc110c3b82a26ce3511ee">vireo::PresentMode::VSYNC</a> : synchronize presentation after the first vertical blank. Tearing cannot be observed.</li>
+</ul>
+<div class="fragment"><div class="line">swapChain = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSwapChain(</div>
+<div class="line">           <a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5caf55c1c722034e92213df328d31e33c62">vireo::ImageFormat::R8G8B8A8_UNORM</a>,</div>
+<div class="line">           graphicQueue,</div>
+<div class="line">           windowHandle,</div>
+<div class="line">           <a class="code" href="namespacevireo.html#a3221a761e003851a5204ca46cedaa0eea7f9044a0830fc110c3b82a26ce3511ee" title="The presentation engine waits for the next vertical blanking period to update the current image...">vireo::PresentMode::VSYNC</a>,</div>
+<div class="line">           3);</div>
+</div><!-- end fragment -->
+<dl class="section note"><dt>Note</dt><dd>Since the swap chain is linked to a specific window you need one swap chain per window.</dd></dl>
+<h2>Using a swap chain</h2>
+<p>Before using the swap chain for rendering make sure to :</p><ul>
+<li>Resize the swap chain when the target window is resized with <a class="el" href="classvireo_1_1SwapChain.html#a89f05908f265d0b3988b9b8a05d4be8f">vireo::SwapChain::recreate</a>. This method take care for you of the CPU/GPU synchronization before resizing the images (resizing can block the CPU code).</li>
+<li>Wait for the last presentation to end before closing the presentation window with <a class="el" href="classvireo_1_1SwapChain.html#abf147479cb253cbe98415fafa2786700">vireo::SwapChain::waitIdle</a></li>
+</ul>
+<p>For CPU/GPU synchronization when rendering you need to use a <a class="el" href="manual_090_01_fences.html">fence</a>. For rendering multiple frames in flight you need one fence par frame. The best solution is to put them in the same data structure as the frame <a class="el" href="manual_050_00_commands.html">command list</a> :</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>FrameData {</div>
+<div class="line">    std::shared_ptr&lt;vireo::CommandAllocator&gt; commandAllocator;</div>
+<div class="line">    std::shared_ptr&lt;vireo::CommandList&gt;      commandList;</div>
+<div class="line">    std::shared_ptr&lt;vireo::Fence&gt;            inFlightFence;</div>
+<div class="line">    ...</div>
+<div class="line">};</div>
+</div><!-- end fragment -->
+<p>When rendering get the frame data corresponding to the current frame, acquire the next frame buffer (while waiting for the frame buffer to be ready with the fence) with <a class="el" href="classvireo_1_1SwapChain.html#ae2496672af9bf64c21364750705c0a76">vireo::SwapChain::acquire</a>, draw the frame then, after submitting all the frame command lists, present the frame buffer to the screen <a class="el" href="classvireo_1_1SwapChain.html#a5013c590ffc6c133db8e4d22d53fb9ac">vireo::SwapChain::present</a>.</p>
+<p>At the end of the rendering, get the next frame index with <a class="el" href="classvireo_1_1SwapChain.html#ac82fd8149934c0869f852d3bba0d2a05">vireo::SwapChain::nextFrameIndex</a>. By doing that at the end of the rendering, the new frame index can be used in the application to update the frame specific data during the next frame update and rendering.</p>
+<dl class="section note"><dt>Note</dt><dd>Acquiring the next frame buffer swap chain can block the CPU code since it use a fence.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// Get the current frame data</span></div>
+<div class="line"> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; frame = framesData[swapChain-&gt;getCurrentFrameIndex()];</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Acquire the next frame buffer or stop rendering on error.</span></div>
+<div class="line"><span class="keywordflow">if</span> (!swapChain-&gt;acquire(frame.inFlightFence)) { <span class="keywordflow">return</span>; }</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"><span class="comment">// Record commands</span></div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit the frame command list then ask the submission queue to signal the end of the rendering to the swap chain</span></div>
+<div class="line">graphicQueue-&gt;submit(frame.inFlightFence, swapChain, {frame.commandList});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Present the swap chain. Presentation will be done when the submission queue will signal the end of the rendering.</span></div>
+<div class="line"><span class="comment">// It&#39;s a GPU/GPU synchronization mechanism, the CPU will not be blocked, only the swap chain presentation.</span></div>
+<div class="line">swapChain-&gt;present();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get the next frame index for the next frame</span></div>
+<div class="line">swapChain-&gt;nextFrameIndex();</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li>
-    <li class="footer">Generated on dim. mai 11 2025 15:13:34 for Vireo &nbsp; by
+    <li class="footer">Generated on dim. mai 11 2025 21:35:29 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

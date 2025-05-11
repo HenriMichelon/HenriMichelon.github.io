@@ -64,16 +64,57 @@ $(document).ready(function(){initNavTree('manual_080_02_compute_pipelines.html',
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Creating a compute pipeline</h2>
-<h2>Dispatch work</h2>
-<p>...More to come... </p>
+<div class="textblock"><p>A compute pipeline is a GPU pipeline specialized for running general-purpose compute shaders (rather than the fixed‐function stages of <a class="el" href="manual_080_01_graphic_pipelines.html">graphics pipelines</a>). It as a single programmable stage : the compute shader.</p>
+<p>Because it omits all the fixed‐function graphics stages, the compute pipeline gives you maximum flexibility and performance for purely computational tasks on the GPU, executed in parallel.</p>
+<p>Use cases of compute shaders :</p><ul>
+<li>Physics simulations</li>
+<li>Particle systems</li>
+<li>Image processing / post-processing</li>
+<li>Special effects</li>
+<li>Advanced lighting calculations</li>
+<li>General data-parallel algorithms</li>
+</ul>
+<p>For more information about compute pipelines and dispatching work read <a href="https://www.stefanpijnacker.nl/article/compute-with-directx12-part-1/">Compute with DirectX 12 by Stefan Pijnacker</a></p>
+<h2>Creating a compute pipeline</h2>
+<p>A <a class="el" href="classvireo_1_1ComputePipeline.html">Compute pipeline</a> is created with <a class="el" href="classvireo_1_1Vireo.html#a534e5105e1fb9923046076185657b177">vireo::Vireo::createComputePipeline</a>. Unlike <a class="el" href="manual_080_01_graphic_pipelines.html">graphic pipelines</a> there is not configuration object since the is nothing to configure. Only the <a class="el" href="manual_040_04_pipeline_resources.html">pipeline resources</a> and the <a class="el" href="manual_070_00_shaders.html">shader module</a> are needed :</p>
+<div class="fragment"><div class="line">pipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createComputePipeline(</div>
+<div class="line">        <a class="code" href="namespacevireo.html">vireo</a>-&gt;createPipelineResources( { descriptorLayout }),</div>
+<div class="line">        <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/compute.comp&quot;</span>));</div>
+</div><!-- end fragment -->
+<h2>Dispatching work</h2>
+<p>To execute the shader, you bind the compute pipeline with <a class="el" href="classvireo_1_1CommandList.html#abbd023f91a01aa79503c043079efe472">vireo::CommandList::bindPipeline</a> and its descriptor sets with <a class="el" href="classvireo_1_1CommandList.html#a927ccc827fe18c02308e6f375ce333cd">vireo::CommandList::bindDescriptors</a>, then issue a dispatch call with <a class="el" href="classvireo_1_1CommandList.html#ac9ccb188621db6fe1fbf5a0be92af3a2">vireo::CommandList::dispatch</a> specifying a 3D grid of workgroups.</p>
+<p>Each workgroup invokes the compute shader on one or more GPU threads (they are very light threads compared to CPU threads).</p>
+<div class="fragment"><div class="line"><span class="comment">// Set the descriptor sets list</span></div>
+<div class="line">frame.commandList-&gt;setDescriptors({frame.descriptorSet});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Update the destination image in the descriptor set</span></div>
+<div class="line">frame.descriptorSet-&gt;update(BINDING_IMAGE, frame.image);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Bind the compute pipeline</span></div>
+<div class="line">frame.commandList-&gt;bindPipeline(pipeline);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Bind the descriptor sets</span></div>
+<div class="line">frame.commandList-&gt;bindDescriptors(pipeline, {frame.descriptorSet});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Prepare the destination image</span></div>
+<div class="line">frame.commandList-&gt;barrier(</div>
+<div class="line">    frame.image,</div>
+<div class="line">    <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a418a992d8e0a8e89c5cf2c49d6e340ba" title="Used as a source image of a transfer/copy/blit command. ">vireo::ResourceState::COPY_SRC</a>,</div>
+<div class="line">    <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a798b028fdea0fd309376b3c6ac18fedf" title="Used as a read/write image with a compute pipeline. ">vireo::ResourceState::DISPATCH_TARGET</a>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Dispatch work on the GPU</span></div>
+<div class="line">frame.commandList-&gt;dispatch((frame.image-&gt;getWidth() + 7)/8, (frame.image-&gt;getHeight() + 7)/8, 1);</div>
+<div class="line"> </div>
+<div class="line">...</div>
+</div><!-- end fragment -->
+<dl class="section note"><dt>Note</dt><dd>The destination image must be a <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a4a0ace5089cbb7738dbf26e7b26ec62d">vireo::DescriptorType::READWRITE_IMAGE</a> created with <a class="el" href="classvireo_1_1Vireo.html#a01e46b88e0e1285c1020d4c6e9bc8d0b">vireo::Vireo::createReadWriteImage</a>. If you need to do non-graphic computational work just consider the image as an array... </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_080_00_pipelines.html">Pipelines</a></li>
-    <li class="footer">Generated on dim. mai 11 2025 15:13:34 for Vireo &nbsp; by
+    <li class="footer">Generated on dim. mai 11 2025 21:35:29 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
