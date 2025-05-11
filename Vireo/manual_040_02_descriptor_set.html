@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('manual_040_02_descriptor_set.html','')
 </div><!-- end fragment -->
 <h2>Binding descriptor sets</h2>
 <p>When recording commands during a <a class="el" href="manual_100_00_renderpass.html">render pass</a> :</p><ul>
-<li>Before binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> set the future descriptors sets (non the dynamic uniform ones) that will be used with <a class="el" href="classvireo_1_1CommandList.html#a6743371309983fb47ab75affc850d88f">vireo::CommandList::setDescriptors</a>.</li>
+<li>Before binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> set the future descriptors sets (not the dynamic uniform ones) that will be used with <a class="el" href="classvireo_1_1CommandList.html#a6743371309983fb47ab75affc850d88f">vireo::CommandList::setDescriptors</a>.</li>
 <li>After binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> bind the descriptor sets with <a class="el" href="classvireo_1_1CommandList.html#a9f0bb4e5280d68557369060929afd9b4">vireo::CommandList::bindDescriptor</a> or <a class="el" href="classvireo_1_1CommandList.html#a927ccc827fe18c02308e6f375ce333cd">vireo::CommandList::bindDescriptors</a></li>
 </ul>
 <p>If you use dynamic uniform buffer <a class="el" href="classvireo_1_1CommandList.html#a9f0bb4e5280d68557369060929afd9b4">vireo::CommandList::bindDescriptor</a> let you change buffer offsets at bind time without reallocating sets.</p>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('manual_040_02_descriptor_set.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_040_00_descriptors.html">Resources Descriptors</a></li>
-    <li class="footer">Generated on dim. mai 11 2025 12:46:09 for Vireo &nbsp; by
+    <li class="footer">Generated on dim. mai 11 2025 15:13:34 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
