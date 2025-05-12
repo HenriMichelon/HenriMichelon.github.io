@@ -64,15 +64,89 @@ $(document).ready(function(){initNavTree('manual_100_00_renderpass.html',''); in
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A render pass is the process of recording then executing multiple <a class="el" href="manual_050_00_commands.html">command lists</a>.</p>
-<p>...More to come... </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>A render pass is the process of recording then executing multiple <a class="el" href="manual_050_00_commands.html">command lists</a> and using <a class="el" href="manual_080_00_pipelines.html">pipelines</a>.</p>
+<h2>Executing a render pass</h2>
+<p>There is no "render pass object" or data structure : a render pass consists of a series of commands that ends with a <a class="el" href="manual_060_00_queues.html">submission</a>.</p>
+<p>In a render pass we generally find :</p><ul>
+<li>The start and stop of a <a class="el" href="manual_050_00_commands.html">recording session</a></li>
+<li>Multiples <a class="el" href="manual_090_03_barriers.html">pipeline barriers</a> for GPU/GPU synchronization</li>
+<li>One or more rendering passes with <a class="el" href="manual_080_01_graphic_pipelines.html">graphic pipelines</a> or execution of <a class="el" href="manual_080_02_compute_pipelines.html">compute pipelines</a></li>
+<li><a class="el" href="manual_060_00_queues.html">Submission</a> of the command lists</li>
+</ul>
+<p>Starting and stopping the commands recording session is done with <a class="el" href="classvireo_1_1CommandList.html#a9d8433d072337e25242ff5d22773ab26">vireo::CommandList::begin</a> and <a class="el" href="classvireo_1_1CommandList.html#aea5bef9f8eaa5046c3c3104b35a712d4">vireo::CommandList::end</a>, barriers are recorded with <a class="el" href="classvireo_1_1CommandList.html#aa97d0ab80ed8a2d96e328ba6c70fa05f">vireo::CommandList::barrier</a> and submission of command lists is done with <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a>. A graphic rendering pass starts with <a class="el" href="classvireo_1_1CommandList.html#a6ba4e02576315caa1e88649a7fe3cc14">vireo::CommandList::beginRendering</a> and ends with <a class="el" href="classvireo_1_1CommandList.html#a3ce769f37a91b6136e8821ab84810d3b">vireo::CommandList::endRendering</a> :</p>
+<div class="fragment"><div class="line"><span class="comment">// Start the recording session</span></div>
+<div class="line">cmdList-&gt;begin();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Ensure that the color attachment is available and in the correct layout</span></div>
+<div class="line">cmdList-&gt;barrier(swapChain, <a class="code" href="namespacevireo.html#ae046059fd4567480e8f03be6171dafd1a0db45d2a4141101bdfe48e3314cfbca3" title="Not used. ">vireo::ResourceState::UNDEFINED</a>, <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a37861cf9cb0fdd450e8ba039e6841745" title="Used as a color attachment in the graphics pipeline. ">vireo::ResourceState::RENDER_TARGET_COLOR</a>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Start a graphic rendering pass</span></div>
+<div class="line">cmdList-&gt;beginRendering(renderingConfig);</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"><span class="comment">// Records commands</span></div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// End the graphic rendering pass</span></div>
+<div class="line">cmdList-&gt;endRendering();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Ensure that all the writes in the color attachment are done</span></div>
+<div class="line">cmdList-&gt;barrier(swapChain, <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a37861cf9cb0fdd450e8ba039e6841745" title="Used as a color attachment in the graphics pipeline. ">vireo::ResourceState::RENDER_TARGET_COLOR</a>, <a class="code" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a720ff3fec5d13dcf3d3aec6d5726fc36" title="Used for presenting a presentable image for display. ">vireo::ResourceState::PRESENT</a>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// End the recording session</span></div>
+<div class="line">cmdList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit commands to the GPU</span></div>
+<div class="line">graphicQueue-&gt;submit(frame.inFlightFence, swapChain, {cmdList});</div>
+</div><!-- end fragment -->
+<p>You can have multiple graphic rendering pass in a render pass, in this case you need to synchronize the color and depth attachments with <a class="el" href="manual_090_03_barriers.html">pipeline barriers</a>.</p>
+<p>If you have multiple render passes (multiple command submissions) you need to synchronize them with <a class="el" href="manual_090_02_semaphores.html">semaphores</a>.</p>
+<h2>Configuration of a graphic rendering pass</h2>
+<p>The graphic rendering pass must be configured with a <a class="el" href="structvireo_1_1RenderingConfiguration.html">vireo::RenderingConfiguration</a> structure with the following parameters :</p><ul>
+<li><code>colorRenderTargets</code> : an array of <a class="el" href="structvireo_1_1RenderTargetDesc.html">vireo::RenderTargetDesc</a> with the descriptions of the images used as color attachments. Must have the same number of elements and the same image formats as the <code>colorRenderFormats</code> of the corresponding graphic pipeline.</li>
+<li><code>depthStencilRenderTarget</code> : the depth and stencil attachment. Must have the same format as the <code>depthStencilImageFormat</code> of the corresponding graphic pipeline.</li>
+<li><code>multisampledDepthStencilRenderTarget</code> : the multisampled depth and stencil attachment if the <code>msaa</code> field of the graphic pipeline is different from <a class="el" href="namespacevireo.html#a9602dcbc7b9991767e322a6f55541e8aab50339a10e1de285ac99d4c3990b8693">vireo::MSAA::NONE</a>.</li>
+<li><code>depthTestEnable</code> : <code>true</code> if the depth and stencil attachment is used for depth testing.</li>
+<li><code>stencilTestEnable</code> : <code>true</code> if the depth and stencil attachment is used for stencil testing.</li>
+<li><code>clearDepthStencil</code> : set to <code>true</code> to clear the depth and stencil attachment at the start of the pass.</li>
+<li><code>depthStencilClearValue</code> : values used to clear the depth and stencil attachment.</li>
+<li><code>discardDepthStencilAfterRender</code> : if <code>true</code> the depth and stencil attachment content can be discarded by the driver if needed.</li>
+</ul>
+<p>For each color attachment of the <code>colorRenderTargets</code> array the parameters are described in a <a class="el" href="structvireo_1_1RenderTargetDesc.html">vireo::RenderTargetDesc</a> structure :</p><ul>
+<li><code>swapChain</code> : if set, use the swap chain as color attachment.</li>
+<li><code>renderTarget</code> : if set, use this image as color attachment. The <code>swapchain</code> field is evaluated first.</li>
+<li><code>multisampledRenderTarget</code> : the multisampled color attachment if the <code>msaa</code> field of the graphic pipeline is different from <a class="el" href="namespacevireo.html#a9602dcbc7b9991767e322a6f55541e8aab50339a10e1de285ac99d4c3990b8693">vireo::MSAA::NONE</a>.</li>
+<li><code>clear</code> : set to <code>true</code> to clear the color attachment at the start of the pass.</li>
+<li><code>clearValue</code> : values used to clear the color attachment.</li>
+<li><code>discardAfterRender</code> : if <code>true</code> the color attachment content can be discarded by the driver if needed.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Configuration of the graphic rendering pass</span></div>
+<div class="line"><a class="code" href="structvireo_1_1RenderingConfiguration.html">vireo::RenderingConfiguration</a> renderingConfig {</div>
+<div class="line">    .<a class="code" href="structvireo_1_1RenderingConfiguration.html#a60af06c66f595faef2b4489eb7fdb91a" title="Color attachments. Can be empty. ">colorRenderTargets</a> = {{</div>
+<div class="line">        .clear      = <span class="keyword">true</span>,</div>
+<div class="line">        .clearValue = {0.0f, 0.2f, 0.4f, 1.0f}</div>
+<div class="line">    }}</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Set the color attachment</span></div>
+<div class="line">renderingConfig.colorRenderTargets[0].swapChain = swapChain;</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Render</span></div>
+<div class="line">cmdList-&gt;beginRendering(renderingConfig);</div>
+<div class="line">...</div>
+<div class="line">cmdList-&gt;endRendering();</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 08:57:09 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

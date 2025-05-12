@@ -65,7 +65,7 @@ $(document).ready(function(){initNavTree('manual_080_01_graphic_pipelines.html',
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The graphics pipeline is the sequence of operations that take the vertices and textures of your meshes all the way to the pixels in the render targets.</p>
-<p>The different stages of the pipeline operations are the same in Vulkan and DirectX but sometime with different names :</p><ul>
+<p>The different stages of the pipeline operations are roughly the same in Vulkan and DirectX but sometime with different names :</p><ul>
 <li><a href="https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Introduction">Vulkan graphic pipeline</a></li>
 <li><a href="https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline">DirectX 12 graphic pipeline</a></li>
 </ul>
@@ -156,16 +156,105 @@ $(document).ready(function(){initNavTree('manual_080_01_graphic_pipelines.html',
 <li><code>frontStencilOpState</code> : value controlling the <a class="el" href="structvireo_1_1StencilOpState.html">corresponding parameters</a> of the stencil test.</li>
 <li><code>backStencilOpState</code> : value controlling the <a class="el" href="structvireo_1_1StencilOpState.html">corresponding parameters</a> of the stencil test.</li>
 </ul>
+<p>The stencil reference value is set in the <a class="el" href="manual_100_00_renderpass.html">render pass</a> with <a class="el" href="classvireo_1_1CommandList.html#a0798bbed3923ec01a5a2f88da5107417">vireo::CommandList::setStencilReference</a>.</p>
 <h2>Creating a graphic pipeline</h2>
+<p>After populating the <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> structure the pipeline creation with <a class="el" href="classvireo_1_1Vireo.html#a4e09ff8f0ade6c4276dcf48e9910466d">vireo::Vireo::createGraphicPipeline</a> is straightforward :</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The pipeline parameters structure</span></div>
+<div class="line">vireo::GraphicPipelineConfiguration pipelineConfig {</div>
+<div class="line">    .colorRenderFormats = {<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">vireo::ImageFormat::R8G8B8A8_SRGB</a>},</div>
+<div class="line">    .colorBlendDesc     = {{}}</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The vertex structure</span></div>
+<div class="line"><span class="keyword">struct </span>Vertex {</div>
+<div class="line">    glm::vec3 pos;</div>
+<div class="line">    glm::vec3 color;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The vertex structure descriptions</span></div>
+<div class="line"><span class="keyword">const</span> std::vector&lt;vireo::VertexAttributeDesc&gt; vertexAttributes{</div>
+<div class="line">    {<span class="stringliteral">&quot;POSITION&quot;</span>, <a class="code" href="namespacevireo.html#ae8bee0afbe765c96044673fb0a0f9691ad05d603c5884ae9ccc392513becba305" title="Three signed floats. ">vireo::AttributeFormat::R32G32B32_FLOAT</a>, offsetof(Vertex, pos)},</div>
+<div class="line">    {<span class="stringliteral">&quot;COLOR&quot;</span>,    <a class="code" href="namespacevireo.html#ae8bee0afbe765c96044673fb0a0f9691ad05d603c5884ae9ccc392513becba305" title="Three signed floats. ">vireo::AttributeFormat::R32G32B32_FLOAT</a>, offsetof(Vertex, color)}</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create the pipeline resources and shader modules</span></div>
+<div class="line">pipelineConfig.resources = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createPipelineResources();</div>
+<div class="line">pipelineConfig.vertexInputLayout = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createVertexLayout(<span class="keyword">sizeof</span>(Vertex), vertexAttributes);</div>
+<div class="line">pipelineConfig.vertexShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/triangle_color.vert&quot;</span>);</div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/triangle_color.frag&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create the pipeline</span></div>
+<div class="line">defaultPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+</div><!-- end fragment -->
+<p>Since the <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a> structure is only used at creation time, you can use it for multiple pipelines creation :</p>
+<div class="fragment"><div class="line"><span class="comment">// Pipeline #1</span></div>
+<div class="line">pipelineConfig.colorRenderFormats.push_back(<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca3fa3b9f0bfc91056d90272c3a6e0cbaf">vireo::ImageFormat::R16G16_SFLOAT</a>);</div>
+<div class="line">pipelineConfig.resources = resources;</div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/smaa_edge_detect.frag&quot;</span>);</div>
+<div class="line">smaaEdgePipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Pipeline #2</span></div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/smaa_blend_weigth.frag&quot;</span>);</div>
+<div class="line">smaaBlendWeightPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Pipeline #3</span></div>
+<div class="line">pipelineConfig.colorRenderFormats[0] = renderFormat;</div>
+<div class="line">pipelineConfig.resources = smaaResources;</div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/smaa_neighborhood_blend.frag&quot;</span>);</div>
+<div class="line">smaaBlendPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Pipeline #4</span></div>
+<div class="line">pipelineConfig.resources = resources;</div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/fxaa.frag&quot;</span>);</div>
+<div class="line">fxaaPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Pipeline #5</span></div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/voronoi.frag&quot;</span>);</div>
+<div class="line">effectPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Pipeline #6</span></div>
+<div class="line">pipelineConfig.fragmentShader = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createShaderModule(<span class="stringliteral">&quot;shaders/gamma_correction.frag&quot;</span>);</div>
+<div class="line">gammaCorrectionPipeline = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createGraphicPipeline(pipelineConfig);</div>
+</div><!-- end fragment -->
 <h2>Drawing</h2>
-<p>...More to come... </p>
-</div></div><!-- contents -->
+<p>To execute the shaders, bind the compute pipeline with <a class="el" href="classvireo_1_1CommandList.html#abbd023f91a01aa79503c043079efe472">vireo::CommandList::bindPipeline</a> and its descriptor sets with <a class="el" href="classvireo_1_1CommandList.html#a927ccc827fe18c02308e6f375ce333cd">vireo::CommandList::bindDescriptors</a>, then issue draw calls with <a class="el" href="classvireo_1_1CommandList.html#adbf42c05f74289eb98698b991098a9d6">vireo::CommandList::draw</a> or <a class="el" href="classvireo_1_1CommandList.html#a16f46fd3e533a7e8f05ea95bef12a4b7">vireo::CommandList::drawIndexed</a> :</p>
+<div class="fragment"><div class="line"><span class="comment">// Set the descriptor sets list</span></div>
+<div class="line">frame.commandList-&gt;setDescriptors({frame.descriptorSet});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Bind the graphic pipeline</span></div>
+<div class="line">frame.commandList-&gt;bindPipeline(pipeline);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Bind the descriptor sets</span></div>
+<div class="line">frame.commandList-&gt;bindDescriptors(pipeline, {frame.descriptorSet});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Draw a triangle</span></div>
+<div class="line">frame.commandList-&gt;draw(triangleVertices.size());</div>
+</div><!-- end fragment -->
+<p>If you need to select specific data in the descriptor set you can use <a class="el" href="manual_040_02_descriptor_set.html">dynamic uniform buffer descriptor set</a> :</p>
+<div class="fragment"><div class="line">cmdList-&gt;bindDescriptor(pipeline,</div>
+<div class="line">    frame.materialsDescriptorSet, SET_MATERIALS,</div>
+<div class="line">    frame.materialUniform-&gt;getInstanceSizeAligned() * Scene::MATERIAL_GRID);</div>
+<div class="line">cmdList-&gt;bindDescriptor(pipeline,</div>
+<div class="line">    frame.modelsDescriptorSet, SET_MODELS,</div>
+<div class="line">    frame.modelUniform-&gt;getInstanceSizeAligned() * Scene::MODEL_TRANSPARENT);</div>
+<div class="line">scene.drawCube(cmdList);</div>
+</div><!-- end fragment -->
+<p>Or <a class="el" href="manual_040_03_push_constants.html">push constants</a> : </p><div class="fragment"><div class="line">pushConstants.modelIndex = Scene::MODEL_TRANSPARENT;</div>
+<div class="line">pushConstants.materialIndex = Scene::MATERIAL_GRID;</div>
+<div class="line">cmdList-&gt;pushConstants(pipelineConfig.resources, pushConstantsDesc, &amp;pushConstants);</div>
+<div class="line">scene.drawCube(cmdList);</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_080_00_pipelines.html">Pipelines</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 08:57:09 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
