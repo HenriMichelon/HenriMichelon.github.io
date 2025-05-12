@@ -48,7 +48,8 @@ var NAVTREE =
         [ "Memory barriers", "manual_090_03_barriers.html", null ]
       ] ],
       [ "Render pass", "manual_100_00_renderpass.html", null ],
-      [ "Swap Chains", "manual_110_00_swapchain.html", null ]
+      [ "Swap Chains", "manual_110_00_swapchain.html", null ],
+      [ "Viewports and scissors", "manual_120_00_viewports.html", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
@@ -436,7 +437,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"pages.html"
+"namespacevireo.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

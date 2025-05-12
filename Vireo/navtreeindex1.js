@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"namespacevireo.html":[3,0,0],
 "pages.html":[],
 "structvireo_1_1ColorBlendDesc.html":[3,0,0,2],
 "structvireo_1_1ColorBlendDesc.html#a22125388a040e897f194544d63a87766":[3,0,0,2,7],
