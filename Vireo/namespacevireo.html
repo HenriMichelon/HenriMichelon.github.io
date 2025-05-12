@@ -255,9 +255,10 @@ Enums</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b">VERTEX</a>, 
 <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076">INDEX</a>, 
 <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">UNIFORM</a>, 
-<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e">BUFFER_TRANSFER</a>, 
+<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa40d9c53a475ab5e1d6754c0ce596901a">BUFFER_UPLOAD</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa684523a9e791cf89558328e144e61b79">IMAGE_TRANSFER</a>
+&#160;&#160;<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfae99309ceea2a2e7aa305a98a8484ace7">IMAGE_UPLOAD</a>, 
+<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa2cf32e0ddf0b8980d3c694117697749a">IMAGE_DOWNLOAD</a>
 <br />
  }</td></tr>
 <tr class="separator:adf8e136713c0691010d2bec6ba63e9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,10 +419,16 @@ Enums</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a6b257efc0b0cd2a722f23dcf0b0519a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22fa67f5720e9bfbd075bd088285c531"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531">ShaderStage</a> { <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a5fb1f955b45e38e31789286a1790398d">ALL</a>, 
+<tr class="memitem:a22fa67f5720e9bfbd075bd088285c531"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531">ShaderStage</a> { <br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a5fb1f955b45e38e31789286a1790398d">ALL</a>, 
 <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a0c3e47aef93a7f244f41ab309a33634b">VERTEX</a>, 
 <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531a7345a249ed5c2f850d85dc1727c24716">FRAGMENT</a>, 
+<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531ab9caa5e2f09eea734f9fd1089718021e">HULL</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531abf7c99592e3b8c93ce1086a0036a94fd">DOMAIN</a>, 
+<a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531ab22957ad8078e8d73de61aef53d13a74">GEOMETRY</a>, 
 <a class="el" href="namespacevireo.html#a22fa67f5720e9bfbd075bd088285c531aac404d7ce6ca5862e9b8a2641fbafd90">COMPUTE</a>
+<br />
  }</td></tr>
 <tr class="separator:a22fa67f5720e9bfbd075bd088285c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a6f68a4c9f786cf3809e71b5669b04"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04">WaitStage</a> { <br />
@@ -726,15 +733,17 @@ Enums</h2></td></tr>
 <p>VRAM <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> use type</p>
 <p>Manual page : <a class="el" href="manual_030_01_resources.html">Memory buffers</a> </p>
 <table class="fieldtable">
-<tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b"></a>VERTEX&#160;</td><td class="fielddoc"><p>Used to store vertices (in device local memory) </p>
+<tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa0c3e47aef93a7f244f41ab309a33634b"></a>VERTEX&#160;</td><td class="fielddoc"><p>Used to store vertices (in GPU memory) </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076"></a>INDEX&#160;</td><td class="fielddoc"><p>Used to store indices (in device local memory) </p>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfacb4ae3b37047fb4b2c0d16f8bf84f076"></a>INDEX&#160;</td><td class="fielddoc"><p>Used to store indices (in GPU memory) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2"></a>UNIFORM&#160;</td><td class="fielddoc"><p>Used for shader uniform (in host visible memory) </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa1e70c972cdf0e6d46129afcea858866e"></a>BUFFER_TRANSFER&#160;</td><td class="fielddoc"><p>Used for vertex and index buffers copy operations (in host visible memory) </p>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa40d9c53a475ab5e1d6754c0ce596901a"></a>BUFFER_UPLOAD&#160;</td><td class="fielddoc"><p>Used for vertex and index buffers copy operations (from host visible memory to GPU memory) </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa684523a9e791cf89558328e144e61b79"></a>IMAGE_TRANSFER&#160;</td><td class="fielddoc"><p>Used for image copy operations (in host visible memory) </p>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfae99309ceea2a2e7aa305a98a8484ace7"></a>IMAGE_UPLOAD&#160;</td><td class="fielddoc"><p>Used for image copy operations (from host visible memory to GPU memory) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa2cf32e0ddf0b8980d3c694117697749a"></a>IMAGE_DOWNLOAD&#160;</td><td class="fielddoc"><p>Used for image copy operations (from GPU memory to host visible) </p>
 </td></tr>
 </table>
 
@@ -1400,6 +1409,12 @@ Enums</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a22fa67f5720e9bfbd075bd088285c531a7345a249ed5c2f850d85dc1727c24716"></a>FRAGMENT&#160;</td><td class="fielddoc"><p>Fragment/pixel stage. </p>
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22fa67f5720e9bfbd075bd088285c531ab9caa5e2f09eea734f9fd1089718021e"></a>HULL&#160;</td><td class="fielddoc"><p>Tessellation control/Hull stage. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22fa67f5720e9bfbd075bd088285c531abf7c99592e3b8c93ce1086a0036a94fd"></a>DOMAIN&#160;</td><td class="fielddoc"><p>Tessellation evaluation/Domain stage. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a22fa67f5720e9bfbd075bd088285c531ab22957ad8078e8d73de61aef53d13a74"></a>GEOMETRY&#160;</td><td class="fielddoc"><p>Geometry stage. </p>
+</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a22fa67f5720e9bfbd075bd088285c531aac404d7ce6ca5862e9b8a2641fbafd90"></a>COMPUTE&#160;</td><td class="fielddoc"><p>Compute stage. </p>
 </td></tr>
 </table>
@@ -1491,7 +1506,7 @@ Enums</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 13:34:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

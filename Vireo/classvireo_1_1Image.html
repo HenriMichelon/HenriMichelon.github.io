@@ -95,10 +95,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a478d4753c0a41af74ce533f34dde9aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3205b6093998c9d6e95797b9945d9f12"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3205b6093998c9d6e95797b9945d9f12">getArraySize</a> () const</td></tr>
 <tr class="separator:a3205b6093998c9d6e95797b9945d9f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894a747cb095beeff44f56cec6fc8642"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a894a747cb095beeff44f56cec6fc8642">getImageSize</a> () const</td></tr>
-<tr class="separator:a894a747cb095beeff44f56cec6fc8642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a945918a96ee4ad9d08a98bc8a60f9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#ab0a945918a96ee4ad9d08a98bc8a60f9">getRowPitch</a> () const</td></tr>
 <tr class="separator:ab0a945918a96ee4ad9d08a98bc8a60f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894a747cb095beeff44f56cec6fc8642"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a894a747cb095beeff44f56cec6fc8642">getImageSize</a> () const</td></tr>
+<tr class="separator:a894a747cb095beeff44f56cec6fc8642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1c8f055b20cb7c378e033c88b884f3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a2d1c8f055b20cb7c378e033c88b884f3">getAlignedImageSize</a> () const</td></tr>
+<tr class="separator:a2d1c8f055b20cb7c378e033c88b884f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4994eec60364c5495c6a57bb99d84"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3ac4994eec60364c5495c6a57bb99d84">getAlignedRowPitch</a> () const</td></tr>
+<tr class="separator:a3ac4994eec60364c5495c6a57bb99d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a155411af8144a14654748c1c95e5b676"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a155411af8144a14654748c1c95e5b676">isReadWrite</a> () const</td></tr>
 <tr class="separator:a155411af8144a14654748c1c95e5b676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -200,6 +204,54 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2d1c8f055b20cb7c378e033c88b884f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getAlignedImageSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the size in bytes of the first layer, with aligned rows </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ac4994eec60364c5495c6a57bb99d84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t getAlignedRowPitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the size in bytes of aligned rows </p>
+
+</div>
+</div>
 <a class="anchor" id="a3205b6093998c9d6e95797b9945d9f12"></a>
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +417,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the size in bytes of a line of the first layer </p>
+<p>Return the size in bytes of each row </p>
 
 </div>
 </div>
@@ -444,7 +496,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Image.html">Image</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 13:34:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

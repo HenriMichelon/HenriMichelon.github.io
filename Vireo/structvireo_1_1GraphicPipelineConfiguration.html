@@ -98,6 +98,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6b616984a63a0cca82ff022791a6af4d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html#a6b616984a63a0cca82ff022791a6af4d">fragmentShader</a> {nullptr}</td></tr>
 <tr class="memdesc:a6b616984a63a0cca82ff022791a6af4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fragment/Pixel shader.  <a href="#a6b616984a63a0cca82ff022791a6af4d">More...</a><br /></td></tr>
 <tr class="separator:a6b616984a63a0cca82ff022791a6af4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463da531c8d3aaf573f321834b15ec2c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html#a463da531c8d3aaf573f321834b15ec2c">hullShader</a> {nullptr}</td></tr>
+<tr class="memdesc:a463da531c8d3aaf573f321834b15ec2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tessellation control/Hull shader.  <a href="#a463da531c8d3aaf573f321834b15ec2c">More...</a><br /></td></tr>
+<tr class="separator:a463da531c8d3aaf573f321834b15ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b731b5d9a10abb21fdf63419fe277a9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html#a6b731b5d9a10abb21fdf63419fe277a9">domainShader</a> {nullptr}</td></tr>
+<tr class="memdesc:a6b731b5d9a10abb21fdf63419fe277a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tessellation evaluation/Domain shader.  <a href="#a6b731b5d9a10abb21fdf63419fe277a9">More...</a><br /></td></tr>
+<tr class="separator:a6b731b5d9a10abb21fdf63419fe277a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d5e31407844807acbf4ae130e4777a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html#a33d5e31407844807acbf4ae130e4777a">geometryShader</a> {nullptr}</td></tr>
+<tr class="memdesc:a33d5e31407844807acbf4ae130e4777a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry shader.  <a href="#a33d5e31407844807acbf4ae130e4777a">More...</a><br /></td></tr>
+<tr class="separator:a33d5e31407844807acbf4ae130e4777a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9425f16e57566d759c476b29a959e18a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevireo.html#a940e3da6a9b57aae3de0b050e2a7af5e">PrimitiveTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html#a9425f16e57566d759c476b29a959e18a">primitiveTopology</a> {PrimitiveTopology::TRIANGLE_LIST}</td></tr>
 <tr class="memdesc:a9425f16e57566d759c476b29a959e18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The primitive topology.  <a href="#a9425f16e57566d759c476b29a959e18a">More...</a><br /></td></tr>
 <tr class="separator:a9425f16e57566d759c476b29a959e18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +348,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6b731b5d9a10abb21fdf63419fe277a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; domainShader {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tessellation evaluation/Domain shader. </p>
+
+</div>
+</div>
 <a class="anchor" id="a6b616984a63a0cca82ff022791a6af4d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -378,6 +401,34 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>value controlling the corresponding parameters of the stencil test. </p>
+
+</div>
+</div>
+<a class="anchor" id="a33d5e31407844807acbf4ae130e4777a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; geometryShader {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Geometry shader. </p>
+
+</div>
+</div>
+<a class="anchor" id="a463da531c8d3aaf573f321834b15ec2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; hullShader {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tessellation control/Hull shader. </p>
 
 </div>
 </div>
@@ -513,7 +564,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">GraphicPipelineConfiguration</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 13:34:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

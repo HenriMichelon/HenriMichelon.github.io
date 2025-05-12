@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div class="line">    texture = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createImage(<a class="code" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5ca5c835c7ea238d0796853827ce416a5e2">vireo::ImageFormat::R8G8B8A8_SRGB</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Allocate the staging buffer in host-accessible memory</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> stagingBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352aeb5ddb3b6096fb90ff720d9c3e2a6628" title="Command/Queue for copy operations. ">vireo::BufferType::TRANSFER</a>, texture-&gt;getImageSize());</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> stagingBuffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfae99309ceea2a2e7aa305a98a8484ace7" title="Used for image copy operations (from host visible memory to GPU memory) ">vireo::BufferType::IMAGE_UPLOAD</a>, texture-&gt;getImageSize());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Copy the image data into the staging buffer</span></div>
 <div class="line">    stagingBuffer-&gt;map();</div>
@@ -147,14 +147,61 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div class="line">    transferQueue-&gt;waitIdle();</div>
 <div class="line">} <span class="comment">// unmap() is automatically called on the staging buffer and the staging buffer is destroyed</span></div>
 </div><!-- end fragment -->
-<dl class="section note"><dt>Note</dt><dd>It's more efficient to load the image data from the disk directly into the staging buffer by using the <a class="el" href="classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b">mapped address</a>. </dd></dl>
-</div></div><!-- contents -->
+<dl class="section note"><dt>Note</dt><dd>It's more efficient to load the image data from the disk directly into the staging buffer by using the <a class="el" href="classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b">mapped address</a>.</dd></dl>
+<h2>Downloading an image</h2>
+<p>Downloading an image to save the result of a rendering or the result of a compute shader is similar to uploading with <code>copy</code> :</p><ul>
+<li>Allocate a staging buffer</li>
+<li>Copy the image to the buffer</li>
+<li>Use <code>map()</code> to access the memory</li>
+</ul>
+<p>The main difference is that you have to take care of the memory alignment of the rows of the image imposed by the graphic API :</p>
+<div class="fragment"><div class="line"><span class="comment">// Start recording commands</span></div>
+<div class="line">commandList-&gt;begin();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create a temporary, host-visible memory buffer</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> buffer = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa2cf32e0ddf0b8980d3c694117697749a" title="Used for image copy operations (from GPU memory to host visible) ">vireo::BufferType::IMAGE_DOWNLOAD</a>, image-&gt;getAlignedImageSize());</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Copy image to buffer</span></div>
+<div class="line"><span class="comment">// The image must be in the COPY_SRC state; insert a barrier if needed</span></div>
+<div class="line">commandList-&gt;copy(image, buffer);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// End recording commands</span></div>
+<div class="line">commandList-&gt;end();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit work to the GPU and wait for the command execution</span></div>
+<div class="line">graphicSubmitQueue-&gt;submit({commandList});</div>
+<div class="line">graphicSubmitQueue-&gt;waitIdle();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Map the buffer to the CPU virtual address space</span></div>
+<div class="line">buffer-&gt;map();</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>* source = <span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(buffer-&gt;getMappedAddress());</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Copy the image row by row in CPU memory</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> rowPitch = image-&gt;getRowPitch();</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> alignedRowPitch = image-&gt;getAlignedRowPitch();</div>
+<div class="line">std::vector&lt;uint8_t&gt; imageData(image-&gt;getImageSize());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; image-&gt;getHeight(); ++y) {</div>
+<div class="line">    memcpy(&amp;imageData[y * rowPitch], source + y * alignedRowPitch, rowPitch);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Unmap the buffer</span></div>
+<div class="line">buffer-&gt;unmap();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Write data to a file</span></div>
+<div class="line">stbi_write_png(<span class="stringliteral">&quot;output.png&quot;</span>,</div>
+<div class="line">    image-&gt;getWidth(),</div>
+<div class="line">    image-&gt;getHeight(),</div>
+<div class="line">    image-&gt;getPixelSize(image-&gt;getFormat()),</div>
+<div class="line">    imageData.data(),</div>
+<div class="line">    rowPitch);</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 12:24:45 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 13:34:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -198,9 +198,12 @@ var NAVTREE =
             [ "depthStencilImageFormat", "structvireo_1_1GraphicPipelineConfiguration.html#abe7df22d322b849c162edc4a3d34edc4", null ],
             [ "depthTestEnable", "structvireo_1_1GraphicPipelineConfiguration.html#aab0646082c17e18ccff3c9992c91a28a", null ],
             [ "depthWriteEnable", "structvireo_1_1GraphicPipelineConfiguration.html#a1944b0918378af218375dd45c1f191d1", null ],
+            [ "domainShader", "structvireo_1_1GraphicPipelineConfiguration.html#a6b731b5d9a10abb21fdf63419fe277a9", null ],
             [ "fragmentShader", "structvireo_1_1GraphicPipelineConfiguration.html#a6b616984a63a0cca82ff022791a6af4d", null ],
             [ "frontFaceCounterClockwise", "structvireo_1_1GraphicPipelineConfiguration.html#ab524e7956d02467cd5f3e2c5c415ea6f", null ],
             [ "frontStencilOpState", "structvireo_1_1GraphicPipelineConfiguration.html#a1b45dd5b84c41e5322d45980f1f572fe", null ],
+            [ "geometryShader", "structvireo_1_1GraphicPipelineConfiguration.html#a33d5e31407844807acbf4ae130e4777a", null ],
+            [ "hullShader", "structvireo_1_1GraphicPipelineConfiguration.html#a463da531c8d3aaf573f321834b15ec2c", null ],
             [ "logicOp", "structvireo_1_1GraphicPipelineConfiguration.html#af86718b49f9733acbd8041fa48796e05", null ],
             [ "logicOpEnable", "structvireo_1_1GraphicPipelineConfiguration.html#a659310043f298c09243889f6a1e0701a", null ],
             [ "msaa", "structvireo_1_1GraphicPipelineConfiguration.html#a58daf641d993a02e7806fe8b763fad6c", null ],
@@ -214,6 +217,8 @@ var NAVTREE =
           [ "Image", "classvireo_1_1Image.html", [
             [ "~Image", "classvireo_1_1Image.html#a428c4eac8ad01b4c51416ad6d8392f3b", null ],
             [ "Image", "classvireo_1_1Image.html#a1498bf4731472241234dcdb11346ec96", null ],
+            [ "getAlignedImageSize", "classvireo_1_1Image.html#a2d1c8f055b20cb7c378e033c88b884f3", null ],
+            [ "getAlignedRowPitch", "classvireo_1_1Image.html#a3ac4994eec60364c5495c6a57bb99d84", null ],
             [ "getArraySize", "classvireo_1_1Image.html#a3205b6093998c9d6e95797b9945d9f12", null ],
             [ "getFormat", "classvireo_1_1Image.html#afc623d05f6456686004dbcb40ca7c8eb", null ],
             [ "getHeight", "classvireo_1_1Image.html#afb671e8ff01febf709d9074687f2bfb4", null ],
@@ -431,7 +436,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"structvireo_1_1ColorBlendDesc.html#a22125388a040e897f194544d63a87766"
+"pages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
