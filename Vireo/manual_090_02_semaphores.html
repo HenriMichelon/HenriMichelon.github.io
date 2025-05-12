@@ -64,15 +64,61 @@ $(document).ready(function(){initNavTree('manual_090_02_semaphores.html',''); in
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A semaphore is a GPU→GPU synchronization primitive. It ensures ordering between queue submissions (e.g. “don’t start color pass until depth pre pass finishes”).</p>
-<p>...More to come... </p>
+<div class="textblock"><p>A semaphore is a GPU/GPU synchronization primitive. They are use <b>between</b> <a class="el" href="manual_100_00_renderpass.html">render passes</a> : it ensures ordering between queue submissions (e.g. “don’t start color pass until depth pre pass finishes”).</p>
+<p>There is two types of semaphores :</p><ul>
+<li><a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452">vireo::SemaphoreType::BINARY</a> : have only two states - signaled and unsignaled. Use them for simple synchronization between two <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a>.</li>
+<li><a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">vireo::SemaphoreType::TIMELINE</a> : have an increasing 64-bit unsigned integer payload and are signaled with respect to a particular reference value. Use them for multi passes synchronization.</li>
+</ul>
+<h2>Using binary semaphores</h2>
+<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452">vireo::SemaphoreType::BINARY</a> parameter :</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> semaphore = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSemaphore(<a class="code" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452" title="Binary semaphores have two states - signaled and unsignaled. ">vireo::SemaphoreType::BINARY</a>);</div>
+</div><!-- end fragment -->
+<p>Then use it with <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a>. In the following example both submissions will be started in parallel, the input assembly and vertex shaders will be executed in parallel, then the second submission will wait for the first vertex shader to end before starting the fragment shader :</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="comment">// Record commands</span></div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit commands and tell the GPU to signal a semaphore at the end of the vertex shader</span></div>
+<div class="line">graphicQueue-&gt;submit(<a class="code" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04a9861721c6c2dfbdc35d20746c386a090">vireo::WaitStage::VERTEX_SHADER</a>, semaphore, {commandList});</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"><span class="comment">// Record commands</span></div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Submit commands and tell the GPU to wait before starting the fragment shader</span></div>
+<div class="line">graphicQueue-&gt;submit(semaphore, <a class="code" href="namespacevireo.html#a14a6f68a4c9f786cf3809e71b5669b04aaf58ae9f6cade42be9607c7298fd97d1">vireo::WaitStage::FRAGMENT_SHADER</a>, {commandList});</div>
+</div><!-- end fragment -->
+<dl class="section note"><dt>Note</dt><dd>The shader waiting/signaling stages aren't used with DirectX 12, the semaphore will be signaled at the end of the pipeline work and waited at the start...</dd></dl>
+<h2>Using timeline semaphores</h2>
+<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">vireo::SemaphoreType::TIMELINE</a> parameter :</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> semaphore = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSemaphore(<a class="code" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8" title="Timeline semaphores have a strictly increasing 64-bit unsigned integer payload and are signaled with...">vireo::SemaphoreType::TIMELINE</a>);</div>
+</div><!-- end fragment -->
+<p>The reference value of the semaphore counter starts at zero at will be incremented each time it will be signaled.</p>
+<p>You can use <a class="el" href="classvireo_1_1Semaphore.html#afa6200d893b177d976ea38086fcc692d">vireo::Semaphore::incrementValue</a>, <a class="el" href="classvireo_1_1Semaphore.html#ac652823473f741abc1e6eb12b72552d9">vireo::Semaphore::decrementValue</a> or <a class="el" href="classvireo_1_1Semaphore.html#a772423f5807d5a30b60c9284206e61ff">vireo::Semaphore::setValue</a> to specify the reference value before waiting but be careful to set the correct value back before signaling.</p>
+<p>Example of a submission waiting for two other render passes to signal the semaphore : </p><div class="fragment"><div class="line"><span class="comment">// we have two previous passes, decrement to wait for the signaling value of the first pass</span></div>
+<div class="line">frame.semaphore-&gt;decrementValue();</div>
+<div class="line"> </div>
+<div class="line">graphicQueue-&gt;submit(</div>
+<div class="line">    frame.semaphore,</div>
+<div class="line">    <span class="comment">// wait for &quot;currentValue - 1&quot; and &quot;currentValue&quot;</span></div>
+<div class="line">    {vireo::WaitStage::FRAGMENT_SHADER, vireo::WaitStage::FRAGMENT_SHADER},</div>
+<div class="line">    frame.inFlightFence,</div>
+<div class="line">    swapChain,</div>
+<div class="line">    {cmdList});</div>
+<div class="line">swapChain-&gt;present();</div>
+<div class="line">swapChain-&gt;nextFrameIndex();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// roll back the semaphore value</span></div>
+<div class="line">frame.semaphore-&gt;incrementValue();</div>
+</div><!-- end fragment -->
+<p>Check the <a href="https://github.com/HenriMichelon/vireo_samples/tree/main/src/samples/deferred">"Deferred"</a> example in the <a href="https://github.com/HenriMichelon/vireo_samples">Samples repository</a> for a complete example of a timeline semaphore use. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_090_00_synchronization.html">Synchronization</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 13:34:04 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mai 12 2025 14:56:35 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
