@@ -71,9 +71,12 @@ $(document).ready(function(){initNavTree('tutorial_1_08_viewport.html',''); init
 <div class="caption">
 viewports_scissors.png</div></div>
     <p>We need to record the commands to set the viewports &amp; scissors at the start of the render pass :</p>
-<div class="fragment"><div class="line">frameData.commandList-&gt;beginRendering(renderingConfig);</div>
-<div class="line">frameData.commandList-&gt;setViewport(swapChain-&gt;getExtent());</div>
-<div class="line">frameData.commandList-&gt;setScissors(swapChain-&gt;getExtent());</div>
+<div class="fragment"><div class="line">frameData.commandList-&gt;setViewport(<a class="code" href="structvireo_1_1Viewport.html">vireo::Viewport</a>{</div>
+<div class="line">    .<a class="code" href="structvireo_1_1Viewport.html#ae426f00e82704fa09578f5446e22d915" title="Viewport’s width. ">width</a>  = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(swapChain-&gt;getExtent().width),</div>
+<div class="line">    .height = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(swapChain-&gt;getExtent().height)});</div>
+<div class="line">frameData.commandList-&gt;setScissors(<a class="code" href="structvireo_1_1Rect.html">vireo::Rect</a>{</div>
+<div class="line">    .<a class="code" href="structvireo_1_1Rect.html#a325272ddd9a962f05deb905101d25cbd" title="Rect’s width. ">width</a>  = swapChain-&gt;getExtent().width,</div>
+<div class="line">    .height = swapChain-&gt;getExtent().height});</div>
 <div class="line"><span class="comment">// commands will be recorded and submitted here</span></div>
 </div><!-- end fragment -->
 <p>Next : <a class="el" href="tutorial_1_09_vertex_data.html">Vertex data</a> </p>
@@ -83,7 +86,7 @@ viewports_scissors.png</div></div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_tutorial_1.html">&quot;Hello Triangle&quot; tutorial</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 15:26:19 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 16 2025 11:08:08 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

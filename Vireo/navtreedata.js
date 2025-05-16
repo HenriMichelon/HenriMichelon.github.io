@@ -73,6 +73,10 @@ var NAVTREE =
             [ "mappedAddress", "classvireo_1_1Buffer.html#a7f58980a2c86325f5bf167aa84ead492", null ],
             [ "WHOLE_SIZE", "classvireo_1_1Buffer.html#a8ece8a4ec9f37e2f57460b4e04d96b71", null ]
           ] ],
+          [ "BufferUploadInfo", "structvireo_1_1BufferUploadInfo.html", [
+            [ "buffer", "structvireo_1_1BufferUploadInfo.html#a87c78df1d374992d86709fbf2106be27", null ],
+            [ "data", "structvireo_1_1BufferUploadInfo.html#a0d49d74db4c035719c3867723cf7e779", null ]
+          ] ],
           [ "ClearValue", "unionvireo_1_1ClearValue.html", [
             [ "color", "unionvireo_1_1ClearValue.html#a111ac8b82a0ae90d45d22ed6cac83824", null ],
             [ "depthStencil", "unionvireo_1_1ClearValue.html#a726a4f29b4e589b659b61594ba5a0de9", null ]
@@ -107,7 +111,7 @@ var NAVTREE =
             [ "bindDescriptor", "classvireo_1_1CommandList.html#a9f0bb4e5280d68557369060929afd9b4", null ],
             [ "bindDescriptor", "classvireo_1_1CommandList.html#a56cf527b2819403921b5b1a140dc17e8", null ],
             [ "bindDescriptors", "classvireo_1_1CommandList.html#a927ccc827fe18c02308e6f375ce333cd", null ],
-            [ "bindIndexBuffer", "classvireo_1_1CommandList.html#acc0684eab5ea34bacc8f971b35e92a82", null ],
+            [ "bindIndexBuffer", "classvireo_1_1CommandList.html#acdee7d7982fe1ac42e35a76512ed6ccc", null ],
             [ "bindPipeline", "classvireo_1_1CommandList.html#abbd023f91a01aa79503c043079efe472", null ],
             [ "bindVertexBuffer", "classvireo_1_1CommandList.html#a0f3dd16f20f1b53955e945eb9902be66", null ],
             [ "bindVertexBuffers", "classvireo_1_1CommandList.html#aa4dcfdc4d3b6a44813d95585da2af5a6", null ],
@@ -119,19 +123,22 @@ var NAVTREE =
             [ "copy", "classvireo_1_1CommandList.html#a569b56acb8adf2e9a1db6546cdb4b4b0", null ],
             [ "dispatch", "classvireo_1_1CommandList.html#ac9ccb188621db6fe1fbf5a0be92af3a2", null ],
             [ "draw", "classvireo_1_1CommandList.html#adbf42c05f74289eb98698b991098a9d6", null ],
-            [ "drawIndexed", "classvireo_1_1CommandList.html#a16f46fd3e533a7e8f05ea95bef12a4b7", null ],
+            [ "drawIndexed", "classvireo_1_1CommandList.html#aebe6ecf3de6f810b09a9d80dc38bbd8d", null ],
             [ "end", "classvireo_1_1CommandList.html#aea5bef9f8eaa5046c3c3104b35a712d4", null ],
             [ "endRendering", "classvireo_1_1CommandList.html#a3ce769f37a91b6136e8821ab84810d3b", null ],
             [ "pushConstants", "classvireo_1_1CommandList.html#a544932598c54739d02736fea07d89d5f", null ],
             [ "setDescriptors", "classvireo_1_1CommandList.html#a6743371309983fb47ab75affc850d88f", null ],
-            [ "setScissors", "classvireo_1_1CommandList.html#a45840fdf0d65e69f4b4fa2c97b896ccd", null ],
-            [ "setScissors", "classvireo_1_1CommandList.html#a28b9c526cc87c8b4786a47299234176c", null ],
+            [ "setScissors", "classvireo_1_1CommandList.html#a6a24283dc6a5be9a4e1c60381eee1adf", null ],
+            [ "setScissors", "classvireo_1_1CommandList.html#a6dc62d9eb2c40c567601533cb5e6027b", null ],
             [ "setStencilReference", "classvireo_1_1CommandList.html#a0798bbed3923ec01a5a2f88da5107417", null ],
-            [ "setViewport", "classvireo_1_1CommandList.html#a3c859e0513879972037d439bab8d6259", null ],
-            [ "setViewports", "classvireo_1_1CommandList.html#a96f5ebd7d3598b424b379ab54d3c7126", null ],
+            [ "setViewport", "classvireo_1_1CommandList.html#a911187b21e2b76ebe840875e2c30643d", null ],
+            [ "setViewports", "classvireo_1_1CommandList.html#abaaf97a16cf11298ed05a56f930e0f55", null ],
             [ "upload", "classvireo_1_1CommandList.html#a814ae10770e0a9ac5f5c1102c41a29d8", null ],
             [ "upload", "classvireo_1_1CommandList.html#ac7b5cc27394ed746af6af44b761b218a", null ],
-            [ "uploadArray", "classvireo_1_1CommandList.html#a766f76733030bb94e154e8b5e7354a50", null ]
+            [ "upload", "classvireo_1_1CommandList.html#aa95f37f5723a600fdde166834ef4b20a", null ],
+            [ "upload", "classvireo_1_1CommandList.html#a376d70280f7cbe0a7432c9b11f60e6fb", null ],
+            [ "uploadArray", "classvireo_1_1CommandList.html#a766f76733030bb94e154e8b5e7354a50", null ],
+            [ "indexTypeSize", "classvireo_1_1CommandList.html#aecfa7ae0f4f995fe416b9d2fb32a3963", null ]
           ] ],
           [ "ComputePipeline", "classvireo_1_1ComputePipeline.html", [
             [ "ComputePipeline", "classvireo_1_1ComputePipeline.html#ac32696618956b24403c1c3263bef8836", null ]
@@ -231,6 +238,10 @@ var NAVTREE =
             [ "isReadWrite", "classvireo_1_1Image.html#a155411af8144a14654748c1c95e5b676", null ],
             [ "pixelSize", "classvireo_1_1Image.html#a8207d073132308fdaf5cf16fcf0ec3b1", null ]
           ] ],
+          [ "ImageUploadInfo", "structvireo_1_1ImageUploadInfo.html", [
+            [ "data", "structvireo_1_1ImageUploadInfo.html#a0d49d74db4c035719c3867723cf7e779", null ],
+            [ "image", "structvireo_1_1ImageUploadInfo.html#aa587190f7c4a08481891a467f21da54e", null ]
+          ] ],
           [ "Instance", "classvireo_1_1Instance.html", [
             [ "~Instance", "classvireo_1_1Instance.html#a1c72925d928401fa70069b8c25f20987", null ],
             [ "Instance", "classvireo_1_1Instance.html#afeb5cdce7e289265cc8cdf11eced5be5", null ]
@@ -261,6 +272,12 @@ var NAVTREE =
             [ "size", "structvireo_1_1PushConstantsDesc.html#ab2c6b258f02add8fdf4cfc7c371dd772", null ],
             [ "stage", "structvireo_1_1PushConstantsDesc.html#a89f1106f50b4fa72a8b415fc9fd75f8c", null ]
           ] ],
+          [ "Rect", "structvireo_1_1Rect.html", [
+            [ "height", "structvireo_1_1Rect.html#a6ad4f820ce4e75cda0686fcaad5168be", null ],
+            [ "width", "structvireo_1_1Rect.html#a325272ddd9a962f05deb905101d25cbd", null ],
+            [ "x", "structvireo_1_1Rect.html#af6d3062751bd565decb1a2cd3b63bdb2", null ],
+            [ "y", "structvireo_1_1Rect.html#af64066d134a77e01b3d6eb8da813627a", null ]
+          ] ],
           [ "RenderTarget", "classvireo_1_1RenderTarget.html", [
             [ "~RenderTarget", "classvireo_1_1RenderTarget.html#a675f87aedb645ebd1837900ca50823a3", null ],
             [ "RenderTarget", "classvireo_1_1RenderTarget.html#a61504567d4eb89800c3907ed84a5b1a4", null ],
@@ -287,7 +304,8 @@ var NAVTREE =
           ] ],
           [ "Sampler", "classvireo_1_1Sampler.html", [
             [ "~Sampler", "classvireo_1_1Sampler.html#a1103de75ddac206561c326452ae3bf56", null ],
-            [ "Sampler", "classvireo_1_1Sampler.html#a504edf3c2535a80ad21e39bcca752abe", null ]
+            [ "Sampler", "classvireo_1_1Sampler.html#a504edf3c2535a80ad21e39bcca752abe", null ],
+            [ "LOD_CLAMP_NONE", "classvireo_1_1Sampler.html#aa0d3e96061c1d4a80882d9a36c6193c8", null ]
           ] ],
           [ "Semaphore", "classvireo_1_1Semaphore.html", [
             [ "Semaphore", "classvireo_1_1Semaphore.html#a4b702fb86b21d426f67dfb288e9ebb0c", null ],
@@ -356,6 +374,14 @@ var NAVTREE =
             [ "~VertexInputLayout", "classvireo_1_1VertexInputLayout.html#ae7eb301c7ab7af6f2f24c859062557ec", null ],
             [ "VertexInputLayout", "classvireo_1_1VertexInputLayout.html#a660d25b92c38fbbfadd3d6580598179e", null ]
           ] ],
+          [ "Viewport", "structvireo_1_1Viewport.html", [
+            [ "height", "structvireo_1_1Viewport.html#a48083b65ac9a863566dc3e3fff09a5b4", null ],
+            [ "maxDepth", "structvireo_1_1Viewport.html#a72002d2f063eebed05d94a9419e78540", null ],
+            [ "minDepth", "structvireo_1_1Viewport.html#a14b0657c86189db37a366a2a0ca4cb9b", null ],
+            [ "width", "structvireo_1_1Viewport.html#ae426f00e82704fa09578f5446e22d915", null ],
+            [ "x", "structvireo_1_1Viewport.html#ad0da36b2558901e21e7a30f6c227a45e", null ],
+            [ "y", "structvireo_1_1Viewport.html#aa4f0d3eebc3c443f9be81bf48561a217", null ]
+          ] ],
           [ "Vireo", "classvireo_1_1Vireo.html", [
             [ "~Vireo", "classvireo_1_1Vireo.html#a59cc6c2feafd79f6bbc327679215bac0", null ],
             [ "create", "classvireo_1_1Vireo.html#a182f874336d2992e9cd06e11661e2ddb", null ],
@@ -372,7 +398,7 @@ var NAVTREE =
             [ "createReadWriteImage", "classvireo_1_1Vireo.html#a01e46b88e0e1285c1020d4c6e9bc8d0b", null ],
             [ "createRenderTarget", "classvireo_1_1Vireo.html#ac0c8e1381d3157ac234a4c4716389d73", null ],
             [ "createRenderTarget", "classvireo_1_1Vireo.html#aaa98f15a476f5e615ec473e709903bbb", null ],
-            [ "createSampler", "classvireo_1_1Vireo.html#ad9e1b74bd38d400a76071dba086c4d6a", null ],
+            [ "createSampler", "classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575", null ],
             [ "createSamplerDescriptorLayout", "classvireo_1_1Vireo.html#a70fb950592c00c0467285b00b93214ff", null ],
             [ "createSemaphore", "classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c", null ],
             [ "createShaderModule", "classvireo_1_1Vireo.html#ad525756f14bc5eeacfb8000edcbfa746", null ],
@@ -396,6 +422,7 @@ var NAVTREE =
           [ "Exception", "classvireo_1_1Exception.html", null ]
         ] ],
         [ "Buffer", "classvireo_1_1Buffer.html", null ],
+        [ "BufferUploadInfo", "structvireo_1_1BufferUploadInfo.html", null ],
         [ "ClearValue", "unionvireo_1_1ClearValue.html", null ],
         [ "ColorBlendDesc", "structvireo_1_1ColorBlendDesc.html", null ],
         [ "CommandAllocator", "classvireo_1_1CommandAllocator.html", null ],
@@ -408,6 +435,7 @@ var NAVTREE =
         [ "Fence", "classvireo_1_1Fence.html", null ],
         [ "GraphicPipelineConfiguration", "structvireo_1_1GraphicPipelineConfiguration.html", null ],
         [ "Image", "classvireo_1_1Image.html", null ],
+        [ "ImageUploadInfo", "structvireo_1_1ImageUploadInfo.html", null ],
         [ "Instance", "classvireo_1_1Instance.html", null ],
         [ "PhysicalDevice", "classvireo_1_1PhysicalDevice.html", null ],
         [ "PhysicalDeviceDesc", "structvireo_1_1PhysicalDeviceDesc.html", null ],
@@ -417,6 +445,7 @@ var NAVTREE =
         ] ],
         [ "PipelineResources", "classvireo_1_1PipelineResources.html", null ],
         [ "PushConstantsDesc", "structvireo_1_1PushConstantsDesc.html", null ],
+        [ "Rect", "structvireo_1_1Rect.html", null ],
         [ "RenderingConfiguration", "structvireo_1_1RenderingConfiguration.html", null ],
         [ "RenderTarget", "classvireo_1_1RenderTarget.html", null ],
         [ "RenderTargetDesc", "structvireo_1_1RenderTargetDesc.html", null ],
@@ -428,6 +457,7 @@ var NAVTREE =
         [ "SwapChain", "classvireo_1_1SwapChain.html", null ],
         [ "VertexAttributeDesc", "structvireo_1_1VertexAttributeDesc.html", null ],
         [ "VertexInputLayout", "classvireo_1_1VertexInputLayout.html", null ],
+        [ "Viewport", "structvireo_1_1Viewport.html", null ],
         [ "Vireo", "classvireo_1_1Vireo.html", null ]
       ] ]
     ] ]
@@ -437,7 +467,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"namespacevireo.html"
+"manual_090_03_barriers.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -124,8 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa1a289ca87498e905d1ed9029cd21290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0882cec496ac701115a20cdd81692e26"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a0882cec496ac701115a20cdd81692e26">createDescriptorSet</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;layout, const std::wstring &amp;name=L&quot;DescriptorSet&quot;) = 0</td></tr>
 <tr class="separator:a0882cec496ac701115a20cdd81692e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e1b74bd38d400a76071dba086c4d6a"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad9e1b74bd38d400a76071dba086c4d6a">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=1.0f, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
-<tr class="separator:ad9e1b74bd38d400a76071dba086c4d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ea85c73a21dbbeba59bd781c61c575"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=Sampler::LOD_CLAMP_NONE, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
+<tr class="separator:ad2ea85c73a21dbbeba59bd781c61c575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a012469ba0acab3ce2712c7e34d08c8c9">getPhysicalDevice</a> () const</td></tr>
 <tr class="separator:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130131cf643a17be360d2e2ac080b279"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279">getDevice</a> () const</td></tr>
@@ -824,7 +824,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad9e1b74bd38d400a76071dba086c4d6a"></a>
+<a class="anchor" id="ad2ea85c73a21dbbeba59bd781c61c575"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -871,7 +871,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>maxLod</em> = <code>1.0f</code>, </td>
+          <td class="paramname"><em>maxLod</em> = <code>Sampler::LOD_CLAMP_NONE</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1331,7 +1331,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Vireo.html">Vireo</a></li>
-    <li class="footer">Generated on lun. mai 12 2025 15:26:19 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 16 2025 11:08:08 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
