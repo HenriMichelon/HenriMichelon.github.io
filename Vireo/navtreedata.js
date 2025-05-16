@@ -124,6 +124,8 @@ var NAVTREE =
             [ "dispatch", "classvireo_1_1CommandList.html#ac9ccb188621db6fe1fbf5a0be92af3a2", null ],
             [ "draw", "classvireo_1_1CommandList.html#adbf42c05f74289eb98698b991098a9d6", null ],
             [ "drawIndexed", "classvireo_1_1CommandList.html#aebe6ecf3de6f810b09a9d80dc38bbd8d", null ],
+            [ "drawIndexedIndirect", "classvireo_1_1CommandList.html#a82dd5000038926b17c99167ec0804fa6", null ],
+            [ "drawIndexedIndirectCount", "classvireo_1_1CommandList.html#a9f435f98ad499658bcb68f541586f7c7", null ],
             [ "end", "classvireo_1_1CommandList.html#aea5bef9f8eaa5046c3c3104b35a712d4", null ],
             [ "endRendering", "classvireo_1_1CommandList.html#a3ce769f37a91b6136e8821ab84810d3b", null ],
             [ "pushConstants", "classvireo_1_1CommandList.html#a544932598c54739d02736fea07d89d5f", null ],
@@ -175,6 +177,13 @@ var NAVTREE =
           [ "Device", "classvireo_1_1Device.html", [
             [ "~Device", "classvireo_1_1Device.html#ac31b8af5d051873b0b54428958e6e1b1", null ],
             [ "Device", "classvireo_1_1Device.html#a43701d9a19f5bd389b1bd01b74acaf4d", null ]
+          ] ],
+          [ "DrawIndexedIndirectCommand", "structvireo_1_1DrawIndexedIndirectCommand.html", [
+            [ "firstIndex", "structvireo_1_1DrawIndexedIndirectCommand.html#a20304b5bcf4d3a46129f4850f9430496", null ],
+            [ "firstInstance", "structvireo_1_1DrawIndexedIndirectCommand.html#ad927ee80dbd4ffccae3cfec70223a44f", null ],
+            [ "indexCount", "structvireo_1_1DrawIndexedIndirectCommand.html#a365dca1d4e70031d2266ccbe206a19da", null ],
+            [ "instanceCount", "structvireo_1_1DrawIndexedIndirectCommand.html#a03769e76e974fc0a517627ea030c81f9", null ],
+            [ "vertexOffset", "structvireo_1_1DrawIndexedIndirectCommand.html#aa0ca9e04a18a5580f33102c6de78ece2", null ]
           ] ],
           [ "Exception", "classvireo_1_1Exception.html", [
             [ "Exception", "classvireo_1_1Exception.html#ad951c450f749673d3b967230f126f205", null ],
@@ -431,6 +440,7 @@ var NAVTREE =
         [ "DescriptorLayout", "classvireo_1_1DescriptorLayout.html", null ],
         [ "DescriptorSet", "classvireo_1_1DescriptorSet.html", null ],
         [ "Device", "classvireo_1_1Device.html", null ],
+        [ "DrawIndexedIndirectCommand", "structvireo_1_1DrawIndexedIndirectCommand.html", null ],
         [ "Extent", "structvireo_1_1Extent.html", null ],
         [ "Fence", "classvireo_1_1Fence.html", null ],
         [ "GraphicPipelineConfiguration", "structvireo_1_1GraphicPipelineConfiguration.html", null ],
@@ -467,7 +477,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"manual_090_03_barriers.html"
+"manual_090_01_fences.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

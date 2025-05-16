@@ -132,6 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbf42c05f74289eb98698b991098a9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe6ecf3de6f810b09a9d80dc38bbd8d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aebe6ecf3de6f810b09a9d80dc38bbd8d">drawIndexed</a> (uint32_t indexCountPerInstance, uint32_t instanceCount=1, uint32_t firstIndex=0, uint32_t firstVertex=0, uint32_t firstInstance=0) const = 0</td></tr>
 <tr class="separator:aebe6ecf3de6f810b09a9d80dc38bbd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82dd5000038926b17c99167ec0804fa6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a82dd5000038926b17c99167ec0804fa6">drawIndexedIndirect</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;buffer, size_t offset, uint32_t drawCount, uint32_t stride) const = 0</td></tr>
+<tr class="separator:a82dd5000038926b17c99167ec0804fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f435f98ad499658bcb68f541586f7c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a9f435f98ad499658bcb68f541586f7c7">drawIndexedIndirectCount</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;buffer, size_t offset, const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;countBuffer, size_t countOffset, uint32_t maxDrawCount, uint32_t stride) const = 0</td></tr>
+<tr class="separator:a9f435f98ad499658bcb68f541586f7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaaf97a16cf11298ed05a56f930e0f55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#abaaf97a16cf11298ed05a56f930e0f55">setViewports</a> (const std::vector&lt; <a class="el" href="structvireo_1_1Viewport.html">Viewport</a> &gt; &amp;viewports) const = 0</td></tr>
 <tr class="separator:abaaf97a16cf11298ed05a56f930e0f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc62d9eb2c40c567601533cb5e6027b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a6dc62d9eb2c40c567601533cb5e6027b">setScissors</a> (const std::vector&lt; <a class="el" href="structvireo_1_1Rect.html">Rect</a> &gt; &amp;rects) const = 0</td></tr>
@@ -1182,6 +1186,130 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a82dd5000038926b17c99167ec0804fa6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void drawIndexedIndirect </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>drawCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>stride</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw primitives with indirect parameters and indexed vertices </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer containing draw parameters. </td></tr>
+    <tr><td class="paramname">offset</td><td>The byte offset into the buffer where parameters begin. </td></tr>
+    <tr><td class="paramname">drawCount</td><td>The number of draws to execute, and can be zero. </td></tr>
+    <tr><td class="paramname">stride</td><td>The byte stride between successive sets of draw parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f435f98ad499658bcb68f541586f7c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void drawIndexedIndirectCount </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>countBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>countOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>maxDrawCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>stride</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw primitives with indirect parameters and indexed vertices </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>The buffer containing draw parameters. </td></tr>
+    <tr><td class="paramname">offset</td><td>The byte offset into the buffer where parameters begin. </td></tr>
+    <tr><td class="paramname">countBuffer</td><td>The buffer containing the draw count. </td></tr>
+    <tr><td class="paramname">countOffset</td><td>The byte offset into <code>countBuffer</code> where the draw count begins. </td></tr>
+    <tr><td class="paramname">maxDrawCount</td><td>The maximum number of draws that will be executed. The actual number of executed draw calls is the minimum of the count specified in countBuffer and maxDrawCount </td></tr>
+    <tr><td class="paramname">stride</td><td>The byte stride between successive sets of draw parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aea5bef9f8eaa5046c3c3104b35a712d4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1652,7 +1780,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1CommandList.html">CommandList</a></li>
-    <li class="footer">Generated on ven. mai 16 2025 11:08:08 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 16 2025 11:40:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

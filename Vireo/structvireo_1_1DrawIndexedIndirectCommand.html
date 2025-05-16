@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 1.7.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vireo: ImageUploadInfo Struct Reference</title>
+<title>Vireo: DrawIndexedIndirectCommand Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,48 +61,90 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('structvireo_1_1ImageUploadInfo.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structvireo_1_1DrawIndexedIndirectCommand.html',''); initResizable(); });
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structvireo_1_1ImageUploadInfo-members.html">List of all members</a>  </div>
+<a href="structvireo_1_1DrawIndexedIndirectCommand-members.html">List of all members</a>  </div>
   <div class="headertitle">
-    <div class="title">ImageUploadInfo Struct Reference</div>
+    <div class="title">DrawIndexedIndirectCommand Struct Reference</div>
   </div>
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Batch image upload infos </p>
+<div class="textblock"><p>Structure specifying an indexed indirect drawing command </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa587190f7c4a08481891a467f21da54e"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1ImageUploadInfo.html#aa587190f7c4a08481891a467f21da54e">image</a></td></tr>
-<tr class="separator:aa587190f7c4a08481891a467f21da54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d49d74db4c035719c3867723cf7e779"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1ImageUploadInfo.html#a0d49d74db4c035719c3867723cf7e779">data</a></td></tr>
-<tr class="separator:a0d49d74db4c035719c3867723cf7e779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365dca1d4e70031d2266ccbe206a19da"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html#a365dca1d4e70031d2266ccbe206a19da">indexCount</a></td></tr>
+<tr class="separator:a365dca1d4e70031d2266ccbe206a19da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03769e76e974fc0a517627ea030c81f9"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html#a03769e76e974fc0a517627ea030c81f9">instanceCount</a></td></tr>
+<tr class="separator:a03769e76e974fc0a517627ea030c81f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20304b5bcf4d3a46129f4850f9430496"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html#a20304b5bcf4d3a46129f4850f9430496">firstIndex</a></td></tr>
+<tr class="separator:a20304b5bcf4d3a46129f4850f9430496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ca9e04a18a5580f33102c6de78ece2"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html#aa0ca9e04a18a5580f33102c6de78ece2">vertexOffset</a></td></tr>
+<tr class="separator:aa0ca9e04a18a5580f33102c6de78ece2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad927ee80dbd4ffccae3cfec70223a44f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html#ad927ee80dbd4ffccae3cfec70223a44f">firstInstance</a></td></tr>
+<tr class="separator:ad927ee80dbd4ffccae3cfec70223a44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a0d49d74db4c035719c3867723cf7e779"></a>
+<a class="anchor" id="a20304b5bcf4d3a46129f4850f9430496"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const void* data</td>
+          <td class="memname">uint32_t firstIndex</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="aa587190f7c4a08481891a467f21da54e"></a>
+<a class="anchor" id="ad927ee80dbd4ffccae3cfec70223a44f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::shared_ptr&lt;<a class="el" href="classvireo_1_1Image.html">Image</a>&gt; image</td>
+          <td class="memname">uint32_t firstInstance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a365dca1d4e70031d2266ccbe206a19da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t indexCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03769e76e974fc0a517627ea030c81f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t instanceCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa0ca9e04a18a5580f33102c6de78ece2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t vertexOffset</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -114,7 +156,7 @@ Public Attributes</h2></td></tr>
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="structvireo_1_1ImageUploadInfo.html">ImageUploadInfo</a></li>
+    <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html">DrawIndexedIndirectCommand</a></li>
     <li class="footer">Generated on ven. mai 16 2025 11:40:04 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
