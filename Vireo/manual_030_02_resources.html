@@ -77,7 +77,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <li>Using <code>copy()</code>: the flexible way</li>
 </ul>
 <h3>using upload()</h3>
-<p>By using the <a class="el" href="classvireo_1_1CommandList.html#a814ae10770e0a9ac5f5c1102c41a29d8">vireo::CommandList::upload</a> or <a class="el" href="classvireo_1_1CommandList.html#a766f76733030bb94e154e8b5e7354a50">vireo::CommandList::uploadArray</a> methods you can easily upload data into a buffer. The <code>upload</code> methods will take care of the staging buffer and temporary copy of the data for you, which can be tricky if you have multiple mip levels or multiples image layers.</p>
+<p>By using the <a class="el" href="classvireo_1_1CommandList.html#a44291fef9821033f491516f6bf0d4ba4">vireo::CommandList::upload</a> or <a class="el" href="classvireo_1_1CommandList.html#abd8c18c11d369fcc8f84e88cb69dc52d">vireo::CommandList::uploadArray</a> methods you can easily upload data into a buffer. The <code>upload</code> methods will take care of the staging buffer and temporary copy of the data for you, which can be tricky if you have multiple mip levels or multiples image layers.</p>
 <p>The GPU commands recorded with a <a class="el" href="manual_050_00_commands.html">CommandList</a> are executed asynchronously by the GPU. Once you have uploaded all of the data using one<code>CommandList</code> you need to call <a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">vireo::CommandList::cleanup</a> on this <code>CommandList</code> to clear the temporary (staging) buffers used for the host-to-device transfers. The asynchronous nature of the operation means that we have to wait for the end of the operation to free the host-visible allocated memory, which mean you have to call <code>cleanup</code> only after the <a class="el" href="manual_060_00_queues.html">submit queue</a> have finished the commands execution by blocking the CPU-side with <a class="el" href="classvireo_1_1SubmitQueue.html#a899a95c062c476e0f4616683c81a77d0">vireo::SubmitQueue::waitIdle</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Since the call to <code>cleanup</code> is done automatically in the command list destructor, you only have to call it explicitly on non-temporary command lists.</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Example of a texture upload using upload()</span></div>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <dl class="section note"><dt>Note</dt><dd>It's more efficient to load the image data from the disk directly into the staging buffer by using the <a class="el" href="classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b">mapped address</a>, but you need to use the <code>copy()</code> method below.</dd></dl>
 <h3>using copy()</h3>
 <p>This method can be useful if you want, for example, to write data directly into the staging buffer to avoid a CPU-to-CPU transfer or if you need to copy one mip level independently from the others.</p>
-<p>When using <a class="el" href="classvireo_1_1CommandList.html#a61bf6fe693baf625d5596310bd50f0f5">vireo::CommandList::copy</a> you need to copy the image data into a temporary, host-accessible (staging) buffer, then you ask the GPU to copy the data to the image in device-only memory (memory only accessible by the GPU). Remember that you have to keep the staging buffer alive until the copy command have been executed (you may need to wait on the CPU side for the completion of the commands on the submit queue).</p>
+<p>When using <a class="el" href="classvireo_1_1CommandList.html#a49fb1280975f085cfd7018d2d476898d">vireo::CommandList::copy</a> you need to copy the image data into a temporary, host-accessible (staging) buffer, then you ask the GPU to copy the data to the image in device-only memory (memory only accessible by the GPU). Remember that you have to keep the staging buffer alive until the copy command have been executed (you may need to wait on the CPU side for the completion of the commands on the submit queue).</p>
 <div class="fragment"><div class="line"><span class="comment">// Example of a texture upload using copy()</span></div>
 <div class="line"><span class="comment">// In a local scope for temporary objects destruction</span></div>
 <div class="line">{</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('manual_030_02_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on ven. mai 16 2025 21:34:16 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 23 2025 20:37:43 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

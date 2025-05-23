@@ -73,6 +73,8 @@ $(document).ready(function(){initNavTree('namespacevireo.html',''); initResizabl
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html">Buffer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1BufferCopyRegion.html">BufferCopyRegion</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1BufferUploadInfo.html">BufferUploadInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionvireo_1_1ClearValue.html">ClearValue</a></td></tr>
@@ -94,6 +96,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Device.html">Device</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndexedIndirectCommand.html">DrawIndexedIndirectCommand</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1DrawIndirectCommand.html">DrawIndirectCommand</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Exception.html">Exception</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,8 +272,11 @@ Enums</h2></td></tr>
 <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2">UNIFORM</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa754a5d433173b5ddc7debc2110ac575f">STORAGE</a>, 
+<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa1b17954b0d2aaa048c6c216d3a501035">DEVICE_STORAGE</a>, 
+<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfae6837c9df1e5b1400f5893de43447cd3">READWRITE_STORAGE</a>, 
 <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa40d9c53a475ab5e1d6754c0ce596901a">BUFFER_UPLOAD</a>, 
-<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfae99309ceea2a2e7aa305a98a8484ace7">IMAGE_UPLOAD</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfae99309ceea2a2e7aa305a98a8484ace7">IMAGE_UPLOAD</a>, 
 <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa2cf32e0ddf0b8980d3c694117697749a">IMAGE_DOWNLOAD</a>
 <br />
  }</td></tr>
@@ -282,9 +289,11 @@ Enums</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a891f35a29c3d51d02ffd42dd6dcc69b2">UNIFORM</a>, 
 <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117aec541310deada4f8a64d8b867a630eea">UNIFORM_DYNAMIC</a>, 
 <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a754a5d433173b5ddc7debc2110ac575f">STORAGE</a>, 
-<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a5962997ee79a425d6e827f89fc2ced78">SAMPLED_IMAGE</a>, 
+<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a1b17954b0d2aaa048c6c216d3a501035">DEVICE_STORAGE</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117aaa4fc1f642950410dd11d691fe974cca">SAMPLER</a>, 
+&#160;&#160;<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117ae6837c9df1e5b1400f5893de43447cd3">READWRITE_STORAGE</a>, 
+<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a5962997ee79a425d6e827f89fc2ced78">SAMPLED_IMAGE</a>, 
+<a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117aaa4fc1f642950410dd11d691fe974cca">SAMPLER</a>, 
 <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117a4a0ace5089cbb7738dbf26e7b26ec62d">READWRITE_IMAGE</a>
 <br />
  }</td></tr>
@@ -754,7 +763,11 @@ Enums</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2"></a>UNIFORM&#160;</td><td class="fielddoc"><p>Used for shader uniform (in host visible memory) </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa754a5d433173b5ddc7debc2110ac575f"></a>STORAGE&#160;</td><td class="fielddoc"><p>Used for shader storage (in host visible memory) </p>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa754a5d433173b5ddc7debc2110ac575f"></a>STORAGE&#160;</td><td class="fielddoc"><p>Used for read-only shader storage (in host visible memory) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa1b17954b0d2aaa048c6c216d3a501035"></a>DEVICE_STORAGE&#160;</td><td class="fielddoc"><p>Used for read-only shader storage (in GPU memory) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfae6837c9df1e5b1400f5893de43447cd3"></a>READWRITE_STORAGE&#160;</td><td class="fielddoc"><p>Used for read/write shader storage (in GPU memory) </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="adf8e136713c0691010d2bec6ba63e9cfa40d9c53a475ab5e1d6754c0ce596901a"></a>BUFFER_UPLOAD&#160;</td><td class="fielddoc"><p>Used for vertex and index buffers copy operations (from host visible memory to GPU memory) </p>
 </td></tr>
@@ -917,7 +930,11 @@ Enums</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117aec541310deada4f8a64d8b867a630eea"></a>UNIFORM_DYNAMIC&#160;</td><td class="fielddoc"><p>Dynamic binding uniform buffer. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117a754a5d433173b5ddc7debc2110ac575f"></a>STORAGE&#160;</td><td class="fielddoc"><p>Storage buffer. </p>
+<tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117a754a5d433173b5ddc7debc2110ac575f"></a>STORAGE&#160;</td><td class="fielddoc"><p>Read-only storage buffer in host-visible memory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117a1b17954b0d2aaa048c6c216d3a501035"></a>DEVICE_STORAGE&#160;</td><td class="fielddoc"><p>Read-only storage buffer in GPU memory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117ae6837c9df1e5b1400f5893de43447cd3"></a>READWRITE_STORAGE&#160;</td><td class="fielddoc"><p>Read &amp; write storage buffer. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a684e147d500221ad811a1b6b4f2c5117a5962997ee79a425d6e827f89fc2ced78"></a>SAMPLED_IMAGE&#160;</td><td class="fielddoc"><p>Sampled texture (image only, no sampler) </p>
 </td></tr>
@@ -1525,7 +1542,7 @@ Enums</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li>
-    <li class="footer">Generated on ven. mai 16 2025 21:34:16 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 23 2025 20:37:43 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
