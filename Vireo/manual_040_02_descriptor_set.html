@@ -96,10 +96,7 @@ $(document).ready(function(){initNavTree('manual_040_02_descriptor_set.html','')
 <div class="line">frame.smaaEdgeDescriptorSet-&gt;update(BINDING_INPUT, colorBuffer-&gt;getImage());</div>
 </div><!-- end fragment -->
 <h2>Binding descriptor sets</h2>
-<p>When recording commands during a <a class="el" href="manual_100_00_renderpass.html">render pass</a> :</p><ul>
-<li>Before binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> set the future descriptors sets (not the dynamic uniform ones) that will be used with <a class="el" href="classvireo_1_1CommandList.html#a6743371309983fb47ab75affc850d88f">vireo::CommandList::setDescriptors</a>.</li>
-<li>After binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> bind the descriptor sets with <a class="el" href="classvireo_1_1CommandList.html#ad304ddc01b037c23a5e576410a8da525">vireo::CommandList::bindDescriptor</a> or <a class="el" href="classvireo_1_1CommandList.html#af46655802fb3cbba69de86efa28f84fd">vireo::CommandList::bindDescriptors</a></li>
-</ul>
+<p>When recording commands during a <a class="el" href="manual_100_00_renderpass.html">render pass</a>, after binding the pipeline to the <a class="el" href="manual_050_00_commands.html">command list</a> bind the descriptor sets with <a class="el" href="classvireo_1_1CommandList.html#ad304ddc01b037c23a5e576410a8da525">vireo::CommandList::bindDescriptor</a> or <a class="el" href="classvireo_1_1CommandList.html#af46655802fb3cbba69de86efa28f84fd">vireo::CommandList::bindDescriptors</a></p>
 <p>If you use dynamic uniform buffer <a class="el" href="classvireo_1_1CommandList.html#ad304ddc01b037c23a5e576410a8da525">vireo::CommandList::bindDescriptor</a> let you change buffer offsets at bind time without reallocating sets.</p>
 <p>Each descriptor set will the bound to a specific set/space number.</p>
 <div class="fragment"><div class="line">...</div>
@@ -111,9 +108,6 @@ $(document).ready(function(){initNavTree('manual_040_02_descriptor_set.html','')
 <div class="line"> </div>
 <div class="line"><span class="comment">// Start a render pass</span></div>
 <div class="line">cmdList-&gt;beginRendering(renderingConfig);</div>
-<div class="line">...</div>
-<div class="line"><span class="comment">// Set the list of generic and samplers descriptor sets that will be used</span></div>
-<div class="line">cmdList-&gt;setDescriptors({frame.descriptorSet, samplers.getDescriptorSet()});</div>
 <div class="line">...</div>
 <div class="line"><span class="comment">// Bind the pipeline</span></div>
 <div class="line">cmdList-&gt;bindPipeline(pipeline);</div>
@@ -154,7 +148,7 @@ $(document).ready(function(){initNavTree('manual_040_02_descriptor_set.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_040_00_descriptors.html">Resources Descriptors</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 20:37:43 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

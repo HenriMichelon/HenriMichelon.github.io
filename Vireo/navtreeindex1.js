@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classvireo_1_1SwapChain.html#ae2496672af9bf64c21364750705c0a76":[3,0,0,36,3],
 "classvireo_1_1SwapChain.html#afc623d05f6456686004dbcb40ca7c8eb":[3,0,0,36,7],
 "classvireo_1_1SwapChain.html#afd23e14f3ec25d4510523c6481376119":[3,0,0,36,1],
 "classvireo_1_1VertexInputLayout.html":[3,0,0,38],
@@ -15,7 +14,6 @@ var NAVTREEINDEX1 =
 "classvireo_1_1Vireo.html#a11a419f32ea9186bbea006c34f2d5a8e":[3,0,0,40,29],
 "classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279":[3,0,0,40,24],
 "classvireo_1_1Vireo.html#a15fb317160440594ccf02dd086023129":[3,0,0,40,12],
-"classvireo_1_1Vireo.html#a182f874336d2992e9cd06e11661e2ddb":[3,0,0,40,3],
 "classvireo_1_1Vireo.html#a1a2694c5cce82ee9d6ee3a17e454f650":[3,0,0,40,13],
 "classvireo_1_1Vireo.html#a201f641efa1d23cbf0b84d15b8fedc78":[3,0,0,40,18],
 "classvireo_1_1Vireo.html#a2945b364ea7c3978aa1c1e6706abf3bd":[3,0,0,40,21],
@@ -27,6 +25,7 @@ var NAVTREEINDEX1 =
 "classvireo_1_1Vireo.html#a534e5105e1fb9923046076185657b177":[3,0,0,40,6],
 "classvireo_1_1Vireo.html#a59cc6c2feafd79f6bbc327679215bac0":[3,0,0,40,0],
 "classvireo_1_1Vireo.html#a617bc5bcc5b8e21defdb004391dd8eda":[3,0,0,40,2],
+"classvireo_1_1Vireo.html#a6d0c59ecd753e85f85b8ea100dcb1050":[3,0,0,40,3],
 "classvireo_1_1Vireo.html#a7170f6526554e5c2f194fa6192e7df92":[3,0,0,40,31],
 "classvireo_1_1Vireo.html#a7261cac5cb82702c34b49cffc08c8f74":[3,0,0,40,23],
 "classvireo_1_1Vireo.html#a80cbf3a223060c85ff273d534b21059a":[3,0,0,40,27],

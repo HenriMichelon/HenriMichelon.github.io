@@ -134,8 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac9ccb188621db6fe1fbf5a0be92af3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335a277f9a31e5d912d84330607ceb02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a335a277f9a31e5d912d84330607ceb02">bindVertexBuffer</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;buffer, size_t offset=0) const = 0</td></tr>
 <tr class="separator:a335a277f9a31e5d912d84330607ceb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae246bcc325cd6eccfaa92c090bd91d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aae246bcc325cd6eccfaa92c090bd91d0">bindVertexBuffer</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;buffer, size_t offset=0) const</td></tr>
-<tr class="separator:aae246bcc325cd6eccfaa92c090bd91d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57469b04a07fda31e919ffd73e110382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a57469b04a07fda31e919ffd73e110382">bindVertexBuffer</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;buffer, const size_t offset=0) const</td></tr>
+<tr class="separator:a57469b04a07fda31e919ffd73e110382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4dcfdc4d3b6a44813d95585da2af5a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aa4dcfdc4d3b6a44813d95585da2af5a6">bindVertexBuffers</a> (const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt;&gt; &amp;buffers, std::vector&lt; size_t &gt; offsets={}) const = 0</td></tr>
 <tr class="separator:aa4dcfdc4d3b6a44813d95585da2af5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa256a3e38a73c6f41388ce87440d055f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aa256a3e38a73c6f41388ce87440d055f">bindIndexBuffer</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;buffer, <a class="el" href="namespacevireo.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839">IndexType</a> indexType=IndexType::UINT32, uint32_t firstIndex=0) const = 0</td></tr>
@@ -146,8 +146,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d322bc71ab041066fc06899c57f41f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24319ea2b7c12c26ac052e7ccf3302cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a24319ea2b7c12c26ac052e7ccf3302cc">bindPipeline</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;pipeline)</td></tr>
 <tr class="separator:a24319ea2b7c12c26ac052e7ccf3302cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6743371309983fb47ab75affc850d88f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a6743371309983fb47ab75affc850d88f">setDescriptors</a> (const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&gt; &amp;descriptors) const</td></tr>
-<tr class="separator:a6743371309983fb47ab75affc850d88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46655802fb3cbba69de86efa28f84fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#af46655802fb3cbba69de86efa28f84fd">bindDescriptors</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &gt; &amp;pipeline, const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&gt; &amp;descriptors, uint32_t firstSet=0) const</td></tr>
 <tr class="separator:af46655802fb3cbba69de86efa28f84fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d71689e0ecf7cc6b2e4bb2068892891"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a3d71689e0ecf7cc6b2e4bb2068892891">bindDescriptors</a> (const <a class="el" href="classvireo_1_1Pipeline.html">Pipeline</a> &amp;pipeline, const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&gt; &amp;descriptors, uint32_t firstSet=0) const = 0</td></tr>
@@ -1031,7 +1029,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aae246bcc325cd6eccfaa92c090bd91d0"></a>
+<a class="anchor" id="a57469b04a07fda31e919ffd73e110382"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1047,7 +1045,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype">const size_t&#160;</td>
           <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -2294,36 +2292,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6743371309983fb47ab75affc850d88f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void setDescriptors </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>descriptors</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets descriptor sets to bind a command list. All used descriptor sets must be sets. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">descriptors</td><td>The descriptor sets to attach </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a6a24283dc6a5be9a4e1c60381eee1adf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2785,7 +2753,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1CommandList.html">CommandList</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 20:37:43 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
