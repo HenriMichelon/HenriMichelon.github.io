@@ -70,6 +70,7 @@ $(document).ready(function(){initNavTree('classvireo_1_1Image.html',''); initRes
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classvireo_1_1Image-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Image Class Reference</div>
@@ -83,8 +84,6 @@ $(document).ready(function(){initNavTree('classvireo_1_1Image.html',''); initRes
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a428c4eac8ad01b4c51416ad6d8392f3b">~Image</a> () = default</td></tr>
-<tr class="separator:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc623d05f6456686004dbcb40ca7c8eb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#afc623d05f6456686004dbcb40ca7c8eb">getFormat</a> () const</td></tr>
 <tr class="separator:afc623d05f6456686004dbcb40ca7c8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af04d5df99f552fc7a05a4bf7f5c4e9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a0af04d5df99f552fc7a05a4bf7f5c4e9">getWidth</a> () const</td></tr>
@@ -95,16 +94,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a478d4753c0a41af74ce533f34dde9aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3205b6093998c9d6e95797b9945d9f12"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3205b6093998c9d6e95797b9945d9f12">getArraySize</a> () const</td></tr>
 <tr class="separator:a3205b6093998c9d6e95797b9945d9f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a945918a96ee4ad9d08a98bc8a60f9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#ab0a945918a96ee4ad9d08a98bc8a60f9">getRowPitch</a> () const</td></tr>
-<tr class="separator:ab0a945918a96ee4ad9d08a98bc8a60f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894a747cb095beeff44f56cec6fc8642"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a894a747cb095beeff44f56cec6fc8642">getImageSize</a> () const</td></tr>
-<tr class="separator:a894a747cb095beeff44f56cec6fc8642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1c8f055b20cb7c378e033c88b884f3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a2d1c8f055b20cb7c378e033c88b884f3">getAlignedImageSize</a> () const</td></tr>
-<tr class="separator:a2d1c8f055b20cb7c378e033c88b884f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac4994eec60364c5495c6a57bb99d84"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3ac4994eec60364c5495c6a57bb99d84">getAlignedRowPitch</a> () const</td></tr>
-<tr class="separator:a3ac4994eec60364c5495c6a57bb99d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3230fb82e22aa23560fa47417254c1d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3230fb82e22aa23560fa47417254c1d0">getRowPitch</a> (uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:a3230fb82e22aa23560fa47417254c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955b2b6e4a34781bfecee68cc0ab3eae"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a955b2b6e4a34781bfecee68cc0ab3eae">getRowLength</a> (uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:a955b2b6e4a34781bfecee68cc0ab3eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92644abed7e41134269173917d9673a2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a92644abed7e41134269173917d9673a2">getImageSize</a> (const uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:a92644abed7e41134269173917d9673a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54cb994e4c9b53889d37efd7ee0c01a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#ae54cb994e4c9b53889d37efd7ee0c01a">getAlignedImageSize</a> (const uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:ae54cb994e4c9b53889d37efd7ee0c01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8f63d2d1ee31692dda8794e6413b2f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#aaa8f63d2d1ee31692dda8794e6413b2f">getAlignedRowPitch</a> (const uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:aaa8f63d2d1ee31692dda8794e6413b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f33171db0cc7dcc959bbb66ef34a727"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a3f33171db0cc7dcc959bbb66ef34a727">getAlignedRowLength</a> (const uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:a3f33171db0cc7dcc959bbb66ef34a727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a155411af8144a14654748c1c95e5b676"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a155411af8144a14654748c1c95e5b676">isReadWrite</a> () const</td></tr>
 <tr class="separator:a155411af8144a14654748c1c95e5b676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a428c4eac8ad01b4c51416ad6d8392f3b">~Image</a> () = default</td></tr>
+<tr class="separator:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a92512b800ab1a87ef90a4cd0322af5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a6a92512b800ab1a87ef90a4cd0322af5">Image</a> (Image &amp;) = delete</td></tr>
 <tr class="separator:a6a92512b800ab1a87ef90a4cd0322af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc11fabfe1dc19bd304b444d8b9e1c54"><td class="memItemLeft" align="right" valign="top">Image &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#acc11fabfe1dc19bd304b444d8b9e1c54">operator=</a> (const Image &amp;) = delete</td></tr>
@@ -114,16 +119,27 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fc7b7de771482442d779aaa8b909ade"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a0fc7b7de771482442d779aaa8b909ade">getPixelSize</a> (const <a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format)</td></tr>
 <tr class="separator:a0fc7b7de771482442d779aaa8b909ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804ae24e8938faaf362fea608513e9a4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a804ae24e8938faaf362fea608513e9a4">getMemoryAllocations</a> ()</td></tr>
+<tr class="separator:a804ae24e8938faaf362fea608513e9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8207d073132308fdaf5cf16fcf0ec3b1"><td class="memItemLeft" align="right" valign="top">static constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a8207d073132308fdaf5cf16fcf0ec3b1">pixelSize</a> []</td></tr>
 <tr class="separator:a8207d073132308fdaf5cf16fcf0ec3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05be981d7486fd57288d143677cc33d"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d">IMAGE_ROW_PITCH_ALIGNMENT</a> {256}</td></tr>
+<tr class="separator:aa05be981d7486fd57288d143677cc33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1498bf4731472241234dcdb11346ec96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a1498bf4731472241234dcdb11346ec96">Image</a> (const <a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format, const uint32_t width, const uint32_t height, const uint32_t mipLevels, const uint32_t arraySize, const bool isReadWrite)</td></tr>
 <tr class="separator:a1498bf4731472241234dcdb11346ec96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a03e8365a32e4486b8f6cef71014ee1fb"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a03e8365a32e4486b8f6cef71014ee1fb">memoryAllocationsMutex</a></td></tr>
+<tr class="separator:a03e8365a32e4486b8f6cef71014ee1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6340ee8eccf0c0148442f28eaeb92944"><td class="memItemLeft" align="right" valign="top">static std::list&lt; <a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a6340ee8eccf0c0148442f28eaeb92944">memoryAllocations</a></td></tr>
+<tr class="separator:a6340ee8eccf0c0148442f28eaeb92944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a428c4eac8ad01b4c51416ad6d8392f3b"></a>
@@ -232,7 +248,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2d1c8f055b20cb7c378e033c88b884f3"></a>
+<a class="anchor" id="ae54cb994e4c9b53889d37efd7ee0c01a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -242,7 +258,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">auto getAlignedImageSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -252,11 +269,11 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the size in bytes of the first layer, with aligned rows </p>
+<p>Return the aligned size in bytes for a level </p>
 
 </div>
 </div>
-<a class="anchor" id="a3ac4994eec60364c5495c6a57bb99d84"></a>
+<a class="anchor" id="a3f33171db0cc7dcc959bbb66ef34a727"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -264,19 +281,45 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint32_t getAlignedRowPitch </td>
+          <td class="memname">uint32_t getAlignedRowLength </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the size in bytes of aligned rows </p>
+<p>Return the size in pixels of aligned rows for a mip level </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa8f63d2d1ee31692dda8794e6413b2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getAlignedRowPitch </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return the size in bytes of aligned rows for a mip level </p>
 
 </div>
 </div>
@@ -352,7 +395,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a894a747cb095beeff44f56cec6fc8642"></a>
+<a class="anchor" id="a92644abed7e41134269173917d9673a2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -362,7 +405,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">auto getImageSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -372,7 +416,31 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the size in bytes of the first layer </p>
+<p>Return the size in bytes </p>
+
+</div>
+</div>
+<a class="anchor" id="a804ae24e8938faaf362fea608513e9a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto getMemoryAllocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the currently allocated images. Only available if <a class="el" href="namespacevireo.html#a5315bff9f37788050ab2556779b62d74">isMemoryUsageEnabled()</a> is <code>true</code> </p>
 
 </div>
 </div>
@@ -421,31 +489,41 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of bytes for one pixel </p>
+<p>Returns the number of bytes for one pixel, or the block size in bytes pour BCn compressed formats </p>
 
 </div>
 </div>
-<a class="anchor" id="ab0a945918a96ee4ad9d08a98bc8a60f9"></a>
+<a class="anchor" id="a955b2b6e4a34781bfecee68cc0ab3eae"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto getRowPitch </td>
+          <td class="memname">uint32_t getRowLength </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Return the size in bytes of each row </p>
+<p>Return the size in pixels of each row for a mip level </p>
+
+</div>
+</div>
+<a class="anchor" id="a3230fb82e22aa23560fa47417254c1d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t getRowPitch </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the size in bytes of each row for a mip level </p>
 
 </div>
 </div>
@@ -522,6 +600,67 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa05be981d7486fd57288d143677cc33d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t IMAGE_ROW_PITCH_ALIGNMENT {256}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Row pitch alignment in bytes for cross-API compatibility. Always use this alignment before using <code>copy</code> methods to have the same alignment with DirectX and Vulkan. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6340ee8eccf0c0148442f28eaeb92944"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a>&gt; memoryAllocations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03e8365a32e4486b8f6cef71014ee1fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex memoryAllocationsMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8207d073132308fdaf5cf16fcf0ec3b1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -548,7 +687,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Image.html">Image</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

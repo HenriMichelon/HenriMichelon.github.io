@@ -67,9 +67,11 @@ $(document).ready(function(){initNavTree('classvireo_1_1Buffer.html',''); initRe
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classvireo_1_1Buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Buffer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
@@ -108,6 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c527e948c1a6cc8d7ccfe41003653eb"><td class="memItemLeft" align="right" valign="top">Buffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a3c527e948c1a6cc8d7ccfe41003653eb">operator=</a> (const Buffer &amp;) = delete</td></tr>
 <tr class="separator:a3c527e948c1a6cc8d7ccfe41003653eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a804ae24e8938faaf362fea608513e9a4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a804ae24e8938faaf362fea608513e9a4">getMemoryAllocations</a> ()</td></tr>
+<tr class="separator:a804ae24e8938faaf362fea608513e9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8ece8a4ec9f37e2f57460b4e04d96b71"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a8ece8a4ec9f37e2f57460b4e04d96b71">WHOLE_SIZE</a> = ~0ULL</td></tr>
@@ -130,6 +137,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5ac6cf5a5123e40167383798584f10ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f58980a2c86325f5bf167aa84ead492"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a7f58980a2c86325f5bf167aa84ead492">mappedAddress</a> {nullptr}</td></tr>
 <tr class="separator:a7f58980a2c86325f5bf167aa84ead492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a03e8365a32e4486b8f6cef71014ee1fb"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a03e8365a32e4486b8f6cef71014ee1fb">memoryAllocationsMutex</a></td></tr>
+<tr class="separator:a03e8365a32e4486b8f6cef71014ee1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6340ee8eccf0c0148442f28eaeb92944"><td class="memItemLeft" align="right" valign="top">static std::list&lt; <a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Buffer.html#a6340ee8eccf0c0148442f28eaeb92944">memoryAllocations</a></td></tr>
+<tr class="separator:a6340ee8eccf0c0148442f28eaeb92944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae3ba8d0f052d31954b11702206f9b23c"></a>
@@ -297,6 +311,30 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns a host virtual memory address. Valid only after a <code><a class="el" href="classvireo_1_1Buffer.html#ab787505118207f731de3eed5a7c1d7c9">map()</a></code> call. </p>
+
+</div>
+</div>
+<a class="anchor" id="a804ae24e8938faaf362fea608513e9a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto getMemoryAllocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the currently allocated buffers. Only available if <a class="el" href="namespacevireo.html#a5315bff9f37788050ab2556779b62d74">isMemoryUsageEnabled()</a> is <code>true</code> </p>
 
 </div>
 </div>
@@ -561,6 +599,46 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6340ee8eccf0c0148442f28eaeb92944"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a>&gt; memoryAllocations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03e8365a32e4486b8f6cef71014ee1fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex memoryAllocationsMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8ece8a4ec9f37e2f57460b4e04d96b71"></a>
 <div class="memitem">
 <div class="memproto">
@@ -587,7 +665,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Buffer.html">Buffer</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

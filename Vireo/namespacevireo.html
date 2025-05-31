@@ -61,7 +61,9 @@ $(document).ready(function(){initNavTree('namespacevireo.html',''); initResizabl
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enums</a>  </div>
+<a href="#enum-members">Enums</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
     <div class="title">vireo Namespace Reference</div>
   </div>
@@ -148,6 +150,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1Viewport.html">Viewport</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +526,20 @@ Enums</h2></td></tr>
 <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">TIMELINE</a>
  }</td></tr>
 <tr class="separator:a4bff641386b62aac37ca086b4b93824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3147c6c3b35af7fd8eb403b93732a57"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57">VideoMemoryAllocationUsage</a> { <a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57a17de626bcae5109bb2f7a66dfc4a8a1d">BUFFER</a>, 
+<a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57a23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>
+ }</td></tr>
+<tr class="separator:aa3147c6c3b35af7fd8eb403b93732a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5315bff9f37788050ab2556779b62d74"><td class="memItemLeft" align="right" valign="top">consteval bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a5315bff9f37788050ab2556779b62d74">isMemoryUsageEnabled</a> ()</td></tr>
+<tr class="separator:a5315bff9f37788050ab2556779b62d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a57c5a9f1bdb2062a6f05423e757eae62"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a57c5a9f1bdb2062a6f05423e757eae62">ENABLE_VRAM_USAGE</a> = false</td></tr>
+<tr class="separator:a57c5a9f1bdb2062a6f05423e757eae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a5656f41393bc01f9f04ce091e4b8fe1c"></a>
@@ -1495,6 +1513,31 @@ Enums</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa3147c6c3b35af7fd8eb403b93732a57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57">VideoMemoryAllocationUsage</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Use of memory allocation </p>
+<table class="fieldtable">
+<tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="aa3147c6c3b35af7fd8eb403b93732a57a17de626bcae5109bb2f7a66dfc4a8a1d"></a>BUFFER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3147c6c3b35af7fd8eb403b93732a57a23a12f67f614b5518c7f1c2465bf95e3"></a>IMAGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="a14a6f68a4c9f786cf3809e71b5669b04"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1536,13 +1579,52 @@ Enums</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5315bff9f37788050ab2556779b62d74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">consteval bool vireo::isMemoryUsageEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <code>true</code> if memory usage collection is enabled </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a57c5a9f1bdb2062a6f05423e757eae62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool ENABLE_VRAM_USAGE = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enable this to collect memory usage for buffers &amp; images </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.0.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

@@ -98,6 +98,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7261cac5cb82702c34b49cffc08c8f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad525756f14bc5eeacfb8000edcbfa746"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad525756f14bc5eeacfb8000edcbfa746">createShaderModule</a> (const std::string &amp;fileName) const = 0</td></tr>
 <tr class="separator:ad525756f14bc5eeacfb8000edcbfa746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2f2d741c06abf79ef784607e31eddd"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a6b2f2d741c06abf79ef784607e31eddd">createShaderModule</a> (const std::vector&lt; char &gt; &amp;data) const = 0</td></tr>
+<tr class="separator:a6b2f2d741c06abf79ef784607e31eddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2694c5cce82ee9d6ee3a17e454f650"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a1a2694c5cce82ee9d6ee3a17e454f650">createPipelineResources</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt;&gt; &amp;descriptorLayouts={}, const <a class="el" href="structvireo_1_1PushConstantsDesc.html">PushConstantsDesc</a> &amp;pushConstant={}, const std::wstring &amp;name=L&quot;PipelineResource&quot;) const = 0</td></tr>
 <tr class="separator:a1a2694c5cce82ee9d6ee3a17e454f650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a534e5105e1fb9923046076185657b177"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1ComputePipeline.html">ComputePipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a534e5105e1fb9923046076185657b177">createComputePipeline</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1PipelineResources.html">PipelineResources</a> &gt; &amp;pipelineResources, const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a> &gt; &amp;shader, const std::wstring &amp;name=L&quot;ComputePipeline&quot;) const = 0</td></tr>
@@ -124,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1012256cf4df439cafc6ebef76531967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2ea85c73a21dbbeba59bd781c61c575"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=Sampler::LOD_CLAMP_NONE, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR) const = 0</td></tr>
 <tr class="separator:ad2ea85c73a21dbbeba59bd781c61c575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9990151de058ad83b2ab5a1d1ecfe0d8"><td class="memItemLeft" align="right" valign="top">virtual std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a9990151de058ad83b2ab5a1d1ecfe0d8">getShaderFileExtension</a> () const = 0</td></tr>
+<tr class="separator:a9990151de058ad83b2ab5a1d1ecfe0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a012469ba0acab3ce2712c7e34d08c8c9">getPhysicalDevice</a> () const</td></tr>
 <tr class="separator:a012469ba0acab3ce2712c7e34d08c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130131cf643a17be360d2e2ac080b279"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279">getDevice</a> () const</td></tr>
@@ -1071,6 +1075,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6b2f2d741c06abf79ef784607e31eddd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1ShaderModule.html">ShaderModule</a>&gt; createShaderModule </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load a compiled shader and creates a shader module from an input stream</p>
+<p>Creates a shader module </p>
+
+</div>
+</div>
 <a class="anchor" id="a2945b364ea7c3978aa1c1e6706abf3bd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1285,6 +1315,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9990151de058ad83b2ab5a1d1ecfe0d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::wstring getShaderFileExtension </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a80cbf3a223060c85ff273d534b21059a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1424,7 +1477,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Vireo.html">Vireo</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

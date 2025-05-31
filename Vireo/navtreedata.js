@@ -62,6 +62,7 @@ var NAVTREE =
             [ "getInstanceSize", "classvireo_1_1Buffer.html#a2a0c94e27b7fe4f968d16e44711f8383", null ],
             [ "getInstanceSizeAligned", "classvireo_1_1Buffer.html#a4733e816d7c9350929e2d24ef660e324", null ],
             [ "getMappedAddress", "classvireo_1_1Buffer.html#ad8bebf5aa656b037de89b9c8636f232b", null ],
+            [ "getMemoryAllocations", "classvireo_1_1Buffer.html#a804ae24e8938faaf362fea608513e9a4", null ],
             [ "getSize", "classvireo_1_1Buffer.html#a5c1d89d2d5cd83b98e9053def9afdc99", null ],
             [ "getType", "classvireo_1_1Buffer.html#ad210334d8ff0b83b000130dfcaac2faf", null ],
             [ "map", "classvireo_1_1Buffer.html#ab787505118207f731de3eed5a7c1d7c9", null ],
@@ -73,6 +74,8 @@ var NAVTREE =
             [ "instanceSize", "classvireo_1_1Buffer.html#af34c811ab25184584ba84d327ce867fc", null ],
             [ "instanceSizeAligned", "classvireo_1_1Buffer.html#a5ac6cf5a5123e40167383798584f10ad", null ],
             [ "mappedAddress", "classvireo_1_1Buffer.html#a7f58980a2c86325f5bf167aa84ead492", null ],
+            [ "memoryAllocations", "classvireo_1_1Buffer.html#a6340ee8eccf0c0148442f28eaeb92944", null ],
+            [ "memoryAllocationsMutex", "classvireo_1_1Buffer.html#a03e8365a32e4486b8f6cef71014ee1fb", null ],
             [ "WHOLE_SIZE", "classvireo_1_1Buffer.html#a8ece8a4ec9f37e2f57460b4e04d96b71", null ]
           ] ],
           [ "BufferCopyRegion", "structvireo_1_1BufferCopyRegion.html", [
@@ -135,11 +138,13 @@ var NAVTREE =
             [ "cleanup", "classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc", null ],
             [ "copy", "classvireo_1_1CommandList.html#a64f2f162e0a995959ca05a3449ff0504", null ],
             [ "copy", "classvireo_1_1CommandList.html#a168ee0b6f8060b96ab62aaebd5bcb0f3", null ],
-            [ "copy", "classvireo_1_1CommandList.html#a4311f7fede64ab16a899a5c209db2fb4", null ],
-            [ "copy", "classvireo_1_1CommandList.html#a4fa565fcb91747768f6dbedcb9d67945", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a94d62683b63eb59c4adf73962e2f429b", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a8545cb31e8c5490ed74a723926029b2f", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a0ea9cfdd597aed2818db64810f98fd38", null ],
             [ "copy", "classvireo_1_1CommandList.html#a42499cfedaa56a15c9b684e35b27112f", null ],
             [ "copy", "classvireo_1_1CommandList.html#a4d2860a480755c49d7e15aef92aed89e", null ],
-            [ "copy", "classvireo_1_1CommandList.html#a49fb1280975f085cfd7018d2d476898d", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a8f8933e19ee3c85880f6a4d045185634", null ],
+            [ "copy", "classvireo_1_1CommandList.html#a2fe55d2509f38e23e0fc4a5e668df184", null ],
             [ "copy", "classvireo_1_1CommandList.html#a535b8952e405079ba66928acdf8e1ba9", null ],
             [ "copy", "classvireo_1_1CommandList.html#a4ed183f64c88a79dc598ae5d951c6dc0", null ],
             [ "copy", "classvireo_1_1CommandList.html#a6cce0822fc60b62e63abc4da3d3306c9", null ],
@@ -284,18 +289,24 @@ var NAVTREE =
             [ "~Image", "classvireo_1_1Image.html#a428c4eac8ad01b4c51416ad6d8392f3b", null ],
             [ "Image", "classvireo_1_1Image.html#a6a92512b800ab1a87ef90a4cd0322af5", null ],
             [ "Image", "classvireo_1_1Image.html#a1498bf4731472241234dcdb11346ec96", null ],
-            [ "getAlignedImageSize", "classvireo_1_1Image.html#a2d1c8f055b20cb7c378e033c88b884f3", null ],
-            [ "getAlignedRowPitch", "classvireo_1_1Image.html#a3ac4994eec60364c5495c6a57bb99d84", null ],
+            [ "getAlignedImageSize", "classvireo_1_1Image.html#ae54cb994e4c9b53889d37efd7ee0c01a", null ],
+            [ "getAlignedRowLength", "classvireo_1_1Image.html#a3f33171db0cc7dcc959bbb66ef34a727", null ],
+            [ "getAlignedRowPitch", "classvireo_1_1Image.html#aaa8f63d2d1ee31692dda8794e6413b2f", null ],
             [ "getArraySize", "classvireo_1_1Image.html#a3205b6093998c9d6e95797b9945d9f12", null ],
             [ "getFormat", "classvireo_1_1Image.html#afc623d05f6456686004dbcb40ca7c8eb", null ],
             [ "getHeight", "classvireo_1_1Image.html#afb671e8ff01febf709d9074687f2bfb4", null ],
-            [ "getImageSize", "classvireo_1_1Image.html#a894a747cb095beeff44f56cec6fc8642", null ],
+            [ "getImageSize", "classvireo_1_1Image.html#a92644abed7e41134269173917d9673a2", null ],
+            [ "getMemoryAllocations", "classvireo_1_1Image.html#a804ae24e8938faaf362fea608513e9a4", null ],
             [ "getMipLevels", "classvireo_1_1Image.html#a478d4753c0a41af74ce533f34dde9aab", null ],
             [ "getPixelSize", "classvireo_1_1Image.html#a0fc7b7de771482442d779aaa8b909ade", null ],
-            [ "getRowPitch", "classvireo_1_1Image.html#ab0a945918a96ee4ad9d08a98bc8a60f9", null ],
+            [ "getRowLength", "classvireo_1_1Image.html#a955b2b6e4a34781bfecee68cc0ab3eae", null ],
+            [ "getRowPitch", "classvireo_1_1Image.html#a3230fb82e22aa23560fa47417254c1d0", null ],
             [ "getWidth", "classvireo_1_1Image.html#a0af04d5df99f552fc7a05a4bf7f5c4e9", null ],
             [ "isReadWrite", "classvireo_1_1Image.html#a155411af8144a14654748c1c95e5b676", null ],
             [ "operator=", "classvireo_1_1Image.html#acc11fabfe1dc19bd304b444d8b9e1c54", null ],
+            [ "IMAGE_ROW_PITCH_ALIGNMENT", "classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d", null ],
+            [ "memoryAllocations", "classvireo_1_1Image.html#a6340ee8eccf0c0148442f28eaeb92944", null ],
+            [ "memoryAllocationsMutex", "classvireo_1_1Image.html#a03e8365a32e4486b8f6cef71014ee1fb", null ],
             [ "pixelSize", "classvireo_1_1Image.html#a8207d073132308fdaf5cf16fcf0ec3b1", null ]
           ] ],
           [ "ImageUploadInfo", "structvireo_1_1ImageUploadInfo.html", [
@@ -456,6 +467,12 @@ var NAVTREE =
             [ "VertexInputLayout", "classvireo_1_1VertexInputLayout.html#a660d25b92c38fbbfadd3d6580598179e", null ],
             [ "operator=", "classvireo_1_1VertexInputLayout.html#ad100496aaf9a7e9dc76e0729a675cf03", null ]
           ] ],
+          [ "VideoMemoryAllocationDesc", "structvireo_1_1VideoMemoryAllocationDesc.html", [
+            [ "name", "structvireo_1_1VideoMemoryAllocationDesc.html#a5d7bb9e3cf7ed264c304170a076aee63", null ],
+            [ "ref", "structvireo_1_1VideoMemoryAllocationDesc.html#a1830ddb36c14bdd7057683e633f918c8", null ],
+            [ "size", "structvireo_1_1VideoMemoryAllocationDesc.html#a854352f53b148adc24983a58a1866d66", null ],
+            [ "usage", "structvireo_1_1VideoMemoryAllocationDesc.html#a2735d3353b8c7fd0fdc4d4a1bb9221de", null ]
+          ] ],
           [ "Viewport", "structvireo_1_1Viewport.html", [
             [ "height", "structvireo_1_1Viewport.html#a48083b65ac9a863566dc3e3fff09a5b4", null ],
             [ "maxDepth", "structvireo_1_1Viewport.html#a72002d2f063eebed05d94a9419e78540", null ],
@@ -486,12 +503,14 @@ var NAVTREE =
             [ "createSamplerDescriptorLayout", "classvireo_1_1Vireo.html#a201f641efa1d23cbf0b84d15b8fedc78", null ],
             [ "createSemaphore", "classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c", null ],
             [ "createShaderModule", "classvireo_1_1Vireo.html#ad525756f14bc5eeacfb8000edcbfa746", null ],
+            [ "createShaderModule", "classvireo_1_1Vireo.html#a6b2f2d741c06abf79ef784607e31eddd", null ],
             [ "createSubmitQueue", "classvireo_1_1Vireo.html#a2945b364ea7c3978aa1c1e6706abf3bd", null ],
             [ "createSwapChain", "classvireo_1_1Vireo.html#ab7fe4410f37954c2e05ff87f370c1887", null ],
             [ "createVertexLayout", "classvireo_1_1Vireo.html#a7261cac5cb82702c34b49cffc08c8f74", null ],
             [ "getDevice", "classvireo_1_1Vireo.html#a130131cf643a17be360d2e2ac080b279", null ],
             [ "getInstance", "classvireo_1_1Vireo.html#a814a430e8b35e683186c96d1c358f400", null ],
             [ "getPhysicalDevice", "classvireo_1_1Vireo.html#a012469ba0acab3ce2712c7e34d08c8c9", null ],
+            [ "getShaderFileExtension", "classvireo_1_1Vireo.html#a9990151de058ad83b2ab5a1d1ecfe0d8", null ],
             [ "isBackendSupported", "classvireo_1_1Vireo.html#a80cbf3a223060c85ff273d534b21059a", null ],
             [ "operator=", "classvireo_1_1Vireo.html#af674909511b442a85ec91f4f95ba2504", null ],
             [ "waitIdle", "classvireo_1_1Vireo.html#a11a419f32ea9186bbea006c34f2d5a8e", null ],
@@ -545,6 +564,7 @@ var NAVTREE =
         [ "SwapChain", "classvireo_1_1SwapChain.html", null ],
         [ "VertexAttributeDesc", "structvireo_1_1VertexAttributeDesc.html", null ],
         [ "VertexInputLayout", "classvireo_1_1VertexInputLayout.html", null ],
+        [ "VideoMemoryAllocationDesc", "structvireo_1_1VideoMemoryAllocationDesc.html", null ],
         [ "Viewport", "structvireo_1_1Viewport.html", null ],
         [ "Vireo", "classvireo_1_1Vireo.html", null ]
       ] ]
@@ -555,7 +575,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"classvireo_1_1SwapChain.html#afc623d05f6456686004dbcb40ca7c8eb"
+"classvireo_1_1SwapChain.html#a622f8b56e4fc0f1d525f146aecac445d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

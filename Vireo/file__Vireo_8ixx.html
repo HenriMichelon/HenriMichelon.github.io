@@ -63,6 +63,7 @@ $(document).ready(function(){initNavTree('file__Vireo_8ixx.html',''); initResiza
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enums</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
     <div class="title">Vireo.ixx File Reference</div>
@@ -148,6 +149,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1VertexAttributeDesc.html">VertexAttributeDesc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1VertexInputLayout.html">VertexInputLayout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1VideoMemoryAllocationDesc.html">VideoMemoryAllocationDesc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvireo_1_1Viewport.html">Viewport</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -527,6 +530,15 @@ Enums</h2></td></tr>
 <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">TIMELINE</a>
  }</td></tr>
 <tr class="separator:a4bff641386b62aac37ca086b4b93824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3147c6c3b35af7fd8eb403b93732a57"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57">VideoMemoryAllocationUsage</a> { <a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57a17de626bcae5109bb2f7a66dfc4a8a1d">BUFFER</a>, 
+<a class="el" href="namespacevireo.html#aa3147c6c3b35af7fd8eb403b93732a57a23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>
+ }</td></tr>
+<tr class="separator:aa3147c6c3b35af7fd8eb403b93732a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5315bff9f37788050ab2556779b62d74"><td class="memItemLeft" align="right" valign="top">consteval bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a5315bff9f37788050ab2556779b62d74">isMemoryUsageEnabled</a> ()</td></tr>
+<tr class="separator:a5315bff9f37788050ab2556779b62d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -534,6 +546,8 @@ Variables</h2></td></tr>
 <tr class="separator:a3834002056a426f10460f2266277e63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42436df41e711844c18d77cbb46197af"><td class="memItemLeft" align="right" valign="top">export import vireo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Vireo_8ixx.html#a42436df41e711844c18d77cbb46197af">tools</a></td></tr>
 <tr class="separator:a42436df41e711844c18d77cbb46197af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c5a9f1bdb2062a6f05423e757eae62"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevireo.html#a57c5a9f1bdb2062a6f05423e757eae62">ENABLE_VRAM_USAGE</a> = false</td></tr>
+<tr class="separator:a57c5a9f1bdb2062a6f05423e757eae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a42436df41e711844c18d77cbb46197af"></a>
@@ -566,7 +580,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="file__Vireo_8ixx.html">Vireo.ixx</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>

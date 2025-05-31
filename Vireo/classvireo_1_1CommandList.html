@@ -98,12 +98,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab6c872d78458fd50c061dbf3bc97f363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a376d70280f7cbe0a7432c9b11f60e6fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a376d70280f7cbe0a7432c9b11f60e6fb">upload</a> (const std::vector&lt; <a class="el" href="structvireo_1_1ImageUploadInfo.html">ImageUploadInfo</a> &gt; &amp;infos)</td></tr>
 <tr class="separator:a376d70280f7cbe0a7432c9b11f60e6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fb1280975f085cfd7018d2d476898d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a49fb1280975f085cfd7018d2d476898d">copy</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;source, const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;destination, const uint32_t sourceOffset=0, const uint32_t firstMipLevel=0) const</td></tr>
-<tr class="separator:a49fb1280975f085cfd7018d2d476898d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4311f7fede64ab16a899a5c209db2fb4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a4311f7fede64ab16a899a5c209db2fb4">copy</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;source, const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;destination, uint32_t sourceOffset=0, uint32_t firstMipLevel=0) const = 0</td></tr>
-<tr class="separator:a4311f7fede64ab16a899a5c209db2fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fa565fcb91747768f6dbedcb9d67945"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a4fa565fcb91747768f6dbedcb9d67945">copy</a> (const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;source, const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;destination, uint32_t destinationOffset=0, uint32_t firstMipLevel=0) const = 0</td></tr>
-<tr class="separator:a4fa565fcb91747768f6dbedcb9d67945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8933e19ee3c85880f6a4d045185634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a8f8933e19ee3c85880f6a4d045185634">copy</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;source, const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;destination, const uint32_t sourceOffset=0, const uint32_t mipLevel=0) const</td></tr>
+<tr class="separator:a8f8933e19ee3c85880f6a4d045185634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8545cb31e8c5490ed74a723926029b2f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a8545cb31e8c5490ed74a723926029b2f">copy</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;source, const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;destination, uint32_t sourceOffset=0, uint32_t mipLevel=0) const = 0</td></tr>
+<tr class="separator:a8545cb31e8c5490ed74a723926029b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe55d2509f38e23e0fc4a5e668df184"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a2fe55d2509f38e23e0fc4a5e668df184">copy</a> (const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;source, const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;destination, const std::vector&lt; size_t &gt; &amp;sourceOffsets) const</td></tr>
+<tr class="separator:a2fe55d2509f38e23e0fc4a5e668df184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d62683b63eb59c4adf73962e2f429b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a94d62683b63eb59c4adf73962e2f429b">copy</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;source, const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;destination, const std::vector&lt; size_t &gt; &amp;sourceOffsets) const = 0</td></tr>
+<tr class="separator:a94d62683b63eb59c4adf73962e2f429b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea9cfdd597aed2818db64810f98fd38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a0ea9cfdd597aed2818db64810f98fd38">copy</a> (const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;source, const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;destination, uint32_t destinationOffset=0, uint32_t mipLevel=0) const = 0</td></tr>
+<tr class="separator:a0ea9cfdd597aed2818db64810f98fd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cce0822fc60b62e63abc4da3d3306c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a6cce0822fc60b62e63abc4da3d3306c9">copy</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;source, const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;destination, const uint32_t destinationOffset=0, const uint32_t firstMipLevel=0) const</td></tr>
 <tr class="separator:a6cce0822fc60b62e63abc4da3d3306c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168ee0b6f8060b96ab62aaebd5bcb0f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a168ee0b6f8060b96ab62aaebd5bcb0f3">copy</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;source, const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;destination, size_t size=Buffer::WHOLE_SIZE, uint32_t sourceOffset=0, uint32_t destinationOffset=0) const = 0</td></tr>
@@ -1172,6 +1176,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Copy multiple regions of a buffer into another buffer </p>
 
 </div>
 </div>
@@ -1224,11 +1229,52 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy a buffer into another buffer </p>
+<p>Copy data from a buffer into another buffer </p>
 
 </div>
 </div>
-<a class="anchor" id="a4311f7fede64ab16a899a5c209db2fb4"></a>
+<a class="anchor" id="a94d62683b63eb59c4adf73962e2f429b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvireo_1_1Image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sourceOffsets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copy data from a buffer into a multi-level image. One <code>sourceOffset</code> offset in bytes for each level. The data in the buffer must have row-aligned data (cf. <code><a class="el" href="classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d">Image::IMAGE_ROW_PITCH_ALIGNMENT</a></code>) for cross-API compatibility. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8545cb31e8c5490ed74a723926029b2f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1257,7 +1303,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>firstMipLevel</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1271,11 +1317,11 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy a buffer into an image </p>
+<p>Copy data from a buffer into an image level. The data in the buffer must have row-aligned data (cf. <code><a class="el" href="classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d">Image::IMAGE_ROW_PITCH_ALIGNMENT</a></code>) for cross-API compatibility. </p>
 
 </div>
 </div>
-<a class="anchor" id="a4fa565fcb91747768f6dbedcb9d67945"></a>
+<a class="anchor" id="a0ea9cfdd597aed2818db64810f98fd38"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1304,7 +1350,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>firstMipLevel</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1318,7 +1364,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy an image into a buffer </p>
+<p>Copy a level of an image into a buffer </p>
 
 </div>
 </div>
@@ -1392,7 +1438,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49fb1280975f085cfd7018d2d476898d"></a>
+<a class="anchor" id="a8f8933e19ee3c85880f6a4d045185634"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1421,7 +1467,7 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const uint32_t&#160;</td>
-          <td class="paramname"><em>firstMipLevel</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>mipLevel</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1435,7 +1481,48 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy a buffer into an image </p>
+<p>Copy data from a buffer into an image level. The data in the buffer must have row-aligned data (cf. <code><a class="el" href="classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d">Image::IMAGE_ROW_PITCH_ALIGNMENT</a></code>) for cross-API compatibility. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2fe55d2509f38e23e0fc4a5e668df184"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void copy </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classvireo_1_1Image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sourceOffsets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copy data from a buffer into a multi-level image. One <code>sourceOffset</code> offset in bytes for each level. The data in the buffer must have row-aligned data (cf. <code><a class="el" href="classvireo_1_1Image.html#aa05be981d7486fd57288d143677cc33d">Image::IMAGE_ROW_PITCH_ALIGNMENT</a></code>) for cross-API compatibility. </p>
 
 </div>
 </div>
@@ -1488,7 +1575,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy a buffer into another buffer </p>
+<p>Copy data from a buffer into another buffer </p>
 
 </div>
 </div>
@@ -1529,6 +1616,7 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Copy multiple regions of a buffer into another buffer </p>
 
 </div>
 </div>
@@ -2753,7 +2841,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1CommandList.html">CommandList</a></li>
-    <li class="footer">Generated on ven. mai 23 2025 23:06:01 for Vireo &nbsp; by
+    <li class="footer">Generated on sam. mai 31 2025 14:21:55 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.0.0 </li>
   </ul>
