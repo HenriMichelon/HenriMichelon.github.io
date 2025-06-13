@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"classvireo_1_1SwapChain.html#a47f4addafc31bdb451294a0e876aec28":[3,0,0,36,5],
+"classvireo_1_1SwapChain.html#a5013c590ffc6c133db8e4d22d53fb9ac":[3,0,0,36,11],
+"classvireo_1_1SwapChain.html#a5c2c11f6d7929bafc3926f68dd5c00f3":[3,0,0,36,14],
 "classvireo_1_1SwapChain.html#a622f8b56e4fc0f1d525f146aecac445d":[3,0,0,36,17],
 "classvireo_1_1SwapChain.html#a77e4667fda5e52f4fc8f69d4a3acefb3":[3,0,0,36,16],
 "classvireo_1_1SwapChain.html#a89f05908f265d0b3988b9b8a05d4be8f":[3,0,0,36,12],
