@@ -76,7 +76,8 @@ $(document).ready(function(){initNavTree('structlysa_1_1Frustum.html',''); initR
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A camera or light frustum </p>
+<div class="textblock"><p>Represents a view frustum used for visibility testing (frustum culling).</p>
+<p>A frustum is defined by six clipping planes extracted from a combined projection-view matrix (sometimes called clip-from-world). This utility provides a compact plane representation and helpers to extract planes from a matrix for culling meshes, lights, or other bounding volumes. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -120,10 +121,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a frustum </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Extracts the six clipping planes of a frustum from a combined projection-view matrix.</p>
+<p>The resulting planes are written to the provided array. Unless noted otherwise, the order follows the engine convention: left, right, bottom, top, near, far.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">planes</td><td>output; </td></tr>
-    <tr><td class="paramname">matrix</td><td>Projection View Matrix </td></tr>
+    <tr><td class="paramname">planes</td><td>Output array that will receive the six planes. Each plane is expressed as (nx, ny, nz, d). </td></tr>
+    <tr><td class="paramname">matrix</td><td>Projection-View matrix (clip-from-world). </td></tr>
   </table>
   </dd>
 </dl>
@@ -136,7 +139,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1Frustum.html">Frustum</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

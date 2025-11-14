@@ -75,7 +75,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1Updatable.html',''); init
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Helper mixin that tracks a finite number of pending updates for an object. Used by the engine to update resources in VRAM and associated pipelines and descriptors.</p>
+<p>Typical usage is to mark an object as needing refresh a limited number of frames, decrementing the counter as work is performed, and querying the updated state with <a class="el" href="classlysa_1_1Updatable.html#a181a4875b19d77e58259cb74a3a3c7e4">isUpdated()</a>. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Updatable:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -142,6 +145,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Decrements the number of pending updates by one (not clamped). </p>
 
 </div>
 </div>
@@ -165,6 +169,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true if there are pending updates to process. </p>
 
 </div>
 </div>
@@ -189,6 +194,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sets the maximum number of consecutive pending updates allowed. </p>
 
 </div>
 </div>
@@ -204,6 +210,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Marks the object as updated, respecting <a class="el" href="classlysa_1_1Updatable.html#a28f817bf0a77efe20177c18d6e1c1e75">maxUpdates</a> if set. </p>
 
 </div>
 </div>
@@ -217,6 +224,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Upper bound on <a class="el" href="classlysa_1_1Updatable.html#ab2f3b15e00a5d0672d4577bb53b43b3d">pendingUpdates</a>; 0 means unbounded. </p>
 
 </div>
 </div>
@@ -229,6 +237,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Current number of pending updates to process. </p>
 
 </div>
 </div>
@@ -238,7 +247,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Updatable.html">Updatable</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

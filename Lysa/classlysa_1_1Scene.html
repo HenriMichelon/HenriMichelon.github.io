@@ -77,7 +77,16 @@ $(document).ready(function(){initNavTree('classlysa_1_1Scene.html',''); initResi
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Scene orchestrator.</p><ul>
+<li>Track nodes added to the scene (cameras, lights, mesh instances, environment).</li>
+<li>Own GPU-side resources necessary for scene rendering (uniform buffers, descriptor sets).</li>
+<li>Build and maintain per-pipeline instance data and indirect draw commands.</li>
+<li>Perform frustum culling via compute pipelines and submit culled draws.</li>
+<li>Manage shadow-map renderers and their images.</li>
+</ul>
+<p>Thread-safety: unless stated otherwise, methods are intended to be called only from the render thread. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Scene_1_1InstanceIndexConstant.html">InstanceIndexConstant</a></td></tr>
@@ -208,6 +217,17 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classlysa_1_1Scene.html">Scene</a> for a given configuration and viewport/scissors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> high-level configuration (buffers sizes, features). </td></tr>
+    <tr><td class="paramname">renderingConfig</td><td>Global rendering configuration. </td></tr>
+    <tr><td class="paramname">framesInFlight</td><td>Number of buffered frames. </td></tr>
+    <tr><td class="paramname">viewport</td><td>Default viewport used for render passes. </td></tr>
+    <tr><td class="paramname">scissors</td><td>Default scissors rectangle. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -280,6 +300,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Activates the provided camera as the current rendering viewpoint. </p>
 
 </div>
 </div>
@@ -304,6 +325,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Adds a node (camera, light, mesh instance, environment, etc.) to the scene. </p>
 
 </div>
 </div>
@@ -320,6 +342,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Executes compute workloads such as frustum culling. </p>
 
 </div>
 </div>
@@ -343,6 +366,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates all static descriptor layouts used by scenes and pipelines. </p>
 
 </div>
 </div>
@@ -366,6 +390,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys static descriptor layouts created by <a class="el" href="classlysa_1_1Scene.html#a5f274741678ab6649c1d991370a637c7">createDescriptorLayouts()</a>. </p>
 
 </div>
 </div>
@@ -410,6 +435,16 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Common draw helper that dispatches indirect draws per pipeline using culled lists. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>Command buffer to record into. </td></tr>
+    <tr><td class="paramname">set</td><td>Descriptor set index to bind for the pipelines family. </td></tr>
+    <tr><td class="paramname">culledDrawCommandsBuffers</td><td>Per-pipeline indirect commands buffer. </td></tr>
+    <tr><td class="paramname">culledDrawCommandsCountBuffers</td><td>Per-pipeline commands count buffer. </td></tr>
+    <tr><td class="paramname">frustumCullingPipelines</td><td>Per-pipeline frustum culling compute pipelines. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -436,6 +471,13 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Issues draw calls for opaque models using the supplied pipelines map. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>Command buffer to record into. </td></tr>
+    <tr><td class="paramname">pipelines</td><td>Map of material/pipeline identifiers to pipelines. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -462,6 +504,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Issues draw calls for models driven by shader materials/special passes. </p>
 
 </div>
 </div>
@@ -488,6 +531,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Issues draw calls for transparent models. </p>
 
 </div>
 </div>
@@ -511,6 +555,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the currently active camera (may be null). </p>
 
 </div>
 </div>
@@ -534,6 +579,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the main descriptor set containing scene resources. </p>
 
 </div>
 </div>
@@ -557,6 +603,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the optional descriptor set (transparency color for shadows). </p>
 
 </div>
 </div>
@@ -580,6 +627,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the mapping of pipeline identifiers to their materials. </p>
 
 </div>
 </div>
@@ -603,6 +651,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the default scissors rectangle for this scene. </p>
 
 </div>
 </div>
@@ -626,6 +675,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns a view over the shadow map renderers values. </p>
 
 </div>
 </div>
@@ -649,6 +699,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the default viewport for this scene. </p>
 
 </div>
 </div>
@@ -672,6 +723,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>True when materials set changed and pipelines/descriptors must be refreshed. </p>
 
 </div>
 </div>
@@ -720,6 +772,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Removes a node previously added to the scene. </p>
 
 </div>
 </div>
@@ -743,6 +796,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resets the materials updated flag after processing. </p>
 
 </div>
 </div>
@@ -759,6 +813,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Writes initial GPU state required before issuing draw calls. </p>
 
 </div>
 </div>
@@ -775,6 +830,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates CPU/GPU scene state (uniforms, lights, instances, descriptors). </p>
 
 </div>
 </div>
@@ -796,6 +852,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding for per-instance buffer used by pipelines. </p>
 
 </div>
 </div>
@@ -816,6 +873,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding for lights buffer. </p>
 
 </div>
 </div>
@@ -836,6 +894,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding for per-model/instance data buffer. </p>
 
 </div>
 </div>
@@ -856,6 +915,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding for <a class="el" href="structlysa_1_1SceneData.html">SceneData</a> uniform buffer. </p>
 
 </div>
 </div>
@@ -876,6 +936,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Optional descriptor binding: transparency color for shadow maps. </p>
 
 </div>
 </div>
@@ -896,6 +957,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding for shadow maps array. </p>
 
 </div>
 </div>
@@ -941,6 +1003,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Maximum number of shadow maps supported by the scene. </p>
 
 </div>
 </div>
@@ -961,6 +1024,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Shared descriptor layout for pipeline-local resources. </p>
 
 </div>
 </div>
@@ -981,6 +1045,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Shared descriptor layout for the main scene set. </p>
 
 </div>
 </div>
@@ -1001,6 +1066,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Optional descriptor layout (set used when transparency color is needed). </p>
 
 </div>
 </div>
@@ -1010,7 +1076,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Scene.html">Scene</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

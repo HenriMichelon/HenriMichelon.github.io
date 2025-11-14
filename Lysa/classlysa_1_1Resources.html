@@ -75,21 +75,34 @@ $(document).ready(function(){initNavTree('classlysa_1_1Resources.html',''); init
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Central container responsible for GPU-ready shared resources.</p>
+<p>The <a class="el" href="classlysa_1_1Resources.html">Resources</a> class owns and manages device memory arrays (vertices, indices, materials, mesh surfaces), the global sampler set, the descriptor layout/set used by draw pipelines, and texture images including fallback (blank) assets.</p><ul>
+<li>Allocate and provide access to large device-side arrays used by the renderers.</li>
+<li>Maintain a descriptor set exposing materials, surfaces and textures to shaders.</li>
+<li>Manage a pool of sampled images with a fixed upper bound (<a class="el" href="classlysa_1_1Resources.html#acaae4355acd9f1bdb8380ef444374d46">MAX_TEXTURES</a>).</li>
+<li>Provide default blank 2D and cube textures to avoid null bindings.</li>
+<li>Track and expose an "updated" flag so dependent systems can react.</li>
+</ul>
+<p>Thread-safety:</p><ul>
+<li>Public methods that mutate internal state should be guarded by the provided mutex.</li>
+<li>Read-only getters may be called concurrently once initialization is complete. </li>
+</ul>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a406817322316323d6c2c476063d91ea2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a406817322316323d6c2c476063d91ea2">Resources</a> (const vireo::Vireo &amp;vireo, <a class="el" href="structlysa_1_1ResourcesConfiguration.html">ResourcesConfiguration</a> &amp;config, const vireo::SubmitQueue &amp;graphicQueue)</td></tr>
 <tr class="separator:a406817322316323d6c2c476063d91ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a661c98b4905ef5b86e07e00c7ff151b4"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a661c98b4905ef5b86e07e00c7ff151b4">getVertexArray</a> ()</td></tr>
-<tr class="separator:a661c98b4905ef5b86e07e00c7ff151b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45087dc58506ff079fe445603c4f2379"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a45087dc58506ff079fe445603c4f2379">getIndexArray</a> ()</td></tr>
-<tr class="separator:a45087dc58506ff079fe445603c4f2379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c75140bd999eb7b2a418cc1ad45e825"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a5c75140bd999eb7b2a418cc1ad45e825">getMaterialArray</a> ()</td></tr>
-<tr class="separator:a5c75140bd999eb7b2a418cc1ad45e825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a18d73080f27b77e9e0a623eeb15168"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a9a18d73080f27b77e9e0a623eeb15168">getMeshSurfaceArray</a> ()</td></tr>
-<tr class="separator:a9a18d73080f27b77e9e0a623eeb15168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4ad2cd0d200280f92807bb2bfd9f138"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#ab4ad2cd0d200280f92807bb2bfd9f138">getSamplers</a> ()</td></tr>
-<tr class="separator:ab4ad2cd0d200280f92807bb2bfd9f138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4955e44f81586b567a5e59d978b81e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a8a4955e44f81586b567a5e59d978b81e">getVertexArray</a> ()</td></tr>
+<tr class="separator:a8a4955e44f81586b567a5e59d978b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807d3b7db7963853e9b15f259b236263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a807d3b7db7963853e9b15f259b236263">getIndexArray</a> ()</td></tr>
+<tr class="separator:a807d3b7db7963853e9b15f259b236263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fa05b9e38fa2e220747213967fc1ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a30fa05b9e38fa2e220747213967fc1ed">getMaterialArray</a> ()</td></tr>
+<tr class="separator:a30fa05b9e38fa2e220747213967fc1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870751aafebf4aff68be54b5a856485e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a870751aafebf4aff68be54b5a856485e">getMeshSurfaceArray</a> ()</td></tr>
+<tr class="separator:a870751aafebf4aff68be54b5a856485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d68ecb9ef21c89f1372ab3ac287d53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1Samplers.html">Samplers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#a7d68ecb9ef21c89f1372ab3ac287d53c">getSamplers</a> ()</td></tr>
+<tr class="separator:a7d68ecb9ef21c89f1372ab3ac287d53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0308d2b95eed63ad6090be9d21d03ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#ab0308d2b95eed63ad6090be9d21d03ed">addTexture</a> (const <a class="el" href="classlysa_1_1Image.html">Image</a> &amp;image)</td></tr>
 <tr class="separator:ab0308d2b95eed63ad6090be9d21d03ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba445bb9bb4116d18dd646f60c1b34bd"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Resources.html#aba445bb9bb4116d18dd646f60c1b34bd">getDescriptorSet</a> () const</td></tr>
@@ -160,6 +173,15 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs the resources container and allocates GPU-side structures.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vireo</td><td>Graphics backend entry point. </td></tr>
+    <tr><td class="paramname">config</td><td>High-level resources configuration (sizes, formats, etc.). </td></tr>
+    <tr><td class="paramname">graphicQueue</td><td>Queue used to submit upload and initialization work. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -201,6 +223,14 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a texture to the internal textures list and uploads it to the GPU. If the capacity <a class="el" href="classlysa_1_1Resources.html#acaae4355acd9f1bdb8380ef444374d46">MAX_TEXTURES</a> is reached, an engine-defined policy applies (typically reuse or replace); callers should not rely on indices beyond the limit.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>CPU-side image data to upload. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classlysa_1_1Texture.html">Texture</a> index suitable for shader/resource binding. </dd></dl>
 
 </div>
 </div>
@@ -216,6 +246,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Releases all GPU and CPU-side resources owned by this container. </p>
 
 </div>
 </div>
@@ -231,6 +262,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flushes pending uploads to the device. Typically enqueues copy/transfer commands to make new/updated resources visible to the GPU. </p>
 
 </div>
 </div>
@@ -254,6 +286,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the default cubemap blank image used as a safe fallback. </p>
 
 </div>
 </div>
@@ -277,6 +310,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the default 2D blank image used as a safe fallback. </p>
 
 </div>
 </div>
@@ -300,10 +334,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the descriptor set that exposes resources to shaders. </p>
 
 </div>
 </div>
-<a class="anchor" id="a45087dc58506ff079fe445603c4f2379"></a>
+<a class="anchor" id="a807d3b7db7963853e9b15f259b236263"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -311,7 +346,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; getIndexArray </td>
+          <td class="memname"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a>&amp; getIndexArray </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -323,10 +358,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the device memory array storing index data. </p>
 
 </div>
 </div>
-<a class="anchor" id="a5c75140bd999eb7b2a418cc1ad45e825"></a>
+<a class="anchor" id="a30fa05b9e38fa2e220747213967fc1ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -334,7 +370,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; getMaterialArray </td>
+          <td class="memname"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a>&amp; getMaterialArray </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -346,10 +382,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the device memory array storing material parameters. </p>
 
 </div>
 </div>
-<a class="anchor" id="a9a18d73080f27b77e9e0a623eeb15168"></a>
+<a class="anchor" id="a870751aafebf4aff68be54b5a856485e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -357,7 +394,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; getMeshSurfaceArray </td>
+          <td class="memname"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a>&amp; getMeshSurfaceArray </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -369,6 +406,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the device memory array storing mesh surface ranges/metadata. </p>
 
 </div>
 </div>
@@ -392,10 +430,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Provides access to the internal mutex used to guard mutations. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab4ad2cd0d200280f92807bb2bfd9f138"></a>
+<a class="anchor" id="a7d68ecb9ef21c89f1372ab3ac287d53c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -403,7 +442,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; getSamplers </td>
+          <td class="memname"><a class="el" href="classlysa_1_1Samplers.html">Samplers</a>&amp; getSamplers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -415,10 +454,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the global sampler collection used by the renderer. </p>
 
 </div>
 </div>
-<a class="anchor" id="a661c98b4905ef5b86e07e00c7ff151b4"></a>
+<a class="anchor" id="a8a4955e44f81586b567a5e59d978b81e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -426,7 +466,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; getVertexArray </td>
+          <td class="memname"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a>&amp; getVertexArray </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -438,6 +478,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the device memory array storing vertex data. </p>
 
 </div>
 </div>
@@ -461,6 +502,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true when an update has been flagged since the last processing. </p>
 
 </div>
 </div>
@@ -508,6 +550,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Marks the container as updated so dependent systems can react. </p>
 
 </div>
 </div>
@@ -523,6 +566,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Applies incremental updates to buffers, images, and descriptors if needed. </p>
 
 </div>
 </div>
@@ -544,6 +588,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding index for the material buffer. </p>
 
 </div>
 </div>
@@ -564,6 +609,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding index for the mesh surfaces buffer. </p>
 
 </div>
 </div>
@@ -584,6 +630,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor binding index for the textures array/sampled images. </p>
 
 </div>
 </div>
@@ -604,6 +651,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Shared descriptor layout describing the above bindings. </p>
 
 </div>
 </div>
@@ -624,6 +672,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Maximum number of textures managed and bound by this container. </p>
 
 </div>
 </div>
@@ -644,6 +693,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor set index used by pipelines to bind shared resources. </p>
 
 </div>
 </div>
@@ -653,7 +703,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Resources.html">Resources</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

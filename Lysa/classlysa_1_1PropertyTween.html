@@ -79,7 +79,8 @@ $(document).ready(function(){initNavTree('classlysa_1_1PropertyTween.html',''); 
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class lysa::PropertyTween&lt; T &gt;</h3>
 
-<p><a class="el" href="classlysa_1_1Tween.html">Tween</a> to interpolate a property of an <a class="el" href="classlysa_1_1Object.html">Object</a>. </p>
+<p><a class="el" href="classlysa_1_1Tween.html">Tween</a> that interpolates a property of an <a class="el" href="classlysa_1_1Object.html">Object</a> via a setter function.</p>
+<p>The template parameter T is the property value type (e.g., float, float3). Each update computes the interpolated value and calls the provided setter on the target object. When the duration elapses, the tween stops and the optional completion callback is invoked. </p>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for PropertyTween&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -151,7 +152,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> <a class="el" href="classlysa_1_1PropertyTween.html#a7f55296292a9d59574249f57d10adf69">Setter</a> method called by the <a class="el" href="classlysa_1_1Tween.html">Tween</a> each update </p>
+<p>Pointer-to-member setter method called every update. The signature must accept a const T&amp;. </p>
 
 </div>
 </div>
@@ -217,15 +218,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classlysa_1_1Tween.html">Tween</a> to tweens a property of an <a class="el" href="classlysa_1_1Object.html">Object</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a tween that interpolates a property on an <a class="el" href="classlysa_1_1Object.html">Object</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>Target <a class="el" href="classlysa_1_1Object.html">Object</a> </td></tr>
-    <tr><td class="paramname">set</td><td><a class="el" href="classlysa_1_1PropertyTween.html#a7f55296292a9d59574249f57d10adf69">Setter</a> to call on the <a class="el" href="classlysa_1_1Object.html">Object</a> </td></tr>
-    <tr><td class="paramname">initial</td><td>Initial value </td></tr>
-    <tr><td class="paramname">final</td><td>Final value </td></tr>
-    <tr><td class="paramname">duration</td><td><a class="el" href="classlysa_1_1Animation.html">Animation</a> duration in seconds </td></tr>
-    <tr><td class="paramname">ttype</td><td>Transition type </td></tr>
-    <tr><td class="paramname">callback</td><td><a class="el" href="classlysa_1_1Tween.html#a9f4d3f1692b57758c10763bea8a50a04">Callback</a> called at the end of the animation </td></tr>
+    <tr><td class="paramname">obj</td><td>Target object whose property will be animated. </td></tr>
+    <tr><td class="paramname">set</td><td>Member setter to call on the target object. </td></tr>
+    <tr><td class="paramname">initial</td><td>Starting value applied at time 0. </td></tr>
+    <tr><td class="paramname">final</td><td>Target value reached at the end of the duration. </td></tr>
+    <tr><td class="paramname">duration</td><td><a class="el" href="classlysa_1_1Animation.html">Animation</a> duration in seconds (must be &gt; 0). </td></tr>
+    <tr><td class="paramname">ttype</td><td>Interpolation curve to use (default: <a class="el" href="namespacelysa.html#ac2a2db395906ac574f6533c941aea511aaac544aacc3615aada24897a215f5046">LINEAR</a>). </td></tr>
+    <tr><td class="paramname">callback</td><td>Optional function invoked when the tween completes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,15 +295,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classlysa_1_1Tween.html">Tween</a> to tweens a property of an <a class="el" href="classlysa_1_1Object.html">Object</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a tween that interpolates a property on an <a class="el" href="classlysa_1_1Object.html">Object</a>. This overload accepts a shared_ptr to the target; the pointer is not retained beyond construction (the raw pointer is stored), so callers must ensure the target outlives the tween.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>Target <a class="el" href="classlysa_1_1Object.html">Object</a> </td></tr>
-    <tr><td class="paramname">set</td><td><a class="el" href="classlysa_1_1PropertyTween.html#a7f55296292a9d59574249f57d10adf69">Setter</a> to call on the <a class="el" href="classlysa_1_1Object.html">Object</a> </td></tr>
-    <tr><td class="paramname">initial</td><td>Initial value </td></tr>
-    <tr><td class="paramname">final</td><td>Final value </td></tr>
-    <tr><td class="paramname">duration</td><td><a class="el" href="classlysa_1_1Animation.html">Animation</a> duration in seconds </td></tr>
-    <tr><td class="paramname">ttype</td><td>Transition type </td></tr>
-    <tr><td class="paramname">callback</td><td><a class="el" href="classlysa_1_1Tween.html#a9f4d3f1692b57758c10763bea8a50a04">Callback</a> called at the end of the animation </td></tr>
+    <tr><td class="paramname">obj</td><td>Shared pointer to the target object. </td></tr>
+    <tr><td class="paramname">set</td><td>Member setter to call on the target object. </td></tr>
+    <tr><td class="paramname">initial</td><td>Starting value applied at time 0. </td></tr>
+    <tr><td class="paramname">final</td><td>Target value reached at the end of the duration. </td></tr>
+    <tr><td class="paramname">duration</td><td><a class="el" href="classlysa_1_1Animation.html">Animation</a> duration in seconds (must be &gt; 0). </td></tr>
+    <tr><td class="paramname">ttype</td><td>Interpolation curve to use (default: <a class="el" href="namespacelysa.html#ac2a2db395906ac574f6533c941aea511aaac544aacc3615aada24897a215f5046">LINEAR</a>). </td></tr>
+    <tr><td class="paramname">callback</td><td>Optional function invoked when the tween completes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -330,7 +333,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Interpolate the property. If the <a class="el" href="classlysa_1_1Tween.html">Tween</a> have been created manually you need to call <a class="el" href="classlysa_1_1PropertyTween.html#a72f10c1042b068667afcb85ff24c014a">update()</a> in a <a class="el" href="classlysa_1_1Node.html#a61aa85e3def5dba892d133a111cc4581">Node::onPhysicsProcess()</a> function. <em>Do not call it</em> if the <a class="el" href="classlysa_1_1Tween.html">Tween</a> have been created with <a class="el" href="classlysa_1_1Node.html#a9bf06b21a2b7b3e169689163ecd46c3a">Node::createPropertyTween()</a>. </p><dl class="section return"><dt>Returns</dt><dd><code>false</code> if the tween is running </dd></dl>
+<p>Interpolates the property and applies the new value through the setter.</p>
+<p>If the tween was created manually, call this from a <a class="el" href="classlysa_1_1Node.html#a61aa85e3def5dba892d133a111cc4581">Node::onPhysicsProcess()</a> function. Do not call it if the tween was created with <a class="el" href="classlysa_1_1Node.html#a9bf06b21a2b7b3e169689163ecd46c3a">Node::createPropertyTween()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaTime</td><td>Time elapsed since the previous update (seconds). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the tween has finished, false while it is running. </dd></dl>
 
 <p>Implements <a class="el" href="classlysa_1_1Tween.html#a39d93278ffa437234fe6ded443901db9">lysa::Tween::update()</a></p>
 
@@ -342,7 +353,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PropertyTween.html">PropertyTween</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

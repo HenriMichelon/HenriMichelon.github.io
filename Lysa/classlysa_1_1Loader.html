@@ -76,7 +76,16 @@ $(document).ready(function(){initNavTree('classlysa_1_1Loader.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Singleton for loading external resources </p>
+<div class="textblock"><p>Centralized loader for scene trees and external resources.</p>
+<p>The <a class="el" href="classlysa_1_1Loader.html">Loader</a> resolves a file path from an URI and builds a tree of <a class="el" href="classlysa_1_1Node.html">Node</a> instances from supported formats:</p><ul>
+<li>JSON scene descriptions (engine-specific)</li>
+<li>glTF scenes</li>
+<li>ZRes packaged resources</li>
+</ul>
+<p>The loader optionally caches root nodes to allow fast re-use across the application lifetime. Access is thread-safe via an internal mutex.</p>
+<p>Notes:</p><ul>
+<li>All entry points are static; the class is used as a singleton-like utility (no instance needed). </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -115,6 +124,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Clears the global resources cache.</p>
+<p>All previously cached root nodes become eligible for destruction once no other shared references exist. </p>
 
 </div>
 </div>
@@ -139,6 +150,20 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Searches all cached resource trees and returns the first node that matches the provided name and type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="classlysa_1_1Node.html">Node</a> subtype used for the search and cast. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodename</td><td>Name to match against children of cached roots. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>First matching node, or nullptr if none was found. </dd></dl>
 
 </div>
 </div>
@@ -173,13 +198,22 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Load a JSON, glTF or ZRes file </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filepath</td><td>path of the JSON/glTF/ZRes file, relative to the application path </td></tr>
-    <tr><td class="paramname">usecache</td><td>put loaded resources in the global resources cache </td></tr>
+<p>Loads a JSON, glTF or ZRes file and returns the constructed node tree.</p>
+<p>The template parameter allows retrieving the result as a more specific Node-derived type when the file describes such a root. If <code>usecache</code> is <code>true</code> and the path was previously loaded, the cached root is returned.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="classlysa_1_1Node.html">Node</a> subtype to cast the root to (defaults to <a class="el" href="classlysa_1_1Node.html">Node</a>). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI to the JSON/glTF/ZRes file </td></tr>
+    <tr><td class="paramname">usecache</td><td>When true, store and re-use the loaded root from a global cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer to the loaded root node (possibly from cache). </dd></dl>
 
 </div>
 </div>
@@ -189,7 +223,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Loader.html">Loader</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

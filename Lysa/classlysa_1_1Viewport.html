@@ -74,7 +74,23 @@ $(document).ready(function(){initNavTree('classlysa_1_1Viewport.html',''); initR
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classlysa_1_1Viewport.html">Viewport</a> orchestrates a self‑contained rendering context.</p><ul>
+<li>Own a root node (scene tree) and manage per‑frame scene instances.</li>
+<li>Handle deferred add/remove of nodes and camera activation between frames.</li>
+<li>Bridge input and per‑frame updates to the node tree (process/physics).</li>
+<li>Provide a vireo::Viewport and scissors used by render passes.</li>
+<li>Drive rendering of a <a class="el" href="classlysa_1_1Scene.html">Scene</a> into color/depth render targets.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>Create with a <a class="el" href="structlysa_1_1ViewportConfiguration.html">ViewportConfiguration</a>, then attach to a <a class="el" href="classlysa_1_1Window.html">Window</a> (friend).</li>
+<li>Use <a class="el" href="classlysa_1_1Viewport.html#ac0dbb013b9eccc31a3236c6ac698a0a5">setRootNode()</a> to change the active scene tree.</li>
+<li>Nodes can be added/removed immediately or deferred (async parameter).</li>
+<li><a class="el" href="classlysa_1_1Viewport.html#aa89e49f15f4a965ffec2c096a49d09e0">activateCamera()</a> schedules camera switching at a safe point.</li>
+<li>Root node and per‑frame queues are protected by mutexes where needed.</li>
+<li>Public mutators should be called from the main/render thread unless explicitly documented; async queues are processed on the frame boundary. </li>
+</ul>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8306eaa41f0d250324bfab838b8c7f39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Viewport.html#a8306eaa41f0d250324bfab838b8c7f39">Viewport</a> (<a class="el" href="structlysa_1_1ViewportConfiguration.html">ViewportConfiguration</a> &amp;config)</td></tr>
@@ -144,7 +160,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="classlysa_1_1Viewport.html">Viewport</a> </p>
+<p>Constructs a viewport with the provided configuration.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Viewport.html">Viewport</a> configuration (dimensions, buffers, features). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -209,9 +231,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Changes the current camera </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Schedules activation of the specified camera for the next frame. The camera must belong to the current scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera</td><td>the camera to activate, must be in a scene </td></tr>
+    <tr><td class="paramname">camera</td><td><a class="el" href="classlysa_1_1Camera.html">Camera</a> to activate. </td></tr>
   </table>
   </dd>
 </dl>
@@ -247,6 +270,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a node to the current scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td><a class="el" href="classlysa_1_1Node.html">Node</a> to add. </td></tr>
+    <tr><td class="paramname">async</td><td>If true, queues the add for the next frame. </td></tr>
+    <tr><td class="paramname">attachToViewport</td><td>If true, attaches the node under the viewport root. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -291,6 +323,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Renders the provided <a class="el" href="classlysa_1_1Scene.html">Scene</a> into the given color and depth attachments.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>Command buffer to record draw calls. </td></tr>
+    <tr><td class="paramname">scene</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> to draw (camera, lights, instances). </td></tr>
+    <tr><td class="paramname">colorAttachment</td><td>Target color render surface. </td></tr>
+    <tr><td class="paramname">depthAttachment</td><td>Target depth render surface. </td></tr>
+    <tr><td class="paramname">frameIndex</td><td>Index of the in‑flight frame. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -314,6 +357,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the aspect ratio (width/height) of the viewport. </p>
 
 </div>
 </div>
@@ -337,6 +381,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the immutable configuration used to create this viewport. </p>
 
 </div>
 </div>
@@ -360,6 +405,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the debug renderer (may be null). </p>
 
 </div>
 </div>
@@ -383,6 +429,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true when debug overlays are enabled. </p>
 
 </div>
 </div>
@@ -406,6 +453,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the physics scene associated with this viewport. </p>
 
 </div>
 </div>
@@ -429,7 +477,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the scissors rect </p>
+<p>Returns the scissors rectangle applied to rendering. </p>
 
 </div>
 </div>
@@ -453,6 +501,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the vector renderer (may be null). </p>
 
 </div>
 </div>
@@ -476,7 +525,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the viewport </p>
+<p>Returns the low‑level viewport definition (x, y, width, height, depth). </p>
 
 </div>
 </div>
@@ -500,6 +549,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the <a class="el" href="classlysa_1_1Window.html">Window</a> this viewport is attached to. Asserts if not attached. </p>
 
 </div>
 </div>
@@ -523,7 +573,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks if the scene is paused, in respect for z0::ProcessMode </p><dl class="section return"><dt>Returns</dt><dd>true if the current scene is paused </dd></dl>
+<p>Returns whether the scene is currently paused. This controls <a class="el" href="classlysa_1_1Node.html">Node</a> processing with respect to <a class="el" href="namespacelysa.html#a9497f05feca4052f94601fd951dbf384">ProcessMode</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if paused, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -547,6 +598,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Prevents processing of deferred add/remove updates for the next frames. </p>
 
 </div>
 </div>
@@ -597,6 +649,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Removes a node from the current scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td><a class="el" href="classlysa_1_1Node.html">Node</a> to remove. </td></tr>
+    <tr><td class="paramname">async</td><td>If true, queues the removal for the next frame. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -621,6 +681,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Enables or disables debug overlays rendering. </p>
 
 </div>
 </div>
@@ -637,13 +698,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pause or resume the current scene </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Pauses or resumes the current scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pause</td><td>the new state<ul>
-<li>true pause the scene</li>
-<li>false resume the scene </li>
-</ul>
-</td></tr>
+    <tr><td class="paramname">pause</td><td>New state (true pauses, false resumes). </td></tr>
   </table>
   </dd>
 </dl>
@@ -663,9 +721,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Changes the current scene </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Changes the current scene root node.</p>
+<p>The provided node must not have a parent; ownership is shared.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>The new scene. Must not have a parent </td></tr>
+    <tr><td class="paramname">node</td><td>New root node of the scene graph. </td></tr>
   </table>
   </dd>
 </dl>
@@ -693,7 +753,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the scissors rect </p>
+<p>Sets the scissors rectangle applied to rendering. </p>
 
 </div>
 </div>
@@ -718,7 +778,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the viewport </p>
+<p>Sets the low‑level viewport definition. </p>
 
 </div>
 </div>
@@ -742,6 +802,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Allows processing of deferred add/remove updates again. </p>
 
 </div>
 </div>
@@ -768,6 +829,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates the current frame (game state and scene) prior to rendering. </p>
 
 </div>
 </div>
@@ -798,7 +860,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Viewport.html">Viewport</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

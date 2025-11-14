@@ -75,7 +75,10 @@ $(document).ready(function(){initNavTree('structlysa_1_1Scene_1_1PipelineData.ht
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Per-pipeline cache for instances, draw command streams and culling.</p>
+<p>Stores instance data, staging/copy buffers and the compute pipeline used to perform frustum culling and produce culled indirect draws. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3126a97d1b9b3523580b8742306ace57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Scene_1_1PipelineData.html#a3126a97d1b9b3523580b8742306ace57">PipelineData::PipelineData</a> (const <a class="el" href="structlysa_1_1SceneConfiguration.html">SceneConfiguration</a> &amp;config, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> pipelineId, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesDataArray)</td></tr>
@@ -152,6 +155,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a single draw instance and wires memory blocks. </p>
 
 </div>
 </div>
@@ -178,6 +182,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Registers a mesh instance into this pipeline cache. </p>
 
 </div>
 </div>
@@ -210,6 +215,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a per-pipeline cache and GPU resources holder. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> configuration reference. </td></tr>
+    <tr><td class="paramname"><a class="el" href="structlysa_1_1Scene_1_1PipelineData.html#a8ff5781cccdc145ec2baf241d05b2eaa">pipelineId</a></td><td>Unique id of the graphics pipeline family. </td></tr>
+    <tr><td class="paramname">meshInstancesDataArray</td><td>Global mesh instances device array. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -226,6 +239,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Removes a previously registered mesh instance. </p>
 
 </div>
 </div>
@@ -258,6 +272,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uploads/refreshes GPU buffers and prepares culled draw streams. </p>
 
 </div>
 </div>
@@ -271,6 +286,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Reference to the scene configuration. </p>
 
 </div>
 </div>
@@ -283,6 +299,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>GPU buffer holding culled indirect draw commands. </p>
 
 </div>
 </div>
@@ -295,6 +312,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>GPU buffer storing the count of culled draw commands. </p>
 
 </div>
 </div>
@@ -307,6 +325,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Descriptor set bound when drawing with this pipeline. </p>
 
 </div>
 </div>
@@ -319,6 +338,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>CPU-side list of draw commands to upload. </p>
 
 </div>
 </div>
@@ -331,6 +351,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>GPU buffer holding indirect draw commands. </p>
 
 </div>
 </div>
@@ -343,6 +364,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of indirect draw commands before culling. </p>
 
 </div>
 </div>
@@ -355,6 +377,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Staging buffer used to stream draw commands to the GPU. </p>
 
 </div>
 </div>
@@ -367,6 +390,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of draw commands stored in the current staging buffer. </p>
 
 </div>
 </div>
@@ -379,6 +403,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Compute pipeline used to cull draw commands against the frustum. </p>
 
 </div>
 </div>
@@ -391,6 +416,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Device memory array that stores <a class="el" href="structlysa_1_1InstanceData.html">InstanceData</a> blocks. </p>
 
 </div>
 </div>
@@ -403,6 +429,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Mapping of mesh instance to its memory block within <a class="el" href="structlysa_1_1Scene_1_1PipelineData.html#aa95a429b2fdad7353dc66c6eb825f6d5">instancesArray</a>. </p>
 
 </div>
 </div>
@@ -427,6 +454,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flags tracking mutations in the instances set. </p>
 
 </div>
 </div>
@@ -439,6 +467,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Identifier of the material/pipeline family. </p>
 
 </div>
 </div>
@@ -448,7 +477,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Scene.html">Scene</a></li><li class="navelem"><a class="el" href="structlysa_1_1Scene_1_1PipelineData.html">PipelineData</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

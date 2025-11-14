@@ -76,7 +76,12 @@ $(document).ready(function(){initNavTree('structlysa_1_1AABB.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A 3D axis-aligned bounding box. </p>
+<div class="textblock"><p>Lightweight structure representing a 3D axis-aligned bounding box in the engine's right-handed coordinate system.</p>
+<p>An <a class="el" href="structlysa_1_1AABB.html">AABB</a> is defined by its minimum and maximum corners in object or world space. It is commonly used for coarse collision detection, visibility tests (frustum culling), and spatial queries.</p>
+<p>Notes:</p><ul>
+<li>The box is axis-aligned in whatever space its min/max are expressed.</li>
+<li>Applying a general transform (with rotation/shear) to an <a class="el" href="structlysa_1_1AABB.html">AABB</a> requires re-computing a new axis-aligned box that encloses the transformed oriented box; see <a class="el" href="structlysa_1_1AABB.html#a5a43f551ff8d3b067bfc335280e49f58">toGlobal()</a>. </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -90,10 +95,8 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6a989f47ec1bf994d44996a588bcdb05"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1AABB.html#a6a989f47ec1bf994d44996a588bcdb05">min</a> {}</td></tr>
-<tr class="memdesc:a6a989f47ec1bf994d44996a588bcdb05"><td class="mdescLeft">&#160;</td><td class="mdescRight">leftmost corner  <a href="#a6a989f47ec1bf994d44996a588bcdb05">More...</a><br /></td></tr>
 <tr class="separator:a6a989f47ec1bf994d44996a588bcdb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa35a0cc966dac821d9ad74b6de1261b"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1AABB.html#afa35a0cc966dac821d9ad74b6de1261b">max</a> {}</td></tr>
-<tr class="memdesc:afa35a0cc966dac821d9ad74b6de1261b"><td class="mdescLeft">&#160;</td><td class="mdescRight">rightmost corner  <a href="#afa35a0cc966dac821d9ad74b6de1261b">More...</a><br /></td></tr>
 <tr class="separator:afa35a0cc966dac821d9ad74b6de1261b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -117,7 +120,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates an empty bounding box </p>
+<p>Default-construct an empty/invalid <a class="el" href="structlysa_1_1AABB.html">AABB</a> with zeroed corners. The box becomes valid once min/max are assigned meaningful values. </p>
 
 </div>
 </div>
@@ -152,7 +155,14 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a bounding box </p>
+<p>Construct a bounding box from its minimum and maximum corners.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Minimum corner (x/y/z individually less-or-equal to max). </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum corner (x/y/z individually greater-or-equal to min). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -170,7 +180,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Apply the given transform to the bounding box </p>
+<p>Compute the world-space <a class="el" href="structlysa_1_1AABB.html">AABB</a> that encloses this box transformed by the given matrix.</p>
+<p>The input box is considered to be in local/object space. The result is axis-aligned in the destination space of the transform (typically world space). If the transform contains rotation or shear, the returned <a class="el" href="structlysa_1_1AABB.html">AABB</a> will be the minimal axis-aligned box that fully contains the rotated (oriented) box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>4x4 row-major transform matrix (object -&gt; world). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The transformed, axis-aligned bounding box. </dd></dl>
 
 </div>
 </div>
@@ -184,8 +202,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>rightmost corner </p>
+<p>Maximum corner of the box (component-wise). Typically corresponds to the right/top/front corner: {max.x, max.y, max.z}. </p>
 
 </div>
 </div>
@@ -198,8 +215,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>leftmost corner </p>
+<p>Minimum corner of the box (component-wise). Typically corresponds to the left/bottom/back corner: {min.x, min.y, min.z}. </p>
 
 </div>
 </div>
@@ -209,7 +225,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1AABB.html">AABB</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -76,7 +76,17 @@ $(document).ready(function(){initNavTree('classlysa_1_1Samplers.html',''); initR
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages a small, shared collection of GPU sampler objects.</p><ul>
+<li>Provide a fixed-size pool of samplers that materials/shaders can reuse.</li>
+<li>Create and track descriptor layout and descriptor set for binding samplers.</li>
+<li>Expose an update mechanism to (re)write descriptors when the set changes.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>This class is typically owned by the <a class="el" href="classlysa_1_1Resources.html">Resources</a> container and is not instantiated directly by users.</li>
+<li>Thread-safety: methods that mutate internal state should be guarded by the internal mutex; read-only getters are safe after initialization. </li>
+</ul>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Samplers_1_1SamplerInfo.html">SamplerInfo</a></td></tr>
@@ -86,8 +96,8 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a31e6cb6506e5683aa14074e7c86b5e58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a31e6cb6506e5683aa14074e7c86b5e58">addSampler</a> (vireo::Filter minFilter, vireo::Filter maxFilter, vireo::AddressMode samplerAddressModeU, vireo::AddressMode samplerAddressModeV, float minLod=0.0f, float maxLod=vireo::Sampler::LOD_CLAMP_NONE, bool anisotropyEnable=true, vireo::MipMapMode mipMapMode=vireo::MipMapMode::LINEAR, vireo::CompareOp compareOp=vireo::CompareOp::NEVER)</td></tr>
 <tr class="separator:a31e6cb6506e5683aa14074e7c86b5e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0687cdc67dd40d181404e7caef1c1af5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a0687cdc67dd40d181404e7caef1c1af5">ipUpdated</a> () const</td></tr>
-<tr class="separator:a0687cdc67dd40d181404e7caef1c1af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ccc8ac3c601392fb5a8d96375feb73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a38ccc8ac3c601392fb5a8d96375feb73">isUpdated</a> () const</td></tr>
+<tr class="separator:a38ccc8ac3c601392fb5a8d96375feb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
 <tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5ca5a99e2e665944bf133277215458"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a9d5ca5a99e2e665944bf133277215458">getDescriptorLayout</a> () const</td></tr>
@@ -168,6 +178,22 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a sampler to the pool, creating it if an equivalent one does not already exist, and returns its index for binding.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minFilter</td><td>Minification filter. </td></tr>
+    <tr><td class="paramname">maxFilter</td><td>Magnification filter. </td></tr>
+    <tr><td class="paramname">samplerAddressModeU</td><td>Address mode for U (S) coordinate. </td></tr>
+    <tr><td class="paramname">samplerAddressModeV</td><td>Address mode for V (T) coordinate. </td></tr>
+    <tr><td class="paramname">minLod</td><td>Minimum LOD to sample (default 0.0f). </td></tr>
+    <tr><td class="paramname">maxLod</td><td>Maximum LOD to sample; use Sampler::LOD_CLAMP_NONE to disable clamping. </td></tr>
+    <tr><td class="paramname">anisotropyEnable</td><td>Enable anisotropic filtering when available. </td></tr>
+    <tr><td class="paramname">mipMapMode</td><td>Mip sampling mode (default <a class="el" href="namespacelysa.html#ac2a2db395906ac574f6533c941aea511aaac544aacc3615aada24897a215f5046">LINEAR</a>). </td></tr>
+    <tr><td class="paramname">compareOp</td><td>Optional compare op for depth/shadow lookups. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Index into the samplers set suitable for descriptor binding. </dd></dl>
 
 </div>
 </div>
@@ -191,6 +217,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the descriptor layout used for the samplers set. </p>
 
 </div>
 </div>
@@ -214,10 +241,11 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the descriptor set that binds the samplers to shaders. </p>
 
 </div>
 </div>
-<a class="anchor" id="a0687cdc67dd40d181404e7caef1c1af5"></a>
+<a class="anchor" id="a38ccc8ac3c601392fb5a8d96375feb73"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -225,7 +253,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ipUpdated </td>
+          <td class="memname">bool isUpdated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -237,6 +265,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true if the samplers descriptor set needs to be updated. </p>
 
 </div>
 </div>
@@ -252,6 +281,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Writes pending sampler bindings to the descriptor set if needed. </p>
 
 </div>
 </div>
@@ -294,6 +324,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Maximum number of sampler objects managed by this pool. </p>
 
 </div>
 </div>
@@ -314,6 +345,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Descriptor set index used by pipelines to bind the samplers set. </p>
 
 </div>
 </div>
@@ -323,7 +355,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Samplers.html">Samplers</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

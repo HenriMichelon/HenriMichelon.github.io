@@ -76,7 +76,15 @@ $(document).ready(function(){initNavTree('classlysa_1_1Object.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for anything </p>
+<div class="textblock"><p>Base class providing a minimal signal/slot facility and a textual representation.</p><ul>
+<li>Allow users to connect named signals to handlers (slots).</li>
+<li>Emit signals by name, invoking all connected handlers in connection order.</li>
+<li>Provide a virtual <a class="el" href="classlysa_1_1Object.html#aeeca690243e1ebf1b7902cf3a235a11d">toString()</a> for debugging/logging and stream insertion.</li>
+</ul>
+<p>Notes:</p><ul>
+<li><a class="el" href="classlysa_1_1Signal.html">Signal</a> handlers are stored per signal name; multiple handlers per name are supported and are invoked in the order they were connected.</li>
+<li>This class does not manage thread-safety; external synchronization is required if used across threads. </li>
+</ul>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Object:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -188,10 +196,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Connects a signal by name to a function </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Connects a signal by name to a member/function handler with parameters.</p>
+<p>The concrete handler signature is defined by <a class="el" href="classlysa_1_1Signal.html#a61b76a973f3f4a8534a850cb3fd36788">Signal::Handler</a> and allows passing an optional opaque pointer when emitting.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>signal name. </td></tr>
-    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="classlysa_1_1Object.html#adada8d5b4c8a33b40c183380963fad35">emit()</a> is called </td></tr>
+    <tr><td class="paramname">name</td><td><a class="el" href="classlysa_1_1Signal.html">Signal</a> name to bind to. </td></tr>
+    <tr><td class="paramname">handler</td><td>Callable to invoke when <a class="el" href="classlysa_1_1Object.html#adada8d5b4c8a33b40c183380963fad35">emit()</a> is called with the same name. </td></tr>
   </table>
   </dd>
 </dl>
@@ -221,10 +231,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Connects a signal by name to a function </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Connects a signal by name to a parameterless callable.</p>
+<p>This overload is convenient for simple notifications that do not consume the params pointer passed to <a class="el" href="classlysa_1_1Object.html#adada8d5b4c8a33b40c183380963fad35">emit()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>signal name. </td></tr>
-    <tr><td class="paramname">handler</td><td>the member function to call when <a class="el" href="classlysa_1_1Object.html#adada8d5b4c8a33b40c183380963fad35">emit()</a> is called </td></tr>
+    <tr><td class="paramname">name</td><td><a class="el" href="classlysa_1_1Signal.html">Signal</a> name to bind to. </td></tr>
+    <tr><td class="paramname">handler</td><td>Callable with no arguments invoked on <a class="el" href="classlysa_1_1Object.html#adada8d5b4c8a33b40c183380963fad35">emit()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,10 +266,12 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Emits a signal by name by calling all the connected function in the connect order </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Emits a signal by name, invoking all connected handlers in connection order.</p>
+<p>Handlers registered via the <a class="el" href="classlysa_1_1Signal.html#a61b76a973f3f4a8534a850cb3fd36788">Signal::Handler</a> overload receive the params pointer as provided here. Handlers registered via the parameterless overload are called without arguments.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>signal name </td></tr>
-    <tr><td class="paramname">params</td><td>parameters to pass to the function connected to the signal </td></tr>
+    <tr><td class="paramname">name</td><td><a class="el" href="classlysa_1_1Signal.html">Signal</a> name to emit. </td></tr>
+    <tr><td class="paramname">params</td><td>Optional opaque pointer forwarded to handlers (may be nullptr). </td></tr>
   </table>
   </dd>
 </dl>
@@ -284,7 +298,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Converts the objet to a readable text </p>
+<p>Returns a human-readable representation of the object for logging/debugging. Override in derived types to provide more context. </p>
 
 </div>
 </div>
@@ -320,6 +334,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stream insertion operator that forwards to <a class="el" href="classlysa_1_1Object.html#aeeca690243e1ebf1b7902cf3a235a11d">toString()</a>. </p>
 
 </div>
 </div>
@@ -329,7 +344,7 @@ Friends</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Object.html">Object</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

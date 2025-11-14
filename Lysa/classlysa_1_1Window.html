@@ -75,7 +75,17 @@ $(document).ready(function(){initNavTree('classlysa_1_1Window.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Rendering surface </p>
+<div class="textblock"><p>Operating system window that serve as rendering surface.</p><ul>
+<li>Create and own the OS window/surface and its swap chain.</li>
+<li>Drive the per‑frame loop (compute, pre‑render, render, present).</li>
+<li>Host one or more Viewports that render Scenes into the swap chain.</li>
+<li>Route input events to the UI system and active scene tree.</li>
+<li>Provide convenience for mouse modes/cursor, post‑processing, and UI.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>A <a class="el" href="classlysa_1_1Window.html">Window</a> is typically created by <a class="el" href="classlysa_1_1Application.html">Application</a> from a <a class="el" href="structlysa_1_1WindowConfiguration.html">WindowConfiguration</a>.</li>
+<li>Thread‑safety: unless stated otherwise, public methods should be called from the main/render thread. UI helpers are not thread‑safe. </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -164,6 +174,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classlysa_1_1Window.html">Window</a> and initializes the OS surface, swap chain, renderer and optional root node.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Window.html">Window</a> configuration (extent, title, rendering config, etc.). </td></tr>
+    <tr><td class="paramname">rootNode</td><td>Optional scene root attached to the first viewport. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -187,6 +205,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Destroys the window and releases owned resources. </p>
 
 </div>
 </div>
@@ -272,6 +291,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a full‑screen post‑processing pass.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fragShaderName</td><td>Fragment shader identifier/name. </td></tr>
+    <tr><td class="paramname">outputFormat</td><td>Output image format. </td></tr>
+    <tr><td class="paramname">data</td><td>Optional extra parameters blob. </td></tr>
+    <tr><td class="paramname">dataSize</td><td>Size in bytes of the extra parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -288,6 +317,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Attaches a viewport to this window and wires it to the renderer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td><a class="el" href="classlysa_1_1Viewport.html">Viewport</a> to attach (must not be attached elsewhere). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The same viewport shared_ptr for chaining/convenience. </dd></dl>
 
 </div>
 </div>
@@ -303,6 +340,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Requests the window to close and releases resources. </p>
 
 </div>
 </div>
@@ -326,7 +364,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the opaque, os-specific, window handle </p>
+<p>Returns the opaque, os-specific, window handle</p>
+<p>Returns the current aspect ratio (width/height) of the window. </p>
 
 </div>
 </div>
@@ -350,6 +389,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the immutable window configuration used to create this window. </p>
 
 </div>
 </div>
@@ -373,6 +413,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the current swap chain extent (width/height in pixels). </p>
 
 </div>
 </div>
@@ -420,6 +461,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the scaling factor used for the default font. </p>
 
 </div>
 </div>
@@ -443,6 +485,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the number of frames processed in flight. </p>
 
 </div>
 </div>
@@ -458,7 +501,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the mouse position </p>
+<p>Returns the mouse position</p>
+<dl class="section return"><dt>Returns</dt><dd>Mouse coordinates in pixels relative to the client area. </dd></dl>
 
 </div>
 </div>
@@ -482,6 +526,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the main scene renderer associated with this window. </p>
 
 </div>
 </div>
@@ -505,6 +550,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the UI renderer (Dear ImGui or equivalent wrapper). </p>
 
 </div>
 </div>
@@ -528,6 +574,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the list of viewports attached to this window. </p>
 
 </div>
 </div>
@@ -551,6 +598,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called when the window is about to close (release resources here). </p>
 
 </div>
 </div>
@@ -574,6 +622,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called once the window is fully created and ready to display. </p>
 
 </div>
 </div>
@@ -597,6 +646,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called after the window/swap chain has been resized. </p>
 
 </div>
 </div>
@@ -659,6 +709,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Removes a previously added post‑processing pass by fragment name. </p>
 
 </div>
 </div>
@@ -691,7 +742,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the mouse cursor </p>
+<p>Sets the mouse cursor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td><a class="el" href="namespacelysa.html#a65615ca264e0e225ce59dc30c24d87e0">MouseCursor</a> enum selecting the cursor shape. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -708,7 +765,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the mouse visibility and capture mode </p>
+<p>Sets the mouse visibility and capture mode</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td><a class="el" href="namespacelysa.html#aaa9fa7e776e2c0987d6b11943f75b749">MouseMode</a> (visible, hidden, captured, etc.). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -725,7 +788,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the mouse position </p>
+<p>Returns the mouse position</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Coordinates in pixels relative to the client area. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -741,6 +810,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Makes the OS window visible. </p>
 
 </div>
 </div>
@@ -757,6 +827,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates graphics pipelines following a materials/pipelines mapping. Typically called when Resources/Scene report material changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipelineIds</td><td>Map of pipeline family id to materials. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -772,6 +849,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Blocks until the device/queues are idle for this window. </p>
 
 </div>
 </div>
@@ -822,7 +900,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Window.html">Window</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

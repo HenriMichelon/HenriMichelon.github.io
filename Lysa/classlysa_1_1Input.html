@@ -75,7 +75,16 @@ $(document).ready(function(){initNavTree('classlysa_1_1Input.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A singleton for handling inputs </p>
+<div class="textblock"><p>Static input helper responsible for keyboard, mouse and gamepad state.</p>
+<p>Responsibilities:</p><ul>
+<li>Polling and edge-detection for keys, mouse buttons and gamepad buttons</li>
+<li>Normalized joystick vectors with deadzone handling</li>
+<li>Action mapping utilities (<a class="el" href="structlysa_1_1InputAction.html">InputAction</a>)</li>
+</ul>
+<p>Notes:</p><ul>
+<li>All methods are static; there is no instance to create.</li>
+<li>On Windows, the implementation integrates with Win32 messages, XInput and/or DirectInput to keep states updated. </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -134,6 +143,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Register a high-level input action that can be matched against events. If an action with the same name exists, it is replaced. </p>
 
 </div>
 </div>
@@ -157,7 +167,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of connected joypads, including gamepads </p>
+<p>Returns the number of connected joypads (gamepads included).</p>
+<dl class="section return"><dt>Returns</dt><dd>Count of currently connected devices. </dd></dl>
 
 </div>
 </div>
@@ -192,13 +203,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets an input vector for a gamepad joystick </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the 2D vector for a gamepad joystick axis pair. Deadzone is applied internally and output is normalized to [-1, 1].</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>index of the joypad in [0..<a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>] </td></tr>
-    <tr><td class="paramname">axisJoystick</td><td>axis </td></tr>
+    <tr><td class="paramname">index</td><td>Index in range [0 .. <a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>). </td></tr>
+    <tr><td class="paramname">axisJoystick</td><td>Joystick selector (e.g., left or right stick). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> float2 with x/y in [-1, 1] after deadzone. </dd></dl>
 
 </div>
 </div>
@@ -223,12 +236,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the joypad name </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns a human-readable name for the joypad at index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>index of the joypad in [0..<a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>] </td></tr>
+    <tr><td class="paramname">index</td><td>Index in range [0 .. <a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>UTF-8 device name or an empty string if unavailable. </dd></dl>
 
 </div>
 </div>
@@ -275,7 +290,17 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets an input vector by specifying four keys for the positive and negative <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da02129bb861061d1a052c592e2dc6b383" title="X or □. ">X</a> and <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da57cec4137b614c87cb4e24a3d003a3e0" title="Y or △. ">Y</a> axes. </p>
+<p>Builds a 2D vector from four directional keys. The result is not normalized; its components are in {-1, 0, 1}.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">negX</td><td><a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7">Key</a> for negative <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da02129bb861061d1a052c592e2dc6b383" title="X or □. ">X</a> (left). </td></tr>
+    <tr><td class="paramname">posX</td><td><a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7">Key</a> for positive <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da02129bb861061d1a052c592e2dc6b383" title="X or □. ">X</a> (right). </td></tr>
+    <tr><td class="paramname">negY</td><td><a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7">Key</a> for negative <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da57cec4137b614c87cb4e24a3d003a3e0" title="Y or △. ">Y</a> (down). </td></tr>
+    <tr><td class="paramname">posY</td><td><a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7">Key</a> for positive <a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da57cec4137b614c87cb4e24a3d003a3e0" title="Y or △. ">Y</a> (up). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> float2 with x and y components in [-1, 1]. </dd></dl>
 
 </div>
 </div>
@@ -310,6 +335,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Checks whether the given input event matches the named action.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actionName</td><td>Name of a previously registered action. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1InputEvent.html">inputEvent</a></td><td>Concrete input event to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if <a class="el" href="classlysa_1_1InputEvent.html">inputEvent</a> satisfies any entry of the action. </dd></dl>
 
 </div>
 </div>
@@ -334,12 +368,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if the joypad is a gamepad </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns true if the device at index is recognized as a gamepad.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>index of the joypad in [0..<a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>] </td></tr>
+    <tr><td class="paramname">index</td><td>Index in range [0 .. <a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the device is a gamepad; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -364,6 +400,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true on the frame the specified gamepad button is pressed. </p>
 
 </div>
 </div>
@@ -388,6 +425,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns true on the frame the specified gamepad button is released. </p>
 
 </div>
 </div>
@@ -422,13 +460,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if you are pressing the gamepad button </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns true while the given gamepad button is currently held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>index of the joypad in [0..<a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>] </td></tr>
-    <tr><td class="paramname">gamepadButton</td><td>gamepad button </td></tr>
+    <tr><td class="paramname">index</td><td>Index in range [0 .. <a class="el" href="classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e">getConnectedJoypads()</a>). </td></tr>
+    <tr><td class="paramname">gamepadButton</td><td>Button identifier. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the button is down; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -453,7 +493,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true when the user has started pressing the key </p>
+<p>Returns true only on the frame the user starts pressing the key. Subsequent frames while held return false until released and pressed again.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Logical key code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on the rising edge (down transition) for this key. </dd></dl>
 
 </div>
 </div>
@@ -478,7 +525,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true when the user stops pressing the key </p>
+<p>Returns true only on the frame the user releases the key.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Logical key code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on the falling edge (up transition) for this key. </dd></dl>
 
 </div>
 </div>
@@ -503,7 +557,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if you are pressing the key </p>
+<p>Returns true while the given key is currently held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Logical key code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the key is down; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -528,7 +589,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true when the user has started pressing the mouse button </p>
+<p>Returns true only on the frame the user starts pressing the mouse button.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td>Mouse button identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on the rising edge (down transition) for this button. </dd></dl>
 
 </div>
 </div>
@@ -553,7 +621,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true when the user stops pressing the mouse button </p>
+<p>Returns true only on the frame the user releases the mouse button.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td>Mouse button identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on the falling edge (up transition) for this button. </dd></dl>
 
 </div>
 </div>
@@ -578,7 +653,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns true if you are pressing the mouse button </p>
+<p>Returns true while the given mouse button is currently held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td>Mouse button identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the button is down; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -629,7 +711,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Input.html">Input</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

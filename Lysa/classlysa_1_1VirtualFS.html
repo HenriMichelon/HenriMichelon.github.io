@@ -76,7 +76,15 @@ $(document).ready(function(){initNavTree('classlysa_1_1VirtualFS.html',''); init
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Virtual file system for file path portability </p>
+<div class="textblock"><p>Virtual file system helper used to resolve portable paths.</p><ul>
+<li>Provide a consistent way to query files/directories and open streams across platforms and packaging schemes.</li>
+<li>Support a simple URI scheme (app://) to reference assets relative to the application install or data directory.</li>
+<li>Offer convenience helpers for loading whole files and images.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>All methods are static; there is no instance to create.</li>
+<li>Thread‑safety: methods are stateless and may be called from any thread. </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -126,6 +134,13 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Frees an image buffer allocated by <a class="el" href="classlysa_1_1VirtualFS.html#ad0885203ff0fb0c4759cfa86791747c9">loadRGBAImage()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Pointer previously returned by <a class="el" href="classlysa_1_1VirtualFS.html#ad0885203ff0fb0c4759cfa86791747c9">loadRGBAImage()</a> (may be nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -150,6 +165,14 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Tests whether a directory exists at the given path or URI.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the directory exists; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -174,6 +197,14 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Tests whether a regular file exists at the given path or URI.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the file exists; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -198,6 +229,15 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Resolves a path or app:// URI to a concrete OS path.</p>
+<p>Implementations may expand environment variables, normalize separators, and map app:// to the application data/assets directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Resolved OS path suitable for file I/O APIs. </dd></dl>
 
 </div>
 </div>
@@ -232,6 +272,14 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Loads the entire file contents into a byte buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+    <tr><td class="paramname">out</td><td>Destination buffer; its contents are replaced by the file bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -278,6 +326,18 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Loads an image and returns an allocated RGBA (8‑bit per channel) buffer.</p>
+<p>The caller owns the returned memory and must release it with <a class="el" href="classlysa_1_1VirtualFS.html#ac94bdc8512e3c185d3f13ccdb994e787">destroyImage()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+    <tr><td class="paramname">width</td><td>Output image width in pixels. </td></tr>
+    <tr><td class="paramname">height</td><td>Output image height in pixels. </td></tr>
+    <tr><td class="paramname">size</td><td>Output total buffer size in bytes (width*height*4). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly allocated pixel buffer in RGBA8888 format, or nullptr on failure. </dd></dl>
 
 </div>
 </div>
@@ -302,6 +362,15 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Opens an input stream for reading the file at path or URI.</p>
+<p>The returned stream is opened in binary mode unless the implementation states otherwise. Callers should check stream.is_open() (or its state) to ensure the file was successfully opened.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ifstream positioned at the start of the file. </dd></dl>
 
 </div>
 </div>
@@ -326,6 +395,15 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Opens an output stream for writing the file at path or URI.</p>
+<p>The returned stream is typically opened in binary mode and may create intermediate directories depending on platform support. Callers should check stream.is_open() (or its state) to ensure the file was successfully opened.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ofstream positioned at the start of the file. </dd></dl>
 
 </div>
 </div>
@@ -350,6 +428,15 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the parent directory of the provided path or URI.</p>
+<p>For app:// URIs, the parent is computed after resolution. Trailing separators are ignored.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Parent directory path, or an empty string if none. </dd></dl>
 
 </div>
 </div>
@@ -371,6 +458,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>URI scheme used to reference files relative to the application root. </p>
 
 </div>
 </div>
@@ -380,7 +468,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

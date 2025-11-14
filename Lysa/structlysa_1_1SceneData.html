@@ -74,7 +74,10 @@ $(document).ready(function(){initNavTree('structlysa_1_1SceneData.html',''); ini
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Per-frame scene uniform payload consumed by shaders.</p>
+<p>Contains camera transforms, ambient lighting, and feature toggles. The layout/alignas qualifiers are chosen to satisfy typical std140/std430 alignment constraints on most backends. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0ef43b830ebeb54a7b2e262715f53550"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a0ef43b830ebeb54a7b2e262715f53550">cameraPosition</a></td></tr>
@@ -104,6 +107,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Ambient light RGB color in xyz and strength in w. </p>
 
 </div>
 </div>
@@ -116,6 +120,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Toggle for bloom post-process (1 enabled, 0 disabled). </p>
 
 </div>
 </div>
@@ -128,6 +133,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>World-space camera position in XYZ; W is unused. </p>
 
 </div>
 </div>
@@ -140,6 +146,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of active lights currently bound. </p>
 
 </div>
 </div>
@@ -152,6 +159,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Projection matrix used for rendering (clip-from-view). </p>
 
 </div>
 </div>
@@ -164,6 +172,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Toggle for SSAO post-process (1 enabled, 0 disabled). </p>
 
 </div>
 </div>
@@ -176,6 +185,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>View matrix (view-from-world). </p>
 
 </div>
 </div>
@@ -188,6 +198,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Inverse of the view matrix (world-from-view). </p>
 
 </div>
 </div>
@@ -197,7 +208,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1SceneData.html">SceneData</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:10:33 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
