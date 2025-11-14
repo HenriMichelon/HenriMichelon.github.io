@@ -74,7 +74,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1JoltPhysicsScene.html',''
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Jolt implementation of <a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a>. Owns the Jolt PhysicsSystem and provides update/debug helpers. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for JoltPhysicsScene:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -185,6 +187,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Emits debug visualization primitives to the provided <a class="el" href="classlysa_1_1DebugRenderer.html">DebugRenderer</a>. Used to display bodies, shapes, contacts, etc. when enabled. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsScene.html#ab0339ced5eda5528b20ccbd9b940ecc3">lysa::PhysicsScene::debug()</a></p>
 
@@ -210,6 +213,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the body interface for creating/removing bodies. </p>
 
 </div>
 </div>
@@ -233,7 +237,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the physics system gravity </p>
+<p>Returns the current gravity vector applied to dynamic bodies. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsScene.html#aa5356ee2b5e3be843ce84734ed18b302">lysa::PhysicsScene::getGravity()</a></p>
 
@@ -259,6 +263,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the underlying Jolt physics system. </p>
 
 </div>
 </div>
@@ -282,6 +287,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the temporary allocator used by the scene. </p>
 
 </div>
 </div>
@@ -306,6 +312,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Steps the physics simulation by the given delta time (seconds). Implementations may internally clamp or subdivide the step. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsScene.html#ac4b34e4be47bd9b5f5d1aabe158327aa">lysa::PhysicsScene::update()</a></p>
 
@@ -317,7 +324,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1JoltPhysicsScene.html">JoltPhysicsScene</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

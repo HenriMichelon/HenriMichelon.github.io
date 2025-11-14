@@ -74,7 +74,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1JoltPhysicsEngine.html','
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Jolt implementation of <a class="el" href="classlysa_1_1PhysicsEngine.html">PhysicsEngine</a>. Creates scenes/materials and wires Jolt‑specific collision filtering. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for JoltPhysicsEngine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -161,6 +163,13 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates a new physics material with the specified properties. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">friction</td><td>Coefficient of friction in [0..+inf). </td></tr>
+    <tr><td class="paramname">restitution</td><td>Bounciness coefficient in [0..1]. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#aa485cfa3a022c5fc325568909f1f2dac">lysa::PhysicsEngine::createMaterial()</a></p>
 
@@ -187,6 +196,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates a new physics scene/world with optional debug settings. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#ac8617e21ec3bf1788339e763cd595f8f">lysa::PhysicsEngine::createScene()</a></p>
 
@@ -213,6 +223,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Duplicates a material instance (backend‑specific). </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#a35f8c949fba0b395f24843e97b39e404">lysa::PhysicsEngine::duplicateMaterial()</a></p>
 
@@ -238,6 +249,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the pair filter used to decide if two object layers collide. </p>
 
 </div>
 </div>
@@ -272,6 +284,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sets the combine mode used when resolving restitution between two materials. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#a0159898a1944664e40537e597bcb4bbd">lysa::PhysicsEngine::setRestitutionCombineMode()</a></p>
 
@@ -283,7 +296,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1JoltPhysicsEngine.html">JoltPhysicsEngine</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

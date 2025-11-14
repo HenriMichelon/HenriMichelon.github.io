@@ -76,7 +76,16 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for a single stage in the renderer frame graph.</p><ul>
+<li>Encapsulate pipelines, descriptor layouts/sets, and render state for a specific step (e.g., depth pre-pass, G-Buffer, lighting, post FX).</li>
+<li>Provide <a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">resize()</a> and <a class="el" href="classlysa_1_1Renderpass.html#a4f76dbc8a0bc873fa9a5ec7642b79497">update()</a> hooks to recreate resources when the swap chain changes or per-frame data needs refreshing.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>Subclasses record their work into command lists provided by <a class="el" href="classlysa_1_1Renderer.html">Renderer</a>.</li>
+<li>Unless stated otherwise, methods are expected to be called from the render thread. </li>
+</ul>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Renderpass:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -148,6 +157,13 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a render pass with a shared rendering configuration and name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Rendering configuration (frame buffering, formats). </td></tr>
+    <tr><td class="paramname">name</td><td>Human-readable name for debugging tools/logs. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -220,6 +236,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Utility to load a shader module by name (backend-agnostic). </p>
 
 </div>
 </div>
@@ -278,6 +295,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Recreate pass resources after a resize (default: no-op). </p>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::PostProcessing::resize()</a>, <a class="el" href="classlysa_1_1GBufferPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::GBufferPass::resize()</a>, <a class="el" href="classlysa_1_1ForwardColor.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardColor::resize()</a>, <a class="el" href="classlysa_1_1LightingPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::LightingPass::resize()</a>, <a class="el" href="classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSAOPass::resize()</a>, <a class="el" href="classlysa_1_1SMAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SMAAPass::resize()</a>, <a class="el" href="classlysa_1_1TransparencyPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TransparencyPass::resize()</a></p>
 
@@ -304,6 +322,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update any per-frame state (default: no-op). </p>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#aac5965965f94aeee2855ac31115f12a8">lysa::PostProcessing::update()</a>, <a class="el" href="classlysa_1_1ShadowMapPass.html#aac5965965f94aeee2855ac31115f12a8">lysa::ShadowMapPass::update()</a></p>
 
@@ -327,6 +346,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Shared rendering configuration. </p>
 
 </div>
 </div>
@@ -347,6 +367,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Debug/name label for the pass. </p>
 
 </div>
 </div>
@@ -356,7 +377,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -77,7 +77,17 @@ $(document).ready(function(){initNavTree('classlysa_1_1VectorRenderer.html','');
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Immediate-style 2D/3D vector renderer used for debug and UI primitives.</p><ul>
+<li>Accumulate simple geometric primitives (lines, triangles, glyph quads) into CPU-side vertex arrays and stream them to the GPU when required.</li>
+<li>Provide minimal state (colors, textures, fonts) and pipelines to draw primitive batches either in screen space or with a camera.</li>
+<li>Offer helpers to render text using bitmap fonts.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>Thread-safety: calls are expected from the render thread only.</li>
+<li>Call <a class="el" href="classlysa_1_1VectorRenderer.html#a22ee094ca3f45aa4156b97d34fe678bf">restart()</a> between frames to clear accumulated geometry. </li>
+</ul>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for VectorRenderer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -206,6 +216,20 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a vector renderer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depthTestEnable</td><td>Enable depth test for 3D primitives. </td></tr>
+    <tr><td class="paramname">enableAlphaBlending</td><td>Enable alpha blending (for UI/text). </td></tr>
+    <tr><td class="paramname">useTextures</td><td>Allow textured triangles. </td></tr>
+    <tr><td class="paramname"><a class="el" href="structlysa_1_1RenderingConfiguration.html">renderingConfiguration</a></td><td>Global rendering config. </td></tr>
+    <tr><td class="paramname">name</td><td>Debug name for pipelines. </td></tr>
+    <tr><td class="paramname">shadersName</td><td>Base shader name for vector primitives. </td></tr>
+    <tr><td class="paramname">glyphShadersName</td><td>Base shader name for glyph rendering. </td></tr>
+    <tr><td class="paramname">filledTriangles</td><td>True to use triangle pipeline; false for wireframe only. </td></tr>
+    <tr><td class="paramname">useCamera</td><td>True to apply <a class="el" href="classlysa_1_1Scene.html">Scene</a> view/projection. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -334,6 +358,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a colored line segment to the current batch. </p>
 
 </div>
 </div>
@@ -384,6 +409,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds text to the current batch using the provided font. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>UTF-8 string to render. </td></tr>
+    <tr><td class="paramname">font</td><td><a class="el" href="classlysa_1_1Font.html">Font</a> object providing glyph atlas/metrics. </td></tr>
+    <tr><td class="paramname">fontScale</td><td>Scaling factor applied to glyph metrics. </td></tr>
+    <tr><td class="paramname">position</td><td>Baseline origin for the text in world/screen space. </td></tr>
+    <tr><td class="paramname">rotation</td><td>Orientation for the text in world space. </td></tr>
+    <tr><td class="paramname">innerColor</td><td>Color applied to glyphs (vertex alpha can modulate it). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -422,6 +458,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a filled triangle to the current batch. </p>
 
 </div>
 </div>
@@ -490,6 +527,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Renders accumulated primitives using the given <a class="el" href="classlysa_1_1Scene.html">Scene</a> (with camera). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>Command buffer to record into. </td></tr>
+    <tr><td class="paramname">scene</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> providing camera matrices. </td></tr>
+    <tr><td class="paramname">colorAttachment</td><td>Target color surface. </td></tr>
+    <tr><td class="paramname">depthAttachment</td><td>Target depth surface (may be null if no depth). </td></tr>
+    <tr><td class="paramname">frameIndex</td><td>Index of the current frame in flight. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -528,6 +575,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Renders accumulated primitives without referencing a <a class="el" href="classlysa_1_1Scene.html">Scene</a> camera. Useful for UI-like overlays in screen space. </p>
 
 </div>
 </div>
@@ -543,6 +591,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Clears accumulated geometry (call once per frame). </p>
 
 </div>
 </div>
@@ -569,6 +618,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Uploads dirty vertex buffers and prepares descriptor sets. </p>
 
 </div>
 </div>
@@ -679,7 +729,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1VectorRenderer.html">VectorRenderer</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

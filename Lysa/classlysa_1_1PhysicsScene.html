@@ -74,7 +74,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysicsScene.html',''); i
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Physics scene interface.</p>
+<p><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> <a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a> encapsulates the simulation world (bodies, constraints, queries) and advances it with a fixed time step. Concrete implementations are provided by each backend (Jolt / PhysX). </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for PhysicsScene:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -144,6 +147,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Emits debug visualization primitives to the provided <a class="el" href="classlysa_1_1DebugRenderer.html">DebugRenderer</a>. Used to display bodies, shapes, contacts, etc. when enabled. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsScene.html#a67c105dcb9e18636b3b095e85985094a">lysa::JoltPhysicsScene::debug()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsScene.html#a67c105dcb9e18636b3b095e85985094a">lysa::PhysXPhysicsScene::debug()</a></p>
 
@@ -169,7 +173,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the physics system gravity </p>
+<p>Returns the current gravity vector applied to dynamic bodies. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsScene.html#af507f76cceab93b64d857a1a99eb9651">lysa::JoltPhysicsScene::getGravity()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsScene.html#af507f76cceab93b64d857a1a99eb9651">lysa::PhysXPhysicsScene::getGravity()</a></p>
 
@@ -196,6 +200,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Steps the physics simulation by the given delta time (seconds). Implementations may internally clamp or subdivide the step. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsScene.html#aba3bb6450a37d358a73f97413a5c093d">lysa::JoltPhysicsScene::update()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsScene.html#aba3bb6450a37d358a73f97413a5c093d">lysa::PhysXPhysicsScene::update()</a></p>
 
@@ -207,7 +212,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

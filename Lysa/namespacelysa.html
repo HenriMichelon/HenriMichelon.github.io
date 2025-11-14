@@ -1673,6 +1673,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Enumerates the available physics backends supported by the engine.</p><ul>
+<li>JOLT: Uses the Jolt Physics library.</li>
+<li>PHYSX: Uses NVIDIA PhysX. </li>
+</ul>
 <table class="fieldtable">
 <tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="a769a94a48b5e0161e77c388a5fb42beda7f7cfb189b822c87a02778a033f4275a"></a>JOLT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a769a94a48b5e0161e77c388a5fb42bedae135c89968972f36319eacaba3ba59e6"></a>PHYSX&#160;</td><td class="fielddoc"></td></tr>
@@ -1999,6 +2003,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Tests whether a directory exists at the given path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirName</td><td>OS path to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the directory exists; false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -2094,6 +2106,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns the current time in milliseconds.</p>
+<dl class="section return"><dt>Returns</dt><dd>Elapsed time in milliseconds as a floating‑point value. </dd></dl>
 
 </div>
 </div>
@@ -2311,6 +2325,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Produces a sanitized version of a name suitable for identifiers or paths.</p>
+<p>Typical sanitization removes or replaces characters that are not alphanumeric, underscore, hyphen or dot, and collapses whitespace.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="classlysa_1_1Input.html">Input</a> name to sanitize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A sanitized, ASCII‑safe string. </dd></dl>
 
 </div>
 </div>
@@ -2337,7 +2360,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Split a string </p>
+<p>Splits a string view into sub‑views using a single‑character delimiter.</p>
+<p>The returned views reference the original memory in str; no allocations are performed for the tokens themselves. Callers must ensure that the lifetime of the original string outlives the returned views.</p>
+<p>Consecutive delimiters yield empty tokens.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Source string view to split. </td></tr>
+    <tr><td class="paramname">delimiter</td><td>Delimiter character (e.g., ','). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of string_view tokens pointing into str. </dd></dl>
 
 </div>
 </div>
@@ -2354,6 +2387,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Parses a float3 from a textual representation.</p>
+<p>Expected formats typically include:</p><ul>
+<li>"x y z"</li>
+<li>"x,y,z"</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td><a class="el" href="classlysa_1_1Input.html">Input</a> string containing three floating‑point numbers. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Parsed float3 value; undefined behavior if the format is invalid. </dd></dl>
 
 </div>
 </div>
@@ -2370,6 +2415,18 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Parses a float4 from a textual representation.</p>
+<p>Expected formats typically include:</p><ul>
+<li>"x y z w"</li>
+<li>"x,y,z,w"</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td><a class="el" href="classlysa_1_1Input.html">Input</a> string containing four floating‑point numbers. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Parsed float4 value; undefined behavior if the format is invalid. </dd></dl>
 
 </div>
 </div>
@@ -2386,7 +2443,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper to log a memory address in hexadecimal </p>
+<p>Returns a hexadecimal textual representation of a memory address.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer value to format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Hex string for ptr. </dd></dl>
 
 </div>
 </div>
@@ -2403,6 +2467,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns a hexadecimal textual representation of an integer value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Integer value to format in hex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Hex string for the input value. </dd></dl>
 
 </div>
 </div>
@@ -2419,6 +2491,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns a lowercase copy of the input ASCII/UTF‑8 string.</p>
+<p>Locale‑dependent rules may not be applied; intended for identifiers and case‑insensitive comparisons in engine code.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Source string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Lowercased copy of str. </dd></dl>
 
 </div>
 </div>
@@ -2435,7 +2516,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper to log a float2 (std lib code convention) </p>
+<p>Returns a human‑readable string for a float2.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>Vector to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation of vec. </dd></dl>
 
 </div>
 </div>
@@ -2452,7 +2540,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper to log a float3 (std lib code convention) </p>
+<p>Returns a human‑readable string for a float3.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>Vector to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation of vec. </dd></dl>
 
 </div>
 </div>
@@ -2469,7 +2564,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper to log a vec4 (std lib code convention) </p>
+<p>Returns a human‑readable string for a float4.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>Vector to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation of vec. </dd></dl>
 
 </div>
 </div>
@@ -2486,6 +2588,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns a human‑readable string for a quaternion (x, y, z, w order).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>Quaternion to print. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation of vec. </dd></dl>
 
 </div>
 </div>
@@ -2502,6 +2612,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Converts a wide‑character C‑string to a UTF‑8 std::string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wstr</td><td>Null‑terminated wide string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>UTF‑8 encoded string. </dd></dl>
 
 </div>
 </div>
@@ -2518,6 +2636,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Converts a UTF‑8 string to UTF‑32 (char32_t) string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">utf8</td><td>Source string encoded in UTF‑8. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>UTF‑32 string (UCS‑4 code points). </dd></dl>
 
 </div>
 </div>
@@ -2891,7 +3017,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

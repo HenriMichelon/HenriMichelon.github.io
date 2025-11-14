@@ -77,7 +77,17 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderer.html',''); initR
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>High-level scene renderer orchestrating the frame graph.</p><ul>
+<li>Own and manage the set of render passes required by a rendering path (depth pre-pass, opaque/transparent color, shader-material passes, <a class="el" href="namespacelysa.html#a3780ab493dd5c2d5ab18a587bab7853aa06ff36ff15b989c60f672d9654cd3030">SMAA</a>, bloom and other post-processing).</li>
+<li>Allocate per-frame color/depth attachments and expose them to callers.</li>
+<li>Update and (re)build graphics pipelines when the set of materials changes.</li>
+<li>Drive the typical frame flow: compute → <a class="el" href="classlysa_1_1Renderer.html#ae9fd7877d2a73eefc2f5cc4841575c97">preRender</a> → render → postprocess.</li>
+</ul>
+<p>Notes:</p><ul>
+<li>Instances are created by <a class="el" href="classlysa_1_1Window.html">Window</a> according to the selected rendering mode (<a class="el" href="classlysa_1_1ForwardRenderer.html">ForwardRenderer</a>, <a class="el" href="classlysa_1_1DeferredRenderer.html">DeferredRenderer</a>). Thread-safety is not guaranteed; call methods from the render thread. </li>
+</ul>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Renderer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -182,6 +192,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a renderer with the given configuration. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Global rendering configuration (formats, buffering). </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1Renderer.html#ae4260f4c87b3acbbc5ae71e8bbecedbc">withStencil</a></td><td>True when depth buffers include a stencil component. </td></tr>
+    <tr><td class="paramname">name</td><td>Human-readable renderer name (for debugging). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -268,6 +286,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a full-screen post-processing pass by fragment shader name. </p>
 
 </div>
 </div>
@@ -326,6 +345,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Records the pipeline-specific color pass for the concrete renderer. Implementations dispatch scene draws into colorAttachment/depthAttachment. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1DeferredRenderer.html#a384d8c1bed20bf4722c04bfc3738b4e2">lysa::DeferredRenderer::colorPass()</a>, <a class="el" href="classlysa_1_1ForwardRenderer.html#a384d8c1bed20bf4722c04bfc3738b4e2">lysa::ForwardRenderer::colorPass()</a></p>
 
@@ -360,6 +380,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Executes compute workloads such as frustum culling. </p>
 
 </div>
 </div>
@@ -384,6 +405,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the color buffer used for bloom extraction for the frame. Concrete renderers decide which buffer carries the bright pass. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1DeferredRenderer.html#aef64907c0cdb67eac5e972bd82d01ce2">lysa::DeferredRenderer::getBloomColorAttachment()</a>, <a class="el" href="classlysa_1_1ForwardRenderer.html#aef64907c0cdb67eac5e972bd82d01ce2">lysa::ForwardRenderer::getBloomColorAttachment()</a></p>
 
@@ -402,6 +424,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns the color attachment of the current renderer for the frame. </p>
 
 </div>
 </div>
@@ -426,6 +449,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Short-hand accessor for the color render target of the frame. </p>
 
 </div>
 </div>
@@ -450,6 +474,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Short-hand accessor for the depth render target of the frame. </p>
 
 </div>
 </div>
@@ -512,6 +537,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Applies post-processing chain (<a class="el" href="namespacelysa.html#a3780ab493dd5c2d5ab18a587bab7853aa06ff36ff15b989c60f672d9654cd3030">SMAA</a>, bloom, custom passes). </p>
 
 </div>
 </div>
@@ -544,6 +570,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Pre-render stage: uploads, layout transitions, and shadow maps. </p>
 
 </div>
 </div>
@@ -560,6 +587,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Removes a previously added post-processing pass by fragment name. </p>
 
 </div>
 </div>
@@ -598,6 +626,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Main render stage: records opaque/transparent draw calls. </p>
 
 </div>
 </div>
@@ -632,6 +661,13 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Recreates attachments/pipelines after a resize. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extent</td><td>New swap chain extent. </td></tr>
+    <tr><td class="paramname">commandList</td><td>Command list used for any required transitions/copies. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1DeferredRenderer.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::DeferredRenderer::resize()</a>, <a class="el" href="classlysa_1_1ForwardRenderer.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardRenderer::resize()</a></p>
 
@@ -658,6 +694,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Performs per-frame housekeeping (e.g., pass-local data updates). </p>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1ForwardRenderer.html#aac5965965f94aeee2855ac31115f12a8">lysa::ForwardRenderer::update()</a>, <a class="el" href="classlysa_1_1DeferredRenderer.html#aac5965965f94aeee2855ac31115f12a8">lysa::DeferredRenderer::update()</a></p>
 
@@ -700,6 +737,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Precomputes Gaussian weights and texel size based on extent/strength. </p>
 
 </div>
 </div>
@@ -716,6 +754,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates graphics pipelines according to the <a class="el" href="classlysa_1_1Scene.html">Scene</a> material mapping. Convenience overload that pulls mapping from the <a class="el" href="classlysa_1_1Scene.html">Scene</a>. </p>
 
 </div>
 </div>
@@ -740,6 +779,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Updates graphics pipelines according to the provided materials mapping. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipelineIds</td><td>Map of pipeline family id to materials. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1DeferredRenderer.html#a8d34aa2428cabb6ecbb2af6543758cd7">lysa::DeferredRenderer::updatePipelines()</a>, <a class="el" href="classlysa_1_1ForwardRenderer.html#a8d34aa2428cabb6ecbb2af6543758cd7">lysa::ForwardRenderer::updatePipelines()</a></p>
 
@@ -872,7 +917,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Renderer.html">Renderer</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

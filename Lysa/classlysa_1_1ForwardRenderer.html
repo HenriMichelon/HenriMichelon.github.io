@@ -75,7 +75,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1ForwardRenderer.html','')
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Forward rendering path.</p>
+<p>Renders opaque geometry directly to the color/depth attachments using a single forward pass, then handles transparency and optional bloom. Suitable for scenes with many materials requiring complex shading (PBR, alpha test, etc.) without a G-Buffer. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for ForwardRenderer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -171,6 +174,13 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a forward renderer instance. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Rendering configuration (attachments, frames in flight). </td></tr>
+    <tr><td class="paramname">name</td><td>Human-readable name for debugging. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -230,6 +240,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Records the forward color pass followed by transparency. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1Renderer.html#a8665f2491e1d8f3ceebc02ac6d7ee93d">lysa::Renderer::colorPass()</a></p>
 
@@ -256,6 +267,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the brightness buffer used for bloom extraction. </p>
 
 <p>Implements <a class="el" href="classlysa_1_1Renderer.html#a32b7076181a910ac66d8f4af23c8cab1">lysa::Renderer::getBloomColorAttachment()</a></p>
 
@@ -292,6 +304,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Recreates attachments/pipelines after a resize. </p>
 
 <p>Reimplemented from <a class="el" href="classlysa_1_1Renderer.html#a08719e90e3f87072f6792606fce9ab2a">lysa::Renderer::resize()</a></p>
 
@@ -318,6 +331,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Per-frame housekeeping (post-process data, etc.). </p>
 
 <p>Reimplemented from <a class="el" href="classlysa_1_1Renderer.html#a4f76dbc8a0bc873fa9a5ec7642b79497">lysa::Renderer::update()</a></p>
 
@@ -344,6 +358,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Updates/creates pipelines following the materials mapping. </p>
 
 <p>Reimplemented from <a class="el" href="classlysa_1_1Renderer.html#a225587082422dcca23c8edf48124afa5">lysa::Renderer::updatePipelines()</a></p>
 
@@ -355,7 +370,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1ForwardRenderer.html">ForwardRenderer</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -75,7 +75,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysicsEngine.html',''); 
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract factory/entry point for physics backends. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for PhysicsEngine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -154,6 +156,13 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates a physics engine using the active backend. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Physics configuration (layers/collision table, etc.). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> heap‑allocated engine instance. </dd></dl>
 
 </div>
 </div>
@@ -188,6 +197,13 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates a new physics material with the specified properties. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">friction</td><td>Coefficient of friction in [0..+inf). </td></tr>
+    <tr><td class="paramname">restitution</td><td>Bounciness coefficient in [0..1]. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#a66af6f47e86334910653bc4f8f8e701f">lysa::JoltPhysicsEngine::createMaterial()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a66af6f47e86334910653bc4f8f8e701f">lysa::PhysXPhysicsEngine::createMaterial()</a></p>
 
@@ -214,6 +230,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Creates a new physics scene/world with optional debug settings. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#a33a0442198e43eba9a5769ddf638e244">lysa::JoltPhysicsEngine::createScene()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a33a0442198e43eba9a5769ddf638e244">lysa::PhysXPhysicsEngine::createScene()</a></p>
 
@@ -240,6 +257,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Duplicates a material instance (backend‑specific). </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#a5a59d1d9e2ded14528fabccc857e36b3">lysa::JoltPhysicsEngine::duplicateMaterial()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a5a59d1d9e2ded14528fabccc857e36b3">lysa::PhysXPhysicsEngine::duplicateMaterial()</a></p>
 
@@ -265,6 +283,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the physics backend compiled in use (<a class="el" href="namespacelysa.html#a769a94a48b5e0161e77c388a5fb42beda7f7cfb189b822c87a02778a033f4275a">JOLT</a> or <a class="el" href="namespacelysa.html#a769a94a48b5e0161e77c388a5fb42bedae135c89968972f36319eacaba3ba59e6">PHYSX</a>). </p>
 
 </div>
 </div>
@@ -299,6 +318,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sets the combine mode used when resolving restitution between two materials. </p>
 
 <p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#afce8dd95a99b8203ce789e6c7d8ee482">lysa::JoltPhysicsEngine::setRestitutionCombineMode()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#afce8dd95a99b8203ce789e6c7d8ee482">lysa::PhysXPhysicsEngine::setRestitutionCombineMode()</a></p>
 
@@ -310,7 +330,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PhysicsEngine.html">PhysicsEngine</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:10:37 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
