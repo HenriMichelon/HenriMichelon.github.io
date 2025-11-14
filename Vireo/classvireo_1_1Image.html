@@ -108,6 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f33171db0cc7dcc959bbb66ef34a727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a155411af8144a14654748c1c95e5b676"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a155411af8144a14654748c1c95e5b676">isReadWrite</a> () const</td></tr>
 <tr class="separator:a155411af8144a14654748c1c95e5b676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24067b3e73a598dae1b7c79c000d6461"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a24067b3e73a598dae1b7c79c000d6461">isDepthFormat</a> () const</td></tr>
+<tr class="separator:a24067b3e73a598dae1b7c79c000d6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d82761953702504375fe296ef5e5ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#ae6d82761953702504375fe296ef5e5ab">isDepthStencilFormat</a> () const</td></tr>
+<tr class="separator:ae6d82761953702504375fe296ef5e5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a428c4eac8ad01b4c51416ad6d8392f3b">~Image</a> () = default</td></tr>
 <tr class="separator:a428c4eac8ad01b4c51416ad6d8392f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a92512b800ab1a87ef90a4cd0322af5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a6a92512b800ab1a87ef90a4cd0322af5">Image</a> (Image &amp;) = delete</td></tr>
@@ -121,6 +125,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0fc7b7de771482442d779aaa8b909ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a804ae24e8938faaf362fea608513e9a4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a804ae24e8938faaf362fea608513e9a4">getMemoryAllocations</a> ()</td></tr>
 <tr class="separator:a804ae24e8938faaf362fea608513e9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfb468d76eb08fbe462305aa7ab067d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#aecfb468d76eb08fbe462305aa7ab067d">isDepthFormat</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format)</td></tr>
+<tr class="separator:aecfb468d76eb08fbe462305aa7ab067d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3d9d1cd4a47ad5572f66c7605cfe73"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Image.html#a8e3d9d1cd4a47ad5572f66c7605cfe73">isDepthStencilFormat</a> (<a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a> format)</td></tr>
+<tr class="separator:a8e3d9d1cd4a47ad5572f66c7605cfe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -489,7 +497,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of bytes for one pixel, or the block size in bytes pour BCn compressed formats </p>
+<p>Returns the number of bytes for one pixel, or the block size in bytes for BCn compressed formats </p>
 
 </div>
 </div>
@@ -548,6 +556,100 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the width of the first layer in pixels </p>
+
+</div>
+</div>
+<a class="anchor" id="a24067b3e73a598dae1b7c79c000d6461"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isDepthFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aecfb468d76eb08fbe462305aa7ab067d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool isDepthFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6d82761953702504375fe296ef5e5ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isDepthStencilFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e3d9d1cd4a47ad5572f66c7605cfe73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool isDepthStencilFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">ImageFormat</a>&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -687,7 +789,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Image.html">Image</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

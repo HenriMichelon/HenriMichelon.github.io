@@ -79,7 +79,7 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 </ul>
 <p>There is three types of TRANSFER buffers to take into account the difference of memory alignment and buffers layouts between various graphics API.</p>
 <h2>Creating a buffer</h2>
-<p>Buffers are created using <a class="el" href="classvireo_1_1Vireo.html#aadf08ffb53e73cecc3dbdb367b6dfca2">vireo::Vireo::createBuffer</a> by specifying the <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">type</a>, the size in bytes of each element (data block) and the number of elements :</p>
+<p>Buffers are created using <a class="el" href="classvireo_1_1Vireo.html#aa64c2fefc828d82079faec6d1a6479bc">vireo::Vireo::createBuffer</a> by specifying the <a class="el" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cf">type</a>, the size in bytes of each element (data block) and the number of elements :</p>
 <div class="fragment"><div class="line">frame.materialUniform = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createBuffer(<a class="code" href="namespacevireo.html#adf8e136713c0691010d2bec6ba63e9cfa891f35a29c3d51d02ffd42dd6dcc69b2" title="Used for shader uniform (in host visible memory) ">vireo::BufferType::UNIFORM</a>, <span class="keyword">sizeof</span>(Material), scene.getMaterials().size());</div>
 </div><!-- end fragment -->
 <p>Each instance of the elements in the buffer <b>can</b> be memory aligned. The alignment depends on the type of buffer and the graphic API (Vulkan and DirectX can uses different values). When creating the buffer the alignment is automatically calculated:</p><ul>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('manual_030_01_resources.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_030_00_resources.html">Resources</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -501,7 +501,10 @@ Enums</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705aa05e0710aaa839f02b4d5f3793df18b0">COMPUTE_READ</a>, 
 <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705afdde3b4d30ac2d09a0faf5909e779c6f">COMPUTE_WRITE</a>, 
-<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a986fa5da72f8660e946a642891fe6260">INDIRECT_DRAW</a>
+<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a986fa5da72f8660e946a642891fe6260">INDIRECT_DRAW</a>, 
+<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705aa8d58304214171127a082a5b70bdea85">VERTEX_INPUT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705a891f35a29c3d51d02ffd42dd6dcc69b2">UNIFORM</a>
 <br />
  }</td></tr>
 <tr class="separator:a33ee7da93cb9c170c97d8e60f3187705"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -591,7 +594,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575">Vireo::createSampler</a> addressMode* parameters, specifying the behavior of sampling with coordinates outside the range [0,1] for the respective u, v, or w coordinate.</p>
+<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#a1a6992ef632dda86b6284e2ef96097bb">Vireo::createSampler</a> addressMode* parameters, specifying the behavior of sampling with coordinates outside the range [0,1] for the respective u, v, or w coordinate.</p>
 <p>Manual page : <a class="el" href="manual_030_03_resources.html">Image samplers</a> </p>
 <table class="fieldtable">
 <tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="a36eef9740a33a6c29292704bd027bebaa5be68175be14dfaa080165456c2e9555"></a>REPEAT&#160;</td><td class="fielddoc"><p>Repeat wrap mode. </p>
@@ -986,7 +989,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575">Vireo::createSampler</a> magFilter and minFilter parameters, specifying filters used for texture lookups</p>
+<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#a1a6992ef632dda86b6284e2ef96097bb">Vireo::createSampler</a> magFilter and minFilter parameters, specifying filters used for texture lookups</p>
 <p>Manual page : <a class="el" href="manual_030_03_resources.html">Image samplers</a> </p>
 <table class="fieldtable">
 <tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="adccf6e8a392b0d35f185df12521c474baad135772d7cf93dd0ccf9d2474b34e6a"></a>NEAREST&#160;</td><td class="fielddoc"><p>Nearest filtering. </p>
@@ -1170,7 +1173,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#ad2ea85c73a21dbbeba59bd781c61c575">Vireo::createSampler</a> mipmapMode parameter, specifying the mipmap mode used for texture lookups.</p>
+<p>Possible values of the <a class="el" href="classvireo_1_1Vireo.html#a1a6992ef632dda86b6284e2ef96097bb">Vireo::createSampler</a> mipmapMode parameter, specifying the mipmap mode used for texture lookups.</p>
 <p>Manual page : <a class="el" href="manual_030_03_resources.html">Image samplers</a> </p>
 <table class="fieldtable">
 <tr><th>Enum Values</th><th>Documentation</th></tr><tr><td class="fieldname"><a class="anchor" id="ac510b54d50198f65f31da2a411e79f6aaad135772d7cf93dd0ccf9d2474b34e6a"></a>NEAREST&#160;</td><td class="fielddoc"><p>Nearest filtering. </p>
@@ -1414,6 +1417,10 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a33ee7da93cb9c170c97d8e60f3187705a986fa5da72f8660e946a642891fe6260"></a>INDIRECT_DRAW&#160;</td><td class="fielddoc"><p><a class="el" href="classvireo_1_1Buffer.html">Buffer</a> used as indirect draw datas. </p>
 </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a33ee7da93cb9c170c97d8e60f3187705aa8d58304214171127a082a5b70bdea85"></a>VERTEX_INPUT&#160;</td><td class="fielddoc"><p><a class="el" href="classvireo_1_1Buffer.html">Buffer</a> used as vertex input. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a33ee7da93cb9c170c97d8e60f3187705a891f35a29c3d51d02ffd42dd6dcc69b2"></a>UNIFORM&#160;</td><td class="fielddoc"><p><a class="el" href="classvireo_1_1Buffer.html">Buffer</a> used as uniform. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1633,7 +1640,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

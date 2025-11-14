@@ -73,7 +73,7 @@ $(document).ready(function(){initNavTree('manual_040_01_descriptor_layout.html',
 <p>The samplers and dynamic uniform types of layouts exists for the sole reason of portability across graphics API.</p>
 <p>A descriptor layout can be used to create multiple descriptor sets and for multiple pipelines. For example you can have in your application only one descriptor layout with all the needed samplers for all the pipelines.</p>
 <h2>Creating a descriptor layout</h2>
-<p>Descriptor layouts are created using <a class="el" href="classvireo_1_1Vireo.html#a51678145799aa2d6fa9794013ed78db9">vireo::Vireo::createDescriptorLayout</a>, <a class="el" href="classvireo_1_1Vireo.html#a201f641efa1d23cbf0b84d15b8fedc78">vireo::Vireo::createSamplerDescriptorLayout</a> or <a class="el" href="classvireo_1_1Vireo.html#a296cfa5e955968346201fedf56a807b8">vireo::Vireo::createDynamicUniformDescriptorLayout</a>.</p>
+<p>Descriptor layouts are created using <a class="el" href="classvireo_1_1Vireo.html#a114470e61863463e4c14c54e175ec165">vireo::Vireo::createDescriptorLayout</a>, <a class="el" href="classvireo_1_1Vireo.html#a88b70d9f19a4f5e1db6a3e65bac03ffa">vireo::Vireo::createSamplerDescriptorLayout</a> or <a class="el" href="classvireo_1_1Vireo.html#a3f624865c1c4a94e5491e9f9675711da">vireo::Vireo::createDynamicUniformDescriptorLayout</a>.</p>
 <p>For generic and samplers layouts add resources descriptions with <a class="el" href="classvireo_1_1DescriptorLayout.html#af69e6672ce8e9ad0be1b2c10fddf2f00">vireo::DescriptorLayout::add</a> then build the layout with <a class="el" href="classvireo_1_1DescriptorLayout.html#a9d887f6f043a4b7c3388ca7aba0b070c">vireo::DescriptorLayout::build</a>. For dynamic uniform layouts the add and build process is done automatically and the uniform buffer is bound to the index <code>0</code>.</p>
 <div class="fragment"><div class="line">...</div>
 <div class="line">static <span class="keyword">constexpr</span> <a class="code" href="namespacevireo.html#a0e0fd186e31841264c06580c22ffe6c2">vireo::DescriptorIndex</a> BINDING_GLOBAL{0};</div>
@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('manual_040_01_descriptor_layout.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_040_00_descriptors.html">Resources Descriptors</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

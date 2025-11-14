@@ -67,7 +67,7 @@ $(document).ready(function(){initNavTree('manual_040_04_pipeline_resources.html'
 <div class="textblock"><p>The sequence of <a class="el" href="manual_040_01_descriptor_layout.html">descriptor layouts</a> and <a class="el" href="manual_040_03_push_constants.html">push constants</a> that can be used by a pipeline is specified by creating a <a class="el" href="classvireo_1_1PipelineResources.html">vireo::PipelineResources</a> and using it when creating the pipeline.</p>
 <p>You can't do much with a pipeline resource on the CPU side beside creating them, they are exclusively used to allocate data needed by the graphics API (the real descriptor set layouts/root signatures).</p>
 <h2>Creating and using a pipeline resources</h2>
-<p>Pipeline resources are created using <a class="el" href="classvireo_1_1Vireo.html#a1a2694c5cce82ee9d6ee3a17e454f650">vireo::Vireo::createPipelineResources</a> and you use them in a <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">vireo::GraphicPipelineConfiguration</a> struct.</p>
+<p>Pipeline resources are created using <a class="el" href="classvireo_1_1Vireo.html#ae69902c7e13de727a258741a6cd4a45a">vireo::Vireo::createPipelineResources</a> and you use them in a <a class="el" href="structvireo_1_1GraphicPipelineConfiguration.html">vireo::GraphicPipelineConfiguration</a> struct.</p>
 <div class="fragment"><div class="line">pipelineConfig.resources = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createPipelineResources(</div>
 <div class="line">    { descriptorLayout, samplers.getDescriptorLayout() },</div>
 <div class="line">    pushConstantsDesc);</div>
@@ -78,7 +78,7 @@ $(document).ready(function(){initNavTree('manual_040_04_pipeline_resources.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_040_00_descriptors.html">Resources Descriptors</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

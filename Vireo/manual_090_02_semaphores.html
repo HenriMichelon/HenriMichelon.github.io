@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('manual_090_02_semaphores.html',''); in
 <li><a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">vireo::SemaphoreType::TIMELINE</a> : have an increasing 64-bit unsigned integer payload and are signaled with respect to a particular reference value. Use them for multi passes synchronization.</li>
 </ul>
 <h2>Using binary semaphores</h2>
-<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452">vireo::SemaphoreType::BINARY</a> parameter :</p>
+<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#ae01aad7e985ba9d7bf4591f381249e7d">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452">vireo::SemaphoreType::BINARY</a> parameter :</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> semaphore = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSemaphore(<a class="code" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa98ad0e8750ae10ad556ed7a62affb452" title="Binary semaphores have two states - signaled and unsignaled. ">vireo::SemaphoreType::BINARY</a>);</div>
 </div><!-- end fragment -->
 <p>Then use it with <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a>. In the following example both submissions will be started in parallel, the input assembly and vertex shaders will be executed in parallel, then the second submission will wait for the first vertex shader to end before starting the fragment shader :</p>
@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('manual_090_02_semaphores.html',''); in
 </div><!-- end fragment -->
 <dl class="section note"><dt>Note</dt><dd>The shader waiting/signaling stages aren't used with DirectX 12, the semaphore will be signaled at the end of the pipeline work and waited at the start...</dd></dl>
 <h2>Using timeline semaphores</h2>
-<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#a9a8e7ba7e45bfd388f338b5ada62cb0c">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">vireo::SemaphoreType::TIMELINE</a> parameter :</p>
+<p>Create the semaphore with <a class="el" href="classvireo_1_1Vireo.html#ae01aad7e985ba9d7bf4591f381249e7d">vireo::Vireo::createSemaphore</a> with the <a class="el" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8">vireo::SemaphoreType::TIMELINE</a> parameter :</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> semaphore = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSemaphore(<a class="code" href="namespacevireo.html#a4bff641386b62aac37ca086b4b93824aa7970cd1c3f3d736ce0164035d30be1e8" title="Timeline semaphores have a strictly increasing 64-bit unsigned integer payload and are signaled with...">vireo::SemaphoreType::TIMELINE</a>);</div>
 </div><!-- end fragment -->
 <p>The reference value of the semaphore counter starts at zero at will be incremented each time it will be signaled.</p>
@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('manual_090_02_semaphores.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_090_00_synchronization.html">Synchronization</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

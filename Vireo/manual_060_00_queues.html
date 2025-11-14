@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('manual_060_00_queues.html',''); initRe
 <dl class="section note"><dt>Note</dt><dd>Not all applications will require or benefit from multiple queues. It is reasonable for an application to have a single “global” graphics queue to submit all the work to the GPU.</dd></dl>
 <p>How a queue is mapped to the underlying hardware is implementation-defined. Some implementations will have multiple hardware queues and submitting work to multiple queues will proceed independently and concurrently. Some implementations will do scheduling at a kernel driver level before submitting work to the hardware. There is no current way in Vulkan or DirectX to expose the exact details how each queue is mapped.</p>
 <h2>Creating a submission queue</h2>
-<p>Submission queues are create using <a class="el" href="classvireo_1_1Vireo.html#a2945b364ea7c3978aa1c1e6706abf3bd">vireo::Vireo::createSubmitQueue</a> :</p>
+<p>Submission queues are create using <a class="el" href="classvireo_1_1Vireo.html#a177ae3f60519631951244559da69e43f">vireo::Vireo::createSubmitQueue</a> :</p>
 <div class="fragment"><div class="line">graphicQueue = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createSubmitQueue(<a class="code" href="namespacevireo.html#a21e038f5b8958e203d28bc4f18472352a930d8d2d00ae0f554c96edc5739801e1" title="Command/Queue for a graphic pipeline. ">vireo::CommandType::GRAPHIC</a>);</div>
 </div><!-- end fragment -->
 <h2>Using a submission queue</h2>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('manual_060_00_queues.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

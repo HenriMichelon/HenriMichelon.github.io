@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('manual_090_01_fences.html',''); initRe
 <div class="line">swapChain-&gt;nextFrameIndex();</div>
 </div><!-- end fragment -->
 <h2>Work completion synchronization</h2>
-<p>Waiting for a command submission to end involve creating a <a class="el" href="classvireo_1_1Fence.html">vireo::Fence</a> with <a class="el" href="classvireo_1_1Vireo.html#a8aef3be17670442d7b908ebb408355f2">vireo::Vireo::createFence</a>, use it with <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a> then <a class="el" href="classvireo_1_1Fence.html#a157832a0d33c952c805ad84104e2233f">vireo::Fence::wait</a> (blocking the CPU code).</p>
+<p>Waiting for a command submission to end involve creating a <a class="el" href="classvireo_1_1Fence.html">vireo::Fence</a> with <a class="el" href="classvireo_1_1Vireo.html#a0c2ebef35a062c7df229df0340efa123">vireo::Vireo::createFence</a>, use it with <a class="el" href="classvireo_1_1SubmitQueue.html#a88d529d718f02ba73427ba41d1740e7a">vireo::SubmitQueue::submit</a> then <a class="el" href="classvireo_1_1Fence.html#a157832a0d33c952c805ad84104e2233f">vireo::Fence::wait</a> (blocking the CPU code).</p>
 <p>At initialization, create the fence in signaled state to be able use <a class="el" href="classvireo_1_1Fence.html#ac550a25f166cbf1dac22720d0a2f225f">vireo::Fence::reset</a> the first time without using a condition :</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> fence = <a class="code" href="namespacevireo.html">vireo</a>-&gt;createFence(<span class="keyword">true</span>);</div>
 </div><!-- end fragment -->
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('manual_090_01_fences.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual.html">Manual</a></li><li class="navelem"><a class="el" href="manual_090_00_synchronization.html">Synchronization</a></li>
-    <li class="footer">Generated on ven. juin 13 2025 15:18:38 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
