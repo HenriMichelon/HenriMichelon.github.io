@@ -3,7 +3,7 @@
 
  The MIT License (MIT)
 
- Copyright (c) 2014-2024 Barbara Geller & Ansel Sermersheim
+ Copyright (c) 2014-2026 Barbara Geller & Ansel Sermersheim
  Copyright (c) 1997-2020 by Dimitri van Heesch
 
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
@@ -377,7 +377,9 @@ function showNode(o, node, index, hash)
           },true);
         } else {
           var rootBase = stripPath(o.toroot.replace(/\..+$/, ''));
+          if (rootBase=="index" || rootBase=="pages" || rootBase=="search") {
             expandNode(o, n, true, true);
+          }
           selectAndHighlight(hash,n);
         }
       }

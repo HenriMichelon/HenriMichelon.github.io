@@ -2,6 +2,7 @@ var NAVTREE =
 [
   [ "Lysa", "index.html", [
     [ "About", "about.html", null ],
+    [ "Integration", "integration.html", null ],
     [ "Manual", "manual.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", [
@@ -468,7 +469,7 @@ var NAVTREE =
             [ "SET", "classlysa_1_1GlobalDescriptorSet.html#a3c439b322a114d608c5a423eab7d87f1", null ]
           ] ],
           [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html", [
-            [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html#a510ed390f627637a4f16af8fc6c50da6", null ],
+            [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html#aa751317a34c3e09a94a5f046efe2f2ce", null ],
             [ "addInstance", "structlysa_1_1GraphicPipelineData.html#a570bd6b81d478006b4032efb2261a3fd", null ],
             [ "addInstance", "structlysa_1_1GraphicPipelineData.html#a93235b405a51fa7ab6f7f612e9cb0b7c", null ],
             [ "createDescriptorLayouts", "structlysa_1_1GraphicPipelineData.html#a3099bca453da61003368a29b77f77742", null ],
@@ -1651,7 +1652,7 @@ var NAVTREEINDEX =
 "classlysa_1_1RenderTarget.html#aaad368cfd9ea3cf64fbc091bd886f729",
 "classlysa_1_1Vector3DRenderer.html#a207f8baf9a4b9b36c6f3284865a1dc52",
 "structlysa_1_1GraphicPipelineData.html#a8ff5781cccdc145ec2baf241d05b2eaa",
-"structlysa_1_1SceneData.html#ad69d374446149ea654019604c8b79a4b"
+"structlysa_1_1SceneData.html#ad1dac20ca009246ae5f5acd9fc900fdc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
