@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 1.7.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa/src/lysa/renderers/Renderer.ixx File Reference</title>
+<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa_engine/src/renderers/Renderer.ixx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,8 +73,6 @@ $(document).ready(function(){initNavTree('file__Renderer_8ixx.html',''); initRes
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderer.html">Renderer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Renderer_1_1BlurData.html">Renderer::BlurData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Renderer_1_1FrameData.html">Renderer::FrameData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -89,62 +87,114 @@ Variables</h2></td></tr>
 <tr class="separator:a1d6d624f6a1912642caa1b6daa5e0406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed380b965dc5ddac55cf3a07b42f89c9"><td class="memItemLeft" align="right" valign="top">import&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#aed380b965dc5ddac55cf3a07b42f89c9">vireo</a></td></tr>
 <tr class="separator:aed380b965dc5ddac55cf3a07b42f89c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9b669e92a235269b8e3cdfac1974c8"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a7a9b669e92a235269b8e3cdfac1974c8">configuration</a></td></tr>
-<tr class="separator:a7a9b669e92a235269b8e3cdfac1974c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21bdbea75043744b001a217717b591f6"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a21bdbea75043744b001a217717b591f6">math</a></td></tr>
 <tr class="separator:a21bdbea75043744b001a217717b591f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebb6ddcc13a824f9930cf031b1cd4e2c"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#aebb6ddcc13a824f9930cf031b1cd4e2c">samplers</a></td></tr>
-<tr class="separator:aebb6ddcc13a824f9930cf031b1cd4e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09f51af78e2c0792c5d3b453b24ae5c0"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a09f51af78e2c0792c5d3b453b24ae5c0">scene</a></td></tr>
-<tr class="separator:a09f51af78e2c0792c5d3b453b24ae5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a219d73c6a72868b4eb9ed7b08565f607"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a219d73c6a72868b4eb9ed7b08565f607">types</a></td></tr>
-<tr class="separator:a219d73c6a72868b4eb9ed7b08565f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2426f6546612093c9ad7770df1245225"><td class="memItemLeft" align="right" valign="top">import lysa resources&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a2426f6546612093c9ad7770df1245225">material</a></td></tr>
-<tr class="separator:a2426f6546612093c9ad7770df1245225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef27e8c86fc0302dda8d995841e71f9"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#aeef27e8c86fc0302dda8d995841e71f9">post_processing</a></td></tr>
-<tr class="separator:aeef27e8c86fc0302dda8d995841e71f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460591c9c47bcd2ef3df324f3e06d115"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a460591c9c47bcd2ef3df324f3e06d115">depth_prepass</a></td></tr>
-<tr class="separator:a460591c9c47bcd2ef3df324f3e06d115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af77bf5b7f2393ce4f0584701aad113d5"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#af77bf5b7f2393ce4f0584701aad113d5">shader_material_pass</a></td></tr>
-<tr class="separator:af77bf5b7f2393ce4f0584701aad113d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcccbe8f15275f9c43e77ccd9e9cbb2"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#acbcccbe8f15275f9c43e77ccd9e9cbb2">shadow_map_pass</a></td></tr>
-<tr class="separator:acbcccbe8f15275f9c43e77ccd9e9cbb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed14747bb00897331d77e5bab1a2da9"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a6ed14747bb00897331d77e5bab1a2da9">smaa_pass</a></td></tr>
-<tr class="separator:a6ed14747bb00897331d77e5bab1a2da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519b625b7a62a4ee4d6eff11fc40484c"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a519b625b7a62a4ee4d6eff11fc40484c">transparency_pass</a></td></tr>
-<tr class="separator:a519b625b7a62a4ee4d6eff11fc40484c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d29e9ef15adfb9e4c7ef33ba406b015"><td class="memItemLeft" align="right" valign="top">import lysa renderers&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a1d29e9ef15adfb9e4c7ef33ba406b015">configuration</a></td></tr>
+<tr class="separator:a1d29e9ef15adfb9e4c7ef33ba406b015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdb9e065598e6f81a44ae0b900b385b"><td class="memItemLeft" align="right" valign="top">import lysa renderers&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a1fdb9e065598e6f81a44ae0b900b385b">graphic_pipeline_data</a></td></tr>
+<tr class="separator:a1fdb9e065598e6f81a44ae0b900b385b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d40ec5a670b37c7277c5185d10a3160"><td class="memItemLeft" align="right" valign="top">import lysa renderers&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a2d40ec5a670b37c7277c5185d10a3160">scene_frame_data</a></td></tr>
+<tr class="separator:a2d40ec5a670b37c7277c5185d10a3160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1165622758a43899aa72894d5b3201ca"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a1165622758a43899aa72894d5b3201ca">bloom_pass</a></td></tr>
+<tr class="separator:a1165622758a43899aa72894d5b3201ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad295ad47f058e10e239ea40c4b431cb4"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#ad295ad47f058e10e239ea40c4b431cb4">depth_prepass</a></td></tr>
+<tr class="separator:ad295ad47f058e10e239ea40c4b431cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5844103c0011f84009e5ee3a6d0a267d"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a5844103c0011f84009e5ee3a6d0a267d">fxaa_pass</a></td></tr>
+<tr class="separator:a5844103c0011f84009e5ee3a6d0a267d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f4f93eccf219ac8b0aed66b0c6a762"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a33f4f93eccf219ac8b0aed66b0c6a762">gamma_correction_pass</a></td></tr>
+<tr class="separator:a33f4f93eccf219ac8b0aed66b0c6a762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116b4c9643b2ff5200913a2da06c1772"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a116b4c9643b2ff5200913a2da06c1772">post_processing</a></td></tr>
+<tr class="separator:a116b4c9643b2ff5200913a2da06c1772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6369767524da8982accdd78d0632ce7e"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a6369767524da8982accdd78d0632ce7e">shader_material_pass</a></td></tr>
+<tr class="separator:a6369767524da8982accdd78d0632ce7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a558bfb1592010b3acbd4729ca6e50c21"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a558bfb1592010b3acbd4729ca6e50c21">smaa_pass</a></td></tr>
+<tr class="separator:a558bfb1592010b3acbd4729ca6e50c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8123e77b101523db2b60c9101508c3a1"><td class="memItemLeft" align="right" valign="top">import lysa renderers renderpasses&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a8123e77b101523db2b60c9101508c3a1">transparency_pass</a></td></tr>
+<tr class="separator:a8123e77b101523db2b60c9101508c3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d1c426ce050a0ac24648f85fafca73"><td class="memItemLeft" align="right" valign="top">import lysa resources&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a></td></tr>
+<tr class="separator:ae0d1c426ce050a0ac24648f85fafca73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662779d166de3040000119a6fd57f7e3"><td class="memItemLeft" align="right" valign="top">import lysa resources&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Renderer_8ixx.html#a662779d166de3040000119a6fd57f7e3">mesh</a></td></tr>
+<tr class="separator:a662779d166de3040000119a6fd57f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a7a9b669e92a235269b8e3cdfac1974c8"></a>
+<a class="anchor" id="a1165622758a43899aa72894d5b3201ca"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa configuration</td>
+          <td class="memname">import lysa renderers renderpasses bloom_pass</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a460591c9c47bcd2ef3df324f3e06d115"></a>
+<a class="anchor" id="ae0d1c426ce050a0ac24648f85fafca73"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa renderers renderpass depth_prepass</td>
+          <td class="memname">import lysa resources camera</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a2426f6546612093c9ad7770df1245225"></a>
+<a class="anchor" id="a1d29e9ef15adfb9e4c7ef33ba406b015"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa resources material</td>
+          <td class="memname">import lysa renderers configuration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad295ad47f058e10e239ea40c4b431cb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa renderers renderpasses depth_prepass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5844103c0011f84009e5ee3a6d0a267d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa renderers renderpasses fxaa_pass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a33f4f93eccf219ac8b0aed66b0c6a762"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa renderers renderpasses gamma_correction_pass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1fdb9e065598e6f81a44ae0b900b385b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa renderers graphic_pipeline_data</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,12 +213,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeef27e8c86fc0302dda8d995841e71f9"></a>
+<a class="anchor" id="a662779d166de3040000119a6fd57f7e3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa renderers renderpass post_processing</td>
+          <td class="memname">import lysa resources mesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a116b4c9643b2ff5200913a2da06c1772"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa renderers renderpasses post_processing</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -187,84 +249,48 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aebb6ddcc13a824f9930cf031b1cd4e2c"></a>
+<a class="anchor" id="a2d40ec5a670b37c7277c5185d10a3160"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa samplers</td>
+          <td class="memname">import lysa renderers scene_frame_data</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a09f51af78e2c0792c5d3b453b24ae5c0"></a>
+<a class="anchor" id="a6369767524da8982accdd78d0632ce7e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa scene</td>
+          <td class="memname">import lysa renderers renderpasses shader_material_pass</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="af77bf5b7f2393ce4f0584701aad113d5"></a>
+<a class="anchor" id="a558bfb1592010b3acbd4729ca6e50c21"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa renderers renderpass shader_material_pass</td>
+          <td class="memname">import lysa renderers renderpasses smaa_pass</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="acbcccbe8f15275f9c43e77ccd9e9cbb2"></a>
+<a class="anchor" id="a8123e77b101523db2b60c9101508c3a1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa renderers renderpass shadow_map_pass</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6ed14747bb00897331d77e5bab1a2da9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">import lysa renderers renderpass smaa_pass</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a519b625b7a62a4ee4d6eff11fc40484c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">import lysa renderers renderpass transparency_pass</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a219d73c6a72868b4eb9ed7b08565f607"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">import lysa types</td>
+          <td class="memname">import lysa renderers renderpasses transparency_pass</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -288,8 +314,8 @@ Variables</h2></td></tr>
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_626eab7fd05737612408b7bb64c9da31.html">lysa</a></li><li class="navelem"><a class="el" href="dir_41e3ace28252e9232e3a107cf1e69dfc.html">renderers</a></li><li class="navelem"><a class="el" href="file__Renderer_8ixx.html">Renderer.ixx</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_4f8db14ae69cb76debf01f2d8d1ecbe8.html">renderers</a></li><li class="navelem"><a class="el" href="file__Renderer_8ixx.html">Renderer.ixx</a></li>
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

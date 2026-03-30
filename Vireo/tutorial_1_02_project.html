@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('tutorial_1_02_project.html',''); initR
 </ul>
 <p>Then add a <code>.env.cmake</code> file containing the following variable at the root of your project template project: </p><pre class="fragment">set(VIREO_PROJECT_DIR "path_to_the_cloned_vireo_directory")
 </pre><p> In the <code>src</code> directory creates :</p>
-<p>A new <code>MyApp.ixx</code> interface file for your application :</p>
+<p>Edit the <code>MyApp.ixx</code> interface file:</p>
 <div class="fragment"><div class="line"><a class="code" href="file__Tools_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a>;</div>
 <div class="line"><span class="preprocessor">#include &quot;Libraries.h&quot;</span></div>
 <div class="line">export <a class="code" href="file__Tools_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a> myapp;</div>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('tutorial_1_02_project.html',''); initR
 <div class="line">    <span class="keywordtype">void</span> onDestroy() <span class="keyword">override</span>;</div>
 <div class="line">}</div>
 </div><!-- end fragment -->
-<p>A new <code>MyApp.cpp</code> implementation file :</p>
+<p>Edit the <code>MyApp.cpp</code> implementation file :</p>
 <div class="fragment"><div class="line"><a class="code" href="file__Tools_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a>;</div>
 <div class="line"><span class="preprocessor">#include &quot;Libraries.h&quot;</span></div>
 <div class="line"><a class="code" href="file__Tools_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a> myapp;</div>
@@ -102,29 +102,20 @@ $(document).ready(function(){initNavTree('tutorial_1_02_project.html',''); initR
 <div class="line"><span class="keywordtype">void</span> MyApp::onDestroy() {</div>
 <div class="line">}</div>
 </div><!-- end fragment -->
-<p>And a new <code>MyAppMain.cpp</code> source file :</p>
+<p>Edit the <code>MyAppMain.cpp</code> source file :</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;Macros.h&quot;</span></div>
 <div class="line"><span class="keyword">import</span> myapp;</div>
 <div class="line"> </div>
-<div class="line">APP(std::make_shared&lt;MyApp&gt;(), L<span class="stringliteral">&quot;Hello, Vireo !&quot;</span>, 1280, 720);</div>
-</div><!-- end fragment -->
-<p>Update the <code>CMakeLists.txt</code> file by uncommenting the last part :</p>
-<div class="fragment"><div class="line">...</div>
-<div class="line"> </div>
-<div class="line">#######################################################</div>
-<div class="line"><span class="keyword">set</span>(MY_TARGET_SRC</div>
-<div class="line">        ${SRC_DIR}/MyApp.cpp</div>
-<div class="line">        ${SRC_DIR}/MyAppMain.cpp)</div>
-<div class="line"><span class="keyword">set</span>(MY_TARGET_MODULES ${SRC_DIR}/MyApp.ixx)</div>
-<div class="line">build_target(myapp <span class="stringliteral">&quot;${MY_TARGET_SRC}&quot;</span> ${MY_TARGET_MODULES})</div>
+<div class="line">APP(std::make_shared&lt;MyApp&gt;(), <span class="stringliteral">&quot;Hello, Vireo !&quot;</span>, 800, 600);</div>
 </div><!-- end fragment -->
 <p>Then reload the CMake project and build the <code>myapp</code> target.</p>
-<p>Execute the application (from the project root directory), it will display the graphic API selection dialog :</p>
+<p>Execute the application (from the project root directory).</p>
+<p>On Windows it will display the graphic API selection dialog :</p>
 <div class="image">
 <img src="backend_select.png" alt=""/>
 <div class="caption">
 backend_select.png</div></div>
-    <p>Select an API and an empty window will be displayed :</p>
+    <p>An empty window will be displayed :</p>
 <div class="image">
 <img src="empty_window.png" alt=""/>
 <div class="caption">
@@ -136,7 +127,7 @@ empty_window.png</div></div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_tutorial_1.html">&quot;Hello Triangle&quot; tutorial</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:41:17 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

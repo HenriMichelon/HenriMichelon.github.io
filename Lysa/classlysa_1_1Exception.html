@@ -74,7 +74,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1Exception.html',''); init
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Lightweight exception type.</p>
+<p>This class is a small convenience wrapper around std::exception that stores a formatted message assembled from any streamable arguments. In debug builds on Windows, if a debugger is attached, the message is also sent to the debugger output and a debug break is triggered to help you stop exactly at the throw site. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Exception:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -113,6 +116,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Construct an <a class="el" href="classlysa_1_1Exception.html">Exception</a> from streamable parts.</p>
+<p>The message is created by streaming all provided arguments into an internal std::ostringstream, in order. Each argument must be stream-insertable (operator&lt;&lt; available).</p>
+<p>In debug builds, the resulting message may be emitted to the debugger output and a debug trap/break may be triggered.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Variadic list of streamable argument types. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -137,6 +149,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get a C-string describing the error. </p><dl class="section return"><dt>Returns</dt><dd>Null-terminated string containing the stored message. </dd></dl>
 
 </div>
 </div>
@@ -146,7 +159,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Exception.html">Exception</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

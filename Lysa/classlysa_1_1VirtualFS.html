@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1VirtualFS.html',''); init
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classlysa_1_1VirtualFS-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -76,44 +76,48 @@ $(document).ready(function(){initNavTree('classlysa_1_1VirtualFS.html',''); init
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Virtual file system helper used to resolve portable paths.</p><ul>
-<li>Provide a consistent way to query files/directories and open streams across platforms and packaging schemes.</li>
-<li>Support a simple URI scheme (app://) to reference assets relative to the application install or data directory.</li>
-<li>Offer convenience helpers for loading whole files and images.</li>
-</ul>
-<p>Notes:</p><ul>
-<li>All methods are static; there is no instance to create.</li>
-<li>Thread‑safety: methods are stateless and may be called from any thread. </li>
-</ul>
+<div class="textblock"><p>Virtual file system helper used to resolve portable paths. </p>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3d2b9f980676bf0c26130c636e23417b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a3d2b9f980676bf0c26130c636e23417b">dirExists</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:a3d2b9f980676bf0c26130c636e23417b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f89348619dbebdfd083c88027ce8c7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#ad6f89348619dbebdfd083c88027ce8c7">fileExists</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:ad6f89348619dbebdfd083c88027ce8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a198c3897e46a3cecec3c23761c2faafe"><td class="memItemLeft" align="right" valign="top">static std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a198c3897e46a3cecec3c23761c2faafe">openReadStream</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:a198c3897e46a3cecec3c23761c2faafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b51c9fbcd569967a4797c76efbc042b"><td class="memItemLeft" align="right" valign="top">static std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a6b51c9fbcd569967a4797c76efbc042b">openWriteStream</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:a6b51c9fbcd569967a4797c76efbc042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a092437c972147966cb65039ed5555853"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a092437c972147966cb65039ed5555853">parentPath</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:a092437c972147966cb65039ed5555853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a089c68d398f16b3fbd44aa933f2f549a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a089c68d398f16b3fbd44aa933f2f549a">loadBinaryData</a> (const std::string &amp;filepath, std::vector&lt; char &gt; &amp;out)</td></tr>
-<tr class="separator:a089c68d398f16b3fbd44aa933f2f549a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0885203ff0fb0c4759cfa86791747c9"><td class="memItemLeft" align="right" valign="top">static std::byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#ad0885203ff0fb0c4759cfa86791747c9">loadRGBAImage</a> (const std::string &amp;filepath, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &amp;width, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &amp;height, <a class="el" href="namespacelysa.html#a60e8696a4678cd348e991a1f172e53f7">uint64</a> &amp;size)</td></tr>
-<tr class="separator:ad0885203ff0fb0c4759cfa86791747c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac94bdc8512e3c185d3f13ccdb994e787"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#ac94bdc8512e3c185d3f13ccdb994e787">destroyImage</a> (std::byte *image)</td></tr>
-<tr class="separator:ac94bdc8512e3c185d3f13ccdb994e787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b31a995a7f7f2f4d6ecf8d24c4bd61"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a16b31a995a7f7f2f4d6ecf8d24c4bd61">getPath</a> (const std::string &amp;filepath)</td></tr>
-<tr class="separator:a16b31a995a7f7f2f4d6ecf8d24c4bd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae5e6a9ec4bf37a570d9d2730a5256ed3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#ae5e6a9ec4bf37a570d9d2730a5256ed3">VirtualFS</a> (const <a class="el" href="structlysa_1_1VirtualFSConfiguration.html">VirtualFSConfiguration</a> &amp;config, const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo)</td></tr>
+<tr class="separator:ae5e6a9ec4bf37a570d9d2730a5256ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adc179b4715134b72d018ac21d1843f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a4adc179b4715134b72d018ac21d1843f">fileExists</a> (const std::string &amp;filepath) const</td></tr>
+<tr class="separator:a4adc179b4715134b72d018ac21d1843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27565c6df869a7ab51b96645ebbbbe74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a27565c6df869a7ab51b96645ebbbbe74">directoryExists</a> (const std::string &amp;dirPath) const</td></tr>
+<tr class="separator:a27565c6df869a7ab51b96645ebbbbe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4458bdd66060ac502a5ca8836ac6d586"><td class="memItemLeft" align="right" valign="top">std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a4458bdd66060ac502a5ca8836ac6d586">openReadStream</a> (const std::string &amp;filepath) const</td></tr>
+<tr class="separator:a4458bdd66060ac502a5ca8836ac6d586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16647787258ff89d09d2c8b520a7384"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#ab16647787258ff89d09d2c8b520a7384">openWriteStream</a> (const std::string &amp;filepath) const</td></tr>
+<tr class="separator:ab16647787258ff89d09d2c8b520a7384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d038e916f081a5b9bdce0f0020a5cb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a3d038e916f081a5b9bdce0f0020a5cb2">parentPath</a> (const std::string &amp;filepath) const</td></tr>
+<tr class="separator:a3d038e916f081a5b9bdce0f0020a5cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b559157fec81edd176095e558975c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a15b559157fec81edd176095e558975c9">loadBinaryData</a> (const std::string &amp;filepath, std::vector&lt; char &gt; &amp;out) const</td></tr>
+<tr class="separator:a15b559157fec81edd176095e558975c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecfbca2319b4ce36148e7a28af16c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a7ecfbca2319b4ce36148e7a28af16c83">loadBinaryData</a> (std::ifstream &amp;input, std::vector&lt; char &gt; &amp;out) const</td></tr>
+<tr class="separator:a7ecfbca2319b4ce36148e7a28af16c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda3dfcc033c02f84a1409b6831303dc"><td class="memItemLeft" align="right" valign="top">std::byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#afda3dfcc033c02f84a1409b6831303dc">loadImage</a> (const std::string &amp;filepath, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &amp;width, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &amp;height, <a class="el" href="namespacelysa.html#a60e8696a4678cd348e991a1f172e53f7">uint64</a> &amp;size) const</td></tr>
+<tr class="separator:afda3dfcc033c02f84a1409b6831303dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1746ccd0e43693e99ba79fe19a7c2e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a1746ccd0e43693e99ba79fe19a7c2e47">loadScript</a> (const std::string &amp;scriptName, std::vector&lt; char &gt; &amp;out) const</td></tr>
+<tr class="separator:a1746ccd0e43693e99ba79fe19a7c2e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a96c60e2038d15c07b9df05ff24be43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a2a96c60e2038d15c07b9df05ff24be43">loadShader</a> (const std::string &amp;shaderName, std::vector&lt; char &gt; &amp;out) const</td></tr>
+<tr class="separator:a2a96c60e2038d15c07b9df05ff24be43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da9cf42d466900d16e924ea43d03fc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a8da9cf42d466900d16e924ea43d03fc2">destroyImage</a> (std::byte *image) const</td></tr>
+<tr class="separator:a8da9cf42d466900d16e924ea43d03fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c607e184f32d4fc908b940621cf87f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a11c607e184f32d4fc908b940621cf87f">getPath</a> (const std::string &amp;filepath) const</td></tr>
+<tr class="separator:a11c607e184f32d4fc908b940621cf87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb99e51b7672e4144b90b6586442b31"><td class="memItemLeft" align="right" valign="top">constexpr const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a7bb99e51b7672e4144b90b6586442b31">getScriptsDirectory</a> () const</td></tr>
+<tr class="separator:a7bb99e51b7672e4144b90b6586442b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835e753b6fd66658e8bb4b856c187513"><td class="memItemLeft" align="right" valign="top">constexpr std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#a835e753b6fd66658e8bb4b856c187513">getScriptsURI</a> () const</td></tr>
+<tr class="separator:a835e753b6fd66658e8bb4b856c187513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:afba7e09754308ab77b33f0e2eebfad63"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1VirtualFS.html#afba7e09754308ab77b33f0e2eebfad63">APP_URI</a> {&quot;app://&quot;}</td></tr>
 <tr class="separator:afba7e09754308ab77b33f0e2eebfad63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac94bdc8512e3c185d3f13ccdb994e787"></a>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae5e6a9ec4bf37a570d9d2730a5256ed3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -121,49 +125,92 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void destroyImage </td>
+          <td class="memname">VirtualFS </td>
           <td>(</td>
-          <td class="paramtype">std::byte *&#160;</td>
-          <td class="paramname"><em>image</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1VirtualFSConfiguration.html">VirtualFSConfiguration</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Vireo &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vireo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Frees an image buffer allocated by <a class="el" href="classlysa_1_1VirtualFS.html#ad0885203ff0fb0c4759cfa86791747c9">loadRGBAImage()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8da9cf42d466900d16e924ea43d03fc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroyImage </td>
+          <td>(</td>
+          <td class="paramtype">std::byte *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frees an image buffer allocated by <a class="el" href="classlysa_1_1VirtualFS.html#afda3dfcc033c02f84a1409b6831303dc">loadImage()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>Pointer previously returned by <a class="el" href="classlysa_1_1VirtualFS.html#ad0885203ff0fb0c4759cfa86791747c9">loadRGBAImage()</a> (may be nullptr). </td></tr>
+    <tr><td class="paramname">image</td><td>Pointer previously returned by <a class="el" href="classlysa_1_1VirtualFS.html#afda3dfcc033c02f84a1409b6831303dc">loadImage()</a> </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a3d2b9f980676bf0c26130c636e23417b"></a>
+<a class="anchor" id="a27565c6df869a7ab51b96645ebbbbe74"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool dirExists </td>
+          <td class="memname">bool directoryExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dirPath</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tests whether a directory exists at the given path or URI.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirPath</td><td>URI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the file exists; false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4adc179b4715134b72d018ac21d1843f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fileExists </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Tests whether a directory exists at the given path or URI.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -172,31 +219,7 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the directory exists; false otherwise. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ad6f89348619dbebdfd083c88027ce8c7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool fileExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>True if the directory exists; false otherwise.</dd></dl>
 <p>Tests whether a regular file exists at the given path or URI.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -208,7 +231,25 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a16b31a995a7f7f2f4d6ecf8d24c4bd61"></a>
+<a class="anchor" id="a11c607e184f32d4fc908b940621cf87f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resolves a path or app:// URI to a concrete OS path.</p>
+<p>Implementations may expand environment variables, normalize separators, and map app:// to the application data/assets directory. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bb99e51b7672e4144b90b6586442b31"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -216,32 +257,22 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string getPath </td>
+          <td class="memname">constexpr const std::string&amp; getScriptsDirectory </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Resolves a path or app:// URI to a concrete OS path.</p>
-<p>Implementations may expand environment variables, normalize separators, and map app:// to the application data/assets directory.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filepath</td><td>URI. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Resolved OS path suitable for file I/O APIs. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a089c68d398f16b3fbd44aa933f2f549a"></a>
+<a class="anchor" id="a835e753b6fd66658e8bb4b856c187513"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -249,7 +280,27 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void loadBinaryData </td>
+          <td class="memname">constexpr std::string getScriptsURI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15b559157fec81edd176095e558975c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadBinaryData </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em>, </td>
@@ -263,14 +314,9 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Loads the entire file contents into a byte buffer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -283,15 +329,46 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0885203ff0fb0c4759cfa86791747c9"></a>
+<a class="anchor" id="a7ecfbca2319b4ce36148e7a28af16c83"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::byte* loadRGBAImage </td>
+          <td class="memname">void loadBinaryData </td>
+          <td>(</td>
+          <td class="paramtype">std::ifstream &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads the entire file contents into a byte buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td><a class="el" href="classlysa_1_1Input.html">Input</a> stream. </td></tr>
+    <tr><td class="paramname">out</td><td>Destination buffer; its contents are replaced by the file bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afda3dfcc033c02f84a1409b6831303dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::byte* loadImage </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em>, </td>
@@ -317,17 +394,12 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Loads an image and returns an allocated RGBA (8‑bit per channel) buffer.</p>
-<p>The caller owns the returned memory and must release it with <a class="el" href="classlysa_1_1VirtualFS.html#ac94bdc8512e3c185d3f13ccdb994e787">destroyImage()</a>.</p>
+<p>The caller owns the returned memory and must release it with <a class="el" href="classlysa_1_1VirtualFS.html#a8da9cf42d466900d16e924ea43d03fc2">destroyImage()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filepath</td><td>URI. </td></tr>
@@ -341,26 +413,70 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a198c3897e46a3cecec3c23761c2faafe"></a>
+<a class="anchor" id="a1746ccd0e43693e99ba79fe19a7c2e47"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::ifstream openReadStream </td>
+          <td class="memname">void loadScript </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scriptName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a96c60e2038d15c07b9df05ff24be43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shaderName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4458bdd66060ac502a5ca8836ac6d586"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ifstream openReadStream </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Opens an input stream for reading the file at path or URI.</p>
 <p>The returned stream is opened in binary mode unless the implementation states otherwise. Callers should check stream.is_open() (or its state) to ensure the file was successfully opened.</p>
@@ -374,26 +490,18 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6b51c9fbcd569967a4797c76efbc042b"></a>
+<a class="anchor" id="ab16647787258ff89d09d2c8b520a7384"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::ofstream openWriteStream </td>
+          <td class="memname">std::ofstream openWriteStream </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Opens an output stream for writing the file at path or URI.</p>
 <p>The returned stream is typically opened in binary mode and may create intermediate directories depending on platform support. Callers should check stream.is_open() (or its state) to ensure the file was successfully opened.</p>
@@ -407,26 +515,18 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a092437c972147966cb65039ed5555853"></a>
+<a class="anchor" id="a3d038e916f081a5b9bdce0f0020a5cb2"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string parentPath </td>
+          <td class="memname">std::string parentPath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Returns the parent directory of the provided path or URI.</p>
 <p>For app:// URIs, the parent is computed after resolution. Trailing separators are ignored.</p>
@@ -468,7 +568,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

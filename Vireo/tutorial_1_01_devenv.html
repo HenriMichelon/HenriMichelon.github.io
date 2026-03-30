@@ -64,12 +64,14 @@ $(document).ready(function(){initNavTree('tutorial_1_01_devenv.html',''); initRe
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Since Vireo currently only supports Microsoft Windows this tutorial assumes that you use this operating system.</p>
-<p>We will be using CMake which means that you can use <a href="https://visualstudio.microsoft.com/fr/">Microsoft Visual Studio</a> or <a href="https://www.jetbrains.com/clion/">Jetbrains CLion</a> to edit and compile your code. Note that you need to install the CMake component for Visual Studio.</p>
-<p>Since Vireo implements a DirectX 12 backend under Windows you need to install <a href="https://visualstudio.microsoft.com/fr/">Microsoft Visual C++ 2022 (MSCV 19+)</a>. Vireo can be compiled with LLVM but only with the Vulkan back-end alone.</p>
-<p>For DirectX 12 install the "Game Development with C++" component for Visual Studio.</p>
-<p>For Vulkan install the <a href="https://vulkan.lunarg.com/">Vulkan SDK</a></p>
-<p>The CMake scripts will automatically install the <a href="https://github.com/g-truc/glm">GLM</a> library used in this tutorial</p>
+<div class="textblock"><h2>All platforms </h2>
+<p>Install the <a href="https://vulkan.lunarg.com/">Vulkan SDK</a>.</p>
+<h2>Microsoft Window </h2>
+<p>Vireo can be compiled with MSVC 19+ ou <a href="https://github.com/mstorsjo/llvm-mingw/releases">LLVM/MingW 21+</a>.</p>
+<p>Since Vireo implements a DirectX 12 backend under Windows you need to install <a href="https://visualstudio.microsoft.com/fr/">Microsoft Visual C++ 2022 (MSCV 19+)</a> event if you use LLVM : install the "Game Development with C++" component for Visual Studio.</p>
+<p>The project uses CMake which means that you that you need to install the CMake component if you use Visual Studio. You can use <a href="https://www.jetbrains.com/clion/">Jetbrains CLion</a> or Visual Studio Code but be warned that the VSCode support for C++ modules is far from perfect.</p>
+<h2>Linux </h2>
+<p>Install the Vulkan SDK, llvm, cmake, ninja and vulkan-validation-layers packages. For Vulkan you must execute the <code>setup-env.sh</code> of the Vulkan SDK in for profile script (.bash_profile, .zprofile, ...)</p>
 <p>Next : <a class="el" href="tutorial_1_02_project.html">Setting up the project</a> </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -77,7 +79,7 @@ $(document).ready(function(){initNavTree('tutorial_1_01_devenv.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_tutorial_1.html">&quot;Hello Triangle&quot; tutorial</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:41:17 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

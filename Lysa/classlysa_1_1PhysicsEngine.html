@@ -92,11 +92,11 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysicsEngine.html',''); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac8617e21ec3bf1788339e763cd595f8f"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#ac8617e21ec3bf1788339e763cd595f8f">createScene</a> (const <a class="el" href="structlysa_1_1DebugConfig.html">DebugConfig</a> &amp;debugConfig) = 0</td></tr>
-<tr class="separator:ac8617e21ec3bf1788339e763cd595f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d067949cb3d44df1db9a6b06f0e8a0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classlysa_1_1PhysicsWorld.html">PhysicsWorld</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#ac3d067949cb3d44df1db9a6b06f0e8a0">createScene</a> (const DebugConfiguration &amp;debugConfig) = 0</td></tr>
+<tr class="separator:ac3d067949cb3d44df1db9a6b06f0e8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa485cfa3a022c5fc325568909f1f2dac"><td class="memItemLeft" align="right" valign="top">virtual PhysicsMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#aa485cfa3a022c5fc325568909f1f2dac">createMaterial</a> (float friction=0.5f, float restitution=0.0f) const = 0</td></tr>
 <tr class="separator:aa485cfa3a022c5fc325568909f1f2dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0159898a1944664e40537e597bcb4bbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a0159898a1944664e40537e597bcb4bbd">setRestitutionCombineMode</a> (PhysicsMaterial *physicsMaterial, <a class="el" href="namespacelysa.html#a6e35783cf2f5aa6e003074cb22fbafe7">CombineMode</a> combineMode) const = 0</td></tr>
+<tr class="memitem:a0159898a1944664e40537e597bcb4bbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a0159898a1944664e40537e597bcb4bbd">setRestitutionCombineMode</a> (PhysicsMaterial *physicsMaterial, <a class="el" href="namespacelysa.html#a446b135856ad07e57d2e9071439aa77e">CombineMode</a> combineMode) const = 0</td></tr>
 <tr class="separator:a0159898a1944664e40537e597bcb4bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35f8c949fba0b395f24843e97b39e404"><td class="memItemLeft" align="right" valign="top">virtual PhysicsMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a35f8c949fba0b395f24843e97b39e404">duplicateMaterial</a> (const PhysicsMaterial *orig) const = 0</td></tr>
 <tr class="separator:a35f8c949fba0b395f24843e97b39e404"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5754113146dab7eb69d5eda376f95ab3"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; PhysicsEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a5754113146dab7eb69d5eda376f95ab3">create</a> (const <a class="el" href="structlysa_1_1PhysicsConfiguration.html">PhysicsConfiguration</a> &amp;config)</td></tr>
-<tr class="separator:a5754113146dab7eb69d5eda376f95ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0645ad08062d573d18b8c8b7bcc6012"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; PhysicsEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#ae0645ad08062d573d18b8c8b7bcc6012">create</a> (const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;config)</td></tr>
+<tr class="separator:ae0645ad08062d573d18b8c8b7bcc6012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ce85ff2332b895b5d19c1b3b53c438"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacelysa.html#a769a94a48b5e0161e77c388a5fb42bed">PhysicsEngineType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a54ce85ff2332b895b5d19c1b3b53c438">getEngineType</a> ()</td></tr>
 <tr class="separator:a54ce85ff2332b895b5d19c1b3b53c438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -135,7 +135,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5754113146dab7eb69d5eda376f95ab3"></a>
+<a class="anchor" id="ae0645ad08062d573d18b8c8b7bcc6012"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,7 +145,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static std::unique_ptr&lt;PhysicsEngine&gt; create </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1PhysicsConfiguration.html">PhysicsConfiguration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;&#160;</td>
           <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>
@@ -156,13 +156,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a physics engine using the active backend. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">config</td><td>Physics configuration (layers/collision table, etc.). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> heap‑allocated engine instance. </dd></dl>
+<p>Creates a physics engine using the active backend. </p>
 
 </div>
 </div>
@@ -209,7 +203,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8617e21ec3bf1788339e763cd595f8f"></a>
+<a class="anchor" id="ac3d067949cb3d44df1db9a6b06f0e8a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -217,9 +211,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a>&gt; createScene </td>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classlysa_1_1PhysicsWorld.html">PhysicsWorld</a>&gt; createScene </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1DebugConfig.html">DebugConfig</a> &amp;&#160;</td>
+          <td class="paramtype">const DebugConfiguration &amp;&#160;</td>
           <td class="paramname"><em>debugConfig</em></td><td>)</td>
           <td></td>
         </tr>
@@ -230,9 +224,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a new physics scene/world with optional debug settings. </p>
+<p>Creates a new physics world with optional debug settings. </p>
 
-<p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#a33a0442198e43eba9a5769ddf638e244">lysa::JoltPhysicsEngine::createScene()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a33a0442198e43eba9a5769ddf638e244">lysa::PhysXPhysicsEngine::createScene()</a></p>
+<p>Implemented in <a class="el" href="classlysa_1_1JoltPhysicsEngine.html#ac6de4a2f5bee368f62eaf94dcacc2e3a">lysa::JoltPhysicsEngine::createScene()</a>, <a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#ac6de4a2f5bee368f62eaf94dcacc2e3a">lysa::PhysXPhysicsEngine::createScene()</a></p>
 
 </div>
 </div>
@@ -303,7 +297,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a6e35783cf2f5aa6e003074cb22fbafe7">CombineMode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a446b135856ad07e57d2e9071439aa77e">CombineMode</a>&#160;</td>
           <td class="paramname"><em>combineMode</em>&#160;</td>
         </tr>
         <tr>
@@ -330,7 +324,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PhysicsEngine.html">PhysicsEngine</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

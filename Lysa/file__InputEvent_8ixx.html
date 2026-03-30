@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 1.7.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa/src/lysa/InputEvent.ixx File Reference</title>
+<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa_engine/src/InputEvent.ixx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,6 +61,7 @@ $(document).ready(function(){initNavTree('file__InputEvent_8ixx.html',''); initR
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enums</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
     <div class="title">InputEvent.ixx File Reference</div>
@@ -71,17 +72,17 @@ $(document).ready(function(){initNavTree('file__InputEvent_8ixx.html',''); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEvent.html">InputEvent</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEvent.html">InputEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEventGamepadButton.html">InputEventGamepadButton</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEventGamepadButton.html">InputEventGamepadButton</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEventKey.html">InputEventKey</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEventKey.html">InputEventKey</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEventMouse.html">InputEventMouse</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEventMouseButton.html">InputEventMouseButton</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEventMouseButton.html">InputEventMouseButton</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEventMouseMotion.html">InputEventMouseMotion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1InputEventMouseMotion.html">InputEventMouseMotion</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1InputEventTextInput.html">InputEventTextInput</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -89,32 +90,234 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacelysa"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html">lysa</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enums</h2></td></tr>
+<tr class="memitem:a47a0805175dd849e7e5d41fdd81eb24e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24e">InputEventType</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24ea3b5949e0c26b87767a4752a276de9570">KEY</a> = 0, 
+<a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24ea6a52684199a74ef0bd3415fe6a76da4f">MOUSE_MOTION</a> = 1, 
+<a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24ea3421ce503e9731d435babad896b7aef8">MOUSE_BUTTON</a> = 2, 
+<a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24ea9973b1f9e12625b79dbfa78635e51e35">GAMEPAD_BUTTON</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a47a0805175dd849e7e5d41fdd81eb24ea7dd471445dde85d557e653dcd92da3f8">TEXT_INPUT</a> = 4
+<br />
+ }</td></tr>
+<tr class="separator:a47a0805175dd849e7e5d41fdd81eb24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc87bdc46e9dfa679a56d2e2684bcce"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a4bc87bdc46e9dfa679a56d2e2684bcce">KeyModifier</a> : uint8 { <a class="el" href="namespacelysa.html#a4bc87bdc46e9dfa679a56d2e2684bccea46afff2b309b8b16a46d812172a9235c">SHIFT</a> = 0x0001, 
+<a class="el" href="namespacelysa.html#a4bc87bdc46e9dfa679a56d2e2684bcceac861cd34025f9002df5912d623326130">CONTROL</a> = 0x0002, 
+<a class="el" href="namespacelysa.html#a4bc87bdc46e9dfa679a56d2e2684bcceadfbfc9cc7a235560f04cb1a5faf1ec3e">ALT</a> = 0x0004, 
+<a class="el" href="namespacelysa.html#a4bc87bdc46e9dfa679a56d2e2684bcceafc91b14eef9c58c4cad8fdf87b4c0bea">SUPER</a> = 0x0008
+ }</td></tr>
+<tr class="separator:a4bc87bdc46e9dfa679a56d2e2684bcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dceb91cc8c9e33c1538d5050800f4c7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7">Key</a> : uint32 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a8b8daa06bdfb9245dc7c1030e6bf845c">KEY_NONE</a> = 0, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a01d2889f9a7550008ad6140c41e733de">KEY_SPACE</a> = 1, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa61073b42b4479c40c378d96fad183bc">KEY_DASH</a> = 2, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae961821c59bf29c4c5aa44e964549554">KEY_PIPE</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aeb8aae681ab9fbf1111ac69841330e0b">KEY_APOSTROPHE</a> = 4, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7af92cd55661a716ee7466f960896041e3">KEY_COMMA</a> = 5, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a7680b8131b831989b5068d0832b99bd4">KEY_PERIOD</a> = 6, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7abc6aa00a14ba7f0fe4c315557765c748">KEY_QUESTIONMARK</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a6b30f8af6c880e1aca01b91aa13c6ff9">KEY_0</a> = 8, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a35bcc2bc85513df4f3897a9d64a9c51c">KEY_1</a> = 9, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2333d7c312aa98622c41e74c5d13e8de">KEY_2</a> = 10, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aef054680a9be7da17d196e15aec894f8">KEY_3</a> = 11, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae9f20352b4ef69ae68b9ff44abadfd79">KEY_4</a> = 12, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aed864c0209ba46546ba112f6c36e0cc4">KEY_5</a> = 13, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2fe7fe99bcb0fd90bf4234be9e4ce5be">KEY_6</a> = 14, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae78c88108d428cb8066e7a056195f489">KEY_7</a> = 15, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aab8917d426f9be27c95c0d3810006d7b">KEY_8</a> = 16, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a601382e2da6215882c129b43b3384611">KEY_9</a> = 17, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2a2ea4c0ed101dcec44d5ec7de0329ef">KEY_SEMICOLON</a> = 18, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7acdf916d73b721baa46f5f54bdcc0d39b">KEY_EQUAL</a> = 19, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa7b3a3d0503a46bec51c6e3da95747cc">KEY_A</a> = 20, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a10072b5ee7aa1faf316434ecc9e2bb3a">KEY_B</a> = 21, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a9cabc5fc0d1f7f6a78e78b8ff29dbb61">KEY_C</a> = 22, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2fd73a4d527efe137e8f259db2092766">KEY_D</a> = 23, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2af9840d90c49239339bfd42f9f32868">KEY_E</a> = 24, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a3c069efeb1638c2ab0d2a50ff45b529f">KEY_F</a> = 25, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a4ec980867be1d5bded2bccdee2ebd601">KEY_G</a> = 26, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a41d1aa573d29ca6a9eb429a680dc53cd">KEY_H</a> = 27, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2c98fd67709a9fd5409498d4f7175877">KEY_I</a> = 28, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7abb3108883bee68e265b554542484c5d7">KEY_J</a> = 29, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a6b0799a9923c55f8a73550a371ea69f6">KEY_K</a> = 30, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aece16de35a5ea11f9b228c9376bebc62">KEY_L</a> = 31, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a0d94112555886427204ad0c0711ca327">KEY_M</a> = 32, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa606b8c6deaec8077387975d195cd824">KEY_N</a> = 33, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae7edd672641b587364ea4a0c89388290">KEY_O</a> = 34, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a0a4c7291c92b7fc84da27a363dc53fa6">KEY_P</a> = 35, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ac8234231b36474d3666ad56752fe6f5e">KEY_Q</a> = 36, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa3ec8a2ffd5b0e200db5ebe7b65515ff">KEY_R</a> = 37, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7abb2f0ce8efc3067757dbf091437f89f5">KEY_S</a> = 38, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a6167a8727e73df1eb96f19c2460766c9">KEY_T</a> = 39, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad4961a6c7ea9d008812aaaa8c4ea9730">KEY_U</a> = 40, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7afa1c237398bdfc48e5c1a55ce4a977fe">KEY_V</a> = 41, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2e6a652ccd7afc5ce75ac4d902b6a60a">KEY_W</a> = 42, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a480a807305121d41673b8c208898f497">KEY_X</a> = 43, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a5d44524b2a6090fa97aa9353d69f67a3">KEY_Y</a> = 44, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aadc60d2de1d019604547c0df88f84cda">KEY_Z</a> = 45, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a03da438c85c9fc0ebda53d0c669d7c52">KEY_LEFT_BRACKET</a> = 46, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7af621aad7268fdcafe3a88bc4de7012cd">KEY_BACKSLASH</a> = 47, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2ec43a67eb0c7d2b4576708e6d4a6b70">KEY_RIGHT_BRACKET</a> = 48, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a9491ca146d57afe324bd2c63676450ce">KEY_GRAVE_ACCENT</a> = 49, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a3a471c8b61a5f730dcbdd50fe53f3ab7">KEY_ESCAPE</a> = 50, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2a662d23aadd7106a3a2afdfd5d426ed">KEY_ENTER</a> = 51, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a60c75f9c8eded88ef76c0c94da27963c">KEY_TAB</a> = 52, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa3cd0158e01f834cebcfb3fc5578df4b">KEY_BACKSPACE</a> = 53, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a26f2c18a3a0a7eabf7bd11f0ec93be78">KEY_INSERT</a> = 54, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae7a3a4540031b038014294aa6743a7a4">KEY_DELETE</a> = 55, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a> = 56, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a> = 57, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a> = 58, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a0848a442d907968b211b97bc2bd88acd">KEY_UP</a> = 59, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad435c2e06f3d05728ed52ede8a68295b">KEY_PAGE_UP</a> = 60, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ada883d03c9fb53deb33064a13ca97639">KEY_PAGE_DOWN</a> = 61, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad5b83418c285e43af5d3a87b4d4049d7">KEY_HOME</a> = 62, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aa8adb6fcb92dec58fb19410eacfdd403">KEY_END</a> = 63, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7abc5ade8c1b7fc0d409201d5fc46e02cc">KEY_CAPS_LOCK</a> = 64, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a34a1a5fd5080d4e7923d9e93d7b17e19">KEY_SCROLL_LOCK</a> = 65, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad8909c03dc1731c8ce83220590f9f9dc">KEY_NUM_LOCK</a> = 66, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a3d24a3f2d5bad01abd32bee373c4e8aa">KEY_PRINT_SCREEN</a> = 67, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad26d172dc2cd90741c3939ca4fab0b84">KEY_PAUSE</a> = 68, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7afcf70bc39c0032de8a1c6452ac9860a5">KEY_F1</a> = 69, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a87897fd25282941e1a9bf72b9f64559a">KEY_F2</a> = 70, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a965c99b1f4fc05cec09ef61b0af8e74a">KEY_F3</a> = 71, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a01bce78a73ad136a7b42941297aff373">KEY_F4</a> = 72, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a6a69ea34f5d1372692bf040637e57c8f">KEY_F5</a> = 73, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a247a20a9998f080827dd34004abc2f9a">KEY_F6</a> = 74, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a34a07203a0a4f3e996b44e9a4fcfd1c6">KEY_F7</a> = 75, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a9eaf4e9e3d8451fd1332c013d12c1375">KEY_F8</a> = 76, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a160e82eea885870bfa4924c27040cd7f">KEY_F9</a> = 77, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a3b922025c26b38585ab140c7e40b291c">KEY_F10</a> = 78, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad54743bc4e7f9279abf671cc2a091ce1">KEY_F11</a> = 79, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a835f8397baa58fd73ff9c268d6458add">KEY_F12</a> = 80, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a0183803c03fd54eb00afddb3eb4bbe0d">KEY_KP_0</a> = 81, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a5cacda1ad8e580a9e3e26d2980e68845">KEY_KP_1</a> = 82, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7afaf1ccc180b2654a04090b165e8514b5">KEY_KP_2</a> = 83, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a89b4a3d234df47526900fc306ecdb1cc">KEY_KP_3</a> = 84, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a48e7f8451e9031a9243bca0d7f09e71a">KEY_KP_4</a> = 85, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2766e47455467e5a7347b0a10e80c02f">KEY_KP_5</a> = 86, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad76cfb2fcef244219e848b4cf94b0da5">KEY_KP_6</a> = 87, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a2b29be82dc8f16325c21ae7e0b9f180b">KEY_KP_7</a> = 88, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ae34f4290a8597189b4802cf88a6f4b52">KEY_KP_8</a> = 89, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a868366a71dbce089ff5c0796a42be8f2">KEY_KP_9</a> = 90, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aaa8f2689ee47548b3cb9b61c9e9fd703">KEY_KP_PERIOD</a> = 91, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a27f7f733e52a8b8eca6ff06f1de59557">KEY_KP_DIVIDE</a> = 92, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7acd45ba97a4b734a77f4c8e60d6d246c5">KEY_KP_MULTIPLY</a> = 93, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad6685e41b853460dce379a7bbce3fb82">KEY_KP_SUBTRACT</a> = 94, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad33598a57ea6543a541da76c540e0550">KEY_KP_ADD</a> = 95, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a7b48744ed35a764dbae96cfea51cc682">KEY_KP_ENTER</a> = 96, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7aac5505d2c513af75d3b3e97fe8fc6b0c">KEY_KP_EQUAL</a> = 97, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a5d5eb3601a49913c3ab0f9bcbdc5918a">KEY_LEFT_SHIFT</a> = 98, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a7c9c57571c47a267791fabb5e5dca6f0">KEY_LEFT_CONTROL</a> = 99, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a4789cb1577c6b157cca51831266d2e71">KEY_LEFT_ALT</a> = 100, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a81142e22fad8478646b7dec2d992f671">KEY_LEFT_SUPER</a> = 101, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a125ed6244c499a097a3e1cb111c8fa9c">KEY_RIGHT_SHIFT</a> = 102, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a7952b899556457f74a9ed51a0484a323">KEY_RIGHT_CONTROL</a> = 103, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7a4f14c2020a65b3498ad86cf66e5f0ed5">KEY_RIGHT_ALT</a> = 104, 
+<a class="el" href="namespacelysa.html#a5dceb91cc8c9e33c1538d5050800f4c7ad32216b5168b7bc799899dc2dc601312">KEY_RIGHT_SUPER</a> = 105
+<br />
+ }</td></tr>
+<tr class="separator:a5dceb91cc8c9e33c1538d5050800f4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46723f45391d8da32877420420e66ed"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66ed">MouseButton</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66edab50339a10e1de285ac99d4c3990b8693">NONE</a> = 0b0000, 
+<a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66eda684d325a7303f52e64011467ff5c5758">LEFT</a> = 0b0001, 
+<a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66eda21507b40c80068eda19865706fdc2403">RIGHT</a> = 0b0010, 
+<a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66eda43eedd8685eb86592022f8da962e3474">MIDDLE</a> = 0b0100, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#ac46723f45391d8da32877420420e66eda0f0dd2bcb848ba94248d660bada66b34">WHEEL</a> = 0b1000
+<br />
+ }</td></tr>
+<tr class="separator:ac46723f45391d8da32877420420e66ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e339e89177de831cfe98c20179b357d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357d">GamepadButton</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29">A</a> = 0, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da04dd53a8e6c2306e9bbf944c1d6047f2">CROSS</a> = A, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da9d5ed678fe57bcca610140957afab571">B</a> = 1, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da0af50777920c1401ab975cab64c4d491">CIRCLE</a> = B, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da02129bb861061d1a052c592e2dc6b383">X</a> = 2, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da12dec4e1f7ec620651b2b95c440ffac0">SQUARE</a> = X, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da57cec4137b614c87cb4e24a3d003a3e0">Y</a> = 3, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da9bcd89070cae224dce305f5011659ef4">TRIANGLE</a> = Y, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357dac951270e425b15fc20c64da4341c1d89">LB</a> = 4, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da9ec4c0afd450ceac7adb81c3bcfc9732">L1</a> = LB, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357dac8ee22e1fc2165dfd3d2b04aef93b2f2">RB</a> = 5, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357dacda522d4353b166cc2dee84673307b4e">R1</a> = RB, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da1dd26f1f1790f0b56d5752fb0fbecef0">BACK</a> = 6, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357daf5a0c27de72c2f069afab055d743f647">SHARE</a> = BACK, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357dab078ffd28db767c502ac367053f6e0ac">START</a> = 7, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da3ed53fbeb1eab0443561b68ca0c0b5cf">MENU</a> = START, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357dac562607189d77eb9dfb707464c1e7b0b">LT</a> = 8, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7e6aa2d53f6ee2b1a34b017fa403cb76">L2</a> = LT, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da705610ed3e5ec724f5cb0d76a5fd3aa1">RT</a> = 9, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da8c6d22ff6f63fc6711cfa315cb80b314">R2</a> = RT, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da53f4f819b43470f230aea73335a5f091">DPAD_UP</a> = 10, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da5faad20a625bae1d890868782aae45ba">DPAD_RIGHT</a> = 11, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357daed0ea47a6800b933a16cd91169c338f7">DPAD_DOWN</a> = 12, 
+<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da2206bf25efcd102b0102f7ff4df45c99">DPAD_LEFT</a> = 13, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357daf447f5c03508de4d88e340390ba7c78f">LAST</a> = DPAD_LEFT
+<br />
+ }</td></tr>
+<tr class="separator:a8e339e89177de831cfe98c20179b357d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ae93653994769b4a6c5898d5dfa122"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ab5ae93653994769b4a6c5898d5dfa122">GamepadAxisJoystick</a> : uint8 { <a class="el" href="namespacelysa.html#ab5ae93653994769b4a6c5898d5dfa122a684d325a7303f52e64011467ff5c5758">LEFT</a> = 0, 
+<a class="el" href="namespacelysa.html#ab5ae93653994769b4a6c5898d5dfa122a21507b40c80068eda19865706fdc2403">RIGHT</a> = 1
+ }</td></tr>
+<tr class="separator:ab5ae93653994769b4a6c5898d5dfa122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3589cefe59be7948f8964666019c05"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05">GamepadAxis</a> : uint8 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05ae5815a16e50afa87f9a36ab8a52545c7">LEFT_X</a> = 0, 
+<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05adbc23e1293dc0846d28e1ea129344fcf">LEFT_Y</a> = 1, 
+<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05aea468ab59a115911fef1492a49e6bc59">RIGHT_X</a> = 2, 
+<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05a9dfcf221fddfd2f237b3fd736caa7809">RIGHT_Y</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05a87cefa1bf6e203cee834747ea138e766">LEFT_TRIGGER</a> = 4, 
+<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05a1c6f9e180caaad13119136f0193b64e0">RIGHT_TRIGGER</a> = 5, 
+<a class="el" href="namespacelysa.html#adb3589cefe59be7948f8964666019c05af447f5c03508de4d88e340390ba7c78f">LAST</a> = RIGHT_TRIGGER
+<br />
+ }</td></tr>
+<tr class="separator:adb3589cefe59be7948f8964666019c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a></td></tr>
+<tr class="separator:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb50251d5621798c220e93b94e52a732"><td class="memItemLeft" align="right" valign="top">export module lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#abb50251d5621798c220e93b94e52a732">input_event</a></td></tr>
 <tr class="separator:abb50251d5621798c220e93b94e52a732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd239f4aa10533df4a33f637230cc98"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#a7dd239f4aa10533df4a33f637230cc98">enums</a></td></tr>
-<tr class="separator:a7dd239f4aa10533df4a33f637230cc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21bdbea75043744b001a217717b591f6"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#a21bdbea75043744b001a217717b591f6">math</a></td></tr>
 <tr class="separator:a21bdbea75043744b001a217717b591f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae02c11ae87ec7d1d6d54e82c8a8deddb"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#ae02c11ae87ec7d1d6d54e82c8a8deddb">object</a></td></tr>
-<tr class="separator:ae02c11ae87ec7d1d6d54e82c8a8deddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219d73c6a72868b4eb9ed7b08565f607"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__InputEvent_8ixx.html#a219d73c6a72868b4eb9ed7b08565f607">types</a></td></tr>
 <tr class="separator:a219d73c6a72868b4eb9ed7b08565f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a7dd239f4aa10533df4a33f637230cc98"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">import lysa enums</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="abb50251d5621798c220e93b94e52a732"></a>
 <div class="memitem">
 <div class="memproto">
@@ -139,12 +342,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae02c11ae87ec7d1d6d54e82c8a8deddb"></a>
+<a class="anchor" id="a96e5f0eca87c2426370e0897ac7b8ca6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import lysa object</td>
+          <td class="memname">module</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -168,8 +371,8 @@ Variables</h2></td></tr>
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_626eab7fd05737612408b7bb64c9da31.html">lysa</a></li><li class="navelem"><a class="el" href="file__InputEvent_8ixx.html">InputEvent.ixx</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="file__InputEvent_8ixx.html">InputEvent.ixx</a></li>
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -66,10 +66,8 @@ $(document).ready(function(){initNavTree('classlysa_1_1Scene.html',''); initResi
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classlysa_1_1Scene-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Scene Class Reference</div>
@@ -78,105 +76,85 @@ $(document).ready(function(){initNavTree('classlysa_1_1Scene.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Scene orchestrator.</p><ul>
-<li>Track nodes added to the scene (cameras, lights, mesh instances, environment).</li>
-<li>Own GPU-side resources necessary for scene rendering (uniform buffers, descriptor sets).</li>
-<li>Build and maintain per-pipeline instance data and indirect draw commands.</li>
-<li>Perform frustum culling via compute pipelines and submit culled draws.</li>
-<li>Manage shadow-map renderers and their images.</li>
-</ul>
-<p>Thread-safety: unless stated otherwise, methods are intended to be called only from the render thread. </p>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Scene_1_1InstanceIndexConstant.html">InstanceIndexConstant</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Scene_1_1PipelineData.html">PipelineData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><p>Represents a 3D scene containing lights and mesh instances.</p>
+<p>The <a class="el" href="classlysa_1_1Scene.html">Scene</a> class manages the high-level representation of a scene, including its environment, lights, and mesh instances. It handles deferred operations for adding/removing instances across multiple frames. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Scene:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="classlysa_1_1Scene.png" usemap="#Scene_map" alt=""/>
+  <map id="Scene_map" name="Scene_map">
+<area href="classlysa_1_1UniqueResource.html" alt="UniqueResource" shape="rect" coords="0,112,132,136"/>
+<area href="classlysa_1_1UnmanagedResource.html" alt="UnmanagedResource" shape="rect" coords="0,56,132,80"/>
+<area href="structlysa_1_1Resource.html" alt="Resource" shape="rect" coords="0,0,132,24"/>
+  </map>
+ </div></div>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3be8a7fc471c4e218a662debd459d26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#aa3be8a7fc471c4e218a662debd459d26">Scene</a> (const <a class="el" href="structlysa_1_1SceneConfiguration.html">SceneConfiguration</a> &amp;config, const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;renderingConfig, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> framesInFlight, const vireo::Viewport &amp;viewport, const vireo::Rect &amp;scissors)</td></tr>
-<tr class="separator:aa3be8a7fc471c4e218a662debd459d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17e6200ad38a01d4826619821d04e78"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#aa17e6200ad38a01d4826619821d04e78">getCurrentCamera</a> () const</td></tr>
-<tr class="separator:aa17e6200ad38a01d4826619821d04e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9554097df3d2a362acb7c9efabfcb8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a7a9554097df3d2a362acb7c9efabfcb8">getViewport</a> () const</td></tr>
-<tr class="separator:a7a9554097df3d2a362acb7c9efabfcb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957d51bc0bd4b064ebfef3a4e8334922"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a957d51bc0bd4b064ebfef3a4e8334922">getScissors</a> () const</td></tr>
-<tr class="separator:a957d51bc0bd4b064ebfef3a4e8334922"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d60397d8c8111a5ced543fbac6c2b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a13d60397d8c8111a5ced543fbac6c2b8">addNode</a> (const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Node.html">Node</a> &gt; &amp;node)</td></tr>
-<tr class="separator:a13d60397d8c8111a5ced543fbac6c2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac06f7cf3c812e3ffd413b25bf77c0eac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ac06f7cf3c812e3ffd413b25bf77c0eac">removeNode</a> (const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Node.html">Node</a> &gt; &amp;node)</td></tr>
-<tr class="separator:ac06f7cf3c812e3ffd413b25bf77c0eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddd47eec0f90a7d5314902f629e27db"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a5ddd47eec0f90a7d5314902f629e27db">activateCamera</a> (const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Camera.html">Camera</a> &gt; &amp;camera)</td></tr>
-<tr class="separator:a5ddd47eec0f90a7d5314902f629e27db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e956c5952830b2d6bf6ec22fb22494"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a62e956c5952830b2d6bf6ec22fb22494">update</a> (const vireo::CommandList &amp;commandList)</td></tr>
-<tr class="separator:a62e956c5952830b2d6bf6ec22fb22494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017ae550160cafb3c1f31b08d2756a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a017ae550160cafb3c1f31b08d2756a4f">compute</a> (vireo::CommandList &amp;commandList) const</td></tr>
-<tr class="separator:a017ae550160cafb3c1f31b08d2756a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74bd18fcdac83b553f987ee4ad090e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a74bd18fcdac83b553f987ee4ad090e47">setInitialState</a> (const vireo::CommandList &amp;commandList) const</td></tr>
-<tr class="separator:a74bd18fcdac83b553f987ee4ad090e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331521b183fbc99b800c569393d25c5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a331521b183fbc99b800c569393d25c5c">drawOpaquesModels</a> (vireo::CommandList &amp;commandList, const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;pipelines) const</td></tr>
-<tr class="separator:a331521b183fbc99b800c569393d25c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d1256709102028b4855a4fff28cbde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a5d1256709102028b4855a4fff28cbde2">drawTransparentModels</a> (vireo::CommandList &amp;commandList, const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;pipelines) const</td></tr>
-<tr class="separator:a5d1256709102028b4855a4fff28cbde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a850d054484788b5e30d4dfccb5d15fef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a850d054484788b5e30d4dfccb5d15fef">drawShaderMaterialModels</a> (vireo::CommandList &amp;commandList, const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;pipelines) const</td></tr>
-<tr class="separator:a850d054484788b5e30d4dfccb5d15fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a254a860e5c5eb0cdefa9fe12ffc89bc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a254a860e5c5eb0cdefa9fe12ffc89bc5">drawModels</a> (vireo::CommandList &amp;commandList, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> set, const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; vireo::Buffer &gt;&gt; &amp;culledDrawCommandsBuffers, const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; vireo::Buffer &gt;&gt; &amp;culledDrawCommandsCountBuffers, const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; <a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a> &gt;&gt; &amp;frustumCullingPipelines) const</td></tr>
-<tr class="separator:a254a860e5c5eb0cdefa9fe12ffc89bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a239be8345eeb316571c97ee323a9e7ed"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a239be8345eeb316571c97ee323a9e7ed">getPipelineIds</a> () const</td></tr>
-<tr class="separator:a239be8345eeb316571c97ee323a9e7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124f43d6d93ed2813dbece4198dccf99"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a124f43d6d93ed2813dbece4198dccf99">isMaterialsUpdated</a> () const</td></tr>
-<tr class="separator:a124f43d6d93ed2813dbece4198dccf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5661a58e871773676c843492f53edd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ab5661a58e871773676c843492f53edd2">resetMaterialsUpdated</a> ()</td></tr>
-<tr class="separator:ab5661a58e871773676c843492f53edd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c1e0c5a30819b145999c19e350a7cea"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a3c1e0c5a30819b145999c19e350a7cea">getDescriptorSet</a> () const</td></tr>
-<tr class="separator:a3c1e0c5a30819b145999c19e350a7cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aab4f4cdacdb6b178cc452e9b793c2c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a4aab4f4cdacdb6b178cc452e9b793c2c">getDescriptorSetOptional1</a> () const</td></tr>
-<tr class="separator:a4aab4f4cdacdb6b178cc452e9b793c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5eabb06925f76a829823b39c4e52d45"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ad5eabb06925f76a829823b39c4e52d45">getShadowMapRenderers</a> () const</td></tr>
-<tr class="separator:ad5eabb06925f76a829823b39c4e52d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c81fe96daedbb703b432e96f5cb7545"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a7c81fe96daedbb703b432e96f5cb7545">~Scene</a> () = default</td></tr>
-<tr class="separator:a7c81fe96daedbb703b432e96f5cb7545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103c4634fc764c83f70aa176e86d12e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a103c4634fc764c83f70aa176e86d12e9">Scene</a> (Scene &amp;) = delete</td></tr>
-<tr class="separator:a103c4634fc764c83f70aa176e86d12e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e7560d4dfd53c76a87ef9369a4efcb9"><td class="memItemLeft" align="right" valign="top">Scene &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a1e7560d4dfd53c76a87ef9369a4efcb9">operator=</a> (Scene &amp;) = delete</td></tr>
-<tr class="separator:a1e7560d4dfd53c76a87ef9369a4efcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0946ad3e1a18cbb006e806dadb07da7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a0946ad3e1a18cbb006e806dadb07da7e">Scene</a> (const <a class="el" href="structlysa_1_1SceneConfiguration.html">SceneConfiguration</a> &amp;config={})</td></tr>
+<tr class="separator:a0946ad3e1a18cbb006e806dadb07da7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4b708e530f6ab49e97ce6ed7b1d94e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a7c4b708e530f6ab49e97ce6ed7b1d94e">~Scene</a> () override</td></tr>
+<tr class="separator:a7c4b708e530f6ab49e97ce6ed7b1d94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f3e6cfe2da77cbd07898d31a5b03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a21f3e6cfe2da77cbd07898d31a5b03f4">setEnvironment</a> (const <a class="el" href="structlysa_1_1Environment.html">Environment</a> &amp;environment)</td></tr>
+<tr class="separator:a21f3e6cfe2da77cbd07898d31a5b03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ccd16e44e2bc1808d17a61efcf57a7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a3ccd16e44e2bc1808d17a61efcf57a7f">haveInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;meshInstance) const</td></tr>
+<tr class="separator:a3ccd16e44e2bc1808d17a61efcf57a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b1257e6f5e0cd59942dfc9024025d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a88b1257e6f5e0cd59942dfc9024025d6">addInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;meshInstance, bool async=false)</td></tr>
+<tr class="separator:a88b1257e6f5e0cd59942dfc9024025d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec02456dc31ff974bd351a8d8ca31ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a8ec02456dc31ff974bd351a8d8ca31ec">updateInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;meshInstance)</td></tr>
+<tr class="separator:a8ec02456dc31ff974bd351a8d8ca31ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af00fb4fc8e1f8d8f3eb3a2ae04a735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a3af00fb4fc8e1f8d8f3eb3a2ae04a735">removeInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;meshInstance, bool async=false)</td></tr>
+<tr class="separator:a3af00fb4fc8e1f8d8f3eb3a2ae04a735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89986a86fe15a4e0ba7ba0c985f8cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#af89986a86fe15a4e0ba7ba0c985f8cad">addLight</a> (const <a class="el" href="structlysa_1_1Light.html">Light</a> &amp;light)</td></tr>
+<tr class="separator:af89986a86fe15a4e0ba7ba0c985f8cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b8e21b21758bf009488083ac21b673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a27b8e21b21758bf009488083ac21b673">removeLight</a> (const <a class="el" href="structlysa_1_1Light.html">Light</a> &amp;light)</td></tr>
+<tr class="separator:a27b8e21b21758bf009488083ac21b673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9b067f2a5e3a8bcf0074bddc057095"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a1a9b067f2a5e3a8bcf0074bddc057095">processDeferredOperations</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
+<tr class="separator:a1a9b067f2a5e3a8bcf0074bddc057095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4284fba8b733f9320707fad06a093d8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a4284fba8b733f9320707fad06a093d8c">get</a> (const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex) const</td></tr>
+<tr class="separator:a4284fba8b733f9320707fad06a093d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classlysa_1_1UniqueResource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlysa_1_1UniqueResource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlysa_1_1UniqueResource.html">UniqueResource</a></td></tr>
+<tr class="memitem:ab44f4fde69604200478a0f0f8b8447a7 inherit pub_methods_classlysa_1_1UniqueResource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1UniqueResource.html#ab44f4fde69604200478a0f0f8b8447a7">UniqueResource</a> () = default</td></tr>
+<tr class="separator:ab44f4fde69604200478a0f0f8b8447a7 inherit pub_methods_classlysa_1_1UniqueResource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4bf5e4d3eb906a87d81685ed0afdeb inherit pub_methods_classlysa_1_1UniqueResource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1UniqueResource.html#abb4bf5e4d3eb906a87d81685ed0afdeb">UniqueResource</a> (UniqueResource &amp;) = delete</td></tr>
+<tr class="separator:abb4bf5e4d3eb906a87d81685ed0afdeb inherit pub_methods_classlysa_1_1UniqueResource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d85dc7926af6b0ebeed1e49788d417 inherit pub_methods_classlysa_1_1UniqueResource"><td class="memItemLeft" align="right" valign="top">UniqueResource &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1UniqueResource.html#a22d85dc7926af6b0ebeed1e49788d417">operator=</a> (UniqueResource &amp;) = delete</td></tr>
+<tr class="separator:a22d85dc7926af6b0ebeed1e49788d417 inherit pub_methods_classlysa_1_1UniqueResource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classlysa_1_1UnmanagedResource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlysa_1_1UnmanagedResource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlysa_1_1UnmanagedResource.html">UnmanagedResource</a></td></tr>
+<tr class="memitem:a38c6369ef84ad5ca03cba0463d28f365 inherit pub_methods_classlysa_1_1UnmanagedResource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1UnmanagedResource.html#a38c6369ef84ad5ca03cba0463d28f365">UnmanagedResource</a> ()</td></tr>
+<tr class="separator:a38c6369ef84ad5ca03cba0463d28f365 inherit pub_methods_classlysa_1_1UnmanagedResource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac945b0666df653a0f52f92da1b66e538 inherit pub_methods_classlysa_1_1UnmanagedResource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1UnmanagedResource.html#ac945b0666df653a0f52f92da1b66e538">UnmanagedResource</a> (const <a class="el" href="structlysa_1_1Resource.html">Resource</a> &amp;other)</td></tr>
+<tr class="separator:ac945b0666df653a0f52f92da1b66e538 inherit pub_methods_classlysa_1_1UnmanagedResource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structlysa_1_1Resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structlysa_1_1Resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structlysa_1_1Resource.html">Resource</a></td></tr>
+<tr class="memitem:a3ce3525769bc03c1044ef3239353ba16 inherit pub_methods_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#a3ce3525769bc03c1044ef3239353ba16">operator==</a> (const Resource &amp;other) const</td></tr>
+<tr class="separator:a3ce3525769bc03c1044ef3239353ba16 inherit pub_methods_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05d9dd0f0d27140a28bd743b72f8ef3 inherit pub_methods_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#ad05d9dd0f0d27140a28bd743b72f8ef3">Resource</a> () = default</td></tr>
+<tr class="separator:ad05d9dd0f0d27140a28bd743b72f8ef3 inherit pub_methods_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e7a7b9a442e3e66aad4ae34263d41e inherit pub_methods_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#a29e7a7b9a442e3e66aad4ae34263d41e">Resource</a> (const <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> id)</td></tr>
+<tr class="separator:a29e7a7b9a442e3e66aad4ae34263d41e inherit pub_methods_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba796a55775270b8061646a07519a3c inherit pub_methods_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#a7ba796a55775270b8061646a07519a3c">~Resource</a> () = default</td></tr>
+<tr class="separator:a7ba796a55775270b8061646a07519a3c inherit pub_methods_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f274741678ab6649c1d991370a637c7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a5f274741678ab6649c1d991370a637c7">createDescriptorLayouts</a> ()</td></tr>
-<tr class="separator:a5f274741678ab6649c1d991370a637c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ecf44b8fc165f4acbd91cbb4b60696"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ae3ecf44b8fc165f4acbd91cbb4b60696">destroyDescriptorLayouts</a> ()</td></tr>
-<tr class="separator:ae3ecf44b8fc165f4acbd91cbb4b60696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9c3db8f20451ded1ca7d666a0283c1ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1ImageManager.html">ImageManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a9c3db8f20451ded1ca7d666a0283c1ad">imageManager</a></td></tr>
+<tr class="separator:a9c3db8f20451ded1ca7d666a0283c1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef535b73569ab579576bc1043f445fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1MaterialManager.html">MaterialManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#aef535b73569ab579576bc1043f445fdc">materialManager</a></td></tr>
+<tr class="separator:aef535b73569ab579576bc1043f445fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e1607266d90f04cd8298eebe04fe20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1MeshManager.html">MeshManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a62e1607266d90f04cd8298eebe04fe20">meshManager</a></td></tr>
+<tr class="separator:a62e1607266d90f04cd8298eebe04fe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a9aced3be6dbfa8e007b0ac6d7769dcf8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a9aced3be6dbfa8e007b0ac6d7769dcf8">MAX_SHADOW_MAPS</a> {20}</td></tr>
-<tr class="separator:a9aced3be6dbfa8e007b0ac6d7769dcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5710e60228b6dcab8656bef7f09121d5"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a5710e60228b6dcab8656bef7f09121d5">BINDING_SCENE</a> {0}</td></tr>
-<tr class="separator:a5710e60228b6dcab8656bef7f09121d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd8faf4efddd9fb43cefe2b8e04699e"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a2dd8faf4efddd9fb43cefe2b8e04699e">BINDING_MODELS</a> {1}</td></tr>
-<tr class="separator:a2dd8faf4efddd9fb43cefe2b8e04699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d5ea27840994b7b8cb7e2d982ad005"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a17d5ea27840994b7b8cb7e2d982ad005">BINDING_LIGHTS</a> {2}</td></tr>
-<tr class="separator:a17d5ea27840994b7b8cb7e2d982ad005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaedaa39645c8fdf1617c6e372188793e"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#aaedaa39645c8fdf1617c6e372188793e">BINDING_SHADOW_MAPS</a> {3}</td></tr>
-<tr class="separator:aaedaa39645c8fdf1617c6e372188793e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f11aa0b94d0b69636fe12422c08c92"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; vireo::DescriptorLayout &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a24f11aa0b94d0b69636fe12422c08c92">sceneDescriptorLayout</a> {nullptr}</td></tr>
-<tr class="separator:a24f11aa0b94d0b69636fe12422c08c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d8261486558deea1b8bb81a269504e"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ad6d8261486558deea1b8bb81a269504e">BINDING_SHADOW_MAP_TRANSPARENCY_COLOR</a> {0}</td></tr>
-<tr class="separator:ad6d8261486558deea1b8bb81a269504e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc4bb95fd20944a52aaf18f2c16a4f35"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; vireo::DescriptorLayout &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#adc4bb95fd20944a52aaf18f2c16a4f35">sceneDescriptorLayoutOptional1</a> {nullptr}</td></tr>
-<tr class="separator:adc4bb95fd20944a52aaf18f2c16a4f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4769d1ff865933c7d9515e4ae0dc929"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#ab4769d1ff865933c7d9515e4ae0dc929">BINDING_INSTANCES</a> {0}</td></tr>
-<tr class="separator:ab4769d1ff865933c7d9515e4ae0dc929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b38f0cd65a14f777c66a0573ed7508"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; vireo::DescriptorLayout &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#a46b38f0cd65a14f777c66a0573ed7508">pipelineDescriptorLayout</a> {nullptr}</td></tr>
-<tr class="separator:a46b38f0cd65a14f777c66a0573ed7508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa120a3f47b350f5ceeac713baeb7e359"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Scene.html#aa120a3f47b350f5ceeac713baeb7e359">instanceIndexConstantDesc</a></td></tr>
-<tr class="separator:aa120a3f47b350f5ceeac713baeb7e359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_structlysa_1_1Resource"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structlysa_1_1Resource')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structlysa_1_1Resource.html">Resource</a></td></tr>
+<tr class="memitem:a50ec11076cfd84d4b445d29738c3e02c inherit pub_attribs_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#a50ec11076cfd84d4b445d29738c3e02c">id</a> {INVALID_ID}</td></tr>
+<tr class="separator:a50ec11076cfd84d4b445d29738c3e02c inherit pub_attribs_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa3be8a7fc471c4e218a662debd459d26"></a>
+<a class="anchor" id="a0946ad3e1a18cbb006e806dadb07da7e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -184,31 +162,60 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">Scene </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structlysa_1_1SceneConfiguration.html">SceneConfiguration</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
+          <td class="paramname"><em>config</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructs a <a class="el" href="classlysa_1_1Scene.html">Scene</a> with a given configuration. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> configuration settings. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7c4b708e530f6ab49e97ce6ed7b1d94e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Virtual destructor for <a class="el" href="classlysa_1_1Scene.html">Scene</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a88b1257e6f5e0cd59942dfc9024025d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addInstance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;&#160;</td>
+          <td class="paramname"><em>meshInstance</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;&#160;</td>
-          <td class="paramname"><em>renderingConfig</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>framesInFlight</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vireo::Viewport &amp;&#160;</td>
-          <td class="paramname"><em>viewport</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vireo::Rect &amp;&#160;</td>
-          <td class="paramname"><em>scissors</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>async</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,21 +224,39 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a <a class="el" href="classlysa_1_1Scene.html">Scene</a> for a given configuration and viewport/scissors.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Adds a mesh instance to the scene. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Scene.html">Scene</a> high-level configuration (buffers sizes, features). </td></tr>
-    <tr><td class="paramname">renderingConfig</td><td>Global rendering configuration. </td></tr>
-    <tr><td class="paramname">framesInFlight</td><td>Number of buffered frames. </td></tr>
-    <tr><td class="paramname">viewport</td><td>Default viewport used for render passes. </td></tr>
-    <tr><td class="paramname">scissors</td><td>Default scissors rectangle. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1MeshInstance.html">meshInstance</a></td><td>The mesh instance to add. </td></tr>
+    <tr><td class="paramname">async</td><td>Whether to add the instance asynchronously. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a7c81fe96daedbb703b432e96f5cb7545"></a>
+<a class="anchor" id="af89986a86fe15a4e0ba7ba0c985f8cad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addLight </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1Light.html">Light</a> &amp;&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a light to the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td>The light to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4284fba8b733f9320707fad06a093d8c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -239,603 +264,175 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~Scene </td>
+          <td class="memname"><a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a>&amp; get </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>frameIndex</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Gets the frame-specific data for a given frame index. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameIndex</td><td>The index of the frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> reference to the <a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> for the frame. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a103c4634fc764c83f70aa176e86d12e9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Scene </td>
-          <td>(</td>
-          <td class="paramtype">Scene &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5ddd47eec0f90a7d5314902f629e27db"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void activateCamera </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Camera.html">Camera</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>camera</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Activates the provided camera as the current rendering viewpoint. </p>
-
-</div>
-</div>
-<a class="anchor" id="a13d60397d8c8111a5ced543fbac6c2b8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void addNode </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Node.html">Node</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Adds a node (camera, light, mesh instance, environment, etc.) to the scene. </p>
-
-</div>
-</div>
-<a class="anchor" id="a017ae550160cafb3c1f31b08d2756a4f"></a>
+<a class="anchor" id="a3ccd16e44e2bc1808d17a61efcf57a7f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void compute </td>
+          <td class="memname">bool haveInstance </td>
           <td>(</td>
-          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;&#160;</td>
+          <td class="paramname"><em>meshInstance</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Executes compute workloads such as frustum culling. </p>
+<p>Checks if a mesh instance is present in the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1MeshInstance.html">meshInstance</a></td><td>The mesh instance to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the instance is in the scene, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5f274741678ab6649c1d991370a637c7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void createDescriptorLayouts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Creates all static descriptor layouts used by scenes and pipelines. </p>
-
-</div>
-</div>
-<a class="anchor" id="ae3ecf44b8fc165f4acbd91cbb4b60696"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void destroyDescriptorLayouts </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Destroys static descriptor layouts created by <a class="el" href="classlysa_1_1Scene.html#a5f274741678ab6649c1d991370a637c7">createDescriptorLayouts()</a>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a254a860e5c5eb0cdefa9fe12ffc89bc5"></a>
+<a class="anchor" id="a1a9b067f2a5e3a8bcf0074bddc057095"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void drawModels </td>
+          <td class="memname">void processDeferredOperations </td>
           <td>(</td>
-          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>set</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>frameIndex</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; vireo::Buffer &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>culledDrawCommandsBuffers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; vireo::Buffer &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>culledDrawCommandsCountBuffers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::shared_ptr&lt; <a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>frustumCullingPipelines</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Common draw helper that dispatches indirect draws per pipeline using culled lists. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Processes deferred scene operations for a specific frame. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">commandList</td><td>Command buffer to record into. </td></tr>
-    <tr><td class="paramname">set</td><td>Descriptor set index to bind for the pipelines family. </td></tr>
-    <tr><td class="paramname">culledDrawCommandsBuffers</td><td>Per-pipeline indirect commands buffer. </td></tr>
-    <tr><td class="paramname">culledDrawCommandsCountBuffers</td><td>Per-pipeline commands count buffer. </td></tr>
-    <tr><td class="paramname">frustumCullingPipelines</td><td>Per-pipeline frustum culling compute pipelines. </td></tr>
+    <tr><td class="paramname">frameIndex</td><td>The index of the frame to process. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a331521b183fbc99b800c569393d25c5c"></a>
+<a class="anchor" id="a3af00fb4fc8e1f8d8f3eb3a2ae04a735"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void drawOpaquesModels </td>
+          <td class="memname">void removeInstance </td>
           <td>(</td>
-          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em>, </td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;&#160;</td>
+          <td class="paramname"><em>meshInstance</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>pipelines</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>async</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Issues draw calls for opaque models using the supplied pipelines map. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Removes a mesh instance from the scene. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">commandList</td><td>Command buffer to record into. </td></tr>
-    <tr><td class="paramname">pipelines</td><td>Map of material/pipeline identifiers to pipelines. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1MeshInstance.html">meshInstance</a></td><td>The mesh instance to remove. </td></tr>
+    <tr><td class="paramname">async</td><td>Whether to remove the instance asynchronously. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a850d054484788b5e30d4dfccb5d15fef"></a>
+<a class="anchor" id="a27b8e21b21758bf009488083ac21b673"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void drawShaderMaterialModels </td>
+          <td class="memname">void removeLight </td>
           <td>(</td>
-          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>pipelines</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Issues draw calls for models driven by shader materials/special passes. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5d1256709102028b4855a4fff28cbde2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drawTransparentModels </td>
-          <td>(</td>
-          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, std::shared_ptr&lt; vireo::GraphicPipeline &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>pipelines</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Issues draw calls for transparent models. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa17e6200ad38a01d4826619821d04e78"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getCurrentCamera </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the currently active camera (may be null). </p>
-
-</div>
-</div>
-<a class="anchor" id="a3c1e0c5a30819b145999c19e350a7cea"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getDescriptorSet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the main descriptor set containing scene resources. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4aab4f4cdacdb6b178cc452e9b793c2c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getDescriptorSetOptional1 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the optional descriptor set (transparency color for shadows). </p>
-
-</div>
-</div>
-<a class="anchor" id="a239be8345eeb316571c97ee323a9e7ed"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const auto&amp; getPipelineIds </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the mapping of pipeline identifiers to their materials. </p>
-
-</div>
-</div>
-<a class="anchor" id="a957d51bc0bd4b064ebfef3a4e8334922"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getScissors </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the default scissors rectangle for this scene. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad5eabb06925f76a829823b39c4e52d45"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getShadowMapRenderers </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns a view over the shadow map renderers values. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7a9554097df3d2a362acb7c9efabfcb8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto getViewport </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the default viewport for this scene. </p>
-
-</div>
-</div>
-<a class="anchor" id="a124f43d6d93ed2813dbece4198dccf99"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto isMaterialsUpdated </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>True when materials set changed and pipelines/descriptors must be refreshed. </p>
-
-</div>
-</div>
-<a class="anchor" id="a1e7560d4dfd53c76a87ef9369a4efcb9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Scene&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">Scene &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac06f7cf3c812e3ffd413b25bf77c0eac"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void removeNode </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classlysa_1_1Node.html">Node</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Removes a node previously added to the scene. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab5661a58e871773676c843492f53edd2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void resetMaterialsUpdated </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Resets the materials updated flag after processing. </p>
-
-</div>
-</div>
-<a class="anchor" id="a74bd18fcdac83b553f987ee4ad090e47"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setInitialState </td>
-          <td>(</td>
-          <td class="paramtype">const vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Writes initial GPU state required before issuing draw calls. </p>
-
-</div>
-</div>
-<a class="anchor" id="a62e956c5952830b2d6bf6ec22fb22494"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void update </td>
-          <td>(</td>
-          <td class="paramtype">const vireo::CommandList &amp;&#160;</td>
-          <td class="paramname"><em>commandList</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1Light.html">Light</a> &amp;&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Updates CPU/GPU scene state (uniforms, lights, instances, descriptors). </p>
+<p>Removes a light from the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">light</td><td>The light to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a21f3e6cfe2da77cbd07898d31a5b03f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnvironment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1Environment.html">Environment</a> &amp;&#160;</td>
+          <td class="paramname"><em>environment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the environment for the scene. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">environment</td><td>The environment settings to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ec02456dc31ff974bd351a8d8ca31ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateInstance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> &amp;&#160;</td>
+          <td class="paramname"><em>meshInstance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Updates an existing mesh instance. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classlysa_1_1MeshInstance.html">meshInstance</a></td><td>The mesh instance to update. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ab4769d1ff865933c7d9515e4ae0dc929"></a>
+<a class="anchor" id="a9c3db8f20451ded1ca7d666a0283c1ad"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -843,20 +440,20 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_INSTANCES {0}</td>
+          <td class="memname"><a class="el" href="classlysa_1_1ImageManager.html">ImageManager</a>&amp; imageManager</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding for per-instance buffer used by pipelines. </p>
+<p>Reference to the image manager. </p>
 
 </div>
 </div>
-<a class="anchor" id="a17d5ea27840994b7b8cb7e2d982ad005"></a>
+<a class="anchor" id="aef535b73569ab579576bc1043f445fdc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -864,20 +461,20 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_LIGHTS {2}</td>
+          <td class="memname"><a class="el" href="classlysa_1_1MaterialManager.html">MaterialManager</a>&amp; materialManager</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding for lights buffer. </p>
+<p>Reference to the material manager. </p>
 
 </div>
 </div>
-<a class="anchor" id="a2dd8faf4efddd9fb43cefe2b8e04699e"></a>
+<a class="anchor" id="a62e1607266d90f04cd8298eebe04fe20"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -885,188 +482,16 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_MODELS {1}</td>
+          <td class="memname"><a class="el" href="classlysa_1_1MeshManager.html">MeshManager</a>&amp; meshManager</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding for per-model/instance data buffer. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5710e60228b6dcab8656bef7f09121d5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_SCENE {0}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Descriptor binding for <a class="el" href="structlysa_1_1SceneData.html">SceneData</a> uniform buffer. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad6d8261486558deea1b8bb81a269504e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_SHADOW_MAP_TRANSPARENCY_COLOR {0}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Optional descriptor binding: transparency color for shadow maps. </p>
-
-</div>
-</div>
-<a class="anchor" id="aaedaa39645c8fdf1617c6e372188793e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr vireo::DescriptorIndex BINDING_SHADOW_MAPS {3}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Descriptor binding for shadow maps array. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa120a3f47b350f5ceeac713baeb7e359"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto instanceIndexConstantDesc</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">vireo::PushConstantsDesc {</div>
-<div class="line">            .stage = vireo::ShaderStage::VERTEX,</div>
-<div class="line">            .size = <span class="keyword">sizeof</span>(InstanceIndexConstant),</div>
-<div class="line">        }</div>
-</div><!-- end fragment -->
-
-</div>
-</div>
-<a class="anchor" id="a9aced3be6dbfa8e007b0ac6d7769dcf8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> MAX_SHADOW_MAPS {20}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Maximum number of shadow maps supported by the scene. </p>
-
-</div>
-</div>
-<a class="anchor" id="a46b38f0cd65a14f777c66a0573ed7508"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;vireo::DescriptorLayout&gt; pipelineDescriptorLayout {nullptr}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Shared descriptor layout for pipeline-local resources. </p>
-
-</div>
-</div>
-<a class="anchor" id="a24f11aa0b94d0b69636fe12422c08c92"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;vireo::DescriptorLayout&gt; sceneDescriptorLayout {nullptr}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Shared descriptor layout for the main scene set. </p>
-
-</div>
-</div>
-<a class="anchor" id="adc4bb95fd20944a52aaf18f2c16a4f35"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;vireo::DescriptorLayout&gt; sceneDescriptorLayoutOptional1 {nullptr}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Optional descriptor layout (set used when transparency color is needed). </p>
+<p>Reference to the mesh manager. </p>
 
 </div>
 </div>
@@ -1076,7 +501,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Scene.html">Scene</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

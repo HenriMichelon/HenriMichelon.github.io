@@ -73,7 +73,9 @@ $(document).ready(function(){initNavTree('gs_010_build.html',''); initResizable(
 <h3>Install the build tools</h3>
 <p>For Microsoft Windows :</p><ul>
 <li><a href="https://visualstudio.microsoft.com/fr/">MSVC 19+ (VS 2022)</a> (or <a href="https://github.com/mstorsjo/llvm-mingw/releases">LLVM 20+</a> but only with the DirectX backend disabled)</li>
-<li><a href="https://cmake.org/download/">CMake 3.29+</a> (<a href="https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170">Visual Studio</a>) with a <a href="https://github.com/ninja-build/ninja/releases">build tool</a></li>
+<li><a href="https://cmake.org/download/">CMake 3.29+</a> (<a href="https://learn.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170">Visual Studio</a>) with a <a href="https://github.com/ninja-build/ninja/releases">build tool</a> For Linux :</li>
+<li>packages llvm, cmake, ninja, vulkan-validation-layers,</li>
+<li>Creates the VULKAN_SDK environment variable pointing to the Vulkan SDK installation directory.</li>
 </ul>
 <h2>Standalone build </h2>
 <p>Clone the <a href="https://github.com/HenriMichelon/vireo_rhi">Vireo RHI repository</a> then :</p><ul>
@@ -87,7 +89,7 @@ $(document).ready(function(){initNavTree('gs_010_build.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:41:17 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -80,11 +80,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1Samplers.html',''); initR
 <div class="textblock"><p>Manages a small, shared collection of GPU sampler objects.</p><ul>
 <li>Provide a fixed-size pool of samplers that materials/shaders can reuse.</li>
 <li>Create and track descriptor layout and descriptor set for binding samplers.</li>
-<li>Expose an update mechanism to (re)write descriptors when the set changes.</li>
-</ul>
-<p>Notes:</p><ul>
-<li>This class is typically owned by the <a class="el" href="classlysa_1_1Resources.html">Resources</a> container and is not instantiated directly by users.</li>
-<li>Thread-safety: methods that mutate internal state should be guarded by the internal mutex; read-only getters are safe after initialization. </li>
+<li>Expose an update mechanism to (re)write descriptors when the set changes. </li>
 </ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -96,22 +92,79 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a31e6cb6506e5683aa14074e7c86b5e58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a31e6cb6506e5683aa14074e7c86b5e58">addSampler</a> (vireo::Filter minFilter, vireo::Filter maxFilter, vireo::AddressMode samplerAddressModeU, vireo::AddressMode samplerAddressModeV, float minLod=0.0f, float maxLod=vireo::Sampler::LOD_CLAMP_NONE, bool anisotropyEnable=true, vireo::MipMapMode mipMapMode=vireo::MipMapMode::LINEAR, vireo::CompareOp compareOp=vireo::CompareOp::NEVER)</td></tr>
 <tr class="separator:a31e6cb6506e5683aa14074e7c86b5e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ccc8ac3c601392fb5a8d96375feb73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a38ccc8ac3c601392fb5a8d96375feb73">isUpdated</a> () const</td></tr>
-<tr class="separator:a38ccc8ac3c601392fb5a8d96375feb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a313983febb5b9d3e94c534da890bb663"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a313983febb5b9d3e94c534da890bb663">isUpdateNeeded</a> () const</td></tr>
+<tr class="separator:a313983febb5b9d3e94c534da890bb663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
 <tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5ca5a99e2e665944bf133277215458"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a9d5ca5a99e2e665944bf133277215458">getDescriptorLayout</a> () const</td></tr>
 <tr class="separator:a9d5ca5a99e2e665944bf133277215458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba445bb9bb4116d18dd646f60c1b34bd"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#aba445bb9bb4116d18dd646f60c1b34bd">getDescriptorSet</a> () const</td></tr>
 <tr class="separator:aba445bb9bb4116d18dd646f60c1b34bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450940f02109f7451c961fc5710c779c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a450940f02109f7451c961fc5710c779c">Samplers</a> (const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> capacity)</td></tr>
+<tr class="separator:a450940f02109f7451c961fc5710c779c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1872facd013658657368f2480ae610b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ae1872facd013658657368f2480ae610b">~Samplers</a> ()</td></tr>
+<tr class="separator:ae1872facd013658657368f2480ae610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a5116db8f6bfbf1da354394d34a0f1f4f"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a5116db8f6bfbf1da354394d34a0f1f4f">MAX_SAMPLERS</a> {20}</td></tr>
-<tr class="separator:a5116db8f6bfbf1da354394d34a0f1f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1010d21b5ded05e941d396b20d0b51b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ac1010d21b5ded05e941d396b20d0b51b">SET_SAMPLERS</a> {1}</td></tr>
-<tr class="separator:ac1010d21b5ded05e941d396b20d0b51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c439b322a114d608c5a423eab7d87f1"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a3c439b322a114d608c5a423eab7d87f1">SET</a> {1}</td></tr>
+<tr class="separator:a3c439b322a114d608c5a423eab7d87f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06256d9c45ac74e3040baf6e061cae8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#af06256d9c45ac74e3040baf6e061cae8">NEAREST_NEAREST_CLAMP_TO_BORDER</a> = 0</td></tr>
+<tr class="separator:af06256d9c45ac74e3040baf6e061cae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00f0d0372df449ee52e4b54c05c9574"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ae00f0d0372df449ee52e4b54c05c9574">NEAREST_NEAREST_CLAMP_TO_EDGE</a> = 1</td></tr>
+<tr class="separator:ae00f0d0372df449ee52e4b54c05c9574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2aeab2aa92a2a13d99fb40bccceafd5"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#ac2aeab2aa92a2a13d99fb40bccceafd5">LINEAR_LINEAR_CLAMP_TO_EDGE</a> = 2</td></tr>
+<tr class="separator:ac2aeab2aa92a2a13d99fb40bccceafd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8d444316c9032ce4d05335cf73fc1c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#aff8d444316c9032ce4d05335cf73fc1c">LINEAR_LINEAR_CLAMP_TO_EDGE_LOD_CLAMP_NONE</a> = 3</td></tr>
+<tr class="separator:aff8d444316c9032ce4d05335cf73fc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac144ba8d515860b0332e4ab2ad0b4b7"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#aac144ba8d515860b0332e4ab2ad0b4b7">LINEAR_LINEAR_REPEAT</a> = 4</td></tr>
+<tr class="separator:aac144ba8d515860b0332e4ab2ad0b4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c730509f53f1dd10c86a9519a05b72"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Samplers.html#a58c730509f53f1dd10c86a9519a05b72">NEAREST_NEAREST_REPEAT</a> = 5</td></tr>
+<tr class="separator:a58c730509f53f1dd10c86a9519a05b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a450940f02109f7451c961fc5710c779c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Samplers </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Vireo &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vireo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>capacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classlysa_1_1Samplers.html">Samplers</a> pool bound to the given backend. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1872facd013658657368f2480ae610b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~Samplers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a31e6cb6506e5683aa14074e7c86b5e58"></a>
 <div class="memitem">
@@ -245,7 +298,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a38ccc8ac3c601392fb5a8d96375feb73"></a>
+<a class="anchor" id="a313983febb5b9d3e94c534da890bb663"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -253,7 +306,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isUpdated </td>
+          <td class="memname">bool isUpdateNeeded </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -285,29 +338,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="a74b3f77e4a7285c624d30192f9643876"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="classlysa_1_1Resources.html">Resources</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a5116db8f6bfbf1da354394d34a0f1f4f"></a>
+<a class="anchor" id="ac2aeab2aa92a2a13d99fb40bccceafd5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -315,7 +347,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr auto MAX_SAMPLERS {20}</td>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> LINEAR_LINEAR_CLAMP_TO_EDGE = 2</td>
         </tr>
       </table>
   </td>
@@ -324,11 +356,10 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Maximum number of sampler objects managed by this pool. </p>
 
 </div>
 </div>
-<a class="anchor" id="ac1010d21b5ded05e941d396b20d0b51b"></a>
+<a class="anchor" id="aff8d444316c9032ce4d05335cf73fc1c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -336,7 +367,107 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> SET_SAMPLERS {1}</td>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> LINEAR_LINEAR_CLAMP_TO_EDGE_LOD_CLAMP_NONE = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aac144ba8d515860b0332e4ab2ad0b4b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> LINEAR_LINEAR_REPEAT = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af06256d9c45ac74e3040baf6e061cae8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> NEAREST_NEAREST_CLAMP_TO_BORDER = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae00f0d0372df449ee52e4b54c05c9574"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> NEAREST_NEAREST_CLAMP_TO_EDGE = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58c730509f53f1dd10c86a9519a05b72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> NEAREST_NEAREST_REPEAT = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3c439b322a114d608c5a423eab7d87f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> SET {1}</td>
         </tr>
       </table>
   </td>
@@ -355,7 +486,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Samplers.html">Samplers</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

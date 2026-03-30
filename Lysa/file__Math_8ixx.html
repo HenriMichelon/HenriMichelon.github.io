@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 1.7.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa/src/lysa/Math.ixx File Reference</title>
+<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa_engine/src/Math.ixx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,10 +78,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab657f56218a196aad283085de23db272"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#ab657f56218a196aad283085de23db272">HLSLPP_FEATURE_TRANSFORM</a></td></tr>
-<tr class="separator:ab657f56218a196aad283085de23db272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a8484f2b2a4e62cad597a041460ca6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#a17a8484f2b2a4e62cad597a041460ca6">HLSLPP_MODULE_DECLARATION</a></td></tr>
 <tr class="separator:a17a8484f2b2a4e62cad597a041460ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab657f56218a196aad283085de23db272"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#ab657f56218a196aad283085de23db272">HLSLPP_FEATURE_TRANSFORM</a></td></tr>
+<tr class="separator:ab657f56218a196aad283085de23db272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -92,29 +92,85 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a70ef890f1a96daccea52e31afbbe43c2"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a70ef890f1a96daccea52e31afbbe43c2">eulerAngles</a> (quaternion q)</td></tr>
-<tr class="separator:a70ef890f1a96daccea52e31afbbe43c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e0f303a1471ab8542e5cd3418863c9"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ab1e0f303a1471ab8542e5cd3418863c9">euler_angles</a> (quaternion q)</td></tr>
+<tr class="separator:ab1e0f303a1471ab8542e5cd3418863c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be3577d3e2ce5425e54b1975a25f92b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a6be3577d3e2ce5425e54b1975a25f92b">radians</a> (const float angle)</td></tr>
 <tr class="separator:a6be3577d3e2ce5425e54b1975a25f92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5ca85711c175287a494e8d3d84cff8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#adc5ca85711c175287a494e8d3d84cff8">almostEquals</a> (const float f1, const float f2)</td></tr>
-<tr class="separator:adc5ca85711c175287a494e8d3d84cff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795bee6a5314894e8a5603a3f04b9cac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a795bee6a5314894e8a5603a3f04b9cac">almostEquals</a> (const quaternion &amp;f1, const quaternion &amp;f2)</td></tr>
-<tr class="separator:a795bee6a5314894e8a5603a3f04b9cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6551a0c3fe34aa0e01203bc1372ed4"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a7e6551a0c3fe34aa0e01203bc1372ed4">lookAt</a> (const float3 &amp;eye, const float3 &amp;center, const float3 &amp;up)</td></tr>
-<tr class="separator:a7e6551a0c3fe34aa0e01203bc1372ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f584719b5480b45e0688c2b6e89089"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a36f584719b5480b45e0688c2b6e89089">almost_equals</a> (const float f1, const float f2)</td></tr>
+<tr class="separator:a36f584719b5480b45e0688c2b6e89089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf723c798f039529705ede7b568fd9d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#aaf723c798f039529705ede7b568fd9d4">almost_equals</a> (const quaternion &amp;f1, const quaternion &amp;f2)</td></tr>
+<tr class="separator:aaf723c798f039529705ede7b568fd9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba3e99b47218ffb39d0dfc7cf35945a"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a9ba3e99b47218ffb39d0dfc7cf35945a">look_at</a> (const float3 &amp;eye, const float3 &amp;center, const float3 &amp;up)</td></tr>
+<tr class="separator:a9ba3e99b47218ffb39d0dfc7cf35945a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee1c6c6fcaf741526b5cf7a77b0824a"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#adee1c6c6fcaf741526b5cf7a77b0824a">perspective</a> (float fov, float aspect, float near, float far)</td></tr>
 <tr class="separator:adee1c6c6fcaf741526b5cf7a77b0824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b540bfd5c17f912f3c30013f6a9d31"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a72b540bfd5c17f912f3c30013f6a9d31">orthographic</a> (float left, float right, float top, float bottom, float znear, float zfar)</td></tr>
 <tr class="separator:a72b540bfd5c17f912f3c30013f6a9d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1032080d3cbe74b573126f57cbc32f0"><td class="memItemLeft" align="right" valign="top">quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ae1032080d3cbe74b573126f57cbc32f0">to_quaternion</a> (const float4x4 &amp;m)</td></tr>
+<tr class="separator:ae1032080d3cbe74b573126f57cbc32f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36cc42f8321684dc740505ad4cd9e451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="file__Math_8ixx.html#a5522c54735d837fae7d6ba026b858441">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a36cc42f8321684dc740505ad4cd9e451">randomi</a> (<a class="el" href="file__Math_8ixx.html#a5522c54735d837fae7d6ba026b858441">uint32</a> max)</td></tr>
 <tr class="separator:a36cc42f8321684dc740505ad4cd9e451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369088e3b55a01c27dda1f9f4063198f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a369088e3b55a01c27dda1f9f4063198f">randomf</a> (float max)</td></tr>
 <tr class="separator:a369088e3b55a01c27dda1f9f4063198f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20333c3cf8ea2aefe56d2b495630d887"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a20333c3cf8ea2aefe56d2b495630d887">mul</a> (const float2 &amp;a, const float b)</td></tr>
+<tr class="separator:a20333c3cf8ea2aefe56d2b495630d887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4867d436947423fc73c3b4e98f5de2b0"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a4867d436947423fc73c3b4e98f5de2b0">mul</a> (const float3 &amp;a, const float b)</td></tr>
+<tr class="separator:a4867d436947423fc73c3b4e98f5de2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b656893d267c17dce7f989087c9ff99"><td class="memItemLeft" align="right" valign="top">float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a0b656893d267c17dce7f989087c9ff99">mul</a> (const float4 &amp;a, const float b)</td></tr>
+<tr class="separator:a0b656893d267c17dce7f989087c9ff99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e22349650c9597aaea5d98a0453c4b1"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a8e22349650c9597aaea5d98a0453c4b1">mul</a> (const float a, const float2 &amp;b)</td></tr>
+<tr class="separator:a8e22349650c9597aaea5d98a0453c4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae330383948c4e72846701236185733e5"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ae330383948c4e72846701236185733e5">mul</a> (const float a, const float3 &amp;b)</td></tr>
+<tr class="separator:ae330383948c4e72846701236185733e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b22d5390c1b17c1cbc23cb288e5221"><td class="memItemLeft" align="right" valign="top">float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a78b22d5390c1b17c1cbc23cb288e5221">mul</a> (const float a, const float4 &amp;b)</td></tr>
+<tr class="separator:a78b22d5390c1b17c1cbc23cb288e5221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b973f5f45b9c1dc38984e1f7872d9e0"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a1b973f5f45b9c1dc38984e1f7872d9e0">add</a> (const float2 &amp;a, const float2 &amp;b)</td></tr>
+<tr class="separator:a1b973f5f45b9c1dc38984e1f7872d9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b7cf880f07a751d4ecd238defd8210"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a51b7cf880f07a751d4ecd238defd8210">add</a> (const float3 &amp;a, const float3 &amp;b)</td></tr>
+<tr class="separator:a51b7cf880f07a751d4ecd238defd8210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c565f7d813bebcc6a5cc60703fe699"><td class="memItemLeft" align="right" valign="top">float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ab4c565f7d813bebcc6a5cc60703fe699">add</a> (const float4 &amp;a, const float4 &amp;b)</td></tr>
+<tr class="separator:ab4c565f7d813bebcc6a5cc60703fe699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a></td></tr>
+<tr class="separator:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef49bcb9786e181cd4e14831873f3ab"><td class="memItemLeft" align="right" valign="top">export module lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#acef49bcb9786e181cd4e14831873f3ab">math</a></td></tr>
 <tr class="separator:acef49bcb9786e181cd4e14831873f3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae0931442c48ea50d4325cbab8f3a63"><td class="memItemLeft" align="right" valign="top">export import&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#a2ae0931442c48ea50d4325cbab8f3a63">std</a></td></tr>
+<tr class="separator:a2ae0931442c48ea50d4325cbab8f3a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924cb458dcc591d27fb564d1a8e03588"><td class="memItemLeft" align="right" valign="top">export import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Math_8ixx.html#a924cb458dcc591d27fb564d1a8e03588">types</a></td></tr>
+<tr class="separator:a924cb458dcc591d27fb564d1a8e03588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a5368f1ed2f78c744616367135deee"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ae3a5368f1ed2f78c744616367135deee">AXIS_X</a> {1.0f, 0.0f, 0.0f}</td></tr>
+<tr class="separator:ae3a5368f1ed2f78c744616367135deee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399c64173e58171d55d1ce35cbdea3a0"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a399c64173e58171d55d1ce35cbdea3a0">AXIS_Y</a> {0.0f, 1.0f, 0.0f}</td></tr>
+<tr class="separator:a399c64173e58171d55d1ce35cbdea3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38fa351109742f4c15a7bb72334f271"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ae38fa351109742f4c15a7bb72334f271">AXIS_Z</a> {0.0f, 0.0f, 1.0f}</td></tr>
+<tr class="separator:ae38fa351109742f4c15a7bb72334f271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ca3940abb63fda8101d307d91bfd8a"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a80ca3940abb63fda8101d307d91bfd8a">AXIS_UP</a> = {0.0f, 1.0f, 0.0f}</td></tr>
+<tr class="separator:a80ca3940abb63fda8101d307d91bfd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed19e9ed6161d8819dd257e00d47872"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#abed19e9ed6161d8819dd257e00d47872">AXIS_DOWN</a> = {0.0f, -1.0f, 0.0f}</td></tr>
+<tr class="separator:abed19e9ed6161d8819dd257e00d47872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7019f401401d15d9af3e4b2888ceb722"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a7019f401401d15d9af3e4b2888ceb722">AXIS_FRONT</a> = {0.0f, 0.0f, -1.0f}</td></tr>
+<tr class="separator:a7019f401401d15d9af3e4b2888ceb722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8597806007aded205b9a132ac0d1c93"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ac8597806007aded205b9a132ac0d1c93">AXIS_BACK</a> = {0.0f, 0.0f, 1.0f}</td></tr>
+<tr class="separator:ac8597806007aded205b9a132ac0d1c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818c65bc32804a75fcce878e47a9cab2"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a818c65bc32804a75fcce878e47a9cab2">AXIS_RIGHT</a> = {1.0f, 0.0f, 0.0f}</td></tr>
+<tr class="separator:a818c65bc32804a75fcce878e47a9cab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb7fac1872b02c7134ea7532b1ca608"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a2cb7fac1872b02c7134ea7532b1ca608">AXIS_LEFT</a> = {-1.0f, 0.0f, 0.0f}</td></tr>
+<tr class="separator:a2cb7fac1872b02c7134ea7532b1ca608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8347e7f0bfbdb62346998bff1791881e"><td class="memItemLeft" align="right" valign="top">const float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a8347e7f0bfbdb62346998bff1791881e">FLOAT2ZERO</a> {0.0f}</td></tr>
+<tr class="separator:a8347e7f0bfbdb62346998bff1791881e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cd61cdbb035f2e15769356b10b3655"><td class="memItemLeft" align="right" valign="top">const float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a78cd61cdbb035f2e15769356b10b3655">FLOAT3ZERO</a> {0.0f}</td></tr>
+<tr class="separator:a78cd61cdbb035f2e15769356b10b3655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2c9c1ed0b9a33a5b3ebd526024de33"><td class="memItemLeft" align="right" valign="top">const float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#adf2c9c1ed0b9a33a5b3ebd526024de33">FLOAT4ZERO</a> {0.0f}</td></tr>
+<tr class="separator:adf2c9c1ed0b9a33a5b3ebd526024de33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa37f40c376a6561913e513b8e68f6e1"><td class="memItemLeft" align="right" valign="top">const quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#afa37f40c376a6561913e513b8e68f6e1">QUATERNION_IDENTITY</a> {0.0f, 0.0f, 0.0f, 1.0f}</td></tr>
+<tr class="separator:afa37f40c376a6561913e513b8e68f6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1c03d409c9b9f9089eb418fdb76651"><td class="memItemLeft" align="right" valign="top">const float3x3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a4a1c03d409c9b9f9089eb418fdb76651">TRANSFORM_BASIS</a> {1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f}</td></tr>
+<tr class="separator:a4a1c03d409c9b9f9089eb418fdb76651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d2b300ded07cb2584187c9dfaae89a"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a49d2b300ded07cb2584187c9dfaae89a">HALF_PI</a> = std::numbers::pi_v&lt;float&gt; / 2.0f</td></tr>
+<tr class="separator:a49d2b300ded07cb2584187c9dfaae89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="ab657f56218a196aad283085de23db272"></a>
@@ -138,6 +194,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Math helpers built on top of hlsl++ types.</p>
+<p>This module provides common math utilities and matrix/quaternion helpers used across the engine, including view/projection matrix builders, a quaternion-to-Euler conversion, tolerant comparisons, and simple random number generation utilities. </p>
 
 </div>
 </div>
@@ -179,13 +237,49 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a96e5f0eca87c2426370e0897ac7b8ca6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2ae0931442c48ea50d4325cbab8f3a63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">export import std</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a924cb458dcc591d27fb564d1a8e03588"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">export import lysa types</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_626eab7fd05737612408b7bb64c9da31.html">lysa</a></li><li class="navelem"><a class="el" href="file__Math_8ixx.html">Math.ixx</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="file__Math_8ixx.html">Math.ixx</a></li>
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

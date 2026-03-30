@@ -76,15 +76,13 @@ $(document).ready(function(){initNavTree('classlysa_1_1AsyncQueue.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A lightweight background submission system used by Lysa to build and submit GPU command lists asynchronously. It owns a worker thread that drains a queue of recorded commands and submits them to the appropriate Vireo submit queue (transfer or graphic), allowing asset uploads and simple GPU work to happen without stalling the main thread.</p>
+<div class="textblock"><p>A lightweight background submission system used to build and submit</p>
+<p>GPU command lists asynchronously. It owns a worker thread that drains a queue of recorded commands and submits them to the appropriate Vireo submit queue (transfer or graphic), allowing asset uploads and simple GPU work to happen without stalling the main thread.</p>
 <p>Typical usage:</p><ul>
 <li>Call <a class="el" href="classlysa_1_1AsyncQueue.html#a400212d61ae277e21e9e315603351e2f">beginCommand()</a> to acquire a command list for a specific CommandType.</li>
 <li>Record GPU work (e.g., copies, barriers) on the returned command list.</li>
 <li>Call <a class="el" href="classlysa_1_1AsyncQueue.html#abdfaf712f4bf692166586b391bdae96f">endCommand()</a> to enqueue the work; optionally set immediate=true to trigger an immediate submit when appropriate.</li>
-<li>The internal worker thread will batch and submit pending commands.</li>
-</ul>
-<p>Thread-safety:</p><ul>
-<li>Public methods are thread-safe unless otherwise specified. Internals are protected via mutexes. Commands and temporary buffers are tracked per command list to avoid premature destruction. </li>
+<li>The internal worker thread will batch and submit pending commands. </li>
 </ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -96,15 +94,13 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aee022498a81eccecdf2ca7352ecdb587"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#aee022498a81eccecdf2ca7352ecdb587">AsyncQueue</a> (const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo, const std::shared_ptr&lt; vireo::SubmitQueue &gt; &amp;transferQueue, const std::shared_ptr&lt; vireo::SubmitQueue &gt; &amp;graphicQueue)</td></tr>
 <tr class="separator:aee022498a81eccecdf2ca7352ecdb587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b66d5e31b5dc18b314c8a68163263bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#a4b66d5e31b5dc18b314c8a68163263bd">cleanup</a> ()</td></tr>
-<tr class="separator:a4b66d5e31b5dc18b314c8a68163263bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e6ff9030083ce8b104302a4cdaee01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#a67e6ff9030083ce8b104302a4cdaee01">~AsyncQueue</a> ()</td></tr>
+<tr class="separator:a67e6ff9030083ce8b104302a4cdaee01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a400212d61ae277e21e9e315603351e2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlysa_1_1AsyncQueue_1_1Command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#a400212d61ae277e21e9e315603351e2f">beginCommand</a> (vireo::CommandType commandType, const std::source_location &amp;location=std::source_location::current ())</td></tr>
 <tr class="separator:a400212d61ae277e21e9e315603351e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdfaf712f4bf692166586b391bdae96f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#abdfaf712f4bf692166586b391bdae96f">endCommand</a> (const <a class="el" href="structlysa_1_1AsyncQueue_1_1Command.html">Command</a> &amp;command, bool immediate=false)</td></tr>
 <tr class="separator:abdfaf712f4bf692166586b391bdae96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae117ca4f7346155e9d0c92fbe9da4baf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#ae117ca4f7346155e9d0c92fbe9da4baf">submitCommands</a> ()</td></tr>
-<tr class="separator:ae117ca4f7346155e9d0c92fbe9da4baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fa1faeb99e25930b07eac11fe3a57c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#ac9fa1faeb99e25930b07eac11fe3a57c">createBuffer</a> (const <a class="el" href="structlysa_1_1AsyncQueue_1_1Command.html">Command</a> &amp;command, vireo::BufferType type, size_t instanceSize, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> instanceCount)</td></tr>
+<tr class="memitem:ac9fa1faeb99e25930b07eac11fe3a57c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#ac9fa1faeb99e25930b07eac11fe3a57c">createBuffer</a> (const <a class="el" href="structlysa_1_1AsyncQueue_1_1Command.html">Command</a> &amp;command, vireo::BufferType type, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceSize, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> instanceCount)</td></tr>
 <tr class="separator:ac9fa1faeb99e25930b07eac11fe3a57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4cd52bb669d22930b047b9a7944a9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AsyncQueue.html#aec4cd52bb669d22930b047b9a7944a9e">AsyncQueue</a> (const AsyncQueue &amp;) = delete</td></tr>
 <tr class="separator:aec4cd52bb669d22930b047b9a7944a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +138,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Construct an asynchronous queue manager bound to Vireo and two submit queues (transfer and graphic). </p>
+
+</div>
+</div>
+<a class="anchor" id="a67e6ff9030083ce8b104302a4cdaee01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~AsyncQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Release background resources and flush outstanding commands. Safe to call during application shutdown. </p>
 
 </div>
 </div>
@@ -197,22 +209,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4b66d5e31b5dc18b314c8a68163263bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cleanup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Release background resources and flush outstanding commands. Safe to call during application shutdown. </p>
-
-</div>
-</div>
 <a class="anchor" id="ac9fa1faeb99e25930b07eac11fe3a57c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +228,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
           <td class="paramname"><em>instanceSize</em>, </td>
         </tr>
         <tr>
@@ -248,6 +244,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Trigger submission of all pending commands. Usually invoked by the engine tick; the background thread will also submit when woken.</p>
 <p>Create a buffer that is tracked alongside the provided command so the resource remains alive until the GPU work referencing it has been submitted. Useful for transient staging buffers. </p>
 
 </div>
@@ -303,29 +300,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae117ca4f7346155e9d0c92fbe9da4baf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void submitCommands </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Trigger submission of all pending commands. Usually invoked by the engine tick; the background thread will also submit when woken. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1AsyncQueue.html">AsyncQueue</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

@@ -74,7 +74,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1DepthPrepass.html',''); i
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Render pass for generating the depth pre-pass </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for DepthPrepass:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -88,17 +90,19 @@ $(document).ready(function(){initNavTree('classlysa_1_1DepthPrepass.html',''); i
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a92af7f97b3d6268e3410d3a2c3fc5e57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a92af7f97b3d6268e3410d3a2c3fc5e57">DepthPrepass</a> (const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;config, bool withStencil)</td></tr>
-<tr class="separator:a92af7f97b3d6268e3410d3a2c3fc5e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4305f92c315cf423c82bb076e8f0bf99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a4305f92c315cf423c82bb076e8f0bf99">render</a> (vireo::CommandList &amp;commandList, const <a class="el" href="classlysa_1_1Scene.html">Scene</a> &amp;scene, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment)</td></tr>
-<tr class="separator:a4305f92c315cf423c82bb076e8f0bf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22d527060cc1fb0294fe274923b076b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a22d527060cc1fb0294fe274923b076b9">updatePipelines</a> (const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classlysa_1_1Material.html">Material</a> &gt;&gt;&gt; &amp;pipelineIds)</td></tr>
-<tr class="separator:a22d527060cc1fb0294fe274923b076b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a8294e460983c5115785208900bf05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#af4a8294e460983c5115785208900bf05">DepthPrepass</a> (const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, bool withStencil)</td></tr>
+<tr class="separator:af4a8294e460983c5115785208900bf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592cf08a0077906af2a384e738b17013"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a592cf08a0077906af2a384e738b17013">updatePipelines</a> (const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&gt; &amp;pipelineIds)</td></tr>
+<tr class="separator:a592cf08a0077906af2a384e738b17013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7abc19f06c567b53576914930a8ea2b3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a7abc19f06c567b53576914930a8ea2b3">getMultisampledDepthAttachment</a> (const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
+<tr class="separator:a7abc19f06c567b53576914930a8ea2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c68ba58f2650009177d46fb4a0886a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a1c68ba58f2650009177d46fb4a0886a2">render</a> (vireo::CommandList &amp;commandList, const <a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> &amp;scene, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
+<tr class="separator:a1c68ba58f2650009177d46fb4a0886a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f872b3ab1e81f18ffa9038e26952242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DepthPrepass.html#a6f872b3ab1e81f18ffa9038e26952242">resize</a> (const vireo::Extent &amp;extent, const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList) override</td></tr>
+<tr class="separator:a6f872b3ab1e81f18ffa9038e26952242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
-<tr class="memitem:a03f3cc32ad37d1dcf51faed89186dabe inherit pub_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a03f3cc32ad37d1dcf51faed89186dabe">Renderpass</a> (const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;config, const std::string &amp;name)</td></tr>
-<tr class="separator:a03f3cc32ad37d1dcf51faed89186dabe inherit pub_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08719e90e3f87072f6792606fce9ab2a inherit pub_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">resize</a> (const vireo::Extent &amp;extent, const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList)</td></tr>
-<tr class="separator:a08719e90e3f87072f6792606fce9ab2a inherit pub_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde74f4b5722f9e1ba334ce1e871e206 inherit pub_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#abde74f4b5722f9e1ba334ce1e871e206">Renderpass</a> (const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, const std::string &amp;name)</td></tr>
+<tr class="separator:abde74f4b5722f9e1ba334ce1e871e206 inherit pub_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f76dbc8a0bc873fa9a5ec7642b79497 inherit pub_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a4f76dbc8a0bc873fa9a5ec7642b79497">update</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
 <tr class="separator:a4f76dbc8a0bc873fa9a5ec7642b79497 inherit pub_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a217dbc29bb2da11a8d5741b6cf2593de inherit pub_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a217dbc29bb2da11a8d5741b6cf2593de">~Renderpass</a> () = default</td></tr>
@@ -110,24 +114,32 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
+<tr class="memitem:a4a25f88f4d1b3f29559391de19d81e16 inherit pub_static_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a4a25f88f4d1b3f29559391de19d81e16">destroyShaderModules</a> ()</td></tr>
+<tr class="separator:a4a25f88f4d1b3f29559391de19d81e16 inherit pub_static_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
 <tr class="memitem:adbbf5771ef5bf6d490b1b6546631be5d inherit pro_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::ShaderModule &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d">loadShader</a> (const std::string &amp;shaderName) const</td></tr>
 <tr class="separator:adbbf5771ef5bf6d490b1b6546631be5d inherit pro_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
 <tr class="memitem:ac673bc430bdc3fdaa09f7becf98ef267 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#ac673bc430bdc3fdaa09f7becf98ef267">name</a></td></tr>
 <tr class="separator:ac673bc430bdc3fdaa09f7becf98ef267 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d433635ee07d8775732c8b056fa1e4 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a63d433635ee07d8775732c8b056fa1e4">config</a></td></tr>
-<tr class="separator:a63d433635ee07d8775732c8b056fa1e4 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee09c0be6277d024815ad660d41ba8ce inherit pro_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#aee09c0be6277d024815ad660d41ba8ce">config</a></td></tr>
+<tr class="separator:aee09c0be6277d024815ad660d41ba8ce inherit pro_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
+<tr class="memitem:ace54af1da72174bd5f202c7e55b598a3 inherit pro_static_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#ace54af1da72174bd5f202c7e55b598a3">shaderModulesMutex</a></td></tr>
+<tr class="separator:ace54af1da72174bd5f202c7e55b598a3 inherit pro_static_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c23a5db1dbabf6178e87dd457ab2a0a inherit pro_static_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, std::shared_ptr&lt; vireo::ShaderModule &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a1c23a5db1dbabf6178e87dd457ab2a0a">shaderModules</a></td></tr>
+<tr class="separator:a1c23a5db1dbabf6178e87dd457ab2a0a inherit pro_static_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a92af7f97b3d6268e3410d3a2c3fc5e57"></a>
+<a class="anchor" id="af4a8294e460983c5115785208900bf05"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">DepthPrepass </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td>
           <td class="paramname"><em>config</em>, </td>
         </tr>
         <tr>
@@ -143,11 +155,49 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a <a class="el" href="classlysa_1_1DepthPrepass.html">DepthPrepass</a> render pass </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>The renderer configuration </td></tr>
+    <tr><td class="paramname">withStencil</td><td>Whether to enable stencil testing </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4305f92c315cf423c82bb076e8f0bf99"></a>
+<a class="anchor" id="a7abc19f06c567b53576914930a8ea2b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto getMultisampledDepthAttachment </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>frameIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the multisampled depth attachment for a specific frame </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameIndex</td><td>Index of the current frame </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacelysa.html#a8e339e89177de831cfe98c20179b357da7fc56270e7a70fa81a5935b72eacbe29" title="A or X. ">A</a> shared pointer to the multisampled depth render target </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c68ba58f2650009177d46fb4a0886a2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -160,14 +210,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classlysa_1_1Scene.html">Scene</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> &amp;&#160;</td>
           <td class="paramname"><em>scene</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;&#160;</td>
-          <td class="paramname"><em>depthAttachment</em>&#160;</td>
+          <td class="paramname"><em>depthAttachment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>frameIndex</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -176,22 +232,74 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Renders the depth pre-pass </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>The command list to record rendering commands into </td></tr>
+    <tr><td class="paramname">scene</td><td>The scene frame data </td></tr>
+    <tr><td class="paramname">depthAttachment</td><td>The target depth attachment </td></tr>
+    <tr><td class="paramname">frameIndex</td><td>Index of the current frame </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a22d527060cc1fb0294fe274923b076b9"></a>
+<a class="anchor" id="a6f872b3ab1e81f18ffa9038e26952242"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resize </td>
+          <td>(</td>
+          <td class="paramtype">const vireo::Extent &amp;&#160;</td>
+          <td class="paramname"><em>extent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::CommandList &gt; &amp;&#160;</td>
+          <td class="paramname"><em>commandList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Recreate pass resources after a resize (default: no-op). </p>
+
+<p>Reimplemented from <a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">lysa::Renderpass::resize()</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a592cf08a0077906af2a384e738b17013"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void updatePipelines </td>
           <td>(</td>
-          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classlysa_1_1Material.html">Material</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pipelineIds</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Updates the graphics pipelines based on active pipeline IDs </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipelineIds</td><td>Map of pipeline IDs to unique object IDs </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -201,7 +309,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1DepthPrepass.html">DepthPrepass</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

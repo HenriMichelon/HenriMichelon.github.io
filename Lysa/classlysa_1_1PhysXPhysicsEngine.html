@@ -93,13 +93,13 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysXPhysicsEngine.html',
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d66b62d1c656ca038abc5a812e262d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a8d66b62d1c656ca038abc5a812e262d7">PhysXPhysicsEngine</a> (const <a class="el" href="structlysa_1_1LayerCollisionTable.html">LayerCollisionTable</a> &amp;layerCollisionTable)</td></tr>
 <tr class="separator:a8d66b62d1c656ca038abc5a812e262d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a0442198e43eba9a5769ddf638e244"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a33a0442198e43eba9a5769ddf638e244">createScene</a> (const <a class="el" href="structlysa_1_1DebugConfig.html">DebugConfig</a> &amp;debugConfig) override</td></tr>
-<tr class="separator:a33a0442198e43eba9a5769ddf638e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6de4a2f5bee368f62eaf94dcacc2e3a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlysa_1_1PhysicsWorld.html">PhysicsWorld</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#ac6de4a2f5bee368f62eaf94dcacc2e3a">createScene</a> (const DebugConfiguration &amp;debugConfig) override</td></tr>
+<tr class="separator:ac6de4a2f5bee368f62eaf94dcacc2e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66af6f47e86334910653bc4f8f8e701f"><td class="memItemLeft" align="right" valign="top">PhysicsMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a66af6f47e86334910653bc4f8f8e701f">createMaterial</a> (float friction=0.5f, float restitution=0.0f) const override</td></tr>
 <tr class="separator:a66af6f47e86334910653bc4f8f8e701f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a59d1d9e2ded14528fabccc857e36b3"><td class="memItemLeft" align="right" valign="top">PhysicsMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a5a59d1d9e2ded14528fabccc857e36b3">duplicateMaterial</a> (const PhysicsMaterial *orig) const override</td></tr>
 <tr class="separator:a5a59d1d9e2ded14528fabccc857e36b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce8dd95a99b8203ce789e6c7d8ee482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#afce8dd95a99b8203ce789e6c7d8ee482">setRestitutionCombineMode</a> (PhysicsMaterial *physicsMaterial, <a class="el" href="namespacelysa.html#a6e35783cf2f5aa6e003074cb22fbafe7">CombineMode</a> combineMode) const override</td></tr>
+<tr class="memitem:afce8dd95a99b8203ce789e6c7d8ee482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#afce8dd95a99b8203ce789e6c7d8ee482">setRestitutionCombineMode</a> (PhysicsMaterial *physicsMaterial, <a class="el" href="namespacelysa.html#a446b135856ad07e57d2e9071439aa77e">CombineMode</a> combineMode) const override</td></tr>
 <tr class="separator:afce8dd95a99b8203ce789e6c7d8ee482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e6c2a6634f752b22c5b9bd75915d74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a75e6c2a6634f752b22c5b9bd75915d74">shouldCollide</a> (const uint32_t layer1, const uint32_t layer2) const</td></tr>
 <tr class="separator:a75e6c2a6634f752b22c5b9bd75915d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,14 +113,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:adcb12b4fdbcd264aa5c16e0fed71e915"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#adcb12b4fdbcd264aa5c16e0fed71e915">collisionMatrix</a> [MAX_COLLISIONS_LAYERS][MAX_COLLISIONS_LAYERS]</td></tr>
-<tr class="separator:adcb12b4fdbcd264aa5c16e0fed71e915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa4325f7c0560261892e321e338168b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html#a2aa4325f7c0560261892e321e338168b">collisionMatrix</a> [PHYSX_MAX_COLLISIONS_LAYERS][PHYSX_MAX_COLLISIONS_LAYERS]</td></tr>
+<tr class="separator:a2aa4325f7c0560261892e321e338168b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classlysa_1_1PhysicsEngine"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classlysa_1_1PhysicsEngine')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classlysa_1_1PhysicsEngine.html">PhysicsEngine</a></td></tr>
-<tr class="memitem:a5754113146dab7eb69d5eda376f95ab3 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; PhysicsEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a5754113146dab7eb69d5eda376f95ab3">create</a> (const <a class="el" href="structlysa_1_1PhysicsConfiguration.html">PhysicsConfiguration</a> &amp;config)</td></tr>
-<tr class="separator:a5754113146dab7eb69d5eda376f95ab3 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0645ad08062d573d18b8c8b7bcc6012 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; PhysicsEngine &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#ae0645ad08062d573d18b8c8b7bcc6012">create</a> (const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;config)</td></tr>
+<tr class="separator:ae0645ad08062d573d18b8c8b7bcc6012 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ce85ff2332b895b5d19c1b3b53c438 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacelysa.html#a769a94a48b5e0161e77c388a5fb42bed">PhysicsEngineType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a54ce85ff2332b895b5d19c1b3b53c438">getEngineType</a> ()</td></tr>
 <tr class="separator:a54ce85ff2332b895b5d19c1b3b53c438 inherit pub_static_methods_classlysa_1_1PhysicsEngine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -203,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a33a0442198e43eba9a5769ddf638e244"></a>
+<a class="anchor" id="ac6de4a2f5bee368f62eaf94dcacc2e3a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -211,9 +211,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classlysa_1_1PhysicsScene.html">PhysicsScene</a>&gt; createScene </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classlysa_1_1PhysicsWorld.html">PhysicsWorld</a>&gt; createScene </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1DebugConfig.html">DebugConfig</a> &amp;&#160;</td>
+          <td class="paramtype">const DebugConfiguration &amp;&#160;</td>
           <td class="paramname"><em>debugConfig</em></td><td>)</td>
           <td></td>
         </tr>
@@ -224,9 +224,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a new physics scene/world with optional debug settings. </p>
+<p>Creates a new physics world with optional debug settings. </p>
 
-<p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#ac8617e21ec3bf1788339e763cd595f8f">lysa::PhysicsEngine::createScene()</a></p>
+<p>Implements <a class="el" href="classlysa_1_1PhysicsEngine.html#ac3d067949cb3d44df1db9a6b06f0e8a0">lysa::PhysicsEngine::createScene()</a></p>
 
 </div>
 </div>
@@ -297,7 +297,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a6e35783cf2f5aa6e003074cb22fbafe7">CombineMode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a446b135856ad07e57d2e9071439aa77e">CombineMode</a>&#160;</td>
           <td class="paramname"><em>combineMode</em>&#160;</td>
         </tr>
         <tr>
@@ -354,7 +354,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="adcb12b4fdbcd264aa5c16e0fed71e915"></a>
+<a class="anchor" id="a2aa4325f7c0560261892e321e338168b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -362,7 +362,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool collisionMatrix[MAX_COLLISIONS_LAYERS][MAX_COLLISIONS_LAYERS]</td>
+          <td class="memname">bool collisionMatrix[PHYSX_MAX_COLLISIONS_LAYERS][PHYSX_MAX_COLLISIONS_LAYERS]</td>
         </tr>
       </table>
   </td>
@@ -380,7 +380,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PhysXPhysicsEngine.html">PhysXPhysicsEngine</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

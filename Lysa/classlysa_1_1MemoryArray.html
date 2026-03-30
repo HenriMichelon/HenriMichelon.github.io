@@ -76,7 +76,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1MemoryArray.html',''); in
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for all GPU memory arrays </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for MemoryArray:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1MemoryArray.html',''); in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d74d7b020647fc7df2d9e150d63c284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a6d74d7b020647fc7df2d9e150d63c284">alloc</a> (size_t instanceCount)</td></tr>
+<tr class="memitem:a6d74d7b020647fc7df2d9e150d63c284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a6d74d7b020647fc7df2d9e150d63c284">alloc</a> (<a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceCount)</td></tr>
 <tr class="separator:a6d74d7b020647fc7df2d9e150d63c284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec0909092618ed7b1a8aa2fc6eec9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#adec0909092618ed7b1a8aa2fc6eec9ca">free</a> (const <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &amp;bloc)</td></tr>
 <tr class="separator:adec0909092618ed7b1a8aa2fc6eec9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,8 +103,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac9f80d58c66de9ddc141026cee6c7d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f138490c598e86a9a822957703b9a82"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a2f138490c598e86a9a822957703b9a82">getBuffer</a> () const</td></tr>
 <tr class="separator:a2f138490c598e86a9a822957703b9a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09f4fe805fa9a54d4d68c5b29c1502e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a09f4fe805fa9a54d4d68c5b29c1502e1">cleanup</a> ()</td></tr>
-<tr class="separator:a09f4fe805fa9a54d4d68c5b29c1502e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addb00bfc62aac950264e864f0c76b6e9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#addb00bfc62aac950264e864f0c76b6e9">~MemoryArray</a> ()</td></tr>
 <tr class="separator:addb00bfc62aac950264e864f0c76b6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accb16035d91aad5b188d4b2b9255177a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#accb16035d91aad5b188d4b2b9255177a">MemoryArray</a> (MemoryArray &amp;) = delete</td></tr>
@@ -112,14 +112,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a14a72b0a7b1294950bdf7268af18405c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a14a72b0a7b1294950bdf7268af18405c">MemoryArray</a> (const vireo::Vireo &amp;vireo, size_t instanceSize, size_t instanceCount, vireo::BufferType bufferType, const std::string &amp;name)</td></tr>
-<tr class="separator:a14a72b0a7b1294950bdf7268af18405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a3cfaafe885634fa6c0ef70a65e34a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a30a3cfaafe885634fa6c0ef70a65e34a">MemoryArray</a> (const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceSize, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceCount, vireo::BufferType bufferType, const std::string &amp;name)</td></tr>
+<tr class="separator:a30a3cfaafe885634fa6c0ef70a65e34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac673bc430bdc3fdaa09f7becf98ef267"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#ac673bc430bdc3fdaa09f7becf98ef267">name</a></td></tr>
 <tr class="separator:ac673bc430bdc3fdaa09f7becf98ef267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da523bc3f0e4b69a4a8a904f938d70b"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a7da523bc3f0e4b69a4a8a904f938d70b">instanceSize</a></td></tr>
+<tr class="memitem:a7da523bc3f0e4b69a4a8a904f938d70b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a7da523bc3f0e4b69a4a8a904f938d70b">instanceSize</a></td></tr>
 <tr class="separator:a7da523bc3f0e4b69a4a8a904f938d70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93d75b05a70a8649d234779e9e08a210"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a93d75b05a70a8649d234779e9e08a210">buffer</a></td></tr>
 <tr class="separator:a93d75b05a70a8649d234779e9e08a210"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +176,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a14a72b0a7b1294950bdf7268af18405c"></a>
+<a class="anchor" id="a30a3cfaafe885634fa6c0ef70a65e34a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -186,19 +186,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">MemoryArray </td>
           <td>(</td>
-          <td class="paramtype">const vireo::Vireo &amp;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Vireo &gt; &amp;&#160;</td>
           <td class="paramname"><em>vireo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
           <td class="paramname"><em>instanceSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
           <td class="paramname"><em>instanceCount</em>, </td>
         </tr>
         <tr>
@@ -236,37 +236,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> alloc </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
           <td class="paramname"><em>instanceCount</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a09f4fe805fa9a54d4d68c5b29c1502e1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void cleanup </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classlysa_1_1DeviceMemoryArray.html#a6116e1a8965cfa1112b2ec004230aa39">lysa::DeviceMemoryArray::cleanup()</a></p>
+<p>Allocate a new GPU memory block </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instanceCount</td><td>Number of resources instances stored in this memory block </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -293,6 +275,13 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Copy the entire content of this memory array to another GPU memory array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>Command list used for the copy operation </td></tr>
+    <tr><td class="paramname">destination</td><td>Destination GPU memory array </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -309,6 +298,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Free a previously allocated GPU memory block </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bloc</td><td>Allocated memory block </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -332,6 +327,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Returns the GPU memory buffer allocated for the entire array </p>
 
 </div>
 </div>
@@ -390,6 +386,13 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Schedule a data transfert from the CPU to the GPU. Data will be temporarily written into a staging buffer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>Destination memory block </td></tr>
+    <tr><td class="paramname">source</td><td>Source address of CPU memory </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classlysa_1_1HostVisibleMemoryArray.html#a8c39452c590cdf161e0dc310289a585c">lysa::HostVisibleMemoryArray::write()</a>, <a class="el" href="classlysa_1_1DeviceMemoryArray.html#a8c39452c590cdf161e0dc310289a585c">lysa::DeviceMemoryArray::write()</a></p>
 
@@ -444,7 +447,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const size_t instanceSize</td>
+          <td class="memname">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceSize</td>
         </tr>
       </table>
   </td>
@@ -502,7 +505,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1MemoryArray.html">MemoryArray</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

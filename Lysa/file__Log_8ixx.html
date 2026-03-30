@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 1.7.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa/src/lysa/Log.ixx File Reference</title>
+<title>Lysa: C:/Users/hmich/Documents/GitHub/lysa_engine/src/utils/Log.ixx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(document).ready(function(){initNavTree('file__Log_8ixx.html',''); initResizabl
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
+<a href="#enum-members">Enums</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
     <div class="title">Log.ixx File Reference</div>
@@ -72,11 +72,13 @@ $(document).ready(function(){initNavTree('file__Log_8ixx.html',''); initResizabl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Log.html">Log</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html">Log</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1LogStream.html">LogStream</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1LogStreamBuf.html">LogStreamBuf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1LoggingConfiguration.html">LoggingConfiguration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -84,61 +86,44 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacelysa"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html">lysa</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab88d6945536045a1ef9072f13bf9290f"><td class="memItemLeft" align="right" valign="top">consteval bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ab88d6945536045a1ef9072f13bf9290f">isLoggingEnabled</a> ()</td></tr>
-<tr class="separator:ab88d6945536045a1ef9072f13bf9290f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d67a029812fbcc4ff42bed5694475a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a91d67a029812fbcc4ff42bed5694475a">TRACE</a> (const std::source_location &amp;location=std::source_location::current ())</td></tr>
-<tr class="separator:a91d67a029812fbcc4ff42bed5694475a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9525820ed8e116a6df77fa63d72833d7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a9525820ed8e116a6df77fa63d72833d7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a9525820ed8e116a6df77fa63d72833d7">DEBUG</a> (Args...args)</td></tr>
-<tr class="separator:a9525820ed8e116a6df77fa63d72833d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac177daf0eaff67744603475bf04ad610"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ac177daf0eaff67744603475bf04ad610"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ac177daf0eaff67744603475bf04ad610">INFO</a> (Args...args)</td></tr>
-<tr class="separator:ac177daf0eaff67744603475bf04ad610"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf4683962ed399e73b04bcd357b9ff8a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:acf4683962ed399e73b04bcd357b9ff8a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#acf4683962ed399e73b04bcd357b9ff8a">GAME1</a> (Args...args)</td></tr>
-<tr class="separator:acf4683962ed399e73b04bcd357b9ff8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00748685bcc234ba7060bbda9af32838"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a00748685bcc234ba7060bbda9af32838"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a00748685bcc234ba7060bbda9af32838">GAME2</a> (Args...args)</td></tr>
-<tr class="separator:a00748685bcc234ba7060bbda9af32838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2991de7b32780fb0e8091b895ea0c043"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a2991de7b32780fb0e8091b895ea0c043"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a2991de7b32780fb0e8091b895ea0c043">GAME3</a> (Args...args)</td></tr>
-<tr class="separator:a2991de7b32780fb0e8091b895ea0c043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac48b9e60a2debbf9f4b9b59908746bda"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ac48b9e60a2debbf9f4b9b59908746bda"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ac48b9e60a2debbf9f4b9b59908746bda">WARNING</a> (Args...args)</td></tr>
-<tr class="separator:ac48b9e60a2debbf9f4b9b59908746bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2107f3e641b3789947765ec6be043f21"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a2107f3e641b3789947765ec6be043f21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a2107f3e641b3789947765ec6be043f21">ERROR</a> (Args...args)</td></tr>
-<tr class="separator:a2107f3e641b3789947765ec6be043f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad97c6b87ca91e870a45a547cddfb7590"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ad97c6b87ca91e870a45a547cddfb7590"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelysa.html#ad97c6b87ca91e870a45a547cddfb7590">CRITICAL</a> (Args...args)</td></tr>
-<tr class="separator:ad97c6b87ca91e870a45a547cddfb7590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enums</h2></td></tr>
+<tr class="memitem:a0cf665f670b20d879788310ab6e13b39"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#a0cf665f670b20d879788310ab6e13b39">LoggingMode</a> : uint32 { <a class="el" href="namespacelysa.html#a0cf665f670b20d879788310ab6e13b39aa2d7b3a753bc0ecf5bc1a665f8fc780f">LOGGING_MODE_NONE</a> = 0, 
+<a class="el" href="namespacelysa.html#a0cf665f670b20d879788310ab6e13b39aaafa5fbfe0de0335336d96c3ccec78b0">LOGGING_MODE_WINDOW</a> = 0x001, 
+<a class="el" href="namespacelysa.html#a0cf665f670b20d879788310ab6e13b39a99f0862cf92888c7081cd12a2cd7704f">LOGGING_MODE_FILE</a> = 0x010, 
+<a class="el" href="namespacelysa.html#a0cf665f670b20d879788310ab6e13b39a345e20a9a3c0b5479024ea64d7954cae">LOGGING_MODE_STDOUT</a> = 0x100
+ }</td></tr>
+<tr class="separator:a0cf665f670b20d879788310ab6e13b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f726a209a5bf69a4edbe74426419dd"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dd">LogLevel</a> : int32 { <br />
+&#160;&#160;<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda2d3e4144aa384b18849ab9a8abad74d6">TRACE</a> = -1, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419ddadc30ec20708ef7b0f641ef78b7880a15">DEBUG</a> = 0, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda551b723eafd6a31d444fcb2f5920fbd3">INFO</a> = 1, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda774d72786dbabecef1aaa08c6defe442">GAME1</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda6b2ce029095501b9031d090062a8e7a7">GAME2</a> = 3, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda2e19d716d8e6d6ea2267348647852cc0">GAME3</a> = 4, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda059e9861e0400dfbe05c98a841f3f96b">WARNING</a> = 5, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419ddabb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a> = 6, 
+<br />
+&#160;&#160;<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda99cd1c61610c76a57cb8d10d6df6b870">CRITICAL</a> = 7, 
+<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dda182fa1c42a2468f8488e6dcf75a81b81">INTERNAL</a> = 100
+<br />
+ }</td></tr>
+<tr class="separator:aa4f726a209a5bf69a4edbe74426419dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Log_8ixx.html#a96e5f0eca87c2426370e0897ac7b8ca6">module</a></td></tr>
+<tr class="separator:a96e5f0eca87c2426370e0897ac7b8ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bcd99b2b60a449240dc0f06e7111329"><td class="memItemLeft" align="right" valign="top">export module lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Log_8ixx.html#a3bcd99b2b60a449240dc0f06e7111329">log</a></td></tr>
 <tr class="separator:a3bcd99b2b60a449240dc0f06e7111329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f42581b64a695b89aba6966398fc784"><td class="memItemLeft" align="right" valign="top">import&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Log_8ixx.html#a2f42581b64a695b89aba6966398fc784">std</a></td></tr>
-<tr class="separator:a2f42581b64a695b89aba6966398fc784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd239f4aa10533df4a33f637230cc98"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Log_8ixx.html#a7dd239f4aa10533df4a33f637230cc98">enums</a></td></tr>
-<tr class="separator:a7dd239f4aa10533df4a33f637230cc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219d73c6a72868b4eb9ed7b08565f607"><td class="memItemLeft" align="right" valign="top">import lysa&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__Log_8ixx.html#a219d73c6a72868b4eb9ed7b08565f607">types</a></td></tr>
+<tr class="separator:a219d73c6a72868b4eb9ed7b08565f607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa900a7432f66df03e1e306751d350d65"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelysa.html#aa900a7432f66df03e1e306751d350d65">ENABLE_LOG</a> = true</td></tr>
+<tr class="memdesc:aa900a7432f66df03e1e306751d350d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates at compile-time that logging is enabled.  <a href="namespacelysa.html#aa900a7432f66df03e1e306751d350d65">More...</a><br /></td></tr>
 <tr class="separator:aa900a7432f66df03e1e306751d350d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a7dd239f4aa10533df4a33f637230cc98"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">import lysa enums</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a3bcd99b2b60a449240dc0f06e7111329"></a>
 <div class="memitem">
 <div class="memproto">
@@ -151,12 +136,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2f42581b64a695b89aba6966398fc784"></a>
+<a class="anchor" id="a96e5f0eca87c2426370e0897ac7b8ca6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">import std</td>
+          <td class="memname">module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a219d73c6a72868b4eb9ed7b08565f607"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">import lysa types</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -168,8 +165,8 @@ Variables</h2></td></tr>
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_626eab7fd05737612408b7bb64c9da31.html">lysa</a></li><li class="navelem"><a class="el" href="file__Log_8ixx.html">Log.ixx</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="navelem"><a class="el" href="dir_d41d8cd98f00b204e9800998ecf8427e.html">src</a></li><li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="file__Log_8ixx.html">Log.ixx</a></li>
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

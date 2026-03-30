@@ -67,8 +67,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classlysa_1_1Renderpass-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Renderpass Class Reference</div>
@@ -77,13 +79,10 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for a single stage in the renderer frame graph.</p><ul>
+<div class="textblock"><p>Base class for a single stage in the renderer frame graph.</p>
+<ul>
 <li>Encapsulate pipelines, descriptor layouts/sets, and render state for a specific step (e.g., depth pre-pass, G-Buffer, lighting, post FX).</li>
-<li>Provide <a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">resize()</a> and <a class="el" href="classlysa_1_1Renderpass.html#a4f76dbc8a0bc873fa9a5ec7642b79497">update()</a> hooks to recreate resources when the swap chain changes or per-frame data needs refreshing.</li>
-</ul>
-<p>Notes:</p><ul>
-<li>Subclasses record their work into command lists provided by <a class="el" href="classlysa_1_1Renderer.html">Renderer</a>.</li>
-<li>Unless stated otherwise, methods are expected to be called from the render thread. </li>
+<li>Provide <a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">resize()</a> and <a class="el" href="classlysa_1_1Renderpass.html#a4f76dbc8a0bc873fa9a5ec7642b79497">update()</a> hooks to recreate resources when the swap chain changes or per-frame data needs refreshing. </li>
 </ul>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Renderpass:</div>
@@ -94,7 +93,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
   <img src="classlysa_1_1Renderpass.png" usemap="#Renderpass_map" alt=""/>
   <map id="Renderpass_map" name="Renderpass_map">
 <area href="classlysa_1_1DepthPrepass.html" alt="DepthPrepass" shape="rect" coords="136,56,262,80"/>
-<area href="classlysa_1_1ForwardColor.html" alt="ForwardColor" shape="rect" coords="136,112,262,136"/>
+<area href="classlysa_1_1ForwardColorPass.html" alt="ForwardColorPass" shape="rect" coords="136,112,262,136"/>
 <area href="classlysa_1_1GBufferPass.html" alt="GBufferPass" shape="rect" coords="136,168,262,192"/>
 <area href="classlysa_1_1LightingPass.html" alt="LightingPass" shape="rect" coords="136,224,262,248"/>
 <area href="classlysa_1_1PostProcessing.html" alt="PostProcessing" shape="rect" coords="136,280,262,304"/>
@@ -108,8 +107,8 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03f3cc32ad37d1dcf51faed89186dabe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a03f3cc32ad37d1dcf51faed89186dabe">Renderpass</a> (const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;config, const std::string &amp;name)</td></tr>
-<tr class="separator:a03f3cc32ad37d1dcf51faed89186dabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde74f4b5722f9e1ba334ce1e871e206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#abde74f4b5722f9e1ba334ce1e871e206">Renderpass</a> (const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, const std::string &amp;name)</td></tr>
+<tr class="separator:abde74f4b5722f9e1ba334ce1e871e206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08719e90e3f87072f6792606fce9ab2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a">resize</a> (const vireo::Extent &amp;extent, const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList)</td></tr>
 <tr class="separator:a08719e90e3f87072f6792606fce9ab2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f76dbc8a0bc873fa9a5ec7642b79497"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a4f76dbc8a0bc873fa9a5ec7642b79497">update</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
@@ -121,6 +120,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0bfccfca606cc033a3f76902ec24c37"><td class="memItemLeft" align="right" valign="top">Renderpass &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#aa0bfccfca606cc033a3f76902ec24c37">operator=</a> (Renderpass &amp;) = delete</td></tr>
 <tr class="separator:aa0bfccfca606cc033a3f76902ec24c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4a25f88f4d1b3f29559391de19d81e16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a4a25f88f4d1b3f29559391de19d81e16">destroyShaderModules</a> ()</td></tr>
+<tr class="separator:a4a25f88f4d1b3f29559391de19d81e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:adbbf5771ef5bf6d490b1b6546631be5d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::ShaderModule &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d">loadShader</a> (const std::string &amp;shaderName) const</td></tr>
@@ -130,18 +134,25 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac673bc430bdc3fdaa09f7becf98ef267"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#ac673bc430bdc3fdaa09f7becf98ef267">name</a></td></tr>
 <tr class="separator:ac673bc430bdc3fdaa09f7becf98ef267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d433635ee07d8775732c8b056fa1e4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a63d433635ee07d8775732c8b056fa1e4">config</a></td></tr>
-<tr class="separator:a63d433635ee07d8775732c8b056fa1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee09c0be6277d024815ad660d41ba8ce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#aee09c0be6277d024815ad660d41ba8ce">config</a></td></tr>
+<tr class="separator:aee09c0be6277d024815ad660d41ba8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:ace54af1da72174bd5f202c7e55b598a3"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#ace54af1da72174bd5f202c7e55b598a3">shaderModulesMutex</a></td></tr>
+<tr class="separator:ace54af1da72174bd5f202c7e55b598a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c23a5db1dbabf6178e87dd457ab2a0a"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, std::shared_ptr&lt; vireo::ShaderModule &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a1c23a5db1dbabf6178e87dd457ab2a0a">shaderModules</a></td></tr>
+<tr class="separator:a1c23a5db1dbabf6178e87dd457ab2a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a03f3cc32ad37d1dcf51faed89186dabe"></a>
+<a class="anchor" id="abde74f4b5722f9e1ba334ce1e871e206"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Renderpass </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td>
           <td class="paramname"><em>config</em>, </td>
         </tr>
         <tr>
@@ -215,6 +226,29 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4a25f88f4d1b3f29559391de19d81e16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void destroyShaderModules </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adbbf5771ef5bf6d490b1b6546631be5d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +331,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Recreate pass resources after a resize (default: no-op). </p>
 
-<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::PostProcessing::resize()</a>, <a class="el" href="classlysa_1_1GBufferPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::GBufferPass::resize()</a>, <a class="el" href="classlysa_1_1ForwardColor.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardColor::resize()</a>, <a class="el" href="classlysa_1_1LightingPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::LightingPass::resize()</a>, <a class="el" href="classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSAOPass::resize()</a>, <a class="el" href="classlysa_1_1SMAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SMAAPass::resize()</a>, <a class="el" href="classlysa_1_1TransparencyPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TransparencyPass::resize()</a></p>
+<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::PostProcessing::resize()</a>, <a class="el" href="classlysa_1_1DepthPrepass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::DepthPrepass::resize()</a>, <a class="el" href="classlysa_1_1GBufferPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::GBufferPass::resize()</a>, <a class="el" href="classlysa_1_1ForwardColorPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardColorPass::resize()</a>, <a class="el" href="classlysa_1_1LightingPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::LightingPass::resize()</a>, <a class="el" href="classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSAOPass::resize()</a>, <a class="el" href="classlysa_1_1SMAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SMAAPass::resize()</a>, <a class="el" href="classlysa_1_1TransparencyPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TransparencyPass::resize()</a></p>
 
 </div>
 </div>
@@ -324,12 +358,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Update any per-frame state (default: no-op). </p>
 
-<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#aac5965965f94aeee2855ac31115f12a8">lysa::PostProcessing::update()</a>, <a class="el" href="classlysa_1_1ShadowMapPass.html#aac5965965f94aeee2855ac31115f12a8">lysa::ShadowMapPass::update()</a></p>
+<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#aac5965965f94aeee2855ac31115f12a8">lysa::PostProcessing::update()</a>, <a class="el" href="classlysa_1_1ShadowMapPass.html#aac5965965f94aeee2855ac31115f12a8">lysa::ShadowMapPass::update()</a>, <a class="el" href="classlysa_1_1BloomPass.html#aac5965965f94aeee2855ac31115f12a8">lysa::BloomPass::update()</a></p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a63d433635ee07d8775732c8b056fa1e4"></a>
+<a class="anchor" id="aee09c0be6277d024815ad660d41ba8ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -337,7 +371,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structlysa_1_1RenderingConfiguration.html">RenderingConfiguration</a>&amp; config</td>
+          <td class="memname">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a>&amp; config</td>
         </tr>
       </table>
   </td>
@@ -371,13 +405,53 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1c23a5db1dbabf6178e87dd457ab2a0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::shared_ptr&lt;vireo::ShaderModule&gt; &gt; shaderModules</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ace54af1da72174bd5f202c7e55b598a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex shaderModulesMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 1.7.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

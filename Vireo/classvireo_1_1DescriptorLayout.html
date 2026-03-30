@@ -79,10 +79,18 @@ $(document).ready(function(){initNavTree('classvireo_1_1DescriptorLayout.html','
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A descriptor set layout object. Describes resources that shaders can use. Add resources with <code><a class="el" href="classvireo_1_1DescriptorLayout.html#af69e6672ce8e9ad0be1b2c10fddf2f00">add()</a></code> then call <code><a class="el" href="classvireo_1_1DescriptorLayout.html#a9d887f6f043a4b7c3388ca7aba0b070c">build()</a></code> to build the layout. Note that samplers must be bounds to a specific sampler-only layout.</p>
 <p>Manual page : <a class="el" href="manual_040_01_descriptor_layout.html">Descriptor Layout</a> </p>
-</div><table class="memberdecls">
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for DescriptorLayout:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="classvireo_1_1DescriptorLayout.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af69e6672ce8e9ad0be1b2c10fddf2f00"><td class="memItemLeft" align="right" valign="top">virtual DescriptorLayout &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#af69e6672ce8e9ad0be1b2c10fddf2f00">add</a> (<a class="el" href="namespacevireo.html#a0e0fd186e31841264c06580c22ffe6c2">DescriptorIndex</a> index, <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117">DescriptorType</a> type, size_t count=1) = 0</td></tr>
+<tr class="memitem:af69e6672ce8e9ad0be1b2c10fddf2f00"><td class="memItemLeft" align="right" valign="top">virtual DescriptorLayout &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#af69e6672ce8e9ad0be1b2c10fddf2f00">add</a> (<a class="el" href="namespacevireo.html#a0e0fd186e31841264c06580c22ffe6c2">DescriptorIndex</a> index, <a class="el" href="namespacevireo.html#a684e147d500221ad811a1b6b4f2c5117">DescriptorType</a> type, <a class="el" href="namespacevireo.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> count=1) = 0</td></tr>
 <tr class="separator:af69e6672ce8e9ad0be1b2c10fddf2f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d887f6f043a4b7c3388ca7aba0b070c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#a9d887f6f043a4b7c3388ca7aba0b070c">build</a> ()</td></tr>
 <tr class="separator:a9d887f6f043a4b7c3388ca7aba0b070c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,7 +114,7 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad721fc6ca6a3d6ba3bc506576622aab0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#ad721fc6ca6a3d6ba3bc506576622aab0">capacity</a> {0}</td></tr>
+<tr class="memitem:ad721fc6ca6a3d6ba3bc506576622aab0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevireo.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#ad721fc6ca6a3d6ba3bc506576622aab0">capacity</a> {0}</td></tr>
 <tr class="separator:ad721fc6ca6a3d6ba3bc506576622aab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dbf2e26bf6ee6c103af0449a03a60e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1DescriptorLayout.html#a8dbf2e26bf6ee6c103af0449a03a60e1">samplers</a> {false}</td></tr>
 <tr class="separator:a8dbf2e26bf6ee6c103af0449a03a60e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +226,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
           <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
@@ -373,7 +381,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t capacity {0}</td>
+          <td class="memname"><a class="el" href="namespacevireo.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> capacity {0}</td>
         </tr>
       </table>
   </td>
@@ -431,7 +439,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 12:12:20 for Vireo &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:41:17 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>

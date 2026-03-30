@@ -67,6 +67,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1FrustumCulling.html','');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classlysa_1_1FrustumCulling-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">FrustumCulling Class Reference</div>
@@ -74,11 +75,13 @@ $(document).ready(function(){initNavTree('classlysa_1_1FrustumCulling.html','');
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Performs frustum culling on a list of mesh instances using a compute shader. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aed9b9b8226349654f0bc1efd4e95b3aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#aed9b9b8226349654f0bc1efd4e95b3aa">FrustumCulling</a> (bool isForScene, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesArray)</td></tr>
-<tr class="separator:aed9b9b8226349654f0bc1efd4e95b3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad990385baa3421252b5ebdbb6603c486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#ad990385baa3421252b5ebdbb6603c486">FrustumCulling</a> (bool isForScene, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesArray, <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a> pipelineId)</td></tr>
+<tr class="separator:ad990385baa3421252b5ebdbb6603c486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a748bc01f90dd85275bdfa15a2595c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a56a748bc01f90dd85275bdfa15a2595c">dispatch</a> (vireo::CommandList &amp;commandList, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> drawCommandsCount, const float4x4 &amp;view, const float4x4 &amp;projection, const vireo::Buffer &amp;instances, const vireo::Buffer &amp;input, const vireo::Buffer &amp;output, const vireo::Buffer &amp;counter)</td></tr>
 <tr class="separator:a56a748bc01f90dd85275bdfa15a2595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d8244e016ce753eec10adf3bd2c38e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#af0d8244e016ce753eec10adf3bd2c38e">getDrawCommandsCount</a> () const</td></tr>
@@ -89,9 +92,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4414dc467878d4f74784697de72eebb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39c336d44beaa6daadf1b561befbd7ec"><td class="memItemLeft" align="right" valign="top">FrustumCulling &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a39c336d44beaa6daadf1b561befbd7ec">operator=</a> (FrustumCulling &amp;) = delete</td></tr>
 <tr class="separator:a39c336d44beaa6daadf1b561befbd7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a53769672d4937cdc85fd17a9d3a7be6b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a53769672d4937cdc85fd17a9d3a7be6b">cleanup</a> ()</td></tr>
+<tr class="separator:a53769672d4937cdc85fd17a9d3a7be6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aed9b9b8226349654f0bc1efd4e95b3aa"></a>
+<a class="anchor" id="ad990385baa3421252b5ebdbb6603c486"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -105,7 +113,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td>
-          <td class="paramname"><em>meshInstancesArray</em>&#160;</td>
+          <td class="paramname"><em>meshInstancesArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>&#160;</td>
+          <td class="paramname"><em>pipelineId</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -114,6 +128,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructs a new <a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a> pipeline. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isForScene</td><td>True if the culling is for a scene, false for shadow maps. </td></tr>
+    <tr><td class="paramname">meshInstancesArray</td><td>The array containing all mesh instance data. </td></tr>
+    <tr><td class="paramname">pipelineId</td><td>The attached material pipeline id </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -165,6 +187,30 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a53769672d4937cdc85fd17a9d3a7be6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cleans up global resources shared by all <a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a> instances. </p>
+
+</div>
+</div>
 <a class="anchor" id="a56a748bc01f90dd85275bdfa15a2595c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -224,6 +270,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Dispatches the frustum culling compute shader. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandList</td><td>The command list to record the dispatch command into. </td></tr>
+    <tr><td class="paramname">drawCommandsCount</td><td>The total number of draw commands to process. </td></tr>
+    <tr><td class="paramname">view</td><td>The camera view matrix. </td></tr>
+    <tr><td class="paramname">projection</td><td>The camera projection matrix. </td></tr>
+    <tr><td class="paramname">instances</td><td>The buffer containing the instances to cull. </td></tr>
+    <tr><td class="paramname">input</td><td>The buffer containing the input indirect draw commands. </td></tr>
+    <tr><td class="paramname">output</td><td>The buffer where the visible indirect draw commands will be written. </td></tr>
+    <tr><td class="paramname">counter</td><td>The buffer containing the counter for the number of visible instances. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -239,6 +298,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Gets the number of instances that passed the frustum culling. </p><dl class="section return"><dt>Returns</dt><dd>The count of visible instances. </dd></dl>
 
 </div>
 </div>
@@ -272,7 +332,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a></li>
-    <li class="footer">Generated on ven. nov. 14 2025 13:46:35 for Lysa &nbsp; by
+    <li class="footer">Generated on lun. mars 30 2026 12:45:25 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 1.7.0 </li>
   </ul>
