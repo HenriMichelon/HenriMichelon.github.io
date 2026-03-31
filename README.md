@@ -7,6 +7,8 @@ Articles
 
 [Exemple d'implémentation du SMAA avec Vireo RHI (french)](https://henrimichelon.github.io/Articles/fr/smaa_vireo_rhi.html)
 
+[Example of SMAA Implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/smaa_vireo_rhi.html)
+
 
 Projects documentations
 -------------------------------------------

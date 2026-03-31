@@ -238,7 +238,7 @@
 
     <p>Le module <code>samples.common.postprocessing</code> (fichiers <code>PostProcessing.ixx</code> et <code>PostProcessing.cpp</code>) gère l'ensemble du cycle de vie des passes post-traitement. L'architecture utilise les <strong>modules C++20</strong> (<code>export module</code>), qui remplacent les headers traditionnels.</p>
 
-    <h3>Initialisation des pipelines</h3>
+    <h3>Initialisation des pipelines (onInit)</h3>
 
 <pre data-lang="PostProcessing.cpp"><code><span class="cm">// Création des trois pipelines graphiques SMAA</span>
 pipelineConfig.colorRenderFormats.push_back(vireo::<span class="ty">ImageFormat</span>::<span class="nb">R16G16_SFLOAT</span>);
