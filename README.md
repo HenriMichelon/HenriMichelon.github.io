@@ -1,4 +1,12 @@
-[Lysa](https://henrimichelon.github.io/Lysa/) is an hobby gpu-driven 3D engine.
+Articles
+-------------------------------------------
+
+[Exemple d'implémentation du TAA avec Vireo RHI (french)](https://henrimichelon.github.io/taa_vireo_rhi.html)
+
+Projects documentations
+-------------------------------------------
+
+[Lysa](https://henrimichelon.github.io/Lysa/) is an hobby gpu-driven 3D engine written in modern C++.
 
 [Vireo](https://henrimichelon.github.io/Vireo/) Vireo RHI is an open source library written in modern C++ that implements a common abstraction layer over multiple 3D graphics APIs.
 
