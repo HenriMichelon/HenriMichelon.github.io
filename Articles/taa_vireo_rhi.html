@@ -700,45 +700,45 @@ taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span cl
 }</code></pre>
 
 
-      <p data-lang="PostProcessing.cpp">Le reste est une passe de rendu full-screen classique avec Vireo HRI :</p>
-      <pre data-lang="PostProcessing.cpp"><code> <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
-           colorBuffer,
-           vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>,
-           vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
-           previousHistory,
-           vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
-           vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
-            currentHistory,
-            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
-            vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>);
+  <p data-lang="PostProcessing.cpp">Le reste est une passe de rendu full-screen classique avec Vireo HRI :</p>
+  <pre data-lang="PostProcessing.cpp"><code> <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+   colorBuffer,
+   vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>,
+   vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+   previousHistory,
+   vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+   vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    currentHistory,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>);
 
-        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_INPUT, colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
-        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_HISTORY, previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>());
-        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_VELOCITY, velocityBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_INPUT, colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_HISTORY, previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>());
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_VELOCITY, velocityBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
 
-        renderingConfig.colorRenderTargets[<span class="num">0</span>].renderTarget <span class="op">=</span> currentHistory;
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">beginRendering</span>(renderingConfig);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setViewport</span>(vireo<span class="op">::</span><span class="ty">Viewport</span>{
-            <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
-            <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)});
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setScissors</span>(vireo<span class="op">::</span><span class="ty">Rect</span>{
-            extent.width,
-            extent.height});
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindPipeline</span>(taaPipeline);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindDescriptors</span>({frame.taaDescriptorSet[taaIndex], samplers.<span class="fn">getDescriptorSet</span>()});
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">draw</span>(<span class="num">3</span>);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">endRendering</span>();
+renderingConfig.colorRenderTargets[<span class="num">0</span>].renderTarget <span class="op">=</span> currentHistory;
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">beginRendering</span>(renderingConfig);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setViewport</span>(vireo<span class="op">::</span><span class="ty">Viewport</span>{
+    <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
+    <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setScissors</span>(vireo<span class="op">::</span><span class="ty">Rect</span>{
+    extent.width,
+    extent.height});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindPipeline</span>(taaPipeline);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindDescriptors</span>({frame.taaDescriptorSet[taaIndex], samplers.<span class="fn">getDescriptorSet</span>()});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">draw</span>(<span class="num">3</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">endRendering</span>();
 
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
-            previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>(),
-            vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
-            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);
-        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
-            colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>(),
-            vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
-            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);</code></pre>
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+    vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+    vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);</code></pre>
 
 
     <h3>Intégration dans la chaîne de rendu</h3>
