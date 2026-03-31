@@ -5,6 +5,9 @@ Articles
 
 [Example of TAA Implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/taa_vireo_rhi.html)
 
+[Exemple d'implémentation du SMAA avec Vireo RHI (french)](https://henrimichelon.github.io/Articles/fr/smaa_vireo_rhi.html)
+
+
 Projects documentations
 -------------------------------------------
 

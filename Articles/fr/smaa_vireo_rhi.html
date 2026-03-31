@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemple d'implémentation du SMAA avec Vireo RHI</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Exemple d'implémentation du SMAA avec Vireo RHI</h1>
+  <div class="meta">
+      <span>SMAA / Vireo RHI / C++ / Vulkan / DirectX 12 / Slang Shader Langage / Deferred Rendering</span>
+      <span>Henri Michelon</span>
+  </div>
+</header>
+
+<main>
+
+    <section id="context">
+        <h2 data-n="00">Contexte</h2>
+        <p>
+            Cet article détaille l'implémentation du SMAA dans les examples <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a>
+            du projet <a href="https://github.com/HenriMichelon/vireo_rhi">Vireo Rendering Hardware Interface</a>
+        </p>
+    </section>
+
+  <section id="intro">
+    <h2 data-n="01">Qu'est ce que le SMAA ?</h2>
+
+    <p>L'anti-aliasing est l'une des problématiques fondamentales du rendu temps réel.
+    <strong>SMAA</strong> (Subpixel Morphological Anti-Aliasing)
+        propose une approche <em>post-process</em> qui travaille sur le résultat final
+        du rendu :
+        l'image est traitée après rendu, sans utiliser la géométrique (comme le fait MSAA).</p>
+      <p>
+        Le principe est morphologique : on détecte la forme des contours pour en
+        déduire des poids de mélange adaptatifs, ce qui offre une qualité proche du
+        MSAA 4× pour un coût bien moindre.</p>
+
+    <p>Dans cet example, SMAA est intégré au module <code>PostProcessing</code> aux
+        côtés de FXAA et TAA, activable à la volée via la touche <code>M</code> lors de
+        l'exécution.
+        Son implémentation se découpe en <strong>trois passes de fragment shader</strong>, implémentées en C++23 et Slang.</p>
+  </section>
+
+  <section id="overview">
+    <h2 data-n="02">Le pipeline SMAA</h2>
+
+    <p>SMAA Nécessite trois passes pour arriver aux résultat final :</p>
+
+    <div class="pipeline">
+      <div class="pipe-step">
+        <span class="num">Passe 1</span>
+        <span class="title">Détection des contours</span>
+        <span class="buffer">smaaEdgeBuffer · R16G16_SFLOAT</span>
+      </div>
+    </div>
+          <div class="pipeline">
+      <div class="pipe-step">
+        <span class="num">Passe 2</span>
+        <span class="title">Poids de mélange</span>
+        <span class="buffer">smaaBlendBuffer · R16G16_SFLOAT</span>
+      </div>
+          </div>
+          <div class="pipeline">
+      <div class="pipe-step">
+        <span class="num">Passe 3</span>
+        <span class="title">Mélange de voisinage</span>
+        <span class="buffer">smaaColorBuffer · format final</span>
+      </div>
+          </div>
+
+    <p>Chaque passe est un <em>full-screen quad</em>.
+        La géométrie de ce triangle est générée entièrement dans le vertex
+        shader (<code>quad.vert</code>), sans vertex buffer,
+        en exploitant <code>SV_VertexID</code>.
+        Les shaders sont écrits en <a href="https://shader-slang.org/"><strong>Slang</strong></a>,
+        un langage de shading moderne compilé vers SPIR-V (Vulkan) ou
+        DXIL (DirectX 12).</p>
+  </section>
+
+  <section id="pass1">
+    <h2 data-n="03">Passe 1 — Détection des contours</h2>
+
+    <p>Cette passe reçoit l'image couleur (<code>inputImage</code>) et produit un buffer encodant l'intensité des arêtes horizontales et verticales pour chaque pixel.</p>
+
+<pre data-lang="smaa_edge_detect.frag.slang">
+<code><span class="kw">#include</span> <span class="st">"postprocess.inc.slang"</span>
+
+<span class="ty">ConstantBuffer</span>&lt;<span class="ty">Params</span>&gt; params       : <span class="kw">register</span>(b0);
+<span class="ty">Texture2D</span>        inputImage         : <span class="kw">register</span>(t1);
+<span class="ty">SamplerState</span>     sampler            : <span class="kw">register</span>(SAMPLER_LINEAR_EDGE, space1);
+
+<span class="ty">float4</span> <span class="fn">fragmentMain</span>(<span class="ty">VertexOutput</span> input) : SV_TARGET {
+    <span class="cm">// Coefficients de la formule de luminance perceptuelle ITU-R BT.601</span>
+    <span class="ty">float3</span> lumaWeight = <span class="ty">float3</span>(<span class="nb">0.299</span>, <span class="nb">0.587</span>, <span class="nb">0.114</span>);
+
+    <span class="cm">// Échantillonnage du pixel central et de ses 4 voisins directs</span>
+    <span class="ty">float</span> lumaC = <span class="fn">dot</span>(inputImage.<span class="fn">Sample</span>(sampler, input.uv).rgb,           lumaWeight);
+    <span class="ty">float</span> lumaN = <span class="fn">dot</span>(inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>( <span class="nb">0</span>, <span class="nb">-1</span>) / params.imageSize).rgb, lumaWeight);
+    <span class="ty">float</span> lumaS = <span class="fn">dot</span>(inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>( <span class="nb">0</span>,  <span class="nb">1</span>) / params.imageSize).rgb, lumaWeight);
+    <span class="ty">float</span> lumaW = <span class="fn">dot</span>(inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>(<span class="nb">-1</span>,  <span class="nb">0</span>) / params.imageSize).rgb, lumaWeight);
+    <span class="ty">float</span> lumaE = <span class="fn">dot</span>(inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>( <span class="nb">1</span>,  <span class="nb">0</span>) / params.imageSize).rgb, lumaWeight);
+
+    <span class="cm">// Gradient horizontal : différence gauche-centre + centre-droite</span>
+    <span class="ty">float</span> edgeH = <span class="fn">abs</span>(lumaW - lumaC) + <span class="fn">abs</span>(lumaC - lumaE);
+    <span class="cm">// Gradient vertical   : différence haut-centre  + centre-bas</span>
+    <span class="ty">float</span> edgeV = <span class="fn">abs</span>(lumaN - lumaC) + <span class="fn">abs</span>(lumaC - lumaS);
+
+    <span class="cm">// Sortie : R = arête horizontale, G = arête verticale</span>
+    <span class="kw">return</span> <span class="ty">float4</span>(edgeH, edgeV, <span class="nb">0</span>, <span class="nb">0</span>);
+}
+</code></pre>
+
+    <p>Travailler en luminance plutôt qu'en RGB présente deux avantages :
+        réduction du nombre de samples (un scalaire au lieu d'un vecteur de 3 float)
+        et meilleure corrélation avec la perception humaine.
+        Les coefficients <code>(0.299, 0.587, 0.114)</code> sont ceux de la
+        norme <a href="https://en.wikipedia.org/wiki/Rec._601">BT.601</a>, standard en infographie.</p>
+
+      <p>Le sampler utilisé ici est <code>SAMPLER_LINEAR_EDGE</code>
+        (mode d'adressage <em>clamp-to-edge</em>, filtrage bilinéaire).
+        Cela garantit que les pixels aux bords de l'image ne lisent pas de texels hors-limites.
+      </p>
+
+    <p>Le buffer <code>smaaEdgeBuffer</code> est alloué en
+        <code>R16G16_SFLOAT</code> soit deux canaux en 16 bits.
+        Le canal Red est utilisé pour le gradient horizontal et
+        le canal Green pou le gradient vertical.
+    </p>
+  </section>
+
+  <section id="pass2">
+    <h2 data-n="04">Passe 2 — Calcul des poids de mélange</h2>
+    <p>Cette passe consomme le buffer produit en passe 1 et
+        calcule un poids scalaire de mélange pour chaque pixel.</p>
+
+      <pre data-lang="smaa_blend_weigth.frag.slang">
+<code><span class="kw">#include</span> <span class="st">"postprocess.inc.slang"</span>
+
+<span class="ty">ConstantBuffer</span>&lt;<span class="ty">Params</span>&gt; params   : <span class="kw">register</span>(b0);
+<span class="ty">Texture2D</span>        edgeBuffer    : <span class="kw">register</span>(t1);
+<span class="ty">SamplerState</span>     sampler       : <span class="kw">register</span>(SAMPLER_NEAREST_BORDER, space1);
+
+<span class="ty">float4</span> <span class="fn">fragmentMain</span>(<span class="ty">VertexOutput</span> input) : SV_TARGET {
+    <span class="cm">// Lecture des arêtes H et V depuis la passe 1</span>
+    <span class="ty">float2</span> edge = edgeBuffer.<span class="fn">Sample</span>(sampler, input.uv).rg;
+
+    <span class="cm">// Le poids est le maximum des deux directions, clampé dans [0, 1]</span>
+    <span class="ty">float</span> weight = <span class="fn">saturate</span>(<span class="fn">max</span>(edge.r, edge.g));
+
+    <span class="kw">return</span> <span class="ty">float4</span>(weight, weight, weight, <span class="nb">0</span>);
+}
+</code></pre>
+
+    <p><code>max(edgeH, edgeV)</code> sélectionne la direction dominante
+        de l'arête.
+        Un pixel qui se trouve à l'intersection d'une arête forte
+        dans les deux directions obtiendra un poids maximal,
+        ce qui est le comportement souhaité puisque ce pixel
+        bénéficiera davantage du lissage.</p>
+
+    <p>La fonction <code>saturate(x)</code> est l'équivalent GPU de
+        la fonction C++ <code>clamp(x, 0, 1)</code>.</p>
+
+  <p>Contrairement à la passe 1, le sampler <code>SAMPLER_NEAREST_BORDER</code>
+      utilisé en passe 2
+      n'applique pas de filtrage bilinéaire :
+      on lit les données d'arêtes telles quelles,
+      pixel à pixel. Le mode <em>border</em> retourne zéro pour
+      tout accès hors de la texture.</p>
+
+    <div class="callout warn">
+      <div class="label">Note sur l'exemple</div>
+      Dans une implémentation SMAA complète, la passe 2 est  plus
+        complexe. Dans cet exemple, l'implémentation utilise une approche simplifiée.
+    </div>
+
+  </section>
+
+  <section id="pass3">
+    <h2 data-n="05">Passe 3 — Mélange de voisinage</h2>
+
+    <p>La dernière passe combine l'image originale avec ses voisins
+        immédiats, proportionnellement aux poids calculés en passe 2.</p>
+
+      <pre data-lang="smaa_neighborhood_blend.frag.slang">
+<code><span class="kw">#include</span> <span class="st">"postprocess.inc.slang"</span>
+
+<span class="ty">ConstantBuffer</span>&lt;<span class="ty">Params</span>&gt; params      : <span class="kw">register</span>(b0);
+<span class="ty">Texture2D</span>        inputImage       : <span class="kw">register</span>(t1);
+<span class="ty">Texture2D</span>        blendBuffer      : <span class="kw">register</span>(t2);  <span class="cm">// Sortie de la passe 2</span>
+<span class="ty">SamplerState</span>     sampler          : <span class="kw">register</span>(SAMPLER_NEAREST_BORDER, space1);
+
+<span class="ty">float4</span> <span class="fn">fragmentMain</span>(<span class="ty">VertexOutput</span> input) : SV_TARGET {
+    <span class="ty">float4</span> color = inputImage.<span class="fn">Sample</span>(sampler, input.uv);      <span class="cm">// Pixel central</span>
+    <span class="ty">float2</span> blend = blendBuffer.<span class="fn">Sample</span>(sampler, input.uv).rg;  <span class="cm">// Poids H et V</span>
+
+    <span class="ty">float4</span> n = inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>( <span class="nb">0</span>, <span class="nb">-1</span>) / params.imageSize);
+    <span class="ty">float4</span> e = inputImage.<span class="fn">Sample</span>(sampler, input.uv + <span class="ty">float2</span>( <span class="nb">1</span>,  <span class="nb">0</span>) / params.imageSize);
+
+    <span class="cm">// Interpolation verticale : mélange avec le voisin Nord</span>
+    <span class="ty">float4</span> blended = <span class="fn">lerp</span>(color, n, blend.r);
+    <span class="cm">// Interpolation horizontale : mélange avec le voisin Est</span>
+    blended = <span class="fn">lerp</span>(blended, e, blend.g);
+
+    <span class="kw">return</span> blended;
+}
+</code></pre>
+
+    <p>Cette passe est la seule à utiliser le layout
+        <code>smaaDescriptorLayout</code> avec trois bindings :
+        le buffer de paramètres (<code>b0</code>),
+        l'image couleur originale (<code>t1</code>)
+        et le buffer de poids (<code>t2</code>).</p>
+
+    <p>La première interpolation (<code>lerp</code>)
+        mélange le pixel courant avec son voisin Nord
+        proportionnellement à <code>blend.r</code>
+        (arête horizontale détectée = transition haut/bas).
+        La seconde mélange le résultat avec le voisin Est selon
+        <code>blend.g</code>.</p>
+
+    <p>Là où il n'y a aucune arête (<code>blend ≈ 0</code>),
+        le pixel est retourné inchangé.
+        Là où une arête forte est détectée (<code>blend ≈ 1</code>),
+        le pixel est fortement interpolé avec son voisin dans la
+        direction perpendiculaire à l'arête.</p>
+  </section>
+
+  <section id="cpp">
+    <h2 data-n="06">Intégration dans le pipeline PostProcessing</h2>
+
+    <p>Le module <code>samples.common.postprocessing</code> (fichiers <code>PostProcessing.ixx</code> et <code>PostProcessing.cpp</code>) gère l'ensemble du cycle de vie des passes post-traitement. L'architecture utilise les <strong>modules C++20</strong> (<code>export module</code>), qui remplacent les headers traditionnels.</p>
+
+    <h3>Initialisation des pipelines</h3>
+
+<pre data-lang="PostProcessing.cpp"><code><span class="cm">// Création des trois pipelines graphiques SMAA</span>
+pipelineConfig.colorRenderFormats.push_back(vireo::<span class="ty">ImageFormat</span>::<span class="nb">R16G16_SFLOAT</span>);
+pipelineConfig.resources = resources;  <span class="cm">// layout standard (2 bindings)</span>
+
+pipelineConfig.fragmentShader = vireo-><span class="fn">createShaderModule</span>(<span class="st">"shaders/smaa_edge_detect.frag"</span>);
+smaaEdgePipeline = vireo-><span class="fn">createGraphicPipeline</span>(pipelineConfig);
+
+pipelineConfig.fragmentShader = vireo-><span class="fn">createShaderModule</span>(<span class="st">"shaders/smaa_blend_weigth.frag"</span>);
+smaaBlendWeightPipeline = vireo-><span class="fn">createGraphicPipeline</span>(pipelineConfig);
+
+<span class="cm">// La passe 3 a un format et un layout différents</span>
+pipelineConfig.colorRenderFormats[<span class="nb">0</span>] = renderFormat;   <span class="cm">// format final de l'image</span>
+pipelineConfig.resources = smaaResources;               <span class="cm">// layout avec 3 bindings</span>
+pipelineConfig.fragmentShader = vireo-><span class="fn">createShaderModule</span>(<span class="st">"shaders/smaa_neighborhood_blend.frag"</span>);
+smaaBlendPipeline = vireo-><span class="fn">createGraphicPipeline</span>(pipelineConfig);
+</code></pre>
+
+    <p>Deux layouts de descripteurs différents sont créés : <code>descriptorLayout</code> (2 bindings : params + input) pour les passes 1 et 2, et <code>smaaDescriptorLayout</code> (3 bindings : params + input + blendBuffer) pour la passe 3.</p>
+
+    <h3>Boucle de rendu (onRender)</h3>
+
+    <p>La passe SMAA dans <code>onRender</code> est intégrée aux autres
+        passe de post processing :</p>
+
+  <pre data-lang="PostProcessing.cpp"><code><span class="cm">// === Passe 1 : détection des contours ===</span>
+cmdList-><span class="fn">barrier</span>(colorInput,          <span class="cm">// image source → lecture shader</span>
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">RENDER_TARGET_COLOR</span>,
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">SHADER_READ</span>);
+cmdList-><span class="fn">barrier</span>(frame.smaaEdgeBuffer,  <span class="cm">// edge buffer → cible de rendu</span>
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">UNDEFINED</span>,
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">RENDER_TARGET_COLOR</span>);
+frame.smaaEdgeDescriptorSet-><span class="fn">update</span>(BINDING_INPUT, colorInput-><span class="fn">getImage</span>());
+<span class="cm">// ... beginRendering → bindPipeline → draw(3) → endRendering</span>
+
+<span class="cm">// === Passe 2 : poids de mélange ===</span>
+cmdList-><span class="fn">barrier</span>(frame.smaaEdgeBuffer,  <span class="cm">// edge buffer → lecture shader</span>
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">RENDER_TARGET_COLOR</span>,
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">SHADER_READ</span>);
+cmdList-><span class="fn">barrier</span>(frame.smaaBlendBuffer, <span class="cm">// blend buffer → cible de rendu</span>
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">UNDEFINED</span>,
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">RENDER_TARGET_COLOR</span>);
+frame.smaaBlendWeightDescriptorSet-><span class="fn">update</span>(BINDING_INPUT, frame.smaaEdgeBuffer-><span class="fn">getImage</span>());
+<span class="cm">// ... beginRendering → bindPipeline → draw(3) → endRendering</span>
+
+<span class="cm">// === Passe 3 : mélange de voisinage ===</span>
+cmdList-><span class="fn">barrier</span>(frame.smaaBlendBuffer, <span class="cm">// blend buffer → lecture shader</span>
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">RENDER_TARGET_COLOR</span>,
+    vireo::<span class="ty">ResourceState</span>::<span class="nb">SHADER_READ</span>);
+frame.smaaBlendDescriptorSet-><span class="fn">update</span>(BINDING_INPUT,      colorInput-><span class="fn">getImage</span>());
+frame.smaaBlendDescriptorSet-><span class="fn">update</span>(BINDING_SMAA_INPUT, frame.smaaBlendBuffer-><span class="fn">getImage</span>());
+<span class="cm">// ... beginRendering → bindPipeline → draw(3) → endRendering</span>
+</code></pre>
+
+    <p>Le pattern est identique pour chaque passe :
+        <em>barrier in</em> sur la source (transition vers <code>SHADER_READ</code>),
+        <em>barrier in</em> sur la destination (transition vers <code>RENDER_TARGET_COLOR</code>),
+        mise à jour du descriptor set, puis exécution du draw.
+        Les barrières garantissent la synchronisation correcte entre
+        les passes sur GPU (être sûr que les données soit bien
+        écritent dans les buffers avant d'êtres lues).</p>
+
+
+  </section>
+
+  <section id="comparison">
+    <h2 data-n="07">SMAA vs FXAA vs MSAA — comparaison</h2>
+
+    <p>Ce projet intègre trois techniques d'anti-aliasing. Voici comment elles se positionnent :</p>
+
+    <h3>FXAA (Fast Approximate Anti-Aliasing)</h3>
+    <p>FXAA détecte les contours par contraste local et applique un
+        flou directionnel en une seule passe.
+        Extrêmement rapide, mais peut rendre l'image légèrement floue,
+        notamment sur les textures.</p>
+
+    <h3>SMAA (Subpixel Morphological AA)</h3>
+    <p>SMAA analyse la morphologie des arêtes pour des poids de mélange
+        plus précis. La qualité est supérieure à FXAA,
+        avec moins de perte de netteté.
+        Le coût est plus élevé (3 passes) mais reste largement acceptable
+        sur du matériel moderne.</p>
+
+    <h3>TAA (Temporal Anti-Aliasing)</h3>
+
+    <p>TAA exploite l'historique des frames précédentes pour accumuler
+        davantage d'information.
+        Excellente qualité sur les géométries statiques,
+        mais nécessite un buffer de vélocité et une gestion du
+        ghosting sur les objets en mouvement rapide.</p>
+
+    <p>La combinaison <strong>TAA + SMAA</strong>
+        (supportée dans cet exemple) est particulièrement intéressante :
+        TAA stabilise temporellement l'image tandis que SMAA affine
+        les contours spatiaux, chacune compensant les faiblesses de l'autre.</p>
+  </section>
+
+  <section id="conclusion">
+    <h2 data-n="09">Conclusion</h2>
+
+    <p>Plusieurs axes d'amélioration sont possibles pour se
+        rapprocher du SMAA "complet" :</p>
+
+    <ul style="padding-left: 1.5rem; margin-bottom: 1rem; line-height: 2.2;">
+      <li>Utiliser une <strong>LUT de recherche d'arêtes</strong> en passe 2 pour calculer des poids directionnels précis basés sur la longueur des arêtes</li>
+      <li>Implémenter le <strong>stencil masking</strong> pour ne traiter que les pixels à proximité d'une arête, réduisant la charge GPU</li>
+      <li>Ajouter la variante <strong>SMAA T2×</strong> (avec jitter temporel) pour un anti-aliasing subpixel encore plus fin</li>
+    </ul>
+
+  </section>
+
+</main>
+
+</div>
+</body>
+</html>
