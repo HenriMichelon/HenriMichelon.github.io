@@ -14,7 +14,7 @@
   <h1>Exemple d'implémentation du SMAA avec Vireo RHI</h1>
   <div class="meta">
       <span>SMAA / Vireo RHI / C++ / Vulkan / DirectX 12 / Slang Shader Langage / Deferred Rendering</span>
-      <span>Henri Michelon</span>
+      <span><a href="https://github.com/HenriMichelon/HenriMichelon.github.io">Henri Michelon</a></span>
   </div>
 </header>
 
@@ -86,7 +86,8 @@
   <section id="pass1">
     <h2 data-n="03">Passe 1 — Détection des contours</h2>
 
-    <p>Cette passe reçoit l'image couleur (<code>inputImage</code>) et produit un buffer encodant l'intensité des arêtes horizontales et verticales pour chaque pixel.</p>
+    <p>Cette passe reçoit l'image couleur sortant du pipeline de rendu (<code>inputImage</code>)
+        et produit un buffer encodant l'intensité des arêtes horizontales et verticales pour chaque pixel.</p>
 
 <pre data-lang="smaa_edge_detect.frag.slang">
 <code><span class="kw">#include</span> <span class="st">"postprocess.inc.slang"</span>
@@ -293,8 +294,8 @@ frame.smaaBlendDescriptorSet-><span class="fn">update</span>(BINDING_SMAA_INPUT,
 </code></pre>
 
     <p>Le pattern est identique pour chaque passe :
-        <em>barrier in</em> sur la source (transition vers <code>SHADER_READ</code>),
-        <em>barrier in</em> sur la destination (transition vers <code>RENDER_TARGET_COLOR</code>),
+        <em>barrier</em> sur la source (transition vers <code>SHADER_READ</code>),
+        <em>barrier</em> sur la destination (transition vers <code>RENDER_TARGET_COLOR</code>),
         mise à jour du descriptor set, puis exécution du draw.
         Les barrières garantissent la synchronisation correcte entre
         les passes sur GPU (être sûr que les données soit bien
@@ -306,7 +307,7 @@ frame.smaaBlendDescriptorSet-><span class="fn">update</span>(BINDING_SMAA_INPUT,
   <section id="comparison">
     <h2 data-n="07">SMAA vs FXAA vs MSAA — comparaison</h2>
 
-    <p>Ce projet intègre trois techniques d'anti-aliasing. Voici comment elles se positionnent :</p>
+    <p>Les exemples Vireo RHI de ce projet intègrent trois techniques d'anti-aliasing :</p>
 
     <h3>FXAA (Fast Approximate Anti-Aliasing)</h3>
     <p>FXAA détecte les contours par contraste local et applique un
@@ -327,7 +328,8 @@ frame.smaaBlendDescriptorSet-><span class="fn">update</span>(BINDING_SMAA_INPUT,
         davantage d'information.
         Excellente qualité sur les géométries statiques,
         mais nécessite un buffer de vélocité et une gestion du
-        ghosting sur les objets en mouvement rapide.</p>
+        ghosting sur les objets en mouvement rapide.
+    </p>
 
     <p>La combinaison <strong>TAA + SMAA</strong>
         (supportée dans cet exemple) est particulièrement intéressante :
