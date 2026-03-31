@@ -39,10 +39,31 @@
             z-index: 1;
         }
 
+        /* HEADER */
         header {
             border-bottom: 1px solid var(--border);
             padding: 64px 0 48px;
             margin-bottom: 56px;
+        }
+
+        .label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0.3;
+            max-width: 60px;
         }
 
         h1 {
@@ -53,6 +74,20 @@
             line-height: 1.1;
             letter-spacing: -0.02em;
             margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+            line-height: 1.6;
         }
 
         .meta {
@@ -66,6 +101,7 @@
         }
         .meta span { color: var(--text-muted); }
 
+        /* SECTIONS */
         section {
             margin-bottom: 64px;
         }
@@ -112,6 +148,7 @@
             color: var(--text);
         }
 
+        /* LINKS */
         a {
             color: var(--accent);
             text-decoration: none;
@@ -119,6 +156,12 @@
             transition: all 0.2s ease;
         }
 
+        a:hover {
+            border-bottom-color: var(--accent);
+            background: rgba(93, 172, 237, 0.05);
+        }
+
+        /* CALLOUT BOXES */
         .callout {
             border-left: 3px solid var(--accent);
             background: var(--surface);
@@ -129,6 +172,7 @@
         .callout.warn {
             border-left-color: var(--accent2);
         }
+        .callout p { margin: 0; font-size: 0.95rem; }
         .callout-label {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 10px;
@@ -139,6 +183,7 @@
         }
         .callout.warn .callout-label { color: var(--accent2); }
 
+        /* CODE BLOCKS */
         pre {
             background: var(--code-bg);
             border: 1px solid var(--border);
@@ -165,14 +210,25 @@
             line-height: 1.7;
             color: #c9d1e8;
         }
+        p code, li code {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            padding: 1px 7px;
+            border-radius: 3px;
+            font-size: 13px;
+            color: var(--accent);
+        }
 
+        /* Syntax highlight colors */
         .kw  { color: #c792ea; }
         .fn  { color: #82aaff; }
+        .str { color: #c3e88d; }
         .cm  { color: #546e7a; font-style: italic; }
         .num { color: #f78c6c; }
         .ty  { color: #ffcb6b; }
         .op  { color: #89ddff; }
 
+        /* DIAGRAM */
         .diagram {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -221,6 +277,29 @@
             flex-shrink: 0;
         }
 
+        .diagram-caption {
+            font-size: 12px;
+            color: var(--text-dim);
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: center;
+            margin-top: 14px;
+            letter-spacing: 0.05em;
+        }
+
+        /* FORMULA */
+        .formula {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px 24px;
+            margin: 20px 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: #e4c97b;
+            text-align: center;
+        }
+
+        /* TABLE */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -243,7 +322,17 @@
             color: var(--text);
             vertical-align: top;
         }
+        tr:hover td { background: var(--surface); }
+        td code { font-size: 12px; }
 
+        /* DIVIDER */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 48px 0;
+        }
+
+        /* FOOTER */
         footer {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 11px;
@@ -253,6 +342,19 @@
             border-top: 1px solid var(--border);
             letter-spacing: 0.06em;
         }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        header { animation: fadeIn 0.6s ease both; }
+        section { animation: fadeIn 0.5s ease both; }
+        section:nth-child(2) { animation-delay: 0.08s; }
+        section:nth-child(3) { animation-delay: 0.14s; }
+        section:nth-child(4) { animation-delay: 0.20s; }
+        section:nth-child(5) { animation-delay: 0.26s; }
+        section:nth-child(6) { animation-delay: 0.32s; }
     </style>
 </head>
 <body>
@@ -270,7 +372,7 @@
         <h2 data-n="00">Context</h2>
         <p>
             This article details the implementation of TAA in the <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a>
-            of the <a href="https://github.com/HenriMichelon/vireo_rhi">Vireo Rendering Hardware Interface</a> project.
+            from the <a href="https://github.com/HenriMichelon/vireo_rhi">Vireo Rendering Hardware Interface</a> project.
         </p>
         <p>
             The corresponding source code can be found in the "Deferred" example:
@@ -281,18 +383,23 @@
     <section>
         <h2 data-n="01">Introduction: what is TAA?</h2>
         <p>
-            <strong>Temporal Anti-Aliasing</strong> (TAA) is an anti-aliasing technique that uses information accumulated across multiple successive frames to smooth out visual artifacts.
-            Unlike MSAA, which operates during rendering on the edges of geometric shapes, or FXAA, which applies a post-processing filter, TAA leverages <em>time</em> as an additional sampling dimension.
-            (The <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a> also include examples of MSAA and FXAA).
+            <strong>Temporal Anti-Aliasing</strong> (TAA) is an anti-aliasing technique
+            that uses information accumulated across multiple successive frames to smooth out
+            visual artifacts.
+            Unlike MSAA, which operates during rendering on the edges of geometric shapes,
+            or FXAA, which applies a post-processing filter,
+            TAA leverages <em>time</em> as an additional sampling dimension.
+            (The <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a> also include examples of MSAA and FXAA.)
         </p>
         <p>
-            The core idea: for each frame, the camera is shifted slightly by a sub-pixel (<em>jitter</em>).
-            The result is then merged with the history of previous frames. It is currently the dominant anti-aliasing technique in 3D engines.
+            The core idea: for each frame, the camera is shifted slightly by a sub-pixel
+            (<em>jitter</em>). The result is then merged with the history of previous frames.
+            It is currently the dominant anti-aliasing technique in 3D engines.
         </p>
     </section>
 
     <section>
-        <h2 data-n="02">TAA Placement in the Pipeline</h2>
+        <h2 data-n="02">TAA's place in the pipeline</h2>
         <p>The execution order of the deferred pipeline will be as follows:</p>
         <div class="diagram">
             <div class="pipeline">
@@ -300,24 +407,26 @@
                 <div class="pipe-arrow">→</div>
                 <div class="pipe-step">G-Buffer<br>Pass<small>Position/Normal/Albedo/<strong class="active">Velocity</strong></small></div>
                 <div class="pipe-arrow">→</div>
-                <div class="pipe-step">Lighting<br>Pass<small>Deferred shading</small></div>
+                <div class="pipe-step">Lighting<br>Pass<small>Deferred Shading</small></div>
                 <div class="pipe-arrow">→</div>
                 <div class="pipe-step active">TAA<br>Pass<small>Accumulation</small></div>
                 <div class="pipe-arrow">→</div>
                 <div class="pipe-step">OIT<br>Pass<small>Transparency</small></div>
                 <div class="pipe-arrow">→</div>
-                <div class="pipe-step">Post-<br>process<small>SMAA/FXAA/Effects</small></div>
+                <div class="pipe-step">Post-<br>process<small>SMAA/FXAA/Effect</small></div>
             </div>
         </div>
         <p>
-            TAA operates on opaque geometries: the G-Buffer provides velocity data for the TAA shader well before transparent geometries are rendered during the OIT pass.
+            TAA operates on opaque geometries: the G-Buffer provides velocity data for the TAA shader
+            well before transparent geometries are rendered during the OIT pass.
         </p>
     </section>
 
     <section>
         <h2 data-n="03">Camera Jitter</h2>
         <p>
-            Jitter involves shifting the projection by a different subpixel in each frame, following a quasi-random sequence (or at least sufficiently random for TAA).
+            Jitter involves shifting the projection by a different sub-pixel in each frame,
+            following a quasi-random sequence (or at least sufficiently random for TAA).
         </p>
         <p>
             TAA data requires enhancing the <code>Global</code> UBO (Uniform Buffer Object) shared between the CPU and shaders:
@@ -334,11 +443,13 @@
 };</code></pre>
 
         <p>
-            To calculate the jitter, we traditionally use a <a href="https://en.wikipedia.org/wiki/Halton_sequence"><strong>Halton sequence</strong></a> that is stored in the global UBO.
+            To calculate the jitter, we traditionally use a
+            <a href="https://en.wikipedia.org/wiki/Halton_sequence"><strong>Halton sequence</strong></a>
+            that is stored in the global UBO.
         </p>
 
         <h3>Implementation in Scene.cpp</h3>
-        <pre data-lang="C++"><code><span class="kw">void</span> <span class="fn">Scene::jitterProjection</span>(<span class="kw">const</span> vireo::<span class="ty">Extent</span><span class="op">&</span> extent) {
+        <pre data-lang="C++"><code><span class="kw">void</span> <span class="fn">Scene::jitterProjection</span>(<span class="kw">const</span> vireo::<span class="ty">Extent</span><span class="op">&amp;</span> extent) {
     <span class="kw">static</span> <span class="ty">uint32_t</span> frameIndex <span class="op">=</span> <span class="num">0</span>;
 
     <span class="cm">// Halton sequence: base b, index i</span>
@@ -358,62 +469,324 @@
         (<span class="fn">halton</span>(frameIndex <span class="op">%</span> <span class="num">16</span> <span class="op">+</span> <span class="num">1</span>, <span class="num">2</span>) <span class="op">-</span> <span class="num">0.5f</span>) <span class="op">/</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
         (<span class="fn">halton</span>(frameIndex <span class="op">%</span> <span class="num">16</span> <span class="op">+</span> <span class="num">1</span>, <span class="num">3</span>) <span class="op">-</span> <span class="num">0.5f</span>) <span class="op">/</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)
     };
+
     global.previousProjection <span class="op">=</span> global.projection;
     global.projection[<span class="num">2</span>][<span class="num">0</span>] <span class="op">=</span> global.jitter.x; <span class="cm"></span>
     global.projection[<span class="num">2</span>][<span class="num">1</span>] <span class="op">=</span> global.jitter.y; <span class="cm"></span>
+
     frameIndex<span class="op">++</span>;
 }</code></pre>
+
         <p>
-            Jitter is applied directly to the camera's current projection, on the cells <code>projection[2][0]</code> and <code>projection[2][1]</code> that correspond to the offset of the line of sight in the perspective projection matrix.
+            Jitter is applied directly to the camera's current projection, on the
+            <code>projection[2][0]</code> and <code>projection[2][1]</code> cells
+            that correspond to the offset of the line of sight in the perspective projection matrix.
             The current matrix is first saved in <code>previousProjection</code> before modification.
         </p>
     </section>
 
     <section>
-        <h2 data-n="04">Per-Pixel Velocity Calculation</h2>
+        <h2 data-n="04">Per-pixel velocity calculation</h2>
         <p>
-            TAA requires knowledge of the position of each pixel in the previous frame.
-            This information is stored in a <strong>velocity buffer</strong> (also known as a motion vector buffer): a 2-channel, 16-bit render target containing the displacement in NDC space of each fragment between frame n-1 and frame n.
+            TAA requires knowing <em>where each pixel was located</em> in the previous frame.
+            This information is stored in a <strong>velocity buffer</strong> (also known as a
+            motion vector buffer): a 2-channel, 16-bit render target containing the displacement in
+            NDC space of each fragment between frame n-1 and frame n.
         </p>
-        <h3>Adding a 5th Attachment to the G-Buffer Pass</h3>
+
+        <h3>Adding a 5th attachment to the G-Buffer Pass</h3>
         <pre data-lang="GBufferPass.ixx"><code><span class="cm">// Velocity buffer format</span>
 vireo::<span class="ty">ImageFormat</span>::R16G16_SFLOAT, <span class="cm">// TAA Velocity</span>
+
 <span class="cm">// Index constant for the descriptor set</span>
 <span class="kw">static constexpr int</span> BUFFER_VELOCITY{<span class="num">4</span>};
+
 <span class="cm">// Add the velocity render target</span>
 <span class="kw">struct</span> <span class="ty">FrameData</span> : <span class="ty">FrameDataCommand</span> {
     ...
     std::shared_ptr&lt;vireo::<span class="ty">RenderTarget</span>&gt; velocityBuffer; <span class="cm">// TAA</span>
 };</code></pre>
+
+        <pre data-lang="GBufferPass.cpp"><code>
+<span class="cm">// Send the render target to the shader in onRender()</span>
+renderingConfig.colorRenderTargets[BUFFER_VELOCITY].renderTarget <span class="op">=</span> frame.velocityBuffer;
+
+<span class="cm">// Create the render target in onResize()</span>
+frame.velocityBuffer <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createRenderTarget</span>(
+    pipelineConfig.colorRenderFormats[BUFFER_VELOCITY],
+    extent.width, extent.height,
+    vireo::<span class="ty">RenderTargetType</span>::COLOR,
+    renderingConfig.colorRenderTargets[BUFFER_VELOCITY].clearValue,
+    <span class="num">1</span>, vireo::<span class="ty">MSAA</span>::NONE,
+    <span class="str">"Velocity Buffer"</span>);
+</code></pre>
+
+        <h3>Shader modifications (Slang)</h3>
+        <p>
+            The <code>VertexOutput</code> structure is first modified to pass the previous position
+            between the vertex shader and the fragment shader:
+        </p>
+        <pre data-lang="scene_input.inc.slang"><code><span class="kw">struct</span> <span class="ty">VertexOutput</span> {
+    <span class="ty">float4</span> position   : <span class="kw">SV_POSITION</span>;
+    <span class="ty">float3</span> worldPos   : <span class="kw">TEXCOORD0</span>;
+    <span class="ty">float3</span> normal     : <span class="kw">TEXCOORD1</span>;
+    <span class="ty">float2</span> uv         : <span class="kw">TEXCOORD2</span>;
+    <span class="ty">float3</span> tangent    : <span class="kw">TEXCOORD3</span>;
+    <span class="ty">float3</span> bitangent  : <span class="kw">TEXCOORD4</span>;
+    <span class="ty">float4</span> previousPos: <span class="kw">TEXCOORD5</span>; <span class="cm">// TAA</span>
+};</code></pre>
+
+        <p>The vertex shader calculates the previous position of the vertex using data from
+            the previous frame saved on the CPU side:</p>
+
+        <pre data-lang="deferred.vert.slang"><code><span class="cm">// Previous position (frame n-1) for TAA</span>
+<span class="ty">float4</span> previousViewPos <span class="op">=</span> <span class="fn">mul</span>(global.previousView, worldPos);
+output.previousPos <span class="op">=</span> <span class="fn">mul</span>(global.previousProjection, previousViewPos);</code></pre>
+
+        <p>The fragment shader derives the velocity vector in NDC space, removing the jitter:</p>
+
+        <pre data-lang="deferred_gbuffer.frag.slang"><code><span class="ty">float2</span> curPos  <span class="op">=</span> (input.position.xy  <span class="op">/</span> input.position.w);
+<span class="ty">float2</span> prevPos <span class="op">=</span> (input.previousPos.xy <span class="op">/</span> input.previousPos.w);
+output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prevPos) <span class="op">-</span> global.jitter; <span class="cm">// TAA</span></code></pre>
+
+        <div class="callout warn">
+            <p>Subtracting <code>jitter</code> is essential: without it, the velocity would include the artificial camera shift, which would cause the TAA to perceive a false movement and degrade its quality.</p>
+        </div>
+
     </section>
 
     <section>
-        <h2 data-n="07">Other Practical Considerations</h2>
+        <h2 data-n="05">Applying TAA</h2>
         <p>
-            In the Deferred example, TAA can be enabled on the fly with the <kbd>T</kbd> key, just like other post-processing effects (S for SMAA, F for FXAA, etc.). [cite: 1, 2]
+            The core of TAA is the shader (<code>taa.frag.slang</code>). It takes three textures as input:
+        </p>
+        <table>
+            <thead><tr><th>Binding</th><th>Texture</th><th>Content</th></tr></thead>
+            <tbody>
+            <tr><td><code>t1</code></td><td>inputImage</td><td>Current rendering (frame n)</td></tr>
+            <tr><td><code>t2</code></td><td>history</td><td>TAA result of frame n-1</td></tr>
+            <tr><td><code>t3</code></td><td>velocity</td><td>Velocity buffer calculated by the G-Buffer pass</td></tr>
+            </tbody>
+        </table>
+        <pre data-lang="taa.frag.slang">
+<code><span class="ty">Texture2D</span> inputImage <span class="op">:</span> <span class="kw">register</span>(t1);
+<span class="ty">Texture2D</span> history <span class="op">:</span> <span class="kw">register</span>(t2);
+<span class="ty">Texture2D</span> velocity <span class="op">:</span> <span class="kw">register</span>(t3);</code></pre>
+
+        <h3>1. Velocity-based reprojection</h3>
+        <pre data-lang="taa.frag.slang"><code><span class="ty">float2</span> vel <span class="op">=</span> velocity.<span class="fn">Sample</span>(sampler, uv).xy;
+<span class="ty">float2</span> historyUV <span class="op">=</span> uv <span class="op">-</span> vel;
+
+<span class="cm">// Reject if off-screen (occlusion, edge)</span>
+<span class="kw">if</span> (<span class="fn">any</span>(historyUV <span class="op">&lt;</span> <span class="num">0.0</span>) <span class="op">||</span> <span class="fn">any</span>(historyUV <span class="op">&gt;</span> <span class="num">1.0</span>)) {
+    <span class="kw">return</span> current;
+}</code></pre>
+
+        <h3>2. Catmull-Rom filtering of the history</h3>
+        <p>
+            The history is sampled using a
+            <a href="https://alextardif.com/TAA.html"><strong>bicubic Catmull-Rom</strong></a>
+            filter rather than the classic bilinear filter.
+            This filter produces a sharper result and reduces the amount of "ghosting".
+        </p>
+        <pre data-lang="taa.frag.slang"><code><span class="ty">float4</span> prev <span class="op">=</span> <span class="fn">SampleTextureCatmullRom</span>(
+    history, sampler, historyUV, params.imageSize);</code></pre>
+
+        <h3>3. Variance clipping in YCoCg space</h3>
+        <p>
+            To prevent <em>ghosting</em> (residual images from previous frames),
+            the history is confined to an AABB calculated from the 3×3 neighborhood of the current pixel.
+            This operation is performed in <strong>YCoCg space</strong>,
+            which is better suited to visual perception than RGB.
+        </p>
+        <div class="formula">velocity = clamp(prevYCoCg, mean − σ, mean + σ)</div>
+        <pre data-lang="taa.frag.slang"><code><span class="ty">float3</span> m1 <span class="op">=</span> <span class="num">0.0</span>, m2 <span class="op">=</span> <span class="num">0.0</span>;
+<span class="kw">for</span> (<span class="kw">int</span> x <span class="op">=</span> <span class="op">-</span><span class="num">1</span>; x <span class="op">&lt;=</span> <span class="num">1</span>; <span class="op">++</span>x) {
+    <span class="kw">for</span> (<span class="kw">int</span> y <span class="op">=</span> <span class="op">-</span><span class="num">1</span>; y <span class="op">&lt;=</span> <span class="num">1</span>; <span class="op">++</span>y) {
+        <span class="ty">float3</span> neighborYCoCg <span class="op">=</span> <span class="fn">RGBToYCoCg</span>(
+            inputImage.<span class="fn">Sample</span>(sampler, uv <span class="op">+</span> offset).rgb);
+        m1 <span class="op">+=</span> neighborYCoCg;
+        m2 <span class="op">+=</span> neighborYCoCg <span class="op">*</span> neighborYCoCg;
+    }
+}
+<span class="ty">float3</span> mean   <span class="op">=</span> m1 <span class="op">/</span> <span class="num">9.0</span>;
+<span class="ty">float3</span> stddev <span class="op">=</span> <span class="fn">sqrt</span>(<span class="fn">max</span>(<span class="num">0.0</span>, (m2 <span class="op">/</span> <span class="num">9.0</span>) <span class="op">-</span> (mean <span class="op">*</span> mean)));
+<span class="ty">float3</span> minColor <span class="op">=</span> <span class="fn">max</span>(mean <span class="op">-</span> <span class="num">1.0</span> <span class="op">*</span> stddev, neighborMin);
+<span class="ty">float3</span> maxColor <span class="op">=</span> <span class="fn">min</span>(mean <span class="op">+</span> <span class="num">1.0</span> <span class="op">*</span> stddev, neighborMax);
+<span class="ty">float3</span> clampedPrev <span class="op">=</span> <span class="fn">clamp</span>(prevYCoCg, minColor, maxColor);</code></pre>
+
+        <h3>4. Adaptive blending</h3>
+        <p>
+            The blending factor between the current frame and the history is not fixed — it adapts
+            based on two signals: the magnitude of the velocity vector and the clamping intensity
+            (a measure of deocclusion).
+        </p>
+        <p>
+            The fixed constants in this section allow you to adjust the TAA result. The ones
+            chosen in this example prioritize anti-aliasing over artifacts (see Chapter 07).
+        </p>
+        <pre data-lang="taa.frag.slang"><code><span class="cm">// Velocity weight: the more movement, the less reliance on the history</span>
+<span class="ty">float</span> velocityWeight <span class="op">=</span> <span class="fn">saturate</span>(<span class="fn">length</span>(vel) <span class="op">*</span> <span class="num">30.0</span>);
+<span class="cm">// Clamping weight: if the history has been significantly adjusted, reduce its weight</span>
+<span class="ty">float</span> clampWeight <span class="op">=</span> <span class="fn">saturate</span>(<span class="fn">length</span>(clampedPrev <span class="op">-</span> prevYCoCg) <span class="op">*</span> <span class="num">3.0</span>);
+<span class="cm">// blend ∈ [0.75, 0.95] — 95% history when stationary, 75% during movement</span>
+<span class="ty">float</span> blendFactor <span class="op">=</span> <span class="fn">lerp</span>(<span class="num">0.95</span>, <span class="num">0.75</span>, <span class="fn">max</span>(velocityWeight, clampWeight));
+<span class="ty">float3</span> result <span class="op">=</span> <span class="fn">lerp</span>(current.rgb, finalPrevRGB, blendFactor);</code></pre>
+    </section>
+
+    <section>
+        <h2 data-n="06">Temporal buffer management (ping-pong)</h2>
+        <p>
+            The TAA maintains <strong>two color buffers per frame-in-flight</strong> (<code>taaColorBuffer[0]</code> and <code>taaColorBuffer[1]</code>) in a <em>ping-pong</em> pattern.
+        </p>
+        <pre data-lang="PostProcessing.ixx">
+<code><span class="cm">// Add buffer bindings:</span>
+<span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_HISTORY{<span class="num">2</span>}; <span class="cm">// TAA Only</span>
+<span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_VELOCITY{<span class="num">3</span>}; <span class="cm">// TAA Only</span>
+
+<span class="cm">// Add buffers and descriptors set:</span>
+<span class="kw">struct</span> <span class="ty">FrameData</span> {
+    ...
+    std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">DescriptorSet</span><span class="op">&gt;</span> taaDescriptorSet[<span class="num">2</span>];
+    std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">RenderTarget</span><span class="op">&gt;</span>  taaColorBuffer[<span class="num">2</span>];
+};
+
+<span class="cm">// Adding the descriptors layout  and the TAA pipeline:</span>
+std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">Pipeline</span><span class="op">&gt;</span> taaPipeline;
+std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">DescriptorLayout</span><span class="op">&gt;</span> taaDescriptorLayout;
+</code></pre>
+
+        <pre data-lang="PostProcessing.cpp">
+<code><span class="cm">// In onInit(), create the descriptors layout, descriptors set, pipeline and buffer:</span>
+taaDescriptorLayout <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorLayout</span>();
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_PARAMS, vireo<span class="ty">::DescriptorType::UNIFORM</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_INPUT, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_HISTORY, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_VELOCITY, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">build</span>();
+
+<span class="kw">const auto</span> taaResources <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createPipelineResources</span>({
+    taaDescriptorLayout,
+    samplers.<span class="fn">getDescriptorLayout</span>() });
+
+pipelineConfig.resources <span class="op">=</span> taaResources;
+pipelineConfig.fragmentShader <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createShaderModule</span>(<span class="str">"shaders/taa.frag"</span>);
+taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createGraphicPipeline</span>(pipelineConfig);
+
+<span class="kw">for</span> (<span class="kw">auto&amp;</span> frame <span class="op">:</span> framesData) {
+    ...
+    frame.taaDescriptorSet[<span class="num">0</span>] <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorSet</span>(taaDescriptorLayout);
+    frame.taaDescriptorSet[<span class="num">0</span>]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_PARAMS, paramsBuffer);
+    frame.taaDescriptorSet[<span class="num">1</span>] <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorSet</span>(taaDescriptorLayout);
+    frame.taaDescriptorSet[<span class="num">1</span>]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_PARAMS, paramsBuffer);
+}
+</code></pre>
+
+        <p>
+            At each frame, the current buffer becomes the history buffer for the next frame, and vice versa:
         </p>
 
-        <h3>Adjustable Quality Settings</h3>
+        <pre data-lang="PostProcessing.cpp"><code><span class="cm">// In taaPass():</span>
+<span class="kw">const auto</span> historyIndex  <span class="op">=</span> (taaIndex <span class="op">+</span> <span class="num">1</span>) <span class="op">%</span> <span class="num">2</span>;
+<span class="kw">const auto</span> currentHistory  <span class="op">=</span> frame.taaColorBuffer[taaIndex];
+<span class="kw">const auto</span> previousHistory <span class="op">=</span> frame.taaColorBuffer[historyIndex];
+
+<span class="cm">// At the end of rendering — advance the index if TAA is enabled</span>
+<span class="kw">if</span> (applyTAA) {
+    taaIndex <span class="op">=</span> (taaIndex <span class="op">+</span> <span class="num">1</span>) <span class="op">%</span> <span class="num">2</span>;
+}</code></pre>
+
+        <p>The rest is a standard full-screen rendering pass using Vireo RHI:</p>
+        <pre data-lang="PostProcessing.cpp"><code><span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+   colorBuffer,
+   vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>,
+   vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+   previousHistory,
+   vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+   vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    currentHistory,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>);
+
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_INPUT,   colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_HISTORY,  previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>());
+frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_VELOCITY, velocityBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+
+renderingConfig.colorRenderTargets[<span class="num">0</span>].renderTarget <span class="op">=</span> currentHistory;
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">beginRendering</span>(renderingConfig);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setViewport</span>(vireo<span class="op">::</span><span class="ty">Viewport</span>{
+    <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
+    <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setScissors</span>(vireo<span class="op">::</span><span class="ty">Rect</span>{
+    extent.width,
+    extent.height});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindPipeline</span>(taaPipeline);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindDescriptors</span>({frame.taaDescriptorSet[taaIndex], samplers.<span class="fn">getDescriptorSet</span>()});
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">draw</span>(<span class="num">3</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">endRendering</span>();
+
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+    vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);
+<span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+    colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+    vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+    vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);</code></pre>
+
+        <h3>Integration into the rendering pipeline</h3>
+        <p>
+            The TAA output is inserted between the rendering of opaque geometry (Deferred Lighting)
+            and the rendering of transparent geometry (OIT).
+            When TAA is enabled, the following passes in the example
+            (OIT, FXAA, SMAA, Voronoi effect, gamma correction) consume
+            the <code>taaColorBuffer</code> rather than the original <code>colorBuffer</code>:
+        </p>
+        <pre data-lang="DeferredApp.cpp"><code><span class="cm">// After Deferred Lighting:</span>
+postProcessing.<span class="fn">taaPass</span>(
+    frameIndex,
+    swapChain<span class="op">-&gt;</span><span class="fn">getExtent</span>(),
+    samplers,
+    cmdList,
+    frame.colorBuffer,
+    gbufferPass.<span class="fn">getVelocityBuffer</span>(frameIndex));
+<span class="kw">auto</span> colorBuffer <span class="op">=</span> postProcessing.applyTAA
+    <span class="op">?</span> postProcessing.<span class="fn">getTAAColorBuffer</span>(frameIndex)
+    <span class="op">:</span> frame.colorBuffer;
+
+<span class="cm">// OIT and post-processing receive this colorBuffer</span>
+transparencyPass.<span class="fn">onRender</span>(..., colorBuffer);
+postProcessing.<span class="fn">onRender</span>(..., colorBuffer);</code></pre>
+    </section>
+
+    <section>
+        <h2 data-n="07">Other practical considerations</h2>
+        <p>
+            In the Deferred example, TAA can be enabled on the fly with the <kbd>T</kbd> key,
+            just like other post-processing effects (S for SMAA, F for FXAA, etc.).
+        </p>
+
+        <h3>Adjustable quality settings</h3>
         <table>
             <thead><tr><th>Parameter</th><th>Value</th><th>Function</th></tr></thead>
             <tbody>
-            <tr><td>Halton Cycle</td><td>16 frames</td><td>Number of distinct jitter positions [cite: 1, 2]</td></tr>
-            <tr><td>σ clipping variance</td><td>1.0×</td><td>Tolerance before history rejection [cite: 1, 2]</td></tr>
-            <tr><td>Blend factor (rest)</td><td>0.95</td><td>History weight when no movement [cite: 1, 2]</td></tr>
-            <tr><td>Blend factor (movement)</td><td>0.75</td><td>Weight of history when camera/object is moving [cite: 1, 2]</td></tr>
-            <tr><td>Velocity scale</td><td>30.0×</td><td>Sensitivity of the blend to the velocity vector [cite: 1, 2]</td></tr>
+            <tr><td>Halton Cycle</td><td>16 frames</td><td>Number of distinct jitter positions</td></tr>
+            <tr><td>σ clipping variance</td><td>1.0×</td><td>Tolerance before history rejection</td></tr>
+            <tr><td>Blend factor (rest)</td><td>0.95</td><td>History weight when no movement</td></tr>
+            <tr><td>Blend factor (movement)</td><td>0.75</td><td>History weight when camera/object is moving</td></tr>
+            <tr><td>Velocity scale</td><td>30.0×</td><td>Sensitivity of the blend to the velocity vector</td></tr>
             </tbody>
         </table>
 
         <div class="callout warn">
             <div class="callout-label">Limitation</div>
-            <p>Since the velocity buffer is calculated only on opaque geometries in the G-Buffer, transparent objects (OITs) do not contribute to the velocity, which can cause ghosting on moving transparent surfaces. [cite: 1, 2]</p>
+            <p>Since the velocity buffer is calculated only on opaque geometries in the G-Buffer,
+                transparent objects (OITs) do not contribute to the velocity,
+                which can cause ghosting on moving transparent surfaces.</p>
         </div>
     </section>
-
-    <footer>
-        Example of TAA Implementation with Vireo RHI - Henri Michelon
-    </footer>
 
 </div>
 </body>

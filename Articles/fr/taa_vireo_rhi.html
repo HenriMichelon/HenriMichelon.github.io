@@ -749,7 +749,7 @@ renderingConfig.colorRenderTargets[<span class="num">0</span>].renderTarget <spa
         (OIT, FXAA, SMAA, effet Voronoi, correction gamma) consomment
         le <code>taaColorBuffer</code> plutôt que le <code>colorBuffer</code> d'origine :
     </p>
-    <pre data-lang="PostProcessing.cpp"><code><span class="cm">// Après le Deferred Lighting:</span>
+    <pre data-lang="DeferredApp.cpp"><code><span class="cm">// Après le Deferred Lighting:</span>
 postProcessing.<span class="fn">taaPass</span>(
     frameIndex,
     swapChain<span class="op">-&gt;</span><span class="fn">getExtent</span>(),
