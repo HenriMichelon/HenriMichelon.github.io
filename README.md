@@ -1,7 +1,7 @@
 Articles
 -------------------------------------------
 
-[Exemple d'implémentation du TAA avec Vireo RHI (french)](https://henrimichelon.github.io/taa_vireo_rhi.html)
+[Exemple d'implémentation du TAA avec Vireo RHI (french)](https://henrimichelon.github.io/Articles/taa_vireo_rhi.html)
 
 Projects documentations
 -------------------------------------------
