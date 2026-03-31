@@ -574,6 +574,10 @@ output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prev
         <tr><td><code>t3</code></td><td>velocity</td><td>Velocity buffer calculé par la G-Buffer pass</td></tr>
       </tbody>
     </table>
+      <pre data-lang="taa.frag.slang">
+<code><span class="ty">Texture2D</span> inputImage <span class="op">:</span> <span class="kw">register</span>(t1);
+<span class="ty">Texture2D</span> history <span class="op">:</span> <span class="kw">register</span>(t2);
+<span class="ty">Texture2D</span> velocity <span class="op">:</span> <span class="kw">register</span>(t3);</code></pre>
 
     <h3>1. Reprojection par velocity</h3>
     <pre data-lang="taa.frag.slang"><code><span class="ty">float2</span> vel <span class="op">=</span> velocity.<span class="fn">Sample</span>(sampler, uv).xy;
@@ -637,10 +641,10 @@ output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prev
   <section>
     <h2 data-n="06">Gestion des buffers temporels (ping-pong)</h2>
     <p>
-      Le TAA maintient <strong>deux buffers de couleur par frame-in-flight</strong> (<code>taaColorBuffer[0]</code> et <code>taaColorBuffer[1]</code>) selon un schéma <em>ping-pong</em> : à chaque frame, le buffer courant devient le buffer historique de la frame suivante, et vice versa.
+      Le TAA maintient <strong>deux buffers de couleur par frame-in-flight</strong> (<code>taaColorBuffer[0]</code> et <code>taaColorBuffer[1]</code>) selon un schéma <em>ping-pong</em>).
     </p>
-  <pre data-lang="PostProcessing.ixx"><code>
-<span class="cm">// Ajout des binding des buffers :</span>
+  <pre data-lang="PostProcessing.ixx">
+<code><span class="cm">// Ajout des binding des buffers :</span>
 <span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_HISTORY{<span class="num">2</span>}; <span class="cm">// TAA Only</span>
 <span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_VELOCITY{<span class="num">3</span>}; <span class="cm">// TAA Only</span>
 
@@ -656,8 +660,8 @@ std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span 
 std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">DescriptorLayout</span><span class="op">&gt;</span> taaDescriptorLayout;
           </code></pre>
 
-    <pre data-lang="PostProcessing.cpp"><code>
-<span class="cm">// Dans onInit(), création du descriptor layout, descriptor set, pipeline et buffer:</span>
+    <pre data-lang="PostProcessing.cpp">
+<code><span class="cm">// Dans onInit(), création du descriptor layout, descriptor set, pipeline et buffer:</span>
 taaDescriptorLayout <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorLayout</span>();
 taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_PARAMS, vireo<span class="ty">::DescriptorType::UNIFORM</span>);
 taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_INPUT, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
@@ -680,8 +684,12 @@ taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span cl
     frame.taaDescriptorSet[<span class="num">1</span>] <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorSet</span>(taaDescriptorLayout);
     frame.taaDescriptorSet[<span class="num">1</span>]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_PARAMS, paramsBuffer);
 }
+    </code></pre>
+      <p>
+          A chaque frame, le buffer courant devient le buffer historique de la frame suivante, et vice versa :
+      </p>
 
-<span class="cm">// Dans taaPass() :</span>
+      <pre data-lang="PostProcessing.cpp"><code><span class="cm">// Dans taaPass() :</span>
 <span class="kw">const auto</span> historyIndex  <span class="op">=</span> (taaIndex <span class="op">+</span> <span class="num">1</span>) <span class="op">%</span> <span class="num">2</span>;
 <span class="kw">const auto</span> currentHistory  <span class="op">=</span> frame.taaColorBuffer[taaIndex];
 <span class="kw">const auto</span> previousHistory <span class="op">=</span> frame.taaColorBuffer[historyIndex];
@@ -691,12 +699,47 @@ taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span cl
     taaIndex <span class="op">=</span> (taaIndex <span class="op">+</span> <span class="num">1</span>) <span class="op">%</span> <span class="num">2</span>;
 }</code></pre>
 
-    <p>
-      Les transitions de ressource (<code>ResourceState</code>) sont soigneusement
-        orchestrées via des barrières :
-        l'image historique passe de <code>UNDEFINED</code> à <code>SHADER_READ</code>,
-        le buffer courant de <code>UNDEFINED</code> à <code>RENDER_TARGET_COLOR</code>, etc.
-    </p>
+
+      <p data-lang="PostProcessing.cpp">Le reste est une passe de rendu full-screen classique avec Vireo HRI :</p>
+      <pre data-lang="PostProcessing.cpp"><code> <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+           colorBuffer,
+           vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>,
+           vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+           previousHistory,
+           vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+           vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+            currentHistory,
+            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>,
+            vireo<span class="op">::</span><span class="ty">ResourceState::RENDER_TARGET_COLOR</span>);
+
+        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_INPUT, colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_HISTORY, previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>());
+        frame.taaDescriptorSet[taaIndex]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_VELOCITY, velocityBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>());
+
+        renderingConfig.colorRenderTargets[<span class="num">0</span>].renderTarget <span class="op">=</span> currentHistory;
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">beginRendering</span>(renderingConfig);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setViewport</span>(vireo<span class="op">::</span><span class="ty">Viewport</span>{
+            <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
+            <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)});
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">setScissors</span>(vireo<span class="op">::</span><span class="ty">Rect</span>{
+            extent.width,
+            extent.height});
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindPipeline</span>(taaPipeline);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">bindDescriptors</span>({frame.taaDescriptorSet[taaIndex], samplers.<span class="fn">getDescriptorSet</span>()});
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">draw</span>(<span class="num">3</span>);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">endRendering</span>();
+
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+            previousHistory<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+            vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);
+        <span class="fn">cmdList</span><span class="op">-&gt;</span><span class="fn">barrier</span>(
+            colorBuffer<span class="op">-&gt;</span><span class="fn">getImage</span>(),
+            vireo<span class="op">::</span><span class="ty">ResourceState::SHADER_READ</span>,
+            vireo<span class="op">::</span><span class="ty">ResourceState::UNDEFINED</span>);</code></pre>
+
 
     <h3>Intégration dans la chaîne de rendu</h3>
     <p>
@@ -706,7 +749,14 @@ taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span cl
         (OIT, FXAA, SMAA, effet Voronoi, correction gamma) consomment
         le <code>taaColorBuffer</code> plutôt que le <code>colorBuffer</code> d'origine :
     </p>
-    <pre data-lang="DeferredApp.cpp"><code><span class="cm">// Après le TAA pass :</span>
+    <pre data-lang="PostProcessing.cpp"><code><span class="cm">// Après le Deferred Lighting:</span>
+postProcessing.<span class="fn">taaPass</span>(
+    frameIndex,
+    swapChain<span class="op">-&gt;</span><span class="fn">getExtent</span>(),
+    samplers,
+    cmdList,
+    frame.colorBuffer,
+    gbufferPass.<span class="fn">getVelocityBuffer</span>(frameIndex));
 <span class="kw">auto</span> colorBuffer <span class="op">=</span> postProcessing.applyTAA
     <span class="op">?</span> postProcessing.<span class="fn">getTAAColorBuffer</span>(frameIndex)
     <span class="op">:</span> frame.colorBuffer;
