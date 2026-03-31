@@ -3,11 +3,11 @@ Articles
 
 [Exemple d'implémentation du TAA avec Vireo RHI (french)](https://henrimichelon.github.io/Articles/fr/taa_vireo_rhi.html)
 
-[Example of TAA Implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/taa_vireo_rhi.html)
+[Example of TAA implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/taa_vireo_rhi.html)
 
 [Exemple d'implémentation du SMAA avec Vireo RHI (french)](https://henrimichelon.github.io/Articles/fr/smaa_vireo_rhi.html)
 
-[Example of SMAA Implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/smaa_vireo_rhi.html)
+[Example of SMAA implementation with Vireo RHI (english)](https://henrimichelon.github.io/Articles/en/smaa_vireo_rhi.html)
 
 
 Projects documentations
