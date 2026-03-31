@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of TAA Implementation with Vireo RHI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #161a21;
+            --surface: #1e232e;
+            --border: #2a3142;
+            --accent: #5daced;
+            --accent2: #f5a623;
+            --text: #d4dae8;
+            --text-muted: #6b7591;
+            --text-dim: #3d4560;
+            --code-bg: #13171f;
+            --heading: #eef1f8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 28px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 64px 0 48px;
+            margin-bottom: 56px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 900;
+            color: var(--heading);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+
+        .meta {
+            margin-top: 28px;
+            display: flex;
+            gap: 28px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+        .meta span { color: var(--text-muted); }
+
+        section {
+            margin-bottom: 64px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 24px;
+            padding-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        h2::before {
+            content: attr(data-n);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--accent2);
+            border: 1px solid var(--accent2);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent2);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin: 36px 0 14px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: var(--text);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(93, 172, 237, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .callout {
+            border-left: 3px solid var(--accent);
+            background: var(--surface);
+            padding: 18px 22px;
+            margin: 28px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .callout.warn {
+            border-left-color: var(--accent2);
+        }
+        .callout-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .callout.warn .callout-label { color: var(--accent2); }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 22px 24px;
+            overflow-x: auto;
+            margin: 24px 0 32px;
+            position: relative;
+        }
+        pre::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        code {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: #c9d1e8;
+        }
+
+        .kw  { color: #c792ea; }
+        .fn  { color: #82aaff; }
+        .cm  { color: #546e7a; font-style: italic; }
+        .num { color: #f78c6c; }
+        .ty  { color: #ffcb6b; }
+        .op  { color: #89ddff; }
+
+        .diagram {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 28px;
+            margin: 28px 0;
+            overflow-x: auto;
+        }
+
+        .pipeline {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            flex-wrap: nowrap;
+            min-width: 600px;
+        }
+
+        .pipe-step {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 10px 14px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11.5px;
+            color: var(--text);
+            text-align: center;
+            white-space: nowrap;
+            flex-shrink: 0;
+            line-height: 1.4;
+        }
+        .pipe-step.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(93, 172, 237, 0.06);
+        }
+        .pipe-step small {
+            display: block;
+            color: var(--text-dim);
+            font-size: 9.5px;
+            margin-top: 3px;
+        }
+        .pipe-arrow {
+            color: var(--text-dim);
+            font-size: 18px;
+            padding: 0 6px;
+            flex-shrink: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+        th {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+        td {
+            border-bottom: 1px solid var(--border);
+            padding: 10px 14px;
+            color: var(--text);
+            vertical-align: top;
+        }
+
+        footer {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--text-dim);
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            letter-spacing: 0.06em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Example of TAA Implementation with Vireo RHI</h1>
+        <div class="meta">
+            <span>Vireo RHI / C++ / Vulkan / DirectX 12 / Slang Shader Language / Deferred Rendering</span>
+            <span>Henri Michelon</span>
+        </div>
+    </header>
+
+    <section>
+        <h2 data-n="00">Context</h2>
+        <p>
+            This article details the implementation of TAA in the <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a>
+            of the <a href="https://github.com/HenriMichelon/vireo_rhi">Vireo Rendering Hardware Interface</a> project.
+        </p>
+        <p>
+            The corresponding source code can be found in the "Deferred" example:
+            <a href="https://github.com/HenriMichelon/vireo_samples/tree/main/src/samples/deferred">https://github.com/HenriMichelon/vireo_samples/tree/main/src/samples/deferred</a>
+        </p>
+    </section>
+
+    <section>
+        <h2 data-n="01">Introduction: what is TAA?</h2>
+        <p>
+            <strong>Temporal Anti-Aliasing</strong> (TAA) is an anti-aliasing technique that uses information accumulated across multiple successive frames to smooth out visual artifacts.
+            Unlike MSAA, which operates during rendering on the edges of geometric shapes, or FXAA, which applies a post-processing filter, TAA leverages <em>time</em> as an additional sampling dimension.
+            (The <a href="https://github.com/HenriMichelon/vireo_samples">Vireo RHI Samples</a> also include examples of MSAA and FXAA).
+        </p>
+        <p>
+            The core idea: for each frame, the camera is shifted slightly by a sub-pixel (<em>jitter</em>).
+            The result is then merged with the history of previous frames. It is currently the dominant anti-aliasing technique in 3D engines.
+        </p>
+    </section>
+
+    <section>
+        <h2 data-n="02">TAA Placement in the Pipeline</h2>
+        <p>The execution order of the deferred pipeline will be as follows:</p>
+        <div class="diagram">
+            <div class="pipeline">
+                <div class="pipe-step">Depth<br>Prepass<small>Z-buffer</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step">G-Buffer<br>Pass<small>Position/Normal/Albedo/<strong class="active">Velocity</strong></small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step">Lighting<br>Pass<small>Deferred shading</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step active">TAA<br>Pass<small>Accumulation</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step">OIT<br>Pass<small>Transparency</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step">Post-<br>process<small>SMAA/FXAA/Effects</small></div>
+            </div>
+        </div>
+        <p>
+            TAA operates on opaque geometries: the G-Buffer provides velocity data for the TAA shader well before transparent geometries are rendered during the OIT pass.
+        </p>
+    </section>
+
+    <section>
+        <h2 data-n="03">Camera Jitter</h2>
+        <p>
+            Jitter involves shifting the projection by a different subpixel in each frame, following a quasi-random sequence (or at least sufficiently random for TAA).
+        </p>
+        <p>
+            TAA data requires enhancing the <code>Global</code> UBO (Uniform Buffer Object) shared between the CPU and shaders:
+        </p>
+
+        <pre data-lang="C++ / Global.ixx"><code><span class="kw">struct</span> <span class="ty">Global</span> {
+    <span class="fn">alignas</span>(<span class="num">16</span>) glm::<span class="ty">mat4</span> projection;
+    glm::<span class="ty">mat4</span> view;
+    glm::<span class="ty">mat4</span> viewInverse;
+    glm::<span class="ty">mat4</span> previousProjection; <span class="cm">// TAA</span>
+    glm::<span class="ty">mat4</span> previousView;       <span class="cm">// TAA</span>
+    glm::<span class="ty">vec2</span> jitter;             <span class="cm">// TAA</span>
+    <span class="fn">alignas</span>(<span class="num">16</span>) glm::<span class="ty">vec4</span> ambientLight;
+};</code></pre>
+
+        <p>
+            To calculate the jitter, we traditionally use a <a href="https://en.wikipedia.org/wiki/Halton_sequence"><strong>Halton sequence</strong></a> that is stored in the global UBO.
+        </p>
+
+        <h3>Implementation in Scene.cpp</h3>
+        <pre data-lang="C++"><code><span class="kw">void</span> <span class="fn">Scene::jitterProjection</span>(<span class="kw">const</span> vireo::<span class="ty">Extent</span><span class="op">&</span> extent) {
+    <span class="kw">static</span> <span class="ty">uint32_t</span> frameIndex <span class="op">=</span> <span class="num">0</span>;
+
+    <span class="cm">// Halton sequence: base b, index i</span>
+    <span class="kw">const auto</span> <span class="fn">halton</span> <span class="op">=</span> [](<span class="kw">const</span> <span class="ty">uint32_t</span> index, <span class="kw">const</span> <span class="ty">uint32_t</span> base) {
+        <span class="kw">auto</span> result <span class="op">=</span> <span class="num">0.0f</span>;
+        <span class="kw">auto</span> f <span class="op">=</span> <span class="num">1.0f</span> <span class="op">/</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(base);
+        <span class="kw">auto</span> i <span class="op">=</span> index;
+        <span class="kw">while</span> (i <span class="op">&gt;</span> <span class="num">0</span>) {
+            result <span class="op">+=</span> f <span class="op">*</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(i <span class="op">%</span> base);
+            i <span class="op">/=</span> base;
+            f <span class="op">/=</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(base);
+        }
+        <span class="kw">return</span> result;
+    };
+
+    global.jitter <span class="op">=</span> {
+        (<span class="fn">halton</span>(frameIndex <span class="op">%</span> <span class="num">16</span> <span class="op">+</span> <span class="num">1</span>, <span class="num">2</span>) <span class="op">-</span> <span class="num">0.5f</span>) <span class="op">/</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.width),
+        (<span class="fn">halton</span>(frameIndex <span class="op">%</span> <span class="num">16</span> <span class="op">+</span> <span class="num">1</span>, <span class="num">3</span>) <span class="op">-</span> <span class="num">0.5f</span>) <span class="op">/</span> <span class="kw">static_cast</span><span class="op">&lt;</span><span class="ty">float</span><span class="op">&gt;</span>(extent.height)
+    };
+    global.previousProjection <span class="op">=</span> global.projection;
+    global.projection[<span class="num">2</span>][<span class="num">0</span>] <span class="op">=</span> global.jitter.x; <span class="cm"></span>
+    global.projection[<span class="num">2</span>][<span class="num">1</span>] <span class="op">=</span> global.jitter.y; <span class="cm"></span>
+    frameIndex<span class="op">++</span>;
+}</code></pre>
+        <p>
+            Jitter is applied directly to the camera's current projection, on the cells <code>projection[2][0]</code> and <code>projection[2][1]</code> that correspond to the offset of the line of sight in the perspective projection matrix.
+            The current matrix is first saved in <code>previousProjection</code> before modification.
+        </p>
+    </section>
+
+    <section>
+        <h2 data-n="04">Per-Pixel Velocity Calculation</h2>
+        <p>
+            TAA requires knowledge of the position of each pixel in the previous frame.
+            This information is stored in a <strong>velocity buffer</strong> (also known as a motion vector buffer): a 2-channel, 16-bit render target containing the displacement in NDC space of each fragment between frame n-1 and frame n.
+        </p>
+        <h3>Adding a 5th Attachment to the G-Buffer Pass</h3>
+        <pre data-lang="GBufferPass.ixx"><code><span class="cm">// Velocity buffer format</span>
+vireo::<span class="ty">ImageFormat</span>::R16G16_SFLOAT, <span class="cm">// TAA Velocity</span>
+<span class="cm">// Index constant for the descriptor set</span>
+<span class="kw">static constexpr int</span> BUFFER_VELOCITY{<span class="num">4</span>};
+<span class="cm">// Add the velocity render target</span>
+<span class="kw">struct</span> <span class="ty">FrameData</span> : <span class="ty">FrameDataCommand</span> {
+    ...
+    std::shared_ptr&lt;vireo::<span class="ty">RenderTarget</span>&gt; velocityBuffer; <span class="cm">// TAA</span>
+};</code></pre>
+    </section>
+
+    <section>
+        <h2 data-n="07">Other Practical Considerations</h2>
+        <p>
+            In the Deferred example, TAA can be enabled on the fly with the <kbd>T</kbd> key, just like other post-processing effects (S for SMAA, F for FXAA, etc.). [cite: 1, 2]
+        </p>
+
+        <h3>Adjustable Quality Settings</h3>
+        <table>
+            <thead><tr><th>Parameter</th><th>Value</th><th>Function</th></tr></thead>
+            <tbody>
+            <tr><td>Halton Cycle</td><td>16 frames</td><td>Number of distinct jitter positions [cite: 1, 2]</td></tr>
+            <tr><td>σ clipping variance</td><td>1.0×</td><td>Tolerance before history rejection [cite: 1, 2]</td></tr>
+            <tr><td>Blend factor (rest)</td><td>0.95</td><td>History weight when no movement [cite: 1, 2]</td></tr>
+            <tr><td>Blend factor (movement)</td><td>0.75</td><td>Weight of history when camera/object is moving [cite: 1, 2]</td></tr>
+            <tr><td>Velocity scale</td><td>30.0×</td><td>Sensitivity of the blend to the velocity vector [cite: 1, 2]</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout warn">
+            <div class="callout-label">Limitation</div>
+            <p>Since the velocity buffer is calculated only on opaque geometries in the G-Buffer, transparent objects (OITs) do not contribute to the velocity, which can cause ghosting on moving transparent surfaces. [cite: 1, 2]</p>
+        </div>
+    </section>
+
+    <footer>
+        Example of TAA Implementation with Vireo RHI - Henri Michelon
+    </footer>
+
+</div>
+</body>
+</html>
