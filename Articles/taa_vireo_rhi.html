@@ -122,12 +122,16 @@
     content: attr(data-n);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 2px 7px;
-    border-radius: 2px;
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
   }
 
   h3 {
@@ -360,9 +364,8 @@
   <header>
     <h1>Exemple d'implémentation du TAA avec Vireo RHI</h1>
     <div class="meta">
-      <span>Vireo RHI / C++ / Vulkan / DirectX 12 / Slang Shader Langage</span>
-      <span>·</span>
-      <span>Deferred Rendering</span>
+      <span>Vireo RHI / C++ / Vulkan / DirectX 12 / Slang Shader Langage / Deferred Rendering</span>
+        <span>Henri Michelon</span>
     </div>
   </header>
 
@@ -500,21 +503,41 @@
 vireo::<span class="ty">ImageFormat</span>::R16G16_SFLOAT, <span class="cm">// TAA Velocity</span>
 
 <span class="cm">// Constante d'index pour le descriptor set</span>
-<span class="kw">static constexpr int</span> BUFFER_VELOCITY{<span class="num">4</span>};</code></pre>
+<span class="kw">static constexpr int</span> BUFFER_VELOCITY{<span class="num">4</span>};
+
+<span class="cm">// Ajout du render target velocity</span>
+<span class="kw">struct</span> <span class="ty">FrameData</span> : <span class="ty">FrameDataCommand</span> {
+    ...
+    std::shared_ptr&lt;vireo::<span class="ty">RenderTarget</span>&gt;  velocityBuffer; <span class="cm">// TAA</span>
+};</code></pre>
+
+      <pre data-lang="GBufferPass.cpp"><code>
+<span class="cm">// Envoi du render target au shader dans onRender()</span>
+renderingConfig.colorRenderTargets[BUFFER_VELOCITY].renderTarget <span class="op">=</span> frame.velocityBuffer;
+
+<span class="cm">// Création du render target dans onResize()</span>
+frame.velocityBuffer <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createRenderTarget</span>(
+    pipelineConfig.colorRenderFormats[BUFFER_VELOCITY],
+    extent.width,extent.height,
+    vireo::<span class="ty">RenderTargetType</span>::COLOR,
+    renderingConfig.colorRenderTargets[BUFFER_VELOCITY].clearValue,
+    <span class="num">1</span>, vireo::<span class="ty">MSAA</span>::NONE,
+    <span class="str">"Velocity Buffer"</span>);
+</code></pre>
 
     <h3>Modifications des shaders (Slang)</h3>
       <p>
           La structure <code>VertexOutput</code> est tour d'abords modifiée pour passer la position
           précédente entre le vertex shader et le fragment shader :
       </p>
-      <pre data-lang="scene_input.inc.slang"><code>struct VertexOutput {
-    float4 position   : SV_POSITION;
-    float3 worldPos   : TEXCOORD0;
-    float3 normal     : TEXCOORD1;
-    float2 uv         : TEXCOORD2;
-    float3 tangent    : TEXCOORD3;
-    float3 bitangent  : TEXCOORD4;
-    float4 previousPos: TEXCOORD5; // TAA
+      <pre data-lang="scene_input.inc.slang"><code><span class="kw">struct</span> <span class="ty">VertexOutput</span> {
+    <span class="ty">float4</span> position   : <span class="kw">SV_POSITION</span>;
+    <span class="ty">float3</span> worldPos   : <span class="kw">TEXCOORD0</span>;
+    <span class="ty">float3</span> normal     : <span class="kw">TEXCOORD1</span>;
+    <span class="ty">float2</span> uv         : <span class="kw">TEXCOORD2</span>;
+    <span class="ty">float3</span> tangent    : <span class="kw">TEXCOORD3</span>;
+    <span class="ty">float3</span> bitangent  : <span class="kw">TEXCOORD4</span>;
+    <span class="ty">float4</span> previousPos: <span class="kw">TEXCOORD5</span>; <span class="cm">// TAA</span>
 };</code></pre>
 
 
@@ -616,7 +639,49 @@ output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prev
     <p>
       Le TAA maintient <strong>deux buffers de couleur par frame-in-flight</strong> (<code>taaColorBuffer[0]</code> et <code>taaColorBuffer[1]</code>) selon un schéma <em>ping-pong</em> : à chaque frame, le buffer courant devient le buffer historique de la frame suivante, et vice versa.
     </p>
-    <pre data-lang="PostProcessing.cpp"><code><span class="cm">// Dans taaPass() :</span>
+  <pre data-lang="PostProcessing.ixx"><code>
+<span class="cm">// Ajout des binding des buffers :</span>
+<span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_HISTORY{<span class="num">2</span>}; <span class="cm">// TAA Only</span>
+<span class="kw">static constexpr</span> vireo<span class="op">::</span><span class="ty">DescriptorIndex</span> BINDING_VELOCITY{<span class="num">3</span>}; <span class="cm">// TAA Only</span>
+
+<span class="cm">// Ajout des buffers et descriptor set:</span>
+<span class="kw">struct</span> <span class="ty">FrameData</span> {
+    ...
+    std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">DescriptorSet</span><span class="op">&gt;</span> taaDescriptorSet[<span class="num">2</span>];
+    std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">RenderTarget</span><span class="op">&gt;</span>  taaColorBuffer[<span class="num">2</span>];
+};
+
+<span class="cm">// Ajout du descriptor layout et du pipeline TAA :</span>
+std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">Pipeline</span><span class="op">&gt;</span> taaPipeline;
+std::shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">DescriptorLayout</span><span class="op">&gt;</span> taaDescriptorLayout;
+          </code></pre>
+
+    <pre data-lang="PostProcessing.cpp"><code>
+<span class="cm">// Dans onInit(), création du descriptor layout, descriptor set, pipeline et buffer:</span>
+taaDescriptorLayout <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorLayout</span>();
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_PARAMS, vireo<span class="ty">::DescriptorType::UNIFORM</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_INPUT, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_HISTORY, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">add</span>(BINDING_VELOCITY, vireo<span class="ty">::DescriptorType::SAMPLED_IMAGE</span>);
+taaDescriptorLayout<span class="op">-&gt;</span><span class="fn">build</span>();
+
+<span class="kw">const auto</span> taaResources <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createPipelineResources</span>({
+    taaDescriptorLayout,
+    samplers.<span class="fn">getDescriptorLayout</span>() });
+
+pipelineConfig.resources <span class="op">=</span> taaResources;
+pipelineConfig.fragmentShader <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createShaderModule</span>(<span class="st">"shaders/taa.frag"</span>);
+taaPipeline <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createGraphicPipeline</span>(pipelineConfig);
+
+<span class="kw">for</span> (<span class="kw">auto&amp;</span> frame <span class="op">:</span> framesData) {
+    ...
+    frame.taaDescriptorSet[<span class="num">0</span>] <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorSet</span>(taaDescriptorLayout);
+    frame.taaDescriptorSet[<span class="num">0</span>]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_PARAMS, paramsBuffer);
+    frame.taaDescriptorSet[<span class="num">1</span>] <span class="op">=</span> vireo<span class="op">-&gt;</span><span class="fn">createDescriptorSet</span>(taaDescriptorLayout);
+    frame.taaDescriptorSet[<span class="num">1</span>]<span class="op">-&gt;</span><span class="fn">update</span>(BINDING_PARAMS, paramsBuffer);
+}
+
+<span class="cm">// Dans taaPass() :</span>
 <span class="kw">const auto</span> historyIndex  <span class="op">=</span> (taaIndex <span class="op">+</span> <span class="num">1</span>) <span class="op">%</span> <span class="num">2</span>;
 <span class="kw">const auto</span> currentHistory  <span class="op">=</span> frame.taaColorBuffer[taaIndex];
 <span class="kw">const auto</span> previousHistory <span class="op">=</span> frame.taaColorBuffer[historyIndex];
