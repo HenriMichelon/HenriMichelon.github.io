@@ -200,10 +200,12 @@ output.previousPos <span class="op">=</span> <span class="fn">mul</span>(global.
     <p>Le fragment shader en déduit le vecteur de vélocité en espace NDC,
         en retirant le jitter :</p>
 
-    <pre data-lang="deferred_gbuffer.frag.slang"><code><span class="ty">float2</span> curPos  <span class="op">=</span> (input.position.xy  <span class="op">/</span> input.position.w);
-<span class="ty">float2</span> prevPos <span class="op">=</span> (input.previousPos.xy <span class="op">/</span> input.previousPos.w);
-output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prevPos) <span class="op">-</span> global.jitter; <span class="cm">// TAA</span></code></pre>
-
+      <pre data-lang="deferred_gbuffer.frag.slang">
+<code><span class="ty">float2</span> curPos = (input.position.xy / global.screenSize);
+curPos -= global.jitter * 0.5;
+<span class="ty">float2</span> prevPos = (input.previousPos.xy / input.previousPos.w) * 0.5 + 0.5;
+output.velocity = (curPos - prevPos);</code></pre>
+  </section>
   </section>
 
   <section>
