@@ -199,10 +199,6 @@ output.previousPos <span class="op">=</span> <span class="fn">mul</span>(global.
 <span class="ty">float2</span> prevPos <span class="op">=</span> (input.previousPos.xy <span class="op">/</span> input.previousPos.w);
 output.velocity <span class="op">=</span> (curPos <span class="op">-</span> prevPos) <span class="op">-</span> global.jitter; <span class="cm">// TAA</span></code></pre>
 
-        <div class="callout warn">
-            <p>Subtracting <code>jitter</code> is essential: without it, the velocity would include the artificial camera shift, which would cause the TAA to perceive a false movement and degrade its quality.</p>
-        </div>
-
     </section>
 
     <section>
