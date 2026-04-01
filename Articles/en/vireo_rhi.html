@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vireo RHI Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,300&family=Noto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>What is Vireo RHI?</h1>
+        <div class="meta">
+            <span>C++23 / Modules / Vulkan 1.3 / DirectX 12 / Windows / Linux</span>
+            <span><a href="https://github.com/HenriMichelon/HenriMichelon.github.io">Henri Michelon</a></span>
+        </div>
+    </header>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <div class="toc-title">Table of Contents</div>
+        <ol>
+            <li><a href="#objectif">Goal &amp; Positioning</a></li>
+            <li><a href="#architecture">General Architecture</a></li>
+            <li><a href="#api">API: Key Concepts</a></li>
+            <li><a href="#shaders">Shaders &amp; Compilation Pipeline</a></li>
+            <li><a href="#synchronisation">Synchronization</a></li>
+            <li><a href="#build">Build &amp; Integration</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#exemples">Examples — vireo_samples</a></li>
+        </ol>
+    </div>
+
+    <!-- §1 GOAL -->
+    <section id="objectif">
+        <h2 data-n="1">Goal &amp; Positioning</h2>
+
+        <p>Vireo RHI is an open-source C++ library that implements a <strong>common abstraction layer</strong>
+            on top of modern graphics APIs, with the goal of providing a low-level, high-performance
+            interface that hides the boilerplate of Vulkan and DirectX 12 without sacrificing explicit control over the GPU.</p>
+
+        <div class="callout">
+            <div class="callout-label">Note</div>
+            <p>Vireo is not a rendering engine.
+                It is a library intended to be used as a submodule or dependency of an engine or application,
+                as is the case with <a href="https://github.com/LysaEngine" target="_blank">Lysa Engine</a>.
+                Features are added incrementally as needed by dependent projects.</p>
+        </div>
+
+        <h3>Supported Backends</h3>
+        <p>Two backends are currently implemented:</p>
+        <ul>
+            <li><strong>Vulkan 1.3</strong> — available on Windows and Linux (X11 &amp; Wayland)</li>
+            <li><strong>DirectX 12</strong> — Windows only (can be disabled at compile time)</li>
+        </ul>
+
+        <h3>Development Language</h3>
+        <p>Vireo relies on <strong>C++23 modules</strong> (<code>.ixx</code>) rather than traditional header files.
+            This speeds up compilation, reduces namespace pollution, and makes internal dependencies fully explicit.
+            The minimum required compiler is MSVC 19+ or LLVM/MingW 21+ on Windows, and LLVM 21+ on Linux.</p>
+    </section>
+
+    <!-- §2 ARCHITECTURE -->
+    <section id="architecture">
+        <h2 data-n="2">General Architecture</h2>
+
+        <p>Vireo's architecture is based on a layer stack: application code only interacts with the
+            abstract RHI layer, which delegates to the Vulkan or DirectX 12 backend selected at runtime.</p>
+        <p>The backend is selected at instantiation of the Vireo object.</p>
+
+        <div class="diagram">
+            <div class="arch-layer">
+                <div class="layer-row">
+                    <div class="layer-box layer-app">Application / Engine (e.g. Lysa Engine)</div>
+                </div>
+                <div class="layer-arrow">↕</div>
+                <div class="layer-row">
+                    <div class="layer-box layer-rhi">vireo::Vireo — Unified abstract API<br><small style="color:var(--text-dim)">module vireo — Vireo.ixx</small></div>
+                </div>
+                <div class="layer-arrow">↕</div>
+                <div class="layer-row">
+                    <div class="layer-box layer-back">Vulkan 1.3 Backend<br><small style="color:var(--text-dim)">VKVireo, VKCommands…</small></div>
+                    <div class="layer-box layer-back">DirectX 12 Backend<br><small style="color:var(--text-dim)">DXVireo, DXCommands…</small></div>
+                </div>
+                <div class="layer-arrow">↕</div>
+                <div class="layer-row">
+                    <div class="layer-box layer-hw">GPU / Hardware Driver</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Runtime Backend Selection</h3>
+        <p>The main object is created via the static method <a href="../../Vireo/classvireo_1_1Vireo.html#a5c5bb74770f56003509062f953f523b6"><code>Vireo::create()</code></a>, which takes
+            a <a href="../../Vireo/structvireo_1_1BackendConfiguration.html"><code>vireo::BackendConfiguration</code></a>
+            object. The backend type is passed as an enumeration:</p>
+
+<pre data-lang="C++"><code><span class="kw">import</span> vireo;
+
+<span class="kw">auto</span> config <span class="op">=</span> vireo<span class="op">::</span><span class="ty">BackendConfiguration</span>{};
+config.backend <span class="op">=</span> vireo<span class="op">::</span><span class="ty">Backend</span><span class="op">::</span>VULKAN;  <span class="cm">// or DIRECTX</span>
+<span class="kw">auto</span> vireoInstance <span class="op">=</span> vireo<span class="op">::</span><span class="ty">Vireo</span><span class="op">::</span><span class="fn">create</span>(config);</code></pre>
+
+        <p>The static method <a href="../../Vireo/classvireo_1_1Vireo.html#a80cbf3a223060c85ff273d534b21059a"><code>Vireo::isBackendSupported()</code></a>
+            allows testing at runtime whether a given backend is available.</p>
+
+        <h3>Source Code Organization</h3>
+        <p>Each backend is organized into a set of modules implementing the same functional domains:</p>
+
+        <div class="diagram">
+            <div class="pipeline">
+                <div class="pipe-step active"><code>Vireo.ixx</code><small>Abstract interface</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>VKVireo / DXVireo</code><small>Implementation</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>*Devices</code><small>Instance, GPU</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>*Resources</code><small>Buffers, Images</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>*Pipelines</code><small>Graphic/Compute</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>*Commands</code><small>CommandList</small></div>
+            </div>
+            <div class="diagram-caption">Each VK* / DX* prefix implements the same domain</div>
+        </div>
+
+        <h3>Abstract Class Hierarchy</h3>
+        <div class="class-grid">
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_010_vireo_class.html">Vireo</a></span><span class="cd">Entry point, factory for all objects</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_020_devices.html">Instance</a></span><span class="cd">VkInstance / IDXGIFactory4</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_020_devices.html">PhysicalDevice</a></span><span class="cd">VkPhysicalDevice / IDXGIAdapter4</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_020_devices.html">Device</a></span><span class="cd">VkDevice / ID3D12Device</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_110_00_swapchain.html">SwapChain</a></span><span class="cd">Double/triple buffering &amp; presentation</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_030_00_resources.html">Buffer</a></span><span class="cd">Vertex, Index, Uniform, Storage…</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_030_00_resources.html">Image</a></span><span class="cd">2D/array texture, mipmaps, BCn</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_030_00_resources.html">Sampler</a></span><span class="cd">Filters, addressing modes, LOD</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_070_00_shaders.html">ShaderModule</a></span><span class="cd">SPIR-V / DXIL loading</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_080_00_pipelines.html">GraphicPipeline</a></span><span class="cd">Full GPU state for rendering</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_080_00_pipelines.html">ComputePipeline</a></span><span class="cd">General-purpose compute pipeline</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_040_00_descriptors.html">DescriptorLayout</a></span><span class="cd">Describes bound resources</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_040_00_descriptors.html">DescriptorSet</a></span><span class="cd">Resource instance</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_040_00_descriptors.html">PipelineResources</a></span><span class="cd">Root Signature / Pipeline Layout</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_050_00_commands.html">CommandAllocator</a></span><span class="cd">Memory pool for commands</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_050_00_commands.html">CommandList</a></span><span class="cd">GPU command recording</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_060_00_queues.html">SubmitQueue</a></span><span class="cd">GPU submission queue</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_090_00_synchronization.html">Fence</a></span><span class="cd">CPU/GPU sync</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_090_00_synchronization.html">Semaphore</a></span><span class="cd">GPU/GPU sync between passes</span></div>
+            <div class="class-card"><span class="cn"><a href="../../Vireo/manual_030_00_resources.html">RenderTarget</a></span><span class="cd">Render attachment (color/depth)</span></div>
+        </div>
+
+        <p>All these classes are pure abstract interfaces whose concrete implementations
+            live in the backends' internal namespaces (<code>VK*</code> / <code>DX*</code>).
+            The application only manipulates <a href="https://en.cppreference.com/w/cpp/memory/shared_ptr.html"><code>std::shared_ptr</code></a>
+            to the abstract interfaces.</p>
+    </section>
+
+    <section id="api">
+        <h2 data-n="3">Key Concepts</h2>
+
+        <h3>GPU Resources (Buffers, Images, Samplers)</h3>
+        <p>Vireo precisely distinguishes memory location by buffer type.
+            <a href="../../Vireo/manual_030_01_resources.html"><code>VERTEX</code></a>
+            and <a href="../../Vireo/manual_030_01_resources.html"><code>INDEX</code></a>
+            buffers reside in <em>device-only</em> memory (pure VRAM, inaccessible to the CPU),
+            while <a href="../../Vireo/manual_030_01_resources.html"><code>UNIFORM</code></a> buffers and transfer buffers reside in <em>host-accessible</em> memory.</p>
+        <p>To upload data to VRAM, the
+            <a href="../../Vireo/classvireo_1_1CommandList.html"><code>CommandList::upload()</code></a> method automatically handles
+            the creation of a temporary staging buffer:</p>
+
+<pre data-lang="C++"><code><span class="cm">// Creating a vertex buffer in device-only memory</span>
+<span class="kw">auto</span> vertexBuffer <span class="op">=</span> vireo<span class="op">-></span><span class="fn">createBuffer</span>(
+    vireo<span class="op">::</span><span class="ty">BufferType</span><span class="op">::</span>VERTEX,
+    <span class="kw">sizeof</span>(<span class="ty">Vertex</span>),
+    vertices.size());
+
+<span class="cm">// Upload via automatic staging buffer</span>
+cmdList<span class="op">-></span><span class="fn">begin</span>();
+cmdList<span class="op">-></span><span class="fn">upload</span>(vertexBuffer, vertices.data());
+cmdList<span class="op">-></span><span class="fn">end</span>();
+transferQueue<span class="op">-></span><span class="fn">submit</span>({cmdList});
+transferQueue<span class="op">-></span><span class="fn">waitIdle</span>();</code></pre>
+
+        <p>Images support a <a href="../../Vireo/namespacevireo.html#a22f6b18e781e3c412e7d243f7de6aa5c">wide range of formats: R8 to R32G32B32A32 in integer/float,
+            depth/stencil formats <code>D16</code>, <code>D24_UNORM_S8</code>, <code>D32_SFLOAT</code>, and the 14 BCn compression formats (BC1 to BC7)</a>. <em>Read-only</em>, <em>read/write</em>, and <em>render target</em> images are created with dedicated methods on the <code>Vireo</code> object.</p>
+
+        <h3>Descriptors</h3>
+        <p>Vireo's descriptor system follows the Vulkan model: first declare a
+            <a href="../../Vireo/manual_040_01_descriptor_layout.html"><code>DescriptorLayout</code></a> that describes
+            which resources are accessible (uniform, image, sampler…), then create a
+            <a href="../../Vireo/manual_040_02_descriptor_set.html"><code>DescriptorSet</code></a> that binds concrete resources
+            to that layout, and finally group the layouts into a
+            <a href="../../Vireo/manual_040_04_pipeline_resources.html"><code>PipelineResources</code></a>
+            (equivalent to DirectX's <em>Root Signature</em> or Vulkan's <em>Pipeline Layout</em>).</p>
+
+<pre data-lang="C++"><code><span class="cm">// Layout declaration</span>
+<span class="kw">auto</span> layout <span class="op">=</span> vireo<span class="op">-></span><span class="fn">createDescriptorLayout</span>();
+layout<span class="op">-></span><span class="fn">add</span>(BINDING_GLOBAL, vireo<span class="op">::</span><span class="ty">DescriptorType</span><span class="op">::</span>UNIFORM);
+layout<span class="op">-></span><span class="fn">add</span>(BINDING_TEXTURES, vireo<span class="op">::</span><span class="ty">DescriptorType</span><span class="op">::</span>SAMPLED_IMAGE, texCount);
+layout<span class="op">-></span><span class="fn">build</span>();
+
+<span class="cm">// Creating and populating the descriptor set</span>
+<span class="kw">auto</span> descSet <span class="op">=</span> vireo<span class="op">-></span><span class="fn">createDescriptorSet</span>(layout);
+descSet<span class="op">-></span><span class="fn">update</span>(BINDING_GLOBAL, globalUniform);
+descSet<span class="op">-></span><span class="fn">update</span>(BINDING_TEXTURES, textures);</code></pre>
+
+        <p>Vireo supports <a href="../../Vireo/manual_040_03_push_constants.html"><strong>push constants</strong></a>
+            for small, frequently updated data,
+            <strong>dynamic uniforms</strong> for indexing into a uniform array without
+            recreating a descriptor set, and <strong>read/write images</strong> (UAV) for compute shaders.</p>
+
+        <h3>Command Lists &amp; Render Pass</h3>
+        <p><a href="../../Vireo/manual_050_00_commands.html"><code>CommandList</code></a> objects are created from
+            a <a href="../../Vireo/manual_050_00_commands.html"><code>CommandAllocator</code></a>.
+            There is no <em>render pass</em> object in the classic Vulkan sense:
+            <a href="../../Vireo/manual_100_00_renderpass.html">a render pass is simply a sequence of commands</a>
+            delimited by <a href="../../Vireo/classvireo_1_1CommandList.html"><code>beginRendering()</code> / <code>endRendering()</code></a>,
+            with explicit <a href="../../Vireo/manual_090_03_barriers.html"><em>pipeline barriers</em></a> for resource state transitions.</p>
+
+<pre data-lang="C++"><code><span class="cm">// Typical render loop</span>
+frame.commandAllocator<span class="op">-></span><span class="fn">reset</span>();
+<span class="kw">auto</span> cmd <span class="op">=</span> frame.commandList;
+cmd<span class="op">-></span><span class="fn">begin</span>();
+
+<span class="cm">// Transition: UNDEFINED → RENDER_TARGET_COLOR</span>
+cmd<span class="op">-></span><span class="fn">barrier</span>(swapChain,
+    vireo<span class="op">::</span><span class="ty">ResourceState</span><span class="op">::</span>UNDEFINED,
+    vireo<span class="op">::</span><span class="ty">ResourceState</span><span class="op">::</span>RENDER_TARGET_COLOR);
+
+cmd<span class="op">-></span><span class="fn">beginRendering</span>(renderingConfig);
+cmd<span class="op">-></span><span class="fn">bindPipeline</span>(pipeline);
+cmd<span class="op">-></span><span class="fn">bindDescriptor</span>(pipeline, descSet, SET_GLOBAL);
+cmd<span class="op">-></span><span class="fn">setViewport</span>(viewport);
+cmd<span class="op">-></span><span class="fn">setScissor</span>(scissor);
+cmd<span class="op">-></span><span class="fn">bindVertexBuffer</span>(vertexBuffer);
+cmd<span class="op">-></span><span class="fn">draw</span>(<span class="num">3</span>);
+cmd<span class="op">-></span><span class="fn">endRendering</span>();
+
+<span class="cm">// Transition: RENDER_TARGET_COLOR → PRESENT</span>
+cmd<span class="op">-></span><span class="fn">barrier</span>(swapChain,
+    vireo<span class="op">::</span><span class="ty">ResourceState</span><span class="op">::</span>RENDER_TARGET_COLOR,
+    vireo<span class="op">::</span><span class="ty">ResourceState</span><span class="op">::</span>PRESENT);
+cmd<span class="op">-></span><span class="fn">end</span>();
+
+graphicQueue<span class="op">-></span><span class="fn">submit</span>(frame.inFlightFence, swapChain, {cmd});
+swapChain<span class="op">-></span><span class="fn">present</span>();
+swapChain<span class="op">-></span><span class="fn">nextFrameIndex</span>();</code></pre>
+
+        <h3>Swap Chain</h3>
+        <p>The <a href="../../Vireo/manual_110_00_swapchain.html"><code>SwapChain</code></a> is the bridge between the GPU and system windows.
+            It manages double or triple buffering and exposes two presentation modes:
+            <code>IMMEDIATE</code> (may produce tearing) and
+            <code>VSYNC</code>.
+            GPU/GPU synchronization between rendering and presentation is handled <em>internally</em> by the SwapChain
+            and SubmitQueue to ensure portability across APIs.</p>
+
+        <h3>Pipelines</h3>
+        <p>Vireo exposes two types of pipelines.
+            The <a href="../../Vireo/manual_080_01_graphic_pipelines.html"><strong>GraphicPipeline</strong></a> encapsulates the full GPU state required for rasterized rendering:
+            color attachment formats, per-attachment color blending, vertex format (<a href="../../Vireo/classvireo_1_1VertexInputLayout.html"><code>VertexInputLayout</code></a>),
+            primitive topology, polygon mode, culling, depth/stencil, MSAA, and shader modules.
+                The <a href="../../Vireo/manual_080_02_compute_pipelines.html"><strong>ComputePipeline</strong></a> binds a single compute shader to its resources.</p>
+
+        <div class="callout warn">
+            <div class="callout-label">Critical Rule</div>
+            <p>Pipeline compilation (SPIR-V/DXIL → hardware ISA translation) is costly. You should <strong>never</strong> create a pipeline on the fly during rendering. All pipelines must be created during the application's initialization phase.</p>
+        </div>
+    </section>
+
+    <!-- §4 SHADERS -->
+    <section id="shaders">
+        <h2 data-n="4">Shaders &amp; Compilation Pipeline</h2>
+
+        <p>Vireo recommends using the <a href="https://shader-slang.org/" target="_blank">Slang</a> language, an HLSL-derived language designed for multi-API portability. A single <code>.slang</code> source file is compiled into the two required intermediate binary formats:</p>
+
+        <div class="diagram">
+            <div class="pipeline">
+                <div class="pipe-step active"><code>shader.slang</code><small>Single source</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>slangc</code><small>Vulkan SDK</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step"><code>.spv</code><small>SPIR-V (Vulkan)</small></div>
+                <div class="pipe-arrow">+</div>
+                <div class="pipe-step"><code>.dxil</code><small>DXIL (DirectX 12)</small></div>
+                <div class="pipe-arrow">→</div>
+                <div class="pipe-step active"><code>ShaderModule</code><small>Auto loading</small></div>
+            </div>
+            <div class="diagram-caption">Shader compilation pipeline — one source, two binaries</div>
+        </div>
+
+        <p>File naming conventions drive the compilation type automatically in the
+            <a href="https://github.com/HenriMichelon/vireo_samples/blob/main/cmake/shaders.cmake">CMake script</a> provided with the examples:
+            <code>.vert.slang</code> for vertex shaders, <code>.frag.slang</code> for fragment shaders, <code>.comp.slang</code> for compute shaders, <code>.hull.slang</code>, <code>.domain.slang</code> and <code>.geom.slang</code> for optional tessellation and geometry stages. A <code>.inc.slang</code> file is ignored (it is a shared include).</p>
+
+        <p>At runtime, <a href="../../Vireo/classvireo_1_1Vireo.html"><code>Vireo::createShaderModule()</code></a> takes a filename
+            <em>without extension</em>. The library automatically appends the correct extension based on the active backend
+            (<code>.spv</code> or <code>.dxil</code>), making application code entirely backend-agnostic.</p>
+
+<pre data-lang="Slang"><code><span class="cm">// Example: wave effect compute shader (Slang)</span>
+<span class="kw">struct</span> <span class="ty">Params</span> {
+    uint2  imageSize;
+    <span class="kw">float</span>  time;
+};
+<span class="ty">ConstantBuffer</span>&lt;<span class="ty">Params</span>&gt; params <span class="op">:</span> <span class="fn">register</span>(b0);
+<span class="ty">RWTexture2D</span>            output <span class="op">:</span> <span class="fn">register</span>(u1);
+
+[shader(<span class="str">"compute"</span>)]
+[numthreads(<span class="num">8</span>, <span class="num">8</span>, <span class="num">1</span>)]
+<span class="kw">void</span> <span class="fn">main</span>(uint3 id <span class="op">:</span> SV_DispatchThreadID) {
+    float2 uv <span class="op">=</span> <span class="fn">float2</span>(id.xy) / params.imageSize;
+    <span class="cm">// No Vulkan or DirectX-specific directives</span>
+    output[id.xy] <span class="op">=</span> <span class="fn">float4</span>(<span class="fn">computeColor</span>(uv, params.time), <span class="num">1.0</span>);
+}</code></pre>
+
+        <p>SPIR-V compatibility for DirectX 12 is announced with Shader Model 7, which will eventually eliminate the need to maintain two separate binary files.</p>
+    </section>
+
+    <section id="synchronisation">
+        <h2 data-n="5">Synchronization</h2>
+
+        <p>Vireo exposes <a href="../../Vireo/manual_090_00_synchronization.html">three distinct synchronization primitives</a>,
+            covering the three levels of coordination required in a modern rendering engine:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Primitive</th>
+                    <th>Scope</th>
+                    <th>Typical Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="../../Vireo/manual_090_01_fences.html"><code>Fence</code></a></td>
+                    <td>CPU ↔ GPU</td>
+                    <td>Wait for a frame's rendering to complete before reusing its resources</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Vireo/manual_090_02_semaphores.html"><code>Semaphore</code></a></td>
+                    <td>GPU ↔ GPU</td>
+                    <td>Synchronize distinct render passes, or pipelined submissions</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Vireo/manual_090_03_barriers.html">Barrier</a> (<code>cmdList::barrier()</code>)</td>
+                    <td>Internal GPU</td>
+                    <td>Resource state transitions between sub-passes within the same command list</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The synchronization model is explicit: there is no implicit synchronization between passes.
+            The developer must insert barriers at the right places for layout transitions
+            (<code>UNDEFINED → RENDER_TARGET_COLOR → PRESENT</code>). This approach, faithful to Vulkan and DX12,
+            maximizes overlap opportunities on the GPU.</p>
+
+        <h3>Frames in Flight</h3>
+        <p>The recommended pattern for multi-frame rendering is to allocate one <a href="../../Vireo/manual_090_01_fences.html"><code>Fence</code></a>
+            and one <a href="../../Vireo/manual_050_00_commands.html"><code>CommandAllocator</code></a> per frame.
+            <a href="../../Vireo/manual_110_00_swapchain.html"><code>SwapChain::acquire(fence)</code></a> blocks the CPU until the image is free,
+                then <a href="../../Vireo/manual_060_00_queues.html"><code>SubmitQueue::submit(fence, swapChain, {cmd})</code></a> signals the fence upon render completion:</p>
+
+<pre data-lang="C++"><code><span class="cm">// Per-frame data (allocated at init)</span>
+<span class="kw">struct</span> <span class="ty">FrameData</span> {
+    std<span class="op">::</span>shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">CommandAllocator</span><span class="op">&gt;</span> cmdAlloc;
+    std<span class="op">::</span>shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">CommandList</span><span class="op">&gt;</span>      cmdList;
+    std<span class="op">::</span>shared_ptr<span class="op">&lt;</span>vireo<span class="op">::</span><span class="ty">Fence</span><span class="op">&gt;</span>           inFlightFence;
+};
+
+<span class="cm">// Render loop</span>
+<span class="kw">auto</span><span class="op">&amp;</span> frame <span class="op">=</span> frames[swapChain<span class="op">-></span><span class="fn">getCurrentFrameIndex</span>()];
+<span class="kw">if</span> (<span class="op">!</span>swapChain<span class="op">-></span><span class="fn">acquire</span>(frame.inFlightFence)) <span class="kw">return</span>;
+frame.cmdAlloc<span class="op">-></span><span class="fn">reset</span>();
+<span class="cm">// ... record commands ...</span>
+graphicQueue<span class="op">-></span><span class="fn">submit</span>(frame.inFlightFence, swapChain, {frame.cmdList});
+swapChain<span class="op">-></span><span class="fn">present</span>();
+swapChain<span class="op">-></span><span class="fn">nextFrameIndex</span>();</code></pre>
+    </section>
+
+    <!-- §6 BUILD -->
+    <section id="build">
+        <h2 data-n="6">Build &amp; Integration</h2>
+
+        <h3>Prerequisites</h3>
+        <p>Vireo RHI is designed to be integrated as a <strong>CMake submodule</strong> (<code>add_subdirectory</code>)
+            or as a Git submodule. Third-party dependencies (DX12 headers, SDL, etc.) are automatically fetched by
+            CMake via <code>FetchContent</code>, with the exception of the Vulkan SDK which must be installed manually.</p>
+        <table>
+            <thead>
+                <tr><th>Platform</th><th>Compiler</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Windows</td>
+                    <td>MSVC 19+ / LLVM+MingW 21+</td>
+                    <td>DirectX + Vulkan (LLVM: Vulkan only)</td>
+                </tr>
+                <tr>
+                    <td>Linux</td>
+                    <td>LLVM 21+</td>
+                    <td>Vulkan only, X11 &amp; Wayland via SDL3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CMake Options</h3>
+        <ul>
+            <li><code>DIRECTX_BACKEND</code> — Enables the DirectX 12 backend (default: <code>ON</code> on Windows)</li>
+            <li><code>LUA_BINDING</code> — Compiles Lua 5.4+ bindings (default: <code>OFF</code>)</li>
+            <li><code>USE_SDL3</code> — Uses SDL3 as the windowing abstraction layer (default: <code>ON</code> on Linux)</li>
+        </ul>
+
+<pre data-lang="Shell"><code>git clone https://github.com/HenriMichelon/vireo_rhi
+cmake -B build -G Ninja -D CMAKE_BUILD_TYPE=Release
+cmake --build build</code></pre>
+
+        <h3>Lua Bindings</h3>
+        <p>When <code>LUA_BINDING=ON</code>, an additional <code>vireo.lua</code> module
+            exposes the entire Vireo API via <a href="https://github.com/nicholasferguson/luabridge3" target="_blank">LuaBridge 3</a>.
+            This allows writing the high-level logic of an application in Lua 5.4+ while preserving the C++23 runtime performance
+            for low-level rendering.</p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- §7 DOCUMENTATION -->
+    <section id="documentation">
+        <h2 data-n="7">Documentation</h2>
+
+        <p>The official Vireo RHI documentation is <a href="https://henrimichelon.github.io/Vireo" target="_blank">hosted on GitHub Pages</a>.</p>
+
+        <h3>Hello Triangle Tutorial (14 steps)</h3>
+        <p>The <a href="../../Vireo/gs_020_tutorial_1.html"><em>Hello, Triangle!</em></a> tutorial guides the developer
+            from setting up the development environment to rendering the first colored triangle.
+            It covers in order: CMake project configuration, instantiation of the Vireo object,
+            creation of submission queues, the swap chain, command allocators and command lists,
+            command recording, viewports, vertex data setup, pipeline creation,
+            shader compilation and loading, final pipeline configuration, and draw commands.</p>
+
+    </section>
+
+    <!-- §8 EXAMPLES -->
+    <section id="exemples">
+        <h2 data-n="8">Examples — vireo_samples</h2>
+
+        <p>The <a href="https://github.com/HenriMichelon/vireo_samples" target="_blank">github.com/HenriMichelon/vireo_samples</a> repository contains a series of progressive example programs, covering the essential features of Vireo. Each example is self-contained, includes its own Slang shaders compiled to SPIR-V and DXIL, and illustrates one or more additional concepts compared to the previous example.</p>
+
+        <div class="sample-grid">
+            <div class="sample-card">
+                <span class="sc-title">Triangle</span>
+                <p class="sc-desc">The classic "Hello Triangle" with a per-vertex RGB gradient. Absolute starting point: swap chain, command lists, vertex buffer, graphics pipeline, image barriers, fences.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-blue">Swap Chain</span>
+                    <span class="badge badge-blue">Vertex Buffer</span>
+                    <span class="badge badge-blue">Fence</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Triangle Texture</span>
+                <p class="sc-desc">Same triangle with a loaded and applied texture. Introduces images, samplers, descriptor layouts, and descriptor sets.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-amber">Images</span>
+                    <span class="badge badge-amber">Samplers</span>
+                    <span class="badge badge-amber">Descriptor Sets</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Triangle Buffers</span>
+                <p class="sc-desc">Multiple triangles with transparency and shader-based material. Uniform buffers, color blending, push constants, multiple pipelines.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-amber">Uniform Buffer</span>
+                    <span class="badge badge-amber">Push Constants</span>
+                    <span class="badge badge-amber">Blending</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Indirect Drawing</span>
+                <p class="sc-desc">Indexed indirect drawing (<em>drawIndexedIndirect</em>) — the GPU determines draw parameters from a buffer in VRAM, with no CPU round-trip.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-blue">Indirect Draw</span>
+                    <span class="badge badge-blue">Index Buffer</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">MSAA</span>
+                <p class="sc-desc">Multi-sample anti-aliasing. Introduces custom render targets and the MSAA pipeline with automatic resolve.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-green">Render Target</span>
+                    <span class="badge badge-green">MSAA</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Compute</span>
+                <p class="sc-desc">Animated wave effect generated entirely on the GPU via a Slang compute shader. Read/Write images, compute pipeline, image copy.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-green">Compute Pipeline</span>
+                    <span class="badge badge-green">RW Images</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Cube</span>
+                <p class="sc-desc">Two rotating textured cubes, camera, lighting, skybox. Full forward rendering with depth pre-pass, cubemap, semaphores, dynamic uniforms, and post-processing (SMAA, FXAA, gamma, voronoi).</p>
+                <div class="sc-tags">
+                    <span class="badge badge-amber">Forward Rendering</span>
+                    <span class="badge badge-amber">Depth Pre-pass</span>
+                    <span class="badge badge-amber">Post-process</span>
+                    <span class="badge badge-amber">Semaphores</span>
+                </div>
+            </div>
+            <div class="sample-card">
+                <span class="sc-title">Deferred</span>
+                <p class="sc-desc">Same scene in deferred rendering: G-buffers, deferred lighting, weighted OIT (Order Independent Transparency), stencil for skybox optimization, push constants replacing dynamic uniforms.</p>
+                <div class="sc-tags">
+                    <span class="badge badge-green">Deferred Rendering</span>
+                    <span class="badge badge-green">G-Buffers</span>
+                    <span class="badge badge-green">OIT</span>
+                    <span class="badge badge-green">Stencil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout">
+            <div class="callout-label">Tip</div>
+            <p>The <strong>Cube</strong> and <strong>Deferred</strong> samples are the most comprehensive references:
+                they cover virtually all Vireo RHI features in a realistic rendering context,
+                and their Slang shaders illustrate classic rendering techniques (Phong, Gbuffers, SMAA, FXAA, TAA, OIT).</p>
+        </div>
+    </section>
+
+    <footer>
+        Vireo RHI &nbsp;·&nbsp; MIT License &nbsp;·&nbsp; <a href="https://github.com/HenriMichelon/vireo_rhi" target="_blank">github.com/HenriMichelon/vireo_rhi</a> &nbsp;·&nbsp; <a href="https://henrimichelon.github.io/Vireo" target="_blank">Online Documentation</a>
+    </footer>
+
+</div>
+</body>
+</html>
