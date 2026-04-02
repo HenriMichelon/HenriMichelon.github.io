@@ -79,6 +79,8 @@ $(document).ready(function(){initNavTree('structlysa_1_1SceneData.html',''); ini
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a531022deb9480f8513199284bde8328a"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a531022deb9480f8513199284bde8328a">screenSize</a></td></tr>
+<tr class="separator:a531022deb9480f8513199284bde8328a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d7b814214c8aeba4566305335230d74"><td class="memItemLeft" align="right" valign="top">float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a9d7b814214c8aeba4566305335230d74">cameraPosition</a></td></tr>
 <tr class="separator:a9d7b814214c8aeba4566305335230d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2781c6423dc6a8bfa1fef783b0f9bb47"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a2781c6423dc6a8bfa1fef783b0f9bb47">projection</a></td></tr>
@@ -95,6 +97,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aeeae7d5fd54aaed526fa15ee8512d336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688ddd0f052fc741c1d0ab06ab052632"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a688ddd0f052fc741c1d0ab06ab052632">ssaoEnabled</a> {0}</td></tr>
 <tr class="separator:a688ddd0f052fc741c1d0ab06ab052632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225a02e99e8f037c3889eee5d7196443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a225a02e99e8f037c3889eee5d7196443">taaEnabled</a> {0}</td></tr>
+<tr class="separator:a225a02e99e8f037c3889eee5d7196443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e40c1e09f235a6200ad52bacae3b9e1"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a4e40c1e09f235a6200ad52bacae3b9e1">previousProjection</a></td></tr>
+<tr class="separator:a4e40c1e09f235a6200ad52bacae3b9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e508ee9cb987f1448bf4a3519db236"><td class="memItemLeft" align="right" valign="top">float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a71e508ee9cb987f1448bf4a3519db236">previousView</a></td></tr>
+<tr class="separator:a71e508ee9cb987f1448bf4a3519db236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cee1eefd702c566c293d62c351a210"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1SceneData.html#a80cee1eefd702c566c293d62c351a210">jitter</a></td></tr>
+<tr class="separator:a80cee1eefd702c566c293d62c351a210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a2046d5d17a0e0d6a81ffa566f56e45be"></a>
@@ -136,6 +146,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a80cee1eefd702c566c293d62c351a210"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float2 jitter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TAA camera jitter </p>
+
+</div>
+</div>
 <a class="anchor" id="aa340c9f035e3f271b0a3d80173a7e717"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +169,32 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Number of active lights currently bound. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4e40c1e09f235a6200ad52bacae3b9e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float4x4 previousProjection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TAA previous frame projection matrix </p>
+
+</div>
+</div>
+<a class="anchor" id="a71e508ee9cb987f1448bf4a3519db236"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float4x4 previousView</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TAA previous frame view matrix </p>
 
 </div>
 </div>
@@ -162,6 +211,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a531022deb9480f8513199284bde8328a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float2 screenSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Render target extent </p>
+
+</div>
+</div>
 <a class="anchor" id="a688ddd0f052fc741c1d0ab06ab052632"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,6 +234,19 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Toggle for SSAO post-process (1 enabled, 0 disabled). </p>
+
+</div>
+</div>
+<a class="anchor" id="a225a02e99e8f037c3889eee5d7196443"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> taaEnabled {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Toggle for TAA (1 enabled, 0 disabled). </p>
 
 </div>
 </div>
@@ -207,7 +282,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1SceneData.html">SceneData</a></li>
-    <li class="footer">Generated on lun. mars 30 2026 18:22:00 for Lysa &nbsp; by
+    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

@@ -103,18 +103,23 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa736c75b4c7a9cc35a792b67185bf8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a4820ed1b02cf58f87dcb114a63fb0c7f">ToneMappingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#aa736c75b4c7a9cc35a792b67185bf8f4">toneMappingType</a> {ToneMappingType::ACES}</td></tr>
 <tr class="memdesc:aa736c75b4c7a9cc35a792b67185bf8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of tone mapping shader when using HDR rendering formats R16G16B16A16_UNORM, R16G16B16A16_SFLOAT or R32G32B32A32_SFLOAT.  <a href="#aa736c75b4c7a9cc35a792b67185bf8f4">More...</a><br /></td></tr>
 <tr class="separator:aa736c75b4c7a9cc35a792b67185bf8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7e16688948eddfa1ce1eb5200dcdd66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a3780ab493dd5c2d5ab18a587bab7853a">AntiAliasingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#ac7e16688948eddfa1ce1eb5200dcdd66">antiAliasingType</a> {AntiAliasingType::SMAA}</td></tr>
-<tr class="memdesc:ac7e16688948eddfa1ce1eb5200dcdd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of antialiasing post-processing shader.  <a href="#ac7e16688948eddfa1ce1eb5200dcdd66">More...</a><br /></td></tr>
-<tr class="separator:ac7e16688948eddfa1ce1eb5200dcdd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbc6a853be5c00c8c04522e0efa3367"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#adfbc6a853be5c00c8c04522e0efa3367">fxaaSpanMax</a> {8.0f}</td></tr>
+<tr class="memitem:a9c10709ec3f823eccc0d957cffeb9738"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245">PostProcessAntiAliasingType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#a9c10709ec3f823eccc0d957cffeb9738">postProcessAntiAliasingType</a> {PostProcessAntiAliasingType::NONE}</td></tr>
+<tr class="memdesc:a9c10709ec3f823eccc0d957cffeb9738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of antialiasing post-processing shader.  <a href="#a9c10709ec3f823eccc0d957cffeb9738">More...</a><br /></td></tr>
+<tr class="separator:a9c10709ec3f823eccc0d957cffeb9738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbc6a853be5c00c8c04522e0efa3367"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#adfbc6a853be5c00c8c04522e0efa3367">fxaaSpanMax</a> {16.0f}</td></tr>
+<tr class="memdesc:adfbc6a853be5c00c8c04522e0efa3367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum distance for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a> luminance search (higher = sharper, more expensive)  <a href="#adfbc6a853be5c00c8c04522e0efa3367">More...</a><br /></td></tr>
 <tr class="separator:adfbc6a853be5c00c8c04522e0efa3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4d45d51271810d86ec4b00e8ccaba3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#aee4d45d51271810d86ec4b00e8ccaba3">fxaaReduceMul</a> {1.0f / 8.0f}</td></tr>
+<tr class="memdesc:aee4d45d51271810d86ec4b00e8ccaba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier for reducing high-contrast artifacts in <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a>.  <a href="#aee4d45d51271810d86ec4b00e8ccaba3">More...</a><br /></td></tr>
 <tr class="separator:aee4d45d51271810d86ec4b00e8ccaba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafeaa562027a750a9f4587c162abbd37"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#aafeaa562027a750a9f4587c162abbd37">fxaaReduceMin</a> {1.0f / 128.0f}</td></tr>
+<tr class="memitem:aafeaa562027a750a9f4587c162abbd37"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#aafeaa562027a750a9f4587c162abbd37">fxaaReduceMin</a> {1.0f / 256.0f}</td></tr>
+<tr class="memdesc:aafeaa562027a750a9f4587c162abbd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum reduction factor to avoid division by zero in <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a>.  <a href="#aafeaa562027a750a9f4587c162abbd37">More...</a><br /></td></tr>
 <tr class="separator:aafeaa562027a750a9f4587c162abbd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f4060230cc23daf9334a8e850bae5b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#a91f4060230cc23daf9334a8e850bae5b">smaaEdgeThreshold</a> {0.15f}</td></tr>
+<tr class="memitem:a91f4060230cc23daf9334a8e850bae5b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#a91f4060230cc23daf9334a8e850bae5b">smaaEdgeThreshold</a> {0.20f}</td></tr>
+<tr class="memdesc:a91f4060230cc23daf9334a8e850bae5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum luma contrast for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245a06ff36ff15b989c60f672d9654cd3030">SMAA</a> edge detection (lower = more edges detected)  <a href="#a91f4060230cc23daf9334a8e850bae5b">More...</a><br /></td></tr>
 <tr class="separator:a91f4060230cc23daf9334a8e850bae5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a320ad1af7b49b279e1d0682642e47052"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#a320ad1af7b49b279e1d0682642e47052">smaaBlendMaxSteps</a> {4}</td></tr>
+<tr class="memdesc:a320ad1af7b49b279e1d0682642e47052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum search steps for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245a06ff36ff15b989c60f672d9654cd3030">SMAA</a> blending (higher = better quality, more expensive)  <a href="#a320ad1af7b49b279e1d0682642e47052">More...</a><br /></td></tr>
 <tr class="separator:a320ad1af7b49b279e1d0682642e47052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a33022b2aaf1ec974f40999ee55b4c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1RendererConfiguration.html#a9a33022b2aaf1ec974f40999ee55b4c3">bloomEnabled</a> {true}</td></tr>
 <tr class="memdesc:a9a33022b2aaf1ec974f40999ee55b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the bloom post-processing effect.  <a href="#a9a33022b2aaf1ec974f40999ee55b4c3">More...</a><br /></td></tr>
@@ -127,20 +132,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a3405fc36b05136c926e7150ec9df5611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac7e16688948eddfa1ce1eb5200dcdd66"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacelysa.html#a3780ab493dd5c2d5ab18a587bab7853a">AntiAliasingType</a> antiAliasingType {AntiAliasingType::SMAA}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Type of antialiasing post-processing shader. </p>
-
-</div>
-</div>
 <a class="anchor" id="ae5c2d68d0a84f010827c1763aa8251a5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -244,10 +235,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float fxaaReduceMin {1.0f / 128.0f}</td>
+          <td class="memname">float fxaaReduceMin {1.0f / 256.0f}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Minimum reduction factor to avoid division by zero in <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a>. </p>
 
 </div>
 </div>
@@ -261,6 +254,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Multiplier for reducing high-contrast artifacts in <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="adfbc6a853be5c00c8c04522e0efa3367"></a>
@@ -268,10 +263,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float fxaaSpanMax {8.0f}</td>
+          <td class="memname">float fxaaSpanMax {16.0f}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maximum distance for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245aaa9ebfd80da9bf23f763a63c052a452a">FXAA</a> luminance search (higher = sharper, more expensive) </p>
 
 </div>
 </div>
@@ -303,6 +300,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9c10709ec3f823eccc0d957cffeb9738"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245">PostProcessAntiAliasingType</a> postProcessAntiAliasingType {PostProcessAntiAliasingType::NONE}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of antialiasing post-processing shader. </p>
+
+</div>
+</div>
 <a class="anchor" id="a6e429cad6b75610c644a66d3a08fb96b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -325,6 +336,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Maximum search steps for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245a06ff36ff15b989c60f672d9654cd3030">SMAA</a> blending (higher = better quality, more expensive) </p>
+
 </div>
 </div>
 <a class="anchor" id="a91f4060230cc23daf9334a8e850bae5b"></a>
@@ -332,10 +345,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float smaaEdgeThreshold {0.15f}</td>
+          <td class="memname">float smaaEdgeThreshold {0.20f}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Minimum luma contrast for <a class="el" href="namespacelysa.html#aa8815ee1d7d3eb5efbd5829a2da11245a06ff36ff15b989c60f672d9654cd3030">SMAA</a> edge detection (lower = more edges detected) </p>
 
 </div>
 </div>
@@ -373,7 +388,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a></li>
-    <li class="footer">Generated on lun. mars 30 2026 18:28:27 for Lysa &nbsp; by
+    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

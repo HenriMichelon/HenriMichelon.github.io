@@ -92,8 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af001ab52c4199ae152a96a76d506cbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21f3e6cfe2da77cbd07898d31a5b03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a21f3e6cfe2da77cbd07898d31a5b03f4">setEnvironment</a> (const <a class="el" href="structlysa_1_1Environment.html">Environment</a> &amp;environment)</td></tr>
 <tr class="separator:a21f3e6cfe2da77cbd07898d31a5b03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6199e0b077b27ff5f48aee17de0b7597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a6199e0b077b27ff5f48aee17de0b7597">update</a> (const vireo::CommandList &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera, const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
-<tr class="separator:a6199e0b077b27ff5f48aee17de0b7597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8ba6c62533470fafe8aae8ab098e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a1d8ba6c62533470fafe8aae8ab098e65">update</a> (const vireo::CommandList &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera, const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, const vireo::Extent &amp;extent, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
+<tr class="separator:a1d8ba6c62533470fafe8aae8ab098e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5876a0a321f1a9b08262ac8d235ce3a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a5876a0a321f1a9b08262ac8d235ce3a3">compute</a> (vireo::CommandList &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera) const</td></tr>
 <tr class="separator:a5876a0a321f1a9b08262ac8d235ce3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a623814972732ddaad3f8e479a20711cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a623814972732ddaad3f8e479a20711cd">addInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *meshInstance)</td></tr>
@@ -719,7 +719,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6199e0b077b27ff5f48aee17de0b7597"></a>
+<a class="anchor" id="a1d8ba6c62533470fafe8aae8ab098e65"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -744,6 +744,12 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const vireo::Extent &amp;&#160;</td>
+          <td class="paramname"><em>extent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
           <td class="paramname"><em>frameIndex</em>&#160;</td>
         </tr>
@@ -761,6 +767,7 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">commandList</td><td>Command buffer for GPU operations. </td></tr>
     <tr><td class="paramname">camera</td><td>The current camera. </td></tr>
     <tr><td class="paramname">config</td><td><a class="el" href="classlysa_1_1Renderer.html">Renderer</a> configuration. </td></tr>
+    <tr><td class="paramname">extent</td><td>Current render target extent </td></tr>
     <tr><td class="paramname">frameIndex</td><td>Index of the current frame. </td></tr>
   </table>
   </dd>
@@ -949,7 +956,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a></li>
-    <li class="footer">Generated on lun. mars 30 2026 18:22:00 for Lysa &nbsp; by
+    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

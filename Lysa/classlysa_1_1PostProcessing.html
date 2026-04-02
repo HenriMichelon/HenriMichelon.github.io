@@ -88,11 +88,12 @@ $(document).ready(function(){initNavTree('classlysa_1_1PostProcessing.html','');
  <div class="center">
   <img src="classlysa_1_1PostProcessing.png" usemap="#PostProcessing_map" alt=""/>
   <map id="PostProcessing_map" name="PostProcessing_map">
-<area href="classlysa_1_1Renderpass.html" alt="Renderpass" shape="rect" coords="225,0,365,24"/>
+<area href="classlysa_1_1Renderpass.html" alt="Renderpass" shape="rect" coords="300,0,440,24"/>
 <area href="classlysa_1_1BloomPass.html" alt="BloomPass" shape="rect" coords="0,112,140,136"/>
-<area href="classlysa_1_1DisplayAttachment.html" alt="DisplayAttachment" shape="rect" coords="150,112,290,136"/>
-<area href="classlysa_1_1FXAAPass.html" alt="FXAAPass" shape="rect" coords="300,112,440,136"/>
-<area href="classlysa_1_1GammaCorrectionPass.html" alt="GammaCorrectionPass" shape="rect" coords="450,112,590,136"/>
+<area href="classlysa_1_1CASPass.html" alt="CASPass" shape="rect" coords="150,112,290,136"/>
+<area href="classlysa_1_1DisplayAttachment.html" alt="DisplayAttachment" shape="rect" coords="300,112,440,136"/>
+<area href="classlysa_1_1FXAAPass.html" alt="FXAAPass" shape="rect" coords="450,112,590,136"/>
+<area href="classlysa_1_1GammaCorrectionPass.html" alt="GammaCorrectionPass" shape="rect" coords="600,112,740,136"/>
   </map>
  </div></div>
 <table class="memberdecls">
@@ -111,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aac5965965f94aeee2855ac31115f12a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7962f96403cf6a3b0b276c2fb19a5643"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PostProcessing.html#a7962f96403cf6a3b0b276c2fb19a5643">render</a> (vireo::CommandList &amp;commandList, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;colorAttachment, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
 <tr class="separator:a7962f96403cf6a3b0b276c2fb19a5643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a1af1dfe07fc7bbf3bf4c375dbff44"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PostProcessing.html#a69a1af1dfe07fc7bbf3bf4c375dbff44">render</a> (vireo::CommandList &amp;commandList, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;colorAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
+<tr class="separator:a69a1af1dfe07fc7bbf3bf4c375dbff44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa704a4f9288487afa12a93da324c9ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PostProcessing.html#aaa704a4f9288487afa12a93da324c9ef">resize</a> (const vireo::Extent &amp;extent)</td></tr>
 <tr class="separator:aaa704a4f9288487afa12a93da324c9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f872b3ab1e81f18ffa9038e26952242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">resize</a> (const vireo::Extent &amp;extent, const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList) override</td></tr>
@@ -429,6 +432,54 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1BloomPass.html#a5e40dd3fe89044772ad0e23e7b86f013">lysa::BloomPass::render()</a></p>
+
+</div>
+</div>
+<a class="anchor" id="a69a1af1dfe07fc7bbf3bf4c375dbff44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void render </td>
+          <td>(</td>
+          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
+          <td class="paramname"><em>commandList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;&#160;</td>
+          <td class="paramname"><em>colorAttachment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>frameIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Renders the post-processing effect </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameIndex</td><td>Index of the current frame </td></tr>
+    <tr><td class="paramname">colorAttachment</td><td>The input color attachment </td></tr>
+    <tr><td class="paramname">commandList</td><td>The command list to record rendering commands into </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -911,7 +962,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PostProcessing.html">PostProcessing</a></li>
-    <li class="footer">Generated on lun. mars 30 2026 18:28:27 for Lysa &nbsp; by
+    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>
