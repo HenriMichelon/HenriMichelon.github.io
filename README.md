@@ -8,7 +8,7 @@ Articles
 | Example of SMAA implementation with Vireo RHI  | [🇫🇷 French](https://henrimichelon.github.io/Articles/fr/smaa_vireo_rhi.html) / [🇺🇸 English](https://henrimichelon.github.io/Articles/en/smaa_vireo_rhi.html) |
 
 
-Projects documentations
+Projects
 -------------------------------------------
 
 [Lysa](https://henrimichelon.github.io/Lysa/) is an hobby gpu-driven 3D engine written in modern C++.
