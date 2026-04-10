@@ -132,6 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f624865c1c4a94e5491e9f9675711da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4396a4872f128ccec266b930f287c143"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1DescriptorSet.html">DescriptorSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a4396a4872f128ccec266b930f287c143">createDescriptorSet</a> (const std::shared_ptr&lt; const <a class="el" href="classvireo_1_1DescriptorLayout.html">DescriptorLayout</a> &gt; &amp;layout, const std::string &amp;name=&quot;DescriptorSet&quot;) const = 0</td></tr>
 <tr class="separator:a4396a4872f128ccec266b930f287c143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643d6200a7fe07d9b52a7b060c1e6bab"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a643d6200a7fe07d9b52a7b060c1e6bab">createQueryPool</a> (<a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a> capacity, const std::string &amp;name=&quot;QueryPool&quot;) const = 0</td></tr>
+<tr class="separator:a643d6200a7fe07d9b52a7b060c1e6bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a6992ef632dda86b6284e2ef96097bb"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classvireo_1_1Sampler.html">Sampler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#a1a6992ef632dda86b6284e2ef96097bb">createSampler</a> (<a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> minFilter, <a class="el" href="namespacevireo.html#adccf6e8a392b0d35f185df12521c474b">Filter</a> magFilter, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeU, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeV, <a class="el" href="namespacevireo.html#a36eef9740a33a6c29292704bd027beba">AddressMode</a> addressModeW, float minLod=0.0f, float maxLod=Sampler::LOD_CLAMP_NONE, bool anisotropyEnable=true, <a class="el" href="namespacevireo.html#ac510b54d50198f65f31da2a411e79f6a">MipMapMode</a> mipMapMode=MipMapMode::LINEAR, <a class="el" href="namespacevireo.html#a5b9d3f86075f0f30467dfe025348b3f5">CompareOp</a> compareOp=CompareOp::NEVER) const = 0</td></tr>
 <tr class="separator:a1a6992ef632dda86b6284e2ef96097bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82798021e315c7f00d64912a9c0ad93"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1Vireo.html#ac82798021e315c7f00d64912a9c0ad93">getShaderFileExtension</a> () const = 0</td></tr>
@@ -685,6 +687,47 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">descriptorLayouts</td><td>Descriptions of the resources (can be empty) </td></tr>
     <tr><td class="paramname">pushConstant</td><td>Description of an optional push constant </td></tr>
     <tr><td class="paramname">name</td><td>Object name for debug </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a643d6200a7fe07d9b52a7b060c1e6bab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a>&gt; createQueryPool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>capacity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;QueryPool&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a GPU timestamp query pool for performance profiling. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capacity</td><td>Maximum number of timestamp slots. Must be even when using begin/end pairs (slot N = begin, N+1 = end). </td></tr>
+    <tr><td class="paramname">name</td><td>Object name for debug tools. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1521,7 +1564,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1Vireo.html">Vireo</a></li>
-    <li class="footer">Generated on mer. avr. 1 2026 14:29:11 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. avr. 10 2026 17:13:09 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

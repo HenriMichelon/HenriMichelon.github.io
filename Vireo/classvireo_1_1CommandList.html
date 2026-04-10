@@ -207,6 +207,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a544932598c54739d02736fea07d89d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3749cf969f9e2e329f5981ea1d72b5fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a3749cf969f9e2e329f5981ea1d72b5fe">barrier</a> (const <a class="el" href="classvireo_1_1Buffer.html">Buffer</a> &amp;buffer, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> oldState, <a class="el" href="namespacevireo.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> newState) const = 0</td></tr>
 <tr class="separator:a3749cf969f9e2e329f5981ea1d72b5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047ca8a5290a36c58d14a9460d31390e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#a047ca8a5290a36c58d14a9460d31390e">writeTimestamp</a> (const <a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a> &amp;queryPool, <a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a> queryIndex) = 0</td></tr>
+<tr class="separator:a047ca8a5290a36c58d14a9460d31390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae420e3778186070e2ff3bafc3b49cd3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#aae420e3778186070e2ff3bafc3b49cd3">resolveQueryPool</a> (const <a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a> &amp;queryPool, <a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a> firstQuery, <a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a> queryCount) = 0</td></tr>
+<tr class="separator:aae420e3778186070e2ff3bafc3b49cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbb28cf8bdd606e0131fc72218504abc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#acbb28cf8bdd606e0131fc72218504abc">cleanup</a> () = 0</td></tr>
 <tr class="separator:acbb28cf8bdd606e0131fc72218504abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad955b9c8fe3bac1aab6bdc8e9c8e4c16"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvireo_1_1CommandList.html#ad955b9c8fe3bac1aab6bdc8e9c8e4c16">~CommandList</a> () = default</td></tr>
@@ -2417,6 +2421,56 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aae420e3778186070e2ff3bafc3b49cd3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void resolveQueryPool </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a> &amp;&#160;</td>
+          <td class="paramname"><em>queryPool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>firstQuery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>queryCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies a contiguous range of timestamp slots from a query pool into its internal host-visible readback buffer so the CPU can read the results.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classvireo_1_1QueryPool.html">queryPool</a></td><td>The pool to resolve. </td></tr>
+    <tr><td class="paramname">firstQuery</td><td>Index of the first slot to resolve. </td></tr>
+    <tr><td class="paramname">queryCount</td><td>Number of consecutive slots to resolve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This command must be recorded in the same command list (and after) all <a class="el" href="classvireo_1_1CommandList.html#a047ca8a5290a36c58d14a9460d31390e">writeTimestamp()</a> calls for the resolved range. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6a24283dc6a5be9a4e1c60381eee1adf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2846,6 +2900,49 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a047ca8a5290a36c58d14a9460d31390e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void writeTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvireo_1_1QueryPool.html">QueryPool</a> &amp;&#160;</td>
+          <td class="paramname"><em>queryPool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacevireo.html#ad2500cd316889e2ea5c919df9288f2a6">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>queryIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Records a GPU timestamp into a query pool slot at the top-of-pipe stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classvireo_1_1QueryPool.html">queryPool</a></td><td>The pool to write into. </td></tr>
+    <tr><td class="paramname">queryIndex</td><td>Slot index within the pool (must be &lt; pool capacity).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Always call <a class="el" href="classvireo_1_1CommandList.html#aae420e3778186070e2ff3bafc3b49cd3">resolveQueryPool()</a> after all <a class="el" href="classvireo_1_1CommandList.html#a047ca8a5290a36c58d14a9460d31390e">writeTimestamp()</a> calls in the same command list, before the list is submitted. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a76f4f1d57b0e15cea10c9726a39585c1"></a>
 <div class="memitem">
@@ -2898,7 +2995,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacevireo.html">vireo</a></li><li class="navelem"><a class="el" href="classvireo_1_1CommandList.html">CommandList</a></li>
-    <li class="footer">Generated on mer. avr. 1 2026 14:29:11 for Vireo &nbsp; by
+    <li class="footer">Generated on ven. avr. 10 2026 17:13:09 for Vireo &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

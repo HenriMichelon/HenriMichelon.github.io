@@ -170,6 +170,7 @@ var NAVTREE =
             [ "endRendering", "classvireo_1_1CommandList.html#a3ce769f37a91b6136e8821ab84810d3b", null ],
             [ "operator=", "classvireo_1_1CommandList.html#a38c3896e538cf41dbfbc50061e61a7c3", null ],
             [ "pushConstants", "classvireo_1_1CommandList.html#a544932598c54739d02736fea07d89d5f", null ],
+            [ "resolveQueryPool", "classvireo_1_1CommandList.html#aae420e3778186070e2ff3bafc3b49cd3", null ],
             [ "setScissors", "classvireo_1_1CommandList.html#a6a24283dc6a5be9a4e1c60381eee1adf", null ],
             [ "setScissors", "classvireo_1_1CommandList.html#a6dc62d9eb2c40c567601533cb5e6027b", null ],
             [ "setStencilReference", "classvireo_1_1CommandList.html#a0798bbed3923ec01a5a2f88da5107417", null ],
@@ -183,6 +184,7 @@ var NAVTREE =
             [ "upload", "classvireo_1_1CommandList.html#a376d70280f7cbe0a7432c9b11f60e6fb", null ],
             [ "uploadArray", "classvireo_1_1CommandList.html#abd8c18c11d369fcc8f84e88cb69dc52d", null ],
             [ "uploadArray", "classvireo_1_1CommandList.html#a82e4fdd78ea7de9450cd0e1afe1da30e", null ],
+            [ "writeTimestamp", "classvireo_1_1CommandList.html#a047ca8a5290a36c58d14a9460d31390e", null ],
             [ "currentlyBoundPipeline", "classvireo_1_1CommandList.html#a76f4f1d57b0e15cea10c9726a39585c1", null ],
             [ "indexTypeSize", "classvireo_1_1CommandList.html#aecfa7ae0f4f995fe416b9d2fb32a3963", null ]
           ] ],
@@ -366,6 +368,17 @@ var NAVTREE =
             [ "size", "structvireo_1_1PushConstantsDesc.html#ab2c6b258f02add8fdf4cfc7c371dd772", null ],
             [ "stage", "structvireo_1_1PushConstantsDesc.html#a89f1106f50b4fa72a8b415fc9fd75f8c", null ]
           ] ],
+          [ "QueryPool", "classvireo_1_1QueryPool.html", [
+            [ "~QueryPool", "classvireo_1_1QueryPool.html#a482624ba62f72ce64de9556d188b4041", null ],
+            [ "QueryPool", "classvireo_1_1QueryPool.html#a4ddf30be35349d5d4efc6cf2263a1bb9", null ],
+            [ "QueryPool", "classvireo_1_1QueryPool.html#a30cb852ef4e7d0d35666655a19e63ab7", null ],
+            [ "getCapacity", "classvireo_1_1QueryPool.html#a62cd3e9eb1bd3a97366e20bfb4ddf884", null ],
+            [ "getResults", "classvireo_1_1QueryPool.html#a6dc699842141443ac496147ed4460eba", null ],
+            [ "getTimestampPeriodMs", "classvireo_1_1QueryPool.html#a224ea7394fece45b7729c15736bc1ac3", null ],
+            [ "operator=", "classvireo_1_1QueryPool.html#ad2b6f5ab901955b5f08f8c58704d19cc", null ],
+            [ "capacity", "classvireo_1_1QueryPool.html#a391c992c66c3e5540265a85ec2b9216a", null ],
+            [ "timestampPeriodMs", "classvireo_1_1QueryPool.html#a0af0e05a4a6598905e3a334d331ef5a4", null ]
+          ] ],
           [ "Rect", "structvireo_1_1Rect.html", [
             [ "Rect", "structvireo_1_1Rect.html#a069fe2399018ce1c68a255c4b9c00be1", null ],
             [ "Rect", "structvireo_1_1Rect.html#a8b6d38dceaecf13f6fe2db0e667fd482", null ],
@@ -517,6 +530,7 @@ var NAVTREE =
             [ "createGraphicPipeline", "classvireo_1_1Vireo.html#a615a432a94cb4a9893ea9a1427b2d3a8", null ],
             [ "createImage", "classvireo_1_1Vireo.html#a46a31fa2f56004c293d3f7e55874161a", null ],
             [ "createPipelineResources", "classvireo_1_1Vireo.html#ae69902c7e13de727a258741a6cd4a45a", null ],
+            [ "createQueryPool", "classvireo_1_1Vireo.html#a643d6200a7fe07d9b52a7b060c1e6bab", null ],
             [ "createReadWriteImage", "classvireo_1_1Vireo.html#ae9e9f2308597f8896855226d4c4b43cb", null ],
             [ "createRenderTarget", "classvireo_1_1Vireo.html#a30c80829ec0e86247726368118cb3b1d", null ],
             [ "createRenderTarget", "classvireo_1_1Vireo.html#a14097abe2469bd41accbbb9851e9a39c", null ],
@@ -560,6 +574,7 @@ var NAVTREE =
             [ "GraphicPipeline", "classvireo_1_1GraphicPipeline.html", null ]
           ] ],
           [ "PipelineResources", "classvireo_1_1PipelineResources.html", null ],
+          [ "QueryPool", "classvireo_1_1QueryPool.html", null ],
           [ "RenderTarget", "classvireo_1_1RenderTarget.html", null ],
           [ "Sampler", "classvireo_1_1Sampler.html", null ],
           [ "Semaphore", "classvireo_1_1Semaphore.html", null ],
@@ -600,7 +615,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"classvireo_1_1SwapChain.html"
+"classvireo_1_1SubmitQueue.html#a640bd6c94ae307b547bc39759cae008e",
+"tutorial_1_13_drawing.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
