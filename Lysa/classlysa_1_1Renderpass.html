@@ -101,8 +101,9 @@ $(document).ready(function(){initNavTree('classlysa_1_1Renderpass.html',''); ini
 <area href="classlysa_1_1ShadowMapPass.html" alt="ShadowMapPass" shape="rect" coords="136,392,262,416"/>
 <area href="classlysa_1_1SMAAPass.html" alt="SMAAPass" shape="rect" coords="136,448,262,472"/>
 <area href="classlysa_1_1SSAOPass.html" alt="SSAOPass" shape="rect" coords="136,504,262,528"/>
-<area href="classlysa_1_1TAAPass.html" alt="TAAPass" shape="rect" coords="136,560,262,584"/>
-<area href="classlysa_1_1TransparencyPass.html" alt="TransparencyPass" shape="rect" coords="136,616,262,640"/>
+<area href="classlysa_1_1SSRPass.html" alt="SSRPass" shape="rect" coords="136,560,262,584"/>
+<area href="classlysa_1_1TAAPass.html" alt="TAAPass" shape="rect" coords="136,616,262,640"/>
+<area href="classlysa_1_1TransparencyPass.html" alt="TransparencyPass" shape="rect" coords="136,672,262,696"/>
   </map>
  </div></div>
 <table class="memberdecls">
@@ -130,6 +131,12 @@ Static Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:adbbf5771ef5bf6d490b1b6546631be5d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::ShaderModule &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d">loadShader</a> (const std::string &amp;shaderName) const</td></tr>
 <tr class="separator:adbbf5771ef5bf6d490b1b6546631be5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5319b2e4e5d93f77bcbd0642b54203d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a5319b2e4e5d93f77bcbd0642b54203d4">init</a> (vireo::GraphicPipelineConfiguration &amp;pipelineConfig, vireo::RenderingConfiguration &amp;renderingConfig, const std::shared_ptr&lt; vireo::DescriptorLayout &gt; &amp;descriptorLayout, bool withStencil)</td></tr>
+<tr class="separator:a5319b2e4e5d93f77bcbd0642b54203d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e53855481dad7a91a6ac0eafbf01725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a5e53855481dad7a91a6ac0eafbf01725">init</a> (vireo::GraphicPipelineConfiguration &amp;pipelineConfig, vireo::RenderingConfiguration &amp;renderingConfig, bool withStencil) const</td></tr>
+<tr class="separator:a5e53855481dad7a91a6ac0eafbf01725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4d68fe1835e26ee0e9e0efa1ed6a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a8c4d68fe1835e26ee0e9e0efa1ed6a71">initRendering</a> (vireo::CommandList &amp;commandList, const std::shared_ptr&lt; vireo::Image &gt; &amp;image, const std::shared_ptr&lt; vireo::GraphicPipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet)</td></tr>
+<tr class="separator:a8c4d68fe1835e26ee0e9e0efa1ed6a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -250,6 +257,144 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5e53855481dad7a91a6ac0eafbf01725"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype">vireo::GraphicPipelineConfiguration &amp;&#160;</td>
+          <td class="paramname"><em>pipelineConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vireo::RenderingConfiguration &amp;&#160;</td>
+          <td class="paramname"><em>renderingConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withStencil</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5319b2e4e5d93f77bcbd0642b54203d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype">vireo::GraphicPipelineConfiguration &amp;&#160;</td>
+          <td class="paramname"><em>pipelineConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vireo::RenderingConfiguration &amp;&#160;</td>
+          <td class="paramname"><em>renderingConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::DescriptorLayout &gt; &amp;&#160;</td>
+          <td class="paramname"><em>descriptorLayout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withStencil</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8c4d68fe1835e26ee0e9e0efa1ed6a71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initRendering </td>
+          <td>(</td>
+          <td class="paramtype">vireo::CommandList &amp;&#160;</td>
+          <td class="paramname"><em>commandList</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Image &gt; &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::GraphicPipeline &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pipeline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sceneDescriptorSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;&#160;</td>
+          <td class="paramname"><em>descriptorSet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adbbf5771ef5bf6d490b1b6546631be5d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +477,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Recreate pass resources after a resize (default: no-op). </p>
 
-<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::PostProcessing::resize()</a>, <a class="el" href="classlysa_1_1DepthPrepass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::DepthPrepass::resize()</a>, <a class="el" href="classlysa_1_1GBufferPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::GBufferPass::resize()</a>, <a class="el" href="classlysa_1_1ForwardColorPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardColorPass::resize()</a>, <a class="el" href="classlysa_1_1LightingPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::LightingPass::resize()</a>, <a class="el" href="classlysa_1_1TAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TAAPass::resize()</a>, <a class="el" href="classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSAOPass::resize()</a>, <a class="el" href="classlysa_1_1SMAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SMAAPass::resize()</a>, <a class="el" href="classlysa_1_1TransparencyPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TransparencyPass::resize()</a></p>
+<p>Reimplemented in <a class="el" href="classlysa_1_1PostProcessing.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::PostProcessing::resize()</a>, <a class="el" href="classlysa_1_1DepthPrepass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::DepthPrepass::resize()</a>, <a class="el" href="classlysa_1_1ForwardColorPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::ForwardColorPass::resize()</a>, <a class="el" href="classlysa_1_1GBufferPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::GBufferPass::resize()</a>, <a class="el" href="classlysa_1_1LightingPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::LightingPass::resize()</a>, <a class="el" href="classlysa_1_1TAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TAAPass::resize()</a>, <a class="el" href="classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSAOPass::resize()</a>, <a class="el" href="classlysa_1_1SSRPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SSRPass::resize()</a>, <a class="el" href="classlysa_1_1SMAAPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::SMAAPass::resize()</a>, <a class="el" href="classlysa_1_1TransparencyPass.html#a6f872b3ab1e81f18ffa9038e26952242">lysa::TransparencyPass::resize()</a></p>
 
 </div>
 </div>
@@ -452,7 +597,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></li>
-    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. avr. 10 2026 16:01:38 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

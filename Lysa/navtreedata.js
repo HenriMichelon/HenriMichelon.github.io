@@ -296,6 +296,7 @@ var NAVTREE =
             [ "getGBufferPass", "classlysa_1_1DeferredRenderer.html#a471f9226c67ecdd44fb5e86762319833", null ],
             [ "getSSAOBlurPass", "classlysa_1_1DeferredRenderer.html#a81bf039067dba7be1bed2112b9576b71", null ],
             [ "getSSAOPass", "classlysa_1_1DeferredRenderer.html#ab3466d32373f040540006af29749430a", null ],
+            [ "getSSRPass", "classlysa_1_1DeferredRenderer.html#ab9e66480547764db7587bbeaa1bcf211", null ],
             [ "resize", "classlysa_1_1DeferredRenderer.html#a6f872b3ab1e81f18ffa9038e26952242", null ],
             [ "update", "classlysa_1_1DeferredRenderer.html#aac5965965f94aeee2855ac31115f12a8", null ],
             [ "updatePipelines", "classlysa_1_1DeferredRenderer.html#ade207a4b98c21c0f1889a316810d1097", null ]
@@ -326,7 +327,7 @@ var NAVTREE =
             [ "stop", "classlysa_1_1DirectoryWatcher.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ]
           ] ],
           [ "DirectoryWatcherEvent", "structlysa_1_1DirectoryWatcherEvent.html", [
-            [ "FILE_CHANGE", "structlysa_1_1DirectoryWatcherEvent.html#ae32994754c90078c961d566b8ed51635", null ]
+            [ "FILE_CHANGED", "structlysa_1_1DirectoryWatcherEvent.html#a04ba7f2dd242aac7e128ce9b2c44e12b", null ]
           ] ],
           [ "DisplayAttachment", "classlysa_1_1DisplayAttachment.html", [
             [ "DisplayAttachment", "classlysa_1_1DisplayAttachment.html#ae84f0b7ac9ac4da4916e59e1819b4ebb", null ],
@@ -417,7 +418,7 @@ var NAVTREE =
             [ "threshold", "structlysa_1_1FontParams.html#a376acef8954eadc70f4b55e8e0588e13", null ]
           ] ],
           [ "ForwardColorPass", "classlysa_1_1ForwardColorPass.html", [
-            [ "ForwardColorPass", "classlysa_1_1ForwardColorPass.html#a1d7336b0589a33562dffaef72b8a9aae", null ],
+            [ "ForwardColorPass", "classlysa_1_1ForwardColorPass.html#a318cb020a09540e1ed0fcff46f6b242c", null ],
             [ "getBrightnessBuffer", "classlysa_1_1ForwardColorPass.html#a26459c1be62c64e41099f27a67133209", null ],
             [ "render", "classlysa_1_1ForwardColorPass.html#a7c77512f375be6f86158aaa24ae6401e", null ],
             [ "resize", "classlysa_1_1ForwardColorPass.html#a6f872b3ab1e81f18ffa9038e26952242", null ],
@@ -1125,6 +1126,9 @@ var NAVTREE =
             [ "~Renderpass", "classlysa_1_1Renderpass.html#a217dbc29bb2da11a8d5741b6cf2593de", null ],
             [ "Renderpass", "classlysa_1_1Renderpass.html#a90559854e49cf25d27040450debfeeee", null ],
             [ "destroyShaderModules", "classlysa_1_1Renderpass.html#a4a25f88f4d1b3f29559391de19d81e16", null ],
+            [ "init", "classlysa_1_1Renderpass.html#a5e53855481dad7a91a6ac0eafbf01725", null ],
+            [ "init", "classlysa_1_1Renderpass.html#a5319b2e4e5d93f77bcbd0642b54203d4", null ],
+            [ "initRendering", "classlysa_1_1Renderpass.html#a8c4d68fe1835e26ee0e9e0efa1ed6a71", null ],
             [ "loadShader", "classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d", null ],
             [ "operator=", "classlysa_1_1Renderpass.html#aa0bfccfca606cc033a3f76902ec24c37", null ],
             [ "resize", "classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a", null ],
@@ -1186,6 +1190,14 @@ var NAVTREE =
             [ "render", "classlysa_1_1SSAOPass.html#a1c68ba58f2650009177d46fb4a0886a2", null ],
             [ "resize", "classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242", null ]
           ] ],
+          [ "SSRPass", "classlysa_1_1SSRPass.html", [
+            [ "SSRPass", "classlysa_1_1SSRPass.html#a7147d9119bd3cbdf9b039a2987357484", null ],
+            [ "getColorAttachment", "classlysa_1_1SSRPass.html#a15fa79c303d445165f89e6519623dcb9", null ],
+            [ "getSSRColorAttachment", "classlysa_1_1SSRPass.html#ae285ad66863f19575a2a991f5c753b9d", null ],
+            [ "getSSRColorAttachmentFormat", "classlysa_1_1SSRPass.html#a767a6b9b4382064f84f77c064321e847", null ],
+            [ "render", "classlysa_1_1SSRPass.html#afd2745d2f9220e4c975f4c1cb550f023", null ],
+            [ "resize", "classlysa_1_1SSRPass.html#a6f872b3ab1e81f18ffa9038e26952242", null ]
+          ] ],
           [ "Samplers", "classlysa_1_1Samplers.html", [
             [ "SamplerInfo", "structlysa_1_1Samplers_1_1SamplerInfo.html", [
               [ "operator==", "structlysa_1_1Samplers_1_1SamplerInfo.html#ac93a798e78c14a0ff0f6be9db011aff2", null ],
@@ -1240,8 +1252,10 @@ var NAVTREE =
             [ "ambientLight", "structlysa_1_1SceneData.html#a2046d5d17a0e0d6a81ffa566f56e45be", null ],
             [ "bloomEnabled", "structlysa_1_1SceneData.html#aeeae7d5fd54aaed526fa15ee8512d336", null ],
             [ "cameraPosition", "structlysa_1_1SceneData.html#a9d7b814214c8aeba4566305335230d74", null ],
+            [ "farPlane", "structlysa_1_1SceneData.html#a6d68533c250cc27cfdb1f4e69a818df9", null ],
             [ "jitter", "structlysa_1_1SceneData.html#a80cee1eefd702c566c293d62c351a210", null ],
             [ "lightsCount", "structlysa_1_1SceneData.html#aa340c9f035e3f271b0a3d80173a7e717", null ],
+            [ "nearPlane", "structlysa_1_1SceneData.html#a74ffd9ec0ade4849fb098f50a8d57666", null ],
             [ "previousProjection", "structlysa_1_1SceneData.html#a4e40c1e09f235a6200ad52bacae3b9e1", null ],
             [ "previousView", "structlysa_1_1SceneData.html#a71e508ee9cb987f1448bf4a3519db236", null ],
             [ "projection", "structlysa_1_1SceneData.html#a2781c6423dc6a8bfa1fef783b0f9bb47", null ],
@@ -1364,7 +1378,7 @@ var NAVTREE =
             [ "transform", "structlysa_1_1TextureInfoData.html#a71149d26646bb2a180e66545fb4e171d", null ]
           ] ],
           [ "TransparencyPass", "classlysa_1_1TransparencyPass.html", [
-            [ "TransparencyPass", "classlysa_1_1TransparencyPass.html#a8b30d7c729606dece211692d3064ffab", null ],
+            [ "TransparencyPass", "classlysa_1_1TransparencyPass.html#a37eeb835841242f6745948768e0f79d0", null ],
             [ "getAccumBuffer", "classlysa_1_1TransparencyPass.html#aac3738898f22017c5ed7029a77f83fc1", null ],
             [ "getRevealageBuffer", "classlysa_1_1TransparencyPass.html#a021cafd9806562f4889fdb39bbee7ef7", null ],
             [ "render", "classlysa_1_1TransparencyPass.html#af11967bcb5ce5da6ca8e917fabc23280", null ],
@@ -1580,6 +1594,7 @@ var NAVTREE =
           [ "ShadowMapPass", "classlysa_1_1ShadowMapPass.html", null ],
           [ "SMAAPass", "classlysa_1_1SMAAPass.html", null ],
           [ "SSAOPass", "classlysa_1_1SSAOPass.html", null ],
+          [ "SSRPass", "classlysa_1_1SSRPass.html", null ],
           [ "TAAPass", "classlysa_1_1TAAPass.html", null ],
           [ "TransparencyPass", "classlysa_1_1TransparencyPass.html", null ]
         ] ],
@@ -1668,11 +1683,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"classlysa_1_1Input.html#adcd4d2438488f946f024f461ef4406ba",
-"classlysa_1_1RenderTarget.html#a55e777536d0c92f1997aa232d6212b46",
-"classlysa_1_1Vector2DRenderer.html#a5275f158eb5d9885dcf45abd81fcb572",
-"structlysa_1_1GraphicPipelineData.html#a3099bca453da61003368a29b77f77742",
-"structlysa_1_1SceneConfiguration.html"
+"classlysa_1_1Input.html#acd950c3cd8ce08f4d6e1c3a764d9eb1c",
+"classlysa_1_1RenderTarget.html#a40acc949fe4f08cbd3e8d6dc69589e82",
+"classlysa_1_1UniqueResource.html#a22d85dc7926af6b0ebeed1e49788d417",
+"structlysa_1_1Font_1_1GlyphInfo.html#a1d228b1abbb93f8b2e3a3d2410e44266",
+"structlysa_1_1Samplers_1_1SamplerInfo.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

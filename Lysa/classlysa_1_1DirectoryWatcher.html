@@ -76,7 +76,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1DirectoryWatcher.html',''
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Monitors a directory for changes and emits events when files are modified.</p>
-<p>This class runs a background thread that uses OS-specific APIs to watch for file changes. </p>
+<p>This class runs a background thread that uses OS-specific APIs to watch for file changes. A <a class="el" href="structlysa_1_1DirectoryWatcherEvent.html#a04ba7f2dd242aac7e128ce9b2c44e12b">DirectoryWatcherEvent::FILE_CHANGED</a> event is emmitted when a file of the directory is modified. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a <a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a> and starts it. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uri</td><td>The URI of the directory to watch. </td></tr>
     <tr><td class="paramname">debounceTimer</td><td>The time to wait (in milliseconds) before emitting an event after a change is detected for the same file as the previous detected change. </td></tr>
@@ -135,6 +135,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Stop then estroy a <a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a>. </p>
 
 </div>
 </div>
@@ -185,7 +186,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a></li>
-    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. avr. 10 2026 16:01:38 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

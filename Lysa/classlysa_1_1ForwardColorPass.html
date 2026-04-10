@@ -90,8 +90,8 @@ $(document).ready(function(){initNavTree('classlysa_1_1ForwardColorPass.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d7336b0589a33562dffaef72b8a9aae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ForwardColorPass.html#a1d7336b0589a33562dffaef72b8a9aae">ForwardColorPass</a> (const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config)</td></tr>
-<tr class="separator:a1d7336b0589a33562dffaef72b8a9aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318cb020a09540e1ed0fcff46f6b242c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ForwardColorPass.html#a318cb020a09540e1ed0fcff46f6b242c">ForwardColorPass</a> (const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, bool withStencil)</td></tr>
+<tr class="separator:a318cb020a09540e1ed0fcff46f6b242c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a592cf08a0077906af2a384e738b17013"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ForwardColorPass.html#a592cf08a0077906af2a384e738b17013">updatePipelines</a> (const std::unordered_map&lt; <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a>, std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&gt; &amp;pipelineIds)</td></tr>
 <tr class="separator:a592cf08a0077906af2a384e738b17013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c77512f375be6f86158aaa24ae6401e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ForwardColorPass.html#a7c77512f375be6f86158aaa24ae6401e">render</a> (vireo::CommandList &amp;commandList, const <a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> &amp;scene, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;colorAttachment, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;multisampledDepthAttachment, bool clearAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
@@ -120,6 +120,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
 <tr class="memitem:adbbf5771ef5bf6d490b1b6546631be5d inherit pro_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::ShaderModule &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d">loadShader</a> (const std::string &amp;shaderName) const</td></tr>
 <tr class="separator:adbbf5771ef5bf6d490b1b6546631be5d inherit pro_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5319b2e4e5d93f77bcbd0642b54203d4 inherit pro_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a5319b2e4e5d93f77bcbd0642b54203d4">init</a> (vireo::GraphicPipelineConfiguration &amp;pipelineConfig, vireo::RenderingConfiguration &amp;renderingConfig, const std::shared_ptr&lt; vireo::DescriptorLayout &gt; &amp;descriptorLayout, bool withStencil)</td></tr>
+<tr class="separator:a5319b2e4e5d93f77bcbd0642b54203d4 inherit pro_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e53855481dad7a91a6ac0eafbf01725 inherit pro_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a5e53855481dad7a91a6ac0eafbf01725">init</a> (vireo::GraphicPipelineConfiguration &amp;pipelineConfig, vireo::RenderingConfiguration &amp;renderingConfig, bool withStencil) const</td></tr>
+<tr class="separator:a5e53855481dad7a91a6ac0eafbf01725 inherit pro_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4d68fe1835e26ee0e9e0efa1ed6a71 inherit pro_methods_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a8c4d68fe1835e26ee0e9e0efa1ed6a71">initRendering</a> (vireo::CommandList &amp;commandList, const std::shared_ptr&lt; vireo::Image &gt; &amp;image, const std::shared_ptr&lt; vireo::GraphicPipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet)</td></tr>
+<tr class="separator:a8c4d68fe1835e26ee0e9e0efa1ed6a71 inherit pro_methods_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classlysa_1_1Renderpass"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classlysa_1_1Renderpass')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></td></tr>
 <tr class="memitem:ac673bc430bdc3fdaa09f7becf98ef267 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#ac673bc430bdc3fdaa09f7becf98ef267">name</a></td></tr>
 <tr class="separator:ac673bc430bdc3fdaa09f7becf98ef267 inherit pro_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +138,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a1c23a5db1dbabf6178e87dd457ab2a0a inherit pro_static_attribs_classlysa_1_1Renderpass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1d7336b0589a33562dffaef72b8a9aae"></a>
+<a class="anchor" id="a318cb020a09540e1ed0fcff46f6b242c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -140,14 +146,25 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">ForwardColorPass </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td>
-          <td class="paramname"><em>config</em></td><td>)</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withStencil</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Constructs a <a class="el" href="classlysa_1_1ForwardColorPass.html">ForwardColorPass</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>The renderer configuration </td></tr>
+    <tr><td class="paramname">withStencil</td><td>Whether to enable stencil testing </td></tr>
   </table>
   </dd>
 </dl>
@@ -319,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1ForwardColorPass.html">ForwardColorPass</a></li>
-    <li class="footer">Generated on jeu. avr. 2 2026 21:57:23 for Lysa &nbsp; by
+    <li class="footer">Generated on ven. avr. 10 2026 16:01:38 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

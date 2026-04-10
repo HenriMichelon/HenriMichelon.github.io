@@ -1,5 +1,16 @@
 var NAVTREEINDEX4 =
 {
+"structlysa_1_1Font_1_1GlyphInfo.html#a1d228b1abbb93f8b2e3a3d2410e44266":[3,0,0,38,1,4],
+"structlysa_1_1Font_1_1GlyphInfo.html#a4b329d0c5dafb41085e5cb6040016479":[3,0,0,38,1,2],
+"structlysa_1_1Font_1_1GlyphInfo.html#a5a9439d5aa6c77675e290c3dd5e3cc61":[3,0,0,38,1,1],
+"structlysa_1_1Font_1_1GlyphInfo.html#ad95d5246270791079cb70ae5c2e4d28b":[3,0,0,38,1,3],
+"structlysa_1_1Frustum.html":[3,0,0,42],
+"structlysa_1_1Frustum.html#aee10120732bddb4a406b6b315079fec0":[3,0,0,42,1],
+"structlysa_1_1Frustum_1_1Plane.html":[3,0,0,42,0],
+"structlysa_1_1Frustum_1_1Plane.html#a8f21577a673b9cb9a844b9989c6b288d":[3,0,0,42,0,1],
+"structlysa_1_1Frustum_1_1Plane.html#acd0de676568888d848beb97dcc53ae47":[3,0,0,42,0,0],
+"structlysa_1_1GraphicPipelineData.html":[3,0,0,47],
+"structlysa_1_1GraphicPipelineData.html#a1e1c767ed1f2b1a42316fa94f0fbc88c":[3,0,0,47,13],
 "structlysa_1_1GraphicPipelineData.html#a3099bca453da61003368a29b77f77742":[3,0,0,47,3],
 "structlysa_1_1GraphicPipelineData.html#a3a490ede826c5d78fa10dfc3a004a808":[3,0,0,47,15],
 "structlysa_1_1GraphicPipelineData.html#a431b0c0c0f5f7ec1b9f5ddbcfaf4cb0b":[3,0,0,47,8],
@@ -238,16 +249,5 @@ var NAVTREEINDEX4 =
 "structlysa_1_1ResourcesCapacity.html#a6ca14d96ba169f49d9e1c2abe25d8893":[3,0,0,109,0],
 "structlysa_1_1ResourcesCapacity.html#a6d08ccf3eb948789c8491a1ba033cde5":[3,0,0,109,6],
 "structlysa_1_1ResourcesCapacity.html#a91027c30b8dc5db498f5359af23cde20":[3,0,0,109,5],
-"structlysa_1_1ResourcesCapacity.html#ac4e8eb0e49d9578da05db8836f6360bc":[3,0,0,109,2],
-"structlysa_1_1Samplers_1_1SamplerInfo.html":[3,0,0,114,0],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#a1eb6e141cd3a18b2261824f05748504d":[3,0,0,114,0,2],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#a37ef87abb33459a8ed2a071935e18c60":[3,0,0,114,0,6],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#a5faaeb3e4edadd0bba4e0d0edc775c70":[3,0,0,114,0,9],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#a6cb1a9f2812903cc605318a4219b377d":[3,0,0,114,0,3],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#a81c599ee57e3995ad50f96ed769ed87f":[3,0,0,114,0,5],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#aa138ae96e5b18ed1aeb5f162bbc07c56":[3,0,0,114,0,1],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#ac93a798e78c14a0ff0f6be9db011aff2":[3,0,0,114,0,0],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#ae06796ac1a12c37ba80d0364390d4698":[3,0,0,114,0,7],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#aeb1a9f7110caf0aac0d8486da52d88b5":[3,0,0,114,0,8],
-"structlysa_1_1Samplers_1_1SamplerInfo.html#aef3e12dc4c22d60d51b218842c1b75d6":[3,0,0,114,0,4]
+"structlysa_1_1ResourcesCapacity.html#ac4e8eb0e49d9578da05db8836f6360bc":[3,0,0,109,2]
 };
