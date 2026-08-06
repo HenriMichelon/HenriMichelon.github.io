@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: ColorBlendDesc Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">ColorBlendDesc Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Color blend state for a single render-target color attachment.</p>
+<p>Lua full name: <code>vireo.ColorBlendDesc</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_blend_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_blend_enable">blend_enable</a></td></tr>
+<tr class="memdesc:lua_blend_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to enable alpha/color blending on this attachment.<br /></td></tr>
+<tr class="separator:lua_blend_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_src_color_blend_factor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendFactor_lua.html">BlendFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_src_color_blend_factor">src_color_blend_factor</a></td></tr>
+<tr class="memdesc:lua_src_color_blend_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend factor applied to the source (incoming) color.<br /></td></tr>
+<tr class="separator:lua_src_color_blend_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_dst_color_blend_factor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendFactor_lua.html">BlendFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_dst_color_blend_factor">dst_color_blend_factor</a></td></tr>
+<tr class="memdesc:lua_dst_color_blend_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend factor applied to the destination (existing) color.<br /></td></tr>
+<tr class="separator:lua_dst_color_blend_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_color_blend_op"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendOp_lua.html">BlendOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color_blend_op">color_blend_op</a></td></tr>
+<tr class="memdesc:lua_color_blend_op"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend arithmetic operation for the color channels.<br /></td></tr>
+<tr class="separator:lua_color_blend_op"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_src_alpha_blend_factor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendFactor_lua.html">BlendFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_src_alpha_blend_factor">src_alpha_blend_factor</a></td></tr>
+<tr class="memdesc:lua_src_alpha_blend_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend factor applied to the source alpha.<br /></td></tr>
+<tr class="separator:lua_src_alpha_blend_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_dst_alpha_blend_factor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendFactor_lua.html">BlendFactor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_dst_alpha_blend_factor">dst_alpha_blend_factor</a></td></tr>
+<tr class="memdesc:lua_dst_alpha_blend_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend factor applied to the destination alpha.<br /></td></tr>
+<tr class="separator:lua_dst_alpha_blend_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_alpha_blend_op"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BlendOp_lua.html">BlendOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_alpha_blend_op">alpha_blend_op</a></td></tr>
+<tr class="memdesc:lua_alpha_blend_op"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend arithmetic operation for the alpha channel.<br /></td></tr>
+<tr class="separator:lua_alpha_blend_op"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_color_write_mask"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ColorWriteMask_lua.html">ColorWriteMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color_write_mask">color_write_mask</a></td></tr>
+<tr class="memdesc:lua_color_write_mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmask of color channels that receive writes (see vireo.ColorWriteMask).<br /></td></tr>
+<tr class="separator:lua_color_write_mask"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_blend_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean blend_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to enable alpha/color blending on this attachment.</p>
+</div></div>
+<a class="anchor" id="lua_src_color_blend_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendFactor_lua.html">BlendFactor</a> src_color_blend_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend factor applied to the source (incoming) color.</p>
+</div></div>
+<a class="anchor" id="lua_dst_color_blend_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendFactor_lua.html">BlendFactor</a> dst_color_blend_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend factor applied to the destination (existing) color.</p>
+</div></div>
+<a class="anchor" id="lua_color_blend_op"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendOp_lua.html">BlendOp</a> color_blend_op</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend arithmetic operation for the color channels.</p>
+</div></div>
+<a class="anchor" id="lua_src_alpha_blend_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendFactor_lua.html">BlendFactor</a> src_alpha_blend_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend factor applied to the source alpha.</p>
+</div></div>
+<a class="anchor" id="lua_dst_alpha_blend_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendFactor_lua.html">BlendFactor</a> dst_alpha_blend_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend factor applied to the destination alpha.</p>
+</div></div>
+<a class="anchor" id="lua_alpha_blend_op"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BlendOp_lua.html">BlendOp</a> alpha_blend_op</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blend arithmetic operation for the alpha channel.</p>
+</div></div>
+<a class="anchor" id="lua_color_write_mask"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ColorWriteMask_lua.html">ColorWriteMask</a> color_write_mask</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Bitmask of color channels that receive writes (see vireo.ColorWriteMask).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="ColorBlendDesc_lua.html">ColorBlendDesc</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

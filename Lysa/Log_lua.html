@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Log Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">Log Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides leveled logging to the engine console.</p>
+<p>Lua full name: <code>lysa.Log</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_log"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_log">log</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_log"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message at the default level. <a href="#lua_log">More...</a><br /></td></tr>
+<tr class="separator:lua_log"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_debug"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_debug">debug</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_debug"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug-level message. <a href="#lua_debug">More...</a><br /></td></tr>
+<tr class="separator:lua_debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_info"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_info">info</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_info"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an informational message. <a href="#lua_info">More...</a><br /></td></tr>
+<tr class="separator:lua_info"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_game1"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_game1">game1</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_game1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a game-layer 1 message. <a href="#lua_game1">More...</a><br /></td></tr>
+<tr class="separator:lua_game1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_game2"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_game2">game2</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_game2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a game-layer 2 message. <a href="#lua_game2">More...</a><br /></td></tr>
+<tr class="separator:lua_game2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_game3"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_game3">game3</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_game3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a game-layer 3 message. <a href="#lua_game3">More...</a><br /></td></tr>
+<tr class="separator:lua_game3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_warning"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_warning">warning</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_warning"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a warning message. <a href="#lua_warning">More...</a><br /></td></tr>
+<tr class="separator:lua_warning"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_error"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_error">error</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_error"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an error message. <a href="#lua_error">More...</a><br /></td></tr>
+<tr class="separator:lua_error"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_critical"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_critical">critical</a> (msg: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_critical"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a critical/fatal message. <a href="#lua_critical">More...</a><br /></td></tr>
+<tr class="separator:lua_critical"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_log"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil log </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a message at the default level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_debug"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil debug </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a debug-level message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_info"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil info </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs an informational message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_game1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil game1 </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a game-layer 1 message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_game2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil game2 </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a game-layer 2 message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_game3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil game3 </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a game-layer 3 message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_warning"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil warning </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a warning message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_error"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil error </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs an error message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_critical"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil critical </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a critical/fatal message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Log_lua.html">Log</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

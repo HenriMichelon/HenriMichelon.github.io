@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: RenderingConfiguration Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">RenderingConfiguration Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Full render-pass configuration passed to CommandList.begin_rendering().</p>
+<p>Lua full name: <code>vireo.RenderingConfiguration</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_color_render_targets"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RenderTargetDesc_lua.html">RenderTargetDesc</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color_render_targets">color_render_targets</a></td></tr>
+<tr class="memdesc:lua_color_render_targets"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered list of color attachment descriptors.<br /></td></tr>
+<tr class="separator:lua_color_render_targets"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_stencil_render_target"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_stencil_render_target">depth_stencil_render_target</a></td></tr>
+<tr class="memdesc:lua_depth_stencil_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth/stencil attachment (nil to disable depth/stencil).<br /></td></tr>
+<tr class="separator:lua_depth_stencil_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_multisampled_depth_stencil_render_target"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_multisampled_depth_stencil_render_target">multisampled_depth_stencil_render_target</a></td></tr>
+<tr class="memdesc:lua_multisampled_depth_stencil_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional MSAA depth/stencil resolve target.<br /></td></tr>
+<tr class="separator:lua_multisampled_depth_stencil_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_use_depth_attachment"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_use_depth_attachment">use_depth_attachment</a></td></tr>
+<tr class="memdesc:lua_use_depth_attachment"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to use the depth aspect of the depth/stencil attachment.<br /></td></tr>
+<tr class="separator:lua_use_depth_attachment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_use_stencil_attachment"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_use_stencil_attachment">use_stencil_attachment</a></td></tr>
+<tr class="memdesc:lua_use_stencil_attachment"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to use the stencil aspect of the depth/stencil attachment.<br /></td></tr>
+<tr class="separator:lua_use_stencil_attachment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_clear_depth_stencil"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_clear_depth_stencil">clear_depth_stencil</a></td></tr>
+<tr class="memdesc:lua_clear_depth_stencil"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to clear the depth/stencil attachment at the start of the render pass.<br /></td></tr>
+<tr class="separator:lua_clear_depth_stencil"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_stencil_clear_value"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ClearValue_lua.html">ClearValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_stencil_clear_value">depth_stencil_clear_value</a></td></tr>
+<tr class="memdesc:lua_depth_stencil_clear_value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear value for depth/stencil (use .depth and .stencil fields).<br /></td></tr>
+<tr class="separator:lua_depth_stencil_clear_value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_discard_depth_stencil_after_render"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_discard_depth_stencil_after_render">discard_depth_stencil_after_render</a></td></tr>
+<tr class="memdesc:lua_discard_depth_stencil_after_render"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to discard the depth/stencil content after the render pass.<br /></td></tr>
+<tr class="separator:lua_discard_depth_stencil_after_render"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_color_render_targets"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="RenderTargetDesc_lua.html">RenderTargetDesc</a>[] color_render_targets</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Ordered list of color attachment descriptors.</p>
+</div></div>
+<a class="anchor" id="lua_depth_stencil_render_target"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>|nil depth_stencil_render_target</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Depth/stencil attachment (nil to disable depth/stencil).</p>
+</div></div>
+<a class="anchor" id="lua_multisampled_depth_stencil_render_target"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>|nil multisampled_depth_stencil_render_target</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Optional MSAA depth/stencil resolve target.</p>
+</div></div>
+<a class="anchor" id="lua_use_depth_attachment"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean use_depth_attachment</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to use the depth aspect of the depth/stencil attachment.</p>
+</div></div>
+<a class="anchor" id="lua_use_stencil_attachment"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean use_stencil_attachment</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to use the stencil aspect of the depth/stencil attachment.</p>
+</div></div>
+<a class="anchor" id="lua_clear_depth_stencil"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean clear_depth_stencil</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to clear the depth/stencil attachment at the start of the render pass.</p>
+</div></div>
+<a class="anchor" id="lua_depth_stencil_clear_value"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ClearValue_lua.html">ClearValue</a> depth_stencil_clear_value</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Clear value for depth/stencil (use .depth and .stencil fields).</p>
+</div></div>
+<a class="anchor" id="lua_discard_depth_stencil_after_render"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean discard_depth_stencil_after_render</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to discard the depth/stencil content after the render pass.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="RenderingConfiguration_lua.html">RenderingConfiguration</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

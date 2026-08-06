@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: Image Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Image Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A GPU image (texture or render attachment). Created by Vireo.create_image() or Vireo.create_read_write_image().</p>
+<p>Lua full name: <code>vireo.Image</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_get_row_pitch"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_row_pitch">get_row_pitch</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_row_pitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row pitch in bytes for the given mip level (default 0). <a href="#lua_get_row_pitch">More...</a><br /></td></tr>
+<tr class="separator:lua_get_row_pitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_row_length"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_row_length">get_row_length</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_row_length"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row length in texels for the given mip level (default 0). <a href="#lua_get_row_length">More...</a><br /></td></tr>
+<tr class="separator:lua_get_row_length"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_image_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_image_size">get_image_size</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_image_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unaligned size in bytes of one array layer at the given mip level (default 0). <a href="#lua_get_image_size">More...</a><br /></td></tr>
+<tr class="separator:lua_get_image_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_aligned_image_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_aligned_image_size">get_aligned_image_size</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_aligned_image_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligned size in bytes of one array layer at the given mip level (includes any backend-required padding). <a href="#lua_get_aligned_image_size">More...</a><br /></td></tr>
+<tr class="separator:lua_get_aligned_image_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_aligned_row_pitch"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_aligned_row_pitch">get_aligned_row_pitch</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_aligned_row_pitch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligned row pitch in bytes for the given mip level. <a href="#lua_get_aligned_row_pitch">More...</a><br /></td></tr>
+<tr class="separator:lua_get_aligned_row_pitch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_aligned_row_length"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_aligned_row_length">get_aligned_row_length</a> (mipLevel: integer|nil)</td></tr>
+<tr class="memdesc:lua_get_aligned_row_length"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligned row length in texels for the given mip level. <a href="#lua_get_aligned_row_length">More...</a><br /></td></tr>
+<tr class="separator:lua_get_aligned_row_length"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_pixel_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_pixel_size">get_pixel_size</a> (format: <a class="el" href="ImageFormat_lua.html">ImageFormat</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_pixel_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of a single pixel in the given format. <a href="#lua_get_pixel_size">More...</a><br /></td></tr>
+<tr class="separator:lua_get_pixel_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_memory_allocations"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_memory_allocations">get_memory_allocations</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_memory_allocations"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all current GPU memory allocations for all Image objects. <a href="#lua_get_memory_allocations">More...</a><br /></td></tr>
+<tr class="separator:lua_get_memory_allocations"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_format"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_format">format</a></td></tr>
+<tr class="memdesc:lua_format"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel format of the image. (read-only)<br /></td></tr>
+<tr class="separator:lua_format"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_width"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_width">width</a></td></tr>
+<tr class="memdesc:lua_width"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width in pixels of mip level 0. (read-only)<br /></td></tr>
+<tr class="separator:lua_width"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_height"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_height">height</a></td></tr>
+<tr class="memdesc:lua_height"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height in pixels of mip level 0. (read-only)<br /></td></tr>
+<tr class="separator:lua_height"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_mip_levels"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_mip_levels">mip_levels</a></td></tr>
+<tr class="memdesc:lua_mip_levels"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of mip levels. (read-only)<br /></td></tr>
+<tr class="separator:lua_mip_levels"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_array_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_array_size">array_size</a></td></tr>
+<tr class="memdesc:lua_array_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of array layers (1 for non-array images). (read-only)<br /></td></tr>
+<tr class="separator:lua_array_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_read_write"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_read_write">is_read_write</a></td></tr>
+<tr class="memdesc:lua_is_read_write"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the image was created with read/write (UAV / storage image) access. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_read_write"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_get_row_pitch"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_row_pitch </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Row pitch in bytes for the given mip level (default 0).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_row_length"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_row_length </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Row length in texels for the given mip level (default 0).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_image_size"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_image_size </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unaligned size in bytes of one array layer at the given mip level (default 0).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_aligned_image_size"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_aligned_image_size </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Aligned size in bytes of one array layer at the given mip level (includes any backend-required padding).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_aligned_row_pitch"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_aligned_row_pitch </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Aligned row pitch in bytes for the given mip level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_aligned_row_length"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_aligned_row_length </td><td>(</td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Aligned row length in texels for the given mip level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mipLevel</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_pixel_size"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_pixel_size </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td>
+          <td class="paramname">format</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the size in bytes of a single pixel in the given format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td><a class="el" href="ImageFormat_lua.html">ImageFormat</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_memory_allocations"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[] get_memory_allocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns all current GPU memory allocations for all Image objects.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[]</dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_format"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ImageFormat_lua.html">ImageFormat</a> format</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pixel format of the image. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_width"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer width</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Width in pixels of mip level 0. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_height"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer height</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Height in pixels of mip level 0. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_mip_levels"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer mip_levels</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Total number of mip levels. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_array_size"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer array_size</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of array layers (1 for non-array images). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_is_read_write"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_read_write</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the image was created with read/write (UAV / storage image) access. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="Image_lua.html">Image</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

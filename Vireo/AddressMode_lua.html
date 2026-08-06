@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: AddressMode Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">AddressMode Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Texture coordinate wrapping mode applied when UV coordinates fall outside [0, 1].</p>
+<p>Lua full name: <code>vireo.AddressMode</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_REPEAT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_REPEAT">REPEAT</a></td></tr>
+<tr class="memdesc:lua_REPEAT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture coordinates wrap around (tile the texture).<br /></td></tr>
+<tr class="separator:lua_REPEAT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_MIRRORED_REPEAT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_MIRRORED_REPEAT">MIRRORED_REPEAT</a></td></tr>
+<tr class="memdesc:lua_MIRRORED_REPEAT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture coordinates mirror on each wrap boundary.<br /></td></tr>
+<tr class="separator:lua_MIRRORED_REPEAT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_CLAMP_TO_EDGE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_CLAMP_TO_EDGE">CLAMP_TO_EDGE</a></td></tr>
+<tr class="memdesc:lua_CLAMP_TO_EDGE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates clamp to [0, 1]; edge texels are repeated at the border.<br /></td></tr>
+<tr class="separator:lua_CLAMP_TO_EDGE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_CLAMP_TO_BORDER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_CLAMP_TO_BORDER">CLAMP_TO_BORDER</a></td></tr>
+<tr class="memdesc:lua_CLAMP_TO_BORDER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinates outside [0, 1] sample the border color.<br /></td></tr>
+<tr class="separator:lua_CLAMP_TO_BORDER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_REPEAT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer REPEAT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture coordinates wrap around (tile the texture).</p>
+</div></div>
+<a class="anchor" id="lua_MIRRORED_REPEAT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer MIRRORED_REPEAT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture coordinates mirror on each wrap boundary.</p>
+</div></div>
+<a class="anchor" id="lua_CLAMP_TO_EDGE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer CLAMP_TO_EDGE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Coordinates clamp to [0, 1]; edge texels are repeated at the border.</p>
+</div></div>
+<a class="anchor" id="lua_CLAMP_TO_BORDER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer CLAMP_TO_BORDER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Coordinates outside [0, 1] sample the border color.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="AddressMode_lua.html">AddressMode</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

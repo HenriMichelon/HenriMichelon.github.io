@@ -1,0 +1,60 @@
+
+:root {
+    --bg: #faf9f7;
+    --surface: #f0ece6;
+    --border: #cfc8bc;
+    --accent: #ff8700;
+    --accent2: #1a1814;
+    --text: #2e2a24;
+    --text-muted: #7a7068;
+    --text-dim: #b0a898;
+    --code-bg: #f4f1ed;
+    --heading: #1a1814;
+}
+
+html.dark {
+    --bg: #272729;
+    --surface: #313135;
+    --border: #606065;
+    --accent: #ff8700;
+    --accent2: #e8e4d8;
+    --text: #a9b1d6;
+    --text-muted: #9aa5ce;
+    --text-dim: #5c5c5c;
+    --code-bg: #353535;
+    --heading: #e8e4d8;
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+a {
+    color: var(--accent)
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+#theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}

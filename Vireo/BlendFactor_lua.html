@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: BlendFactor Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">BlendFactor Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Source or destination multiplier constants for color blending equations.</p>
+<p>Lua full name: <code>vireo.BlendFactor</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_ZERO"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ZERO">ZERO</a></td></tr>
+<tr class="memdesc:lua_ZERO"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (0, 0, 0, 0) — nullifies the term.<br /></td></tr>
+<tr class="separator:lua_ZERO"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE">ONE</a></td></tr>
+<tr class="memdesc:lua_ONE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (1, 1, 1, 1) — passes the term unchanged.<br /></td></tr>
+<tr class="separator:lua_ONE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SRC_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SRC_COLOR">SRC_COLOR</a></td></tr>
+<tr class="memdesc:lua_SRC_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the source color (Rs, Gs, Bs, As).<br /></td></tr>
+<tr class="separator:lua_SRC_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_SRC_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_SRC_COLOR">ONE_MINUS_SRC_COLOR</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_SRC_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (1-Rs, 1-Gs, 1-Bs, 1-As).<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_SRC_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_DST_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_DST_COLOR">DST_COLOR</a></td></tr>
+<tr class="memdesc:lua_DST_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the destination color (Rd, Gd, Bd, Ad).<br /></td></tr>
+<tr class="separator:lua_DST_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_DST_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_DST_COLOR">ONE_MINUS_DST_COLOR</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_DST_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (1-Rd, 1-Gd, 1-Bd, 1-Ad).<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_DST_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SRC_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SRC_ALPHA">SRC_ALPHA</a></td></tr>
+<tr class="memdesc:lua_SRC_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the source alpha replicated to all channels (As, As, As, As).<br /></td></tr>
+<tr class="separator:lua_SRC_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_SRC_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_SRC_ALPHA">ONE_MINUS_SRC_ALPHA</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_SRC_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (1-As, 1-As, 1-As, 1-As) — standard alpha blending denominator.<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_SRC_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_DST_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_DST_ALPHA">DST_ALPHA</a></td></tr>
+<tr class="memdesc:lua_DST_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the destination alpha replicated to all channels (Ad, Ad, Ad, Ad).<br /></td></tr>
+<tr class="separator:lua_DST_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_DST_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_DST_ALPHA">ONE_MINUS_DST_ALPHA</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_DST_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (1-Ad, 1-Ad, 1-Ad, 1-Ad).<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_DST_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_CONSTANT_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_CONSTANT_COLOR">CONSTANT_COLOR</a></td></tr>
+<tr class="memdesc:lua_CONSTANT_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the pipeline blend constant color.<br /></td></tr>
+<tr class="separator:lua_CONSTANT_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_CONSTANT_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_CONSTANT_COLOR">ONE_MINUS_CONSTANT_COLOR</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_CONSTANT_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is one minus the pipeline blend constant color.<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_CONSTANT_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_CONSTANT_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_CONSTANT_ALPHA">CONSTANT_ALPHA</a></td></tr>
+<tr class="memdesc:lua_CONSTANT_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the pipeline blend constant alpha.<br /></td></tr>
+<tr class="separator:lua_CONSTANT_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_CONSTANT_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_CONSTANT_ALPHA">ONE_MINUS_CONSTANT_ALPHA</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_CONSTANT_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is one minus the pipeline blend constant alpha.<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_CONSTANT_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SRC_ALPHA_SATURATE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SRC_ALPHA_SATURATE">SRC_ALPHA_SATURATE</a></td></tr>
+<tr class="memdesc:lua_SRC_ALPHA_SATURATE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is (f, f, f, 1) where f = min(As, 1-Ad).<br /></td></tr>
+<tr class="separator:lua_SRC_ALPHA_SATURATE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SRC1_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SRC1_COLOR">SRC1_COLOR</a></td></tr>
+<tr class="memdesc:lua_SRC1_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the second source color (dual-source blending).<br /></td></tr>
+<tr class="separator:lua_SRC1_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_SRC1_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_SRC1_COLOR">ONE_MINUS_SRC1_COLOR</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_SRC1_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is one minus the second source color.<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_SRC1_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SRC1_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SRC1_ALPHA">SRC1_ALPHA</a></td></tr>
+<tr class="memdesc:lua_SRC1_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is the second source alpha (dual-source blending).<br /></td></tr>
+<tr class="separator:lua_SRC1_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ONE_MINUS_SRC1_ALPHA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ONE_MINUS_SRC1_ALPHA">ONE_MINUS_SRC1_ALPHA</a></td></tr>
+<tr class="memdesc:lua_ONE_MINUS_SRC1_ALPHA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor is one minus the second source alpha.<br /></td></tr>
+<tr class="separator:lua_ONE_MINUS_SRC1_ALPHA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_ZERO"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ZERO</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (0, 0, 0, 0) — nullifies the term.</p>
+</div></div>
+<a class="anchor" id="lua_ONE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (1, 1, 1, 1) — passes the term unchanged.</p>
+</div></div>
+<a class="anchor" id="lua_SRC_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SRC_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the source color (Rs, Gs, Bs, As).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_SRC_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_SRC_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (1-Rs, 1-Gs, 1-Bs, 1-As).</p>
+</div></div>
+<a class="anchor" id="lua_DST_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer DST_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the destination color (Rd, Gd, Bd, Ad).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_DST_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_DST_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (1-Rd, 1-Gd, 1-Bd, 1-Ad).</p>
+</div></div>
+<a class="anchor" id="lua_SRC_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SRC_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the source alpha replicated to all channels (As, As, As, As).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_SRC_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_SRC_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (1-As, 1-As, 1-As, 1-As) — standard alpha blending denominator.</p>
+</div></div>
+<a class="anchor" id="lua_DST_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer DST_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the destination alpha replicated to all channels (Ad, Ad, Ad, Ad).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_DST_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_DST_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (1-Ad, 1-Ad, 1-Ad, 1-Ad).</p>
+</div></div>
+<a class="anchor" id="lua_CONSTANT_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer CONSTANT_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the pipeline blend constant color.</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_CONSTANT_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_CONSTANT_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is one minus the pipeline blend constant color.</p>
+</div></div>
+<a class="anchor" id="lua_CONSTANT_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer CONSTANT_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the pipeline blend constant alpha.</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_CONSTANT_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_CONSTANT_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is one minus the pipeline blend constant alpha.</p>
+</div></div>
+<a class="anchor" id="lua_SRC_ALPHA_SATURATE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SRC_ALPHA_SATURATE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is (f, f, f, 1) where f = min(As, 1-Ad).</p>
+</div></div>
+<a class="anchor" id="lua_SRC1_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SRC1_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the second source color (dual-source blending).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_SRC1_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_SRC1_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is one minus the second source color.</p>
+</div></div>
+<a class="anchor" id="lua_SRC1_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SRC1_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is the second source alpha (dual-source blending).</p>
+</div></div>
+<a class="anchor" id="lua_ONE_MINUS_SRC1_ALPHA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ONE_MINUS_SRC1_ALPHA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Factor is one minus the second source alpha.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="BlendFactor_lua.html">BlendFactor</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

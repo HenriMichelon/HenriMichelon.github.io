@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: SwapChain Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">SwapChain Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Presentation swap chain managing a set of back buffers for a window. Created by Vireo.create_swap_chain().</p>
+<p>Lua full name: <code>vireo.SwapChain</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_next_frame_index"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_next_frame_index">next_frame_index</a> ()</td></tr>
+<tr class="memdesc:lua_next_frame_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the internal frame index to the next frame slot. <a href="#lua_next_frame_index">More...</a><br /></td></tr>
+<tr class="separator:lua_next_frame_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_acquire"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_acquire">acquire</a> (fence: <a class="el" href="Fence_lua.html">Fence</a>)</td></tr>
+<tr class="memdesc:lua_acquire"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquires the next available back buffer. Returns false if the swap chain must be recreated (window resized). <a href="#lua_acquire">More...</a><br /></td></tr>
+<tr class="separator:lua_acquire"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_present"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_present">present</a> ()</td></tr>
+<tr class="memdesc:lua_present"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presents the current back buffer to the display. <a href="#lua_present">More...</a><br /></td></tr>
+<tr class="separator:lua_present"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_recreate"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_recreate">recreate</a> ()</td></tr>
+<tr class="memdesc:lua_recreate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreates the swap chain and all back buffers (call after a window resize). <a href="#lua_recreate">More...</a><br /></td></tr>
+<tr class="separator:lua_recreate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_wait_idle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_idle">wait_idle</a> ()</td></tr>
+<tr class="memdesc:lua_wait_idle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the CPU until all pending present operations for this swap chain have completed. <a href="#lua_wait_idle">More...</a><br /></td></tr>
+<tr class="separator:lua_wait_idle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_extent"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Extent_lua.html">Extent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_extent">extent</a></td></tr>
+<tr class="memdesc:lua_extent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current back-buffer size in pixels. (read-only)<br /></td></tr>
+<tr class="separator:lua_extent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_aspect_ratio"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_aspect_ratio">aspect_ratio</a></td></tr>
+<tr class="memdesc:lua_aspect_ratio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width divided by height of the current back buffer. (read-only)<br /></td></tr>
+<tr class="separator:lua_aspect_ratio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_current_frame_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_current_frame_index">current_frame_index</a></td></tr>
+<tr class="memdesc:lua_current_frame_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the currently acquired back buffer (0 to frames_in_flight-1). (read-only)<br /></td></tr>
+<tr class="separator:lua_current_frame_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_frames_in_flight"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_frames_in_flight">frames_in_flight</a></td></tr>
+<tr class="memdesc:lua_frames_in_flight"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of back buffers in the swap chain. (read-only)<br /></td></tr>
+<tr class="separator:lua_frames_in_flight"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_format"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_format">format</a></td></tr>
+<tr class="memdesc:lua_format"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel format of the back buffers. (read-only)<br /></td></tr>
+<tr class="separator:lua_format"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_next_frame_index"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil next_frame_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Advances the internal frame index to the next frame slot.</p>
+</div></div>
+<a class="anchor" id="lua_acquire"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean acquire </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Fence_lua.html">Fence</a>&#160;</td>
+          <td class="paramname">fence</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Acquires the next available back buffer. Returns false if the swap chain must be recreated (window resized).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fence</td><td><a class="el" href="Fence_lua.html">Fence</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_present"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil present </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Presents the current back buffer to the display.</p>
+</div></div>
+<a class="anchor" id="lua_recreate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil recreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Recreates the swap chain and all back buffers (call after a window resize).</p>
+</div></div>
+<a class="anchor" id="lua_wait_idle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil wait_idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blocks the CPU until all pending present operations for this swap chain have completed.</p>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_extent"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Extent_lua.html">Extent</a> extent</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Current back-buffer size in pixels. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_aspect_ratio"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number aspect_ratio</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Width divided by height of the current back buffer. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_current_frame_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer current_frame_index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Index of the currently acquired back buffer (0 to frames_in_flight-1). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_frames_in_flight"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer frames_in_flight</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of back buffers in the swap chain. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_format"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ImageFormat_lua.html">ImageFormat</a> format</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pixel format of the back buffers. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="SwapChain_lua.html">SwapChain</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

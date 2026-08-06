@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: LogicOp Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">LogicOp Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Bitwise logical operation applied to color attachment values (enabled via logic_op_enable).</p>
+<p>Lua full name: <code>vireo.LogicOp</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_CLEAR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_CLEAR">CLEAR</a></td></tr>
+<tr class="memdesc:lua_CLEAR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = 0.<br /></td></tr>
+<tr class="separator:lua_CLEAR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SET"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SET">SET</a></td></tr>
+<tr class="memdesc:lua_SET"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = 1.<br /></td></tr>
+<tr class="separator:lua_SET"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COPY"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COPY">COPY</a></td></tr>
+<tr class="memdesc:lua_COPY"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src.<br /></td></tr>
+<tr class="separator:lua_COPY"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COPY_INVERTED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COPY_INVERTED">COPY_INVERTED</a></td></tr>
+<tr class="memdesc:lua_COPY_INVERTED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~Src.<br /></td></tr>
+<tr class="separator:lua_COPY_INVERTED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_NOOP"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_NOOP">NOOP</a></td></tr>
+<tr class="memdesc:lua_NOOP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Dst (no-op).<br /></td></tr>
+<tr class="separator:lua_NOOP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_INVERT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INVERT">INVERT</a></td></tr>
+<tr class="memdesc:lua_INVERT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~Dst.<br /></td></tr>
+<tr class="separator:lua_INVERT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_AND"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_AND">AND</a></td></tr>
+<tr class="memdesc:lua_AND"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src &amp; Dst.<br /></td></tr>
+<tr class="separator:lua_AND"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_NAND"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_NAND">NAND</a></td></tr>
+<tr class="memdesc:lua_NAND"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~(Src &amp; Dst).<br /></td></tr>
+<tr class="separator:lua_NAND"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OR">OR</a></td></tr>
+<tr class="memdesc:lua_OR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src | Dst.<br /></td></tr>
+<tr class="separator:lua_OR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_NOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_NOR">NOR</a></td></tr>
+<tr class="memdesc:lua_NOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~(Src | Dst).<br /></td></tr>
+<tr class="separator:lua_NOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_XOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_XOR">XOR</a></td></tr>
+<tr class="memdesc:lua_XOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src ^ Dst.<br /></td></tr>
+<tr class="separator:lua_XOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_EQUIV"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_EQUIV">EQUIV</a></td></tr>
+<tr class="memdesc:lua_EQUIV"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~(Src ^ Dst).<br /></td></tr>
+<tr class="separator:lua_EQUIV"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_AND_REVERSE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_AND_REVERSE">AND_REVERSE</a></td></tr>
+<tr class="memdesc:lua_AND_REVERSE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src &amp; ~Dst.<br /></td></tr>
+<tr class="separator:lua_AND_REVERSE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_AND_INVERTED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_AND_INVERTED">AND_INVERTED</a></td></tr>
+<tr class="memdesc:lua_AND_INVERTED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~Src &amp; Dst.<br /></td></tr>
+<tr class="separator:lua_AND_INVERTED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OR_REVERSE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OR_REVERSE">OR_REVERSE</a></td></tr>
+<tr class="memdesc:lua_OR_REVERSE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = Src | ~Dst.<br /></td></tr>
+<tr class="separator:lua_OR_REVERSE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OR_INVERTED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OR_INVERTED">OR_INVERTED</a></td></tr>
+<tr class="memdesc:lua_OR_INVERTED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result = ~Src | Dst.<br /></td></tr>
+<tr class="separator:lua_OR_INVERTED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_CLEAR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer CLEAR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = 0.</p>
+</div></div>
+<a class="anchor" id="lua_SET"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SET</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = 1.</p>
+</div></div>
+<a class="anchor" id="lua_COPY"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COPY</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src.</p>
+</div></div>
+<a class="anchor" id="lua_COPY_INVERTED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COPY_INVERTED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~Src.</p>
+</div></div>
+<a class="anchor" id="lua_NOOP"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer NOOP</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Dst (no-op).</p>
+</div></div>
+<a class="anchor" id="lua_INVERT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INVERT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~Dst.</p>
+</div></div>
+<a class="anchor" id="lua_AND"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer AND</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src &amp; Dst.</p>
+</div></div>
+<a class="anchor" id="lua_NAND"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer NAND</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~(Src &amp; Dst).</p>
+</div></div>
+<a class="anchor" id="lua_OR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer OR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src | Dst.</p>
+</div></div>
+<a class="anchor" id="lua_NOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer NOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~(Src | Dst).</p>
+</div></div>
+<a class="anchor" id="lua_XOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer XOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src ^ Dst.</p>
+</div></div>
+<a class="anchor" id="lua_EQUIV"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer EQUIV</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~(Src ^ Dst).</p>
+</div></div>
+<a class="anchor" id="lua_AND_REVERSE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer AND_REVERSE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src &amp; ~Dst.</p>
+</div></div>
+<a class="anchor" id="lua_AND_INVERTED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer AND_INVERTED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~Src &amp; Dst.</p>
+</div></div>
+<a class="anchor" id="lua_OR_REVERSE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer OR_REVERSE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = Src | ~Dst.</p>
+</div></div>
+<a class="anchor" id="lua_OR_INVERTED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer OR_INVERTED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Result = ~Src | Dst.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="LogicOp_lua.html">LogicOp</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

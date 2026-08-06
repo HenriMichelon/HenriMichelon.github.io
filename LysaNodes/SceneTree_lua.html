@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: SceneTree Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">SceneTree Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The root container for a scene hierarchy; manages the node tree, camera, and rendering attachment.</p>
+<p>Lua full name: <code>lysa.nodes.SceneTree</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_attach"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_attach">attach</a> (target: any)</td></tr>
+<tr class="memdesc:lua_attach"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches the scene tree to a RenderingWindow or RenderTarget to start rendering. <a href="#lua_attach">More...</a><br /></td></tr>
+<tr class="separator:lua_attach"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_detach"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_detach">detach</a> ()</td></tr>
+<tr class="memdesc:lua_detach"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches the scene tree from its current render target and window; rendering stops. <a href="#lua_detach">More...</a><br /></td></tr>
+<tr class="separator:lua_detach"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_camera"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_camera">set_camera</a> (camera: <a class="el" href="Camera_lua.html">Camera</a>)</td></tr>
+<tr class="memdesc:lua_set_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the active camera used to render this scene. <a href="#lua_set_camera">More...</a><br /></td></tr>
+<tr class="separator:lua_set_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_viewport"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_viewport">set_viewport</a> (viewport: vireo.Viewport)</td></tr>
+<tr class="memdesc:lua_set_viewport"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the viewport rectangle used when rendering this scene. <a href="#lua_set_viewport">More...</a><br /></td></tr>
+<tr class="separator:lua_set_viewport"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_scissors"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_scissors">set_scissors</a> (scissors: vireo.Rect)</td></tr>
+<tr class="memdesc:lua_set_scissors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the scissor rectangle used when rendering this scene. <a href="#lua_set_scissors">More...</a><br /></td></tr>
+<tr class="separator:lua_set_scissors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_child"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_child">add_child</a> (child: <a class="el" href="Node_lua.html">Node</a>, async: boolean|nil)</td></tr>
+<tr class="memdesc:lua_add_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a root-level node to the scene tree. <a href="#lua_add_child">More...</a><br /></td></tr>
+<tr class="separator:lua_add_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_child"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_child">remove_child</a> (child: <a class="el" href="Node_lua.html">Node</a>)</td></tr>
+<tr class="memdesc:lua_remove_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a root-level node from the scene tree; takes effect at the start of the next frame. <a href="#lua_remove_child">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_all_children"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_all_children">remove_all_children</a> ()</td></tr>
+<tr class="memdesc:lua_remove_all_children"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and detaches all root-level nodes from the scene tree. <a href="#lua_remove_all_children">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_all_children"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ray_cast"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RayCastHit_lua.html">RayCastHit</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ray_cast">ray_cast</a> (ray: lysa.Ray, parent: <a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil)</td></tr>
+<tr class="memdesc:lua_ray_cast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a ray through all MeshInstances (no physics engine) and returns the closest hit, or nil. The length of direction defines the max distance. <a href="#lua_ray_cast">More...</a><br /></td></tr>
+<tr class="separator:lua_ray_cast"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ray_cast_all"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RayCastHit_lua.html">RayCastHit</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ray_cast_all">ray_cast_all</a> (ray: lysa.Ray, parent: <a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil)</td></tr>
+<tr class="memdesc:lua_ray_cast_all"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a ray through all MeshInstances (no physics engine) and returns all hits sorted by ascending distance, one per MeshInstance. <a href="#lua_ray_cast_all">More...</a><br /></td></tr>
+<tr class="separator:lua_ray_cast_all"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_self"><td class="memItemLeft" align="right" valign="top">any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_self">self</a></td></tr>
+<tr class="memdesc:lua_self"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to this SceneTree (for passing to engine APIs that require a shared_ptr).<br /></td></tr>
+<tr class="separator:lua_self"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_paused"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_paused">is_paused</a></td></tr>
+<tr class="memdesc:lua_is_paused"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the scene tree is paused (paused nodes stop receiving process callbacks).<br /></td></tr>
+<tr class="separator:lua_is_paused"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_attached"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_attached">is_attached</a></td></tr>
+<tr class="memdesc:lua_is_attached"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the scene tree is currently attached to a render target. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_attached"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_attached_to_window"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_attached_to_window">is_attached_to_window</a></td></tr>
+<tr class="memdesc:lua_is_attached_to_window"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the scene tree is currently attached to a RenderingWindow. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_attached_to_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_render_target"><td class="memItemLeft" align="right" valign="top">lysa.RenderTarget&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_render_target">render_target</a></td></tr>
+<tr class="memdesc:lua_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">The RenderTarget this scene tree is rendering into. (read-only)<br /></td></tr>
+<tr class="separator:lua_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rendering_window"><td class="memItemLeft" align="right" valign="top">lysa.RenderingWindow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rendering_window">rendering_window</a></td></tr>
+<tr class="memdesc:lua_rendering_window"><td class="mdescLeft">&#160;</td><td class="mdescRight">The RenderingWindow this scene tree is attached to. (read-only)<br /></td></tr>
+<tr class="separator:lua_rendering_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_attach"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil attach </td><td>(</td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">target</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attaches the scene tree to a RenderingWindow or RenderTarget to start rendering.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>any</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_detach"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil detach </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Detaches the scene tree from its current render target and window; rendering stops.</p>
+</div></div>
+<a class="anchor" id="lua_set_camera"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_camera </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Camera_lua.html">Camera</a>&#160;</td>
+          <td class="paramname">camera</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the active camera used to render this scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td><a class="el" href="Camera_lua.html">Camera</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_viewport"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_viewport </td><td>(</td>
+          <td class="paramtype">vireo.Viewport&#160;</td>
+          <td class="paramname">viewport</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overrides the viewport rectangle used when rendering this scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td>vireo.Viewport</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_scissors"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_scissors </td><td>(</td>
+          <td class="paramtype">vireo.Rect&#160;</td>
+          <td class="paramname">scissors</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overrides the scissor rectangle used when rendering this scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scissors</td><td>vireo.Rect</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a> add_child </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Node_lua.html">Node</a>&#160;</td>
+          <td class="paramname">child</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">async</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a root-level node to the scene tree.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Node_lua.html">Node</a></td></tr>
+    <tr><td class="paramname">async</td><td>boolean|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean remove_child </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Node_lua.html">Node</a>&#160;</td>
+          <td class="paramname">child</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a root-level node from the scene tree; takes effect at the start of the next frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Node_lua.html">Node</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_all_children"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_all_children </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and detaches all root-level nodes from the scene tree.</p>
+</div></div>
+<a class="anchor" id="lua_ray_cast"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RayCastHit_lua.html">RayCastHit</a>|nil ray_cast </td><td>(</td>
+          <td class="paramtype">lysa.Ray&#160;</td>
+          <td class="paramname">ray</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil&#160;</td>
+          <td class="paramname">parent</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts a ray through all MeshInstances (no physics engine) and returns the closest hit, or nil. The length of direction defines the max distance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>lysa.Ray</td></tr>
+    <tr><td class="paramname">parent</td><td><a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RayCastHit_lua.html">RayCastHit</a>|nil</dd></dl>
+</div></div>
+<a class="anchor" id="lua_ray_cast_all"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RayCastHit_lua.html">RayCastHit</a>[] ray_cast_all </td><td>(</td>
+          <td class="paramtype">lysa.Ray&#160;</td>
+          <td class="paramname">ray</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil&#160;</td>
+          <td class="paramname">parent</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts a ray through all MeshInstances (no physics engine) and returns all hits sorted by ascending distance, one per MeshInstance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>lysa.Ray</td></tr>
+    <tr><td class="paramname">parent</td><td><a class="el" href="MeshInstance_lua.html">MeshInstance</a>|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RayCastHit_lua.html">RayCastHit</a>[]</dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_self"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any self</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shared pointer to this SceneTree (for passing to engine APIs that require a shared_ptr).</p>
+</div></div>
+<a class="anchor" id="lua_is_paused"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_paused</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Whether the scene tree is paused (paused nodes stop receiving process callbacks).</p>
+</div></div>
+<a class="anchor" id="lua_is_attached"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_attached</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the scene tree is currently attached to a render target. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_is_attached_to_window"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_attached_to_window</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the scene tree is currently attached to a RenderingWindow. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_render_target"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.RenderTarget render_target</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The RenderTarget this scene tree is rendering into. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_rendering_window"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.RenderingWindow rendering_window</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The RenderingWindow this scene tree is attached to. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="SceneTree_lua.html">SceneTree</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

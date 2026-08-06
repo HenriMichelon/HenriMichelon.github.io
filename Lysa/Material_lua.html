@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Material Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Material Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base type for all materials.</p>
+<p>Lua full name: <code>lysa.Material</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_as_standard_material"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StandardMaterial_lua.html">StandardMaterial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_standard_material">as_standard_material</a> ()</td></tr>
+<tr class="memdesc:lua_as_standard_material"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this material to StandardMaterial; returns nil if the type does not match. <a href="#lua_as_standard_material">More...</a><br /></td></tr>
+<tr class="separator:lua_as_standard_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_shader_material"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderMaterial_lua.html">ShaderMaterial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_shader_material">as_shader_material</a> ()</td></tr>
+<tr class="memdesc:lua_as_shader_material"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this material to ShaderMaterial; returns nil if the type does not match. <a href="#lua_as_shader_material">More...</a><br /></td></tr>
+<tr class="separator:lua_as_shader_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique material identifier.<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">Material pipeline type (see lysa.MaterialType). (read-only)<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_cull_mode"><td class="memItemLeft" align="right" valign="top">vireo.CullMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_cull_mode">cull_mode</a></td></tr>
+<tr class="memdesc:lua_cull_mode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Back/front/none face culling mode.<br /></td></tr>
+<tr class="separator:lua_cull_mode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_transparency"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_transparency">transparency</a></td></tr>
+<tr class="memdesc:lua_transparency"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transparency blending mode (see lysa.Transparency).<br /></td></tr>
+<tr class="separator:lua_transparency"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_write"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_write">depth_write</a></td></tr>
+<tr class="memdesc:lua_depth_write"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the material writes to the depth buffer (default true).<br /></td></tr>
+<tr class="separator:lua_depth_write"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_compare_op"><td class="memItemLeft" align="right" valign="top">vireo.CompareOp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_compare_op">depth_compare_op</a></td></tr>
+<tr class="memdesc:lua_depth_compare_op"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth comparison operator (default LESS_OR_EQUAL; use ALWAYS to disable the depth test).<br /></td></tr>
+<tr class="separator:lua_depth_compare_op"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_alpha_scissor"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_alpha_scissor">alpha_scissor</a></td></tr>
+<tr class="memdesc:lua_alpha_scissor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha threshold below which fragments are discarded (0 = disabled).<br /></td></tr>
+<tr class="separator:lua_alpha_scissor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_as_standard_material"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StandardMaterial_lua.html">StandardMaterial</a> as_standard_material </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this material to StandardMaterial; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="StandardMaterial_lua.html">StandardMaterial</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_shader_material"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ShaderMaterial_lua.html">ShaderMaterial</a> as_shader_material </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this material to ShaderMaterial; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ShaderMaterial_lua.html">ShaderMaterial</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unique material identifier.</p>
+</div></div>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Material pipeline type (see lysa.MaterialType). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_cull_mode"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">vireo.CullMode cull_mode</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Back/front/none face culling mode.</p>
+</div></div>
+<a class="anchor" id="lua_transparency"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer transparency</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Transparency blending mode (see lysa.Transparency).</p>
+</div></div>
+<a class="anchor" id="lua_depth_write"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean depth_write</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Whether the material writes to the depth buffer (default true).</p>
+</div></div>
+<a class="anchor" id="lua_depth_compare_op"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">vireo.CompareOp depth_compare_op</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Depth comparison operator (default LESS_OR_EQUAL; use ALWAYS to disable the depth test).</p>
+</div></div>
+<a class="anchor" id="lua_alpha_scissor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number alpha_scissor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Alpha threshold below which fragments are discarded (0 = disabled).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Material_lua.html">Material</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: Vireo Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Vireo Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main RHI entry point. Obtained from the host application; not constructed in Lua.</p>
+<p>Lua full name: <code>vireo.Vireo</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_wait_idle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_idle">wait_idle</a> ()</td></tr>
+<tr class="memdesc:lua_wait_idle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the CPU until the GPU has finished all pending work on all queues. <a href="#lua_wait_idle">More...</a><br /></td></tr>
+<tr class="separator:lua_wait_idle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_swap_chain"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_swap_chain">create_swap_chain</a> (format: <a class="el" href="ImageFormat_lua.html">ImageFormat</a>, presentQueue: <a class="el" href="SubmitQueue_lua.html">SubmitQueue</a>, windowHandle: any, presentMode: <a class="el" href="PresentMode_lua.html">PresentMode</a>|nil, framesInFlight: integer|nil)</td></tr>
+<tr class="memdesc:lua_create_swap_chain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a swap chain for the given OS window handle with optional presentation mode and frame count. <a href="#lua_create_swap_chain">More...</a><br /></td></tr>
+<tr class="separator:lua_create_swap_chain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_submit_queue"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_submit_queue">create_submit_queue</a> (commandType: <a class="el" href="CommandType_lua.html">CommandType</a>, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_submit_queue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a GPU command submission queue for the given command type. <a href="#lua_create_submit_queue">More...</a><br /></td></tr>
+<tr class="separator:lua_create_submit_queue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_fence"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Fence_lua.html">Fence</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_fence">create_fence</a> (createSignaled: boolean|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_fence"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a CPU/GPU fence (unsignaled by default; pass createSignaled=true to start in the signaled state). <a href="#lua_create_fence">More...</a><br /></td></tr>
+<tr class="separator:lua_create_fence"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_semaphore"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_semaphore">create_semaphore</a> (type: <a class="el" href="SemaphoreType_lua.html">SemaphoreType</a>, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_semaphore"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a GPU synchronization semaphore of the given type. <a href="#lua_create_semaphore">More...</a><br /></td></tr>
+<tr class="separator:lua_create_semaphore"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_command_allocator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CommandAllocator_lua.html">CommandAllocator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_command_allocator">create_command_allocator</a> (type: <a class="el" href="CommandType_lua.html">CommandType</a>)</td></tr>
+<tr class="memdesc:lua_create_command_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a command allocator for the given queue type. <a href="#lua_create_command_allocator">More...</a><br /></td></tr>
+<tr class="separator:lua_create_command_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vertex_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VertexInputLayout_lua.html">VertexInputLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vertex_layout">create_vertex_layout</a> (size: integer, attributes: <a class="el" href="VertexAttributeDesc_lua.html">VertexAttributeDesc</a>[])</td></tr>
+<tr class="memdesc:lua_create_vertex_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vertex input layout from a per-vertex stride (bytes) and a list of attribute descriptors. <a href="#lua_create_vertex_layout">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vertex_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_shader_module_from_file"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_shader_module_from_file">create_shader_module_from_file</a> (path: string)</td></tr>
+<tr class="memdesc:lua_create_shader_module_from_file"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a compiled shader binary from a file path (append shader_file_extension for the correct format). <a href="#lua_create_shader_module_from_file">More...</a><br /></td></tr>
+<tr class="separator:lua_create_shader_module_from_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_shader_module_from_data"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_shader_module_from_data">create_shader_module_from_data</a> (data: any, name: string)</td></tr>
+<tr class="memdesc:lua_create_shader_module_from_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a shader module from raw compiled byte data with an optional debug name. <a href="#lua_create_shader_module_from_data">More...</a><br /></td></tr>
+<tr class="separator:lua_create_shader_module_from_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_pipeline_resources"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PipelineResources_lua.html">PipelineResources</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_pipeline_resources">create_pipeline_resources</a> (layouts: <a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>[]|nil, pushConstant: <a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a>|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_pipeline_resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a pipeline layout from an ordered list of descriptor layouts and an optional push-constant range. <a href="#lua_create_pipeline_resources">More...</a><br /></td></tr>
+<tr class="separator:lua_create_pipeline_resources"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_compute_pipeline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ComputePipeline_lua.html">ComputePipeline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_compute_pipeline">create_compute_pipeline</a> (resources: <a class="el" href="PipelineResources_lua.html">PipelineResources</a>, shader: <a class="el" href="ShaderModule_lua.html">ShaderModule</a>, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_compute_pipeline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles and returns a compute pipeline from a layout and a compute shader module. <a href="#lua_create_compute_pipeline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_compute_pipeline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_graphic_pipeline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="GraphicPipeline_lua.html">GraphicPipeline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_graphic_pipeline">create_graphic_pipeline</a> (config: <a class="el" href="GraphicPipelineConfiguration_lua.html">GraphicPipelineConfiguration</a>, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_graphic_pipeline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles and returns a graphics pipeline from a full configuration descriptor. <a href="#lua_create_graphic_pipeline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_graphic_pipeline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_buffer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_buffer">create_buffer</a> (type: <a class="el" href="BufferType_lua.html">BufferType</a>, size: integer, count: integer|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a GPU buffer. size is the per-element byte size; count is the number of elements (default 1). <a href="#lua_create_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_create_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_image">create_image</a> (format: <a class="el" href="ImageFormat_lua.html">ImageFormat</a>, width: integer, height: integer, mipLevels: integer|nil, arraySize: integer|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a shader-read-only GPU image. <a href="#lua_create_image">More...</a><br /></td></tr>
+<tr class="separator:lua_create_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_read_write_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_read_write_image">create_read_write_image</a> (format: <a class="el" href="ImageFormat_lua.html">ImageFormat</a>, width: integer, height: integer, mipLevels: integer|nil, arraySize: integer|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_read_write_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a GPU read/write image (UAV / storage image). <a href="#lua_create_read_write_image">More...</a><br /></td></tr>
+<tr class="separator:lua_create_read_write_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_render_target"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_render_target">create_render_target</a> (format: <a class="el" href="ImageFormat_lua.html">ImageFormat</a>, width: integer, height: integer, type: <a class="el" href="RenderTargetType_lua.html">RenderTargetType</a>|nil, clearValue: <a class="el" href="ClearValue_lua.html">ClearValue</a>|nil, arraySize: integer|nil, msaa: <a class="el" href="MSAA_lua.html">MSAA</a>|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a render target of the given format and dimensions. <a href="#lua_create_render_target">More...</a><br /></td></tr>
+<tr class="separator:lua_create_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_render_target_from_swap_chain"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_render_target_from_swap_chain">create_render_target_from_swap_chain</a> (swapChain: <a class="el" href="SwapChain_lua.html">SwapChain</a>, clearValue: <a class="el" href="ClearValue_lua.html">ClearValue</a>|nil, msaa: <a class="el" href="MSAA_lua.html">MSAA</a>|nil, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_render_target_from_swap_chain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color render target whose format and dimensions match the given swap chain. <a href="#lua_create_render_target_from_swap_chain">More...</a><br /></td></tr>
+<tr class="separator:lua_create_render_target_from_swap_chain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_descriptor_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_descriptor_layout">create_descriptor_layout</a> (name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_descriptor_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty descriptor layout for uniform, storage, image, and sampler bindings. <a href="#lua_create_descriptor_layout">More...</a><br /></td></tr>
+<tr class="separator:lua_create_descriptor_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_sampler_descriptor_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_sampler_descriptor_layout">create_sampler_descriptor_layout</a> (name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_sampler_descriptor_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty descriptor layout intended for sampler-only bindings. <a href="#lua_create_sampler_descriptor_layout">More...</a><br /></td></tr>
+<tr class="separator:lua_create_sampler_descriptor_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_dynamic_uniform_descriptor_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_dynamic_uniform_descriptor_layout">create_dynamic_uniform_descriptor_layout</a> (name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_dynamic_uniform_descriptor_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty descriptor layout for dynamic uniform buffer bindings. <a href="#lua_create_dynamic_uniform_descriptor_layout">More...</a><br /></td></tr>
+<tr class="separator:lua_create_dynamic_uniform_descriptor_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_descriptor_set"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_descriptor_set">create_descriptor_set</a> (layout: <a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>, name: string|nil)</td></tr>
+<tr class="memdesc:lua_create_descriptor_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a descriptor set from a finalized DescriptorLayout. <a href="#lua_create_descriptor_set">More...</a><br /></td></tr>
+<tr class="separator:lua_create_descriptor_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_sampler"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Sampler_lua.html">Sampler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_sampler">create_sampler</a> (minFilter: <a class="el" href="Filter_lua.html">Filter</a>, magFilter: <a class="el" href="Filter_lua.html">Filter</a>, addressModeU: <a class="el" href="AddressMode_lua.html">AddressMode</a>, addressModeV: <a class="el" href="AddressMode_lua.html">AddressMode</a>, addressModeW: <a class="el" href="AddressMode_lua.html">AddressMode</a>, minLod: number|nil, maxLod: number|nil, anisotropyEnable: boolean|nil, mipMapMode: <a class="el" href="FilterMode_lua.html">FilterMode</a>|nil, compareOp: <a class="el" href="CompareOp_lua.html">CompareOp</a>|nil)</td></tr>
+<tr class="memdesc:lua_create_sampler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an immutable texture sampler with the given filtering, addressing, LOD, and comparison parameters. <a href="#lua_create_sampler">More...</a><br /></td></tr>
+<tr class="separator:lua_create_sampler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_backend_supported"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_backend_supported">is_backend_supported</a> (backend: <a class="el" href="Backend_lua.html">Backend</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_backend_supported"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given rendering backend is available and supported on this machine. <a href="#lua_is_backend_supported">More...</a><br /></td></tr>
+<tr class="separator:lua_is_backend_supported"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_backend"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Backend_lua.html">Backend</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_backend">backend</a></td></tr>
+<tr class="memdesc:lua_backend"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active rendering backend (DIRECTX or VULKAN). (read-only)<br /></td></tr>
+<tr class="separator:lua_backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_shader_file_extension"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_shader_file_extension">shader_file_extension</a></td></tr>
+<tr class="memdesc:lua_shader_file_extension"><td class="mdescLeft">&#160;</td><td class="mdescRight">File extension for pre-compiled shaders on the active backend (e.g. ".spv" for Vulkan, ".cso" for DirectX). (read-only)<br /></td></tr>
+<tr class="separator:lua_shader_file_extension"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_physical_device"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PhysicalDevice_lua.html">PhysicalDevice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_physical_device">physical_device</a></td></tr>
+<tr class="memdesc:lua_physical_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">The PhysicalDevice representing the selected GPU. (read-only)<br /></td></tr>
+<tr class="separator:lua_physical_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_device"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Device_lua.html">Device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_device">device</a></td></tr>
+<tr class="memdesc:lua_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical Device wrapping the GPU. (read-only)<br /></td></tr>
+<tr class="separator:lua_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_instance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Instance_lua.html">Instance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_instance">instance</a></td></tr>
+<tr class="memdesc:lua_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying API Instance (VkInstance / IDXGIFactory). (read-only)<br /></td></tr>
+<tr class="separator:lua_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_wait_idle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil wait_idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blocks the CPU until the GPU has finished all pending work on all queues.</p>
+</div></div>
+<a class="anchor" id="lua_create_swap_chain"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="SwapChain_lua.html">SwapChain</a> create_swap_chain </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td>
+          <td class="paramname">format</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a>&#160;</td>
+          <td class="paramname">presentQueue</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">windowHandle</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="PresentMode_lua.html">PresentMode</a>|nil&#160;</td>
+          <td class="paramname">presentMode</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">framesInFlight</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a swap chain for the given OS window handle with optional presentation mode and frame count.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td><a class="el" href="ImageFormat_lua.html">ImageFormat</a></td></tr>
+    <tr><td class="paramname">presentQueue</td><td><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a></td></tr>
+    <tr><td class="paramname">windowHandle</td><td>any</td></tr>
+    <tr><td class="paramname">presentMode</td><td><a class="el" href="PresentMode_lua.html">PresentMode</a>|nil</td></tr>
+    <tr><td class="paramname">framesInFlight</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="SwapChain_lua.html">SwapChain</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_submit_queue"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a> create_submit_queue </td><td>(</td>
+          <td class="paramtype"><a class="el" href="CommandType_lua.html">CommandType</a>&#160;</td>
+          <td class="paramname">commandType</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a GPU command submission queue for the given command type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandType</td><td><a class="el" href="CommandType_lua.html">CommandType</a></td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_fence"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Fence_lua.html">Fence</a> create_fence </td><td>(</td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">createSignaled</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a CPU/GPU fence (unsignaled by default; pass createSignaled=true to start in the signaled state).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createSignaled</td><td>boolean|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Fence_lua.html">Fence</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_semaphore"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Semaphore_lua.html">Semaphore</a> create_semaphore </td><td>(</td>
+          <td class="paramtype"><a class="el" href="SemaphoreType_lua.html">SemaphoreType</a>&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a GPU synchronization semaphore of the given type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="SemaphoreType_lua.html">SemaphoreType</a></td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Semaphore_lua.html">Semaphore</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_command_allocator"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="CommandAllocator_lua.html">CommandAllocator</a> create_command_allocator </td><td>(</td>
+          <td class="paramtype"><a class="el" href="CommandType_lua.html">CommandType</a>&#160;</td>
+          <td class="paramname">type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a command allocator for the given queue type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="CommandType_lua.html">CommandType</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="CommandAllocator_lua.html">CommandAllocator</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vertex_layout"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VertexInputLayout_lua.html">VertexInputLayout</a> create_vertex_layout </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">size</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="VertexAttributeDesc_lua.html">VertexAttributeDesc</a>[]&#160;</td>
+          <td class="paramname">attributes</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a vertex input layout from a per-vertex stride (bytes) and a list of attribute descriptors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>integer</td></tr>
+    <tr><td class="paramname">attributes</td><td><a class="el" href="VertexAttributeDesc_lua.html">VertexAttributeDesc</a>[]</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VertexInputLayout_lua.html">VertexInputLayout</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_shader_module_from_file"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a> create_shader_module_from_file </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads a compiled shader binary from a file path (append shader_file_extension for the correct format).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ShaderModule_lua.html">ShaderModule</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_shader_module_from_data"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a> create_shader_module_from_data </td><td>(</td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">data</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a shader module from raw compiled byte data with an optional debug name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>any</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ShaderModule_lua.html">ShaderModule</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_pipeline_resources"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="PipelineResources_lua.html">PipelineResources</a> create_pipeline_resources </td><td>(</td>
+          <td class="paramtype"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>[]|nil&#160;</td>
+          <td class="paramname">layouts</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a>|nil&#160;</td>
+          <td class="paramname">pushConstant</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a pipeline layout from an ordered list of descriptor layouts and an optional push-constant range.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layouts</td><td><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>[]|nil</td></tr>
+    <tr><td class="paramname">pushConstant</td><td><a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a>|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="PipelineResources_lua.html">PipelineResources</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_compute_pipeline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ComputePipeline_lua.html">ComputePipeline</a> create_compute_pipeline </td><td>(</td>
+          <td class="paramtype"><a class="el" href="PipelineResources_lua.html">PipelineResources</a>&#160;</td>
+          <td class="paramname">resources</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>&#160;</td>
+          <td class="paramname">shader</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compiles and returns a compute pipeline from a layout and a compute shader module.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resources</td><td><a class="el" href="PipelineResources_lua.html">PipelineResources</a></td></tr>
+    <tr><td class="paramname">shader</td><td><a class="el" href="ShaderModule_lua.html">ShaderModule</a></td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ComputePipeline_lua.html">ComputePipeline</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_graphic_pipeline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="GraphicPipeline_lua.html">GraphicPipeline</a> create_graphic_pipeline </td><td>(</td>
+          <td class="paramtype"><a class="el" href="GraphicPipelineConfiguration_lua.html">GraphicPipelineConfiguration</a>&#160;</td>
+          <td class="paramname">config</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compiles and returns a graphics pipeline from a full configuration descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="GraphicPipelineConfiguration_lua.html">GraphicPipelineConfiguration</a></td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="GraphicPipeline_lua.html">GraphicPipeline</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Buffer_lua.html">Buffer</a> create_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="BufferType_lua.html">BufferType</a>&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">size</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">count</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocates a GPU buffer. size is the per-element byte size; count is the number of elements (default 1).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="BufferType_lua.html">BufferType</a></td></tr>
+    <tr><td class="paramname">size</td><td>integer</td></tr>
+    <tr><td class="paramname">count</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Buffer_lua.html">Buffer</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> create_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td>
+          <td class="paramname">format</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevels</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">arraySize</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocates a shader-read-only GPU image.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td><a class="el" href="ImageFormat_lua.html">ImageFormat</a></td></tr>
+    <tr><td class="paramname">width</td><td>integer</td></tr>
+    <tr><td class="paramname">height</td><td>integer</td></tr>
+    <tr><td class="paramname">mipLevels</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">arraySize</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_read_write_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> create_read_write_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td>
+          <td class="paramname">format</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">mipLevels</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">arraySize</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocates a GPU read/write image (UAV / storage image).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td><a class="el" href="ImageFormat_lua.html">ImageFormat</a></td></tr>
+    <tr><td class="paramname">width</td><td>integer</td></tr>
+    <tr><td class="paramname">height</td><td>integer</td></tr>
+    <tr><td class="paramname">mipLevels</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">arraySize</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_render_target"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RenderTarget_lua.html">RenderTarget</a> create_render_target </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td>
+          <td class="paramname">format</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="RenderTargetType_lua.html">RenderTargetType</a>|nil&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ClearValue_lua.html">ClearValue</a>|nil&#160;</td>
+          <td class="paramname">clearValue</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">arraySize</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MSAA_lua.html">MSAA</a>|nil&#160;</td>
+          <td class="paramname">msaa</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a render target of the given format and dimensions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td><a class="el" href="ImageFormat_lua.html">ImageFormat</a></td></tr>
+    <tr><td class="paramname">width</td><td>integer</td></tr>
+    <tr><td class="paramname">height</td><td>integer</td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="RenderTargetType_lua.html">RenderTargetType</a>|nil</td></tr>
+    <tr><td class="paramname">clearValue</td><td><a class="el" href="ClearValue_lua.html">ClearValue</a>|nil</td></tr>
+    <tr><td class="paramname">arraySize</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">msaa</td><td><a class="el" href="MSAA_lua.html">MSAA</a>|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RenderTarget_lua.html">RenderTarget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_render_target_from_swap_chain"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RenderTarget_lua.html">RenderTarget</a> create_render_target_from_swap_chain </td><td>(</td>
+          <td class="paramtype"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td>
+          <td class="paramname">swapChain</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ClearValue_lua.html">ClearValue</a>|nil&#160;</td>
+          <td class="paramname">clearValue</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MSAA_lua.html">MSAA</a>|nil&#160;</td>
+          <td class="paramname">msaa</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a color render target whose format and dimensions match the given swap chain.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">swapChain</td><td><a class="el" href="SwapChain_lua.html">SwapChain</a></td></tr>
+    <tr><td class="paramname">clearValue</td><td><a class="el" href="ClearValue_lua.html">ClearValue</a>|nil</td></tr>
+    <tr><td class="paramname">msaa</td><td><a class="el" href="MSAA_lua.html">MSAA</a>|nil</td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RenderTarget_lua.html">RenderTarget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_descriptor_layout"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a> create_descriptor_layout </td><td>(</td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an empty descriptor layout for uniform, storage, image, and sampler bindings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_sampler_descriptor_layout"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a> create_sampler_descriptor_layout </td><td>(</td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an empty descriptor layout intended for sampler-only bindings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_dynamic_uniform_descriptor_layout"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a> create_dynamic_uniform_descriptor_layout </td><td>(</td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an empty descriptor layout for dynamic uniform buffer bindings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_descriptor_set"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a> create_descriptor_set </td><td>(</td>
+          <td class="paramtype"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>&#160;</td>
+          <td class="paramname">layout</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a descriptor set from a finalized DescriptorLayout.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layout</td><td><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a></td></tr>
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_sampler"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Sampler_lua.html">Sampler</a> create_sampler </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Filter_lua.html">Filter</a>&#160;</td>
+          <td class="paramname">minFilter</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Filter_lua.html">Filter</a>&#160;</td>
+          <td class="paramname">magFilter</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="AddressMode_lua.html">AddressMode</a>&#160;</td>
+          <td class="paramname">addressModeU</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="AddressMode_lua.html">AddressMode</a>&#160;</td>
+          <td class="paramname">addressModeV</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="AddressMode_lua.html">AddressMode</a>&#160;</td>
+          <td class="paramname">addressModeW</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number|nil&#160;</td>
+          <td class="paramname">minLod</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number|nil&#160;</td>
+          <td class="paramname">maxLod</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">anisotropyEnable</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="FilterMode_lua.html">FilterMode</a>|nil&#160;</td>
+          <td class="paramname">mipMapMode</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CompareOp_lua.html">CompareOp</a>|nil&#160;</td>
+          <td class="paramname">compareOp</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an immutable texture sampler with the given filtering, addressing, LOD, and comparison parameters.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">minFilter</td><td><a class="el" href="Filter_lua.html">Filter</a></td></tr>
+    <tr><td class="paramname">magFilter</td><td><a class="el" href="Filter_lua.html">Filter</a></td></tr>
+    <tr><td class="paramname">addressModeU</td><td><a class="el" href="AddressMode_lua.html">AddressMode</a></td></tr>
+    <tr><td class="paramname">addressModeV</td><td><a class="el" href="AddressMode_lua.html">AddressMode</a></td></tr>
+    <tr><td class="paramname">addressModeW</td><td><a class="el" href="AddressMode_lua.html">AddressMode</a></td></tr>
+    <tr><td class="paramname">minLod</td><td>number|nil</td></tr>
+    <tr><td class="paramname">maxLod</td><td>number|nil</td></tr>
+    <tr><td class="paramname">anisotropyEnable</td><td>boolean|nil</td></tr>
+    <tr><td class="paramname">mipMapMode</td><td><a class="el" href="FilterMode_lua.html">FilterMode</a>|nil</td></tr>
+    <tr><td class="paramname">compareOp</td><td><a class="el" href="CompareOp_lua.html">CompareOp</a>|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Sampler_lua.html">Sampler</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_backend_supported"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_backend_supported </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Backend_lua.html">Backend</a>&#160;</td>
+          <td class="paramname">backend</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the given rendering backend is available and supported on this machine.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">backend</td><td><a class="el" href="Backend_lua.html">Backend</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_backend"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Backend_lua.html">Backend</a> backend</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The active rendering backend (DIRECTX or VULKAN). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_shader_file_extension"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string shader_file_extension</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>File extension for pre-compiled shaders on the active backend (e.g. ".spv" for Vulkan, ".cso" for DirectX). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_physical_device"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="PhysicalDevice_lua.html">PhysicalDevice</a> physical_device</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The PhysicalDevice representing the selected GPU. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_device"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Device_lua.html">Device</a> device</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The logical Device wrapping the GPU. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_instance"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Instance_lua.html">Instance</a> instance</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The underlying API Instance (VkInstance / IDXGIFactory). (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="Vireo_lua.html">Vireo</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: ImageManager Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">ImageManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Loads, caches, and destroys GPU images.</p>
+<p>Lua full name: <code>lysa.ImageManager</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_load"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_load">load</a> (path: string)</td></tr>
+<tr class="memdesc:lua_load"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an image from the given virtual path and uploads it to the GPU. <a href="#lua_load">More...</a><br /></td></tr>
+<tr class="separator:lua_load"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_save"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_save">save</a> (img: <a class="el" href="Image_lua.html">Image</a>, path: string)</td></tr>
+<tr class="memdesc:lua_save"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves an image to disk at the given virtual path. <a href="#lua_save">More...</a><br /></td></tr>
+<tr class="separator:lua_save"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get">get</a> (id: integer)</td></tr>
+<tr class="memdesc:lua_get"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image with the given id. <a href="#lua_get">More...</a><br /></td></tr>
+<tr class="separator:lua_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get">get</a> (name: string)</td></tr>
+<tr class="memdesc:lua_get"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the image with the given name; raises an exception if not found. <a href="#lua_get">More...</a><br /></td></tr>
+<tr class="separator:lua_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_contains"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_contains">contains</a> (name: string)</td></tr>
+<tr class="memdesc:lua_contains"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if an image with the given name exists. <a href="#lua_contains">More...</a><br /></td></tr>
+<tr class="separator:lua_contains"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (id: integer)</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the image with the given id and releases its GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (img: <a class="el" href="Image_lua.html">Image</a>)</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the given image and releases its GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (ids: integer[])</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys all images in the list and releases their GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_blank_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_blank_image">blank_image</a></td></tr>
+<tr class="memdesc:lua_blank_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">1×1 white RGBA image usable as a no-texture placeholder. (read-only)<br /></td></tr>
+<tr class="separator:lua_blank_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_blank_cube_map"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_blank_cube_map">blank_cube_map</a></td></tr>
+<tr class="memdesc:lua_blank_cube_map"><td class="mdescLeft">&#160;</td><td class="mdescRight">1×1 white cube-map usable as a no-texture placeholder. (read-only)<br /></td></tr>
+<tr class="separator:lua_blank_cube_map"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_images"><td class="memItemLeft" align="right" valign="top">table&lt;integer,&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_images">images</a></td></tr>
+<tr class="memdesc:lua_images"><td class="mdescLeft">&#160;</td><td class="mdescRight">lysa.Image&gt; All loaded images keyed by id. (read-only)<br /></td></tr>
+<tr class="separator:lua_images"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_load"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> load </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads an image from the given virtual path and uploads it to the GPU.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_save"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil save </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">img</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Saves an image to disk at the given virtual path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">path</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> get </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the image with the given id.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> get </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the image with the given name; raises an exception if not found.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_contains"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean contains </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if an image with the given name exists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys the image with the given id and releases its GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">img</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys the given image and releases its GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype">integer[]&#160;</td>
+          <td class="paramname">ids</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys all images in the list and releases their GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ids</td><td>integer[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_blank_image"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Image_lua.html">Image</a> blank_image</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>1×1 white RGBA image usable as a no-texture placeholder. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_blank_cube_map"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Image_lua.html">Image</a> blank_cube_map</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>1×1 white cube-map usable as a no-texture placeholder. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_images"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">table&lt;integer, images</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>lysa.Image&gt; All loaded images keyed by id. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="ImageManager_lua.html">ImageManager</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

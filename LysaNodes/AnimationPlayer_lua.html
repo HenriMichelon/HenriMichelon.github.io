@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: AnimationPlayer Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">AnimationPlayer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A node that plays skeletal or property animations from an asset's animation library.</p>
+<p>Inherits from: <a class="el" href="Node_lua.html">Node</a></p>
+<p>Lua full name: <code>lysa.nodes.AnimationPlayer</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_current_library"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_current_library">set_current_library</a> (library: string)</td></tr>
+<tr class="memdesc:lua_set_current_library"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the active animation library by name. <a href="#lua_set_current_library">More...</a><br /></td></tr>
+<tr class="separator:lua_set_current_library"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_play"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_play">play</a> (name: string|nil)</td></tr>
+<tr class="memdesc:lua_play"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts an animation by name; pass nil or an empty string to replay the current animation. <a href="#lua_play">More...</a><br /></td></tr>
+<tr class="separator:lua_play"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_play_backwards"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_play_backwards">play_backwards</a> (name: string|nil)</td></tr>
+<tr class="memdesc:lua_play_backwards"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts an animation in reverse by name; pass nil or empty string for the current animation. <a href="#lua_play_backwards">More...</a><br /></td></tr>
+<tr class="separator:lua_play_backwards"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_stop"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_stop">stop</a> ()</td></tr>
+<tr class="memdesc:lua_stop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the currently playing animation and resets to the first frame. <a href="#lua_stop">More...</a><br /></td></tr>
+<tr class="separator:lua_stop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_seek"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_seek">seek</a> (time: number)</td></tr>
+<tr class="memdesc:lua_seek"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seeks the animation to the given time in seconds without changing play state. <a href="#lua_seek">More...</a><br /></td></tr>
+<tr class="separator:lua_seek"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_auto_start"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_auto_start">set_auto_start</a> (auto: boolean)</td></tr>
+<tr class="memdesc:lua_set_auto_start"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the player automatically starts its animation when the node enters the scene tree. <a href="#lua_set_auto_start">More...</a><br /></td></tr>
+<tr class="separator:lua_set_auto_start"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_target_path"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_target_path">set_target_path</a> (path: string)</td></tr>
+<tr class="memdesc:lua_set_target_path"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the target node path for all animation tracks (useful when instancing shared animations on different nodes). <a href="#lua_set_target_path">More...</a><br /></td></tr>
+<tr class="separator:lua_set_target_path"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_current_animation_name"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_current_animation_name">current_animation_name</a></td></tr>
+<tr class="memdesc:lua_current_animation_name"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the currently active animation. (read-only)<br /></td></tr>
+<tr class="separator:lua_current_animation_name"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_current_animation"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_current_animation">current_animation</a></td></tr>
+<tr class="memdesc:lua_current_animation"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the animation currently queued or playing.<br /></td></tr>
+<tr class="separator:lua_current_animation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_playing"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_playing">is_playing</a></td></tr>
+<tr class="memdesc:lua_is_playing"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if an animation is currently playing. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_playing"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_current_library"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_current_library </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">library</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Selects the active animation library by name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">library</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_play"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil play </td><td>(</td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts an animation by name; pass nil or an empty string to replay the current animation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_play_backwards"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil play_backwards </td><td>(</td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts an animation in reverse by name; pass nil or empty string for the current animation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_stop"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stops the currently playing animation and resets to the first frame.</p>
+</div></div>
+<a class="anchor" id="lua_seek"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil seek </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">time</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Seeks the animation to the given time in seconds without changing play state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_auto_start"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_auto_start </td><td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">auto</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets whether the player automatically starts its animation when the node enters the scene tree.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">auto</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_target_path"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_target_path </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overrides the target node path for all animation tracks (useful when instancing shared animations on different nodes).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_current_animation_name"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string current_animation_name</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The name of the currently active animation. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_current_animation"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string current_animation</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The name of the animation currently queued or playing.</p>
+</div></div>
+<a class="anchor" id="lua_is_playing"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_playing</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if an animation is currently playing. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="AnimationPlayer_lua.html">AnimationPlayer</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

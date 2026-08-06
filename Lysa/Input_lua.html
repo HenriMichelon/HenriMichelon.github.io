@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Input Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">Input Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Static input polling utilities.</p>
+<p>Lua full name: <code>lysa.Input</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_is_key_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_key_pressed">is_key_pressed</a> (key: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_key_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true while the given key is held down. <a href="#lua_is_key_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_key_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_key_just_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_key_just_pressed">is_key_just_pressed</a> (key: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_key_just_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the key was pressed. <a href="#lua_is_key_just_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_key_just_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_key_just_released"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_key_just_released">is_key_just_released</a> (key: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_key_just_released"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the key was released. <a href="#lua_is_key_just_released">More...</a><br /></td></tr>
+<tr class="separator:lua_is_key_just_released"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_keyboard_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float2_lua.html">float2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_keyboard_vector">get_keyboard_vector</a> (negX: integer, posX: integer, negY: integer, posY: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_keyboard_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a 2-D movement vector from four keys (e.g. WASD). <a href="#lua_get_keyboard_vector">More...</a><br /></td></tr>
+<tr class="separator:lua_get_keyboard_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_mouse_button_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_mouse_button_pressed">is_mouse_button_pressed</a> (button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_mouse_button_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true while the given mouse button is held down. <a href="#lua_is_mouse_button_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_mouse_button_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_mouse_button_just_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_mouse_button_just_pressed">is_mouse_button_just_pressed</a> (button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_mouse_button_just_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the mouse button was pressed. <a href="#lua_is_mouse_button_just_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_mouse_button_just_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_mouse_button_just_released"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_mouse_button_just_released">is_mouse_button_just_released</a> (button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_mouse_button_just_released"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the mouse button was released. <a href="#lua_is_mouse_button_just_released">More...</a><br /></td></tr>
+<tr class="separator:lua_is_mouse_button_just_released"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_connected_joypads"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_connected_joypads">get_connected_joypads</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_connected_joypads"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of connected joypads/gamepads. <a href="#lua_get_connected_joypads">More...</a><br /></td></tr>
+<tr class="separator:lua_get_connected_joypads"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_gamepad"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_gamepad">is_gamepad</a> (index: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_gamepad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the joypad at the given index is a gamepad. <a href="#lua_is_gamepad">More...</a><br /></td></tr>
+<tr class="separator:lua_is_gamepad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_joypad_name"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_joypad_name">get_joypad_name</a> (index: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_joypad_name"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name string of the joypad at the given index. <a href="#lua_get_joypad_name">More...</a><br /></td></tr>
+<tr class="separator:lua_get_joypad_name"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_gamepad_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float2_lua.html">float2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_gamepad_vector">get_gamepad_vector</a> (index: integer, axis: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_gamepad_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 2-D vector from a gamepad joystick axis. <a href="#lua_get_gamepad_vector">More...</a><br /></td></tr>
+<tr class="separator:lua_get_gamepad_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_gamepad_button_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_gamepad_button_pressed">is_gamepad_button_pressed</a> (index: integer, button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_gamepad_button_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true while the given gamepad button is held down. <a href="#lua_is_gamepad_button_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_gamepad_button_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_gamepad_button_just_released"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_gamepad_button_just_released">is_gamepad_button_just_released</a> (button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_gamepad_button_just_released"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the gamepad button was released. <a href="#lua_is_gamepad_button_just_released">More...</a><br /></td></tr>
+<tr class="separator:lua_is_gamepad_button_just_released"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_gamepad_button_just_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_gamepad_button_just_pressed">is_gamepad_button_just_pressed</a> (button: integer)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_gamepad_button_just_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true only on the first frame the gamepad button was pressed. <a href="#lua_is_gamepad_button_just_pressed">More...</a><br /></td></tr>
+<tr class="separator:lua_is_gamepad_button_just_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_action"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_action">add_action</a> (action: <a class="el" href="InputAction_lua.html">InputAction</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_add_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a named input action; returns true on success. <a href="#lua_add_action">More...</a><br /></td></tr>
+<tr class="separator:lua_add_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_action"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_action">is_action</a> (name: string, event: <a class="el" href="InputEvent_lua.html">InputEvent</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_is_action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given event matches the named action. <a href="#lua_is_action">More...</a><br /></td></tr>
+<tr class="separator:lua_is_action"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_is_key_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_key_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">key</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true while the given key is held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_key_just_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_key_just_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">key</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the key was pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_key_just_released"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_key_just_released </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">key</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the key was released.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_keyboard_vector"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float2_lua.html">float2</a> get_keyboard_vector </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">negX</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">posX</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">negY</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">posY</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a 2-D movement vector from four keys (e.g. WASD).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">negX</td><td>integer</td></tr>
+    <tr><td class="paramname">posX</td><td>integer</td></tr>
+    <tr><td class="paramname">negY</td><td>integer</td></tr>
+    <tr><td class="paramname">posY</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float2_lua.html">float2</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_mouse_button_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_mouse_button_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true while the given mouse button is held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_mouse_button_just_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_mouse_button_just_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the mouse button was pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_mouse_button_just_released"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_mouse_button_just_released </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the mouse button was released.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_connected_joypads"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_connected_joypads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of connected joypads/gamepads.</p>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_gamepad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_gamepad </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the joypad at the given index is a gamepad.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_joypad_name"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string get_joypad_name </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the name string of the joypad at the given index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_gamepad_vector"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float2_lua.html">float2</a> get_gamepad_vector </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">axis</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a 2-D vector from a gamepad joystick axis.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+    <tr><td class="paramname">axis</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float2_lua.html">float2</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_gamepad_button_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_gamepad_button_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true while the given gamepad button is held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_gamepad_button_just_released"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_gamepad_button_just_released </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the gamepad button was released.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_gamepad_button_just_pressed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_gamepad_button_just_pressed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">button</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true only on the first frame the gamepad button was pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_action"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean add_action </td><td>(</td>
+          <td class="paramtype"><a class="el" href="InputAction_lua.html">InputAction</a>&#160;</td>
+          <td class="paramname">action</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Registers a named input action; returns true on success.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td><a class="el" href="InputAction_lua.html">InputAction</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_action"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_action </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="InputEvent_lua.html">InputEvent</a>&#160;</td>
+          <td class="paramname">event</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the given event matches the named action.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+    <tr><td class="paramname">event</td><td><a class="el" href="InputEvent_lua.html">InputEvent</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Input_lua.html">Input</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

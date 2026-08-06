@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: DescriptorSet Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">DescriptorSet Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A bound collection of resources (buffers, images, samplers) for a pipeline. Created by Vireo.create_descriptor_set().</p>
+<p>Lua full name: <code>vireo.DescriptorSet</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_update_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_buffer">update_buffer</a> (index: vireo.DescriptorIndex, buffer: <a class="el" href="Buffer_lua.html">Buffer</a>)</td></tr>
+<tr class="memdesc:lua_update_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a uniform or storage buffer at the given binding index. <a href="#lua_update_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_update_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_dynamic_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_dynamic_buffer">update_dynamic_buffer</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>)</td></tr>
+<tr class="memdesc:lua_update_dynamic_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a dynamic uniform buffer at binding index 0; the byte offset is supplied at bind time. <a href="#lua_update_dynamic_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_update_dynamic_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_image">update_image</a> (index: vireo.DescriptorIndex, image: <a class="el" href="Image_lua.html">Image</a>)</td></tr>
+<tr class="memdesc:lua_update_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a sampled image or storage image at the given binding index. <a href="#lua_update_image">More...</a><br /></td></tr>
+<tr class="separator:lua_update_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_sampler"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_sampler">update_sampler</a> (index: vireo.DescriptorIndex, sampler: <a class="el" href="Sampler_lua.html">Sampler</a>)</td></tr>
+<tr class="memdesc:lua_update_sampler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a sampler at the given binding index. <a href="#lua_update_sampler">More...</a><br /></td></tr>
+<tr class="separator:lua_update_sampler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_image_array"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_image_array">update_image_array</a> (index: vireo.DescriptorIndex, images: <a class="el" href="Image_lua.html">Image</a>[])</td></tr>
+<tr class="memdesc:lua_update_image_array"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an array of images starting at the given binding index. <a href="#lua_update_image_array">More...</a><br /></td></tr>
+<tr class="separator:lua_update_image_array"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_buffer_array"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_buffer_array">update_buffer_array</a> (index: vireo.DescriptorIndex, buffers: <a class="el" href="Buffer_lua.html">Buffer</a>[])</td></tr>
+<tr class="memdesc:lua_update_buffer_array"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an array of buffers starting at the given binding index. <a href="#lua_update_buffer_array">More...</a><br /></td></tr>
+<tr class="separator:lua_update_buffer_array"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_sampler_array"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_sampler_array">update_sampler_array</a> (index: vireo.DescriptorIndex, samplers: <a class="el" href="Sampler_lua.html">Sampler</a>[])</td></tr>
+<tr class="memdesc:lua_update_sampler_array"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an array of samplers starting at the given binding index. <a href="#lua_update_sampler_array">More...</a><br /></td></tr>
+<tr class="separator:lua_update_sampler_array"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_layout">layout</a></td></tr>
+<tr class="memdesc:lua_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DescriptorLayout this set was created from. (read-only)<br /></td></tr>
+<tr class="separator:lua_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_update_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_buffer </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a uniform or storage buffer at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_dynamic_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_dynamic_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a dynamic uniform buffer at binding index 0; the byte offset is supplied at bind time.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_image </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">image</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a sampled image or storage image at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">image</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_sampler"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_sampler </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Sampler_lua.html">Sampler</a>&#160;</td>
+          <td class="paramname">sampler</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a sampler at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">sampler</td><td><a class="el" href="Sampler_lua.html">Sampler</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_image_array"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_image_array </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>[]&#160;</td>
+          <td class="paramname">images</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds an array of images starting at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">images</td><td><a class="el" href="Image_lua.html">Image</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_buffer_array"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_buffer_array </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>[]&#160;</td>
+          <td class="paramname">buffers</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds an array of buffers starting at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">buffers</td><td><a class="el" href="Buffer_lua.html">Buffer</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_sampler_array"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_sampler_array </td><td>(</td>
+          <td class="paramtype">vireo.DescriptorIndex&#160;</td>
+          <td class="paramname">index</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Sampler_lua.html">Sampler</a>[]&#160;</td>
+          <td class="paramname">samplers</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds an array of samplers starting at the given binding index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>vireo.DescriptorIndex</td></tr>
+    <tr><td class="paramname">samplers</td><td><a class="el" href="Sampler_lua.html">Sampler</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_layout"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="DescriptorLayout_lua.html">DescriptorLayout</a> layout</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The DescriptorLayout this set was created from. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

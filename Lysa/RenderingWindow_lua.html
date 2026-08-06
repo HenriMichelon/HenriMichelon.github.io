@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: RenderingWindow Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">RenderingWindow Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A platform window with an associated GPU render target.</p>
+<p>Lua full name: <code>lysa.RenderingWindow</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_close"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_close">close</a> ()</td></tr>
+<tr class="memdesc:lua_close"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes and destroys the window. <a href="#lua_close">More...</a><br /></td></tr>
+<tr class="separator:lua_close"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_rect"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_rect">get_rect</a> ()</td></tr>
+<tr class="memdesc:lua_get_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the window position and size as a Rect. <a href="#lua_get_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_get_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_title"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_title">set_title</a> (title: string)</td></tr>
+<tr class="memdesc:lua_set_title"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the window title bar text. <a href="#lua_set_title">More...</a><br /></td></tr>
+<tr class="separator:lua_set_title"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_mouse_mode"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_mouse_mode">set_mouse_mode</a> (mode: integer)</td></tr>
+<tr class="memdesc:lua_set_mouse_mode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse capture/visibility mode (see lysa.MouseMode). <a href="#lua_set_mouse_mode">More...</a><br /></td></tr>
+<tr class="separator:lua_set_mouse_mode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_mouse_cursor"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_mouse_cursor">set_mouse_cursor</a> (cursor: integer)</td></tr>
+<tr class="memdesc:lua_set_mouse_cursor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse cursor shape (see lysa.MouseCursor). <a href="#lua_set_mouse_cursor">More...</a><br /></td></tr>
+<tr class="separator:lua_set_mouse_cursor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_reset_mouse_position"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_reset_mouse_position">reset_mouse_position</a> ()</td></tr>
+<tr class="memdesc:lua_reset_mouse_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the mouse position to the center of the window. <a href="#lua_reset_mouse_position">More...</a><br /></td></tr>
+<tr class="separator:lua_reset_mouse_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_mouse_hidden"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_mouse_hidden">is_mouse_hidden</a> ()</td></tr>
+<tr class="memdesc:lua_is_mouse_hidden"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the mouse cursor is hidden. <a href="#lua_is_mouse_hidden">More...</a><br /></td></tr>
+<tr class="separator:lua_is_mouse_hidden"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_mouse_position"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float2_lua.html">float2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_mouse_position">get_mouse_position</a> ()</td></tr>
+<tr class="memdesc:lua_get_mouse_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current mouse position in window coordinates. <a href="#lua_get_mouse_position">More...</a><br /></td></tr>
+<tr class="separator:lua_get_mouse_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_mouse_position"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_mouse_position">set_mouse_position</a> (pos: <a class="el" href="float2_lua.html">float2</a>)</td></tr>
+<tr class="memdesc:lua_set_mouse_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse position in window coordinates. <a href="#lua_set_mouse_position">More...</a><br /></td></tr>
+<tr class="separator:lua_set_mouse_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_full_screen_modes"><td class="memItemLeft" align="right" valign="top">table&lt;integer,lysa.Rect&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_full_screen_modes">get_full_screen_modes</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_full_screen_modes"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a table of available fullscreen resolutions. <a href="#lua_get_full_screen_modes">More...</a><br /></td></tr>
+<tr class="separator:lua_get_full_screen_modes"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: RenderingWindow()  RenderingWindow(cfg)<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_paused"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_paused">paused</a></td></tr>
+<tr class="memdesc:lua_paused"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the window's render loop is paused.<br /></td></tr>
+<tr class="separator:lua_paused"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_minimized"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_minimized">minimized</a></td></tr>
+<tr class="memdesc:lua_minimized"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the window is minimized. (read-only)<br /></td></tr>
+<tr class="separator:lua_minimized"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_mouse_hidden"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_mouse_hidden">mouse_hidden</a></td></tr>
+<tr class="memdesc:lua_mouse_hidden"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the mouse cursor is hidden. (read-only)<br /></td></tr>
+<tr class="separator:lua_mouse_hidden"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_close"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Closes and destroys the window.</p>
+</div></div>
+<a class="anchor" id="lua_get_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Rect_lua.html">Rect</a> get_rect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the window position and size as a Rect.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Rect_lua.html">Rect</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_title"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_title </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">title</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the window title bar text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_mouse_mode"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_mouse_mode </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">mode</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the mouse capture/visibility mode (see lysa.MouseMode).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_mouse_cursor"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_mouse_cursor </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">cursor</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the mouse cursor shape (see lysa.MouseCursor).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cursor</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_reset_mouse_position"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil reset_mouse_position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resets the mouse position to the center of the window.</p>
+</div></div>
+<a class="anchor" id="lua_is_mouse_hidden"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_mouse_hidden </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the mouse cursor is hidden.</p>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_mouse_position"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float2_lua.html">float2</a> get_mouse_position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the current mouse position in window coordinates.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float2_lua.html">float2</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_mouse_position"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_mouse_position </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">pos</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the mouse position in window coordinates.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_full_screen_modes"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">table&lt;integer,lysa.Rect&gt; get_full_screen_modes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a table of available fullscreen resolutions.</p>
+<dl class="section return"><dt>Returns</dt><dd>table&lt;integer,lysa.Rect&gt;</dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Constructor: RenderingWindow()  RenderingWindow(cfg)</p>
+</div></div>
+<a class="anchor" id="lua_paused"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean paused</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Whether the window's render loop is paused.</p>
+</div></div>
+<a class="anchor" id="lua_minimized"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean minimized</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the window is minimized. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_mouse_hidden"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean mouse_hidden</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the mouse cursor is hidden. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="RenderingWindow_lua.html">RenderingWindow</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: ScrollBox Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">ScrollBox Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scrollable container with horizontal and vertical scroll bars. Add children via add_content.</p>
+<p>Inherits from: <a class="el" href="Box_lua.html">Box</a></p>
+<p>Lua full name: <code>lysa.ui.ScrollBox</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_resources"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_resources">set_resources</a> (resBox: string, resVScroll: string, resHScroll: string)</td></tr>
+<tr class="memdesc:lua_set_resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads the visual style: resBox = inner box, resVScroll = vertical scroll bar, resHScroll = horizontal scroll bar. <a href="#lua_set_resources">More...</a><br /></td></tr>
+<tr class="separator:lua_set_resources"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_content"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_content">add_content</a> (child: <a class="el" href="Widget_lua.html">Widget</a>, alignment: integer, resource: string)</td></tr>
+<tr class="memdesc:lua_add_content"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a child widget to the scrollable inner box. <a href="#lua_add_content">More...</a><br /></td></tr>
+<tr class="separator:lua_add_content"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_content"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_content">remove_content</a> (child: <a class="el" href="Widget_lua.html">Widget</a>)</td></tr>
+<tr class="memdesc:lua_remove_content"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a child widget from the inner box. <a href="#lua_remove_content">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_content"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_all_content"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_all_content">remove_all_content</a> ()</td></tr>
+<tr class="memdesc:lua_remove_all_content"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all children from the inner box. <a href="#lua_remove_all_content">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_all_content"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_inner_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Box_lua.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_inner_box">inner_box</a></td></tr>
+<tr class="memdesc:lua_inner_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scrollable inner box containing the added content widgets. (read-only)<br /></td></tr>
+<tr class="separator:lua_inner_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_resources"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_resources </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resBox</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resVScroll</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resHScroll</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reloads the visual style: resBox = inner box, resVScroll = vertical scroll bar, resHScroll = horizontal scroll bar.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resBox</td><td>string</td></tr>
+    <tr><td class="paramname">resVScroll</td><td>string</td></tr>
+    <tr><td class="paramname">resHScroll</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_content"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> add_content </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td>
+          <td class="paramname">child</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a child widget to the scrollable inner box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Widget_lua.html">Widget</a></td></tr>
+    <tr><td class="paramname">alignment</td><td>integer</td></tr>
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_content"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_content </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td>
+          <td class="paramname">child</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a child widget from the inner box.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Widget_lua.html">Widget</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_all_content"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_all_content </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes all children from the inner box.</p>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_inner_box"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Box_lua.html">Box</a> inner_box</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The scrollable inner box containing the added content widgets. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="ScrollBox_lua.html">ScrollBox</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

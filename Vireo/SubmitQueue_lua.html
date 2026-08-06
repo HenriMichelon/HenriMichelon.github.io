@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: SubmitQueue Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">SubmitQueue Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>GPU command submission queue. Created by Vireo.create_submit_queue().</p>
+<p>Lua full name: <code>vireo.SubmitQueue</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_submit"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit">submit</a> (commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits command lists with no additional GPU/CPU synchronization. <a href="#lua_submit">More...</a><br /></td></tr>
+<tr class="separator:lua_submit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_fence"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_fence">submit_fence</a> (fence: <a class="el" href="Fence_lua.html">Fence</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_fence"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits command lists and signals the given CPU fence when the GPU finishes. <a href="#lua_submit_fence">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_fence"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_fence_swap"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_fence_swap">submit_fence_swap</a> (fence: <a class="el" href="Fence_lua.html">Fence</a>, swapChain: <a class="el" href="SwapChain_lua.html">SwapChain</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_fence_swap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits command lists synchronized with a swap-chain present operation; signals the CPU fence on completion. <a href="#lua_submit_fence_swap">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_fence_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_wait_fence_swap"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_wait_fence_swap">submit_wait_fence_swap</a> (waitSemaphore: <a class="el" href="Semaphore_lua.html">Semaphore</a>, waitStage: <a class="el" href="WaitStage_lua.html">WaitStage</a>, fence: <a class="el" href="Fence_lua.html">Fence</a>, swapChain: <a class="el" href="SwapChain_lua.html">SwapChain</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_wait_fence_swap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits with a GPU wait on waitSemaphore at waitStage, a CPU fence signal, and a swap-chain present. <a href="#lua_submit_wait_fence_swap">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_wait_fence_swap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_wait_signal"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_wait_signal">submit_wait_signal</a> (waitSemaphore: <a class="el" href="Semaphore_lua.html">Semaphore</a>, waitStage: <a class="el" href="WaitStage_lua.html">WaitStage</a>, signalStage: <a class="el" href="WaitStage_lua.html">WaitStage</a>, signalSemaphore: <a class="el" href="Semaphore_lua.html">Semaphore</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_wait_signal"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits with GPU/GPU synchronization: waits on waitSemaphore at waitStage, then signals signalSemaphore at signalStage. <a href="#lua_submit_wait_signal">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_wait_signal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_wait"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_wait">submit_wait</a> (waitSemaphore: <a class="el" href="Semaphore_lua.html">Semaphore</a>, waitStage: <a class="el" href="WaitStage_lua.html">WaitStage</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_wait"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits after waiting on a GPU semaphore at the given pipeline stage. <a href="#lua_submit_wait">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_wait"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_submit_signal"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_submit_signal">submit_signal</a> (signalStage: <a class="el" href="WaitStage_lua.html">WaitStage</a>, signalSemaphore: <a class="el" href="Semaphore_lua.html">Semaphore</a>, commandLists: <a class="el" href="CommandList_lua.html">CommandList</a>[])</td></tr>
+<tr class="memdesc:lua_submit_signal"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits and signals a GPU semaphore when the given pipeline stage completes. <a href="#lua_submit_signal">More...</a><br /></td></tr>
+<tr class="separator:lua_submit_signal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_wait_idle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_idle">wait_idle</a> ()</td></tr>
+<tr class="memdesc:lua_wait_idle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the CPU until all submitted commands on this queue have finished executing. <a href="#lua_wait_idle">More...</a><br /></td></tr>
+<tr class="separator:lua_wait_idle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_submit"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit </td><td>(</td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits command lists with no additional GPU/CPU synchronization.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_fence"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_fence </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Fence_lua.html">Fence</a>&#160;</td>
+          <td class="paramname">fence</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits command lists and signals the given CPU fence when the GPU finishes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fence</td><td><a class="el" href="Fence_lua.html">Fence</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_fence_swap"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_fence_swap </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Fence_lua.html">Fence</a>&#160;</td>
+          <td class="paramname">fence</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td>
+          <td class="paramname">swapChain</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits command lists synchronized with a swap-chain present operation; signals the CPU fence on completion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fence</td><td><a class="el" href="Fence_lua.html">Fence</a></td></tr>
+    <tr><td class="paramname">swapChain</td><td><a class="el" href="SwapChain_lua.html">SwapChain</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_wait_fence_swap"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_wait_fence_swap </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td>
+          <td class="paramname">waitSemaphore</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="WaitStage_lua.html">WaitStage</a>&#160;</td>
+          <td class="paramname">waitStage</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Fence_lua.html">Fence</a>&#160;</td>
+          <td class="paramname">fence</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td>
+          <td class="paramname">swapChain</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits with a GPU wait on waitSemaphore at waitStage, a CPU fence signal, and a swap-chain present.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitSemaphore</td><td><a class="el" href="Semaphore_lua.html">Semaphore</a></td></tr>
+    <tr><td class="paramname">waitStage</td><td><a class="el" href="WaitStage_lua.html">WaitStage</a></td></tr>
+    <tr><td class="paramname">fence</td><td><a class="el" href="Fence_lua.html">Fence</a></td></tr>
+    <tr><td class="paramname">swapChain</td><td><a class="el" href="SwapChain_lua.html">SwapChain</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_wait_signal"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_wait_signal </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td>
+          <td class="paramname">waitSemaphore</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="WaitStage_lua.html">WaitStage</a>&#160;</td>
+          <td class="paramname">waitStage</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="WaitStage_lua.html">WaitStage</a>&#160;</td>
+          <td class="paramname">signalStage</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td>
+          <td class="paramname">signalSemaphore</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits with GPU/GPU synchronization: waits on waitSemaphore at waitStage, then signals signalSemaphore at signalStage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitSemaphore</td><td><a class="el" href="Semaphore_lua.html">Semaphore</a></td></tr>
+    <tr><td class="paramname">waitStage</td><td><a class="el" href="WaitStage_lua.html">WaitStage</a></td></tr>
+    <tr><td class="paramname">signalStage</td><td><a class="el" href="WaitStage_lua.html">WaitStage</a></td></tr>
+    <tr><td class="paramname">signalSemaphore</td><td><a class="el" href="Semaphore_lua.html">Semaphore</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_wait"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_wait </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td>
+          <td class="paramname">waitSemaphore</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="WaitStage_lua.html">WaitStage</a>&#160;</td>
+          <td class="paramname">waitStage</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits after waiting on a GPU semaphore at the given pipeline stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waitSemaphore</td><td><a class="el" href="Semaphore_lua.html">Semaphore</a></td></tr>
+    <tr><td class="paramname">waitStage</td><td><a class="el" href="WaitStage_lua.html">WaitStage</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_submit_signal"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil submit_signal </td><td>(</td>
+          <td class="paramtype"><a class="el" href="WaitStage_lua.html">WaitStage</a>&#160;</td>
+          <td class="paramname">signalStage</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Semaphore_lua.html">Semaphore</a>&#160;</td>
+          <td class="paramname">signalSemaphore</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="CommandList_lua.html">CommandList</a>[]&#160;</td>
+          <td class="paramname">commandLists</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Submits and signals a GPU semaphore when the given pipeline stage completes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signalStage</td><td><a class="el" href="WaitStage_lua.html">WaitStage</a></td></tr>
+    <tr><td class="paramname">signalSemaphore</td><td><a class="el" href="Semaphore_lua.html">Semaphore</a></td></tr>
+    <tr><td class="paramname">commandLists</td><td><a class="el" href="CommandList_lua.html">CommandList</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_wait_idle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil wait_idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blocks the CPU until all submitted commands on this queue have finished executing.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="SubmitQueue_lua.html">SubmitQueue</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

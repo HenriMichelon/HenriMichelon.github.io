@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: Timer Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Timer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A countdown timer node that fires a TIMEOUT event when it expires.</p>
+<p>Inherits from: <a class="el" href="Node_lua.html">Node</a></p>
+<p>Lua full name: <code>lysa.nodes.Timer</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Timer_lua.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (wait_time: number|nil, one_shot: boolean|nil)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Timer node with an optional duration and one-shot flag. <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_start"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_start">start</a> (time_sec: number|nil)</td></tr>
+<tr class="memdesc:lua_start"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts or restarts the timer. If time_sec &gt; 0 it overrides wait_time for this run. <a href="#lua_start">More...</a><br /></td></tr>
+<tr class="separator:lua_start"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_stop"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_stop">stop</a> ()</td></tr>
+<tr class="memdesc:lua_stop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the timer without firing the TIMEOUT event. <a href="#lua_stop">More...</a><br /></td></tr>
+<tr class="separator:lua_stop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_is_stopped"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_stopped">is_stopped</a></td></tr>
+<tr class="memdesc:lua_is_stopped"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the timer is not currently running. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_stopped"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_time_left"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_time_left">time_left</a></td></tr>
+<tr class="memdesc:lua_time_left"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remaining time in seconds; 0 if the timer is stopped. (read-only)<br /></td></tr>
+<tr class="separator:lua_time_left"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_wait_time"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_time">wait_time</a></td></tr>
+<tr class="memdesc:lua_wait_time"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total countdown duration in seconds (default 1.0).<br /></td></tr>
+<tr class="separator:lua_wait_time"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_one_shot"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_one_shot">one_shot</a></td></tr>
+<tr class="memdesc:lua_one_shot"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true the timer stops automatically after the first TIMEOUT; otherwise it loops.<br /></td></tr>
+<tr class="separator:lua_one_shot"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_autostart"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_autostart">autostart</a></td></tr>
+<tr class="memdesc:lua_autostart"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true the timer starts automatically when the node enters the scene tree.<br /></td></tr>
+<tr class="separator:lua_autostart"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_paused"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_paused">paused</a></td></tr>
+<tr class="memdesc:lua_paused"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses or resumes the countdown without resetting the remaining time.<br /></td></tr>
+<tr class="separator:lua_paused"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Timer_lua.html">Timer</a> create </td><td>(</td>
+          <td class="paramtype">number|nil&#160;</td>
+          <td class="paramname">wait_time</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">one_shot</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a Timer node with an optional duration and one-shot flag.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wait_time</td><td>number|nil</td></tr>
+    <tr><td class="paramname">one_shot</td><td>boolean|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Timer_lua.html">Timer</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_start"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil start </td><td>(</td>
+          <td class="paramtype">number|nil&#160;</td>
+          <td class="paramname">time_sec</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts or restarts the timer. If time_sec &gt; 0 it overrides wait_time for this run.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_sec</td><td>number|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_stop"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stops the timer without firing the TIMEOUT event.</p>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_is_stopped"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_stopped</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the timer is not currently running. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_time_left"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number time_left</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Remaining time in seconds; 0 if the timer is stopped. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_wait_time"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number wait_time</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Total countdown duration in seconds (default 1.0).</p>
+</div></div>
+<a class="anchor" id="lua_one_shot"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean one_shot</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>If true the timer stops automatically after the first TIMEOUT; otherwise it loops.</p>
+</div></div>
+<a class="anchor" id="lua_autostart"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean autostart</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>If true the timer starts automatically when the node enters the scene tree.</p>
+</div></div>
+<a class="anchor" id="lua_paused"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean paused</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pauses or resumes the countdown without resetting the remaining time.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="Timer_lua.html">Timer</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

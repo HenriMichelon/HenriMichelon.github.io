@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Vector2DRenderer Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Vector2DRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A GPU renderer that draws 2-D shapes, images, and text in normalized screen space (0–VECTOR_2D_SCREEN_SIZE).</p>
+<p>Inherits from: <a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a></p>
+<p>Lua full name: <code>lysa.Vector2DRenderer</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_draw_line"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_line">draw_line</a> (start: <a class="el" href="float2_lua.html">float2</a>, end: <a class="el" href="float2_lua.html">float2</a>)</td></tr>
+<tr class="memdesc:lua_draw_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line between two 2-D screen-space points using the current pen color. <a href="#lua_draw_line">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>)</td></tr>
+<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a filled rectangle using the current pen color. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>, texture: integer)</td></tr>
+<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (x: number, y: number, w: number, h: number, texture: integer)</td></tr>
+<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle from x, y, w, h. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_pen_color"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_pen_color">set_pen_color</a> (color: <a class="el" href="float4_lua.html">float4</a>)</td></tr>
+<tr class="memdesc:lua_set_pen_color"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current pen color (RGBA) used by subsequent draw calls. <a href="#lua_set_pen_color">More...</a><br /></td></tr>
+<tr class="separator:lua_set_pen_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_translate"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_translate">set_translate</a> (t: <a class="el" href="float2_lua.html">float2</a>)</td></tr>
+<tr class="memdesc:lua_set_translate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a 2-D translation offset applied to all subsequent draw calls in this renderer. <a href="#lua_set_translate">More...</a><br /></td></tr>
+<tr class="separator:lua_set_translate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_transparency"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_transparency">set_transparency</a> (a: number)</td></tr>
+<tr class="memdesc:lua_set_transparency"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the global alpha multiplier (0.0 = fully transparent, 1.0 = fully opaque) for subsequent draw calls. <a href="#lua_set_transparency">More...</a><br /></td></tr>
+<tr class="separator:lua_set_transparency"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_aspect_ratio"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_aspect_ratio">aspect_ratio</a></td></tr>
+<tr class="memdesc:lua_aspect_ratio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: Vector2DRenderer(rt)<br /></td></tr>
+<tr class="separator:lua_aspect_ratio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_draw_line"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_line </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">start</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">end</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a line between two 2-D screen-space points using the current pen color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+    <tr><td class="paramname">end</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_filled_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
+          <td class="paramname">rect</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a filled rectangle using the current pen color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_filled_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
+          <td class="paramname">rect</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">texture</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a textured filled rectangle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
+    <tr><td class="paramname">texture</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_filled_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">w</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">h</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">texture</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a textured filled rectangle from x, y, w, h.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">w</td><td>number</td></tr>
+    <tr><td class="paramname">h</td><td>number</td></tr>
+    <tr><td class="paramname">texture</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_pen_color"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_pen_color </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float4_lua.html">float4</a>&#160;</td>
+          <td class="paramname">color</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the current pen color (RGBA) used by subsequent draw calls.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="float4_lua.html">float4</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_translate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_translate </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">t</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets a 2-D translation offset applied to all subsequent draw calls in this renderer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_transparency"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_transparency </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the global alpha multiplier (0.0 = fully transparent, 1.0 = fully opaque) for subsequent draw calls.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_aspect_ratio"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number aspect_ratio</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Constructor: Vector2DRenderer(rt)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

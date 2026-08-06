@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: Image Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Image Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A widget that displays a GPU image with an optional color tint.</p>
+<p>Inherits from: <a class="el" href="Widget_lua.html">Widget</a></p>
+<p>Lua full name: <code>lysa.ui.Image</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_auto_size"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_auto_size">set_auto_size</a> (autoSize: boolean)</td></tr>
+<tr class="memdesc:lua_set_auto_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true, the widget automatically resizes itself to match the displayed image's pixel dimensions. <a href="#lua_set_auto_size">More...</a><br /></td></tr>
+<tr class="separator:lua_set_auto_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_image">set_image</a> (image: lysa.Image)</td></tr>
+<tr class="memdesc:lua_set_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the displayed image from an existing GPU Image object. <a href="#lua_set_image">More...</a><br /></td></tr>
+<tr class="separator:lua_set_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_image">set_image</a> (uri: string)</td></tr>
+<tr class="memdesc:lua_set_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and sets the displayed image from the given virtual URI. <a href="#lua_set_image">More...</a><br /></td></tr>
+<tr class="separator:lua_set_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_color"><td class="memItemLeft" align="right" valign="top">lysa.float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color">color</a></td></tr>
+<tr class="memdesc:lua_color"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA color tint multiplied with the image pixels (default white = no tint).<br /></td></tr>
+<tr class="separator:lua_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_image"><td class="memItemLeft" align="right" valign="top">lysa.Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_image">image</a></td></tr>
+<tr class="memdesc:lua_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GPU image currently displayed, or nil if none is set. (read-only)<br /></td></tr>
+<tr class="separator:lua_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_auto_size"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_auto_size </td><td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">autoSize</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When true, the widget automatically resizes itself to match the displayed image's pixel dimensions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autoSize</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_image </td><td>(</td>
+          <td class="paramtype">lysa.Image&#160;</td>
+          <td class="paramname">image</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the displayed image from an existing GPU Image object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>lysa.Image</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_image </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">uri</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads and sets the displayed image from the given virtual URI.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_color"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float4 color</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>RGBA color tint multiplied with the image pixels (default white = no tint).</p>
+</div></div>
+<a class="anchor" id="lua_image"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.Image image</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The GPU image currently displayed, or nil if none is set. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="Image_lua.html">Image</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

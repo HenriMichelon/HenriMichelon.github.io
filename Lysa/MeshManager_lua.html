@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: MeshManager Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">MeshManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory and registry for Mesh objects.</p>
+<p>Lua full name: <code>lysa.MeshManager</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (vertices: any, indices: any, surfaces: any)</td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a mesh from vertex, index, and surface tables. <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (vertices: any, indices: any, surfaces: any, name: string)</td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named mesh from vertex, index, and surface tables. <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a centered flat quad mesh in the XY plane. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a flat quad mesh with the given horizontal alignment. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, name: string)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named flat quad mesh with the given alignment. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, y_offset: number)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quad with alignment and a vertical offset. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, y_offset: number, name: string)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named quad with alignment and vertical offset. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, y_offset: number, x_offset: number)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quad with alignment, vertical and horizontal offsets. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_quad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_quad">create_quad</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, y_offset: number, x_offset: number, name: string)</td></tr>
+<tr class="memdesc:lua_create_quad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named quad with alignment, vertical and horizontal offsets. <a href="#lua_create_quad">More...</a><br /></td></tr>
+<tr class="separator:lua_create_quad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a flat triangle mesh in the XY plane centered at the origin. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer, name: string)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named flat triangle mesh in the XY plane centered at the origin. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a flat triangle mesh with the given alignment. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, name: string)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named flat triangle mesh with the given alignment. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, x_offset: number, y_offset: number)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a triangle with alignment, horizontal and vertical offsets. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_triangle"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_triangle">create_triangle</a> (width: number, height: number, material_id: integer, alignment: <a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>, x_offset: number, y_offset: number, name: string)</td></tr>
+<tr class="memdesc:lua_create_triangle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a named triangle with alignment and offsets. <a href="#lua_create_triangle">More...</a><br /></td></tr>
+<tr class="separator:lua_create_triangle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get">get</a> (id: integer)</td></tr>
+<tr class="memdesc:lua_get"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mesh with the given id. <a href="#lua_get">More...</a><br /></td></tr>
+<tr class="separator:lua_get"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (id: integer)</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the mesh with the given id and releases its GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (mesh: <a class="el" href="Mesh_lua.html">Mesh</a>)</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the given mesh and releases its GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_destroy"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_destroy">destroy</a> (ids: integer[])</td></tr>
+<tr class="memdesc:lua_destroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys all meshes in the list and releases their GPU memory. <a href="#lua_destroy">More...</a><br /></td></tr>
+<tr class="separator:lua_destroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create </td><td>(</td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">vertices</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">indices</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">surfaces</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a mesh from vertex, index, and surface tables.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>any</td></tr>
+    <tr><td class="paramname">indices</td><td>any</td></tr>
+    <tr><td class="paramname">surfaces</td><td>any</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create </td><td>(</td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">vertices</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">indices</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">surfaces</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named mesh from vertex, index, and surface tables.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>any</td></tr>
+    <tr><td class="paramname">indices</td><td>any</td></tr>
+    <tr><td class="paramname">surfaces</td><td>any</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a centered flat quad mesh in the XY plane.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a flat quad mesh with the given horizontal alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named flat quad mesh with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a quad with alignment and a vertical offset.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named quad with alignment and vertical offset.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x_offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a quad with alignment, vertical and horizontal offsets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+    <tr><td class="paramname">x_offset</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_quad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_quad </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named quad with alignment, vertical and horizontal offsets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+    <tr><td class="paramname">x_offset</td><td>number</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a flat triangle mesh in the XY plane centered at the origin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named flat triangle mesh in the XY plane centered at the origin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a flat triangle mesh with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named flat triangle mesh with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a triangle with alignment, horizontal and vertical offsets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">x_offset</td><td>number</td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_triangle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> create_triangle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">material_id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y_offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a named triangle with alignment and offsets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+    <tr><td class="paramname">material_id</td><td>integer</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="MeshAlignment_lua.html">MeshAlignment</a></td></tr>
+    <tr><td class="paramname">x_offset</td><td>number</td></tr>
+    <tr><td class="paramname">y_offset</td><td>number</td></tr>
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Mesh_lua.html">Mesh</a> get </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the mesh with the given id.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Mesh_lua.html">Mesh</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys the mesh with the given id and releases its GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Mesh_lua.html">Mesh</a>&#160;</td>
+          <td class="paramname">mesh</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys the given mesh and releases its GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td><a class="el" href="Mesh_lua.html">Mesh</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_destroy"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil destroy </td><td>(</td>
+          <td class="paramtype">integer[]&#160;</td>
+          <td class="paramname">ids</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destroys all meshes in the list and releases their GPU memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ids</td><td>integer[]</td></tr>
+  </table></dd></dl>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="MeshManager_lua.html">MeshManager</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

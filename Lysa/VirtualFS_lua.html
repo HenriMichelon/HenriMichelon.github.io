@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: VirtualFS Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">VirtualFS Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Virtual filesystem that maps URI schemes (e.g. `app://`) to real paths.</p>
+<p>Lua full name: <code>lysa.VirtualFS</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_get_path"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_path">get_path</a> (p: string)</td></tr>
+<tr class="memdesc:lua_get_path"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves a virtual path (e.g. 'app://res/model.assets') to a real filesystem path. <a href="#lua_get_path">More...</a><br /></td></tr>
+<tr class="separator:lua_get_path"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_file_exists"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_file_exists">file_exists</a> (p: string)</td></tr>
+<tr class="memdesc:lua_file_exists"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a file exists at the given virtual path. <a href="#lua_file_exists">More...</a><br /></td></tr>
+<tr class="separator:lua_file_exists"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_directory_exists"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_directory_exists">directory_exists</a> (p: string)</td></tr>
+<tr class="memdesc:lua_directory_exists"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a directory exists at the given path or URI. <a href="#lua_directory_exists">More...</a><br /></td></tr>
+<tr class="separator:lua_directory_exists"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_load_string"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_load_string">load_string</a> (p: string)</td></tr>
+<tr class="memdesc:lua_load_string"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the content of a file as a string from the configured script directory. <a href="#lua_load_string">More...</a><br /></td></tr>
+<tr class="separator:lua_load_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_for_each_directory_entry"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_for_each_directory_entry">for_each_directory_entry</a> (uri: string, handler: fun(type:integer, name:string))</td></tr>
+<tr class="memdesc:lua_for_each_directory_entry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over the entries of a directory, calling the handler for each entry with its type (see lysa.DirectoryEntryType) and its path relative to uri. <a href="#lua_for_each_directory_entry">More...</a><br /></td></tr>
+<tr class="separator:lua_for_each_directory_entry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_for_each_directory_entry"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_for_each_directory_entry">for_each_directory_entry</a> (uri: string, handler: fun(type:integer, name:string), recursive: boolean)</td></tr>
+<tr class="memdesc:lua_for_each_directory_entry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over the entries of a directory, recursively if requested, calling the handler for each entry with its type (see lysa.DirectoryEntryType) and its path relative to uri. <a href="#lua_for_each_directory_entry">More...</a><br /></td></tr>
+<tr class="separator:lua_for_each_directory_entry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_script_directory"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_script_directory">script_directory</a></td></tr>
+<tr class="memdesc:lua_script_directory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the configured Lua script directory. (read-only)<br /></td></tr>
+<tr class="separator:lua_script_directory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_use_resources_pack"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_use_resources_pack">use_resources_pack</a></td></tr>
+<tr class="memdesc:lua_use_resources_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the virtual FS serves assets from a binary resource pack instead of loose files. (read-only)<br /></td></tr>
+<tr class="separator:lua_use_resources_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_get_path"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string get_path </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">p</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resolves a virtual path (e.g. 'app://res/model.assets') to a real filesystem path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+</div></div>
+<a class="anchor" id="lua_file_exists"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean file_exists </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">p</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if a file exists at the given virtual path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_directory_exists"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean directory_exists </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">p</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Tests whether a directory exists at the given path or URI.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_load_string"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string load_string </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">p</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads the content of a file as a string from the configured script directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+</div></div>
+<a class="anchor" id="lua_for_each_directory_entry"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil for_each_directory_entry </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">uri</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">fun(type:integer, name:string)&#160;</td>
+          <td class="paramname">handler</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Iterates over the entries of a directory, calling the handler for each entry with its type (see lysa.DirectoryEntryType) and its path relative to uri.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>string</td></tr>
+    <tr><td class="paramname">handler</td><td>fun(type:integer, name:string)</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_for_each_directory_entry"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil for_each_directory_entry </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">uri</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">fun(type:integer, name:string)&#160;</td>
+          <td class="paramname">handler</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">recursive</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Iterates over the entries of a directory, recursively if requested, calling the handler for each entry with its type (see lysa.DirectoryEntryType) and its path relative to uri.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>string</td></tr>
+    <tr><td class="paramname">handler</td><td>fun(type:integer, name:string)</td></tr>
+    <tr><td class="paramname">recursive</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_script_directory"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string script_directory</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Path to the configured Lua script directory. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_use_resources_pack"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean use_resources_pack</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the virtual FS serves assets from a binary resource pack instead of loose files. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="VirtualFS_lua.html">VirtualFS</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

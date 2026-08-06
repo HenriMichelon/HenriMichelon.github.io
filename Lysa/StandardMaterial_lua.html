@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: StandardMaterial Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">StandardMaterial Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A physically-based rendering (PBR) material.</p>
+<p>Inherits from: <a class="el" href="Material_lua.html">Material</a></p>
+<p>Lua full name: <code>lysa.StandardMaterial</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_albedo_color"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4_lua.html">float4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_albedo_color">albedo_color</a></td></tr>
+<tr class="memdesc:lua_albedo_color"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base color (RGBA) applied when no diffuse texture is set.<br /></td></tr>
+<tr class="separator:lua_albedo_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_diffuse_texture"><td class="memItemLeft" align="right" valign="top">any|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_diffuse_texture">diffuse_texture</a></td></tr>
+<tr class="memdesc:lua_diffuse_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diffuse/albedo texture info, or nil if unused.<br /></td></tr>
+<tr class="separator:lua_diffuse_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_normal_texture"><td class="memItemLeft" align="right" valign="top">any|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_normal_texture">normal_texture</a></td></tr>
+<tr class="memdesc:lua_normal_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal map texture info, or nil if unused.<br /></td></tr>
+<tr class="separator:lua_normal_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_metallic_factor"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_metallic_factor">metallic_factor</a></td></tr>
+<tr class="memdesc:lua_metallic_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metallic factor in [0, 1]; 0 = dielectric, 1 = full metal.<br /></td></tr>
+<tr class="separator:lua_metallic_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_metallic_texture"><td class="memItemLeft" align="right" valign="top">any|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_metallic_texture">metallic_texture</a></td></tr>
+<tr class="memdesc:lua_metallic_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metallic texture info, or nil if unused.<br /></td></tr>
+<tr class="separator:lua_metallic_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_roughness_factor"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_roughness_factor">roughness_factor</a></td></tr>
+<tr class="memdesc:lua_roughness_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roughness factor in [0, 1]; 0 = mirror-smooth, 1 = fully rough.<br /></td></tr>
+<tr class="separator:lua_roughness_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_roughness_texture"><td class="memItemLeft" align="right" valign="top">any|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_roughness_texture">roughness_texture</a></td></tr>
+<tr class="memdesc:lua_roughness_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Roughness texture info, or nil if unused.<br /></td></tr>
+<tr class="separator:lua_roughness_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_emissive_texture"><td class="memItemLeft" align="right" valign="top">any|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_emissive_texture">emissive_texture</a></td></tr>
+<tr class="memdesc:lua_emissive_texture"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emissive texture info, or nil if unused.<br /></td></tr>
+<tr class="separator:lua_emissive_texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_emissive_factor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float3_lua.html">float3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_emissive_factor">emissive_factor</a></td></tr>
+<tr class="memdesc:lua_emissive_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emissive color multiplier (RGB).<br /></td></tr>
+<tr class="separator:lua_emissive_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_emissive_strength"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_emissive_strength">emissive_strength</a></td></tr>
+<tr class="memdesc:lua_emissive_strength"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar multiplier applied on top of emissive_factor.<br /></td></tr>
+<tr class="separator:lua_emissive_strength"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_normal_scale"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_normal_scale">normal_scale</a></td></tr>
+<tr class="memdesc:lua_normal_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale factor applied to the normal map's XY components (default 1.0).<br /></td></tr>
+<tr class="separator:lua_normal_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_albedo_color"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float4_lua.html">float4</a> albedo_color</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Base color (RGBA) applied when no diffuse texture is set.</p>
+</div></div>
+<a class="anchor" id="lua_diffuse_texture"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any|nil diffuse_texture</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Diffuse/albedo texture info, or nil if unused.</p>
+</div></div>
+<a class="anchor" id="lua_normal_texture"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any|nil normal_texture</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normal map texture info, or nil if unused.</p>
+</div></div>
+<a class="anchor" id="lua_metallic_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number metallic_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Metallic factor in [0, 1]; 0 = dielectric, 1 = full metal.</p>
+</div></div>
+<a class="anchor" id="lua_metallic_texture"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any|nil metallic_texture</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Metallic texture info, or nil if unused.</p>
+</div></div>
+<a class="anchor" id="lua_roughness_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number roughness_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Roughness factor in [0, 1]; 0 = mirror-smooth, 1 = fully rough.</p>
+</div></div>
+<a class="anchor" id="lua_roughness_texture"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any|nil roughness_texture</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Roughness texture info, or nil if unused.</p>
+</div></div>
+<a class="anchor" id="lua_emissive_texture"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any|nil emissive_texture</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Emissive texture info, or nil if unused.</p>
+</div></div>
+<a class="anchor" id="lua_emissive_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float3_lua.html">float3</a> emissive_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Emissive color multiplier (RGB).</p>
+</div></div>
+<a class="anchor" id="lua_emissive_strength"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number emissive_strength</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Scalar multiplier applied on top of emissive_factor.</p>
+</div></div>
+<a class="anchor" id="lua_normal_scale"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number normal_scale</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Scale factor applied to the normal map's XY components (default 1.0).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="StandardMaterial_lua.html">StandardMaterial</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

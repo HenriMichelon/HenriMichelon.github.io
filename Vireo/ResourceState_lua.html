@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: ResourceState Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">ResourceState Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Resource state constants used in pipeline barriers to declare how a resource is accessed.</p>
+<p>Lua full name: <code>vireo.ResourceState</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_UNDEFINED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_UNDEFINED">UNDEFINED</a></td></tr>
+<tr class="memdesc:lua_UNDEFINED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown / initial state. A barrier from UNDEFINED discards previous content.<br /></td></tr>
+<tr class="separator:lua_UNDEFINED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_RENDER_TARGET_COLOR"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_RENDER_TARGET_COLOR">RENDER_TARGET_COLOR</a></td></tr>
+<tr class="memdesc:lua_RENDER_TARGET_COLOR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is used as a read/write color render target attachment.<br /></td></tr>
+<tr class="separator:lua_RENDER_TARGET_COLOR"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_RENDER_TARGET_DEPTH"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_RENDER_TARGET_DEPTH">RENDER_TARGET_DEPTH</a></td></tr>
+<tr class="memdesc:lua_RENDER_TARGET_DEPTH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is used as a read/write depth attachment.<br /></td></tr>
+<tr class="separator:lua_RENDER_TARGET_DEPTH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_RENDER_TARGET_DEPTH_READ"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_RENDER_TARGET_DEPTH_READ">RENDER_TARGET_DEPTH_READ</a></td></tr>
+<tr class="memdesc:lua_RENDER_TARGET_DEPTH_READ"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is used as a read-only depth attachment (depth test without writes).<br /></td></tr>
+<tr class="separator:lua_RENDER_TARGET_DEPTH_READ"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_RENDER_TARGET_DEPTH_STENCIL"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_RENDER_TARGET_DEPTH_STENCIL">RENDER_TARGET_DEPTH_STENCIL</a></td></tr>
+<tr class="memdesc:lua_RENDER_TARGET_DEPTH_STENCIL"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is used as a read/write depth+stencil attachment.<br /></td></tr>
+<tr class="separator:lua_RENDER_TARGET_DEPTH_STENCIL"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_RENDER_TARGET_DEPTH_STENCIL_READ"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_RENDER_TARGET_DEPTH_STENCIL_READ">RENDER_TARGET_DEPTH_STENCIL_READ</a></td></tr>
+<tr class="memdesc:lua_RENDER_TARGET_DEPTH_STENCIL_READ"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is used as a read-only depth+stencil attachment.<br /></td></tr>
+<tr class="separator:lua_RENDER_TARGET_DEPTH_STENCIL_READ"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_PRESENT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_PRESENT">PRESENT</a></td></tr>
+<tr class="memdesc:lua_PRESENT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image is ready to be presented by the swap chain.<br /></td></tr>
+<tr class="separator:lua_PRESENT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COPY_SRC"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COPY_SRC">COPY_SRC</a></td></tr>
+<tr class="memdesc:lua_COPY_SRC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource is used as the source of a copy/transfer operation.<br /></td></tr>
+<tr class="separator:lua_COPY_SRC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COPY_DST"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COPY_DST">COPY_DST</a></td></tr>
+<tr class="memdesc:lua_COPY_DST"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource is used as the destination of a copy/transfer operation.<br /></td></tr>
+<tr class="separator:lua_COPY_DST"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_SHADER_READ"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_SHADER_READ">SHADER_READ</a></td></tr>
+<tr class="memdesc:lua_SHADER_READ"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image or buffer is read by a shader (SRV / sampled image).<br /></td></tr>
+<tr class="separator:lua_SHADER_READ"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COMPUTE_READ"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COMPUTE_READ">COMPUTE_READ</a></td></tr>
+<tr class="memdesc:lua_COMPUTE_READ"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource is read by a compute shader.<br /></td></tr>
+<tr class="separator:lua_COMPUTE_READ"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_COMPUTE_WRITE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_COMPUTE_WRITE">COMPUTE_WRITE</a></td></tr>
+<tr class="memdesc:lua_COMPUTE_WRITE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource is written by a compute shader (UAV / storage image or buffer).<br /></td></tr>
+<tr class="separator:lua_COMPUTE_WRITE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_INDIRECT_DRAW"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INDIRECT_DRAW">INDIRECT_DRAW</a></td></tr>
+<tr class="memdesc:lua_INDIRECT_DRAW"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer is used as an indirect draw/dispatch argument source.<br /></td></tr>
+<tr class="separator:lua_INDIRECT_DRAW"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_VERTEX_INPUT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_VERTEX_INPUT">VERTEX_INPUT</a></td></tr>
+<tr class="memdesc:lua_VERTEX_INPUT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer is used as a vertex or index input source.<br /></td></tr>
+<tr class="separator:lua_VERTEX_INPUT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_UNIFORM"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_UNIFORM">UNIFORM</a></td></tr>
+<tr class="memdesc:lua_UNIFORM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer is used as a uniform (constant) buffer.<br /></td></tr>
+<tr class="separator:lua_UNIFORM"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_UNDEFINED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer UNDEFINED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unknown / initial state. A barrier from UNDEFINED discards previous content.</p>
+</div></div>
+<a class="anchor" id="lua_RENDER_TARGET_COLOR"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer RENDER_TARGET_COLOR</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is used as a read/write color render target attachment.</p>
+</div></div>
+<a class="anchor" id="lua_RENDER_TARGET_DEPTH"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer RENDER_TARGET_DEPTH</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is used as a read/write depth attachment.</p>
+</div></div>
+<a class="anchor" id="lua_RENDER_TARGET_DEPTH_READ"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer RENDER_TARGET_DEPTH_READ</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is used as a read-only depth attachment (depth test without writes).</p>
+</div></div>
+<a class="anchor" id="lua_RENDER_TARGET_DEPTH_STENCIL"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer RENDER_TARGET_DEPTH_STENCIL</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is used as a read/write depth+stencil attachment.</p>
+</div></div>
+<a class="anchor" id="lua_RENDER_TARGET_DEPTH_STENCIL_READ"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer RENDER_TARGET_DEPTH_STENCIL_READ</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is used as a read-only depth+stencil attachment.</p>
+</div></div>
+<a class="anchor" id="lua_PRESENT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer PRESENT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image is ready to be presented by the swap chain.</p>
+</div></div>
+<a class="anchor" id="lua_COPY_SRC"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COPY_SRC</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Resource is used as the source of a copy/transfer operation.</p>
+</div></div>
+<a class="anchor" id="lua_COPY_DST"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COPY_DST</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Resource is used as the destination of a copy/transfer operation.</p>
+</div></div>
+<a class="anchor" id="lua_SHADER_READ"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer SHADER_READ</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Image or buffer is read by a shader (SRV / sampled image).</p>
+</div></div>
+<a class="anchor" id="lua_COMPUTE_READ"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COMPUTE_READ</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Resource is read by a compute shader.</p>
+</div></div>
+<a class="anchor" id="lua_COMPUTE_WRITE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer COMPUTE_WRITE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Resource is written by a compute shader (UAV / storage image or buffer).</p>
+</div></div>
+<a class="anchor" id="lua_INDIRECT_DRAW"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INDIRECT_DRAW</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Buffer is used as an indirect draw/dispatch argument source.</p>
+</div></div>
+<a class="anchor" id="lua_VERTEX_INPUT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer VERTEX_INPUT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Buffer is used as a vertex or index input source.</p>
+</div></div>
+<a class="anchor" id="lua_UNIFORM"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer UNIFORM</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Buffer is used as a uniform (constant) buffer.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="ResourceState_lua.html">ResourceState</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

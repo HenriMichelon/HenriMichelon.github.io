@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Timer Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Timer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>One-shot or repeating countdown timer that fires a callback when its wait time elapses.</p>
+<p>Lua full name: <code>lysa.Timer</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_start"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_start">start</a> ()</td></tr>
+<tr class="memdesc:lua_start"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts or restarts the timer. <a href="#lua_start">More...</a><br /></td></tr>
+<tr class="separator:lua_start"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_stop"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_stop">stop</a> ()</td></tr>
+<tr class="memdesc:lua_stop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the timer without firing the callback. <a href="#lua_stop">More...</a><br /></td></tr>
+<tr class="separator:lua_stop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_callback"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_callback">set_callback</a> (fn: fun()|nil)</td></tr>
+<tr class="memdesc:lua_set_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets (or clears with nil) the Lua function invoked on each timeout, replacing any previously set callback. <a href="#lua_set_callback">More...</a><br /></td></tr>
+<tr class="separator:lua_set_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_is_stopped"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_stopped">is_stopped</a></td></tr>
+<tr class="memdesc:lua_is_stopped"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the timer is neither running nor waiting to fire. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_stopped"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_wait_time"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_time">wait_time</a></td></tr>
+<tr class="memdesc:lua_wait_time"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay in seconds before the callback fires; takes effect on the next start().<br /></td></tr>
+<tr class="separator:lua_wait_time"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_one_shot"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_one_shot">one_shot</a></td></tr>
+<tr class="memdesc:lua_one_shot"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to stop after the first timeout, false to repeat indefinitely until stop() is called; takes effect on the next start().<br /></td></tr>
+<tr class="separator:lua_one_shot"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_start"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts or restarts the timer.</p>
+</div></div>
+<a class="anchor" id="lua_stop"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stops the timer without firing the callback.</p>
+</div></div>
+<a class="anchor" id="lua_set_callback"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_callback </td><td>(</td>
+          <td class="paramtype">fun()|nil&#160;</td>
+          <td class="paramname">fn</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets (or clears with nil) the Lua function invoked on each timeout, replacing any previously set callback.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>fun()|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_is_stopped"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_stopped</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the timer is neither running nor waiting to fire. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_wait_time"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number wait_time</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Delay in seconds before the callback fires; takes effect on the next start().</p>
+</div></div>
+<a class="anchor" id="lua_one_shot"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean one_shot</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to stop after the first timeout, false to repeat indefinitely until stop() is called; takes effect on the next start().</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Timer_lua.html">Timer</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

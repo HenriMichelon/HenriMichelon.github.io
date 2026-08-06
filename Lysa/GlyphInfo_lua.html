@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: GlyphInfo Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">GlyphInfo Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Information for a single glyph packed in the atlas. Read-only.</p>
+<p>Lua full name: <code>lysa.GlyphInfo</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_index">index</a></td></tr>
+<tr class="memdesc:lua_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph index in the font (HarfBuzz / FreeType index).<br /></td></tr>
+<tr class="separator:lua_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_advance"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_advance">advance</a></td></tr>
+<tr class="memdesc:lua_advance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance width in pixels for the current font size.<br /></td></tr>
+<tr class="separator:lua_advance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_plane_bounds"><td class="memItemLeft" align="right" valign="top"><a class="el" href="GlyphBounds_lua.html">GlyphBounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_plane_bounds">plane_bounds</a></td></tr>
+<tr class="memdesc:lua_plane_bounds"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box in font plane units.<br /></td></tr>
+<tr class="separator:lua_plane_bounds"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_uv0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float2_lua.html">float2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_uv0">uv0</a></td></tr>
+<tr class="memdesc:lua_uv0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-left texture coordinate of the glyph in the atlas.<br /></td></tr>
+<tr class="separator:lua_uv0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_uv1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float2_lua.html">float2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_uv1">uv1</a></td></tr>
+<tr class="memdesc:lua_uv1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bottom-right texture coordinate of the glyph in the atlas.<br /></td></tr>
+<tr class="separator:lua_uv1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Glyph index in the font (HarfBuzz / FreeType index).</p>
+</div></div>
+<a class="anchor" id="lua_advance"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number advance</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Advance width in pixels for the current font size.</p>
+</div></div>
+<a class="anchor" id="lua_plane_bounds"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="GlyphBounds_lua.html">GlyphBounds</a> plane_bounds</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Bounding box in font plane units.</p>
+</div></div>
+<a class="anchor" id="lua_uv0"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float2_lua.html">float2</a> uv0</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Top-left texture coordinate of the glyph in the atlas.</p>
+</div></div>
+<a class="anchor" id="lua_uv1"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float2_lua.html">float2</a> uv1</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Bottom-right texture coordinate of the glyph in the atlas.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="GlyphInfo_lua.html">GlyphInfo</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

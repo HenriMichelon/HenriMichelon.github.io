@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: EventManager Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">EventManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Publish/subscribe event bus used for engine and game events.</p>
+<p>Lua full name: <code>lysa.EventManager</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_fire"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_fire">fire</a> (e: <a class="el" href="Event_lua.html">Event</a>)</td></tr>
+<tr class="memdesc:lua_fire"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires an event synchronously to all subscribers. <a href="#lua_fire">More...</a><br /></td></tr>
+<tr class="separator:lua_fire"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_push"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_push">push</a> (e: <a class="el" href="Event_lua.html">Event</a>)</td></tr>
+<tr class="memdesc:lua_push"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an event to be fired at the start of the next frame. <a href="#lua_push">More...</a><br /></td></tr>
+<tr class="separator:lua_push"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_subscribe"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_subscribe">subscribe</a> (type: string, id: integer, cb: function)</td></tr>
+<tr class="memdesc:lua_subscribe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to an event type with a resource id filter; returns a handler id. <a href="#lua_subscribe">More...</a><br /></td></tr>
+<tr class="separator:lua_subscribe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_subscribe"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_subscribe">subscribe</a> (type: string, ids: integer[], cb: function)</td></tr>
+<tr class="memdesc:lua_subscribe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to an event type with multiple resource id filters; a single unsubscribe() removes all. Returns a handler id. <a href="#lua_subscribe">More...</a><br /></td></tr>
+<tr class="separator:lua_subscribe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_subscribe"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_subscribe">subscribe</a> (type: string, cb: function)</td></tr>
+<tr class="memdesc:lua_subscribe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to an event type; returns a handler id. <a href="#lua_subscribe">More...</a><br /></td></tr>
+<tr class="separator:lua_subscribe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_unsubscribe"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_unsubscribe">unsubscribe</a> (handler: integer)</td></tr>
+<tr class="memdesc:lua_unsubscribe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribes from an event using the handler id returned by subscribe. <a href="#lua_unsubscribe">More...</a><br /></td></tr>
+<tr class="separator:lua_unsubscribe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_fire"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil fire </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Event_lua.html">Event</a>&#160;</td>
+          <td class="paramname">e</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fires an event synchronously to all subscribers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td><a class="el" href="Event_lua.html">Event</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_push"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil push </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Event_lua.html">Event</a>&#160;</td>
+          <td class="paramname">e</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pushes an event to be fired at the start of the next frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td><a class="el" href="Event_lua.html">Event</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_subscribe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer subscribe </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">id</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">function&#160;</td>
+          <td class="paramname">cb</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribes to an event type with a resource id filter; returns a handler id.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>string</td></tr>
+    <tr><td class="paramname">id</td><td>integer</td></tr>
+    <tr><td class="paramname">cb</td><td>function</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_subscribe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer subscribe </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer[]&#160;</td>
+          <td class="paramname">ids</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">function&#160;</td>
+          <td class="paramname">cb</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribes to an event type with multiple resource id filters; a single unsubscribe() removes all. Returns a handler id.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>string</td></tr>
+    <tr><td class="paramname">ids</td><td>integer[]</td></tr>
+    <tr><td class="paramname">cb</td><td>function</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_subscribe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer subscribe </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">function&#160;</td>
+          <td class="paramname">cb</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subscribes to an event type; returns a handler id.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>string</td></tr>
+    <tr><td class="paramname">cb</td><td>function</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_unsubscribe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil unsubscribe </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">handler</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unsubscribes from an event using the handler id returned by subscribe.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="EventManager_lua.html">EventManager</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

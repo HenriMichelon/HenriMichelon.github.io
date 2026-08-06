@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: TextEdit Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">TextEdit Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A single-line editable text input field. Fires OnTextChange and OnTextInput events.</p>
+<p>Inherits from: <a class="el" href="Widget_lua.html">Widget</a></p>
+<p>Lua full name: <code>lysa.ui.TextEdit</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_resources"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_resources">set_resources</a> (resource: string)</td></tr>
+<tr class="memdesc:lua_set_resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads the visual style of this TextEdit from the given resource string. <a href="#lua_set_resources">More...</a><br /></td></tr>
+<tr class="separator:lua_set_resources"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_is_read_only"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_read_only">is_read_only</a></td></tr>
+<tr class="memdesc:lua_is_read_only"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the field is read-only; the user can view but not edit the text.<br /></td></tr>
+<tr class="separator:lua_is_read_only"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_text"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_text">text</a></td></tr>
+<tr class="memdesc:lua_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current text content of the input field.<br /></td></tr>
+<tr class="separator:lua_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_sel_start"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_sel_start">sel_start</a></td></tr>
+<tr class="memdesc:lua_sel_start"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character index of the start of the current text selection.<br /></td></tr>
+<tr class="separator:lua_sel_start"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_first_displayed_char"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_first_displayed_char">first_displayed_char</a></td></tr>
+<tr class="memdesc:lua_first_displayed_char"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the first character currently visible in the field (scroll offset). (read-only)<br /></td></tr>
+<tr class="separator:lua_first_displayed_char"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_displayed_text"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_displayed_text">displayed_text</a></td></tr>
+<tr class="memdesc:lua_displayed_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">The substring of text currently visible inside the widget bounds. (read-only)<br /></td></tr>
+<tr class="separator:lua_displayed_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_resources"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_resources </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reloads the visual style of this TextEdit from the given resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_is_read_only"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_read_only</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the field is read-only; the user can view but not edit the text.</p>
+</div></div>
+<a class="anchor" id="lua_text"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string text</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The current text content of the input field.</p>
+</div></div>
+<a class="anchor" id="lua_sel_start"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer sel_start</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Character index of the start of the current text selection.</p>
+</div></div>
+<a class="anchor" id="lua_first_displayed_char"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer first_displayed_char</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Index of the first character currently visible in the field (scroll offset). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_displayed_text"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string displayed_text</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The substring of text currently visible inside the widget bounds. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="TextEdit_lua.html">TextEdit</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

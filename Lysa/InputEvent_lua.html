@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: InputEvent Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">InputEvent Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A polymorphic input event carrying type-specific sub-data.</p>
+<p>Lua full name: <code>lysa.InputEvent</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event type (see lysa.InputEventType).<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_input_event_key"><td class="memItemLeft" align="right" valign="top"><a class="el" href="InputEventKey_lua.html">InputEventKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_input_event_key">input_event_key</a></td></tr>
+<tr class="memdesc:lua_input_event_key"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard event data (valid when type == KEY).<br /></td></tr>
+<tr class="separator:lua_input_event_key"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_input_event_mouse_motion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="InputEventMouseMotion_lua.html">InputEventMouseMotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_input_event_mouse_motion">input_event_mouse_motion</a></td></tr>
+<tr class="memdesc:lua_input_event_mouse_motion"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse motion event data (valid when type == MOUSE_MOTION).<br /></td></tr>
+<tr class="separator:lua_input_event_mouse_motion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_input_event_mouse_button"><td class="memItemLeft" align="right" valign="top"><a class="el" href="InputEventMouseButton_lua.html">InputEventMouseButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_input_event_mouse_button">input_event_mouse_button</a></td></tr>
+<tr class="memdesc:lua_input_event_mouse_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse button event data (valid when type == MOUSE_BUTTON).<br /></td></tr>
+<tr class="separator:lua_input_event_mouse_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The event type (see lysa.InputEventType).</p>
+</div></div>
+<a class="anchor" id="lua_input_event_key"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="InputEventKey_lua.html">InputEventKey</a> input_event_key</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Keyboard event data (valid when type == KEY).</p>
+</div></div>
+<a class="anchor" id="lua_input_event_mouse_motion"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="InputEventMouseMotion_lua.html">InputEventMouseMotion</a> input_event_mouse_motion</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Mouse motion event data (valid when type == MOUSE_MOTION).</p>
+</div></div>
+<a class="anchor" id="lua_input_event_mouse_button"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="InputEventMouseButton_lua.html">InputEventMouseButton</a> input_event_mouse_button</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Mouse button event data (valid when type == MOUSE_BUTTON).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="InputEvent_lua.html">InputEvent</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: RigidBody Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">RigidBody Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A fully simulated rigid body driven by the physics engine (mass, forces, impulses).</p>
+<p>Inherits from: <a class="el" href="PhysicsBody_lua.html">PhysicsBody</a></p>
+<p>Lua full name: <code>lysa.nodes.RigidBody</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_density"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_density">set_density</a> (density: number)</td></tr>
+<tr class="memdesc:lua_set_density"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the density of the body, used to compute mass from the collision shape volume. <a href="#lua_set_density">More...</a><br /></td></tr>
+<tr class="separator:lua_set_density"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_gravity_factor"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_gravity_factor">set_gravity_factor</a> (factor: number)</td></tr>
+<tr class="memdesc:lua_set_gravity_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gravity multiplier (0.0 disables gravity, 1.0 = normal, negative = inverted). <a href="#lua_set_gravity_factor">More...</a><br /></td></tr>
+<tr class="separator:lua_set_gravity_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_force"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_force">add_force</a> (force: lysa.float3, position: lysa.float3|nil)</td></tr>
+<tr class="memdesc:lua_add_force"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a continuous force for the next physics step at the center of mass, or at a local position if given. <a href="#lua_add_force">More...</a><br /></td></tr>
+<tr class="separator:lua_add_force"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_impulse"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_impulse">add_impulse</a> (impulse: lysa.float3)</td></tr>
+<tr class="memdesc:lua_add_impulse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an instantaneous impulse at the center of mass (changes velocity immediately). <a href="#lua_add_impulse">More...</a><br /></td></tr>
+<tr class="separator:lua_add_impulse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_velocity"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_velocity">velocity</a></td></tr>
+<tr class="memdesc:lua_velocity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current linear velocity in world space.<br /></td></tr>
+<tr class="separator:lua_velocity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_mass"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_mass">mass</a></td></tr>
+<tr class="memdesc:lua_mass"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total mass of the body in kilograms.<br /></td></tr>
+<tr class="separator:lua_mass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_density"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_density </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">density</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the density of the body, used to compute mass from the collision shape volume.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">density</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_gravity_factor"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_gravity_factor </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">factor</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gravity multiplier (0.0 disables gravity, 1.0 = normal, negative = inverted).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_force"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_force </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">force</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">lysa.float3|nil&#160;</td>
+          <td class="paramname">position</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Applies a continuous force for the next physics step at the center of mass, or at a local position if given.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>lysa.float3</td></tr>
+    <tr><td class="paramname">position</td><td>lysa.float3|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_impulse"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_impulse </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">impulse</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Applies an instantaneous impulse at the center of mass (changes velocity immediately).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">impulse</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_velocity"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 velocity</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Current linear velocity in world space.</p>
+</div></div>
+<a class="anchor" id="lua_mass"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number mass</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The total mass of the body in kilograms.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="RigidBody_lua.html">RigidBody</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

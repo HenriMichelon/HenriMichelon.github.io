@@ -1,0 +1,1823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: Node Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Node Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The base class for all scene-tree nodes. Provides transform, hierarchy, grouping, and lifecycle callbacks.</p>
+<p>Lua full name: <code>lysa.nodes.Node</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (name: string)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new plain Node at the origin without a parent. <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_script"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_script">set_script</a> (script: string)</td></tr>
+<tr class="memdesc:lua_set_script"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches a Lua script table to the node. The table may implement _ready, _process, _physics_process, _input, _enter_scene, and _exit_scene callbacks. <a href="#lua_set_script">More...</a><br /></td></tr>
+<tr class="separator:lua_set_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_has_script"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_has_script">has_script</a> ()</td></tr>
+<tr class="memdesc:lua_has_script"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a Lua script is currently attached to this node. <a href="#lua_has_script">More...</a><br /></td></tr>
+<tr class="separator:lua_has_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_script"><td class="memItemLeft" align="right" valign="top">table|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_script">get_script</a> ()</td></tr>
+<tr class="memdesc:lua_get_script"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attached Lua script table, or nil if none is attached. <a href="#lua_get_script">More...</a><br /></td></tr>
+<tr class="separator:lua_get_script"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_position"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_position">set_position</a> (x: number, y: number, z: number)</td></tr>
+<tr class="memdesc:lua_set_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the local-space position with explicit x, y, z components. <a href="#lua_set_position">More...</a><br /></td></tr>
+<tr class="separator:lua_set_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_translate"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_translate">translate</a> (vec: lysa.float3)</td></tr>
+<tr class="memdesc:lua_translate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the node by an offset vector in local space. <a href="#lua_translate">More...</a><br /></td></tr>
+<tr class="separator:lua_translate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_translate"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_translate">translate</a> (x: number, y: number, z: number)</td></tr>
+<tr class="memdesc:lua_translate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the node by x, y, z offset components in local space. <a href="#lua_translate">More...</a><br /></td></tr>
+<tr class="separator:lua_translate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_position_global"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_position_global">set_position_global</a> (x: number, y: number, z: number)</td></tr>
+<tr class="memdesc:lua_set_position_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the world-space position with explicit x, y, z components. <a href="#lua_set_position_global">More...</a><br /></td></tr>
+<tr class="separator:lua_set_position_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate">rotate</a> (rotation: lysa.quaternion)</td></tr>
+<tr class="memdesc:lua_rotate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a quaternion rotation to the local transformation. <a href="#lua_rotate">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_x"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_x">rotate_x</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the local transformation around the X axis by angle radians. <a href="#lua_rotate_x">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_y"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_y">rotate_y</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the local transformation around the Y axis by angle radians. <a href="#lua_rotate_y">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_z"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_z">rotate_z</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_z"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the local transformation around the Z axis by angle radians. <a href="#lua_rotate_z">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_z"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_rotation"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_rotation">set_rotation</a> (vec: lysa.float3)</td></tr>
+<tr class="memdesc:lua_set_rotation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the local rotation from Euler angles (radians, pitch/yaw/roll order). <a href="#lua_set_rotation">More...</a><br /></td></tr>
+<tr class="separator:lua_set_rotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_global_x"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_global_x">rotate_global_x</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_global_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the world transformation around the X axis by angle radians. <a href="#lua_rotate_global_x">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_global_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_global_y"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_global_y">rotate_global_y</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_global_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the world transformation around the Y axis by angle radians. <a href="#lua_rotate_global_y">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_global_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotate_global_z"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotate_global_z">rotate_global_z</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_rotate_global_z"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the world transformation around the Z axis by angle radians. <a href="#lua_rotate_global_z">More...</a><br /></td></tr>
+<tr class="separator:lua_rotate_global_z"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scale"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scale">scale</a> (factor: number)</td></tr>
+<tr class="memdesc:lua_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales the local transformation uniformly by the given factor. <a href="#lua_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_scale"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_scale">set_scale</a> (factor: lysa.float3)</td></tr>
+<tr class="memdesc:lua_set_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the per-axis scale of the local transformation from a float3. <a href="#lua_set_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_set_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_scale"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_scale">get_scale</a> ()</td></tr>
+<tr class="memdesc:lua_get_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the per-axis scale of the local transformation. <a href="#lua_get_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_get_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_to_global"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_to_global">to_global</a> (local_pos: lysa.float3)</td></tr>
+<tr class="memdesc:lua_to_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a local-space position into world space. <a href="#lua_to_global">More...</a><br /></td></tr>
+<tr class="separator:lua_to_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_to_local"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_to_local">to_local</a> (global_pos: lysa.float3)</td></tr>
+<tr class="memdesc:lua_to_local"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a world-space position into this node's local space. <a href="#lua_to_local">More...</a><br /></td></tr>
+<tr class="separator:lua_to_local"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_look_at"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_look_at">look_at</a> (target: lysa.float3)</td></tr>
+<tr class="memdesc:lua_look_at"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the node so that its forward axis points toward the target world-space position. <a href="#lua_look_at">More...</a><br /></td></tr>
+<tr class="separator:lua_look_at"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_look_at_smooth"><td class="memItemLeft" align="right" valign="top">lysa.Tween&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_look_at_smooth">look_at_smooth</a> (target: lysa.float3, duration: number, transition_type: lysa.TransitionType, callback: function|nil)</td></tr>
+<tr class="memdesc:lua_look_at_smooth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smoothly rotates the node toward the target over duration seconds using the given easing curve; returns the controlling Tween. <a href="#lua_look_at_smooth">More...</a><br /></td></tr>
+<tr class="separator:lua_look_at_smooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_process_mode"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_process_mode">set_process_mode</a> (mode: <a class="el" href="ProcessMode_lua.html">ProcessMode</a>)</td></tr>
+<tr class="memdesc:lua_set_process_mode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the node's processing mode (see lysa.nodes.ProcessMode). <a href="#lua_set_process_mode">More...</a><br /></td></tr>
+<tr class="separator:lua_set_process_mode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_to_group"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_to_group">add_to_group</a> (group: string)</td></tr>
+<tr class="memdesc:lua_add_to_group"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds this node to the named group. <a href="#lua_add_to_group">More...</a><br /></td></tr>
+<tr class="separator:lua_add_to_group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_from_group"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_from_group">remove_from_group</a> (group: string)</td></tr>
+<tr class="memdesc:lua_remove_from_group"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes this node from the named group; silently ignored if not a member. <a href="#lua_remove_from_group">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_from_group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_in_group"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_in_group">is_in_group</a> (group: string)</td></tr>
+<tr class="memdesc:lua_is_in_group"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this node has been added to the given group. <a href="#lua_is_in_group">More...</a><br /></td></tr>
+<tr class="separator:lua_is_in_group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_all_children"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_all_children">remove_all_children</a> ()</td></tr>
+<tr class="memdesc:lua_remove_all_children"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and detaches all child nodes (takes effect at the start of the next frame). <a href="#lua_remove_all_children">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_all_children"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_duplicate"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_duplicate">duplicate</a> ()</td></tr>
+<tr class="memdesc:lua_duplicate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this node (not supported on all node types). <a href="#lua_duplicate">More...</a><br /></td></tr>
+<tr class="separator:lua_duplicate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_child"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_child">get_child</a> (name: string)</td></tr>
+<tr class="memdesc:lua_get_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the direct child with the given name, or nil if not found (non-recursive). <a href="#lua_get_child">More...</a><br /></td></tr>
+<tr class="separator:lua_get_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_child_by_path"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_child_by_path">get_child_by_path</a> (path: string)</td></tr>
+<tr class="memdesc:lua_get_child_by_path"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a descendant by relative path (e.g. 'child/grandchild'), or nil if not found. <a href="#lua_get_child_by_path">More...</a><br /></td></tr>
+<tr class="separator:lua_get_child_by_path"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_find_first_child"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_find_first_child">find_first_child</a> (name: string)</td></tr>
+<tr class="memdesc:lua_find_first_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively finds and returns the first descendant with the given name, or nil. <a href="#lua_find_first_child">More...</a><br /></td></tr>
+<tr class="separator:lua_find_first_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_child"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_child">add_child</a> (child: <a class="el" href="Node_lua.html">Node</a>, async: boolean)</td></tr>
+<tr class="memdesc:lua_add_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a child node. Pass async=true when batch-adding many nodes (set visibility to false first to avoid mid-frame flicker). <a href="#lua_add_child">More...</a><br /></td></tr>
+<tr class="separator:lua_add_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_child"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_child">remove_child</a> (child: <a class="el" href="Node_lua.html">Node</a>)</td></tr>
+<tr class="memdesc:lua_remove_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests removal of a child node; takes effect at the start of the next frame. Returns true on success. <a href="#lua_remove_child">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_animation_player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AnimationPlayer_lua.html">AnimationPlayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_animation_player">as_animation_player</a> ()</td></tr>
+<tr class="memdesc:lua_as_animation_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to AnimationPlayer; returns nil if the type does not match. <a href="#lua_as_animation_player">More...</a><br /></td></tr>
+<tr class="separator:lua_as_animation_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_camera"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Camera_lua.html">Camera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_camera">as_camera</a> ()</td></tr>
+<tr class="memdesc:lua_as_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Camera; returns nil if the type does not match. <a href="#lua_as_camera">More...</a><br /></td></tr>
+<tr class="separator:lua_as_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_character"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Character_lua.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_character">as_character</a> ()</td></tr>
+<tr class="memdesc:lua_as_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Character; returns nil if the type does not match. <a href="#lua_as_character">More...</a><br /></td></tr>
+<tr class="separator:lua_as_character"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_collision_area"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CollisionArea_lua.html">CollisionArea</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_collision_area">as_collision_area</a> ()</td></tr>
+<tr class="memdesc:lua_as_collision_area"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to CollisionArea; returns nil if the type does not match. <a href="#lua_as_collision_area">More...</a><br /></td></tr>
+<tr class="separator:lua_as_collision_area"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_collision_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CollisionObject_lua.html">CollisionObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_collision_object">as_collision_object</a> ()</td></tr>
+<tr class="memdesc:lua_as_collision_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to CollisionObject; returns nil if the type does not match. <a href="#lua_as_collision_object">More...</a><br /></td></tr>
+<tr class="separator:lua_as_collision_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_directional_light"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_directional_light">as_directional_light</a> ()</td></tr>
+<tr class="memdesc:lua_as_directional_light"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to DirectionalLight; returns nil if the type does not match. <a href="#lua_as_directional_light">More...</a><br /></td></tr>
+<tr class="separator:lua_as_directional_light"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_environment"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Environment_lua.html">Environment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_environment">as_environment</a> ()</td></tr>
+<tr class="memdesc:lua_as_environment"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Environment; returns nil if the type does not match. <a href="#lua_as_environment">More...</a><br /></td></tr>
+<tr class="separator:lua_as_environment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_kinematic_body"><td class="memItemLeft" align="right" valign="top"><a class="el" href="KinematicBody_lua.html">KinematicBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_kinematic_body">as_kinematic_body</a> ()</td></tr>
+<tr class="memdesc:lua_as_kinematic_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to KinematicBody; returns nil if the type does not match. <a href="#lua_as_kinematic_body">More...</a><br /></td></tr>
+<tr class="separator:lua_as_kinematic_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_light"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Light_lua.html">Light</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_light">as_light</a> ()</td></tr>
+<tr class="memdesc:lua_as_light"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Light; returns nil if the type does not match. <a href="#lua_as_light">More...</a><br /></td></tr>
+<tr class="separator:lua_as_light"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_mesh_instance"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MeshInstance_lua.html">MeshInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_mesh_instance">as_mesh_instance</a> ()</td></tr>
+<tr class="memdesc:lua_as_mesh_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to MeshInstance; returns nil if the type does not match. <a href="#lua_as_mesh_instance">More...</a><br /></td></tr>
+<tr class="separator:lua_as_mesh_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_omni_light"><td class="memItemLeft" align="right" valign="top"><a class="el" href="OmniLight_lua.html">OmniLight</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_omni_light">as_omni_light</a> ()</td></tr>
+<tr class="memdesc:lua_as_omni_light"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to OmniLight; returns nil if the type does not match. <a href="#lua_as_omni_light">More...</a><br /></td></tr>
+<tr class="separator:lua_as_omni_light"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_physics_body"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PhysicsBody_lua.html">PhysicsBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_physics_body">as_physics_body</a> ()</td></tr>
+<tr class="memdesc:lua_as_physics_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to PhysicsBody; returns nil if the type does not match. <a href="#lua_as_physics_body">More...</a><br /></td></tr>
+<tr class="separator:lua_as_physics_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_ray_cast"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RayCast_lua.html">RayCast</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_ray_cast">as_ray_cast</a> ()</td></tr>
+<tr class="memdesc:lua_as_ray_cast"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to RayCast; returns nil if the type does not match. <a href="#lua_as_ray_cast">More...</a><br /></td></tr>
+<tr class="separator:lua_as_ray_cast"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_rigid_body"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RigidBody_lua.html">RigidBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_rigid_body">as_rigid_body</a> ()</td></tr>
+<tr class="memdesc:lua_as_rigid_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to RigidBody; returns nil if the type does not match. <a href="#lua_as_rigid_body">More...</a><br /></td></tr>
+<tr class="separator:lua_as_rigid_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_spot_light"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SpotLight_lua.html">SpotLight</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_spot_light">as_spot_light</a> ()</td></tr>
+<tr class="memdesc:lua_as_spot_light"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to SpotLight; returns nil if the type does not match. <a href="#lua_as_spot_light">More...</a><br /></td></tr>
+<tr class="separator:lua_as_spot_light"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_static_body"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StaticBody_lua.html">StaticBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_static_body">as_static_body</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_as_static_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to StaticBody; returns nil if the type does not match. <a href="#lua_as_static_body">More...</a><br /></td></tr>
+<tr class="separator:lua_as_static_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_timer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Timer_lua.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_timer">as_timer</a> ()</td></tr>
+<tr class="memdesc:lua_as_timer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Timer; returns nil if the type does not match. <a href="#lua_as_timer">More...</a><br /></td></tr>
+<tr class="separator:lua_as_timer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_as_viewport"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Viewport_lua.html">Viewport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_as_viewport">as_viewport</a> ()</td></tr>
+<tr class="memdesc:lua_as_viewport"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts this node to Viewport; returns nil if the type does not match. <a href="#lua_as_viewport">More...</a><br /></td></tr>
+<tr class="separator:lua_as_viewport"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_self"><td class="memItemLeft" align="right" valign="top">any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_self">self</a></td></tr>
+<tr class="memdesc:lua_self"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to this node (for passing to engine APIs that require a shared_ptr).<br /></td></tr>
+<tr class="separator:lua_self"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier of the node. (read-only)<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scene_tree"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SceneTree_lua.html">SceneTree</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scene_tree">scene_tree</a></td></tr>
+<tr class="memdesc:lua_scene_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scene tree this node belongs to. (read-only)<br /></td></tr>
+<tr class="separator:lua_scene_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">The concrete node type (see lysa.nodes.NodeType). (read-only)<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_name"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_name">name</a></td></tr>
+<tr class="memdesc:lua_name"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display name of the node.<br /></td></tr>
+<tr class="separator:lua_name"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_path"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_path">path</a></td></tr>
+<tr class="memdesc:lua_path"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute path of the node within the scene tree. (read-only)<br /></td></tr>
+<tr class="separator:lua_path"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_transform"><td class="memItemLeft" align="right" valign="top">lysa.float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_transform">transform</a></td></tr>
+<tr class="memdesc:lua_transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local-space transformation matrix (relative to parent).<br /></td></tr>
+<tr class="separator:lua_transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_position"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_position">position</a></td></tr>
+<tr class="memdesc:lua_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local-space position (relative to parent).<br /></td></tr>
+<tr class="separator:lua_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_transform_global"><td class="memItemLeft" align="right" valign="top">lysa.float4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_transform_global">transform_global</a></td></tr>
+<tr class="memdesc:lua_transform_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">World-space transformation matrix. (read-only)<br /></td></tr>
+<tr class="separator:lua_transform_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_position_global"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_position_global">position_global</a></td></tr>
+<tr class="memdesc:lua_position_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">World-space position.<br /></td></tr>
+<tr class="separator:lua_position_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation"><td class="memItemLeft" align="right" valign="top">lysa.quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation">rotation</a></td></tr>
+<tr class="memdesc:lua_rotation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation of the local transformation expressed as a quaternion.<br /></td></tr>
+<tr class="separator:lua_rotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_global"><td class="memItemLeft" align="right" valign="top">lysa.quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_global">rotation_global</a></td></tr>
+<tr class="memdesc:lua_rotation_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation of the world transformation expressed as a quaternion.<br /></td></tr>
+<tr class="separator:lua_rotation_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_euler_angles"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_euler_angles">rotation_euler_angles</a></td></tr>
+<tr class="memdesc:lua_rotation_euler_angles"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation of the local transformation in Euler angles (radians). (read-only)<br /></td></tr>
+<tr class="separator:lua_rotation_euler_angles"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_euler_angles_global"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_euler_angles_global">rotation_euler_angles_global</a></td></tr>
+<tr class="memdesc:lua_rotation_euler_angles_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation of the world transformation in Euler angles (radians). (read-only)<br /></td></tr>
+<tr class="separator:lua_rotation_euler_angles_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_x"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_x">rotation_x</a></td></tr>
+<tr class="memdesc:lua_rotation_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">X-axis rotation component of the local transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_y"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_y">rotation_y</a></td></tr>
+<tr class="memdesc:lua_rotation_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y-axis rotation component of the local transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_z"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_z">rotation_z</a></td></tr>
+<tr class="memdesc:lua_rotation_z"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z-axis rotation component of the local transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_z"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_global_x"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_global_x">rotation_global_x</a></td></tr>
+<tr class="memdesc:lua_rotation_global_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">X-axis rotation component of the world transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_global_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_global_y"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_global_y">rotation_global_y</a></td></tr>
+<tr class="memdesc:lua_rotation_global_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y-axis rotation component of the world transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_global_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_global_z"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_global_z">rotation_global_z</a></td></tr>
+<tr class="memdesc:lua_rotation_global_z"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z-axis rotation component of the world transformation in radians.<br /></td></tr>
+<tr class="separator:lua_rotation_global_z"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scale_global"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scale_global">scale_global</a></td></tr>
+<tr class="memdesc:lua_scale_global"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-axis scale of the world transformation. (read-only)<br /></td></tr>
+<tr class="separator:lua_scale_global"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_right_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_right_vector">right_vector</a></td></tr>
+<tr class="memdesc:lua_right_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized right (+X) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_right_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_left_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_left_vector">left_vector</a></td></tr>
+<tr class="memdesc:lua_left_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized left (-X) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_left_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_front_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_front_vector">front_vector</a></td></tr>
+<tr class="memdesc:lua_front_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized forward (-Z) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_front_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_back_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_back_vector">back_vector</a></td></tr>
+<tr class="memdesc:lua_back_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized backward (+Z) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_back_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_up_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_up_vector">up_vector</a></td></tr>
+<tr class="memdesc:lua_up_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized up (+Y) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_up_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_down_vector"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_down_vector">down_vector</a></td></tr>
+<tr class="memdesc:lua_down_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized down (-Y) direction vector in world space. (read-only)<br /></td></tr>
+<tr class="separator:lua_down_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_visible"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_visible">visible</a></td></tr>
+<tr class="memdesc:lua_visible"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the node and its children are rendered.<br /></td></tr>
+<tr class="separator:lua_visible"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_processed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_processed">is_processed</a></td></tr>
+<tr class="memdesc:lua_is_processed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the node is currently receiving process and input callbacks. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_processed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_have_parent"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_have_parent">have_parent</a></td></tr>
+<tr class="memdesc:lua_have_parent"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this node has a parent in the scene tree. (read-only)<br /></td></tr>
+<tr class="separator:lua_have_parent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a> create </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new plain Node at the origin without a parent.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_script"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_script </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">script</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attaches a Lua script table to the node. The table may implement _ready, _process, _physics_process, _input, _enter_scene, and _exit_scene callbacks.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_has_script"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean has_script </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if a Lua script is currently attached to this node.</p>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_script"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">table|nil get_script </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the attached Lua script table, or nil if none is attached.</p>
+<dl class="section return"><dt>Returns</dt><dd>table|nil</dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_position"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_position </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the local-space position with explicit x, y, z components.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">z</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_translate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil translate </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">vec</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Moves the node by an offset vector in local space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_translate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil translate </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Moves the node by x, y, z offset components in local space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">z</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_position_global"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_position_global </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the world-space position with explicit x, y, z components.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">z</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate </td><td>(</td>
+          <td class="paramtype">lysa.quaternion&#160;</td>
+          <td class="paramname">rotation</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Applies a quaternion rotation to the local transformation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>lysa.quaternion</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_x"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_x </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the X axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_y"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_y </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the Y axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_z"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_z </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the local transformation around the Z axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_rotation"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_rotation </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">vec</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the local rotation from Euler angles (radians, pitch/yaw/roll order).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_global_x"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_global_x </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the world transformation around the X axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_global_y"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_global_y </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the world transformation around the Y axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotate_global_z"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil rotate_global_z </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the world transformation around the Z axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil scale </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">factor</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scales the local transformation uniformly by the given factor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_scale </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">factor</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the per-axis scale of the local transformation from a float3.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lysa.float3 get_scale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the per-axis scale of the local transformation.</p>
+<dl class="section return"><dt>Returns</dt><dd>lysa.float3</dd></dl>
+</div></div>
+<a class="anchor" id="lua_to_global"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lysa.float3 to_global </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">local_pos</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transforms a local-space position into world space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">local_pos</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>lysa.float3</dd></dl>
+</div></div>
+<a class="anchor" id="lua_to_local"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lysa.float3 to_local </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">global_pos</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Transforms a world-space position into this node's local space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pos</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>lysa.float3</dd></dl>
+</div></div>
+<a class="anchor" id="lua_look_at"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil look_at </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">target</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the node so that its forward axis points toward the target world-space position.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>lysa.float3</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_look_at_smooth"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lysa.Tween look_at_smooth </td><td>(</td>
+          <td class="paramtype">lysa.float3&#160;</td>
+          <td class="paramname">target</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">duration</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">lysa.TransitionType&#160;</td>
+          <td class="paramname">transition_type</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">function|nil&#160;</td>
+          <td class="paramname">callback</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Smoothly rotates the node toward the target over duration seconds using the given easing curve; returns the controlling Tween.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>lysa.float3</td></tr>
+    <tr><td class="paramname">duration</td><td>number</td></tr>
+    <tr><td class="paramname">transition_type</td><td>lysa.TransitionType</td></tr>
+    <tr><td class="paramname">callback</td><td>function|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>lysa.Tween</dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_process_mode"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_process_mode </td><td>(</td>
+          <td class="paramtype"><a class="el" href="ProcessMode_lua.html">ProcessMode</a>&#160;</td>
+          <td class="paramname">mode</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Changes the node's processing mode (see lysa.nodes.ProcessMode).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td><a class="el" href="ProcessMode_lua.html">ProcessMode</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_to_group"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_to_group </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">group</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds this node to the named group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_from_group"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_from_group </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">group</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes this node from the named group; silently ignored if not a member.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>string</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_is_in_group"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_in_group </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">group</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this node has been added to the given group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_all_children"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_all_children </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and detaches all child nodes (takes effect at the start of the next frame).</p>
+</div></div>
+<a class="anchor" id="lua_duplicate"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a> duplicate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a deep copy of this node (not supported on all node types).</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a>|nil get_child </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the direct child with the given name, or nil if not found (non-recursive).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a>|nil</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_child_by_path"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a>|nil get_child_by_path </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a descendant by relative path (e.g. 'child/grandchild'), or nil if not found.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a>|nil</dd></dl>
+</div></div>
+<a class="anchor" id="lua_find_first_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a>|nil find_first_child </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Recursively finds and returns the first descendant with the given name, or nil.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a>|nil</dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Node_lua.html">Node</a> add_child </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Node_lua.html">Node</a>&#160;</td>
+          <td class="paramname">child</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">async</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a child node. Pass async=true when batch-adding many nodes (set visibility to false first to avoid mid-frame flicker).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Node_lua.html">Node</a></td></tr>
+    <tr><td class="paramname">async</td><td>boolean</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Node_lua.html">Node</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean remove_child </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Node_lua.html">Node</a>&#160;</td>
+          <td class="paramname">child</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Requests removal of a child node; takes effect at the start of the next frame. Returns true on success.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Node_lua.html">Node</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_animation_player"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AnimationPlayer_lua.html">AnimationPlayer</a> as_animation_player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to AnimationPlayer; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="AnimationPlayer_lua.html">AnimationPlayer</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_camera"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Camera_lua.html">Camera</a> as_camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Camera; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Camera_lua.html">Camera</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_character"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Character_lua.html">Character</a> as_character </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Character; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Character_lua.html">Character</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_collision_area"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="CollisionArea_lua.html">CollisionArea</a> as_collision_area </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to CollisionArea; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="CollisionArea_lua.html">CollisionArea</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_collision_object"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="CollisionObject_lua.html">CollisionObject</a> as_collision_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to CollisionObject; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="CollisionObject_lua.html">CollisionObject</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_directional_light"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a> as_directional_light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to DirectionalLight; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_environment"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Environment_lua.html">Environment</a> as_environment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Environment; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Environment_lua.html">Environment</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_kinematic_body"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="KinematicBody_lua.html">KinematicBody</a> as_kinematic_body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to KinematicBody; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="KinematicBody_lua.html">KinematicBody</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_light"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Light_lua.html">Light</a> as_light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Light; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Light_lua.html">Light</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_mesh_instance"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="MeshInstance_lua.html">MeshInstance</a> as_mesh_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to MeshInstance; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="MeshInstance_lua.html">MeshInstance</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_omni_light"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="OmniLight_lua.html">OmniLight</a> as_omni_light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to OmniLight; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="OmniLight_lua.html">OmniLight</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_physics_body"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="PhysicsBody_lua.html">PhysicsBody</a> as_physics_body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to PhysicsBody; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="PhysicsBody_lua.html">PhysicsBody</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_ray_cast"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RayCast_lua.html">RayCast</a> as_ray_cast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to RayCast; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RayCast_lua.html">RayCast</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_rigid_body"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="RigidBody_lua.html">RigidBody</a> as_rigid_body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to RigidBody; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="RigidBody_lua.html">RigidBody</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_spot_light"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="SpotLight_lua.html">SpotLight</a> as_spot_light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to SpotLight; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="SpotLight_lua.html">SpotLight</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_static_body"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StaticBody_lua.html">StaticBody</a> as_static_body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to StaticBody; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="StaticBody_lua.html">StaticBody</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_timer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Timer_lua.html">Timer</a> as_timer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Timer; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Timer_lua.html">Timer</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_as_viewport"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Viewport_lua.html">Viewport</a> as_viewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts this node to Viewport; returns nil if the type does not match.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Viewport_lua.html">Viewport</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_self"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any self</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shared pointer to this node (for passing to engine APIs that require a shared_ptr).</p>
+</div></div>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unique identifier of the node. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_scene_tree"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="SceneTree_lua.html">SceneTree</a> scene_tree</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The scene tree this node belongs to. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The concrete node type (see lysa.nodes.NodeType). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_name"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string name</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Display name of the node.</p>
+</div></div>
+<a class="anchor" id="lua_path"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string path</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Absolute path of the node within the scene tree. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_transform"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float4x4 transform</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Local-space transformation matrix (relative to parent).</p>
+</div></div>
+<a class="anchor" id="lua_position"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 position</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Local-space position (relative to parent).</p>
+</div></div>
+<a class="anchor" id="lua_transform_global"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float4x4 transform_global</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>World-space transformation matrix. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_position_global"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 position_global</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>World-space position.</p>
+</div></div>
+<a class="anchor" id="lua_rotation"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.quaternion rotation</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Rotation of the local transformation expressed as a quaternion.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_global"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.quaternion rotation_global</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Rotation of the world transformation expressed as a quaternion.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_euler_angles"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 rotation_euler_angles</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Rotation of the local transformation in Euler angles (radians). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_rotation_euler_angles_global"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 rotation_euler_angles_global</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Rotation of the world transformation in Euler angles (radians). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_rotation_x"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_x</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>X-axis rotation component of the local transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_y"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_y</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Y-axis rotation component of the local transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_z"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_z</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Z-axis rotation component of the local transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_global_x"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_global_x</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>X-axis rotation component of the world transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_global_y"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_global_y</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Y-axis rotation component of the world transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_rotation_global_z"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number rotation_global_z</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Z-axis rotation component of the world transformation in radians.</p>
+</div></div>
+<a class="anchor" id="lua_scale_global"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 scale_global</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Per-axis scale of the world transformation. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_right_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 right_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized right (+X) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_left_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 left_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized left (-X) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_front_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 front_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized forward (-Z) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_back_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 back_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized backward (+Z) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_up_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 up_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized up (+Y) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_down_vector"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 down_vector</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Normalized down (-Y) direction vector in world space. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_visible"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean visible</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the node and its children are rendered.</p>
+</div></div>
+<a class="anchor" id="lua_is_processed"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_processed</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the node is currently receiving process and input callbacks. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_have_parent"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean have_parent</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if this node has a parent in the scene tree. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="Node_lua.html">Node</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

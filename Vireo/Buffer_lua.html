@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: Buffer Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Buffer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A GPU buffer allocation. Created by Vireo.create_buffer().</p>
+<p>Lua full name: <code>vireo.Buffer</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_map"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_map">map</a> ()</td></tr>
+<tr class="memdesc:lua_map"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the buffer for CPU read/write access. Must call unmap() when done. <a href="#lua_map">More...</a><br /></td></tr>
+<tr class="separator:lua_map"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_unmap"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_unmap">unmap</a> ()</td></tr>
+<tr class="memdesc:lua_unmap"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmaps the buffer; CPU access is invalid after this call. <a href="#lua_unmap">More...</a><br /></td></tr>
+<tr class="separator:lua_unmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_write"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_write">write</a> (data: lightuserdata|any, size: integer|nil, offset: integer|nil)</td></tr>
+<tr class="memdesc:lua_write"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data into the mapped buffer. size defaults to the full buffer size; offset defaults to 0. <a href="#lua_write">More...</a><br /></td></tr>
+<tr class="separator:lua_write"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_memory_allocations"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_memory_allocations">get_memory_allocations</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_get_memory_allocations"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all current GPU memory allocations for all Buffer objects. <a href="#lua_get_memory_allocations">More...</a><br /></td></tr>
+<tr class="separator:lua_get_memory_allocations"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_size">size</a></td></tr>
+<tr class="memdesc:lua_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total size of the buffer in bytes. (read-only)<br /></td></tr>
+<tr class="separator:lua_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BufferType_lua.html">BufferType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usage type of this buffer (see vireo.BufferType). (read-only)<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_instance_size"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_instance_size">instance_size</a></td></tr>
+<tr class="memdesc:lua_instance_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of a single element before alignment padding in bytes. (read-only)<br /></td></tr>
+<tr class="separator:lua_instance_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_instance_size_aligned"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_instance_size_aligned">instance_size_aligned</a></td></tr>
+<tr class="memdesc:lua_instance_size_aligned"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aligned size of a single element in bytes (may be larger than instance_size). (read-only)<br /></td></tr>
+<tr class="separator:lua_instance_size_aligned"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_instance_count"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_instance_count">instance_count</a></td></tr>
+<tr class="memdesc:lua_instance_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of elements/instances the buffer was allocated for. (read-only)<br /></td></tr>
+<tr class="separator:lua_instance_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_mapped_address"><td class="memItemLeft" align="right" valign="top">lightuserdata&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_mapped_address">mapped_address</a></td></tr>
+<tr class="memdesc:lua_mapped_address"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU-side mapped pointer (only valid between map() and unmap(), for upload/download buffers). (read-only)<br /></td></tr>
+<tr class="separator:lua_mapped_address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_map"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil map </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Maps the buffer for CPU read/write access. Must call unmap() when done.</p>
+</div></div>
+<a class="anchor" id="lua_unmap"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil unmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unmaps the buffer; CPU access is invalid after this call.</p>
+</div></div>
+<a class="anchor" id="lua_write"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil write </td><td>(</td>
+          <td class="paramtype">lightuserdata|any&#160;</td>
+          <td class="paramname">data</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">size</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes data into the mapped buffer. size defaults to the full buffer size; offset defaults to 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>lightuserdata|any</td></tr>
+    <tr><td class="paramname">size</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">offset</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_memory_allocations"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[] get_memory_allocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns all current GPU memory allocations for all Buffer objects.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VideoMemoryAllocationDesc_lua.html">VideoMemoryAllocationDesc</a>[]</dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_size"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer size</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Total size of the buffer in bytes. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="BufferType_lua.html">BufferType</a> type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Usage type of this buffer (see vireo.BufferType). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_instance_size"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer instance_size</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Size of a single element before alignment padding in bytes. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_instance_size_aligned"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer instance_size_aligned</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Aligned size of a single element in bytes (may be larger than instance_size). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_instance_count"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer instance_count</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of elements/instances the buffer was allocated for. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_mapped_address"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lightuserdata mapped_address</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>CPU-side mapped pointer (only valid between map() and unmap(), for upload/download buffers). (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="Buffer_lua.html">Buffer</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

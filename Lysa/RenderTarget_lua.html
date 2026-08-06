@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: RenderTarget Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">RenderTarget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A GPU surface that accumulates render views and drives the frame loop.</p>
+<p>Lua full name: <code>lysa.RenderTarget</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_add_view"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_view">add_view</a> (view: <a class="el" href="RenderView_lua.html">RenderView</a>)</td></tr>
+<tr class="memdesc:lua_add_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a render view to this target. <a href="#lua_add_view">More...</a><br /></td></tr>
+<tr class="separator:lua_add_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_update_view"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_update_view">update_view</a> (view: <a class="el" href="RenderView_lua.html">RenderView</a>)</td></tr>
+<tr class="memdesc:lua_update_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing render view (e.g. after viewport changes). <a href="#lua_update_view">More...</a><br /></td></tr>
+<tr class="separator:lua_update_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_view"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_view">remove_view</a> (view: <a class="el" href="RenderView_lua.html">RenderView</a>)</td></tr>
+<tr class="memdesc:lua_remove_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a render view from this target. <a href="#lua_remove_view">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_scene_renderer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_scene_renderer">add_scene_renderer</a> (renderer: <a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a>)</td></tr>
+<tr class="memdesc:lua_add_scene_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a 3-D scene renderer to be executed each frame. <a href="#lua_add_scene_renderer">More...</a><br /></td></tr>
+<tr class="separator:lua_add_scene_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_scene_renderer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_scene_renderer">remove_scene_renderer</a> (renderer: <a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a>)</td></tr>
+<tr class="memdesc:lua_remove_scene_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters a previously added 3-D scene renderer. <a href="#lua_remove_scene_renderer">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_scene_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_ui_renderer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_ui_renderer">add_ui_renderer</a> (renderer: <a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a>)</td></tr>
+<tr class="memdesc:lua_add_ui_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a 2-D UI renderer to be executed each frame. <a href="#lua_add_ui_renderer">More...</a><br /></td></tr>
+<tr class="separator:lua_add_ui_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_ui_renderer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_ui_renderer">remove_ui_renderer</a> (renderer: <a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a>)</td></tr>
+<tr class="memdesc:lua_remove_ui_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters a previously added 2-D UI renderer. <a href="#lua_remove_ui_renderer">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_ui_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_wait_idle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_wait_idle">wait_idle</a> ()</td></tr>
+<tr class="memdesc:lua_wait_idle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the calling thread until the GPU has finished all pending work for this target. <a href="#lua_wait_idle">More...</a><br /></td></tr>
+<tr class="separator:lua_wait_idle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_gamma_correction_parameters"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_gamma_correction_parameters">set_gamma_correction_parameters</a> (gamma: number, exposure: number)</td></tr>
+<tr class="memdesc:lua_set_gamma_correction_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gamma and exposure values for the tonemapping/gamma-correction pass applied to the 3-D scene. <a href="#lua_set_gamma_correction_parameters">More...</a><br /></td></tr>
+<tr class="separator:lua_set_gamma_correction_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_vector_gamma_correction_parameters"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_vector_gamma_correction_parameters">set_vector_gamma_correction_parameters</a> (gamma: number, exposure: number)</td></tr>
+<tr class="memdesc:lua_set_vector_gamma_correction_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gamma and exposure values applied specifically to vector (2-D/3-D overlay) renderers. <a href="#lua_set_vector_gamma_correction_parameters">More...</a><br /></td></tr>
+<tr class="separator:lua_set_vector_gamma_correction_parameters"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique render target identifier.<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_aspect_ratio"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_aspect_ratio">aspect_ratio</a></td></tr>
+<tr class="memdesc:lua_aspect_ratio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aspect ratio (width / height). (read-only)<br /></td></tr>
+<tr class="separator:lua_aspect_ratio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_width"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_width">width</a></td></tr>
+<tr class="memdesc:lua_width"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render target width in pixels. (read-only)<br /></td></tr>
+<tr class="separator:lua_width"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_height"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_height">height</a></td></tr>
+<tr class="memdesc:lua_height"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render target height in pixels. (read-only)<br /></td></tr>
+<tr class="separator:lua_height"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_paused"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_paused">paused</a></td></tr>
+<tr class="memdesc:lua_paused"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the render loop is paused.<br /></td></tr>
+<tr class="separator:lua_paused"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_display_physics_debug"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_display_physics_debug">display_physics_debug</a></td></tr>
+<tr class="memdesc:lua_display_physics_debug"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether physics debug overlays are displayed (only available in debug builds with physics enabled).<br /></td></tr>
+<tr class="separator:lua_display_physics_debug"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_frames_in_flight"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_frames_in_flight">frames_in_flight</a></td></tr>
+<tr class="memdesc:lua_frames_in_flight"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of frames in flight for this target. (read-only)<br /></td></tr>
+<tr class="separator:lua_frames_in_flight"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_current_frame_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_current_frame_index">current_frame_index</a></td></tr>
+<tr class="memdesc:lua_current_frame_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the current frame in flight (0-based). (read-only)<br /></td></tr>
+<tr class="separator:lua_current_frame_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_image_format"><td class="memItemLeft" align="right" valign="top">vireo.ImageFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_image_format">image_format</a></td></tr>
+<tr class="memdesc:lua_image_format"><td class="mdescLeft">&#160;</td><td class="mdescRight">The swapchain image format. (read-only)<br /></td></tr>
+<tr class="separator:lua_image_format"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_renderer_configuration"><td class="memItemLeft" align="right" valign="top"><a class="el" href="RendererConfiguration_lua.html">RendererConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_renderer_configuration">renderer_configuration</a></td></tr>
+<tr class="memdesc:lua_renderer_configuration"><td class="mdescLeft">&#160;</td><td class="mdescRight">The renderer configuration used to create this target. (read-only)<br /></td></tr>
+<tr class="separator:lua_renderer_configuration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_renderer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Renderer_lua.html">Renderer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_renderer">renderer</a></td></tr>
+<tr class="memdesc:lua_renderer"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active 3-D renderer attached to this target. (read-only)<br /></td></tr>
+<tr class="separator:lua_renderer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_add_view"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_view </td><td>(</td>
+          <td class="paramtype"><a class="el" href="RenderView_lua.html">RenderView</a>&#160;</td>
+          <td class="paramname">view</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a render view to this target.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td><a class="el" href="RenderView_lua.html">RenderView</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_update_view"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil update_view </td><td>(</td>
+          <td class="paramtype"><a class="el" href="RenderView_lua.html">RenderView</a>&#160;</td>
+          <td class="paramname">view</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Updates an existing render view (e.g. after viewport changes).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td><a class="el" href="RenderView_lua.html">RenderView</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_view"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_view </td><td>(</td>
+          <td class="paramtype"><a class="el" href="RenderView_lua.html">RenderView</a>&#160;</td>
+          <td class="paramname">view</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a render view from this target.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td><a class="el" href="RenderView_lua.html">RenderView</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_scene_renderer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_scene_renderer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a>&#160;</td>
+          <td class="paramname">renderer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Registers a 3-D scene renderer to be executed each frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td><a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_scene_renderer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_scene_renderer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a>&#160;</td>
+          <td class="paramname">renderer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unregisters a previously added 3-D scene renderer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td><a class="el" href="Vector3DRenderer_lua.html">Vector3DRenderer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_ui_renderer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil add_ui_renderer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a>&#160;</td>
+          <td class="paramname">renderer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Registers a 2-D UI renderer to be executed each frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_ui_renderer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_ui_renderer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a>&#160;</td>
+          <td class="paramname">renderer</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unregisters a previously added 2-D UI renderer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_wait_idle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil wait_idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blocks the calling thread until the GPU has finished all pending work for this target.</p>
+</div></div>
+<a class="anchor" id="lua_set_gamma_correction_parameters"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_gamma_correction_parameters </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">gamma</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">exposure</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gamma and exposure values for the tonemapping/gamma-correction pass applied to the 3-D scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>number</td></tr>
+    <tr><td class="paramname">exposure</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_vector_gamma_correction_parameters"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_vector_gamma_correction_parameters </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">gamma</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">exposure</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the gamma and exposure values applied specifically to vector (2-D/3-D overlay) renderers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gamma</td><td>number</td></tr>
+    <tr><td class="paramname">exposure</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unique render target identifier.</p>
+</div></div>
+<a class="anchor" id="lua_aspect_ratio"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number aspect_ratio</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Aspect ratio (width / height). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_width"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number width</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Render target width in pixels. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_height"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number height</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Render target height in pixels. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_paused"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean paused</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Whether the render loop is paused.</p>
+</div></div>
+<a class="anchor" id="lua_display_physics_debug"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean display_physics_debug</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Whether physics debug overlays are displayed (only available in debug builds with physics enabled).</p>
+</div></div>
+<a class="anchor" id="lua_frames_in_flight"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer frames_in_flight</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of frames in flight for this target. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_current_frame_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer current_frame_index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Index of the current frame in flight (0-based). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_image_format"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">vireo.ImageFormat image_format</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The swapchain image format. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_renderer_configuration"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="RendererConfiguration_lua.html">RendererConfiguration</a> renderer_configuration</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The renderer configuration used to create this target. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_renderer"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Renderer_lua.html">Renderer</a> renderer</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The active 3-D renderer attached to this target. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="RenderTarget_lua.html">RenderTarget</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

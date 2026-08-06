@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: DirectionalLight Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">DirectionalLight Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A directional light with parallel rays (e.g. sunlight). Supports cascaded shadow maps.</p>
+<p>Inherits from: <a class="el" href="Light_lua.html">Light</a></p>
+<p>Lua full name: <code>lysa.nodes.DirectionalLight</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (color: lysa.float4)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a DirectionalLight with the given color and intensity (xyz = RGB, w = intensity). <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_shadow_map_cascades_count"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_shadow_map_cascades_count">shadow_map_cascades_count</a></td></tr>
+<tr class="memdesc:lua_shadow_map_cascades_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of shadow map cascades (between 2 and MAX_SHADOW_MAP_CASCADES).<br /></td></tr>
+<tr class="separator:lua_shadow_map_cascades_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_cascade_split_lambda"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_cascade_split_lambda">cascade_split_lambda</a></td></tr>
+<tr class="memdesc:lua_cascade_split_lambda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lambda controlling how cascade split depths are distributed; values closer to 1.0 produce smaller (finer) first cascades.<br /></td></tr>
+<tr class="separator:lua_cascade_split_lambda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a> create </td><td>(</td>
+          <td class="paramtype">lysa.float4&#160;</td>
+          <td class="paramname">color</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a DirectionalLight with the given color and intensity (xyz = RGB, w = intensity).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>lysa.float4</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_shadow_map_cascades_count"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer shadow_map_cascades_count</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of shadow map cascades (between 2 and MAX_SHADOW_MAP_CASCADES).</p>
+</div></div>
+<a class="anchor" id="lua_cascade_split_lambda"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number cascade_split_lambda</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Lambda controlling how cascade split depths are distributed; values closer to 1.0 produce smaller (finer) first cascades.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="DirectionalLight_lua.html">DirectionalLight</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

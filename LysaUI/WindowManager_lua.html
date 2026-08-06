@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: WindowManager Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">WindowManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The central manager for all UI windows attached to a rendering target.</p>
+<p>Lua full name: <code>lysa.ui.WindowManager</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_create"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Window_lua.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create">create</a> (rect: lysa.Rect)</td></tr>
+<tr class="memdesc:lua_create"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a new UI window with the given position and size. <a href="#lua_create">More...</a><br /></td></tr>
+<tr class="separator:lua_create"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Window_lua.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add">add</a> (window: <a class="el" href="Window_lua.html">Window</a>)</td></tr>
+<tr class="memdesc:lua_add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an existing UI window with this manager so it receives update and render calls. <a href="#lua_add">More...</a><br /></td></tr>
+<tr class="separator:lua_add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove">remove</a> (window: <a class="el" href="Window_lua.html">Window</a>)</td></tr>
+<tr class="memdesc:lua_remove"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters and destroys the given UI window (effective at the start of the next frame). <a href="#lua_remove">More...</a><br /></td></tr>
+<tr class="separator:lua_remove"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_enable_window_resizing"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_enable_window_resizing">set_enable_window_resizing</a> (enable: boolean)</td></tr>
+<tr class="memdesc:lua_set_enable_window_resizing"><td class="mdescLeft">&#160;</td><td class="mdescRight">Globally enables or disables user-driven window resizing by dragging borders. <a href="#lua_set_enable_window_resizing">More...</a><br /></td></tr>
+<tr class="separator:lua_set_enable_window_resizing"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_default_font"><td class="memItemLeft" align="right" valign="top">lysa.Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_default_font">default_font</a></td></tr>
+<tr class="memdesc:lua_default_font"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default font loaded at manager creation, applied to new windows that do not specify their own. (read-only)<br /></td></tr>
+<tr class="separator:lua_default_font"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_default_font_scale"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_default_font_scale">default_font_scale</a></td></tr>
+<tr class="memdesc:lua_default_font_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default font scale applied to new windows that do not specify their own.<br /></td></tr>
+<tr class="separator:lua_default_font_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_default_text_color"><td class="memItemLeft" align="right" valign="top">lysa.float4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_default_text_color">default_text_color</a></td></tr>
+<tr class="memdesc:lua_default_text_color"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default text RGBA color applied to new windows that do not specify their own.<br /></td></tr>
+<tr class="separator:lua_default_text_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_aspect_ratio"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_aspect_ratio">aspect_ratio</a></td></tr>
+<tr class="memdesc:lua_aspect_ratio"><td class="mdescLeft">&#160;</td><td class="mdescRight">The aspect ratio of the rendering window this manager is attached to. (read-only)<br /></td></tr>
+<tr class="separator:lua_aspect_ratio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_resize_delta"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_resize_delta">resize_delta</a></td></tr>
+<tr class="memdesc:lua_resize_delta"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel distance from a window border within which a drag starts a resize operation (default 5.0). (read-only)<br /></td></tr>
+<tr class="separator:lua_resize_delta"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_create"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Window_lua.html">Window</a> create </td><td>(</td>
+          <td class="paramtype">lysa.Rect&#160;</td>
+          <td class="paramname">rect</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and registers a new UI window with the given position and size.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>lysa.Rect</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Window_lua.html">Window</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Window_lua.html">Window</a> add </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Window_lua.html">Window</a>&#160;</td>
+          <td class="paramname">window</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Registers an existing UI window with this manager so it receives update and render calls.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td><a class="el" href="Window_lua.html">Window</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Window_lua.html">Window</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Window_lua.html">Window</a>&#160;</td>
+          <td class="paramname">window</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unregisters and destroys the given UI window (effective at the start of the next frame).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td><a class="el" href="Window_lua.html">Window</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_enable_window_resizing"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_enable_window_resizing </td><td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">enable</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Globally enables or disables user-driven window resizing by dragging borders.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_default_font"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.Font default_font</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The default font loaded at manager creation, applied to new windows that do not specify their own. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_default_font_scale"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number default_font_scale</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The default font scale applied to new windows that do not specify their own.</p>
+</div></div>
+<a class="anchor" id="lua_default_text_color"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float4 default_text_color</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The default text RGBA color applied to new windows that do not specify their own.</p>
+</div></div>
+<a class="anchor" id="lua_aspect_ratio"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number aspect_ratio</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The aspect ratio of the rendering window this manager is attached to. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_resize_delta"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number resize_delta</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pixel distance from a window border within which a drag starts a resize operation (default 5.0). (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="WindowManager_lua.html">WindowManager</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: DrawIndexedIndirectCommand Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">DrawIndexedIndirectCommand Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>GPU-side structure for an indirect indexed draw call. Mirror of VkDrawIndexedIndirectCommand / D3D12_DRAW_INDEXED_ARGUMENTS.</p>
+<p>Lua full name: <code>vireo.DrawIndexedIndirectCommand</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_index_count"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_index_count">index_count</a></td></tr>
+<tr class="memdesc:lua_index_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of indices to draw per instance.<br /></td></tr>
+<tr class="separator:lua_index_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_instance_count"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_instance_count">instance_count</a></td></tr>
+<tr class="memdesc:lua_instance_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of instances to draw.<br /></td></tr>
+<tr class="separator:lua_instance_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_first_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_first_index">first_index</a></td></tr>
+<tr class="memdesc:lua_first_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base offset (in indices) into the index buffer.<br /></td></tr>
+<tr class="separator:lua_first_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_vertex_offset"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_vertex_offset">vertex_offset</a></td></tr>
+<tr class="memdesc:lua_vertex_offset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value added to each index before reading a vertex from the vertex buffer.<br /></td></tr>
+<tr class="separator:lua_vertex_offset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_first_instance"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_first_instance">first_instance</a></td></tr>
+<tr class="memdesc:lua_first_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance ID of the first instance.<br /></td></tr>
+<tr class="separator:lua_first_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_index_count"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer index_count</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of indices to draw per instance.</p>
+</div></div>
+<a class="anchor" id="lua_instance_count"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer instance_count</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of instances to draw.</p>
+</div></div>
+<a class="anchor" id="lua_first_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer first_index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Base offset (in indices) into the index buffer.</p>
+</div></div>
+<a class="anchor" id="lua_vertex_offset"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer vertex_offset</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Value added to each index before reading a vertex from the vertex buffer.</p>
+</div></div>
+<a class="anchor" id="lua_first_instance"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer first_instance</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Instance ID of the first instance.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="DrawIndexedIndirectCommand_lua.html">DrawIndexedIndirectCommand</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

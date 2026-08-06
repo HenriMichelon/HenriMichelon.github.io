@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: UIEvent Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">UIEvent Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>String event-type constants used when subscribing to widget events via EventManager.</p>
+<p>Lua full name: <code>lysa.ui.UIEvent</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_OnCreate"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnCreate">OnCreate</a></td></tr>
+<tr class="memdesc:lua_OnCreate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired after the widget has been created and added to the hierarchy.<br /></td></tr>
+<tr class="separator:lua_OnCreate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnDestroy"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnDestroy">OnDestroy</a></td></tr>
+<tr class="memdesc:lua_OnDestroy"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired just before the widget is destroyed.<br /></td></tr>
+<tr class="separator:lua_OnDestroy"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnKeyDown"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnKeyDown">OnKeyDown</a></td></tr>
+<tr class="memdesc:lua_OnKeyDown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a key is pressed while the widget has keyboard focus.<br /></td></tr>
+<tr class="separator:lua_OnKeyDown"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnKeyUp"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnKeyUp">OnKeyUp</a></td></tr>
+<tr class="memdesc:lua_OnKeyUp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a key is released while the widget has keyboard focus.<br /></td></tr>
+<tr class="separator:lua_OnKeyUp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnMouseDown"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnMouseDown">OnMouseDown</a></td></tr>
+<tr class="memdesc:lua_OnMouseDown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a mouse button is pressed over the widget.<br /></td></tr>
+<tr class="separator:lua_OnMouseDown"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnMouseUp"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnMouseUp">OnMouseUp</a></td></tr>
+<tr class="memdesc:lua_OnMouseUp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a mouse button is released over the widget.<br /></td></tr>
+<tr class="separator:lua_OnMouseUp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnMouseMove"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnMouseMove">OnMouseMove</a></td></tr>
+<tr class="memdesc:lua_OnMouseMove"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the mouse cursor moves over the widget.<br /></td></tr>
+<tr class="separator:lua_OnMouseMove"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnGotFocus"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnGotFocus">OnGotFocus</a></td></tr>
+<tr class="memdesc:lua_OnGotFocus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget acquires keyboard focus.<br /></td></tr>
+<tr class="separator:lua_OnGotFocus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnLostFocus"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnLostFocus">OnLostFocus</a></td></tr>
+<tr class="memdesc:lua_OnLostFocus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget loses keyboard focus.<br /></td></tr>
+<tr class="separator:lua_OnLostFocus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnShow"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnShow">OnShow</a></td></tr>
+<tr class="memdesc:lua_OnShow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget's visibility changes to visible.<br /></td></tr>
+<tr class="separator:lua_OnShow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnHide"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnHide">OnHide</a></td></tr>
+<tr class="memdesc:lua_OnHide"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget's visibility changes to hidden.<br /></td></tr>
+<tr class="separator:lua_OnHide"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnEnable"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnEnable">OnEnable</a></td></tr>
+<tr class="memdesc:lua_OnEnable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget transitions to the enabled state.<br /></td></tr>
+<tr class="separator:lua_OnEnable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnDisable"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnDisable">OnDisable</a></td></tr>
+<tr class="memdesc:lua_OnDisable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget transitions to the disabled state.<br /></td></tr>
+<tr class="separator:lua_OnDisable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnTextChange"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnTextChange">OnTextChange</a></td></tr>
+<tr class="memdesc:lua_OnTextChange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the widget's text content changes (TextEdit, Text).<br /></td></tr>
+<tr class="separator:lua_OnTextChange"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnTextInput"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnTextInput">OnTextInput</a></td></tr>
+<tr class="memdesc:lua_OnTextInput"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired on each character input from the user (TextEdit).<br /></td></tr>
+<tr class="separator:lua_OnTextInput"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnClick"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnClick">OnClick</a></td></tr>
+<tr class="memdesc:lua_OnClick"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a Button or ToggleButton is clicked.<br /></td></tr>
+<tr class="separator:lua_OnClick"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnStateChange"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnStateChange">OnStateChange</a></td></tr>
+<tr class="memdesc:lua_OnStateChange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when a CheckWidget changes state (checked ↔ unchecked).<br /></td></tr>
+<tr class="separator:lua_OnStateChange"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnValueChange"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnValueChange">OnValueChange</a></td></tr>
+<tr class="memdesc:lua_OnValueChange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the value of a ValueSelect / ScrollBar changes.<br /></td></tr>
+<tr class="separator:lua_OnValueChange"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnRangeChange"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnRangeChange">OnRangeChange</a></td></tr>
+<tr class="memdesc:lua_OnRangeChange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the min/max range of a ValueSelect / ScrollBar changes.<br /></td></tr>
+<tr class="separator:lua_OnRangeChange"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnResize"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnResize">OnResize</a></td></tr>
+<tr class="memdesc:lua_OnResize"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the window size changes.<br /></td></tr>
+<tr class="separator:lua_OnResize"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnMove"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnMove">OnMove</a></td></tr>
+<tr class="memdesc:lua_OnMove"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the window position changes.<br /></td></tr>
+<tr class="separator:lua_OnMove"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnInsertItem"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnInsertItem">OnInsertItem</a></td></tr>
+<tr class="memdesc:lua_OnInsertItem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when an item is inserted into a List (ListBox, etc.).<br /></td></tr>
+<tr class="separator:lua_OnInsertItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnRemoveItem"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnRemoveItem">OnRemoveItem</a></td></tr>
+<tr class="memdesc:lua_OnRemoveItem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when an item is removed from a List.<br /></td></tr>
+<tr class="separator:lua_OnRemoveItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OnSelectItem"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OnSelectItem">OnSelectItem</a></td></tr>
+<tr class="memdesc:lua_OnSelectItem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fired when the selected item of a List changes.<br /></td></tr>
+<tr class="separator:lua_OnSelectItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_OnCreate"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnCreate</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired after the widget has been created and added to the hierarchy.</p>
+</div></div>
+<a class="anchor" id="lua_OnDestroy"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnDestroy</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired just before the widget is destroyed.</p>
+</div></div>
+<a class="anchor" id="lua_OnKeyDown"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnKeyDown</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a key is pressed while the widget has keyboard focus.</p>
+</div></div>
+<a class="anchor" id="lua_OnKeyUp"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnKeyUp</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a key is released while the widget has keyboard focus.</p>
+</div></div>
+<a class="anchor" id="lua_OnMouseDown"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnMouseDown</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a mouse button is pressed over the widget.</p>
+</div></div>
+<a class="anchor" id="lua_OnMouseUp"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnMouseUp</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a mouse button is released over the widget.</p>
+</div></div>
+<a class="anchor" id="lua_OnMouseMove"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnMouseMove</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the mouse cursor moves over the widget.</p>
+</div></div>
+<a class="anchor" id="lua_OnGotFocus"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnGotFocus</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget acquires keyboard focus.</p>
+</div></div>
+<a class="anchor" id="lua_OnLostFocus"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnLostFocus</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget loses keyboard focus.</p>
+</div></div>
+<a class="anchor" id="lua_OnShow"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnShow</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget's visibility changes to visible.</p>
+</div></div>
+<a class="anchor" id="lua_OnHide"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnHide</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget's visibility changes to hidden.</p>
+</div></div>
+<a class="anchor" id="lua_OnEnable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnEnable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget transitions to the enabled state.</p>
+</div></div>
+<a class="anchor" id="lua_OnDisable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnDisable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget transitions to the disabled state.</p>
+</div></div>
+<a class="anchor" id="lua_OnTextChange"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnTextChange</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the widget's text content changes (TextEdit, Text).</p>
+</div></div>
+<a class="anchor" id="lua_OnTextInput"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnTextInput</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired on each character input from the user (TextEdit).</p>
+</div></div>
+<a class="anchor" id="lua_OnClick"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnClick</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a Button or ToggleButton is clicked.</p>
+</div></div>
+<a class="anchor" id="lua_OnStateChange"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnStateChange</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when a CheckWidget changes state (checked ↔ unchecked).</p>
+</div></div>
+<a class="anchor" id="lua_OnValueChange"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnValueChange</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the value of a ValueSelect / ScrollBar changes.</p>
+</div></div>
+<a class="anchor" id="lua_OnRangeChange"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnRangeChange</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the min/max range of a ValueSelect / ScrollBar changes.</p>
+</div></div>
+<a class="anchor" id="lua_OnResize"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnResize</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the window size changes.</p>
+</div></div>
+<a class="anchor" id="lua_OnMove"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnMove</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the window position changes.</p>
+</div></div>
+<a class="anchor" id="lua_OnInsertItem"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnInsertItem</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when an item is inserted into a List (ListBox, etc.).</p>
+</div></div>
+<a class="anchor" id="lua_OnRemoveItem"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnRemoveItem</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when an item is removed from a List.</p>
+</div></div>
+<a class="anchor" id="lua_OnSelectItem"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string OnSelectItem</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fired when the selected item of a List changes.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="UIEvent_lua.html">UIEvent</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

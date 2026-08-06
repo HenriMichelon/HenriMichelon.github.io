@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: PostProcessingCompute Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">PostProcessingCompute Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A compute-based full-screen post-processing render pass.</p>
+<p>Inherits from: <a class="el" href="Renderpass_lua.html">Renderpass</a></p>
+<p>Lua full name: <code>lysa.PostProcessingCompute</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_comp_shader_name"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_comp_shader_name">comp_shader_name</a></td></tr>
+<tr class="memdesc:lua_comp_shader_name"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the compute shader file used by this pass. (read-only)<br /></td></tr>
+<tr class="separator:lua_comp_shader_name"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BINDING_PARAMS"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BINDING_PARAMS">BINDING_PARAMS</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_BINDING_PARAMS"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader binding slot index for the parameter buffer.<br /></td></tr>
+<tr class="separator:lua_BINDING_PARAMS"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BINDING_DATA"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BINDING_DATA">BINDING_DATA</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_BINDING_DATA"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader binding slot index for the general data buffer.<br /></td></tr>
+<tr class="separator:lua_BINDING_DATA"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BINDING_OUTPUT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BINDING_OUTPUT">BINDING_OUTPUT</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_BINDING_OUTPUT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader binding slot index for the output image.<br /></td></tr>
+<tr class="separator:lua_BINDING_OUTPUT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BINDING_TEXTURES"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BINDING_TEXTURES">BINDING_TEXTURES</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_BINDING_TEXTURES"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader binding slot index for the texture array.<br /></td></tr>
+<tr class="separator:lua_BINDING_TEXTURES"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_INPUT_BUFFER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INPUT_BUFFER">INPUT_BUFFER</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_INPUT_BUFFER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture array index of the input color buffer.<br /></td></tr>
+<tr class="separator:lua_INPUT_BUFFER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_DEPTH_BUFFER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_DEPTH_BUFFER">DEPTH_BUFFER</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_DEPTH_BUFFER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture array index of the depth buffer.<br /></td></tr>
+<tr class="separator:lua_DEPTH_BUFFER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BLOOM_BUFFER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BLOOM_BUFFER">BLOOM_BUFFER</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_BLOOM_BUFFER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture array index of the bloom buffer.<br /></td></tr>
+<tr class="separator:lua_BLOOM_BUFFER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OPT1_BUFFER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OPT1_BUFFER">OPT1_BUFFER</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_OPT1_BUFFER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture array index of optional buffer slot 1.<br /></td></tr>
+<tr class="separator:lua_OPT1_BUFFER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_OPT2_BUFFER"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_OPT2_BUFFER">OPT2_BUFFER</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_OPT2_BUFFER"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture array index of optional buffer slot 2.<br /></td></tr>
+<tr class="separator:lua_OPT2_BUFFER"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_TEXTURES_COUNT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_TEXTURES_COUNT">TEXTURES_COUNT</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_TEXTURES_COUNT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of texture slots available to the compute shader.<br /></td></tr>
+<tr class="separator:lua_TEXTURES_COUNT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_TILE_SIZE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_TILE_SIZE">TILE_SIZE</a>&#160;<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_TILE_SIZE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute dispatch tile size in pixels (thread-group size).<br /></td></tr>
+<tr class="separator:lua_TILE_SIZE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_comp_shader_name"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string comp_shader_name</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Name of the compute shader file used by this pass. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_BINDING_PARAMS"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BINDING_PARAMS</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shader binding slot index for the parameter buffer.</p>
+</div></div>
+<a class="anchor" id="lua_BINDING_DATA"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BINDING_DATA</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shader binding slot index for the general data buffer.</p>
+</div></div>
+<a class="anchor" id="lua_BINDING_OUTPUT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BINDING_OUTPUT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shader binding slot index for the output image.</p>
+</div></div>
+<a class="anchor" id="lua_BINDING_TEXTURES"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BINDING_TEXTURES</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Shader binding slot index for the texture array.</p>
+</div></div>
+<a class="anchor" id="lua_INPUT_BUFFER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INPUT_BUFFER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture array index of the input color buffer.</p>
+</div></div>
+<a class="anchor" id="lua_DEPTH_BUFFER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer DEPTH_BUFFER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture array index of the depth buffer.</p>
+</div></div>
+<a class="anchor" id="lua_BLOOM_BUFFER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BLOOM_BUFFER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture array index of the bloom buffer.</p>
+</div></div>
+<a class="anchor" id="lua_OPT1_BUFFER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer OPT1_BUFFER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture array index of optional buffer slot 1.</p>
+</div></div>
+<a class="anchor" id="lua_OPT2_BUFFER"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer OPT2_BUFFER</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Texture array index of optional buffer slot 2.</p>
+</div></div>
+<a class="anchor" id="lua_TEXTURES_COUNT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer TEXTURES_COUNT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Total number of texture slots available to the compute shader.</p>
+</div></div>
+<a class="anchor" id="lua_TILE_SIZE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer TILE_SIZE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Compute dispatch tile size in pixels (thread-group size).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="PostProcessingCompute_lua.html">PostProcessingCompute</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

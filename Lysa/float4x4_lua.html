@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: float4x4 Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">float4x4 Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>4×4 matrix used for 3-D transforms (translation, rotation, scale, projection).</p>
+<p>Lua full name: <code>lysa.float4x4</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_identity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_identity">identity</a> ()<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_identity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity matrix. <a href="#lua_identity">More...</a><br /></td></tr>
+<tr class="separator:lua_identity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_translation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_translation">translation</a> (x: number, y: number, z: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_translation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a translation matrix from x, y, z. <a href="#lua_translation">More...</a><br /></td></tr>
+<tr class="separator:lua_translation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_translation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_translation">translation</a> (offset: <a class="el" href="float3_lua.html">float3</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_translation"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a translation matrix from a float3 offset. <a href="#lua_translation">More...</a><br /></td></tr>
+<tr class="separator:lua_translation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scale"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scale">scale</a> (x: number, y: number, z: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a scale matrix from per-axis scale factors. <a href="#lua_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scale"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scale">scale</a> (offset: <a class="el" href="float3_lua.html">float3</a>)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a scale matrix from a float3 scale vector. <a href="#lua_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_scale"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_scale">scale</a> (s: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a uniform scale matrix. <a href="#lua_scale">More...</a><br /></td></tr>
+<tr class="separator:lua_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_x"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_x">rotation_x</a> (angle: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_rotation_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a rotation matrix around the X axis by angle radians. <a href="#lua_rotation_x">More...</a><br /></td></tr>
+<tr class="separator:lua_rotation_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_y"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_y">rotation_y</a> (angle: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_rotation_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a rotation matrix around the Y axis by angle radians. <a href="#lua_rotation_y">More...</a><br /></td></tr>
+<tr class="separator:lua_rotation_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rotation_z"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rotation_z">rotation_z</a> (angle: number)<span class="mlabels"><span class="mlabel">static</span></span></td></tr>
+<tr class="memdesc:lua_rotation_z"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a rotation matrix around the Z axis by angle radians. <a href="#lua_rotation_z">More...</a><br /></td></tr>
+<tr class="separator:lua_rotation_z"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_identity"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the identity matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_translation"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> translation </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a translation matrix from x, y, z.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">z</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_translation"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> translation </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float3_lua.html">float3</a>&#160;</td>
+          <td class="paramname">offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a translation matrix from a float3 offset.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td><a class="el" href="float3_lua.html">float3</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> scale </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a scale matrix from per-axis scale factors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">z</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> scale </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float3_lua.html">float3</a>&#160;</td>
+          <td class="paramname">offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a scale matrix from a float3 scale vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td><a class="el" href="float3_lua.html">float3</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_scale"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> scale </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">s</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a uniform scale matrix.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotation_x"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> rotation_x </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a rotation matrix around the X axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotation_y"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> rotation_y </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a rotation matrix around the Y axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_rotation_z"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> rotation_z </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right"><span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a rotation matrix around the Z axis by angle radians.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="float4x4_lua.html">float4x4</a></dd></dl>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="float4x4_lua.html">float4x4</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

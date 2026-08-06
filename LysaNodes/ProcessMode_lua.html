@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: ProcessMode Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">ProcessMode Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Constants that control when a node receives process and input callbacks.</p>
+<p>Lua full name: <code>lysa.nodes.ProcessMode</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_INHERIT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INHERIT">INHERIT</a></td></tr>
+<tr class="memdesc:lua_INHERIT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inherits the processing mode from the node's parent. Default for any newly created node.<br /></td></tr>
+<tr class="separator:lua_INHERIT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_PAUSABLE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_PAUSABLE">PAUSABLE</a></td></tr>
+<tr class="memdesc:lua_PAUSABLE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops processing when the scene tree is paused. Inverse of WHEN_PAUSED.<br /></td></tr>
+<tr class="separator:lua_PAUSABLE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_WHEN_PAUSED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_WHEN_PAUSED">WHEN_PAUSED</a></td></tr>
+<tr class="memdesc:lua_WHEN_PAUSED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes only when the scene tree is paused. Inverse of PAUSABLE.<br /></td></tr>
+<tr class="separator:lua_WHEN_PAUSED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ALWAYS"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ALWAYS">ALWAYS</a></td></tr>
+<tr class="memdesc:lua_ALWAYS"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always processes, regardless of the paused state. Inverse of DISABLED.<br /></td></tr>
+<tr class="separator:lua_ALWAYS"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_DISABLED"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_DISABLED">DISABLED</a></td></tr>
+<tr class="memdesc:lua_DISABLED"><td class="mdescLeft">&#160;</td><td class="mdescRight">Never processes. Completely disables all processing callbacks. Inverse of ALWAYS.<br /></td></tr>
+<tr class="separator:lua_DISABLED"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_INHERIT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INHERIT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Inherits the processing mode from the node's parent. Default for any newly created node.</p>
+</div></div>
+<a class="anchor" id="lua_PAUSABLE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer PAUSABLE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Stops processing when the scene tree is paused. Inverse of WHEN_PAUSED.</p>
+</div></div>
+<a class="anchor" id="lua_WHEN_PAUSED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer WHEN_PAUSED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Processes only when the scene tree is paused. Inverse of PAUSABLE.</p>
+</div></div>
+<a class="anchor" id="lua_ALWAYS"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer ALWAYS</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Always processes, regardless of the paused state. Inverse of DISABLED.</p>
+</div></div>
+<a class="anchor" id="lua_DISABLED"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer DISABLED</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Never processes. Completely disables all processing callbacks. Inverse of ALWAYS.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="ProcessMode_lua.html">ProcessMode</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

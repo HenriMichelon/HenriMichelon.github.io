@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: ClearValue Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">ClearValue Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Union holding either a color clear value (r/g/b/a) or a depth/stencil clear value (depth/stencil). Set r/g/b/a for color attachments; set depth/stencil for depth attachments.</p>
+<p>Lua full name: <code>vireo.ClearValue</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_r"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_r">r</a></td></tr>
+<tr class="memdesc:lua_r"><td class="mdescLeft">&#160;</td><td class="mdescRight">Red component of the color clear value (0.0–1.0).<br /></td></tr>
+<tr class="separator:lua_r"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_g"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_g">g</a></td></tr>
+<tr class="memdesc:lua_g"><td class="mdescLeft">&#160;</td><td class="mdescRight">Green component of the color clear value (0.0–1.0).<br /></td></tr>
+<tr class="separator:lua_g"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_b"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_b">b</a></td></tr>
+<tr class="memdesc:lua_b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blue component of the color clear value (0.0–1.0).<br /></td></tr>
+<tr class="separator:lua_b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_a"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_a">a</a></td></tr>
+<tr class="memdesc:lua_a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha component of the color clear value (0.0–1.0, default 1.0).<br /></td></tr>
+<tr class="separator:lua_a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth">depth</a></td></tr>
+<tr class="memdesc:lua_depth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth clear value used for depth attachments (default 1.0).<br /></td></tr>
+<tr class="separator:lua_depth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_stencil"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_stencil">stencil</a></td></tr>
+<tr class="memdesc:lua_stencil"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil clear value used for stencil attachments (default 0).<br /></td></tr>
+<tr class="separator:lua_stencil"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_r"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number r</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Red component of the color clear value (0.0–1.0).</p>
+</div></div>
+<a class="anchor" id="lua_g"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number g</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Green component of the color clear value (0.0–1.0).</p>
+</div></div>
+<a class="anchor" id="lua_b"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number b</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Blue component of the color clear value (0.0–1.0).</p>
+</div></div>
+<a class="anchor" id="lua_a"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number a</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Alpha component of the color clear value (0.0–1.0, default 1.0).</p>
+</div></div>
+<a class="anchor" id="lua_depth"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number depth</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Depth clear value used for depth attachments (default 1.0).</p>
+</div></div>
+<a class="anchor" id="lua_stencil"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer stencil</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Stencil clear value used for stencil attachments (default 0).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="ClearValue_lua.html">ClearValue</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

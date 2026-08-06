@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Event Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Event Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An engine event carrying a typed payload.</p>
+<p>Lua full name: <code>lysa.Event</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_get_double"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_double">get_double</a> ()</td></tr>
+<tr class="memdesc:lua_get_double"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event payload as a double. <a href="#lua_get_double">More...</a><br /></td></tr>
+<tr class="separator:lua_get_double"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_float"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_float">get_float</a> ()</td></tr>
+<tr class="memdesc:lua_get_float"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event payload as a float. <a href="#lua_get_float">More...</a><br /></td></tr>
+<tr class="separator:lua_get_float"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_int32"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_int32">get_int32</a> ()</td></tr>
+<tr class="memdesc:lua_get_int32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event payload as an int32. <a href="#lua_get_int32">More...</a><br /></td></tr>
+<tr class="separator:lua_get_int32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_input_event"><td class="memItemLeft" align="right" valign="top"><a class="el" href="InputEvent_lua.html">InputEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_input_event">get_input_event</a> ()</td></tr>
+<tr class="memdesc:lua_get_input_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the event payload as an InputEvent. <a href="#lua_get_input_event">More...</a><br /></td></tr>
+<tr class="separator:lua_get_input_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique event identifier.<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top">any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event type string or constant.<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_consumed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_consumed">consumed</a></td></tr>
+<tr class="memdesc:lua_consumed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the event has already been consumed; set to true to stop further processing.<br /></td></tr>
+<tr class="separator:lua_consumed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_get_double"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">number get_double </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the event payload as a double.</p>
+<dl class="section return"><dt>Returns</dt><dd>number</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_float"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">number get_float </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the event payload as a float.</p>
+<dl class="section return"><dt>Returns</dt><dd>number</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_int32"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer get_int32 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the event payload as an int32.</p>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_get_input_event"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="InputEvent_lua.html">InputEvent</a> get_input_event </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the event payload as an InputEvent.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="InputEvent_lua.html">InputEvent</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unique event identifier.</p>
+</div></div>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The event type string or constant.</p>
+</div></div>
+<a class="anchor" id="lua_consumed"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean consumed</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the event has already been consumed; set to true to stop further processing.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Event_lua.html">Event</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

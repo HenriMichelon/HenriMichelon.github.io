@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: BufferType Enum Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-values">Constants</a>  </div>
+  <div class="headertitle">
+    <div class="title">BufferType Enum Reference<span class="mlabels"><span class="mlabel">enum</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Constants specifying the intended GPU usage of a Buffer.</p>
+<p>Lua full name: <code>vireo.BufferType</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-values"></a>
+Constants</h2></td></tr>
+<tr class="memitem:lua_VERTEX"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_VERTEX">VERTEX</a></td></tr>
+<tr class="memdesc:lua_VERTEX"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex buffer — read on the GPU during draw calls.<br /></td></tr>
+<tr class="separator:lua_VERTEX"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_INDEX"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INDEX">INDEX</a></td></tr>
+<tr class="memdesc:lua_INDEX"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index buffer — read on the GPU during indexed draw calls.<br /></td></tr>
+<tr class="separator:lua_INDEX"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_INDIRECT"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_INDIRECT">INDIRECT</a></td></tr>
+<tr class="memdesc:lua_INDIRECT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indirect draw/dispatch argument buffer — stores GPU-side draw commands.<br /></td></tr>
+<tr class="separator:lua_INDIRECT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_UNIFORM"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_UNIFORM">UNIFORM</a></td></tr>
+<tr class="memdesc:lua_UNIFORM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniform (constant) buffer — CPU-writable, shader-readable per draw.<br /></td></tr>
+<tr class="separator:lua_UNIFORM"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_STORAGE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_STORAGE">STORAGE</a></td></tr>
+<tr class="memdesc:lua_STORAGE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only storage buffer — shader-readable (SRV / SSBO).<br /></td></tr>
+<tr class="separator:lua_STORAGE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_DEVICE_STORAGE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_DEVICE_STORAGE">DEVICE_STORAGE</a></td></tr>
+<tr class="memdesc:lua_DEVICE_STORAGE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device-local storage buffer — GPU-only, highest bandwidth.<br /></td></tr>
+<tr class="separator:lua_DEVICE_STORAGE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_READWRITE_STORAGE"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_READWRITE_STORAGE">READWRITE_STORAGE</a></td></tr>
+<tr class="memdesc:lua_READWRITE_STORAGE"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read/write storage buffer — shader-readable and writable (UAV / SSBO).<br /></td></tr>
+<tr class="separator:lua_READWRITE_STORAGE"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BUFFER_UPLOAD"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BUFFER_UPLOAD">BUFFER_UPLOAD</a></td></tr>
+<tr class="memdesc:lua_BUFFER_UPLOAD"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU staging buffer — used to upload data to a VERTEX/INDEX/UNIFORM/STORAGE buffer.<br /></td></tr>
+<tr class="separator:lua_BUFFER_UPLOAD"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_BUFFER_DOWNLOAD"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_BUFFER_DOWNLOAD">BUFFER_DOWNLOAD</a></td></tr>
+<tr class="memdesc:lua_BUFFER_DOWNLOAD"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU readback buffer — used to download data from a GPU buffer to the CPU.<br /></td></tr>
+<tr class="separator:lua_BUFFER_DOWNLOAD"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_IMAGE_UPLOAD"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_IMAGE_UPLOAD">IMAGE_UPLOAD</a></td></tr>
+<tr class="memdesc:lua_IMAGE_UPLOAD"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU staging buffer — used to upload image data to a GPU Image.<br /></td></tr>
+<tr class="separator:lua_IMAGE_UPLOAD"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_IMAGE_DOWNLOAD"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_IMAGE_DOWNLOAD">IMAGE_DOWNLOAD</a></td></tr>
+<tr class="memdesc:lua_IMAGE_DOWNLOAD"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU readback buffer — used to download image data from a GPU Image.<br /></td></tr>
+<tr class="separator:lua_IMAGE_DOWNLOAD"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumerator Documentation</h2>
+<a class="anchor" id="lua_VERTEX"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer VERTEX</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Vertex buffer — read on the GPU during draw calls.</p>
+</div></div>
+<a class="anchor" id="lua_INDEX"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INDEX</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Index buffer — read on the GPU during indexed draw calls.</p>
+</div></div>
+<a class="anchor" id="lua_INDIRECT"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer INDIRECT</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Indirect draw/dispatch argument buffer — stores GPU-side draw commands.</p>
+</div></div>
+<a class="anchor" id="lua_UNIFORM"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer UNIFORM</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Uniform (constant) buffer — CPU-writable, shader-readable per draw.</p>
+</div></div>
+<a class="anchor" id="lua_STORAGE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer STORAGE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Read-only storage buffer — shader-readable (SRV / SSBO).</p>
+</div></div>
+<a class="anchor" id="lua_DEVICE_STORAGE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer DEVICE_STORAGE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Device-local storage buffer — GPU-only, highest bandwidth.</p>
+</div></div>
+<a class="anchor" id="lua_READWRITE_STORAGE"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer READWRITE_STORAGE</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Read/write storage buffer — shader-readable and writable (UAV / SSBO).</p>
+</div></div>
+<a class="anchor" id="lua_BUFFER_UPLOAD"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BUFFER_UPLOAD</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>CPU staging buffer — used to upload data to a VERTEX/INDEX/UNIFORM/STORAGE buffer.</p>
+</div></div>
+<a class="anchor" id="lua_BUFFER_DOWNLOAD"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer BUFFER_DOWNLOAD</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>CPU readback buffer — used to download data from a GPU buffer to the CPU.</p>
+</div></div>
+<a class="anchor" id="lua_IMAGE_UPLOAD"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer IMAGE_UPLOAD</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>CPU staging buffer — used to upload image data to a GPU Image.</p>
+</div></div>
+<a class="anchor" id="lua_IMAGE_DOWNLOAD"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer IMAGE_DOWNLOAD</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>CPU readback buffer — used to download image data from a GPU Image.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="BufferType_lua.html">BufferType</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa: Camera Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_nodes" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Camera Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scene camera that provides view and projection matrices.</p>
+<p>Lua full name: <code>lysa.Camera</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_screen_to_world"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ray_lua.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_screen_to_world">screen_to_world</a> (screen_pos: <a class="el" href="float2_lua.html">float2</a>, screen_size: <a class="el" href="float2_lua.html">float2</a>)</td></tr>
+<tr class="memdesc:lua_screen_to_world"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unprojects a 2-D screen-space position to a world-space ray originating at the camera. <a href="#lua_screen_to_world">More...</a><br /></td></tr>
+<tr class="separator:lua_screen_to_world"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique camera identifier.<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_transform"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_transform">transform</a></td></tr>
+<tr class="memdesc:lua_transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera world-space transform (view) matrix.<br /></td></tr>
+<tr class="separator:lua_transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_projection"><td class="memItemLeft" align="right" valign="top"><a class="el" href="float4x4_lua.html">float4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_projection">projection</a></td></tr>
+<tr class="memdesc:lua_projection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera projection matrix (perspective or orthographic).<br /></td></tr>
+<tr class="separator:lua_projection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_screen_to_world"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ray_lua.html">Ray</a> screen_to_world </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">screen_pos</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">screen_size</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unprojects a 2-D screen-space position to a world-space ray originating at the camera.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screen_pos</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+    <tr><td class="paramname">screen_size</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Ray_lua.html">Ray</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Unique camera identifier.</p>
+</div></div>
+<a class="anchor" id="lua_transform"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> transform</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Camera world-space transform (view) matrix.</p>
+</div></div>
+<a class="anchor" id="lua_projection"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="float4x4_lua.html">float4x4</a> projection</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Camera projection matrix (perspective or orthographic).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
+    <li class="navelem"><a class="el" href="Camera_lua.html">Camera</a></li>
+        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

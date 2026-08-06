@@ -1,0 +1,2090 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: Widget Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Widget Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The base class for all UI widgets. Provides layout, input handling, and child management.</p>
+<p>Lua full name: <code>lysa.ui.Widget</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_is_enabled"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_enabled">is_enabled</a> ()</td></tr>
+<tr class="memdesc:lua_is_enabled"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the widget responds to mouse and keyboard input. <a href="#lua_is_enabled">More...</a><br /></td></tr>
+<tr class="separator:lua_is_enabled"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_pos"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_pos">set_pos</a> (x: number, y: number)</td></tr>
+<tr class="memdesc:lua_set_pos"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the widget to the given position in its parent's coordinate space. <a href="#lua_set_pos">More...</a><br /></td></tr>
+<tr class="separator:lua_set_pos"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_size"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_size">set_size</a> (width: number, height: number)</td></tr>
+<tr class="memdesc:lua_set_size"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the widget to the given width and height in virtual screen units. <a href="#lua_set_size">More...</a><br /></td></tr>
+<tr class="separator:lua_set_size"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_rect">set_rect</a> (x: number, y: number, width: number, height: number)</td></tr>
+<tr class="memdesc:lua_set_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the widget's position and size in one call. <a href="#lua_set_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_set_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove">remove</a> (child: <a class="el" href="Widget_lua.html">Widget</a>)</td></tr>
+<tr class="memdesc:lua_remove"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and detaches the given direct child widget. <a href="#lua_remove">More...</a><br /></td></tr>
+<tr class="separator:lua_remove"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_all"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_all">remove_all</a> ()</td></tr>
+<tr class="memdesc:lua_remove_all"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and detaches all descendant widgets recursively. <a href="#lua_remove_all">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_all"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_refresh"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_refresh">refresh</a> ()</td></tr>
+<tr class="memdesc:lua_refresh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a full redraw of the widget on the next frame. <a href="#lua_refresh">More...</a><br /></td></tr>
+<tr class="separator:lua_refresh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_resize_children"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_resize_children">resize_children</a> ()</td></tr>
+<tr class="memdesc:lua_resize_children"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a layout pass that repositions and resizes all direct children according to their alignment. <a href="#lua_resize_children">More...</a><br /></td></tr>
+<tr class="separator:lua_resize_children"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_focus"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_focus">set_focus</a> (focus: boolean|nil)</td></tr>
+<tr class="memdesc:lua_set_focus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests keyboard focus for this widget (pass nil or true to acquire, false to release). Returns the widget itself. <a href="#lua_set_focus">More...</a><br /></td></tr>
+<tr class="separator:lua_set_focus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_children_offset"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_children_offset">set_children_offset</a> (x: number, y: number)</td></tr>
+<tr class="memdesc:lua_set_children_offset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the scroll offset applied to children during layout, enabling scrollable content. <a href="#lua_set_children_offset">More...</a><br /></td></tr>
+<tr class="separator:lua_set_children_offset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_text"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Text_lua.html">Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_text">create_text</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, text: string)</td></tr>
+<tr class="memdesc:lua_create_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Text child widget with the given alignment and initial text. <a href="#lua_create_text">More...</a><br /></td></tr>
+<tr class="separator:lua_create_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_text"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Text_lua.html">Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_text">create_text</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, text: string)</td></tr>
+<tr class="memdesc:lua_create_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Text child widget, loading its style from a resource string. <a href="#lua_create_text">More...</a><br /></td></tr>
+<tr class="separator:lua_create_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_panel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Panel_lua.html">Panel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_panel">create_panel</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_panel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Panel child widget with the given alignment. <a href="#lua_create_panel">More...</a><br /></td></tr>
+<tr class="separator:lua_create_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_panel"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Panel_lua.html">Panel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_panel">create_panel</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_panel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Panel child widget, loading its style from a resource string. <a href="#lua_create_panel">More...</a><br /></td></tr>
+<tr class="separator:lua_create_panel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_popup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Popup_lua.html">Popup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_popup">create_popup</a> (x: number, y: number)</td></tr>
+<tr class="memdesc:lua_create_popup"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Popup child widget at the given position, rendered on top of siblings. <a href="#lua_create_popup">More...</a><br /></td></tr>
+<tr class="separator:lua_create_popup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_popup"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Popup_lua.html">Popup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_popup">create_popup</a> (resource: string, x: number, y: number)</td></tr>
+<tr class="memdesc:lua_create_popup"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Popup child widget at the given position, loading its style from a resource string. <a href="#lua_create_popup">More...</a><br /></td></tr>
+<tr class="separator:lua_create_popup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Box_lua.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_box">create_box</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Box child widget with the given alignment. <a href="#lua_create_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Box_lua.html">Box</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_box">create_box</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Box child widget, loading its style from a resource string. <a href="#lua_create_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_button"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Button_lua.html">Button</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_button">create_button</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Button child widget with the given alignment. <a href="#lua_create_button">More...</a><br /></td></tr>
+<tr class="separator:lua_create_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_button"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Button_lua.html">Button</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_button">create_button</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Button child widget, loading its style from a resource string. <a href="#lua_create_button">More...</a><br /></td></tr>
+<tr class="separator:lua_create_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_toggle_button"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ToggleButton_lua.html">ToggleButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_toggle_button">create_toggle_button</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_toggle_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ToggleButton child widget with the given alignment. <a href="#lua_create_toggle_button">More...</a><br /></td></tr>
+<tr class="separator:lua_create_toggle_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_toggle_button"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ToggleButton_lua.html">ToggleButton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_toggle_button">create_toggle_button</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_toggle_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ToggleButton child widget, loading its style from a resource string. <a href="#lua_create_toggle_button">More...</a><br /></td></tr>
+<tr class="separator:lua_create_toggle_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HLine_lua.html">HLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hline">create_hline</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal Line child widget with the given alignment. <a href="#lua_create_hline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HLine_lua.html">HLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hline">create_hline</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal Line child widget, loading its style from a resource string. <a href="#lua_create_hline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VLine_lua.html">VLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vline">create_vline</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical Line child widget with the given alignment. <a href="#lua_create_vline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vline"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VLine_lua.html">VLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vline">create_vline</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical Line child widget, loading its style from a resource string. <a href="#lua_create_vline">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_frame"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Frame_lua.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_frame">create_frame</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, title: string)</td></tr>
+<tr class="memdesc:lua_create_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Frame child widget with the given alignment and title. <a href="#lua_create_frame">More...</a><br /></td></tr>
+<tr class="separator:lua_create_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_frame"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Frame_lua.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_frame">create_frame</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, title: string)</td></tr>
+<tr class="memdesc:lua_create_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a Frame child widget, loading its style from a resource string. <a href="#lua_create_frame">More...</a><br /></td></tr>
+<tr class="separator:lua_create_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_text_edit"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TextEdit_lua.html">TextEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_text_edit">create_text_edit</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, text: string|nil)</td></tr>
+<tr class="memdesc:lua_create_text_edit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a TextEdit child widget with the given alignment and optional initial text. <a href="#lua_create_text_edit">More...</a><br /></td></tr>
+<tr class="separator:lua_create_text_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_text_edit"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TextEdit_lua.html">TextEdit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_text_edit">create_text_edit</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, text: string|nil)</td></tr>
+<tr class="memdesc:lua_create_text_edit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a TextEdit child widget, loading its style from a resource string. <a href="#lua_create_text_edit">More...</a><br /></td></tr>
+<tr class="separator:lua_create_text_edit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_image">create_image</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an Image child widget with the given alignment. <a href="#lua_create_image">More...</a><br /></td></tr>
+<tr class="separator:lua_create_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_image">create_image</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an Image child widget, loading its style from a resource string. <a href="#lua_create_image">More...</a><br /></td></tr>
+<tr class="separator:lua_create_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Image_lua.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_image">create_image</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>, autoresize: boolean, fixedsize: boolean)</td></tr>
+<tr class="memdesc:lua_create_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds an Image child widget with auto-resize and fixed-size options. <a href="#lua_create_image">More...</a><br /></td></tr>
+<tr class="separator:lua_create_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vscrollbar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VScrollBar_lua.html">VScrollBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vscrollbar">create_vscrollbar</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vscrollbar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical ScrollBar child widget with the given alignment. <a href="#lua_create_vscrollbar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vscrollbar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vscrollbar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VScrollBar_lua.html">VScrollBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vscrollbar">create_vscrollbar</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vscrollbar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical ScrollBar child widget, loading its style from a resource string. <a href="#lua_create_vscrollbar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vscrollbar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hscrollbar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HScrollBar_lua.html">HScrollBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hscrollbar">create_hscrollbar</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hscrollbar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal ScrollBar child widget with the given alignment. <a href="#lua_create_hscrollbar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hscrollbar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hscrollbar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HScrollBar_lua.html">HScrollBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hscrollbar">create_hscrollbar</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hscrollbar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal ScrollBar child widget, loading its style from a resource string. <a href="#lua_create_hscrollbar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hscrollbar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_tree_view"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TreeView_lua.html">TreeView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_tree_view">create_tree_view</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_tree_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a TreeView child widget with the given alignment. <a href="#lua_create_tree_view">More...</a><br /></td></tr>
+<tr class="separator:lua_create_tree_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_tree_view"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TreeView_lua.html">TreeView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_tree_view">create_tree_view</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_tree_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a TreeView child widget, loading its style from a resource string. <a href="#lua_create_tree_view">More...</a><br /></td></tr>
+<tr class="separator:lua_create_tree_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_widget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_widget">create_widget</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a transparent container Widget child with the given alignment. <a href="#lua_create_widget">More...</a><br /></td></tr>
+<tr class="separator:lua_create_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_widget"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_widget">create_widget</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a transparent container Widget child, loading its style from a resource string. <a href="#lua_create_widget">More...</a><br /></td></tr>
+<tr class="separator:lua_create_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_list_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ListBox_lua.html">ListBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_list_box">create_list_box</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_list_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ListBox child widget with the given alignment. <a href="#lua_create_list_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_list_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_list_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ListBox_lua.html">ListBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_list_box">create_list_box</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_list_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ListBox child widget, loading its style from a resource string. <a href="#lua_create_list_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_list_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_progress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ProgressBar_lua.html">ProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_progress_bar">create_progress_bar</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_progress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ProgressBar child widget with the given alignment. <a href="#lua_create_progress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_progress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_progress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ProgressBar_lua.html">ProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_progress_bar">create_progress_bar</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_progress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ProgressBar child widget, loading its style from a resource string. <a href="#lua_create_progress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_progress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vprogress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VProgressBar_lua.html">VProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vprogress_bar">create_vprogress_bar</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vprogress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical ProgressBar child widget with the given alignment. <a href="#lua_create_vprogress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vprogress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_vprogress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VProgressBar_lua.html">VProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_vprogress_bar">create_vprogress_bar</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_vprogress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a vertical ProgressBar child widget, loading its style from a resource string. <a href="#lua_create_vprogress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_vprogress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hprogress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HProgressBar_lua.html">HProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hprogress_bar">create_hprogress_bar</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hprogress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal ProgressBar child widget with the given alignment. <a href="#lua_create_hprogress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hprogress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_hprogress_bar"><td class="memItemLeft" align="right" valign="top"><a class="el" href="HProgressBar_lua.html">HProgressBar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_hprogress_bar">create_hprogress_bar</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_hprogress_bar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a horizontal ProgressBar child widget, loading its style from a resource string. <a href="#lua_create_hprogress_bar">More...</a><br /></td></tr>
+<tr class="separator:lua_create_hprogress_bar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_scroll_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ScrollBox_lua.html">ScrollBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_scroll_box">create_scroll_box</a> (alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_scroll_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ScrollBox child widget with the given alignment. <a href="#lua_create_scroll_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_scroll_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_create_scroll_box"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ScrollBox_lua.html">ScrollBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_create_scroll_box">create_scroll_box</a> (resource: string, alignment: <a class="el" href="Alignment_lua.html">Alignment</a>)</td></tr>
+<tr class="memdesc:lua_create_scroll_box"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a ScrollBox child widget, loading its style from a resource string. <a href="#lua_create_scroll_box">More...</a><br /></td></tr>
+<tr class="separator:lua_create_scroll_box"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_add_child"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_child">add_child</a> (child: <a class="el" href="Widget_lua.html">Widget</a>, alignment: integer, resource: string|nil)</td></tr>
+<tr class="memdesc:lua_add_child"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a pre-constructed child widget with the given alignment and optional resource string. <a href="#lua_add_child">More...</a><br /></td></tr>
+<tr class="separator:lua_add_child"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_id"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_id">id</a></td></tr>
+<tr class="memdesc:lua_id"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique ID<br /></td></tr>
+<tr class="separator:lua_id"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_type"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_type">type</a></td></tr>
+<tr class="memdesc:lua_type"><td class="mdescLeft">&#160;</td><td class="mdescRight">The concrete widget type (see lysa.ui.WidgetType). (read-only)<br /></td></tr>
+<tr class="separator:lua_type"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_children"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_children">children</a></td></tr>
+<tr class="memdesc:lua_children"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered list of direct child widgets.<br /></td></tr>
+<tr class="separator:lua_children"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_visible"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_visible">visible</a></td></tr>
+<tr class="memdesc:lua_visible"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the widget is visible; false hides it and all its children.<br /></td></tr>
+<tr class="separator:lua_visible"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_user_data"><td class="memItemLeft" align="right" valign="top">any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_user_data">user_data</a></td></tr>
+<tr class="memdesc:lua_user_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lua user data.<br /></td></tr>
+<tr class="separator:lua_user_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_enabled"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_enabled">enabled</a></td></tr>
+<tr class="memdesc:lua_enabled"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the widget's response to input events (pass nil or true to enable, false to disable).<br /></td></tr>
+<tr class="separator:lua_enabled"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_width"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_width">width</a></td></tr>
+<tr class="memdesc:lua_width"><td class="mdescLeft">&#160;</td><td class="mdescRight">The widget width in virtual screen units.<br /></td></tr>
+<tr class="separator:lua_width"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_height"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_height">height</a></td></tr>
+<tr class="memdesc:lua_height"><td class="mdescLeft">&#160;</td><td class="mdescRight">The widget height in virtual screen units.<br /></td></tr>
+<tr class="separator:lua_height"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_rect"><td class="memItemLeft" align="right" valign="top">lysa.Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_rect">rect</a></td></tr>
+<tr class="memdesc:lua_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current position and size of the widget as a Rect.<br /></td></tr>
+<tr class="separator:lua_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_alignment"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_alignment">alignment</a></td></tr>
+<tr class="memdesc:lua_alignment"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current placement alignment within the parent (see lysa.ui.Alignment).<br /></td></tr>
+<tr class="separator:lua_alignment"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_font"><td class="memItemLeft" align="right" valign="top">lysa.Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_font">font</a></td></tr>
+<tr class="memdesc:lua_font"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font used to render text within this widget.<br /></td></tr>
+<tr class="separator:lua_font"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_font_scale"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_font_scale">font_scale</a></td></tr>
+<tr class="memdesc:lua_font_scale"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scale factor applied to the widget's font.<br /></td></tr>
+<tr class="separator:lua_font_scale"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_focused"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_focused">focused</a></td></tr>
+<tr class="memdesc:lua_focused"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this widget currently holds keyboard focus. (read-only)<br /></td></tr>
+<tr class="separator:lua_focused"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_parent"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_parent">parent</a></td></tr>
+<tr class="memdesc:lua_parent"><td class="mdescLeft">&#160;</td><td class="mdescRight">The direct parent widget, or nil if this is a root widget. (read-only)<br /></td></tr>
+<tr class="separator:lua_parent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_padding"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_padding">padding</a></td></tr>
+<tr class="memdesc:lua_padding"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spacing in virtual screen units between children during layout.<br /></td></tr>
+<tr class="separator:lua_padding"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_vborder"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_vborder">vborder</a></td></tr>
+<tr class="memdesc:lua_vborder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical inset between the widget edges and its content area.<br /></td></tr>
+<tr class="separator:lua_vborder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_hborder"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_hborder">hborder</a></td></tr>
+<tr class="memdesc:lua_hborder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal inset between the widget edges and its content area.<br /></td></tr>
+<tr class="separator:lua_hborder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_background"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_background">draw_background</a></td></tr>
+<tr class="memdesc:lua_draw_background"><td class="mdescLeft">&#160;</td><td class="mdescRight">False if the widget's background should be drawn transparently.<br /></td></tr>
+<tr class="separator:lua_draw_background"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_pushed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_pushed">pushed</a></td></tr>
+<tr class="memdesc:lua_pushed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the widget is currently in a pressed state (e.g. mouse button held down over it).<br /></td></tr>
+<tr class="separator:lua_pushed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_pointed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_pointed">pointed</a></td></tr>
+<tr class="memdesc:lua_pointed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the mouse cursor is currently over this widget. (read-only)<br /></td></tr>
+<tr class="separator:lua_pointed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_freezed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_freezed">freezed</a></td></tr>
+<tr class="memdesc:lua_freezed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the widget ignores all input events without being visually disabled.<br /></td></tr>
+<tr class="separator:lua_freezed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_overlapping"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_overlapping">overlapping</a></td></tr>
+<tr class="memdesc:lua_overlapping"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this widget visually overlaps one or more siblings. (read-only)<br /></td></tr>
+<tr class="separator:lua_overlapping"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_children_rect"><td class="memItemLeft" align="right" valign="top">lysa.Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_children_rect">children_rect</a></td></tr>
+<tr class="memdesc:lua_children_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">The smallest Rect enclosing all direct children. (read-only)<br /></td></tr>
+<tr class="separator:lua_children_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_group_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_group_index">group_index</a></td></tr>
+<tr class="memdesc:lua_group_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">User-defined integer tag used to identify widgets within a logical group.<br /></td></tr>
+<tr class="separator:lua_group_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_transparency"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_transparency">transparency</a></td></tr>
+<tr class="memdesc:lua_transparency"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global alpha multiplier for the widget (0.0 = fully transparent, 1.0 = opaque).<br /></td></tr>
+<tr class="separator:lua_transparency"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_consume_mouse_event"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_consume_mouse_event">consume_mouse_event</a></td></tr>
+<tr class="memdesc:lua_consume_mouse_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true, mouse events are consumed by this widget and not propagated to its parent.<br /></td></tr>
+<tr class="separator:lua_consume_mouse_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_children_offset_x"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_children_offset_x">children_offset_x</a></td></tr>
+<tr class="memdesc:lua_children_offset_x"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal scroll offset subtracted from child positions during layout (read-only; use set_children_offset to change).<br /></td></tr>
+<tr class="separator:lua_children_offset_x"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_children_offset_y"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_children_offset_y">children_offset_y</a></td></tr>
+<tr class="memdesc:lua_children_offset_y"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical scroll offset subtracted from child positions during layout (read-only; use set_children_offset to change).<br /></td></tr>
+<tr class="separator:lua_children_offset_y"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_is_enabled"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean is_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if the widget responds to mouse and keyboard input.</p>
+<dl class="section return"><dt>Returns</dt><dd>boolean</dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_pos"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_pos </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Moves the widget to the given position in its parent's coordinate space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_size"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_size </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resizes the widget to the given width and height in virtual screen units.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_rect </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">width</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">height</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the widget's position and size in one call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">width</td><td>number</td></tr>
+    <tr><td class="paramname">height</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td>
+          <td class="paramname">child</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and detaches the given direct child widget.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Widget_lua.html">Widget</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_all"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and detaches all descendant widgets recursively.</p>
+</div></div>
+<a class="anchor" id="lua_refresh"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil refresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Forces a full redraw of the widget on the next frame.</p>
+</div></div>
+<a class="anchor" id="lua_resize_children"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil resize_children </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Triggers a layout pass that repositions and resizes all direct children according to their alignment.</p>
+</div></div>
+<a class="anchor" id="lua_set_focus"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> set_focus </td><td>(</td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">focus</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Requests keyboard focus for this widget (pass nil or true to acquire, false to release). Returns the widget itself.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">focus</td><td>boolean|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_children_offset"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_children_offset </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the scroll offset applied to children during layout, enabling scrollable content.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_text"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Text_lua.html">Text</a> create_text </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">text</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Text child widget with the given alignment and initial text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">text</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Text_lua.html">Text</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_text"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Text_lua.html">Text</a> create_text </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">text</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Text child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">text</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Text_lua.html">Text</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_panel"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Panel_lua.html">Panel</a> create_panel </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Panel child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Panel_lua.html">Panel</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_panel"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Panel_lua.html">Panel</a> create_panel </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Panel child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Panel_lua.html">Panel</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_popup"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Popup_lua.html">Popup</a> create_popup </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Popup child widget at the given position, rendered on top of siblings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Popup_lua.html">Popup</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_popup"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Popup_lua.html">Popup</a> create_popup </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Popup child widget at the given position, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Popup_lua.html">Popup</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Box_lua.html">Box</a> create_box </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Box child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Box_lua.html">Box</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Box_lua.html">Box</a> create_box </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Box child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Box_lua.html">Box</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_button"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Button_lua.html">Button</a> create_button </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Button child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Button_lua.html">Button</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_button"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Button_lua.html">Button</a> create_button </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Button child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Button_lua.html">Button</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_toggle_button"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ToggleButton_lua.html">ToggleButton</a> create_toggle_button </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ToggleButton child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ToggleButton_lua.html">ToggleButton</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_toggle_button"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ToggleButton_lua.html">ToggleButton</a> create_toggle_button </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ToggleButton child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ToggleButton_lua.html">ToggleButton</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HLine_lua.html">HLine</a> create_hline </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal Line child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HLine_lua.html">HLine</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HLine_lua.html">HLine</a> create_hline </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal Line child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HLine_lua.html">HLine</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VLine_lua.html">VLine</a> create_vline </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical Line child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VLine_lua.html">VLine</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VLine_lua.html">VLine</a> create_vline </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical Line child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VLine_lua.html">VLine</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_frame"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Frame_lua.html">Frame</a> create_frame </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">title</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Frame child widget with the given alignment and title.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">title</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Frame_lua.html">Frame</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_frame"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Frame_lua.html">Frame</a> create_frame </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">title</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a Frame child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">title</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Frame_lua.html">Frame</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_text_edit"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TextEdit_lua.html">TextEdit</a> create_text_edit </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">text</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a TextEdit child widget with the given alignment and optional initial text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">text</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="TextEdit_lua.html">TextEdit</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_text_edit"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TextEdit_lua.html">TextEdit</a> create_text_edit </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">text</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a TextEdit child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">text</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="TextEdit_lua.html">TextEdit</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> create_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds an Image child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> create_image </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds an Image child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Image_lua.html">Image</a> create_image </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">autoresize</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">fixedsize</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds an Image child widget with auto-resize and fixed-size options.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+    <tr><td class="paramname">autoresize</td><td>boolean</td></tr>
+    <tr><td class="paramname">fixedsize</td><td>boolean</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Image_lua.html">Image</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vscrollbar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VScrollBar_lua.html">VScrollBar</a> create_vscrollbar </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical ScrollBar child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VScrollBar_lua.html">VScrollBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vscrollbar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VScrollBar_lua.html">VScrollBar</a> create_vscrollbar </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical ScrollBar child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VScrollBar_lua.html">VScrollBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hscrollbar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HScrollBar_lua.html">HScrollBar</a> create_hscrollbar </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal ScrollBar child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HScrollBar_lua.html">HScrollBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hscrollbar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HScrollBar_lua.html">HScrollBar</a> create_hscrollbar </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal ScrollBar child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HScrollBar_lua.html">HScrollBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_tree_view"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TreeView_lua.html">TreeView</a> create_tree_view </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a TreeView child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="TreeView_lua.html">TreeView</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_tree_view"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TreeView_lua.html">TreeView</a> create_tree_view </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a TreeView child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="TreeView_lua.html">TreeView</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_widget"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> create_widget </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a transparent container Widget child with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_widget"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> create_widget </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a transparent container Widget child, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_list_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ListBox_lua.html">ListBox</a> create_list_box </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ListBox child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ListBox_lua.html">ListBox</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_list_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ListBox_lua.html">ListBox</a> create_list_box </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ListBox child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ListBox_lua.html">ListBox</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_progress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ProgressBar_lua.html">ProgressBar</a> create_progress_bar </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ProgressBar child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ProgressBar_lua.html">ProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_progress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ProgressBar_lua.html">ProgressBar</a> create_progress_bar </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ProgressBar child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ProgressBar_lua.html">ProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vprogress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VProgressBar_lua.html">VProgressBar</a> create_vprogress_bar </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical ProgressBar child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VProgressBar_lua.html">VProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_vprogress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="VProgressBar_lua.html">VProgressBar</a> create_vprogress_bar </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a vertical ProgressBar child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="VProgressBar_lua.html">VProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hprogress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HProgressBar_lua.html">HProgressBar</a> create_hprogress_bar </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal ProgressBar child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HProgressBar_lua.html">HProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_hprogress_bar"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="HProgressBar_lua.html">HProgressBar</a> create_hprogress_bar </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a horizontal ProgressBar child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="HProgressBar_lua.html">HProgressBar</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_scroll_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ScrollBox_lua.html">ScrollBox</a> create_scroll_box </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ScrollBox child widget with the given alignment.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ScrollBox_lua.html">ScrollBox</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_create_scroll_box"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ScrollBox_lua.html">ScrollBox</a> create_scroll_box </td><td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Alignment_lua.html">Alignment</a>&#160;</td>
+          <td class="paramname">alignment</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates and adds a ScrollBox child widget, loading its style from a resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+    <tr><td class="paramname">alignment</td><td><a class="el" href="Alignment_lua.html">Alignment</a></td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="ScrollBox_lua.html">ScrollBox</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_add_child"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> add_child </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td>
+          <td class="paramname">child</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string|nil&#160;</td>
+          <td class="paramname">resource</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a pre-constructed child widget with the given alignment and optional resource string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">child</td><td><a class="el" href="Widget_lua.html">Widget</a></td></tr>
+    <tr><td class="paramname">alignment</td><td>integer</td></tr>
+    <tr><td class="paramname">resource</td><td>string|nil</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_id"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer id</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The unique ID</p>
+</div></div>
+<a class="anchor" id="lua_type"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer type</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The concrete widget type (see lysa.ui.WidgetType). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_children"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Widget_lua.html">Widget</a>[] children</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Ordered list of direct child widgets.</p>
+</div></div>
+<a class="anchor" id="lua_visible"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean visible</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the widget is visible; false hides it and all its children.</p>
+</div></div>
+<a class="anchor" id="lua_user_data"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any user_data</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Lua user data.</p>
+</div></div>
+<a class="anchor" id="lua_enabled"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean enabled</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Enables or disables the widget's response to input events (pass nil or true to enable, false to disable).</p>
+</div></div>
+<a class="anchor" id="lua_width"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number width</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The widget width in virtual screen units.</p>
+</div></div>
+<a class="anchor" id="lua_height"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number height</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The widget height in virtual screen units.</p>
+</div></div>
+<a class="anchor" id="lua_rect"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.Rect rect</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The current position and size of the widget as a Rect.</p>
+</div></div>
+<a class="anchor" id="lua_alignment"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer alignment</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The current placement alignment within the parent (see lysa.ui.Alignment).</p>
+</div></div>
+<a class="anchor" id="lua_font"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.Font font</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The font used to render text within this widget.</p>
+</div></div>
+<a class="anchor" id="lua_font_scale"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number font_scale</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The scale factor applied to the widget's font.</p>
+</div></div>
+<a class="anchor" id="lua_focused"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean focused</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if this widget currently holds keyboard focus. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_parent"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Widget_lua.html">Widget</a>|nil parent</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The direct parent widget, or nil if this is a root widget. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_padding"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number padding</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Spacing in virtual screen units between children during layout.</p>
+</div></div>
+<a class="anchor" id="lua_vborder"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number vborder</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Vertical inset between the widget edges and its content area.</p>
+</div></div>
+<a class="anchor" id="lua_hborder"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number hborder</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Horizontal inset between the widget edges and its content area.</p>
+</div></div>
+<a class="anchor" id="lua_draw_background"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean draw_background</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>False if the widget's background should be drawn transparently.</p>
+</div></div>
+<a class="anchor" id="lua_pushed"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean pushed</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the widget is currently in a pressed state (e.g. mouse button held down over it).</p>
+</div></div>
+<a class="anchor" id="lua_pointed"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean pointed</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the mouse cursor is currently over this widget. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_freezed"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean freezed</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the widget ignores all input events without being visually disabled.</p>
+</div></div>
+<a class="anchor" id="lua_overlapping"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean overlapping</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if this widget visually overlaps one or more siblings. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_children_rect"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.Rect children_rect</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The smallest Rect enclosing all direct children. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_group_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer group_index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>User-defined integer tag used to identify widgets within a logical group.</p>
+</div></div>
+<a class="anchor" id="lua_transparency"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number transparency</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Global alpha multiplier for the widget (0.0 = fully transparent, 1.0 = opaque).</p>
+</div></div>
+<a class="anchor" id="lua_consume_mouse_event"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean consume_mouse_event</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>When true, mouse events are consumed by this widget and not propagated to its parent.</p>
+</div></div>
+<a class="anchor" id="lua_children_offset_x"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number children_offset_x</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Horizontal scroll offset subtracted from child positions during layout (read-only; use set_children_offset to change).</p>
+</div></div>
+<a class="anchor" id="lua_children_offset_y"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number children_offset_y</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Vertical scroll offset subtracted from child positions during layout (read-only; use set_children_offset to change).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="Widget_lua.html">Widget</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

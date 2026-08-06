@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.nodes: Character Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.nodes
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.nodes_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://github.com/LysaEngine/lysa_engine" target="_blank"><span>GitHub</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">Character Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A capsule-based character controller for first/third-person movement, driven via velocity each physics tick.</p>
+<p>Inherits from: <a class="el" href="CollisionObject_lua.html">CollisionObject</a></p>
+<p>Lua full name: <code>lysa.nodes.Character</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_set_shape"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_shape">set_shape</a> (h: number, r: number)</td></tr>
+<tr class="memdesc:lua_set_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new capsule collision shape with the given height and radius, then recreates the character in the physics system. <a href="#lua_set_shape">More...</a><br /></td></tr>
+<tr class="separator:lua_set_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_max_slope_angle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_max_slope_angle">set_max_slope_angle</a> (angle: number)</td></tr>
+<tr class="memdesc:lua_set_max_slope_angle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum walkable slope angle in degrees; surfaces steeper than this are treated as walls. <a href="#lua_set_max_slope_angle">More...</a><br /></td></tr>
+<tr class="separator:lua_set_max_slope_angle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_is_on_ground"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_on_ground">is_on_ground</a></td></tr>
+<tr class="memdesc:lua_is_on_ground"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the character is currently standing on a surface. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_on_ground"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_is_ground"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_is_ground">is_ground</a></td></tr>
+<tr class="memdesc:lua_is_ground"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this collision object is acting as the ground for another character. (read-only)<br /></td></tr>
+<tr class="separator:lua_is_ground"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ground_velocity"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ground_velocity">ground_velocity</a></td></tr>
+<tr class="memdesc:lua_ground_velocity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity of the ground surface in world space (useful for standing on moving platforms). (read-only)<br /></td></tr>
+<tr class="separator:lua_ground_velocity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_ground"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Node_lua.html">Node</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_ground">ground</a></td></tr>
+<tr class="memdesc:lua_ground"><td class="mdescLeft">&#160;</td><td class="mdescRight">The node the character is standing on, or nil if airborne. (read-only)<br /></td></tr>
+<tr class="separator:lua_ground"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_up"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_up">up</a></td></tr>
+<tr class="memdesc:lua_up"><td class="mdescLeft">&#160;</td><td class="mdescRight">The world-space UP axis used to determine ground detection (default AXIS_UP).<br /></td></tr>
+<tr class="separator:lua_up"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_collisions"><td class="memItemLeft" align="right" valign="top">any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_collisions">collisions</a></td></tr>
+<tr class="memdesc:lua_collisions"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Collision objects describing all contacts during the last physics step. (read-only)<br /></td></tr>
+<tr class="separator:lua_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_velocity"><td class="memItemLeft" align="right" valign="top">lysa.float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_velocity">velocity</a></td></tr>
+<tr class="memdesc:lua_velocity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired linear velocity for this frame; set each physics tick to drive movement.<br /></td></tr>
+<tr class="separator:lua_velocity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_height"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_height">height</a></td></tr>
+<tr class="memdesc:lua_height"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the capsule collision shape in meters. (read-only)<br /></td></tr>
+<tr class="separator:lua_height"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_radius"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_radius">radius</a></td></tr>
+<tr class="memdesc:lua_radius"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of the capsule collision shape in meters. (read-only)<br /></td></tr>
+<tr class="separator:lua_radius"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_set_shape"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_shape </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">h</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">r</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets a new capsule collision shape with the given height and radius, then recreates the character in the physics system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>number</td></tr>
+    <tr><td class="paramname">r</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_max_slope_angle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_max_slope_angle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">angle</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the maximum walkable slope angle in degrees; surfaces steeper than this are treated as walls.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>number</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_is_on_ground"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_on_ground</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if the character is currently standing on a surface. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_is_ground"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean is_ground</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if this collision object is acting as the ground for another character. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_ground_velocity"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 ground_velocity</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Velocity of the ground surface in world space (useful for standing on moving platforms). (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_ground"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Node_lua.html">Node</a>|nil ground</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The node the character is standing on, or nil if airborne. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_up"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 up</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The world-space UP axis used to determine ground detection (default AXIS_UP).</p>
+</div></div>
+<a class="anchor" id="lua_collisions"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">any collisions</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>List of Collision objects describing all contacts during the last physics step. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_velocity"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">lysa.float3 velocity</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Desired linear velocity for this frame; set each physics tick to drive movement.</p>
+</div></div>
+<a class="anchor" id="lua_height"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number height</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Height of the capsule collision shape in meters. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_radius"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number radius</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Radius of the capsule collision shape in meters. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.nodes_lua.html">lysa.nodes</a></li>
+    <li class="navelem"><a class="el" href="Character_lua.html">Character</a></li>
+        <li class="footer">Generated on Mon Jun 01 2026 17:08:06 for Lysa.nodes &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

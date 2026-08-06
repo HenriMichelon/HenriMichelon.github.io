@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Lysa.ui: List Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Lysa.ui
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Lysa 3D Engine</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacelysa.ui_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/lysa_ui" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">List Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for all list-of-widgets widgets. Fires OnInsertItem, OnRemoveItem and OnSelectItem events.</p>
+<p>Inherits from: <a class="el" href="Widget_lua.html">Widget</a></p>
+<p>Lua full name: <code>lysa.ui.List</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_add_item"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_add_item">add_item</a> (item: <a class="el" href="Widget_lua.html">Widget</a>, alignment: integer, resource: string)</td></tr>
+<tr class="memdesc:lua_add_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a widget at the end of the list and returns its 0-based index. <a href="#lua_add_item">More...</a><br /></td></tr>
+<tr class="separator:lua_add_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_item"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_item">remove_item</a> (index: integer)</td></tr>
+<tr class="memdesc:lua_remove_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the item at the given 0-based index. <a href="#lua_remove_item">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_remove_all_items"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_remove_all_items">remove_all_items</a> ()</td></tr>
+<tr class="memdesc:lua_remove_all_items"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all items from the list. <a href="#lua_remove_all_items">More...</a><br /></td></tr>
+<tr class="separator:lua_remove_all_items"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_get_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_get_item">get_item</a> (index: integer)</td></tr>
+<tr class="memdesc:lua_get_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the widget at the given 0-based index. <a href="#lua_get_item">More...</a><br /></td></tr>
+<tr class="separator:lua_get_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_select"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_select">select</a> (index: integer)</td></tr>
+<tr class="memdesc:lua_select"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the item at the given index; pass NO_SELECTION to clear the selection. <a href="#lua_select">More...</a><br /></td></tr>
+<tr class="separator:lua_select"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_NO_SELECTION"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_NO_SELECTION">NO_SELECTION</a></td></tr>
+<tr class="memdesc:lua_NO_SELECTION"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sentinel value returned by selected_index when nothing is selected.<br /></td></tr>
+<tr class="separator:lua_NO_SELECTION"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_count"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_count">count</a></td></tr>
+<tr class="memdesc:lua_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of items currently in the list. (read-only)<br /></td></tr>
+<tr class="separator:lua_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_selected_index"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_selected_index">selected_index</a></td></tr>
+<tr class="memdesc:lua_selected_index"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index (0-based) of the selected item, or NO_SELECTION if nothing is selected. (read-only)<br /></td></tr>
+<tr class="separator:lua_selected_index"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_selected_item"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Widget_lua.html">Widget</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_selected_item">selected_item</a></td></tr>
+<tr class="memdesc:lua_selected_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently selected widget, or nil. (read-only)<br /></td></tr>
+<tr class="separator:lua_selected_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_add_item"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer add_item </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Widget_lua.html">Widget</a>&#160;</td>
+          <td class="paramname">item</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">alignment</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname">resource</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a widget at the end of the list and returns its 0-based index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td><a class="el" href="Widget_lua.html">Widget</a></td></tr>
+    <tr><td class="paramname">alignment</td><td>integer</td></tr>
+    <tr><td class="paramname">resource</td><td>string</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>integer</dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_item"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_item </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the item at the given 0-based index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_remove_all_items"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil remove_all_items </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes all items from the list.</p>
+</div></div>
+<a class="anchor" id="lua_get_item"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Widget_lua.html">Widget</a> get_item </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the widget at the given 0-based index.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+  </table></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="Widget_lua.html">Widget</a></dd></dl>
+</div></div>
+<a class="anchor" id="lua_select"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil select </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Selects the item at the given index; pass NO_SELECTION to clear the selection.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_NO_SELECTION"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer NO_SELECTION</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Sentinel value returned by selected_index when nothing is selected.</p>
+</div></div>
+<a class="anchor" id="lua_count"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer count</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Number of items currently in the list. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_selected_index"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">integer selected_index</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Index (0-based) of the selected item, or NO_SELECTION if nothing is selected. (read-only)</p>
+</div></div>
+<a class="anchor" id="lua_selected_item"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="Widget_lua.html">Widget</a>|nil selected_item</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>The currently selected widget, or nil. (read-only)</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacelysa.ui_lua.html">lysa.ui</a></li>
+    <li class="navelem"><a class="el" href="List_lua.html">List</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 18:01:42 for Lysa.ui &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

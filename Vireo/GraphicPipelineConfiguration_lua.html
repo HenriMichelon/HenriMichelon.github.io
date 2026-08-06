@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: GraphicPipelineConfiguration Struct Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a>  </div>
+  <div class="headertitle">
+    <div class="title">GraphicPipelineConfiguration Struct Reference</div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Full description of a graphics pipeline passed to Vireo.create_graphic_pipeline().</p>
+<p>Lua full name: <code>vireo.GraphicPipelineConfiguration</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:lua_resources"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PipelineResources_lua.html">PipelineResources</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_resources">resources</a></td></tr>
+<tr class="memdesc:lua_resources"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipeline layout (descriptor set layouts + push-constant ranges).<br /></td></tr>
+<tr class="separator:lua_resources"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_color_render_formats"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color_render_formats">color_render_formats</a></td></tr>
+<tr class="memdesc:lua_color_render_formats"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel formats of the color render target attachments, in order.<br /></td></tr>
+<tr class="separator:lua_color_render_formats"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_color_blend_desc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ColorBlendDesc_lua.html">ColorBlendDesc</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_color_blend_desc">color_blend_desc</a></td></tr>
+<tr class="memdesc:lua_color_blend_desc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-attachment color blend states, in the same order as color_render_formats.<br /></td></tr>
+<tr class="separator:lua_color_blend_desc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_vertex_input_layout"><td class="memItemLeft" align="right" valign="top"><a class="el" href="VertexInputLayout_lua.html">VertexInputLayout</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_vertex_input_layout">vertex_input_layout</a></td></tr>
+<tr class="memdesc:lua_vertex_input_layout"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex attribute layout (nil for pipelines without vertex buffers).<br /></td></tr>
+<tr class="separator:lua_vertex_input_layout"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_vertex_shader"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_vertex_shader">vertex_shader</a></td></tr>
+<tr class="memdesc:lua_vertex_shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex shader module (nil for mesh-shader pipelines).<br /></td></tr>
+<tr class="separator:lua_vertex_shader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_fragment_shader"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_fragment_shader">fragment_shader</a></td></tr>
+<tr class="memdesc:lua_fragment_shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fragment shader module (nil for depth-only passes).<br /></td></tr>
+<tr class="separator:lua_fragment_shader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_hull_shader"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_hull_shader">hull_shader</a></td></tr>
+<tr class="memdesc:lua_hull_shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hull (tessellation control) shader module (nil if unused).<br /></td></tr>
+<tr class="separator:lua_hull_shader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_domain_shader"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_domain_shader">domain_shader</a></td></tr>
+<tr class="memdesc:lua_domain_shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Domain (tessellation evaluation) shader module (nil if unused).<br /></td></tr>
+<tr class="separator:lua_domain_shader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_geometry_shader"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_geometry_shader">geometry_shader</a></td></tr>
+<tr class="memdesc:lua_geometry_shader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry shader module (nil if unused).<br /></td></tr>
+<tr class="separator:lua_geometry_shader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_primitive_topology"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PrimitiveTopology_lua.html">PrimitiveTopology</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_primitive_topology">primitive_topology</a></td></tr>
+<tr class="memdesc:lua_primitive_topology"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input assembly topology for vertex grouping.<br /></td></tr>
+<tr class="separator:lua_primitive_topology"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_msaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MSAA_lua.html">MSAA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_msaa">msaa</a></td></tr>
+<tr class="memdesc:lua_msaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multisampling level (NONE disables MSAA).<br /></td></tr>
+<tr class="separator:lua_msaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_cull_mode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CullMode_lua.html">CullMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_cull_mode">cull_mode</a></td></tr>
+<tr class="memdesc:lua_cull_mode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face culling mode applied during rasterization.<br /></td></tr>
+<tr class="separator:lua_cull_mode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_polygon_mode"><td class="memItemLeft" align="right" valign="top"><a class="el" href="PolygonMode_lua.html">PolygonMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_polygon_mode">polygon_mode</a></td></tr>
+<tr class="memdesc:lua_polygon_mode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polygon fill mode (FILL or WIREFRAME).<br /></td></tr>
+<tr class="separator:lua_polygon_mode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_front_face_counter_clockwise"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_front_face_counter_clockwise">front_face_counter_clockwise</a></td></tr>
+<tr class="memdesc:lua_front_face_counter_clockwise"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if counter-clockwise winding order defines front faces.<br /></td></tr>
+<tr class="separator:lua_front_face_counter_clockwise"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_stencil_image_format"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_stencil_image_format">depth_stencil_image_format</a></td></tr>
+<tr class="memdesc:lua_depth_stencil_image_format"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel format of the depth/stencil attachment (UNDEFINED if none is used).<br /></td></tr>
+<tr class="separator:lua_depth_stencil_image_format"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_test_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_test_enable">depth_test_enable</a></td></tr>
+<tr class="memdesc:lua_depth_test_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to enable the per-fragment depth test.<br /></td></tr>
+<tr class="separator:lua_depth_test_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_write_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_write_enable">depth_write_enable</a></td></tr>
+<tr class="memdesc:lua_depth_write_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to write depth values when the depth test passes.<br /></td></tr>
+<tr class="separator:lua_depth_write_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_compare_op"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CompareOp_lua.html">CompareOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_compare_op">depth_compare_op</a></td></tr>
+<tr class="memdesc:lua_depth_compare_op"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison function for the depth test.<br /></td></tr>
+<tr class="separator:lua_depth_compare_op"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_bias_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_bias_enable">depth_bias_enable</a></td></tr>
+<tr class="memdesc:lua_depth_bias_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to enable depth biasing (useful to avoid z-fighting in shadow maps).<br /></td></tr>
+<tr class="separator:lua_depth_bias_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_bias_constant_factor"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_bias_constant_factor">depth_bias_constant_factor</a></td></tr>
+<tr class="memdesc:lua_depth_bias_constant_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant depth bias added to every fragment's depth.<br /></td></tr>
+<tr class="separator:lua_depth_bias_constant_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_bias_clamp"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_bias_clamp">depth_bias_clamp</a></td></tr>
+<tr class="memdesc:lua_depth_bias_clamp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum (or minimum, if negative) depth bias allowed on any fragment.<br /></td></tr>
+<tr class="separator:lua_depth_bias_clamp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_depth_bias_slope_factor"><td class="memItemLeft" align="right" valign="top">number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_depth_bias_slope_factor">depth_bias_slope_factor</a></td></tr>
+<tr class="memdesc:lua_depth_bias_slope_factor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth bias scaled by the fragment's depth slope.<br /></td></tr>
+<tr class="separator:lua_depth_bias_slope_factor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_stencil_test_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_stencil_test_enable">stencil_test_enable</a></td></tr>
+<tr class="memdesc:lua_stencil_test_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to enable the per-fragment stencil test.<br /></td></tr>
+<tr class="separator:lua_stencil_test_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_front_stencil_op_state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StencilOpState_lua.html">StencilOpState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_front_stencil_op_state">front_stencil_op_state</a></td></tr>
+<tr class="memdesc:lua_front_stencil_op_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil test and write operations for front-facing polygons.<br /></td></tr>
+<tr class="separator:lua_front_stencil_op_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_back_stencil_op_state"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StencilOpState_lua.html">StencilOpState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_back_stencil_op_state">back_stencil_op_state</a></td></tr>
+<tr class="memdesc:lua_back_stencil_op_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil test and write operations for back-facing polygons.<br /></td></tr>
+<tr class="separator:lua_back_stencil_op_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_logic_op_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_logic_op_enable">logic_op_enable</a></td></tr>
+<tr class="memdesc:lua_logic_op_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to enable logical operations on color attachments instead of blending.<br /></td></tr>
+<tr class="separator:lua_logic_op_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_logic_op"><td class="memItemLeft" align="right" valign="top"><a class="el" href="LogicOp_lua.html">LogicOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_logic_op">logic_op</a></td></tr>
+<tr class="memdesc:lua_logic_op"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical operation applied to color attachment values when logic_op_enable is true.<br /></td></tr>
+<tr class="separator:lua_logic_op"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_alpha_to_coverage_enable"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_alpha_to_coverage_enable">alpha_to_coverage_enable</a></td></tr>
+<tr class="memdesc:lua_alpha_to_coverage_enable"><td class="mdescLeft">&#160;</td><td class="mdescRight">True to derive a per-sample coverage mask from the fragment alpha value (requires MSAA).<br /></td></tr>
+<tr class="separator:lua_alpha_to_coverage_enable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="lua_resources"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="PipelineResources_lua.html">PipelineResources</a> resources</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pipeline layout (descriptor set layouts + push-constant ranges).</p>
+</div></div>
+<a class="anchor" id="lua_color_render_formats"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ImageFormat_lua.html">ImageFormat</a>[] color_render_formats</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pixel formats of the color render target attachments, in order.</p>
+</div></div>
+<a class="anchor" id="lua_color_blend_desc"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ColorBlendDesc_lua.html">ColorBlendDesc</a>[] color_blend_desc</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Per-attachment color blend states, in the same order as color_render_formats.</p>
+</div></div>
+<a class="anchor" id="lua_vertex_input_layout"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="VertexInputLayout_lua.html">VertexInputLayout</a>|nil vertex_input_layout</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Vertex attribute layout (nil for pipelines without vertex buffers).</p>
+</div></div>
+<a class="anchor" id="lua_vertex_shader"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil vertex_shader</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Vertex shader module (nil for mesh-shader pipelines).</p>
+</div></div>
+<a class="anchor" id="lua_fragment_shader"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil fragment_shader</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Fragment shader module (nil for depth-only passes).</p>
+</div></div>
+<a class="anchor" id="lua_hull_shader"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil hull_shader</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Hull (tessellation control) shader module (nil if unused).</p>
+</div></div>
+<a class="anchor" id="lua_domain_shader"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil domain_shader</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Domain (tessellation evaluation) shader module (nil if unused).</p>
+</div></div>
+<a class="anchor" id="lua_geometry_shader"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ShaderModule_lua.html">ShaderModule</a>|nil geometry_shader</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Geometry shader module (nil if unused).</p>
+</div></div>
+<a class="anchor" id="lua_primitive_topology"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="PrimitiveTopology_lua.html">PrimitiveTopology</a> primitive_topology</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Input assembly topology for vertex grouping.</p>
+</div></div>
+<a class="anchor" id="lua_msaa"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="MSAA_lua.html">MSAA</a> msaa</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Multisampling level (NONE disables MSAA).</p>
+</div></div>
+<a class="anchor" id="lua_cull_mode"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="CullMode_lua.html">CullMode</a> cull_mode</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Face culling mode applied during rasterization.</p>
+</div></div>
+<a class="anchor" id="lua_polygon_mode"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="PolygonMode_lua.html">PolygonMode</a> polygon_mode</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Polygon fill mode (FILL or WIREFRAME).</p>
+</div></div>
+<a class="anchor" id="lua_front_face_counter_clockwise"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean front_face_counter_clockwise</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True if counter-clockwise winding order defines front faces.</p>
+</div></div>
+<a class="anchor" id="lua_depth_stencil_image_format"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="ImageFormat_lua.html">ImageFormat</a> depth_stencil_image_format</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Pixel format of the depth/stencil attachment (UNDEFINED if none is used).</p>
+</div></div>
+<a class="anchor" id="lua_depth_test_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean depth_test_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to enable the per-fragment depth test.</p>
+</div></div>
+<a class="anchor" id="lua_depth_write_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean depth_write_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to write depth values when the depth test passes.</p>
+</div></div>
+<a class="anchor" id="lua_depth_compare_op"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="CompareOp_lua.html">CompareOp</a> depth_compare_op</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Comparison function for the depth test.</p>
+</div></div>
+<a class="anchor" id="lua_depth_bias_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean depth_bias_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to enable depth biasing (useful to avoid z-fighting in shadow maps).</p>
+</div></div>
+<a class="anchor" id="lua_depth_bias_constant_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number depth_bias_constant_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Constant depth bias added to every fragment's depth.</p>
+</div></div>
+<a class="anchor" id="lua_depth_bias_clamp"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number depth_bias_clamp</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Maximum (or minimum, if negative) depth bias allowed on any fragment.</p>
+</div></div>
+<a class="anchor" id="lua_depth_bias_slope_factor"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">number depth_bias_slope_factor</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Depth bias scaled by the fragment's depth slope.</p>
+</div></div>
+<a class="anchor" id="lua_stencil_test_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean stencil_test_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to enable the per-fragment stencil test.</p>
+</div></div>
+<a class="anchor" id="lua_front_stencil_op_state"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="StencilOpState_lua.html">StencilOpState</a> front_stencil_op_state</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Stencil test and write operations for front-facing polygons.</p>
+</div></div>
+<a class="anchor" id="lua_back_stencil_op_state"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="StencilOpState_lua.html">StencilOpState</a> back_stencil_op_state</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Stencil test and write operations for back-facing polygons.</p>
+</div></div>
+<a class="anchor" id="lua_logic_op_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean logic_op_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to enable logical operations on color attachments instead of blending.</p>
+</div></div>
+<a class="anchor" id="lua_logic_op"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname"><a class="el" href="LogicOp_lua.html">LogicOp</a> logic_op</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Logical operation applied to color attachment values when logic_op_enable is true.</p>
+</div></div>
+<a class="anchor" id="lua_alpha_to_coverage_enable"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">boolean alpha_to_coverage_enable</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>True to derive a per-sample coverage mask from the fragment alpha value (requires MSAA).</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="GraphicPipelineConfiguration_lua.html">GraphicPipelineConfiguration</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>

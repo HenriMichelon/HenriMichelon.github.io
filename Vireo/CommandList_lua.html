@@ -1,0 +1,1449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta name="generator" content="gen_lua_docs.py"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Vireo: CommandList Class Reference</title>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="doxypress.css" rel="stylesheet" type="text/css" />
+    <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by DoxyPress -->
+    <div id="titlearea">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr style="height: 56px;">
+                <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+                <td id="projectalign" style="padding-left: 0.5em;">
+                    <div id="projectname">Vireo
+                        &#160;<span id="projectnumber">0.0</span>
+                    </div>
+                    <div id="projectbrief">Vireo 3D Rendering Hardware Interface</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end header part -->
+    <div id="navrow1" class="tabs">
+        <ul class="tablist">
+            <li><a href="pages.html"><span>Documentation</span></a></li>
+            <li><a href="annotated.html"><span>Classes</span></a></li>
+            <li><a href="namespacevireo_lua.html"><span>Lua&#160;API</span></a></li>
+            <li><a href="https://codeberg.org/LysaEngine/vireo_rhi" target="_blank"><span>Repository</span></a></li>
+        </ul>
+    </div>
+</div><!-- top -->
+<div id="doc-content">
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+    <div class="title">CommandList Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
+  </div>
+  <div class="clear-floats"></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Records a sequence of GPU commands for later submission. Obtained from CommandAllocator.create_command_list().</p>
+<p>Lua full name: <code>vireo.CommandList</code></p>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:lua_begin"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_begin">begin</a> ()</td></tr>
+<tr class="memdesc:lua_begin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins command recording. Must be called before any other recording command. <a href="#lua_begin">More...</a><br /></td></tr>
+<tr class="separator:lua_begin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_end"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_end">end</a> ()</td></tr>
+<tr class="memdesc:lua_end"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends command recording. Must be called before submitting to a queue. <a href="#lua_end">More...</a><br /></td></tr>
+<tr class="separator:lua_end"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_upload_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_upload_buffer">upload_buffer</a> (destination: <a class="el" href="Buffer_lua.html">Buffer</a>, data: lightuserdata|any)</td></tr>
+<tr class="memdesc:lua_upload_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies CPU data into a BUFFER_UPLOAD staging buffer. <a href="#lua_upload_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_upload_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_upload_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_upload_image">upload_image</a> (destination: <a class="el" href="Image_lua.html">Image</a>, data: lightuserdata|any, firstMipLevel: integer)</td></tr>
+<tr class="memdesc:lua_upload_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies CPU data into an IMAGE_UPLOAD staging buffer starting at the given mip level. <a href="#lua_upload_image">More...</a><br /></td></tr>
+<tr class="separator:lua_upload_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_copy_buffer_to_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_copy_buffer_to_image">copy_buffer_to_image</a> (src: <a class="el" href="Buffer_lua.html">Buffer</a>, dst: <a class="el" href="Image_lua.html">Image</a>, mipLevel: integer, arrayLayer: integer, generateMips: boolean)</td></tr>
+<tr class="memdesc:lua_copy_buffer_to_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a staging buffer into a single image mip level and array layer; optionally generates remaining mips. <a href="#lua_copy_buffer_to_image">More...</a><br /></td></tr>
+<tr class="separator:lua_copy_buffer_to_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_copy_buffer_to_image_levels"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_copy_buffer_to_image_levels">copy_buffer_to_image_levels</a> (src: <a class="el" href="Buffer_lua.html">Buffer</a>, dst: <a class="el" href="Image_lua.html">Image</a>, offsets: integer[], generateMips: boolean)</td></tr>
+<tr class="memdesc:lua_copy_buffer_to_image_levels"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a staging buffer into multiple mip levels using explicit byte offsets per mip level. <a href="#lua_copy_buffer_to_image_levels">More...</a><br /></td></tr>
+<tr class="separator:lua_copy_buffer_to_image_levels"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_copy_buffer_to_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_copy_buffer_to_buffer">copy_buffer_to_buffer</a> (src: <a class="el" href="Buffer_lua.html">Buffer</a>, dst: <a class="el" href="Buffer_lua.html">Buffer</a>, size: integer, srcOffset: integer, dstOffset: integer)</td></tr>
+<tr class="memdesc:lua_copy_buffer_to_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies size bytes from src (at srcOffset) into dst (at dstOffset). <a href="#lua_copy_buffer_to_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_copy_buffer_to_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_copy_buffer_regions"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_copy_buffer_regions">copy_buffer_regions</a> (src: <a class="el" href="Buffer_lua.html">Buffer</a>, dst: <a class="el" href="Buffer_lua.html">Buffer</a>, regions: <a class="el" href="BufferCopyRegion_lua.html">BufferCopyRegion</a>[])</td></tr>
+<tr class="memdesc:lua_copy_buffer_regions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies multiple non-contiguous regions between two buffers in a single command. <a href="#lua_copy_buffer_regions">More...</a><br /></td></tr>
+<tr class="separator:lua_copy_buffer_regions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_copy_image_to_swap_chain"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_copy_image_to_swap_chain">copy_image_to_swap_chain</a> (src: <a class="el" href="Image_lua.html">Image</a>, swapChain: <a class="el" href="SwapChain_lua.html">SwapChain</a>)</td></tr>
+<tr class="memdesc:lua_copy_image_to_swap_chain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blits or resolves src into the swap chain's current back buffer. <a href="#lua_copy_image_to_swap_chain">More...</a><br /></td></tr>
+<tr class="separator:lua_copy_image_to_swap_chain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_begin_rendering"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_begin_rendering">begin_rendering</a> (config: <a class="el" href="RenderingConfiguration_lua.html">RenderingConfiguration</a>)</td></tr>
+<tr class="memdesc:lua_begin_rendering"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins a dynamic render pass. Must be paired with end_rendering(). <a href="#lua_begin_rendering">More...</a><br /></td></tr>
+<tr class="separator:lua_begin_rendering"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_end_rendering"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_end_rendering">end_rendering</a> ()</td></tr>
+<tr class="memdesc:lua_end_rendering"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends the current dynamic render pass. <a href="#lua_end_rendering">More...</a><br /></td></tr>
+<tr class="separator:lua_end_rendering"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_dispatch"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_dispatch">dispatch</a> (x: integer, y: integer, z: integer)</td></tr>
+<tr class="memdesc:lua_dispatch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a compute shader with the given thread-group counts in X, Y, and Z. <a href="#lua_dispatch">More...</a><br /></td></tr>
+<tr class="separator:lua_dispatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_pipeline"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_pipeline">bind_pipeline</a> (pipeline: <a class="el" href="Pipeline_lua.html">Pipeline</a>, descriptorsAlreadyBound: boolean|nil)</td></tr>
+<tr class="memdesc:lua_bind_pipeline"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a graphics or compute pipeline. Pass descriptorsAlreadyBound=true to skip re-binding unchanged descriptor sets. <a href="#lua_bind_pipeline">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_pipeline"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_vertex_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_vertex_buffer">bind_vertex_buffer</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, offset: integer|nil)</td></tr>
+<tr class="memdesc:lua_bind_vertex_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a vertex buffer at the default slot with an optional byte offset (default 0). <a href="#lua_bind_vertex_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_vertex_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_vertex_buffers"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_vertex_buffers">bind_vertex_buffers</a> (buffers: <a class="el" href="Buffer_lua.html">Buffer</a>[], offsets: integer[]|nil)</td></tr>
+<tr class="memdesc:lua_bind_vertex_buffers"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds multiple vertex buffers at once with optional per-buffer byte offsets. <a href="#lua_bind_vertex_buffers">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_vertex_buffers"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_index_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_index_buffer">bind_index_buffer</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, indexType: <a class="el" href="IndexType_lua.html">IndexType</a>|nil, firstIndex: integer|nil)</td></tr>
+<tr class="memdesc:lua_bind_index_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an index buffer with an optional index type (default UINT32) and first-index offset (default 0). <a href="#lua_bind_index_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_index_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_descriptors"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_descriptors">bind_descriptors</a> (pipelineType: <a class="el" href="PipelineType_lua.html">PipelineType</a>, resources: <a class="el" href="PipelineResources_lua.html">PipelineResources</a>, descriptors: <a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[])</td></tr>
+<tr class="memdesc:lua_bind_descriptors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds descriptor sets before a pipeline is bound; supply pipelineType and resources explicitly. <a href="#lua_bind_descriptors">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_descriptors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_descriptors"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_descriptors">bind_descriptors</a> (descriptors: <a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[])</td></tr>
+<tr class="memdesc:lua_bind_descriptors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds descriptor sets after a pipeline is bound; pipeline type is inferred. <a href="#lua_bind_descriptors">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_descriptors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_descriptor"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_descriptor">bind_descriptor</a> (descriptor: <a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>, set: integer)</td></tr>
+<tr class="memdesc:lua_bind_descriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a single descriptor set at the given set index (pipeline must already be bound). <a href="#lua_bind_descriptor">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_descriptor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_bind_descriptor_dynamic"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_bind_descriptor_dynamic">bind_descriptor_dynamic</a> (descriptor: <a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>, set: integer, offset: integer)</td></tr>
+<tr class="memdesc:lua_bind_descriptor_dynamic"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a dynamic-uniform descriptor set at the given set index with a byte offset into the uniform buffer. <a href="#lua_bind_descriptor_dynamic">More...</a><br /></td></tr>
+<tr class="separator:lua_bind_descriptor_dynamic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw">draw</a> (vertexCountPerInstance: integer, instanceCount: integer|nil, firstVertex: integer|nil, firstInstance: integer|nil)</td></tr>
+<tr class="memdesc:lua_draw"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issues a non-indexed draw call. <a href="#lua_draw">More...</a><br /></td></tr>
+<tr class="separator:lua_draw"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_indexed"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_indexed">draw_indexed</a> (indexCountPerInstance: integer, instanceCount: integer|nil, firstIndex: integer|nil, firstVertex: integer|nil, firstInstance: integer|nil)</td></tr>
+<tr class="memdesc:lua_draw_indexed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issues an indexed draw call. <a href="#lua_draw_indexed">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_indexed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_indirect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_indirect">draw_indirect</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, offset: integer, drawCount: integer, stride: integer, firstCommandOffset: integer)</td></tr>
+<tr class="memdesc:lua_draw_indirect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issues indirect (non-indexed) draw calls whose arguments are read from a GPU buffer. <a href="#lua_draw_indirect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_indirect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_indexed_indirect_count"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_indexed_indirect_count">draw_indexed_indirect_count</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, offset: integer, countBuffer: <a class="el" href="Buffer_lua.html">Buffer</a>, countOffset: integer, maxDrawCount: integer, stride: integer, firstCommandOffset: integer)</td></tr>
+<tr class="memdesc:lua_draw_indexed_indirect_count"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issues indirect indexed draw calls with the actual draw count stored in a GPU buffer. <a href="#lua_draw_indexed_indirect_count">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_indexed_indirect_count"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_indexed_indirect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_indexed_indirect">draw_indexed_indirect</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, offset: integer, maxDrawCount: integer, stride: integer, firstCommandOffset: integer)</td></tr>
+<tr class="memdesc:lua_draw_indexed_indirect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Issues indirect indexed draw calls with a CPU-specified maximum draw count. <a href="#lua_draw_indexed_indirect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_indexed_indirect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_barrier_image"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_barrier_image">barrier_image</a> (image: <a class="el" href="Image_lua.html">Image</a>, oldState: <a class="el" href="ResourceState_lua.html">ResourceState</a>, newState: <a class="el" href="ResourceState_lua.html">ResourceState</a>)</td></tr>
+<tr class="memdesc:lua_barrier_image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pipeline barrier transitioning an image from oldState to newState. <a href="#lua_barrier_image">More...</a><br /></td></tr>
+<tr class="separator:lua_barrier_image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_barrier_render_target"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_barrier_render_target">barrier_render_target</a> (renderTarget: <a class="el" href="RenderTarget_lua.html">RenderTarget</a>, oldState: <a class="el" href="ResourceState_lua.html">ResourceState</a>, newState: <a class="el" href="ResourceState_lua.html">ResourceState</a>)</td></tr>
+<tr class="memdesc:lua_barrier_render_target"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pipeline barrier transitioning a render target's image between resource states. <a href="#lua_barrier_render_target">More...</a><br /></td></tr>
+<tr class="separator:lua_barrier_render_target"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_barrier_swap_chain"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_barrier_swap_chain">barrier_swap_chain</a> (swapChain: <a class="el" href="SwapChain_lua.html">SwapChain</a>, oldState: <a class="el" href="ResourceState_lua.html">ResourceState</a>, newState: <a class="el" href="ResourceState_lua.html">ResourceState</a>)</td></tr>
+<tr class="memdesc:lua_barrier_swap_chain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pipeline barrier for the swap chain's currently acquired back buffer. <a href="#lua_barrier_swap_chain">More...</a><br /></td></tr>
+<tr class="separator:lua_barrier_swap_chain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_barrier_buffer"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_barrier_buffer">barrier_buffer</a> (buffer: <a class="el" href="Buffer_lua.html">Buffer</a>, oldState: <a class="el" href="ResourceState_lua.html">ResourceState</a>, newState: <a class="el" href="ResourceState_lua.html">ResourceState</a>)</td></tr>
+<tr class="memdesc:lua_barrier_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pipeline barrier transitioning a buffer between resource states. <a href="#lua_barrier_buffer">More...</a><br /></td></tr>
+<tr class="separator:lua_barrier_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_viewports"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_viewports">set_viewports</a> (viewports: <a class="el" href="Viewport_lua.html">Viewport</a>[])</td></tr>
+<tr class="memdesc:lua_set_viewports"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets multiple viewports for the rasterizer. <a href="#lua_set_viewports">More...</a><br /></td></tr>
+<tr class="separator:lua_set_viewports"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_scissors"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_scissors">set_scissors</a> (rects: <a class="el" href="Rect_lua.html">Rect</a>[])</td></tr>
+<tr class="memdesc:lua_set_scissors"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets multiple scissor rectangles for the rasterizer. <a href="#lua_set_scissors">More...</a><br /></td></tr>
+<tr class="separator:lua_set_scissors"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_viewport"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_viewport">set_viewport</a> (viewport: <a class="el" href="Viewport_lua.html">Viewport</a>)</td></tr>
+<tr class="memdesc:lua_set_viewport"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single viewport for the rasterizer. <a href="#lua_set_viewport">More...</a><br /></td></tr>
+<tr class="separator:lua_set_viewport"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_scissor"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_scissor">set_scissor</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>)</td></tr>
+<tr class="memdesc:lua_set_scissor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single scissor rectangle for the rasterizer. <a href="#lua_set_scissor">More...</a><br /></td></tr>
+<tr class="separator:lua_set_scissor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_set_stencil_reference"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_stencil_reference">set_stencil_reference</a> (reference: integer)</td></tr>
+<tr class="memdesc:lua_set_stencil_reference"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stencil reference value used in stencil comparison operations. <a href="#lua_set_stencil_reference">More...</a><br /></td></tr>
+<tr class="separator:lua_set_stencil_reference"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_push_constants"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_push_constants">push_constants</a> (resources: <a class="el" href="PipelineResources_lua.html">PipelineResources</a>, desc: <a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a>, data: any)</td></tr>
+<tr class="memdesc:lua_push_constants"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploads push-constant data for the currently bound pipeline. <a href="#lua_push_constants">More...</a><br /></td></tr>
+<tr class="separator:lua_push_constants"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_cleanup"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_cleanup">cleanup</a> ()</td></tr>
+<tr class="memdesc:lua_cleanup"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases internal temporary resources. Call after the command list has been submitted and the GPU has finished. <a href="#lua_cleanup">More...</a><br /></td></tr>
+<tr class="separator:lua_cleanup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="lua_begin"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begins command recording. Must be called before any other recording command.</p>
+</div></div>
+<a class="anchor" id="lua_end"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ends command recording. Must be called before submitting to a queue.</p>
+</div></div>
+<a class="anchor" id="lua_upload_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil upload_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">destination</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">lightuserdata|any&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies CPU data into a BUFFER_UPLOAD staging buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">data</td><td>lightuserdata|any</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_upload_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil upload_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">destination</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">lightuserdata|any&#160;</td>
+          <td class="paramname">data</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">firstMipLevel</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies CPU data into an IMAGE_UPLOAD staging buffer starting at the given mip level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">data</td><td>lightuserdata|any</td></tr>
+    <tr><td class="paramname">firstMipLevel</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_copy_buffer_to_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil copy_buffer_to_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">src</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">dst</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">mipLevel</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">arrayLayer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">generateMips</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies a staging buffer into a single image mip level and array layer; optionally generates remaining mips.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">dst</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">mipLevel</td><td>integer</td></tr>
+    <tr><td class="paramname">arrayLayer</td><td>integer</td></tr>
+    <tr><td class="paramname">generateMips</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_copy_buffer_to_image_levels"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil copy_buffer_to_image_levels </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">src</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">dst</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer[]&#160;</td>
+          <td class="paramname">offsets</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname">generateMips</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies a staging buffer into multiple mip levels using explicit byte offsets per mip level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">dst</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">offsets</td><td>integer[]</td></tr>
+    <tr><td class="paramname">generateMips</td><td>boolean</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_copy_buffer_to_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil copy_buffer_to_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">src</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">dst</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">size</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">srcOffset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">dstOffset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies size bytes from src (at srcOffset) into dst (at dstOffset).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">dst</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">size</td><td>integer</td></tr>
+    <tr><td class="paramname">srcOffset</td><td>integer</td></tr>
+    <tr><td class="paramname">dstOffset</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_copy_buffer_regions"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil copy_buffer_regions </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">src</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">dst</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="BufferCopyRegion_lua.html">BufferCopyRegion</a>[]&#160;</td>
+          <td class="paramname">regions</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies multiple non-contiguous regions between two buffers in a single command.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">dst</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">regions</td><td><a class="el" href="BufferCopyRegion_lua.html">BufferCopyRegion</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_copy_image_to_swap_chain"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil copy_image_to_swap_chain </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">src</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td>
+          <td class="paramname">swapChain</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Blits or resolves src into the swap chain's current back buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">swapChain</td><td><a class="el" href="SwapChain_lua.html">SwapChain</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_begin_rendering"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil begin_rendering </td><td>(</td>
+          <td class="paramtype"><a class="el" href="RenderingConfiguration_lua.html">RenderingConfiguration</a>&#160;</td>
+          <td class="paramname">config</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Begins a dynamic render pass. Must be paired with end_rendering().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="RenderingConfiguration_lua.html">RenderingConfiguration</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_end_rendering"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil end_rendering </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ends the current dynamic render pass.</p>
+</div></div>
+<a class="anchor" id="lua_dispatch"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil dispatch </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">z</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Dispatches a compute shader with the given thread-group counts in X, Y, and Z.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>integer</td></tr>
+    <tr><td class="paramname">y</td><td>integer</td></tr>
+    <tr><td class="paramname">z</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_pipeline"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_pipeline </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Pipeline_lua.html">Pipeline</a>&#160;</td>
+          <td class="paramname">pipeline</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">boolean|nil&#160;</td>
+          <td class="paramname">descriptorsAlreadyBound</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a graphics or compute pipeline. Pass descriptorsAlreadyBound=true to skip re-binding unchanged descriptor sets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipeline</td><td><a class="el" href="Pipeline_lua.html">Pipeline</a></td></tr>
+    <tr><td class="paramname">descriptorsAlreadyBound</td><td>boolean|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_vertex_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_vertex_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a vertex buffer at the default slot with an optional byte offset (default 0).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">offset</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_vertex_buffers"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_vertex_buffers </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>[]&#160;</td>
+          <td class="paramname">buffers</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer[]|nil&#160;</td>
+          <td class="paramname">offsets</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds multiple vertex buffers at once with optional per-buffer byte offsets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffers</td><td><a class="el" href="Buffer_lua.html">Buffer</a>[]</td></tr>
+    <tr><td class="paramname">offsets</td><td>integer[]|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_index_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_index_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="IndexType_lua.html">IndexType</a>|nil&#160;</td>
+          <td class="paramname">indexType</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstIndex</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds an index buffer with an optional index type (default UINT32) and first-index offset (default 0).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">indexType</td><td><a class="el" href="IndexType_lua.html">IndexType</a>|nil</td></tr>
+    <tr><td class="paramname">firstIndex</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_descriptors"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_descriptors </td><td>(</td>
+          <td class="paramtype"><a class="el" href="PipelineType_lua.html">PipelineType</a>&#160;</td>
+          <td class="paramname">pipelineType</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="PipelineResources_lua.html">PipelineResources</a>&#160;</td>
+          <td class="paramname">resources</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[]&#160;</td>
+          <td class="paramname">descriptors</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds descriptor sets before a pipeline is bound; supply pipelineType and resources explicitly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipelineType</td><td><a class="el" href="PipelineType_lua.html">PipelineType</a></td></tr>
+    <tr><td class="paramname">resources</td><td><a class="el" href="PipelineResources_lua.html">PipelineResources</a></td></tr>
+    <tr><td class="paramname">descriptors</td><td><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_descriptors"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_descriptors </td><td>(</td>
+          <td class="paramtype"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[]&#160;</td>
+          <td class="paramname">descriptors</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds descriptor sets after a pipeline is bound; pipeline type is inferred.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptors</td><td><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_descriptor"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_descriptor </td><td>(</td>
+          <td class="paramtype"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>&#160;</td>
+          <td class="paramname">descriptor</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">set</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a single descriptor set at the given set index (pipeline must already be bound).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a></td></tr>
+    <tr><td class="paramname">set</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_bind_descriptor_dynamic"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil bind_descriptor_dynamic </td><td>(</td>
+          <td class="paramtype"><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a>&#160;</td>
+          <td class="paramname">descriptor</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">set</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">offset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds a dynamic-uniform descriptor set at the given set index with a byte offset into the uniform buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptor</td><td><a class="el" href="DescriptorSet_lua.html">DescriptorSet</a></td></tr>
+    <tr><td class="paramname">set</td><td>integer</td></tr>
+    <tr><td class="paramname">offset</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">vertexCountPerInstance</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">instanceCount</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstVertex</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstInstance</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues a non-indexed draw call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexCountPerInstance</td><td>integer</td></tr>
+    <tr><td class="paramname">instanceCount</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">firstVertex</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">firstInstance</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_indexed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_indexed </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">indexCountPerInstance</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">instanceCount</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstIndex</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstVertex</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer|nil&#160;</td>
+          <td class="paramname">firstInstance</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues an indexed draw call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indexCountPerInstance</td><td>integer</td></tr>
+    <tr><td class="paramname">instanceCount</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">firstIndex</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">firstVertex</td><td>integer|nil</td></tr>
+    <tr><td class="paramname">firstInstance</td><td>integer|nil</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_indirect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_indirect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">drawCount</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">stride</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">firstCommandOffset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues indirect (non-indexed) draw calls whose arguments are read from a GPU buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">offset</td><td>integer</td></tr>
+    <tr><td class="paramname">drawCount</td><td>integer</td></tr>
+    <tr><td class="paramname">stride</td><td>integer</td></tr>
+    <tr><td class="paramname">firstCommandOffset</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_indexed_indirect_count"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_indexed_indirect_count </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">countBuffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">countOffset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">maxDrawCount</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">stride</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">firstCommandOffset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues indirect indexed draw calls with the actual draw count stored in a GPU buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">offset</td><td>integer</td></tr>
+    <tr><td class="paramname">countBuffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">countOffset</td><td>integer</td></tr>
+    <tr><td class="paramname">maxDrawCount</td><td>integer</td></tr>
+    <tr><td class="paramname">stride</td><td>integer</td></tr>
+    <tr><td class="paramname">firstCommandOffset</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_indexed_indirect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_indexed_indirect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">offset</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">maxDrawCount</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">stride</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">firstCommandOffset</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Issues indirect indexed draw calls with a CPU-specified maximum draw count.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">offset</td><td>integer</td></tr>
+    <tr><td class="paramname">maxDrawCount</td><td>integer</td></tr>
+    <tr><td class="paramname">stride</td><td>integer</td></tr>
+    <tr><td class="paramname">firstCommandOffset</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_barrier_image"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil barrier_image </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Image_lua.html">Image</a>&#160;</td>
+          <td class="paramname">image</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">oldState</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">newState</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts a pipeline barrier transitioning an image from oldState to newState.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td><a class="el" href="Image_lua.html">Image</a></td></tr>
+    <tr><td class="paramname">oldState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+    <tr><td class="paramname">newState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_barrier_render_target"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil barrier_render_target </td><td>(</td>
+          <td class="paramtype"><a class="el" href="RenderTarget_lua.html">RenderTarget</a>&#160;</td>
+          <td class="paramname">renderTarget</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">oldState</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">newState</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts a pipeline barrier transitioning a render target's image between resource states.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderTarget</td><td><a class="el" href="RenderTarget_lua.html">RenderTarget</a></td></tr>
+    <tr><td class="paramname">oldState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+    <tr><td class="paramname">newState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_barrier_swap_chain"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil barrier_swap_chain </td><td>(</td>
+          <td class="paramtype"><a class="el" href="SwapChain_lua.html">SwapChain</a>&#160;</td>
+          <td class="paramname">swapChain</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">oldState</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">newState</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts a pipeline barrier for the swap chain's currently acquired back buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">swapChain</td><td><a class="el" href="SwapChain_lua.html">SwapChain</a></td></tr>
+    <tr><td class="paramname">oldState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+    <tr><td class="paramname">newState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_barrier_buffer"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil barrier_buffer </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Buffer_lua.html">Buffer</a>&#160;</td>
+          <td class="paramname">buffer</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">oldState</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="ResourceState_lua.html">ResourceState</a>&#160;</td>
+          <td class="paramname">newState</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inserts a pipeline barrier transitioning a buffer between resource states.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td><a class="el" href="Buffer_lua.html">Buffer</a></td></tr>
+    <tr><td class="paramname">oldState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+    <tr><td class="paramname">newState</td><td><a class="el" href="ResourceState_lua.html">ResourceState</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_viewports"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_viewports </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Viewport_lua.html">Viewport</a>[]&#160;</td>
+          <td class="paramname">viewports</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets multiple viewports for the rasterizer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewports</td><td><a class="el" href="Viewport_lua.html">Viewport</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_scissors"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_scissors </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>[]&#160;</td>
+          <td class="paramname">rects</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets multiple scissor rectangles for the rasterizer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rects</td><td><a class="el" href="Rect_lua.html">Rect</a>[]</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_viewport"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_viewport </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Viewport_lua.html">Viewport</a>&#160;</td>
+          <td class="paramname">viewport</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets a single viewport for the rasterizer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td><a class="el" href="Viewport_lua.html">Viewport</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_scissor"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_scissor </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
+          <td class="paramname">rect</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets a single scissor rectangle for the rasterizer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_set_stencil_reference"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil set_stencil_reference </td><td>(</td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">reference</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the stencil reference value used in stencil comparison operations.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_push_constants"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil push_constants </td><td>(</td>
+          <td class="paramtype"><a class="el" href="PipelineResources_lua.html">PipelineResources</a>&#160;</td>
+          <td class="paramname">resources</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype"><a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a>&#160;</td>
+          <td class="paramname">desc</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">any&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Uploads push-constant data for the currently bound pipeline.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resources</td><td><a class="el" href="PipelineResources_lua.html">PipelineResources</a></td></tr>
+    <tr><td class="paramname">desc</td><td><a class="el" href="PushConstantsDesc_lua.html">PushConstantsDesc</a></td></tr>
+    <tr><td class="paramname">data</td><td>any</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_cleanup"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Releases internal temporary resources. Call after the command list has been submitted and the GPU has finished.</p>
+</div></div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+    <ul>
+            <li class="navelem"><a class="el" href="namespacevireo_lua.html">vireo</a></li>
+    <li class="navelem"><a class="el" href="CommandList_lua.html">CommandList</a></li>
+        <li class="footer">Generated on Sun Aug 02 2026 17:21:53 for Vireo &nbsp; by
+            gen_lua_docs.py</li>
+    </ul>
+</div>
+</body>
+</html>
