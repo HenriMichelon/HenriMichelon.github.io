@@ -66,6 +66,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1ResourcesManager.html',''
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#typedefs">Public Typedefs</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -81,8 +82,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1ResourcesManager.html',''
 class lysa::ResourcesManager&lt; T &gt;</h3>
 
 <p>Generic object/resources manager using ID-based access.</p>
-<p>Manages a contiguous pool (vector) of resources of type T addressed by a small integral unique identifier (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>). Instances are created into available slots and retrieved via their ID. Destruction returns the slot to a free list for reuse.</p>
-<p>The manager does not perform dynamic growth; capacity is fixed at construction. All accessors are O(1) by direct indexing. This class is intended to be used as a base for concrete resource managers (e.g., textures, meshes, materials).</p>
+<p>Manages a contiguous pool (vector) of resources of type T addressed by an unique identifier (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>). Instances are created into available slots and retrieved via their ID. Destruction returns the slot to a free list for reuse. Accessors are O(1) by direct indexing.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td><a class="el" href="structlysa_1_1Resource.html">Resource</a> type stored by the manager. T is expected to contain a public field named 'id' of type <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> that will be assigned upon creation. </td></tr>
@@ -90,6 +90,11 @@ class lysa::ResourcesManager&lt; T &gt;</h3>
   </dd>
 </dl>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedefs"></a>
+Public Typedefs</h2></td></tr>
+<tr class="memitem:aa870d6d45bfb6ebb1c6238e2b108306c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#aa870d6d45bfb6ebb1c6238e2b108306c">UsageGuards</a> = std::vector&lt; std::weak_ptr&lt; const void &gt; &gt;</td></tr>
+<tr class="separator:aa870d6d45bfb6ebb1c6238e2b108306c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af83610b28d5b815800a120f70be91cef"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
@@ -117,6 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a736439369f33bc1deb84eb8205b2d842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2797c6a9412c0116b6a43ed6ae146df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#ae2797c6a9412c0116b6a43ed6ae146df">getCapacity</a> () const</td></tr>
 <tr class="separator:ae2797c6a9412c0116b6a43ed6ae146df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037387e20dffbb6de3d08ac21360a459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a037387e20dffbb6de3d08ac21360a459">setRetirementProvider</a> (std::function&lt; <a class="el" href="classlysa_1_1ResourcesManager.html#aa870d6d45bfb6ebb1c6238e2b108306c">UsageGuards</a> ()&gt; provider)</td></tr>
+<tr class="separator:a037387e20dffbb6de3d08ac21360a459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c7a09622f8eae4cd5b8400637e7975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a01c7a09622f8eae4cd5b8400637e7975">collectRetired</a> ()</td></tr>
+<tr class="separator:a01c7a09622f8eae4cd5b8400637e7975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb2683c2b8b970768843a8e594f0226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#aafb2683c2b8b970768843a8e594f0226">requireAvailable</a> (const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> count)</td></tr>
+<tr class="separator:aafb2683c2b8b970768843a8e594f0226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e556e468ad52c822ee81ac8f095253b"><td class="memTemplParams" colspan="2">template&lt;typename Func &gt; </td></tr>
 <tr class="memitem:a4e556e468ad52c822ee81ac8f095253b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a4e556e468ad52c822ee81ac8f095253b">forEach</a> (Func &amp;&amp;func)</td></tr>
 <tr class="separator:a4e556e468ad52c822ee81ac8f095253b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +137,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae746b64ac20d796dc4b706c0d7afe1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#ae746b64ac20d796dc4b706c0d7afe1b2">enableGrowth</a> (<a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> maximum=std::numeric_limits&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &gt;::max ())</td></tr>
+<tr class="separator:ae746b64ac20d796dc4b706c0d7afe1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01aa4113a620e3e0b8bfb98941042929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a01aa4113a620e3e0b8bfb98941042929">ResourcesManager</a> (const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> capacity, const std::string &amp;name)</td></tr>
 <tr class="separator:a01aa4113a620e3e0b8bfb98941042929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addf748610c97dda598936271566c86e7"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#addf748610c97dda598936271566c86e7">allocate</a> (std::unique_ptr&lt; T &gt; instance)</td></tr>
@@ -137,9 +150,23 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a5e5d59a8271a57913274425722b21143"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a5e5d59a8271a57913274425722b21143">resources</a></td></tr>
 <tr class="separator:a5e5d59a8271a57913274425722b21143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a37d6ec919f1a898f569f2d9c4fc44b"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a7a37d6ec919f1a898f569f2d9c4fc44b">resourcesMutex</a></td></tr>
-<tr class="separator:a7a37d6ec919f1a898f569f2d9c4fc44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a70257f20903b3e5847cbe19eb73e37"><td class="memItemLeft" align="right" valign="top">std::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1ResourcesManager.html#a0a70257f20903b3e5847cbe19eb73e37">resourcesMutex</a></td></tr>
+<tr class="separator:a0a70257f20903b3e5847cbe19eb73e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aa870d6d45bfb6ebb1c6238e2b108306c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classlysa_1_1ResourcesManager.html#aa870d6d45bfb6ebb1c6238e2b108306c">UsageGuards</a> =  std::vector&lt;std::weak_ptr&lt;const void&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Weak frame leases : expiration proves that all submitted GPU uses completed. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a71c9fac8fc62d22c6ae7ba54d0f96202"></a>
 <div class="memitem">
@@ -244,6 +271,30 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a01c7a09622f8eae4cd5b8400637e7975"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void collectRetired </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reclaim slots whose submitted GPU users have completed. </p>
 
 </div>
 </div>
@@ -365,6 +416,30 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true if the resource was actually freed, false if references remain. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classlysa_1_1MaterialManager.html#ade65968803d4576e725b00ed121cd621">lysa::MaterialManager::destroy()</a>, <a class="el" href="classlysa_1_1MeshManager.html#ade65968803d4576e725b00ed121cd621">lysa::MeshManager::destroy()</a>, <a class="el" href="classlysa_1_1ImageManager.html#ade65968803d4576e725b00ed121cd621">lysa::ImageManager::destroy()</a></p>
+
+</div>
+</div>
+<a class="anchor" id="ae746b64ac20d796dc4b706c0d7afe1b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enableGrowth </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>maximum</em> = <code>std::numeric_limits&lt;<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&gt;::max()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -573,6 +648,56 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aafb2683c2b8b970768843a8e594f0226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void requireAvailable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check that a batch fits before constructing any resources. </p>
+
+</div>
+</div>
+<a class="anchor" id="a037387e20dffbb6de3d08ac21360a459"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRetirementProvider </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; <a class="el" href="classlysa_1_1ResourcesManager.html#aa870d6d45bfb6ebb1c6238e2b108306c">UsageGuards</a> ()&gt;&#160;</td>
+          <td class="paramname"><em>provider</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure deferred slot reuse for managers with GPU-visible IDs. </p>
+
+</div>
+</div>
 <a class="anchor" id="aeffde4221876fb03643fc2eb906320f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -619,7 +744,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7a37d6ec919f1a898f569f2d9c4fc44b"></a>
+<a class="anchor" id="a0a70257f20903b3e5847cbe19eb73e37"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -627,12 +752,12 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::mutex resourcesMutex</td>
+          <td class="memname">std::recursive_mutex resourcesMutex</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -645,7 +770,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1ResourcesManager.html">ResourcesManager</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

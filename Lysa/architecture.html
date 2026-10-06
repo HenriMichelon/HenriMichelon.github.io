@@ -92,6 +92,8 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 <tr>
 <td><code>transferQueue</code> </td><td>Submit queue for DMA transfers </td></tr>
 <tr>
+<td><code>stagingPool</code> </td><td>Shared mapped upload buffers retained until GPU completion </td></tr>
+<tr>
 <td><code>asyncQueue</code> </td><td>Async transfer command submission </td></tr>
 <tr>
 <td><code>physicsEngine</code> </td><td>Pluggable physics backend (Jolt or PhysX, optional) </td></tr>
@@ -103,11 +105,11 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 <p>The main loop in <a class="el" href="classlysa_1_1Lysa.html#a13a43e6d814de94978c515cb084873b1">lysa::Lysa::run</a> follows a fixed-timestep accumulator pattern:</p>
 <ol type="1">
 <li><b>Platform events</b> : window, input, OS messages consumed by <code>processPlatformEvents()</code>.</li>
-<li><b>Physics update</b> : <code>MainLoopEvent::PHYSICS_PROCESS</code> fired at a fixed delta time (default 1/60 s), potentially multiple times per frame to drain the accumulator.</li>
-<li><b>Game update</b> : <code>MainLoopEvent::PROCESS</code> fired once with the remaining frame time.</li>
+<li><b>Physics update</b> : <code>MainLoopSignal::PHYSICS_PROCESS</code> fired at a fixed delta time (default 1/60 s), potentially multiple times per frame to drain the accumulator.</li>
+<li><b>Game update</b> : <code>MainLoopSignal::PROCESS</code> fired once with the remaining frame time.</li>
 <li><b>GPU upload</b> : new/modified resources are uploaded to the GPU via <code>uploadData()</code>.</li>
 <li><b>Render</b> : each active <a class="el" href="classlysa_1_1RenderTarget.html">lysa::RenderTarget</a> drives its <a class="el" href="classlysa_1_1Renderer.html">lysa::Renderer</a>.</li>
-<li><b>Quit</b> : <code>MainLoopEvent::QUIT</code> fired before resource teardown when <code>Context::exit</code> is set.</li>
+<li><b>Quit</b> : <code>MainLoopSignal::QUIT</code> fired before resource teardown when <code>Context::exit</code> is set.</li>
 </ol>
 <h2>Platform Layer </h2>
 <p>Platform-specific code is isolated under <code>src/platform/</code>:</p>
@@ -125,21 +127,22 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 </ul>
 <p><a class="el" href="classlysa_1_1ResourcesPack.html">lysa::ResourcesPack</a> and <a class="el" href="classlysa_1_1AssetsPack.html">lysa::AssetsPack</a> layer packed file support on top of the VFS, allowing assets to be shipped as single archive files without changing any loading code.</p>
 <h2>Resource Management </h2>
-<p>All engine resources (meshes, images, materials, textures, samplers…) live in fixed-capacity pools managed by <a class="el" href="classlysa_1_1ResourcesManager.html">lysa::ResourcesManager</a> :</p>
+<p>Engine GPU-related resources (images, meshes and materials) are pools managed by <a class="el" href="classlysa_1_1ResourcesManager.html">lysa::ResourcesManager</a> :</p>
 <ul>
 <li>Resources are created into available slots and addressed by a small integral <code>unique_id</code>.</li>
 <li>All accessors are O(1) by direct index.</li>
-<li>Capacity is fixed at engine initialization via <a class="el" href="structlysa_1_1ResourcesCapacity.html">lysa::ResourcesCapacity</a>.</li>
+<li>GPU arrays grows from initial capacities in <a class="el" href="structlysa_1_1ResourcesCapacity.html">lysa::ResourcesCapacity</a>.</li>
+<li>GPU arrays growth preserves offsets, copies on the graphics queue, and retains captured generations until their frame fences complete.</li>
 <li>GPU upload is triggered automatically on resource creation.</li>
 </ul>
 <p>The <a class="el" href="classlysa_1_1ResourcesRegistry.html">lysa::ResourcesRegistry</a> tracks all live resources by type and provides a single discovery point for cross-subsystem queries.</p>
-<p>Dedicated manager types : <code>ImageManager</code>, <code>MaterialManager</code>, <code>MeshManager</code> : are instantiated by <a class="el" href="classlysa_1_1Lysa.html">lysa::Lysa</a> and own the corresponding GPU-side buffers.</p>
+<p>The dedicated manager types : <code>ImageManager</code>, <code>MaterialManager</code>, <code>MeshManager</code> are instantiated by <a class="el" href="classlysa_1_1Lysa.html">lysa::Lysa</a> and own the corresponding GPU-side buffers.</p>
 <h2>Event System </h2>
-<p><code><a class="el" href="file__Event_8ixx.html">src/Event.ixx</a></code> provides a centralized observer-based dispatcher (<a class="el" href="classlysa_1_1EventManager.html">lysa::EventManager</a>).</p>
+<p><code><a class="el" href="file__Event_8ixx.html">src/Event.ixx</a></code> defines two dispatchers sharing subscription storage and delivery through lysa::EventManager: <a class="el" href="classlysa_1_1QueuedEvent.html">lysa::QueuedEvent</a> (<code><a class="el" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">ctx()</a>.events</code>) queues targeted events for the next processing pass and <a class="el" href="classlysa_1_1SignalManager.html">lysa::SignalManager</a> (<code><a class="el" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">ctx()</a>.signals</code>) delivers global events synchronously.</p>
 <p>All engine subsystems route their notifications through this system:</p><ul>
 <li>Input events (keyboard, mouse, gamepad).</li>
 <li>Physics contact and collision callbacks.</li>
-<li>Application lifecycle events (<code>MainLoopEvent::PROCESS</code>, <code>PHYSICS_PROCESS</code>, <code>QUIT</code>).</li>
+<li>Application lifecycle events (<code>MainLoopSignal::PROCESS</code>, <code>PHYSICS_PROCESS</code>, <code>QUIT</code>).</li>
 <li>Custom user events.</li>
 </ul>
 <p>Lua callbacks are registered through the same dispatcher, unifying C++ and script-side event handling.</p>
@@ -198,6 +201,7 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 </ul>
 <p>The main color passes consume these culled indirect draw buffers, keeping the CPU out of the per-draw loop.</p>
 <h3>Scene &amp; SceneFrameData</h3>
+<p>SceneConfiguration supplies independent initial capacities for lights, mesh instances, shared surface instances and per-pipeline groups/commands. Each frame slot grows on demand after its render-target fences complete.</p>
 <p><a class="el" href="classlysa_1_1Scene.html">lysa::Scene</a> owns the list of <a class="el" href="classlysa_1_1MeshInstance.html">lysa::MeshInstance</a> objects, lights, and the environment settings. It computes per-frame <a class="el" href="classlysa_1_1SceneFrameData.html">lysa::SceneFrameData</a> : GPU-ready view/projection matrices, instance transforms, material bindings, shadow map parameters : consumed by every render pass.</p>
 <h3>Shader pipeline</h3>
 <p>Shaders are written in <a href="https://shader-slang.org/">Slang</a> and compiled to both DXIL (DirectX 12) and SPIR-V (Vulkan) at build time by <code>cmake/shaders.cmake</code>. Compiled binaries ship under <code>shaders/</code>.</p>
@@ -217,7 +221,7 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 <p>A <a class="el" href="classlysa_1_1PhysicsDebugRenderer.html">lysa::PhysicsDebugRenderer</a> visualizes physics shapes and constraints in real time (enabled via <code>DebugConfiguration</code> in <a class="el" href="structlysa_1_1ContextConfiguration.html">lysa::ContextConfiguration</a>).</p>
 <h2>Scripting : Lua Bindings </h2>
 <p>When compiled with <code>LUA_BINDINGS=ON</code>, the engine exposes its full public API to Lua via LuaBridge.</p>
-<p>Lua callbacks integrate with the engine event system using the same <code>EventManager::on()</code> mechanism as C++ listeners, allowing hybrid C++/Lua classes.</p>
+<p>Lua callbacks integrate with the engine event system using the same <code>QueuedEvent::subscribe()</code> and <code>SignalManager::subscribe()</code> mechanism as C++ listeners, allowing hybrid C++/Lua classes.</p>
 <h2>Async &amp; Threading </h2>
 <table class="doxtable">
 <tr>
@@ -258,13 +262,23 @@ $(document).ready(function(){initNavTree('architecture.html',''); initResizable(
 <tr>
 <td>SDL3 </td><td>Windowing on Linux </td><td>System / CMake FetchContent </td></tr>
 </table>
-</div></div><!-- contents -->
+<h2>Shared staging uploads </h2>
+<p>The generic <a class="el" href="classlysa_1_1StagingPool.html">lysa::StagingPool</a> in <code>lysa.memory</code> is available through <code><a class="el" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx()</a>.stagingPool</code>. Buffers are mapped and leased exclusively, idle buffers are cached up to <code>ContextConfiguration::stagingPoolMaxCachedBytes</code> (16 MiB by default) and <code><a class="el" href="namespacelysa.html#af9fc406e4c36ef89145184581466b1d0">trim()</a></code> clears the idle cache without affecting uploads in flight.</p>
+<p><code>acquire(size, commandList)</code> retains the buffer through Vireo's <code>CommandList::keepAlive()</code> : the next <code>begin()</code>, <code>cleanup()</code>, or destruction releases its reference (<code>AsyncQueue</code> calls <code>cleanup()</code> after its submission fence, you do not have to do it yourself) :</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span>&amp; pool = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a741dd741d1039a8438957dc434e8b747">stagingPool</a>;</div>
+<div class="line"><span class="keyword">auto</span> command = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#aa203c0a99936e17fbf3a584db1457b87">asyncQueue</a>.<a class="code" href="classlysa_1_1AsyncQueue.html#a400212d61ae277e21e9e315603351e2f">beginCommand</a>(vireo::CommandType::TRANSFER);</div>
+<div class="line"><span class="keyword">auto</span> staging = pool.acquire(byteCount, *command.commandList);</div>
+<div class="line">staging-&gt;write(data, byteCount, 0);</div>
+<div class="line">command.<a class="code" href="structlysa_1_1AsyncQueue_1_1Command.html#a4722087205edf5d9e37aa7c3f87dc773" title="Command list used to record GPU work. ">commandList</a>-&gt;copy(staging, destination, byteCount, 0, destinationOffset);</div>
+<div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#aa203c0a99936e17fbf3a584db1457b87">asyncQueue</a>.<a class="code" href="classlysa_1_1AsyncQueue.html#abdfaf712f4bf692166586b391bdae96f">endCommand</a>(command);</div>
+</div><!-- end fragment -->
+ </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.1.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="about.html">Engine overview</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

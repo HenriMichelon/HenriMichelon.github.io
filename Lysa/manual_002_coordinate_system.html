@@ -165,12 +165,12 @@ Projection matrices</h1>
 <h1><a class="anchor" id="cs_euler"></a>
 Rotations and Euler angles</h1>
 <p>Euler angles in Lysa follow <b>XYZ order</b> (pitch → yaw → roll), expressed in radians. The <a class="el" href="namespacelysa.html#ab1e0f303a1471ab8542e5cd3418863c9">lysa::euler_angles</a> function converts a quaternion:</p>
-<div class="fragment"><div class="line">lysa::quaternion q      = <a class="code" href="namespacelysa.html#ae1032080d3cbe74b573126f57cbc32f0">lysa::to_quaternion</a>(someMatrix);</div>
+<div class="fragment"><div class="line">lysa::quaternion q      = <a class="code" href="namespacelysa.html#ae34d93f8e1487001362fbd06352c5a34">lysa::to_quaternion</a>(someMatrix);</div>
 <div class="line">lysa::float3     angles = <a class="code" href="namespacelysa.html#ab1e0f303a1471ab8542e5cd3418863c9">lysa::euler_angles</a>(q); <span class="comment">// {pitch, yaw, roll} in radians</span></div>
 </div><!-- end fragment -->
 <p>Gimbal lock can occur at ±90° pitch; use quaternions directly when continuity matters (animation, smooth camera rotation):</p>
 <div class="fragment"><div class="line"><span class="comment">// Extract a quaternion from a rotation matrix</span></div>
-<div class="line">lysa::quaternion q = <a class="code" href="namespacelysa.html#ae1032080d3cbe74b573126f57cbc32f0">lysa::to_quaternion</a>(rotationMatrix);</div>
+<div class="line">lysa::quaternion q = <a class="code" href="namespacelysa.html#ae34d93f8e1487001362fbd06352c5a34">lysa::to_quaternion</a>(rotationMatrix);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Clamp the vertical camera angle using quaternion extraction</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> pivotRotation  = lysa::quaternion{lysa::float3x3{pivot-&gt;getTransform()}};</div>
@@ -240,7 +240,7 @@ Axis-Aligned Bounding Boxes</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual_000.html">Manual</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

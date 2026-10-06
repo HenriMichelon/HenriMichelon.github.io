@@ -77,10 +77,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1DeviceMemoryArray.html','
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Device-only GPU memory array.</p>
-<p>Uses a single persistent staging buffer (same capacity as the GPU buffer) shared across all concurrent write sessions. Each session tracks its own list of written regions; writes from different threads target disjoint MemoryBlocks, so they never overlap in the staging buffer.</p>
-<p>Typical per-thread usage: auto session = array.beginWrites(); // creates a session token array.write(session, bloc1, ptr1); // memcpy into staging, records region array.write(session, bloc2, ptr2); array.flush(session, commandList); // ONE copy call for all regions, destroys token</p>
-<p><a class="el" href="classlysa_1_1DeviceMemoryArray.html#a7e3692c575da2dc193398062fdcc4e66">write()</a> / <a class="el" href="classlysa_1_1DeviceMemoryArray.html#abafb0388f1146e445d46df7902774d01">flush()</a> with an unknown token assert in debug. </p>
+<div class="textblock"><p>Device-only GPU memory array. </p>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for DeviceMemoryArray:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -103,6 +100,10 @@ Public Typedefs</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac88b2730f2278521dbc7409a6efe9b3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#ac88b2730f2278521dbc7409a6efe9b3c">DeviceMemoryArray</a> (const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceSize, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceCount, vireo::BufferType bufferType, const std::string &amp;name)</td></tr>
 <tr class="separator:ac88b2730f2278521dbc7409a6efe9b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb820d2368aff860d5c05fe289caabc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#a3bb820d2368aff860d5c05fe289caabc">enableGrowth</a> (vireo::ResourceState readState)</td></tr>
+<tr class="separator:a3bb820d2368aff860d5c05fe289caabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb45ccdbc90bf0d5d23ae415abed1cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#a9cb45ccdbc90bf0d5d23ae415abed1cb">reserveAllocations</a> (std::span&lt; const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> &gt; counts)</td></tr>
+<tr class="separator:a9cb45ccdbc90bf0d5d23ae415abed1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2fc6f647aaa34cba42ad0024974bf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#ac522593d004e09fcb391afcf1853fb50">WriteSession</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#a8e2fc6f647aaa34cba42ad0024974bf6">beginWrites</a> ()</td></tr>
 <tr class="separator:a8e2fc6f647aaa34cba42ad0024974bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e3692c575da2dc193398062fdcc4e66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DeviceMemoryArray.html#a7e3692c575da2dc193398062fdcc4e66">write</a> (<a class="el" href="classlysa_1_1DeviceMemoryArray.html#ac522593d004e09fcb391afcf1853fb50">WriteSession</a> session, const <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &amp;destination, const void *source)</td></tr>
@@ -118,6 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6d74d7b020647fc7df2d9e150d63c284 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec0909092618ed7b1a8aa2fc6eec9ca inherit pub_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#adec0909092618ed7b1a8aa2fc6eec9ca">free</a> (const <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &amp;bloc)</td></tr>
 <tr class="separator:adec0909092618ed7b1a8aa2fc6eec9ca inherit pub_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af087146fad5ebe91ec207c72245d78e3 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#af087146fad5ebe91ec207c72245d78e3">retire</a> (const <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &amp;bloc, std::vector&lt; std::weak_ptr&lt; const void &gt;&gt; guards)</td></tr>
+<tr class="separator:af087146fad5ebe91ec207c72245d78e3 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c7a09622f8eae4cd5b8400637e7975 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a01c7a09622f8eae4cd5b8400637e7975">collectRetired</a> ()</td></tr>
+<tr class="separator:a01c7a09622f8eae4cd5b8400637e7975 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9f80d58c66de9ddc141026cee6c7d71 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#ac9f80d58c66de9ddc141026cee6c7d71">copyTo</a> (const vireo::CommandList &amp;commandList, const MemoryArray &amp;destination)</td></tr>
 <tr class="separator:ac9f80d58c66de9ddc141026cee6c7d71 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f138490c598e86a9a822957703b9a82 inherit pub_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a2f138490c598e86a9a822957703b9a82">getBuffer</a> () const</td></tr>
@@ -137,6 +142,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classlysa_1_1MemoryArray"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classlysa_1_1MemoryArray')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classlysa_1_1MemoryArray.html">MemoryArray</a></td></tr>
+<tr class="memitem:a2c320d41f426e8ee2655fbd3d7a7f591 inherit pro_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a2c320d41f426e8ee2655fbd3d7a7f591">freeUnlocked</a> (const <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &amp;bloc)</td></tr>
+<tr class="separator:a2c320d41f426e8ee2655fbd3d7a7f591 inherit pro_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30a3cfaafe885634fa6c0ef70a65e34a inherit pro_methods_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a30a3cfaafe885634fa6c0ef70a65e34a">MemoryArray</a> (const std::shared_ptr&lt; vireo::Vireo &gt; &amp;vireo, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceSize, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> instanceCount, vireo::BufferType bufferType, const std::string &amp;name)</td></tr>
 <tr class="separator:a30a3cfaafe885634fa6c0ef70a65e34a inherit pro_methods_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classlysa_1_1MemoryArray"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classlysa_1_1MemoryArray')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classlysa_1_1MemoryArray.html">MemoryArray</a></td></tr>
@@ -152,6 +159,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a894abb6d80fec17aff3c65e9a3f1de4b inherit pro_attribs_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1be3f7fa26e4521098de5f1ec0f865f3 inherit pro_attribs_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a1be3f7fa26e4521098de5f1ec0f865f3">mutex</a></td></tr>
 <tr class="separator:a1be3f7fa26e4521098de5f1ec0f865f3 inherit pro_attribs_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eacbe752a51c93804f2c50c03efc365 inherit pro_attribs_classlysa_1_1MemoryArray"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlysa_1_1MemoryArray_1_1RetiredBlock.html">RetiredBlock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1MemoryArray.html#a8eacbe752a51c93804f2c50c03efc365">retiredBlocks</a></td></tr>
+<tr class="separator:a8eacbe752a51c93804f2c50c03efc365 inherit pro_attribs_classlysa_1_1MemoryArray"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ac522593d004e09fcb391afcf1853fb50"></a>
@@ -292,7 +301,24 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Opens a new write session and returns its opaque handle. Multiple sessions may be open simultaneously from different threads. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3bb820d2368aff860d5c05fe289caabc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enableGrowth </td>
+          <td>(</td>
+          <td class="paramtype">vireo::ResourceState&#160;</td>
+          <td class="paramname"><em>readState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opens a new write session and returns its opaque handle. Multiple sessions may be open simultaneously from different threads.</p>
+<p>Enable geometric growth and synchronized writes on the graphics queue. </p>
 
 </div>
 </div>
@@ -319,13 +345,24 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Emits a single GPU copy covering all regions recorded in <code>session</code>, then destroys the session token. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">session</td><td>Handle returned by <a class="el" href="classlysa_1_1DeviceMemoryArray.html#a8e2fc6f647aaa34cba42ad0024974bf6">beginWrites()</a> </td></tr>
-    <tr><td class="paramname">commandList</td><td>Command list to record the copy into </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Emits GPU copies crated with crite() </p>
+
+</div>
+</div>
+<a class="anchor" id="a9cb45ccdbc90bf0d5d23ae415abed1cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reserveAllocations </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> &gt;&#160;</td>
+          <td class="paramname"><em>counts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reserve a complete batch of contiguous allocations before recording copies. </p>
 
 </div>
 </div>
@@ -358,7 +395,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copies <code>source</code> into the staging buffer at the offset described by <code>destination</code> and records the region in <code>session</code>. Thread-safe: concurrent writes to different MemoryBlocks are safe. </p>
+<p>Copies a memory block in a staging buffer for futur upload (thread-safe) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">session</td><td>Handle returned by <a class="el" href="classlysa_1_1DeviceMemoryArray.html#a8e2fc6f647aaa34cba42ad0024974bf6">beginWrites()</a> </td></tr>
+    <tr><td class="paramname">destination</td><td>GPU destination </td></tr>
+    <tr><td class="paramname">source</td><td>CPU source </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -389,7 +433,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

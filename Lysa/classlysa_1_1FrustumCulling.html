@@ -80,10 +80,12 @@ $(document).ready(function(){initNavTree('classlysa_1_1FrustumCulling.html','');
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a835b3c099ac055b78848028d1b788c65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a835b3c099ac055b78848028d1b788c65">FrustumCulling</a> (bool isForScene, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesArray, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;instancesArray, <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a> pipelineId, const vireo::Buffer &amp;input, const vireo::Buffer &amp;inputCounter, const vireo::Buffer &amp;output, const vireo::Buffer &amp;outputCounter)</td></tr>
-<tr class="separator:a835b3c099ac055b78848028d1b788c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5837399a9b03cb66a82c46d4d695f49d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a5837399a9b03cb66a82c46d4d695f49d">FrustumCulling</a> (bool isForScene, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesArray, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;instancesArray, <a class="el" href="namespacelysa.html#a0df65acfa87fbdf20b3271b2dbc31e47">pipeline_id</a> pipelineId, const vireo::Buffer &amp;input, const vireo::Buffer &amp;inputCounter, const vireo::Buffer &amp;output, const vireo::Buffer &amp;outputCounter, const vireo::Buffer &amp;commandGroups)</td></tr>
+<tr class="separator:a5837399a9b03cb66a82c46d4d695f49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76692280cb930b0c5b3ebc746e338d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a76692280cb930b0c5b3ebc746e338d5e">dispatch</a> (vireo::CommandList &amp;commandList, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> drawCommandsCount, const float4x4 &amp;view, const float4x4 &amp;projection)</td></tr>
 <tr class="separator:a76692280cb930b0c5b3ebc746e338d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107c36685b37d5b7b9ad5bc670400bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a107c36685b37d5b7b9ad5bc670400bf5">updateBuffers</a> (const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesArray, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;instancesArray, const vireo::Buffer &amp;input, const vireo::Buffer &amp;inputCounter, const vireo::Buffer &amp;output, const vireo::Buffer &amp;outputCounter, const vireo::Buffer &amp;commandGroups)</td></tr>
+<tr class="separator:a107c36685b37d5b7b9ad5bc670400bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1820f83bea5f8eb105f5fa600891a5c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#aa1820f83bea5f8eb105f5fa600891a5c">~FrustumCulling</a> () = default</td></tr>
 <tr class="separator:aa1820f83bea5f8eb105f5fa600891a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4414dc467878d4f74784697de72eebb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1FrustumCulling.html#a4414dc467878d4f74784697de72eebb5">FrustumCulling</a> (FrustumCulling &amp;) = delete</td></tr>
@@ -97,7 +99,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a53769672d4937cdc85fd17a9d3a7be6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a835b3c099ac055b78848028d1b788c65"></a>
+<a class="anchor" id="a5837399a9b03cb66a82c46d4d695f49d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -147,7 +149,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
-          <td class="paramname"><em>outputCounter</em>&#160;</td>
+          <td class="paramname"><em>outputCounter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>commandGroups</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,7 +170,7 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">meshInstancesArray</td><td>The array containing all mesh instance data. </td></tr>
     <tr><td class="paramname">instancesArray</td><td>The buffer containing the instances to cull. </td></tr>
     <tr><td class="paramname">pipelineId</td><td>The attached material pipeline id </td></tr>
-    <tr><td class="paramname">input</td><td>The buffer containing the input indirect draw commands. </td></tr>
+    <tr><td class="paramname">input</td><td>The buffer containing the input surface draw commands. </td></tr>
     <tr><td class="paramname">inputCounter</td><td>The buffer containing the counter for the total number of instances. </td></tr>
     <tr><td class="paramname">output</td><td>The buffer where the visible indirect draw commands will be written. </td></tr>
     <tr><td class="paramname">outputCounter</td><td>The buffer containing the counter for the number of visible instances. </td></tr>
@@ -282,7 +290,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Dispatches the frustum culling compute shader. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">commandList</td><td>The command list to record the dispatch command into. </td></tr>
-    <tr><td class="paramname">drawCommandsCount</td><td>The total number of draw commands to process. </td></tr>
+    <tr><td class="paramname">drawCommandsCount</td><td>The number of mesh/pipeline groups to cull. </td></tr>
     <tr><td class="paramname">view</td><td>The camera view matrix. </td></tr>
     <tr><td class="paramname">projection</td><td>The camera projection matrix. </td></tr>
   </table>
@@ -315,13 +323,70 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a107c36685b37d5b7b9ad5bc670400bf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateBuffers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td>
+          <td class="paramname"><em>meshInstancesArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td>
+          <td class="paramname"><em>instancesArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>inputCounter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>outputCounter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>commandGroups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rebind input/output buffers after growth while retaining recorded descriptor sets. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.1.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1FrustumCulling.html">FrustumCulling</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

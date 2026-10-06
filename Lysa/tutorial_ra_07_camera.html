@@ -124,9 +124,9 @@ $(document).ready(function(){initNavTree('tutorial_ra_07_camera.html',''); initR
 <tr>
 <th>Event </th><th>Handler </th><th>Role  </th></tr>
 <tr>
-<td><code>MainLoopEvent::PHYSICS_PROCESS</code> </td><td><code>onPhysicsProcess</code> </td><td>Keyboard/gamepad input and movement </td></tr>
+<td><code>MainLoopSignal::PHYSICS_PROCESS</code> </td><td><code>onPhysicsProcess</code> </td><td>Keyboard/gamepad input and movement </td></tr>
 <tr>
-<td><code>MainLoopEvent::PROCESS</code> </td><td><code>onProcess</code> </td><td>Mouse delta and final <code>camera.transform</code> push </td></tr>
+<td><code>MainLoopSignal::PROCESS</code> </td><td><code>onProcess</code> </td><td>Mouse delta and final <code>camera.transform</code> push </td></tr>
 <tr>
 <td><code>RenderingWindowEvent::INPUT</code> </td><td><code>onInput</code> </td><td>Mouse-button capture toggle </td></tr>
 <tr>
@@ -134,10 +134,10 @@ $(document).ready(function(){initNavTree('tutorial_ra_07_camera.html',''); initR
 </table>
 <p>Storing the handler IDs (<code><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">lysa::unique_id</a></code>) returned by <code>subscribe</code> is the standard pattern for event ownership. Always call <code><a class="el" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">ctx()</a>.events.unsubscribe</code> in the destructor to avoid dangling callbacks:</p>
 <div class="fragment"><div class="line">Camera::~Camera() {</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onPhysicsProcess);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onInput);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onResize);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onPhysicsProcess);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onInput);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onResize);</div>
 <div class="line">}</div>
 </div><!-- end fragment -->
 <p>Next : <a class="el" href="tutorial_ra_08_load_asset.html">Loading and displaying an asset</a> </p>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('tutorial_ra_07_camera.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_rotating_asset.html">Basic tutorial</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

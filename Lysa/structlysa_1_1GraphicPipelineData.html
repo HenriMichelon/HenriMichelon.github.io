@@ -81,8 +81,8 @@ $(document).ready(function(){initNavTree('structlysa_1_1GraphicPipelineData.html
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19cdb9f191c6515462c7aed5793668d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a19cdb9f191c6515462c7aed5793668d6">GraphicPipelineData</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> pipelineId, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesDataArray, <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;instancesArray, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> maxMeshSurfacePerPipeline)</td></tr>
-<tr class="separator:a19cdb9f191c6515462c7aed5793668d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3048a6a07f3931a4318f2a9005061c21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a3048a6a07f3931a4318f2a9005061c21">GraphicPipelineData</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> pipelineId, const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;meshInstancesDataArray, <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;instancesArray, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> initialCapacity)</td></tr>
+<tr class="separator:a3048a6a07f3931a4318f2a9005061c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af129d1bb1ed84b6c788625f51480f8d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#af129d1bb1ed84b6c788625f51480f8d6">addInstance</a> (<a class="el" href="classlysa_1_1DeviceMemoryArray.html#ac522593d004e09fcb391afcf1853fb50">DeviceMemoryArray::WriteSession</a> instancesWriteSession, const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *meshInstance, const std::unordered_map&lt; const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *, <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &gt; &amp;meshInstancesDataMemoryBlocks)</td></tr>
 <tr class="separator:af129d1bb1ed84b6c788625f51480f8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b82dff8f24432a2ccc435d7ac6930f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a87b82dff8f24432a2ccc435d7ac6930f">removeInstance</a> (const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *meshInstance)</td></tr>
@@ -106,12 +106,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a62cd07999e78eedc1dadc41fec53976d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace0765351aee829d09296b57ded27474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#ace0765351aee829d09296b57ded27474">instancesArray</a></td></tr>
 <tr class="separator:ace0765351aee829d09296b57ded27474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935a6acbf39466061d19510044d094bd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a935a6acbf39466061d19510044d094bd">meshInstancesDataArray</a></td></tr>
+<tr class="separator:a935a6acbf39466061d19510044d094bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfce1de5cc4763d506f898baeb6fd3f"><td class="memItemLeft" align="right" valign="top">vireo::ResourceState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a7bfce1de5cc4763d506f898baeb6fd3f">activeInstancesState</a> {vireo::ResourceState::UNDEFINED}</td></tr>
+<tr class="separator:a7bfce1de5cc4763d506f898baeb6fd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29e06dbbb66a37be9c22b8f236ef150"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *, <a class="el" href="structlysa_1_1MemoryBlock.html">MemoryBlock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#af29e06dbbb66a37be9c22b8f236ef150">instancesMemoryBlocks</a></td></tr>
 <tr class="separator:af29e06dbbb66a37be9c22b8f236ef150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a135befc1fe4e26cfc299adb95c1be13d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a135befc1fe4e26cfc299adb95c1be13d">activeInstancesCount</a> {0}</td></tr>
 <tr class="separator:a135befc1fe4e26cfc299adb95c1be13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35bc4cd0fe918170d8448ba3653808a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#ac35bc4cd0fe918170d8448ba3653808a">activeInstances</a></td></tr>
-<tr class="separator:ac35bc4cd0fe918170d8448ba3653808a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19eadb9fcf51009cb9dda45968aeac3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlysa_1_1InstanceGroupData.html">InstanceGroupData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#af19eadb9fcf51009cb9dda45968aeac3">activeInstances</a></td></tr>
+<tr class="separator:af19eadb9fcf51009cb9dda45968aeac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa766cead45ce75aca0636557169c6bda"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; const <a class="el" href="classlysa_1_1MeshInstance.html">MeshInstance</a> *, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#aa766cead45ce75aca0636557169c6bda">instanceActiveIndex</a></td></tr>
 <tr class="separator:aa766cead45ce75aca0636557169c6bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a935e61e5fd89ef21acc8a7ab834fdfa5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a935e61e5fd89ef21acc8a7ab834fdfa5">activeInstancesBuffer</a></td></tr>
@@ -122,6 +126,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1e1c767ed1f2b1a42316fa94f0fbc88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98978277f18a9c8a22a2b50ca200d84a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a98978277f18a9c8a22a2b50ca200d84a">drawCommandsBuffer</a></td></tr>
 <tr class="separator:a98978277f18a9c8a22a2b50ca200d84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace55a11037a12b0e9ccd1c77c0fd355a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#ace55a11037a12b0e9ccd1c77c0fd355a">drawCommandGroupsBuffer</a></td></tr>
+<tr class="separator:ace55a11037a12b0e9ccd1c77c0fd355a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54b572f4993f7db6bde1b3282e0b31b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#ad54b572f4993f7db6bde1b3282e0b31b">drawCommandsCountBuffer</a></td></tr>
 <tr class="separator:ad54b572f4993f7db6bde1b3282e0b31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431b0c0c0f5f7ec1b9f5ddbcfaf4cb0b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; vireo::Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a431b0c0c0f5f7ec1b9f5ddbcfaf4cb0b">culledDrawCommandsBuffer</a></td></tr>
@@ -134,7 +140,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a75bc4bb2d2192b7f22b124b3deced8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a19cdb9f191c6515462c7aed5793668d6"></a>
+<a class="anchor" id="a3048a6a07f3931a4318f2a9005061c21"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -159,8 +165,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>maxMeshSurfacePerPipeline</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>initialCapacity</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,9 +179,9 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a8ff5781cccdc145ec2baf241d05b2eaa">pipelineId</a></td><td>Identifier of the pipeline. </td></tr>
-    <tr><td class="paramname">meshInstancesDataArray</td><td>Array storing per-mesh-instance data. </td></tr>
+    <tr><td class="paramname"><a class="el" href="structlysa_1_1GraphicPipelineData.html#a935a6acbf39466061d19510044d094bd">meshInstancesDataArray</a></td><td>Array storing per-mesh-instance data. </td></tr>
     <tr><td class="paramname"><a class="el" href="structlysa_1_1GraphicPipelineData.html#ace0765351aee829d09296b57ded27474">instancesArray</a></td><td></td></tr>
-    <tr><td class="paramname">maxMeshSurfacePerPipeline</td><td>Maximum number of mesh surfaces supported by this pipeline. </td></tr>
+    <tr><td class="paramname">initialCapacity</td><td>Initial group and draw capacities, grown independently on demand. </td></tr>
   </table>
   </dd>
 </dl>
@@ -355,16 +361,16 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac35bc4cd0fe918170d8448ba3653808a"></a>
+<a class="anchor" id="af19eadb9fcf51009cb9dda45968aeac3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&gt; activeInstances</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structlysa_1_1InstanceGroupData.html">InstanceGroupData</a>&gt; activeInstances</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>CPU-side compact list of active instanceIndex values. <br/>
+<p>CPU-side compact list of mesh/pipeline surface groups. <br/>
  </p>
 
 </div>
@@ -391,7 +397,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Number of entries in <a class="el" href="structlysa_1_1GraphicPipelineData.html#ac35bc4cd0fe918170d8448ba3653808a">activeInstances</a> </p>
+<p>Number of entries in <a class="el" href="structlysa_1_1GraphicPipelineData.html#af19eadb9fcf51009cb9dda45968aeac3">activeInstances</a> </p>
 
 </div>
 </div>
@@ -405,6 +411,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Staging buffer for <a class="el" href="structlysa_1_1GraphicPipelineData.html#a935e61e5fd89ef21acc8a7ab834fdfa5">activeInstancesBuffer</a> uploads </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bfce1de5cc4763d506f898baeb6fd3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vireo::ResourceState activeInstancesState {vireo::ResourceState::UNDEFINED}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -434,6 +452,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ace55a11037a12b0e9ccd1c77c0fd355a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;vireo::Buffer&gt; drawCommandGroupsBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>GPU ranges of commands belonging to each mesh/pipeline group. </p>
+
+</div>
+</div>
 <a class="anchor" id="a98978277f18a9c8a22a2b50ca200d84a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -443,7 +474,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>GPU buffer storing indirect draw commands. </p>
+<p>GPU buffer storing generated surface draw commands. </p>
 
 </div>
 </div>
@@ -507,7 +538,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Mapping of meshes instances to the instanceIndex stored in <a class="el" href="structlysa_1_1GraphicPipelineData.html#ac35bc4cd0fe918170d8448ba3653808a">activeInstances</a>[] </p>
+<p>Mapping of meshes instances to the instanceIndex stored in <a class="el" href="structlysa_1_1GraphicPipelineData.html#af19eadb9fcf51009cb9dda45968aeac3">activeInstances</a>[] </p>
 
 </div>
 </div>
@@ -563,6 +594,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a935a6acbf39466061d19510044d094bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classlysa_1_1DeviceMemoryArray.html">DeviceMemoryArray</a>&amp; meshInstancesDataArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Persistent per-mesh data array. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8ff5781cccdc145ec2baf241d05b2eaa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -595,7 +639,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="structlysa_1_1GraphicPipelineData.html">GraphicPipelineData</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

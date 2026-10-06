@@ -77,11 +77,12 @@ $(document).ready(function(){initNavTree('tutorial_ra_06_scene_tree.html',''); i
 </ul>
 <p>The renderer reads from the current frame's <code>SceneFrameData</code> to build the G-buffer and lighting passes; it never touches your <code>SceneInstance</code> tree directly.</p>
 <h2><code><a class="el" href="structlysa_1_1SceneConfiguration.html">lysa::SceneConfiguration</a></code> </h2>
-<p><code>SceneTree</code> constructs its base <code><a class="el" href="classlysa_1_1Scene.html">lysa::Scene</a></code> with a default <code><a class="el" href="structlysa_1_1SceneConfiguration.html">lysa::SceneConfiguration</a></code>. For larger scenes you can tune the limits before construction:</p>
+<p><code>SceneTree</code> constructs its base <code><a class="el" href="classlysa_1_1Scene.html">lysa::Scene</a></code> with a default <code><a class="el" href="structlysa_1_1SceneConfiguration.html">lysa::SceneConfiguration</a></code>. For larger scenes you can tune the initial capacities before construction:</p>
 <div class="fragment"><div class="line"><a class="code" href="structlysa_1_1SceneConfiguration.html">lysa::SceneConfiguration</a> sceneConfiguration {</div>
-<div class="line">    .<a class="code" href="structlysa_1_1SceneConfiguration.html#abdbcf48d0e16f686f6e0ee4738bf59d8" title="Maximum number of lights per scene. ">maxLights</a>            = 20,</div>
-<div class="line">    .maxMeshInstances     = 10000,</div>
-<div class="line">    .maxPipelines         = 50,</div>
+<div class="line">    .<a class="code" href="structlysa_1_1SceneConfiguration.html#ac5c1dc9ceb8d5e76ad835bcb8f52faf3" title="Initial number of light slots per frame; grows on demand. ">initialLights</a>                     = 20,</div>
+<div class="line">    .initialMeshInstances              = 10000,</div>
+<div class="line">    .initialSurfaceInstances           = 40000,</div>
+<div class="line">    .initialSurfaceInstancesPerPipeline = 10000,</div>
 <div class="line">};</div>
 <div class="line">SceneTree::SceneTree(Camera&amp; <a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>)</div>
 <div class="line">    : Scene(sceneConfiguration), <a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>(<a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>) {}</div>
@@ -90,11 +91,13 @@ $(document).ready(function(){initNavTree('tutorial_ra_06_scene_tree.html',''); i
 <tr>
 <th>Field </th><th>Default </th><th>Meaning  </th></tr>
 <tr>
-<td><code>maxLights</code> </td><td>10 </td><td>Maximum lights active in the scene at one time </td></tr>
+<td><code>initialLights</code> </td><td>16 </td><td>Starting light buffer capacity per frame </td></tr>
 <tr>
-<td><code>maxMeshInstances</code> </td><td>5000 </td><td>GPU buffer capacity for instance data </td></tr>
+<td><code>initialMeshInstances</code> </td><td>128 </td><td>Starting persistent mesh-instance capacity per frame </td></tr>
 <tr>
-<td><code>maxPipelines</code> </td><td>25 </td><td>Maximum distinct graphic pipeline objects </td></tr>
+<td><code>initialSurfaceInstances</code> </td><td>512 </td><td>Starting shared surface-instance capacity per frame </td></tr>
+<tr>
+<td><code>initialSurfaceInstancesPerPipeline</code> </td><td>256 </td><td>Starting group/draw capacities for each pipeline </td></tr>
 <tr>
 <td><code>asyncObjectUpdatesPerFrame</code> </td><td>50 </td><td>Instances updated per frame in async mode </td></tr>
 </table>
@@ -157,7 +160,7 @@ $(document).ready(function(){initNavTree('tutorial_ra_06_scene_tree.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_rotating_asset.html">Basic tutorial</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

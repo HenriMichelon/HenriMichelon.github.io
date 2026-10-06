@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('tutorial_ra_11_main.html',''); initRes
 <h2>Event subscriptions </h2>
 <p>Four events are subscribed in <code>Application::run</code>:</p>
 <p>INPUT : forwards <code><a class="el" href="structlysa_1_1InputEvent.html">lysa::InputEvent</a></code> objects from the window to the scene. The camera also handles input internally through its own subscription, so both the camera and any scene-level input handling receive the same events.</p>
-<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
 <div class="line">    <a class="code" href="structlysa_1_1RenderingWindowEvent.html#a9750834ba5ad1377d3f6c9e681e33572" title="User input. ">lysa::RenderingWindowEvent::INPUT</a>, window.id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
 <div class="line">        const auto&amp; inputEvent = std::any_cast&lt;const lysa::InputEvent&amp;&gt;(evt.payload);</div>
@@ -108,29 +108,29 @@ $(document).ready(function(){initNavTree('tutorial_ra_11_main.html',''); initRes
 <div class="line">    });</div>
 </div><!-- end fragment -->
 <p>RESIZED : resets the view's viewport and scissors to the new extent. Passing empty <code>viewport</code> and <code>scissors</code> structs tells the renderer to fill the entire render target. <code>updateView</code> applies the change without re-registering the view.</p>
-<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
 <div class="line">    <a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>, window.getRenderTarget().id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
 <div class="line">        view.viewport = {};</div>
 <div class="line">        view.scissors = {};</div>
 <div class="line">        window.getRenderTarget().updateView(view);</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> extent = std::any_cast&lt;const vireo::Extent&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> extent = std::any_cast&lt;const vireo::Extent&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">        <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>-&gt;onResize(extent);</div>
 <div class="line">    });</div>
 </div><!-- end fragment -->
-<p>PHYSICS_PROCESS : a fixed-timestep tick for physics simulation. Unused in this sample but wired for completeness; any derived scene that needs physics overrides <code>onPhysicsProcess</code>. The <code>delta</code> here is always the configured fixed timestep, not the real frame time.</p>
-<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
-<div class="line">    <a class="code" href="structlysa_1_1MainLoopEvent.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopEvent::PHYSICS_PROCESS</a>,</div>
-<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<p>PHYSICS_PROCESS : a fixed-timestep tick for physics simulation. Unused in this sample but wired for completeness. Any derived scene that needs physics overrides <code>onPhysicsProcess</code>. The <code>delta</code> here is always the configured fixed timestep, not the real frame time.</p>
+<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(</div>
+<div class="line">    <a class="code" href="structlysa_1_1MainLoopSignal.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopSignal::PHYSICS_PROCESS</a>,</div>
+<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; evt) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">        <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>-&gt;onPhysicsProcess(delta);</div>
 <div class="line">    });</div>
 </div><!-- end fragment -->
 <p>PROCESS : the main game-loop tick. The scene's <code>onProcess</code> is called first (rotating the asset and flushing transforms), then <code>render()</code> presents the frame.</p>
-<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(</div>
-<div class="line">    <a class="code" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a>,</div>
-<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(</div>
+<div class="line">    <a class="code" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a>,</div>
+<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; evt) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">        <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>-&gt;onProcess(delta);</div>
 <div class="line">        window.getRenderTarget().render();</div>
 <div class="line">    });</div>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('tutorial_ra_11_main.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_rotating_asset.html">Basic tutorial</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

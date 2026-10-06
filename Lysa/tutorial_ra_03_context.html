@@ -101,11 +101,11 @@ $(document).ready(function(){initNavTree('tutorial_ra_03_context.html',''); init
 <div class="line">    .vertices = 5000 * 5 * 1000,  <span class="comment">// meshes * surfacesPerMesh * verticesPerSurface</span></div>
 <div class="line">};</div>
 </div><!-- end fragment -->
-<dl class="section note"><dt>Note</dt><dd>Refers to <a class="el" href="manual_005_resource_constraints.html">Resource Constraints</a> for more explanations.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Refers to <a class="el" href="manual_005_resources_management.html">Resources Management</a> for more explanations.</dd></dl>
 <h2>Accessing the context at runtime </h2>
 <p>After <code><a class="el" href="classlysa_1_1Lysa.html">lysa::Lysa</a></code> is constructed the singleton is reachable everywhere via <code><a class="el" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx()</a></code>. Common members you will use throughout an application:</p>
 <div class="fragment"><div class="line"><span class="comment">// Subscribe to a global engine event</span></div>
-<div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a>, [](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; e) { ... });</div>
+<div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a>, [](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; e) { ... });</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Open a file through the virtual filesystem</span></div>
 <div class="line"><span class="keyword">auto</span> stream = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#ac46f98d54c6e8f4c87ba414636b92705">fs</a>.<a class="code" href="classlysa_1_1VirtualFS.html#aa27cba86056f71895ad2d0d884874900">openReadStream</a>(<span class="stringliteral">&quot;app://res/config.json&quot;</span>);</div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('tutorial_ra_03_context.html',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li><li class="navelem"><a class="el" href="gs_020_rotating_asset.html">Basic tutorial</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

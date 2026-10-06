@@ -115,11 +115,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6848ee2eed6c21ed8f22de4075c92fc8"><td class="memTemplParams" colspan="2">template&lt;typename T_OBJECT , typename T_MESH_INSTANCE , typename T_ANIMATION_PLAYER &gt; </td></tr>
 <tr class="memitem:a6848ee2eed6c21ed8f22de4075c92fc8"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T_OBJECT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#a6848ee2eed6c21ed8f22de4075c92fc8">load</a> (const std::string &amp;fileURI, const std::string &amp;rootName=&quot;Root&quot;)</td></tr>
 <tr class="separator:a6848ee2eed6c21ed8f22de4075c92fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9acf8891d97d93d45eae96169bcbb90"><td class="memTemplParams" colspan="2">template&lt;typename T_OBJECT , typename T_MESH_INSTANCE , typename T_ANIMATION_PLAYER &gt; </td></tr>
+<tr class="memitem:ae9acf8891d97d93d45eae96169bcbb90"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T_OBJECT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#ae9acf8891d97d93d45eae96169bcbb90">load</a> (const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;fs, const std::string &amp;fileURI, const std::string &amp;rootName=&quot;Root&quot;)</td></tr>
+<tr class="separator:ae9acf8891d97d93d45eae96169bcbb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3563e16018995584f2ea64adeca9d8c1"><td class="memTemplParams" colspan="2">template&lt;typename T_OBJECT , typename T_MESH_INSTANCE , typename T_ANIMATION_PLAYER &gt; </td></tr>
 <tr class="memitem:a3563e16018995584f2ea64adeca9d8c1"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T_OBJECT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#a3563e16018995584f2ea64adeca9d8c1">load</a> (std::pair&lt; std::shared_ptr&lt; std::streambuf &gt;, std::shared_ptr&lt; std::istream &gt;&gt; stream, const std::string &amp;rootName=&quot;Root&quot;)</td></tr>
 <tr class="separator:a3563e16018995584f2ea64adeca9d8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f7a36fe15dcb630fdf9c3ab20548329"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#a8f7a36fe15dcb630fdf9c3ab20548329">loadImages</a> (const std::string &amp;fileURI)</td></tr>
 <tr class="separator:a8f7a36fe15dcb630fdf9c3ab20548329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3d3f380a87166ff9ec0d4ea5c45626"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#a4f3d3f380a87166ff9ec0d4ea5c45626">loadImages</a> (const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;fs, const std::string &amp;fileURI)</td></tr>
+<tr class="separator:a4f3d3f380a87166ff9ec0d4ea5c45626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee312895234aa24f3b96966b019cc475"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1AssetsPack.html#aee312895234aa24f3b96966b019cc475">loadImages</a> (std::pair&lt; std::shared_ptr&lt; std::streambuf &gt;, std::shared_ptr&lt; std::istream &gt;&gt; stream)</td></tr>
 <tr class="separator:aee312895234aa24f3b96966b019cc475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -207,6 +212,63 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae9acf8891d97d93d45eae96169bcbb90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt;T_OBJECT&gt; load </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileURI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rootName</em> = <code>&quot;Root&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads a scene graph from an assets pack file of a given virtual file system. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T_OBJECT</td><td>Object instance base type (e.g. <code>lysa::nodes::Node</code>). </td></tr>
+    <tr><td class="paramname">T_MESH_INSTANCE</td><td><a class="el" href="classlysa_1_1Mesh.html">Mesh</a> instance type. </td></tr>
+    <tr><td class="paramname">T_ANIMATION_PLAYER</td><td><a class="el" href="classlysa_1_1Animation.html">Animation</a> player type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>Virtual file system resolving the URI. </td></tr>
+    <tr><td class="paramname">fileURI</td><td><a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> URI of the <code>.assets</code> file. </td></tr>
+    <tr><td class="paramname">rootName</td><td>Name assigned to the synthetic root node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer to the root node of the loaded scene or nullptr if no scene objects (for images only assets packs) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3563e16018995584f2ea64adeca9d8c1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -280,6 +342,48 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Loads only the images from an assets pack file. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">fileURI</td><td><a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> URI of the <code>.assets</code> file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of loaded image IDs, indexed by their order in the file. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4f3d3f380a87166ff9ec0d4ea5c45626"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt;<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&gt; loadImages </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileURI</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads only the images from an assets pack file of a given virtual file system. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>Virtual file system resolving the URI. </td></tr>
     <tr><td class="paramname">fileURI</td><td><a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> URI of the <code>.assets</code> file. </td></tr>
   </table>
   </dd>
@@ -386,7 +490,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1AssetsPack.html">AssetsPack</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

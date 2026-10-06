@@ -69,6 +69,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1SceneFrameData.html','');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classlysa_1_1SceneFrameData-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -88,8 +89,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af96f83196d589696846b8db7748b19e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#af96f83196d589696846b8db7748b19e6">SceneFrameData</a> (<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> maxLights, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> maxMeshInstancesPerScene, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> maxMeshSurfacePerPipeline, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> maxPipelines)</td></tr>
-<tr class="separator:af96f83196d589696846b8db7748b19e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bdb1a5472fbbfb9a9a3dc8281c400b4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a9bdb1a5472fbbfb9a9a3dc8281c400b4">getGlobalResources</a> () const</td></tr>
+<tr class="separator:a9bdb1a5472fbbfb9a9a3dc8281c400b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddce9008858eec02b320052a34bfb6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#abddce9008858eec02b320052a34bfb6d">SceneFrameData</a> (<a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> initialLights, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> initialMeshInstances, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> initialSurfaceInstances, <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> initialSurfaceInstancesPerPipeline)</td></tr>
+<tr class="separator:abddce9008858eec02b320052a34bfb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f4d6e07b1366e58b7cf1e4d664d433"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#aa0f4d6e07b1366e58b7cf1e4d664d433">waitForReuse</a> (const std::shared_ptr&lt; vireo::Fence &gt; &amp;acquiredFence)</td></tr>
+<tr class="separator:aa0f4d6e07b1366e58b7cf1e4d664d433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c4e654bc56beb237f36a317b3f2905"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a23c4e654bc56beb237f36a317b3f2905">trackSubmission</a> (const std::shared_ptr&lt; vireo::Fence &gt; &amp;fence)</td></tr>
+<tr class="separator:a23c4e654bc56beb237f36a317b3f2905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9740a4410de47a88108cd64da43a763e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a9740a4410de47a88108cd64da43a763e">retainResources</a> (const vireo::CommandList &amp;commandList) const</td></tr>
+<tr class="separator:a9740a4410de47a88108cd64da43a763e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28155aa7eae6a3a70d35e4f8c0f4bb18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a28155aa7eae6a3a70d35e4f8c0f4bb18">~SceneFrameData</a> ()</td></tr>
 <tr class="separator:a28155aa7eae6a3a70d35e4f8c0f4bb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2cc75cd5e388d73958a39027c5a860"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a6d2cc75cd5e388d73958a39027c5a860">update</a> (vireo::CommandList &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera, const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;config, const vireo::Extent &amp;extent, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
@@ -138,6 +147,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3ecf44b8fc165f4acbd91cbb4b60696"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#ae3ecf44b8fc165f4acbd91cbb4b60696">destroyDescriptorLayouts</a> ()</td></tr>
 <tr class="separator:ae3ecf44b8fc165f4acbd91cbb4b60696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a28c0c3a9f7fdc42cfbbb989d08246075"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a28c0c3a9f7fdc42cfbbb989d08246075">globalResources</a></td></tr>
+<tr class="separator:a28c0c3a9f7fdc42cfbbb989d08246075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a5710e60228b6dcab8656bef7f09121d5"><td class="memItemLeft" align="right" valign="top">static constexpr vireo::DescriptorIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1SceneFrameData.html#a5710e60228b6dcab8656bef7f09121d5">BINDING_SCENE</a> {0}</td></tr>
@@ -160,33 +174,33 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aa120a3f47b350f5ceeac713baeb7e359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af96f83196d589696846b8db7748b19e6"></a>
+<a class="anchor" id="abddce9008858eec02b320052a34bfb6d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">SceneFrameData </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>maxLights</em>, </td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>initialLights</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>maxMeshInstancesPerScene</em>, </td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>initialMeshInstances</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>maxMeshSurfacePerPipeline</em>, </td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>initialSurfaceInstances</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>maxPipelines</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
+          <td class="paramname"><em>initialSurfaceInstancesPerPipeline</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -198,10 +212,10 @@ Static Public Attributes</h2></td></tr>
 <p>Constructs a new <a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a> object.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">maxLights</td><td>Maximum number of lights supported. </td></tr>
-    <tr><td class="paramname">maxMeshInstancesPerScene</td><td>Maximum number of mesh instances per scene. </td></tr>
-    <tr><td class="paramname">maxMeshSurfacePerPipeline</td><td>Maximum number of mesh surfaces per pipeline. </td></tr>
-    <tr><td class="paramname">maxPipelines</td><td>Maximum number of graphic pipeline per scene </td></tr>
+    <tr><td class="paramname">initialLights</td><td>Initial light buffer capacity. </td></tr>
+    <tr><td class="paramname">initialMeshInstances</td><td>Initial persistent mesh-instance capacity. </td></tr>
+    <tr><td class="paramname">initialSurfaceInstances</td><td>Initial persistent surface-instance capacity. </td></tr>
+    <tr><td class="paramname">initialSurfaceInstancesPerPipeline</td><td>Initial group/draw capacities per pipeline. </td></tr>
   </table>
   </dd>
 </dl>
@@ -627,6 +641,30 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9bdb1a5472fbbfb9a9a3dc8281c400b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a>&gt; getGlobalResources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Snapshot for custom passes and built-in bindings during frame recording. </p>
+
+</div>
+</div>
 <a class="anchor" id="a239be8345eeb316571c97ee323a9e7ed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -762,6 +800,40 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9740a4410de47a88108cd64da43a763e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void retainResources </td>
+          <td>(</td>
+          <td class="paramtype">const vireo::CommandList &amp;&#160;</td>
+          <td class="paramname"><em>commandList</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retain this slot's current bindings and buffers in an outstanding command list. </p>
+
+</div>
+</div>
+<a class="anchor" id="a23c4e654bc56beb237f36a317b3f2905"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trackSubmission </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Fence &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Record the fence covering this slot's submitted graphics work. </p>
+
+</div>
+</div>
 <a class="anchor" id="a6d2cc75cd5e388d73958a39027c5a860"></a>
 <div class="memitem">
 <div class="memproto">
@@ -815,6 +887,23 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0f4d6e07b1366e58b7cf1e4d664d433"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void waitForReuse </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Fence &gt; &amp;&#160;</td>
+          <td class="paramname"><em>acquiredFence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait for other render targets using this slot. The acquired fence has already completed and may have been reset by SwapChain::acquire(). </p>
 
 </div>
 </div>
@@ -945,6 +1034,19 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a28c0c3a9f7fdc42cfbbb989d08246075"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a>&gt; globalResources</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Global resources snapshot. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa120a3f47b350f5ceeac713baeb7e359"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1019,7 +1121,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1SceneFrameData.html">SceneFrameData</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

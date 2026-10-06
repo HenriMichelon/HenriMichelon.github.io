@@ -143,13 +143,13 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    MainWindow() : RenderingWindow(renderingWindowConfiguration) {</div>
 <div class="line">        <span class="comment">// Show the window once the GPU is ready and update the title bar</span></div>
-<div class="line">        <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#a77cd7e6193bac4c8f0923fe050ee07a5" title="The window is ready to be shown. ">lysa::RenderingWindowEvent::READY</a>, <span class="keywordtype">id</span>,</div>
+<div class="line">        <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#a77cd7e6193bac4c8f0923fe050ee07a5" title="The window is ready to be shown. ">lysa::RenderingWindowEvent::READY</a>, <span class="keywordtype">id</span>,</div>
 <div class="line">            [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp;) {</div>
 <div class="line">                <a class="code" href="classlysa_1_1RenderingWindow.html#a02da8cd7b53bec29d746a9324ca090e8">setTitle</a>(<span class="stringliteral">&quot;MyGame&quot;</span>);</div>
 <div class="line">                <a class="code" href="classlysa_1_1RenderingWindow.html#aa73509cd21d8b95c712f5cd2de77933e">show</a>();</div>
 <div class="line">            });</div>
 <div class="line">        <span class="comment">// Quit the engine when the OS closes the window</span></div>
-<div class="line">        <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#ab431a9d7e66da10edeb29d376c7fb9d8" title="The window is about to close. ">lysa::RenderingWindowEvent::CLOSING</a>, <span class="keywordtype">id</span>,</div>
+<div class="line">        <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#ab431a9d7e66da10edeb29d376c7fb9d8" title="The window is about to close. ">lysa::RenderingWindowEvent::CLOSING</a>, <span class="keywordtype">id</span>,</div>
 <div class="line">            [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp;) {</div>
 <div class="line">                <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#add93a36b81b5f541d2f3237a7f363a7e">exit</a> = <span class="keyword">true</span>;</div>
 <div class="line">            });</div>
@@ -172,16 +172,16 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div class="fragment"><div class="line"><span class="keyword">auto</span> view = <a class="code" href="structlysa_1_1RenderView.html">lysa::RenderView</a>(<a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>, <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>);</div>
 <div class="line">window.getRenderTarget().addView(view);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> onPhysicsProcessEventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopEvent.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopEvent::PHYSICS_PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<div class="line"><span class="keyword">auto</span> onPhysicsProcessEventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopSignal.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopSignal::PHYSICS_PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; evt) {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">    <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>.onPhysicsProcess(delta);</div>
 <div class="line">});</div>
-<div class="line"><span class="keyword">auto</span> onProcessEventId =<a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<div class="line"><span class="keyword">auto</span> onProcessEventId =<a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; evt) {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">    <a class="code" href="file__Scene_8ixx.html#a49a2a351c0f528aa0f320f1e9dd6e409">scene</a>.onProcess(delta);</div>
 <div class="line">    window.getRenderTarget().render(); <span class="comment">// submit the frame</span></div>
 <div class="line">});</div>
-<div class="line"><span class="keyword">auto</span> onResizedEventId =<a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
+<div class="line"><span class="keyword">auto</span> onResizedEventId =<a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
 <div class="line">    window.getRenderTarget().id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
 <div class="line">        view.viewport = {};</div>
@@ -312,7 +312,7 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div class="line">};</div>
 <div class="line">addLight(spot);</div>
 </div><!-- end fragment -->
-<p>The maximum number of simultaneous lights per scene is set through <code>SceneConfiguration::maxLights</code>.</p>
+<p>The light buffer grows with the scene. Its starting capacity is configured through <code>SceneConfiguration::initialLights</code>.</p>
 <hr/>
 <h1><a class="anchor" id="howto_assets"></a>
 7. Loading assets packs</h1>
@@ -369,7 +369,7 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div class="line"><a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>.transform = lysa::float4x4::translation(0.0f, 1.8f, 8.0f);</div>
 </div><!-- end fragment -->
 <p>Rebuild the projection matrix when the window is resized:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> onResisedEventId = = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> onResisedEventId = = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
 <div class="line">    window.getRenderTarget().id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp;) {</div>
 <div class="line">        <a class="code" href="file__RenderView_8ixx.html#ae0d1c426ce050a0ac24648f85fafca73">camera</a>.projection = <a class="code" href="namespacelysa.html#adee1c6c6fcaf741526b5cf7a77b0824a">lysa::perspective</a>(</div>
@@ -378,7 +378,7 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 </div><!-- end fragment -->
 <p>For a fly camera with mouse look, keyboard movement, and gamepad support subscribes to <code>PHYSICS_PROCESS</code> for movement and <code>PROCESS</code> for mouse-delta look.</p>
 <div class="fragment"><div class="line"><span class="comment">// Subscribe in PROCESS for mouse look</span></div>
-<div class="line"><span class="keyword">auto</span> eventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp;) {</div>
+<div class="line"><span class="keyword">auto</span> eventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a>, [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp;) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> mousePos = window.getMousePosition();</div>
 <div class="line">    <span class="keyword">auto</span> offset = (lastMousePos - mousePos) * mouseSensitivity;</div>
 <div class="line">    rotate(offset.y * invertY, offset.x); <span class="comment">// rotate pivot (X) and attachment (Y)</span></div>
@@ -389,7 +389,7 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <h1><a class="anchor" id="howto_input"></a>
 9. Handling input</h1>
 <p>Input events arrive through the event system. Subscribe to <code>RenderingWindowEvent::INPUT</code> on your window's <code>id</code>:</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> eventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#a9750834ba5ad1377d3f6c9e681e33572" title="User input. ">lysa::RenderingWindowEvent::INPUT</a>, window.id,</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> eventId = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderingWindowEvent.html#a9750834ba5ad1377d3f6c9e681e33572" title="User input. ">lysa::RenderingWindowEvent::INPUT</a>, window.id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
 <div class="line">        const auto&amp; inputEvent = std::any_cast&lt;const lysa::InputEvent&amp;&gt;(evt.payload);</div>
 <div class="line">        scene.onInput(inputEvent);</div>
@@ -436,14 +436,14 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 10. The event system</h1>
 <p>Subscribe to any event by type (and optional source <code>id</code>):</p>
 <div class="fragment"><div class="line"><span class="comment">// Global event (no source filter)</span></div>
-<div class="line"><span class="keyword">auto</span> onProcess = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a>,</div>
-<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
+<div class="line"><span class="keyword">auto</span> onProcess = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c">signals</a>.<a class="code" href="classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad">subscribe</a>(<a class="code" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a>,</div>
+<div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Signal.html">lysa::Signal</a>&amp; evt) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> delta = std::any_cast&lt;double&gt;(evt.<a class="code" href="structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336">payload</a>);</div>
 <div class="line">        update(delta);</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Source-filtered event</span></div>
-<div class="line"><span class="keyword">auto</span> onResize = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
+<div class="line"><span class="keyword">auto</span> onResize = <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(<a class="code" href="structlysa_1_1RenderTargetEvent.html#ac17bd13abbf0bcaf2281b6a13bdea569">lysa::RenderTargetEvent::RESIZED</a>,</div>
 <div class="line">    renderTarget.id,</div>
 <div class="line">    [&amp;](<span class="keyword">const</span> <a class="code" href="structlysa_1_1Event.html">lysa::Event</a>&amp; evt) {</div>
 <div class="line">        const auto extent = std::any_cast&lt;vireo::Extent&gt;(evt.payload);</div>
@@ -451,14 +451,14 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Unsubscribe when the listener is destroyed</span></div>
-<div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
+<div class="line"><a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
 </div><!-- end fragment -->
 <p>Always store and unsubscribe event from objects with a shorter lifetime than the engine (e.g., in destructors of camera or scene helpers):</p>
 <div class="fragment"><div class="line">Camera::~Camera() {</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onPhysicsProcess);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onInput);</div>
-<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onResize);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onProcess);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onPhysicsProcess);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onInput);</div>
+<div class="line">    <a class="code" href="namespacelysa.html#a67455c124fe639aa3b9b6b1ab29b1a68">lysa::ctx</a>().<a class="code" href="structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc">events</a>.<a class="code" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(onResize);</div>
 <div class="line">}</div>
 </div><!-- end fragment -->
 <hr/>
@@ -600,7 +600,7 @@ $(document).ready(function(){initNavTree('manual_003_howto.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="manual_000.html">Manual</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

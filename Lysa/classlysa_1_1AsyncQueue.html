@@ -76,14 +76,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1AsyncQueue.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A lightweight background submission system used to build and submit</p>
-<p>GPU command lists asynchronously. It owns a worker thread that drains a queue of recorded commands and submits them to the appropriate Vireo submit queue (transfer or graphic), allowing asset uploads and simple GPU work to happen without stalling the main thread.</p>
-<p>Typical usage:</p><ul>
-<li>Call <a class="el" href="classlysa_1_1AsyncQueue.html#a400212d61ae277e21e9e315603351e2f">beginCommand()</a> to acquire a command list for a specific CommandType.</li>
-<li>Record GPU work (e.g., copies, barriers) on the returned command list.</li>
-<li>Call <a class="el" href="classlysa_1_1AsyncQueue.html#abdfaf712f4bf692166586b391bdae96f">endCommand()</a> to enqueue the work; optionally set immediate=true to trigger an immediate submit when appropriate.</li>
-<li>The internal worker thread will batch and submit pending commands. </li>
-</ul>
+<div class="textblock"><p>A lightweight background submission system used to build and submit GPU command lists asynchronously. It owns a worker thread that drains a queue of recorded commands and submits them to the appropriate Vireo submit queue (transfer or graphic), allowing asset uploads and simple GPU work to happen without stalling the main thread. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -246,7 +239,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create a buffer that is tracked alongside the provided command so the resource remains alive until the GPU work referencing it has been submitted. Useful for transient staging buffers. </p>
+<p>Create a buffer that is tracked alongside the provided command so the resource remains alive until the GPU work referencing it has been completed. </p>
 
 </div>
 </div>
@@ -313,7 +306,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>wait for all the submit queue to finish they work </p>
+<p>Submit all queued commands and wait for GPU work to finish. </p>
 
 </div>
 </div>
@@ -323,7 +316,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1AsyncQueue.html">AsyncQueue</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

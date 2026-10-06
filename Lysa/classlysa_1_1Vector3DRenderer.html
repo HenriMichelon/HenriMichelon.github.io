@@ -103,8 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a696f8bdf01ba925f2d14ebbf209b7f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0f92b4df331c6309227e0e42190529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#afc0f92b4df331c6309227e0e42190529">isUseCamera</a> () const</td></tr>
 <tr class="separator:afc0f92b4df331c6309227e0e42190529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf22266789600961f5fe3173bfe4e1ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#adf22266789600961f5fe3173bfe4e1ef">beginDraw</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> sessionId=INVALID_ID)</td></tr>
-<tr class="separator:adf22266789600961f5fe3173bfe4e1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775c08c1b0dfff6e2d150b2568c0911a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a775c08c1b0dfff6e2d150b2568c0911a">beginDraw</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> sessionId=INVALID_ID, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> layer=0)</td></tr>
+<tr class="separator:a775c08c1b0dfff6e2d150b2568c0911a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0a43412c6d957fdbd9a63ccefb090c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#aca0a43412c6d957fdbd9a63ccefb090c">endDraw</a> ()</td></tr>
 <tr class="separator:aca0a43412c6d957fdbd9a63ccefb090c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab58054b2456f9e62cc603155a9845150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ab58054b2456f9e62cc603155a9845150">setVisible</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> sessionId, bool visible)</td></tr>
@@ -119,6 +119,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a36cf2f51bf8e38a6395091ea0a0d7fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a358f3cc7af7eaebfdeb985bd36996612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a358f3cc7af7eaebfdeb985bd36996612">drawImage</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> imageId, const float3 &amp;position, const quaternion &amp;rotation, const float2 &amp;size, const float4 &amp;color)</td></tr>
 <tr class="separator:a358f3cc7af7eaebfdeb985bd36996612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f24931295191f27dac24293f768a40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ae0f24931295191f27dac24293f768a40">drawCircle</a> (const float3 &amp;center, const quaternion &amp;rotation, float radius, const float4 &amp;color, float borderWidth=0.0f)</td></tr>
+<tr class="separator:ae0f24931295191f27dac24293f768a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e1a3620789e69cb15ca4b6da6a8413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a78e1a3620789e69cb15ca4b6da6a8413">drawRoundedQuad</a> (const float3 &amp;center, const quaternion &amp;rotation, const float2 &amp;size, float cornerRadius, const float4 &amp;color, float borderWidth=0.0f)</td></tr>
+<tr class="separator:a78e1a3620789e69cb15ca4b6da6a8413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d0c1e11ee6381315caf92e06740bd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ae6d0c1e11ee6381315caf92e06740bd4">drawSVG</a> (const <a class="el" href="classlysa_1_1SVG.html">SVG</a> &amp;svg, const float3 &amp;center, const quaternion &amp;rotation, const float2 &amp;size, const float4 &amp;color, float borderWidth=0.0f)</td></tr>
+<tr class="separator:ae6d0c1e11ee6381315caf92e06740bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f70d396b00e6f4bf5ae695a6e856135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a9f70d396b00e6f4bf5ae695a6e856135">drawText</a> (const std::string &amp;text, <a class="el" href="classlysa_1_1Font.html">Font</a> &amp;font, float fontScale, const float3 &amp;position, const quaternion &amp;rotation, const float4 &amp;innerColor, <a class="el" href="namespacelysa.html#aa56f1a82069b5feeadbb4591cb3e474f">TextAlignment</a> alignment=TextAlignment::LEFT, bool rotationGlobal=false)</td></tr>
 <tr class="separator:a9f70d396b00e6f4bf5ae695a6e856135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaaeaf88a398828b5b14a3c2dd2be5e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#adaaeaf88a398828b5b14a3c2dd2be5e2">drawSpline</a> (const std::vector&lt; float3 &gt; &amp;points, const float4 &amp;color, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> segsPerSpan=16, float tension=0.0f)</td></tr>
@@ -127,8 +133,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4e0e80711c5e144c31a7e1d92d65344f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c9250c47456cfb4b801c75f71ea9d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a46c9250c47456cfb4b801c75f71ea9d7">resize</a> (const vireo::Extent &amp;extent)</td></tr>
 <tr class="separator:a46c9250c47456cfb4b801c75f71ea9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf086c5eb14fcf8148c553796bfaffbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#adf086c5eb14fcf8148c553796bfaffbc">render</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;colorAttachment, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex)</td></tr>
-<tr class="separator:adf086c5eb14fcf8148c553796bfaffbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad306b42884e94e726df6fb1260dbea6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ad306b42884e94e726df6fb1260dbea6a">render</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const <a class="el" href="structlysa_1_1Camera.html">Camera</a> &amp;camera, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;colorAttachment, const std::shared_ptr&lt; vireo::RenderTarget &gt; &amp;depthAttachment, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> frameIndex, const vireo::Extent &amp;extent={0, 0})</td></tr>
+<tr class="separator:ad306b42884e94e726df6fb1260dbea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13b43273bb94cbc33569dc325abfd56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#af13b43273bb94cbc33569dc325abfd56">setGammaCorrectionParameters</a> (const float gamma, const float _)</td></tr>
 <tr class="separator:af13b43273bb94cbc33569dc325abfd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b66f1048081cd7509bbc67ec9b8e48"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a35b66f1048081cd7509bbc67ec9b8e48">~Vector3DRenderer</a> ()</td></tr>
@@ -142,12 +148,16 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aa820bd9f62a41c30d50312ec4bf9d72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#aa820bd9f62a41c30d50312ec4bf9d72c">commitPrimitive</a> (<a class="el" href="namespacelysa.html#ad19c132b3fa60d986b7f0f8eba61ff9d">DrawPrimType</a> type, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> vertexCount)</td></tr>
 <tr class="separator:aa820bd9f62a41c30d50312ec4bf9d72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dcf0b5287466f1eac696b42e146c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ad7dcf0b5287466f1eac696b42e146c5f">drawQuad</a> (const float3 &amp;v0, const float3 &amp;v1, const float3 &amp;v2, const float3 &amp;v3, <a class="el" href="structlysa_1_1DrawParam.html">DrawParam</a> param, const float2 &amp;uv0={0.0f, 0.0f}, const float2 &amp;uv1={1.0f, 1.0f})</td></tr>
+<tr class="separator:ad7dcf0b5287466f1eac696b42e146c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfb26a0fc0dfcfc67fcef3498699d755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a3d594eb72953c94a18a03d929ebd9167">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#abfb26a0fc0dfcfc67fcef3498699d755">addImage</a> (const <a class="el" href="classlysa_1_1Image.html">Image</a> &amp;texture)</td></tr>
 <tr class="separator:abfb26a0fc0dfcfc67fcef3498699d755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7be3a1aa945b64e34352276974fecc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a3d594eb72953c94a18a03d929ebd9167">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#ae7be3a1aa945b64e34352276974fecc8">addFontAtlas</a> (const <a class="el" href="classlysa_1_1Image.html">Image</a> &amp;texture)</td></tr>
 <tr class="separator:ae7be3a1aa945b64e34352276974fecc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d9e0ea24ad2cdf44e5176fae2feb743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a3d594eb72953c94a18a03d929ebd9167">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a9d9e0ea24ad2cdf44e5176fae2feb743">addFont</a> (<a class="el" href="classlysa_1_1Font.html">Font</a> &amp;font)</td></tr>
 <tr class="separator:a9d9e0ea24ad2cdf44e5176fae2feb743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef04c31ab963cecf3994177274808b88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#aef04c31ab963cecf3994177274808b88">addSVG</a> (const <a class="el" href="classlysa_1_1SVG.html">SVG</a> &amp;svg, <a class="el" href="structlysa_1_1DrawParam.html">DrawParam</a> &amp;param)</td></tr>
+<tr class="separator:aef04c31ab963cecf3994177274808b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -161,6 +171,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ad6e57b04df83152d1edce166a03bcbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8674726e0229456c01dcac98f58c2ecf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a8674726e0229456c01dcac98f58c2ecf">maxFonts</a></td></tr>
 <tr class="separator:a8674726e0229456c01dcac98f58c2ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed3bcfdabd25ad777c62f0ffbed1794"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a6ed3bcfdabd25ad777c62f0ffbed1794">maxSdfSegments</a></td></tr>
+<tr class="separator:a6ed3bcfdabd25ad777c62f0ffbed1794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3db8f20451ded1ca7d666a0283c1ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1ImageManager.html">ImageManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a9c3db8f20451ded1ca7d666a0283c1ad">imageManager</a></td></tr>
 <tr class="separator:a9c3db8f20451ded1ca7d666a0283c1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee09c0be6277d024815ad660d41ba8ce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1RendererConfiguration.html">RendererConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#aee09c0be6277d024815ad660d41ba8ce">config</a></td></tr>
@@ -175,6 +187,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ada294977b49d4061cfadc552ec0825f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d8512c1bc5a5561b886b2d0994989b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a9d8512c1bc5a5561b886b2d0994989b4">nextParamOffset</a> {0}</td></tr>
 <tr class="separator:a9d8512c1bc5a5561b886b2d0994989b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c6b750cad303cb8be689f6450fd3b0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlysa_1_1SVG_1_1Segment.html">SVG::Segment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a81c6b750cad303cb8be689f6450fd3b0">sdfSegments</a></td></tr>
+<tr class="separator:a81c6b750cad303cb8be689f6450fd3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d3179268724d792f3cca516cd219da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a32d3179268724d792f3cca516cd219da">nextSdfSegmentOffset</a> {0}</td></tr>
+<tr class="separator:a32d3179268724d792f3cca516cd219da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a99c74b122adb8437a6c5947aa038ae"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>, std::pair&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a6a99c74b122adb8437a6c5947aa038ae">sdfSegmentsRanges</a></td></tr>
+<tr class="separator:a6a99c74b122adb8437a6c5947aa038ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c2e902dcec0e65ee3f978cc088e1b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a06c2e902dcec0e65ee3f978cc088e1b0">lineListCount</a> {0}</td></tr>
 <tr class="separator:a06c2e902dcec0e65ee3f978cc088e1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e35cc119306ca7f2bf21afd3ec481b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a4e35cc119306ca7f2bf21afd3ec481b4">lineStripCount</a> {0}</td></tr>
@@ -185,6 +203,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3173370191522af2e0f6b66c5ad979e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91fb20d9690319d3a5b3b258afad7a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a91fb20d9690319d3a5b3b258afad7a4a">triGlyphCount</a> {0}</td></tr>
 <tr class="separator:a91fb20d9690319d3a5b3b258afad7a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5a56cce70303bd97174669362948cb"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, 5 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#afc5a56cce70303bd97174669362948cb">typeCounts</a> {}</td></tr>
+<tr class="separator:afc5a56cce70303bd97174669362948cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225f98315a9d0e51b77177fcc727f504"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structlysa_1_1DrawSession.html">DrawSession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Vector3DRenderer.html#a225f98315a9d0e51b77177fcc727f504">currentSession</a></td></tr>
 <tr class="separator:a225f98315a9d0e51b77177fcc727f504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -391,7 +411,41 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf22266789600961f5fe3173bfe4e1ef"></a>
+<a class="anchor" id="aef04c31ab963cecf3994177274808b88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool addSVG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1SVG.html">SVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>svg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlysa_1_1DrawParam.html">DrawParam</a> &amp;&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a775c08c1b0dfff6e2d150b2568c0911a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -399,14 +453,25 @@ Protected Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> beginDraw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td>
-          <td class="paramname"><em>sessionId</em> = <code>INVALID_ID</code></td><td>)</td>
+          <td class="paramname"><em>sessionId</em> = <code>INVALID_ID</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>layer</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Starts a drawing session. Is the session already exists it will be cleared first </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sessionId</td><td>Session ID </td></tr>
+    <tr><td class="paramname">layer</td><td>Drawing layer, a session is always drawn above the sessions of the lower layers. Primitives of a same layer are batched by type, use a layer for something drawn above everything else, like a popup, since text is batched after the filled shapes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -467,6 +532,60 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae0f24931295191f27dac24293f768a40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawCircle </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const quaternion &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float4 &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>borderWidth</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draws a filled circle, rasterized by the fragment shader with an antialiased edge. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>Center of the disc in world space. </td></tr>
+    <tr><td class="paramname">rotation</td><td>Orientation of the disc's plane, applied around its center. </td></tr>
+    <tr><td class="paramname">radius</td><td>Radius of the disc in world units. </td></tr>
+    <tr><td class="paramname">color</td><td>Fill color. </td></tr>
+    <tr><td class="paramname">borderWidth</td><td>Width of the border in world units, 0 to fill the disc. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -557,6 +676,140 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad7dcf0b5287466f1eac696b42e146c5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawQuad </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>v3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlysa_1_1DrawParam.html">DrawParam</a>&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;&#160;</td>
+          <td class="paramname"><em>uv0</em> = <code>{0.0f,&#160;0.0f}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;&#160;</td>
+          <td class="paramname"><em>uv1</em> = <code>{1.0f,&#160;1.0f}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Records a quad as two triangles v1 -&mdash; v3 | \ | | \ | v0 -&mdash; v2 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0,v1,v2,v3</td><td>Corners of the quad </td></tr>
+    <tr><td class="paramname">param</td><td>Primitive parameters </td></tr>
+    <tr><td class="paramname">uv0</td><td>UV of the v1 corner </td></tr>
+    <tr><td class="paramname">uv1</td><td>UV of the v2 corner </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a78e1a3620789e69cb15ca4b6da6a8413"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawRoundedQuad </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const quaternion &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cornerRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float4 &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>borderWidth</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draws a quad with rounded corners, rasterized by the fragment shader with an antialiased edge. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>Center of the quad in world space. </td></tr>
+    <tr><td class="paramname">rotation</td><td>Orientation of the quad's plane, applied around its center. </td></tr>
+    <tr><td class="paramname">size</td><td>Width (x) and height (y) of the quad in world units. </td></tr>
+    <tr><td class="paramname">cornerRadius</td><td>Radius of the corners, clamped to half of the smallest side. </td></tr>
+    <tr><td class="paramname">color</td><td>Fill color. </td></tr>
+    <tr><td class="paramname">borderWidth</td><td>Width of the border in world units, 0 to fill the quad. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="adaaeaf88a398828b5b14a3c2dd2be5e2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -598,6 +851,67 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">color</td><td>Color applied to the entire spline. </td></tr>
     <tr><td class="paramname">segsPerSpan</td><td>Number of line segments used to approximate each span between two consecutive points. </td></tr>
     <tr><td class="paramname">tension</td><td>Curve tension in [0, 1]: 0 = Catmull-Rom, 1 = straight segments. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae6d0c1e11ee6381315caf92e06740bd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawSVG </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1SVG.html">SVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>svg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const quaternion &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float4 &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>borderWidth</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draws an <a class="el" href="classlysa_1_1SVG.html">SVG</a> shape </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">svg</td><td>Shape to draw, its segments are uploaded to the GPU on first use. </td></tr>
+    <tr><td class="paramname">center</td><td>Center of the quad in world space. </td></tr>
+    <tr><td class="paramname">rotation</td><td>Orientation of the quad's plane, applied around its center. </td></tr>
+    <tr><td class="paramname">size</td><td>Width (x) and height (y) of the quad in world units. </td></tr>
+    <tr><td class="paramname">color</td><td>Fill color. </td></tr>
+    <tr><td class="paramname">borderWidth</td><td>Width of the border in world units, 0 to fill the shape. </td></tr>
   </table>
   </dd>
 </dl>
@@ -782,7 +1096,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf086c5eb14fcf8148c553796bfaffbc"></a>
+<a class="anchor" id="ad306b42884e94e726df6fb1260dbea6a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -814,7 +1128,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
-          <td class="paramname"><em>frameIndex</em>&#160;</td>
+          <td class="paramname"><em>frameIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vireo::Extent &amp;&#160;</td>
+          <td class="paramname"><em>extent</em> = <code>{0,&#160;0}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -830,6 +1150,7 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramname">colorAttachment</td><td>Target color surface. </td></tr>
     <tr><td class="paramname">depthAttachment</td><td>Target depth surface (may be null if no depth). </td></tr>
     <tr><td class="paramname">frameIndex</td><td>Index of the current frame in flight. </td></tr>
+    <tr><td class="paramname">extent</td><td>Optional extent to use </td></tr>
   </table>
   </dd>
 </dl>
@@ -933,7 +1254,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Shows or hides a draw session without clearing its primitives. Hidden sessions are skipped by the GPU indirect command generator but remain in the vertex and params buffers so they can be made visible again cheaply. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sessionId</td><td>Session ID returned by <a class="el" href="classlysa_1_1Vector3DRenderer.html#adf22266789600961f5fe3173bfe4e1ef">beginDraw()</a>. </td></tr>
+    <tr><td class="paramname">sessionId</td><td>Session ID returned by <a class="el" href="classlysa_1_1Vector3DRenderer.html#a775c08c1b0dfff6e2d150b2568c0911a">beginDraw()</a>. </td></tr>
     <tr><td class="paramname">visible</td><td>True to show, false to hide. </td></tr>
   </table>
   </dd>
@@ -1149,6 +1470,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6ed3bcfdabd25ad777c62f0ffbed1794"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> maxSdfSegments</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a39a35bbc748c6679e83375e76702a641"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1209,6 +1550,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a32d3179268724d792f3cca516cd219da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> nextSdfSegmentOffset {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1d0c81330b72e81755b4cfff282e399b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1238,6 +1599,46 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="structlysa_1_1DrawParam.html">DrawParam</a>&gt; params</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81c6b750cad303cb8be689f6450fd3b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structlysa_1_1SVG_1_1Segment.html">SVG::Segment</a>&gt; sdfSegments</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6a99c74b122adb8437a6c5947aa038ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>, std::pair&lt;<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&gt; &gt; sdfSegmentsRanges</td>
         </tr>
       </table>
   </td>
@@ -1309,6 +1710,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afc5a56cce70303bd97174669362948cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>, 5&gt; typeCounts {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3c2ae39ce2906ea0921096f416f80b96"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1335,7 +1756,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Vector3DRenderer.html">Vector3DRenderer</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

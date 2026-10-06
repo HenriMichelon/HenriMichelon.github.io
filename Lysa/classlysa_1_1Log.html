@@ -66,6 +66,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1Log.html',''); initResiza
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#typedefs">Public Typedefs</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classlysa_1_1Log-members.html">List of all members</a>  </div>
@@ -79,6 +80,11 @@ $(document).ready(function(){initNavTree('classlysa_1_1Log.html',''); initResiza
 <div class="textblock"><p>Global manager exposing one stream per log level.</p>
 <p>The effective outputs (stdout/file) are controlled by the first <a class="el" href="classlysa_1_1Lysa.html">Lysa</a> instance configuration </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedefs"></a>
+Public Typedefs</h2></td></tr>
+<tr class="memitem:a7f53da89631c9f37bfad8ec802086428"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#a7f53da89631c9f37bfad8ec802086428">LogCallback</a> = std::function&lt; void (<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dd">LogLevel</a> level, const std::string &amp;line)&gt;</td></tr>
+<tr class="separator:a7f53da89631c9f37bfad8ec802086428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a98637c2ff982bd4f06b014149736ea38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#a98637c2ff982bd4f06b014149736ea38">Log</a> (const <a class="el" href="structlysa_1_1LoggingConfiguration.html">LoggingConfiguration</a> &amp;loggingConfiguration)</td></tr>
@@ -90,6 +96,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae31f4bdbd9374c87ee0ca3f78a9b17a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d41be4b41bfdb31fb9d8b017c5363a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#a62d41be4b41bfdb31fb9d8b017c5363a">shutdown</a> ()</td></tr>
 <tr class="separator:a62d41be4b41bfdb31fb9d8b017c5363a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6616803869d132e2e1638360274e563a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#a6616803869d132e2e1638360274e563a">setLogCallback</a> (<a class="el" href="classlysa_1_1Log.html#a7f53da89631c9f37bfad8ec802086428">LogCallback</a> callback)</td></tr>
+<tr class="separator:a6616803869d132e2e1638360274e563a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9e6bab6a6e66a51bbf9cfb989dc8e66"><td class="memItemLeft" align="right" valign="top">static consteval bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#ac9e6bab6a6e66a51bbf9cfb989dc8e66">isLoggingEnabled</a> ()</td></tr>
 <tr class="separator:ac9e6bab6a6e66a51bbf9cfb989dc8e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9115f68bc2438b98fb686d95f27228f5"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
@@ -123,6 +131,20 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7ce9ebe6fbfc20a8fe362c6e65b3bf9"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1Log.html#aa7ce9ebe6fbfc20a8fe362c6e65b3bf9">critical</a> (Args...args)</td></tr>
 <tr class="separator:aa7ce9ebe6fbfc20a8fe362c6e65b3bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a7f53da89631c9f37bfad8ec802086428"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classlysa_1_1Log.html#a7f53da89631c9f37bfad8ec802086428">LogCallback</a> =  std::function&lt;void(<a class="el" href="namespacelysa.html#aa4f726a209a5bf69a4edbe74426419dd">LogLevel</a> level, const std::string&amp; line)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A log callback </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a98637c2ff982bd4f06b014149736ea38"></a>
 <div class="memitem">
@@ -395,6 +417,31 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6616803869d132e2e1638360274e563a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void setLogCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlysa_1_1Log.html#a7f53da89631c9f37bfad8ec802086428">LogCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Registers the log callback or <code>nullptr</code> to unregister. </p>
+
+</div>
+</div>
 <a class="anchor" id="a62d41be4b41bfdb31fb9d8b017c5363a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -499,7 +546,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Log.html">Log</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

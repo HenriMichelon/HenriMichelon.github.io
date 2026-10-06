@@ -66,28 +66,29 @@ $(document).ready(function(){initNavTree('classlysa_1_1EventManager.html',''); i
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-    <div class="title">EventManager Member List</div>
+    <div class="title">EventManager&lt; Message &gt; Member List</div>
   </div>
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classlysa_1_1EventManager.html">EventManager</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a74bcb4cf5eeb21342407b1d45c15b23d">EventManager</a>(size_t reservedCapacity)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a5f4c9df4a7174db91b4296496c96d04c">fire</a>(Event &amp;event)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a9725dc01db9979cb32b39329bc478b15">push</a>(const Event &amp;e)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a>(const event_type &amp;type, unique_id id, EventHandlerCallback callback)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a8f55765afc6ea0bd6034ef3ed6fe5909">subscribe</a>(const event_type &amp;type, const std::vector&lt; unique_id &gt; &amp;ids, EventHandlerCallback callback)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a076e9be0c1c2627a11eda016807e3489">subscribe</a>(const event_type &amp;type, EventHandlerCallback callback)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(unique_id id)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#ac6f7cfff424f94b0c62344041cf8bbe3">~EventManager</a>()</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902">Callback</a> typedef</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span></span></td></tr>
+  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#aa0fb3bc46cacedaede01c9de3740121d">EventManager</a>() = default</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952">Handler</a> typedef</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span></span></td></tr>
+  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a8f7c58d17cea830a7a23bc24c5578615">createHandler</a>(Callback callback)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span></span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#ac102cc215f2f4986027943faf774ab92">dispatch</a>(Message &amp;message, const Lookup &amp;lookup)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span></span></td></tr>
+  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a1855aac95582ee902fa89649825a0f7f">eraseHandler</a>(HandlerLists &amp;callbacks, unique_id id)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a90534cb52fbc86a51dc30a149f9bfd5d">removeHandler</a>(unique_id id) = 0</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span></td></tr>
+  <tr><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a>(unique_id id)</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlysa_1_1EventManager.html#a5e6238f2391e79ce731b44b8d079b0fb">~EventManager</a>() = default</td><td class="entry"><a class="el" href="classlysa_1_1EventManager.html">EventManager&lt; Message &gt;</a></td><td class="entry"><span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.1.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

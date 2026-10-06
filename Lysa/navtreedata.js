@@ -24,6 +24,7 @@ var NAVTREE =
       [ "Integration", "manual_001_integration.html", [
         [ "1. Configure .env.cmake", "manual_001_integration.html#integration_env", null ],
         [ "2. Add the engine to your CMakeLists.txt", "manual_001_integration.html#integration_cmake", null ],
+        [ "Embedded Lua debugger", "manual_001_integration.html#integration_lua_debugger", null ],
         [ "3. CMake options reference", "manual_001_integration.html#integration_options", null ],
         [ "4. Application entry point", "manual_001_integration.html#integration_entrypoint", null ],
         [ "5. Custom shaders", "manual_001_integration.html#integration_shaders", null ],
@@ -63,11 +64,11 @@ var NAVTREE =
         [ "Resources Pack (.rpack)", "manual_004_packs.html#ap_resources", null ],
         [ "Typical workflow", "manual_004_packs.html#ap_workflow", null ]
       ] ],
-      [ "Resource Constraints", "manual_005_resource_constraints.html", [
-        [ "Global Resource Pools", "manual_005_resource_constraints.html#rc_global", null ],
-        [ "Per-Scene Limits", "manual_005_resource_constraints.html#rc_scene", null ],
-        [ "Other Engine-Level Limits", "manual_005_resource_constraints.html#rc_context_misc", null ],
-        [ "Sizing Guidelines", "manual_005_resource_constraints.html#rc_sizing", null ]
+      [ "Resources Management", "manual_005_resources_management.html", [
+        [ "Global Resource Pools", "manual_005_resources_management.html#rc_global", null ],
+        [ "Per-Scene Initial Capacities", "manual_005_resources_management.html#rc_scene", null ],
+        [ "Other Engine-Level Limits", "manual_005_resources_management.html#rc_context_misc", null ],
+        [ "Sizing Guidelines", "manual_005_resources_management.html#rc_sizing", null ]
       ] ],
       [ "Custom Rendering", "manual_006_custom_rendering.html", [
         [ "1. Pipeline overview", "manual_006_custom_rendering.html#custom_overview", [
@@ -247,8 +248,10 @@ var NAVTREE =
             ] ],
             [ "AssetsPack", "classlysa_1_1AssetsPack.html#acd041e09af4e4ab2d6d4c0054a7fee21", null ],
             [ "load", "classlysa_1_1AssetsPack.html#a6848ee2eed6c21ed8f22de4075c92fc8", null ],
+            [ "load", "classlysa_1_1AssetsPack.html#ae9acf8891d97d93d45eae96169bcbb90", null ],
             [ "load", "classlysa_1_1AssetsPack.html#a3563e16018995584f2ea64adeca9d8c1", null ],
             [ "loadImages", "classlysa_1_1AssetsPack.html#a8f7a36fe15dcb630fdf9c3ab20548329", null ],
+            [ "loadImages", "classlysa_1_1AssetsPack.html#a4f3d3f380a87166ff9ec0d4ea5c45626", null ],
             [ "loadImages", "classlysa_1_1AssetsPack.html#aee312895234aa24f3b96966b019cc475", null ],
             [ "MAGIC", "classlysa_1_1AssetsPack.html#a3a39c2f325ff688b5b740e9540b9c725", null ],
             [ "NAME_SIZE", "classlysa_1_1AssetsPack.html#a5cad78f50ad9f99bedf787a8911c0fcc", null ],
@@ -326,6 +329,7 @@ var NAVTREE =
             [ "isCharacter", "classlysa_1_1CollisionObject.html#a474ba9d0fc0452d9eb8bba2f45d9295e", null ],
             [ "isProcessed", "classlysa_1_1CollisionObject.html#a917875a7e1993c868feedacd88fb6eef", null ],
             [ "isVisible", "classlysa_1_1CollisionObject.html#a695e1abf72ee86f85d0f9f4b49bc0c1c", null ],
+            [ "isVisibleInScene", "classlysa_1_1CollisionObject.html#a1311e253a3c176182e70e767f35102a0", null ],
             [ "pause", "classlysa_1_1CollisionObject.html#a7167f5c196fc5e167bfabde1a730e81d", null ],
             [ "releaseResources", "classlysa_1_1CollisionObject.html#a631d78806ec72c285cd1fff6f5afde13", null ],
             [ "resume", "classlysa_1_1CollisionObject.html#a1869d4dc2556fec785da28f548681001", null ],
@@ -372,15 +376,17 @@ var NAVTREE =
             [ "config", "structlysa_1_1Context.html#a0b1888fed87abc66dac56c447d97f396", null ],
             [ "ctx", "structlysa_1_1Context.html#add3c27d60628f8f28be6a355046fa682", null ],
             [ "defer", "structlysa_1_1Context.html#ac7472db576b12f937231e3838ff32a79", null ],
-            [ "events", "structlysa_1_1Context.html#a9fb1e9eb6729adf3c6e7efd670467283", null ],
+            [ "events", "structlysa_1_1Context.html#addcc1755defa08196d3ec9b5e7ad75bc", null ],
             [ "exit", "structlysa_1_1Context.html#add93a36b81b5f541d2f3237a7f363a7e", null ],
             [ "fps", "structlysa_1_1Context.html#a4d7e4de39599f871cadc0ab0d69fb40e", null ],
             [ "fs", "structlysa_1_1Context.html#ac46f98d54c6e8f4c87ba414636b92705", null ],
             [ "globalDescriptorLayout", "structlysa_1_1Context.html#a69aa9278c0fb0bd24c95235cf8697ea5", null ],
-            [ "globalDescriptorSet", "structlysa_1_1Context.html#a3a0efb84934f8c1920a7654fdb3c93c8", null ],
+            [ "globalResources", "structlysa_1_1Context.html#aed16d5190321e3b0e80a569ac6a2b20f", null ],
             [ "graphicQueue", "structlysa_1_1Context.html#aae491587a7dcccec5b4fa29c537d66f7", null ],
             [ "res", "structlysa_1_1Context.html#ab6f3efda4a6765c51b4006259039a1d3", null ],
             [ "samplers", "structlysa_1_1Context.html#a57263dcc4935238078a5cceff253bed8", null ],
+            [ "signals", "structlysa_1_1Context.html#a07b9ff69850c2d89e4b03939a82fd79c", null ],
+            [ "stagingPool", "structlysa_1_1Context.html#a741dd741d1039a8438957dc434e8b747", null ],
             [ "timers", "structlysa_1_1Context.html#a07467a791d3be6eff700b3160c09f54a", null ],
             [ "transferQueue", "structlysa_1_1Context.html#a47c21c1247f12e891023f432ed2c8d33", null ],
             [ "tweens", "structlysa_1_1Context.html#a6b9639e5ce66d6d3a53373f00d0acb03", null ],
@@ -396,6 +402,7 @@ var NAVTREE =
             [ "loggingConfiguration", "structlysa_1_1ContextConfiguration.html#a93daadb22841c84342bdfd4cdab83d7e", null ],
             [ "maxShadowMapsPerScene", "structlysa_1_1ContextConfiguration.html#ae901fcf97bf28ef453a8902811259482", null ],
             [ "resourcesCapacity", "structlysa_1_1ContextConfiguration.html#a63434b7874283c69588a43357b1b0aad", null ],
+            [ "stagingPoolMaxCachedBytes", "structlysa_1_1ContextConfiguration.html#aaafd5384e1bb9ce02830aa2a1cd38fc3", null ],
             [ "virtualFsConfiguration", "structlysa_1_1ContextConfiguration.html#a538883aa8319024c0d43d08ae920e5e3", null ]
           ] ],
           [ "ConvexHullCollisionShape", "classlysa_1_1ConvexHullCollisionShape.html", [
@@ -437,18 +444,21 @@ var NAVTREE =
             [ "~DeviceMemoryArray", "classlysa_1_1DeviceMemoryArray.html#a807371e5d4517eb05de6517412992ffd", null ],
             [ "barrier", "classlysa_1_1DeviceMemoryArray.html#aaf6a68480cac46b5e1194a5151948cd6", null ],
             [ "beginWrites", "classlysa_1_1DeviceMemoryArray.html#a8e2fc6f647aaa34cba42ad0024974bf6", null ],
+            [ "enableGrowth", "classlysa_1_1DeviceMemoryArray.html#a3bb820d2368aff860d5c05fe289caabc", null ],
             [ "flush", "classlysa_1_1DeviceMemoryArray.html#abafb0388f1146e445d46df7902774d01", null ],
+            [ "reserveAllocations", "classlysa_1_1DeviceMemoryArray.html#a9cb45ccdbc90bf0d5d23ae415abed1cb", null ],
             [ "write", "classlysa_1_1DeviceMemoryArray.html#a7e3692c575da2dc193398062fdcc4e66", null ],
             [ "INVALID_WRITE_SESSION", "classlysa_1_1DeviceMemoryArray.html#ac8b96beed81024f06df94450c86e2aa8", null ]
           ] ],
           [ "DirectoryWatcher", "classlysa_1_1DirectoryWatcher.html", [
-            [ "DirectoryWatcher", "classlysa_1_1DirectoryWatcher.html#a1c1ee2d59e611d41a6a5f509791b87ac", null ],
+            [ "DirectoryWatcher", "classlysa_1_1DirectoryWatcher.html#a283b4341ec4ca870cebbde145f703f0f", null ],
+            [ "DirectoryWatcher", "classlysa_1_1DirectoryWatcher.html#acc61f7dd59c3396230c1799ba2ce8378", null ],
             [ "~DirectoryWatcher", "classlysa_1_1DirectoryWatcher.html#adf3bb34d16f8cab260d4483e82772d5d", null ],
             [ "start", "classlysa_1_1DirectoryWatcher.html#a60de64d75454385b23995437f1d72669", null ],
             [ "stop", "classlysa_1_1DirectoryWatcher.html#aba28ee97ffe6d508e26f534ec7e62f8f", null ]
           ] ],
-          [ "DirectoryWatcherEvent", "structlysa_1_1DirectoryWatcherEvent.html", [
-            [ "FILE_CHANGED", "structlysa_1_1DirectoryWatcherEvent.html#a04ba7f2dd242aac7e128ce9b2c44e12b", null ]
+          [ "DirectoryWatcherSignal", "structlysa_1_1DirectoryWatcherSignal.html", [
+            [ "FILE_CHANGED", "structlysa_1_1DirectoryWatcherSignal.html#a04ba7f2dd242aac7e128ce9b2c44e12b", null ]
           ] ],
           [ "DisplayAttachment", "classlysa_1_1DisplayAttachment.html", [
             [ "DisplayAttachment", "classlysa_1_1DisplayAttachment.html#ae84f0b7ac9ac4da4916e59e1819b4ebb", null ],
@@ -464,12 +474,19 @@ var NAVTREE =
             [ "firstVertex", "structlysa_1_1DrawParam.html#a8eea4973677524edb430070432a3f5d8", null ],
             [ "fontIndex", "structlysa_1_1DrawParam.html#a5c73eecf49fd5428726234d7c5f1b29b", null ],
             [ "primitiveType", "structlysa_1_1DrawParam.html#a5c6212f2d14f27959be7f251b5324b3f", null ],
+            [ "sdfCount", "structlysa_1_1DrawParam.html#a3f97a3ba530f2799190cb99bebabff55", null ],
+            [ "sdfFirst", "structlysa_1_1DrawParam.html#a9b65b3951c7fd35254dcfc050572fe83", null ],
+            [ "sdfFlags", "structlysa_1_1DrawParam.html#a4e83ed6a689badcb72f64b5b91bce15b", null ],
+            [ "shape", "structlysa_1_1DrawParam.html#ac094a2541be2ac58862eef32b626b6e4", null ],
+            [ "shapeParams", "structlysa_1_1DrawParam.html#a78b763ec40fd35c6b1d56938e2417af0", null ],
             [ "textureIndex", "structlysa_1_1DrawParam.html#a21ded3eed0b3780c1197f19055ff4416", null ],
+            [ "typeOrdinal", "structlysa_1_1DrawParam.html#a932596fce6d2fefc854d483ff852d49c", null ],
             [ "vertexCount", "structlysa_1_1DrawParam.html#a03e7be5951e8eae3f869a4238180df6c", null ],
             [ "visible", "structlysa_1_1DrawParam.html#ad7bbcabc8c8a72d768362d3d0e4963dd", null ]
           ] ],
           [ "DrawSession", "structlysa_1_1DrawSession.html", [
             [ "id", "structlysa_1_1DrawSession.html#a50ec11076cfd84d4b445d29738c3e02c", null ],
+            [ "layer", "structlysa_1_1DrawSession.html#a9b42991568b4a9a144a76f78e1fecbba", null ],
             [ "lineListCount", "structlysa_1_1DrawSession.html#a06c2e902dcec0e65ee3f978cc088e1b0", null ],
             [ "lineStripCount", "structlysa_1_1DrawSession.html#a4e35cc119306ca7f2bf21afd3ec481b4", null ],
             [ "paramCount", "structlysa_1_1DrawSession.html#a67f4b41a4cea213f1f4ed1309655b7f4", null ],
@@ -490,6 +507,7 @@ var NAVTREE =
           ] ],
           [ "Event", "structlysa_1_1Event.html", [
             [ "consumed", "structlysa_1_1Event.html#a5923b9221705546ddd88c92230707bd5", null ],
+            [ "handlerId", "structlysa_1_1Event.html#ad5784135cb5b501195d6ca7e4c6b74d9", null ],
             [ "id", "structlysa_1_1Event.html#a50ec11076cfd84d4b445d29738c3e02c", null ],
             [ "payload", "structlysa_1_1Event.html#a733aa42ca76a8eedae51624126147336", null ],
             [ "type", "structlysa_1_1Event.html#ad88d290b93da5206c65cea414e04163d", null ]
@@ -499,13 +517,17 @@ var NAVTREE =
             [ "id", "structlysa_1_1EventHandler.html#a50ec11076cfd84d4b445d29738c3e02c", null ]
           ] ],
           [ "EventManager", "classlysa_1_1EventManager.html", [
-            [ "EventManager", "classlysa_1_1EventManager.html#a74bcb4cf5eeb21342407b1d45c15b23d", null ],
-            [ "~EventManager", "classlysa_1_1EventManager.html#ac6f7cfff424f94b0c62344041cf8bbe3", null ],
-            [ "fire", "classlysa_1_1EventManager.html#a5f4c9df4a7174db91b4296496c96d04c", null ],
-            [ "push", "classlysa_1_1EventManager.html#a9725dc01db9979cb32b39329bc478b15", null ],
-            [ "subscribe", "classlysa_1_1EventManager.html#a8f55765afc6ea0bd6034ef3ed6fe5909", null ],
-            [ "subscribe", "classlysa_1_1EventManager.html#a076e9be0c1c2627a11eda016807e3489", null ],
-            [ "subscribe", "classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca", null ],
+            [ "HandlerLists", "structlysa_1_1EventManager_1_1HandlerLists.html", [
+              [ "handlers", "structlysa_1_1EventManager_1_1HandlerLists.html#a8babdb6860fb88ec794714c46c8c9ee4", null ]
+            ] ],
+            [ "Callback", "classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902", null ],
+            [ "Handler", "classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952", null ],
+            [ "~EventManager", "classlysa_1_1EventManager.html#a5e6238f2391e79ce731b44b8d079b0fb", null ],
+            [ "EventManager", "classlysa_1_1EventManager.html#aa0fb3bc46cacedaede01c9de3740121d", null ],
+            [ "createHandler", "classlysa_1_1EventManager.html#a8f7c58d17cea830a7a23bc24c5578615", null ],
+            [ "dispatch", "classlysa_1_1EventManager.html#ac102cc215f2f4986027943faf774ab92", null ],
+            [ "eraseHandler", "classlysa_1_1EventManager.html#a1855aac95582ee902fa89649825a0f7f", null ],
+            [ "removeHandler", "classlysa_1_1EventManager.html#a90534cb52fbc86a51dc30a149f9bfd5d", null ],
             [ "unsubscribe", "classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915", null ]
           ] ],
           [ "Exception", "classlysa_1_1Exception.html", [
@@ -519,6 +541,10 @@ var NAVTREE =
             [ "spanMax", "classlysa_1_1FXAAPass.html#afc6a679a8131b5d5f5834f7c1211ec99", null ]
           ] ],
           [ "Font", "classlysa_1_1Font.html", [
+            [ "Caret", "structlysa_1_1Font_1_1Caret.html", [
+              [ "index", "structlysa_1_1Font_1_1Caret.html#a5a9439d5aa6c77675e290c3dd5e3cc61", null ],
+              [ "x", "structlysa_1_1Font_1_1Caret.html#ad0da36b2558901e21e7a30f6c227a45e", null ]
+            ] ],
             [ "GlyphBounds", "structlysa_1_1Font_1_1GlyphBounds.html", [
               [ "bottom", "structlysa_1_1Font_1_1GlyphBounds.html#a37c03c265e1d827465e655cfcc52976b", null ],
               [ "left", "structlysa_1_1Font_1_1GlyphBounds.html#a7d10b0c779bad3aabf067d52035f7052", null ],
@@ -532,9 +558,25 @@ var NAVTREE =
               [ "uv0", "structlysa_1_1Font_1_1GlyphInfo.html#ad95d5246270791079cb70ae5c2e4d28b", null ],
               [ "uv1", "structlysa_1_1Font_1_1GlyphInfo.html#a1d228b1abbb93f8b2e3a3d2410e44266", null ]
             ] ],
+            [ "ShapedGlyph", "structlysa_1_1Font_1_1ShapedGlyph.html", [
+              [ "advance", "structlysa_1_1Font_1_1ShapedGlyph.html#a19bfad41ad2f8797160dcd720cadc2a5", null ],
+              [ "begin", "structlysa_1_1Font_1_1ShapedGlyph.html#a56e0cf265d38d6c0b3e0d33eb5a37864", null ],
+              [ "end", "structlysa_1_1Font_1_1ShapedGlyph.html#a30ec0e1a04edb5e980f26fbc98d3cd38", null ],
+              [ "index", "structlysa_1_1Font_1_1ShapedGlyph.html#a5a9439d5aa6c77675e290c3dd5e3cc61", null ],
+              [ "rtl", "structlysa_1_1Font_1_1ShapedGlyph.html#a01749912577023946e48dcc268d9d6c4", null ],
+              [ "xOffset", "structlysa_1_1Font_1_1ShapedGlyph.html#a4c9cc7a344711c6782bfad7ce9e12bb7", null ],
+              [ "yOffset", "structlysa_1_1Font_1_1ShapedGlyph.html#a5193d79f9884fd5dad21aa7981429d16", null ]
+            ] ],
+            [ "TextRun", "structlysa_1_1Font_1_1TextRun.html", [
+              [ "begin", "structlysa_1_1Font_1_1TextRun.html#a56e0cf265d38d6c0b3e0d33eb5a37864", null ],
+              [ "direction", "structlysa_1_1Font_1_1TextRun.html#a350ddcca80a8ec5b9481fb5a66b1f70c", null ],
+              [ "end", "structlysa_1_1Font_1_1TextRun.html#a30ec0e1a04edb5e980f26fbc98d3cd38", null ]
+            ] ],
             [ "Font", "classlysa_1_1Font.html#a8861e1c8247b6bdb1fff33fbeb86912a", null ],
+            [ "Font", "classlysa_1_1Font.html#a231627189bedfe0feae21f09de1595a3", null ],
             [ "Font", "classlysa_1_1Font.html#aaba585e70687e58e69b185f8f0100058", null ],
             [ "~Font", "classlysa_1_1Font.html#a8a40ec4a0d59bc3c7977312763a7e941", null ],
+            [ "caretPositions", "classlysa_1_1Font.html#a73f47bd4780f8d0378602e690ba4a257", null ],
             [ "clone", "classlysa_1_1Font.html#ae4e1bfe04e6236cd35fcf8e268b76ee0", null ],
             [ "decrementDirty", "classlysa_1_1Font.html#ac215bc29108d4db0f4a49d55b23815c6", null ],
             [ "getAscender", "classlysa_1_1Font.html#a91b2e02c90250396ab602ffec8a707b7", null ],
@@ -556,8 +598,11 @@ var NAVTREE =
             [ "getRoundedOutline", "classlysa_1_1Font.html#afcf4a42c7cbf83d52619b82ab39b236e", null ],
             [ "getSize", "classlysa_1_1Font.html#a9f1098b843d887d60addf6d44a47fcc4", null ],
             [ "getSize", "classlysa_1_1Font.html#ab263c2c4acc9dfedd1fd9a1b6501d926", null ],
+            [ "getSize", "classlysa_1_1Font.html#a35dab83b08ba3098c5453867c265eb74", null ],
+            [ "getSize", "classlysa_1_1Font.html#aef7e650a22b9140815ff8e0ac6e9dfcf", null ],
             [ "getWidth", "classlysa_1_1Font.html#af6308c4e9bee9d681ed54681d61178b5", null ],
             [ "isDirty", "classlysa_1_1Font.html#a0a30315aafa09dceca81d0cbcd80253e", null ],
+            [ "localeDirection", "classlysa_1_1Font.html#a8937e59b12ae0e8c046e75515b3ab2da", null ],
             [ "setDirty", "classlysa_1_1Font.html#a92a590790db6444ca7a79eaf5fbcb0d9", null ],
             [ "setOutlineBias", "classlysa_1_1Font.html#a2ebe33952a25626b1045e14445ff48a4", null ],
             [ "setOutlineBlur", "classlysa_1_1Font.html#a7f7ae2da20f1d68247fddcb0a00b025e", null ],
@@ -567,10 +612,10 @@ var NAVTREE =
             [ "setOutlineWidthRelative", "classlysa_1_1Font.html#aa6312f0bcb552036cb117f5da294d0eb", null ],
             [ "setPxRange", "classlysa_1_1Font.html#a958ed4067d35d43806d691c60bd4c13f", null ],
             [ "setRoundedInterior", "classlysa_1_1Font.html#afc2e9343c995a545cf4914ee77283df6", null ],
-            [ "setRoundedOutline", "classlysa_1_1Font.html#a320f6745c12352aa752a8266fb5b8f7a", null ]
-          ] ],
-          [ "FontEvent", "structlysa_1_1FontEvent.html", [
-            [ "DESTROY", "structlysa_1_1FontEvent.html#a106b6bbb8b1f6386d9ec297e7ab632f3", null ]
+            [ "setRoundedOutline", "classlysa_1_1Font.html#a320f6745c12352aa752a8266fb5b8f7a", null ],
+            [ "shape", "classlysa_1_1Font.html#aedd5aecacc9c38590ccc0855165781d8", null ],
+            [ "textBoundaries", "classlysa_1_1Font.html#a1faffbe58193e82aa5174a2240f223fb", null ],
+            [ "visualRuns", "classlysa_1_1Font.html#a67e92b09e84e5408e087312a96f59334", null ]
           ] ],
           [ "FontParams", "structlysa_1_1FontParams.html", [
             [ "outlineBias", "structlysa_1_1FontParams.html#a42d25fc5c37ef2790f3bce55bffd095a", null ],
@@ -582,6 +627,9 @@ var NAVTREE =
             [ "roundedInterior", "structlysa_1_1FontParams.html#af0e3526f0cb4e2ac799f64427b4ceeac", null ],
             [ "roundedOutline", "structlysa_1_1FontParams.html#ab38c5c64e9c7b40f244198251c807bd7", null ],
             [ "threshold", "structlysa_1_1FontParams.html#a376acef8954eadc70f4b55e8e0588e13", null ]
+          ] ],
+          [ "FontSignal", "structlysa_1_1FontSignal.html", [
+            [ "DESTROY", "structlysa_1_1FontSignal.html#a106b6bbb8b1f6386d9ec297e7ab632f3", null ]
           ] ],
           [ "ForwardColorPass", "classlysa_1_1ForwardColorPass.html", [
             [ "ForwardColorPass", "classlysa_1_1ForwardColorPass.html#a318cb020a09540e1ed0fcff46f6b242c", null ],
@@ -613,12 +661,13 @@ var NAVTREE =
             [ "extractPlanes", "structlysa_1_1Frustum.html#aee10120732bddb4a406b6b315079fec0", null ]
           ] ],
           [ "FrustumCulling", "classlysa_1_1FrustumCulling.html", [
-            [ "FrustumCulling", "classlysa_1_1FrustumCulling.html#a835b3c099ac055b78848028d1b788c65", null ],
+            [ "FrustumCulling", "classlysa_1_1FrustumCulling.html#a5837399a9b03cb66a82c46d4d695f49d", null ],
             [ "~FrustumCulling", "classlysa_1_1FrustumCulling.html#aa1820f83bea5f8eb105f5fa600891a5c", null ],
             [ "FrustumCulling", "classlysa_1_1FrustumCulling.html#a4414dc467878d4f74784697de72eebb5", null ],
             [ "cleanup", "classlysa_1_1FrustumCulling.html#a53769672d4937cdc85fd17a9d3a7be6b", null ],
             [ "dispatch", "classlysa_1_1FrustumCulling.html#a76692280cb930b0c5b3ebc746e338d5e", null ],
-            [ "operator=", "classlysa_1_1FrustumCulling.html#a39c336d44beaa6daadf1b561befbd7ec", null ]
+            [ "operator=", "classlysa_1_1FrustumCulling.html#a39c336d44beaa6daadf1b561befbd7ec", null ],
+            [ "updateBuffers", "classlysa_1_1FrustumCulling.html#a107c36685b37d5b7b9ad5bc670400bf5", null ]
           ] ],
           [ "FullScreenCompute", "classlysa_1_1FullScreenCompute.html", [
             [ "FrameData", "structlysa_1_1FullScreenCompute_1_1FrameData.html", [
@@ -686,12 +735,13 @@ var NAVTREE =
             [ "setParameters", "classlysa_1_1GammaCorrectionPass.html#ad0cc535fb5b5a89067295a54e6d9c93a", null ]
           ] ],
           [ "GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html", [
-            [ "GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html#acb43b3e6ffe2600d519587fdd5ffc352", null ],
+            [ "GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html#afd532eb8dea8cfe31ab37dca49aad6a1", null ],
             [ "~GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html#ae4dfe6387393228dcdc265fe21e17236", null ],
             [ "GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html#ad103db28c726b72509324938c5ae58d6", null ],
             [ "cleanup", "classlysa_1_1GenerateDrawCommands.html#a53769672d4937cdc85fd17a9d3a7be6b", null ],
-            [ "dispatch", "classlysa_1_1GenerateDrawCommands.html#a84357d8b22f6e33afe96267c3f572056", null ],
-            [ "operator=", "classlysa_1_1GenerateDrawCommands.html#a94402088f893f4e2c18d991339767656", null ]
+            [ "dispatch", "classlysa_1_1GenerateDrawCommands.html#aadaff17fa15b4b0f5f8d9ddaaafbccfa", null ],
+            [ "operator=", "classlysa_1_1GenerateDrawCommands.html#a94402088f893f4e2c18d991339767656", null ],
+            [ "updateBuffers", "classlysa_1_1GenerateDrawCommands.html#a95053e2c9b2d0479b68746a480192091", null ]
           ] ],
           [ "GenerateVectorDrawCommands", "classlysa_1_1GenerateVectorDrawCommands.html", [
             [ "GenerateVectorDrawCommands", "classlysa_1_1GenerateVectorDrawCommands.html#a90432b2fa65809ce65f4b93ac2a6e4cc", null ],
@@ -704,8 +754,13 @@ var NAVTREE =
           [ "GlobalDescriptorSet", "classlysa_1_1GlobalDescriptorSet.html", [
             [ "GlobalDescriptorSet", "classlysa_1_1GlobalDescriptorSet.html#af5abe8db23bea01d416940f35ad77f27", null ],
             [ "~GlobalDescriptorSet", "classlysa_1_1GlobalDescriptorSet.html#ac1a048b5c4a5ceea081adb9af0e657a1", null ],
+            [ "capture", "classlysa_1_1GlobalDescriptorSet.html#a831fb4ff19f376345989fbd0e08d9209", null ],
+            [ "collect", "classlysa_1_1GlobalDescriptorSet.html#ac766c5df1e59fa88f785ab04b905ffa0", null ],
             [ "getDescriptorLayout", "classlysa_1_1GlobalDescriptorSet.html#a8e6fab1589fa8ebd295842293b5a8634", null ],
             [ "getDescriptorSet", "classlysa_1_1GlobalDescriptorSet.html#a4b8d0326850f875b2c41e40fa2d79611", null ],
+            [ "releaseFrame", "classlysa_1_1GlobalDescriptorSet.html#a0f7be8ca25c653b370e41c6929ae7525", null ],
+            [ "retirementGuards", "classlysa_1_1GlobalDescriptorSet.html#aca32b2cfc6e89a29a9051963fae24a85", null ],
+            [ "trackFrame", "classlysa_1_1GlobalDescriptorSet.html#a31ca7b0e2dafe8aaab09e09bcde97c79", null ],
             [ "update", "classlysa_1_1GlobalDescriptorSet.html#ac5c54df7ed3b930268c8d7752c101725", null ],
             [ "BINDING_IMAGES", "classlysa_1_1GlobalDescriptorSet.html#acb2cefc2b5a14f1de4d7184f25989651", null ],
             [ "BINDING_MATERIALS", "classlysa_1_1GlobalDescriptorSet.html#a064e6cbf1568920bf1d5cdb7f0619e32", null ],
@@ -713,19 +768,33 @@ var NAVTREE =
             [ "BINDING_SHADER_MATERIAL_PARAMETERS", "classlysa_1_1GlobalDescriptorSet.html#a699f32bd2080bbb8c6b856af18e11ddb", null ],
             [ "BINDING_SURFACES", "classlysa_1_1GlobalDescriptorSet.html#a609af534372afe8f2e6484ab8eac683f", null ]
           ] ],
+          [ "GlobalResourcesGeneration", "structlysa_1_1GlobalResourcesGeneration.html", [
+            [ "descriptorSets", "structlysa_1_1GlobalResourcesGeneration.html#a0dc6570a7d3d420357218e7295d84cb0", null ],
+            [ "imageRevision", "structlysa_1_1GlobalResourcesGeneration.html#a93de0fecf2a1821b375c357014c89d5f", null ],
+            [ "images", "structlysa_1_1GlobalResourcesGeneration.html#a65ac4c91c94e9566e949173131937041", null ],
+            [ "indices", "structlysa_1_1GlobalResourcesGeneration.html#ade9599f6b2ab8d6982d982bd77848876", null ],
+            [ "materials", "structlysa_1_1GlobalResourcesGeneration.html#ae76615edbcac3fbf91c7e21e66db5798", null ],
+            [ "meshes", "structlysa_1_1GlobalResourcesGeneration.html#a98018eed344c70843e56003776fe134f", null ],
+            [ "parameters", "structlysa_1_1GlobalResourcesGeneration.html#a36c60f40a311687e38e4e74873723eec", null ],
+            [ "revision", "structlysa_1_1GlobalResourcesGeneration.html#a4075494a23b5f01b804c05f9e6197dfd", null ],
+            [ "surfaces", "structlysa_1_1GlobalResourcesGeneration.html#a4b39addadd0ec8f4f6704c23f62b1077", null ],
+            [ "vertices", "structlysa_1_1GlobalResourcesGeneration.html#aea4ee1021f92743318d727c2973dbde7", null ]
+          ] ],
           [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html", [
-            [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html#a19cdb9f191c6515462c7aed5793668d6", null ],
+            [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html#a3048a6a07f3931a4318f2a9005061c21", null ],
             [ "addInstance", "structlysa_1_1GraphicPipelineData.html#aea5191d61d904af011a84164218b11c6", null ],
             [ "addInstance", "structlysa_1_1GraphicPipelineData.html#af129d1bb1ed84b6c788625f51480f8d6", null ],
             [ "removeInstance", "structlysa_1_1GraphicPipelineData.html#a87b82dff8f24432a2ccc435d7ac6930f", null ],
             [ "updateData", "structlysa_1_1GraphicPipelineData.html#adb9a8603c15b6535cd589b938141aead", null ],
             [ "updateInstance", "structlysa_1_1GraphicPipelineData.html#a91feaa00e6011c61b009b98498a79da9", null ],
-            [ "activeInstances", "structlysa_1_1GraphicPipelineData.html#ac35bc4cd0fe918170d8448ba3653808a", null ],
+            [ "activeInstances", "structlysa_1_1GraphicPipelineData.html#af19eadb9fcf51009cb9dda45968aeac3", null ],
             [ "activeInstancesBuffer", "structlysa_1_1GraphicPipelineData.html#a935e61e5fd89ef21acc8a7ab834fdfa5", null ],
             [ "activeInstancesCount", "structlysa_1_1GraphicPipelineData.html#a135befc1fe4e26cfc299adb95c1be13d", null ],
             [ "activeInstancesStagingBuffer", "structlysa_1_1GraphicPipelineData.html#a8bef21c6358f408c41be8e50cd2e3731", null ],
+            [ "activeInstancesState", "structlysa_1_1GraphicPipelineData.html#a7bfce1de5cc4763d506f898baeb6fd3f", null ],
             [ "culledDrawCommandsBuffer", "structlysa_1_1GraphicPipelineData.html#a431b0c0c0f5f7ec1b9f5ddbcfaf4cb0b", null ],
             [ "culledDrawCommandsCountBuffer", "structlysa_1_1GraphicPipelineData.html#a6849b22679e11a19cf3c16e524cca464", null ],
+            [ "drawCommandGroupsBuffer", "structlysa_1_1GraphicPipelineData.html#ace55a11037a12b0e9ccd1c77c0fd355a", null ],
             [ "drawCommandsBuffer", "structlysa_1_1GraphicPipelineData.html#a98978277f18a9c8a22a2b50ca200d84a", null ],
             [ "drawCommandsCount", "structlysa_1_1GraphicPipelineData.html#a1e1c767ed1f2b1a42316fa94f0fbc88c", null ],
             [ "drawCommandsCountBuffer", "structlysa_1_1GraphicPipelineData.html#ad54b572f4993f7db6bde1b3282e0b31b", null ],
@@ -736,6 +805,7 @@ var NAVTREE =
             [ "instancesMemoryBlocks", "structlysa_1_1GraphicPipelineData.html#af29e06dbbb66a37be9c22b8f236ef150", null ],
             [ "instancesUpdated", "structlysa_1_1GraphicPipelineData.html#a62cd07999e78eedc1dadc41fec53976d", null ],
             [ "materialManager", "structlysa_1_1GraphicPipelineData.html#aef535b73569ab579576bc1043f445fdc", null ],
+            [ "meshInstancesDataArray", "structlysa_1_1GraphicPipelineData.html#a935a6acbf39466061d19510044d094bd", null ],
             [ "pipelineId", "structlysa_1_1GraphicPipelineData.html#a8ff5781cccdc145ec2baf241d05b2eaa", null ],
             [ "vireo", "structlysa_1_1GraphicPipelineData.html#aab366751f72e4a3db209aa860ced6311", null ]
           ] ],
@@ -755,11 +825,8 @@ var NAVTREE =
             [ "getWidth", "classlysa_1_1Image.html#ab85db63c250eabf7f7389f94a2efa90a", null ],
             [ "ImageManager", "classlysa_1_1Image.html#a3d777a026a772de1f70d37031a8aa117", null ]
           ] ],
-          [ "ImageEvent", "structlysa_1_1ImageEvent.html", [
-            [ "DESTROY", "structlysa_1_1ImageEvent.html#a106b6bbb8b1f6386d9ec297e7ab632f3", null ]
-          ] ],
           [ "ImageManager", "classlysa_1_1ImageManager.html", [
-            [ "ImageManager", "classlysa_1_1ImageManager.html#a5c8a802656bf1e091083ce13e40f1cbf", null ],
+            [ "ImageManager", "classlysa_1_1ImageManager.html#acadd0d3d3f8ba2255150628c2246e3dc", null ],
             [ "~ImageManager", "classlysa_1_1ImageManager.html#a4863c413e6b6bd948f356c2fb31d1a27", null ],
             [ "contains", "classlysa_1_1ImageManager.html#afe1b9e223aa36ebbc741b658e995c11a", null ],
             [ "create", "classlysa_1_1ImageManager.html#ac640bb14eba1dd2d503acebc8d905231", null ],
@@ -770,8 +837,13 @@ var NAVTREE =
             [ "getBlankCubeMap", "classlysa_1_1ImageManager.html#a80154ef2d4fda2a1b5975ed865136ea2", null ],
             [ "getBlankImage", "classlysa_1_1ImageManager.html#a862d9d5f62213b91603880f73400fef3", null ],
             [ "getImages", "classlysa_1_1ImageManager.html#a9815a767dd81ec1b5f9931165b995927", null ],
+            [ "getRevision", "classlysa_1_1ImageManager.html#a07c116d1a4f752960834a707916ddac8", null ],
+            [ "getSnapshot", "classlysa_1_1ImageManager.html#a5c36df1a2a5f011b184aa10bff8c525f", null ],
             [ "load", "classlysa_1_1ImageManager.html#a8d3836cbfb49638d4232f8138a797c81", null ],
             [ "save", "classlysa_1_1ImageManager.html#a9155e305fd03ee93429e4236a35d0c5f", null ]
+          ] ],
+          [ "ImageSignal", "structlysa_1_1ImageSignal.html", [
+            [ "DESTROY", "structlysa_1_1ImageSignal.html#a106b6bbb8b1f6386d9ec297e7ab632f3", null ]
           ] ],
           [ "ImageTexture", "structlysa_1_1ImageTexture.html", [
             [ "ImageTexture", "structlysa_1_1ImageTexture.html#a179429506f96dd230615aee489eb1d28", null ],
@@ -782,6 +854,7 @@ var NAVTREE =
           ] ],
           [ "Input", "classlysa_1_1Input.html", [
             [ "addAction", "classlysa_1_1Input.html#a17affe934f1f1f1e71692be0926b6577", null ],
+            [ "getClipboardText", "classlysa_1_1Input.html#a28e3a6b438479609b3a2daf1d0d57be7", null ],
             [ "getConnectedJoypads", "classlysa_1_1Input.html#a6f9b55aa337f307d58b4c27cb1508d5e", null ],
             [ "getGamepadVector", "classlysa_1_1Input.html#ae901b9946ce93a74368bc6d8e9878b7c", null ],
             [ "getJoypadName", "classlysa_1_1Input.html#a0b57f8957c2b3b35bd81d1250b8ccaf4", null ],
@@ -791,12 +864,17 @@ var NAVTREE =
             [ "isGamepadButtonJustPressed", "classlysa_1_1Input.html#a2f60aab503c4ae56c4c1ce35fc2e63ed", null ],
             [ "isGamepadButtonJustReleased", "classlysa_1_1Input.html#a830b9547a516c75d3367e4d28e4464a0", null ],
             [ "isGamepadButtonPressed", "classlysa_1_1Input.html#acd950c3cd8ce08f4d6e1c3a764d9eb1c", null ],
+            [ "isKeyJustPressed", "classlysa_1_1Input.html#a811eda4aba53ad91dcd8180183304f96", null ],
             [ "isKeyJustPressed", "classlysa_1_1Input.html#a81955d2b4d9a17c8bf88060a957c6139", null ],
+            [ "isKeyJustReleased", "classlysa_1_1Input.html#a553cb440e7d6c99c68824768d7b3c009", null ],
             [ "isKeyJustReleased", "classlysa_1_1Input.html#a0f3e046b5165de030eb976928cc9cbc3", null ],
+            [ "isKeyPressed", "classlysa_1_1Input.html#a203284e87e71c827f2e135c3ad9edd92", null ],
             [ "isKeyPressed", "classlysa_1_1Input.html#ae86665d7f8778af8a840a1a6562ce96a", null ],
             [ "isMouseButtonJustPressed", "classlysa_1_1Input.html#aa5c17ee856968e478eec91d4365b3ddd", null ],
             [ "isMouseButtonJustReleased", "classlysa_1_1Input.html#a8c1182c0f8f14f7c582d278608e2538c", null ],
-            [ "isMouseButtonPressed", "classlysa_1_1Input.html#a60a46ae5c945f9c57fcc969ba67e120b", null ]
+            [ "isMouseButtonPressed", "classlysa_1_1Input.html#a60a46ae5c945f9c57fcc969ba67e120b", null ],
+            [ "keyToValue", "classlysa_1_1Input.html#a4d67a62a07eed2928f3c0d96830f3c7b", null ],
+            [ "setClipboardText", "classlysa_1_1Input.html#a5190eeff5085116d88f88948faf9eb70", null ]
           ] ],
           [ "InputAction", "structlysa_1_1InputAction.html", [
             [ "entries", "structlysa_1_1InputAction.html#abed7ec350f9bb65b8c9bfb329d641888", null ],
@@ -820,7 +898,8 @@ var NAVTREE =
             [ "key", "structlysa_1_1InputEventKey.html#a96313403719d705d2df812e3ba166772", null ],
             [ "modifiers", "structlysa_1_1InputEventKey.html#a3fbf70e121627ba0ebe2e045f84c3622", null ],
             [ "pressed", "structlysa_1_1InputEventKey.html#a132ba96da5ba28448b61e42c019312a9", null ],
-            [ "repeat", "structlysa_1_1InputEventKey.html#aa85ffe7728fe6b62d593de58cb66f232", null ]
+            [ "repeat", "structlysa_1_1InputEventKey.html#aa85ffe7728fe6b62d593de58cb66f232", null ],
+            [ "value", "structlysa_1_1InputEventKey.html#a5c33da5929c9f2f9ef8d006d2350e6ec", null ]
           ] ],
           [ "InputEventMouseButton", "structlysa_1_1InputEventMouseButton.html", [
             [ "button", "structlysa_1_1InputEventMouseButton.html#a26b9a03c639a856e34c2d8bec26ce611", null ],
@@ -841,10 +920,15 @@ var NAVTREE =
           [ "InstanceData", "structlysa_1_1InstanceData.html", [
             [ "materialIndex", "structlysa_1_1InstanceData.html#a22c875b5ae1717de5a14f1c07aa26287", null ],
             [ "meshInstanceIndex", "structlysa_1_1InstanceData.html#aff581f3241a8bea27125ad99fbf637ad", null ],
-            [ "meshSurfaceMaterialIndex", "structlysa_1_1InstanceData.html#ab1c9b47d1e16b4667f966fb3107532a8", null ]
+            [ "meshSurfaceMaterialIndex", "structlysa_1_1InstanceData.html#ab1c9b47d1e16b4667f966fb3107532a8", null ],
+            [ "surfaceIndex", "structlysa_1_1InstanceData.html#abb0d4aeaacfa3d88f70f65ccc3336887", null ]
+          ] ],
+          [ "InstanceGroupData", "structlysa_1_1InstanceGroupData.html", [
+            [ "firstInstance", "structlysa_1_1InstanceGroupData.html#a1e5c0161243c82bf8325d05c5116d799", null ],
+            [ "instanceCount", "structlysa_1_1InstanceGroupData.html#aa3a8449e8d72d895d13034eac614350a", null ]
           ] ],
           [ "JoltPhysicsEngine", "classlysa_1_1JoltPhysicsEngine.html", [
-            [ "JoltPhysicsEngine", "classlysa_1_1JoltPhysicsEngine.html#a1dea8cc3ce73d11e6b42b6fd6589020f", null ],
+            [ "JoltPhysicsEngine", "classlysa_1_1JoltPhysicsEngine.html#a82376f414795897b100460b361d6357f", null ],
             [ "createMaterial", "classlysa_1_1JoltPhysicsEngine.html#a66af6f47e86334910653bc4f8f8e701f", null ],
             [ "createScene", "classlysa_1_1JoltPhysicsEngine.html#ac6de4a2f5bee368f62eaf94dcacc2e3a", null ],
             [ "duplicateMaterial", "classlysa_1_1JoltPhysicsEngine.html#a5a59d1d9e2ded14528fabccc857e36b3", null ],
@@ -852,13 +936,91 @@ var NAVTREE =
             [ "setRestitutionCombineMode", "classlysa_1_1JoltPhysicsEngine.html#afce8dd95a99b8203ce789e6c7d8ee482", null ]
           ] ],
           [ "JoltPhysicsWorld", "classlysa_1_1JoltPhysicsWorld.html", [
-            [ "JoltPhysicsWorld", "classlysa_1_1JoltPhysicsWorld.html#ad81ceb32a28fbc207976b54e8d93fce6", null ],
+            [ "JoltPhysicsWorld", "classlysa_1_1JoltPhysicsWorld.html#af03034b2150b9b842413290984a10119", null ],
             [ "debug", "classlysa_1_1JoltPhysicsWorld.html#a8a3b8ee8120d36f358d6953146634563", null ],
             [ "getBodyInterface", "classlysa_1_1JoltPhysicsWorld.html#aeef0e1ba51fb1d7af8e025dc4a1b2f4e", null ],
             [ "getGravity", "classlysa_1_1JoltPhysicsWorld.html#af507f76cceab93b64d857a1a99eb9651", null ],
             [ "getPhysicsSystem", "classlysa_1_1JoltPhysicsWorld.html#a81576132c6997ce927f680420cc18880", null ],
             [ "getTempAllocator", "classlysa_1_1JoltPhysicsWorld.html#a1d8e98543d99ad2de368539bd2d0df1a", null ],
             [ "update", "classlysa_1_1JoltPhysicsWorld.html#aba3bb6450a37d358a73f97413a5c093d", null ]
+          ] ],
+          [ "JsonDocument", "classlysa_1_1JsonDocument.html", [
+            [ "JsonDocument", "classlysa_1_1JsonDocument.html#a71b96ba123c1e47080fcbd804d041905", null ],
+            [ "~JsonDocument", "classlysa_1_1JsonDocument.html#a19e2e7b384259ceae4b2ab4af39e8ff4", null ],
+            [ "JsonDocument", "classlysa_1_1JsonDocument.html#a274c3546d2b1ef97c36719e45dba82c4", null ],
+            [ "JsonDocument", "classlysa_1_1JsonDocument.html#a05ca6ba345abec8d0749c589062f8b07", null ],
+            [ "dump", "classlysa_1_1JsonDocument.html#af2147d2038fe413b3f97fd1351c12610", null ],
+            [ "getRoot", "classlysa_1_1JsonDocument.html#a567b5f442cab5cd9068fa6d5fce4cdd5", null ],
+            [ "getRoot", "classlysa_1_1JsonDocument.html#aa2dda125d8e7a5cc6604002e8d67b6cb", null ],
+            [ "load", "classlysa_1_1JsonDocument.html#a6340bd61753a44a5a8fbf383776e6fa1", null ],
+            [ "load", "classlysa_1_1JsonDocument.html#a60b73cc66cba07f9678d9962a1290e8f", null ],
+            [ "operator=", "classlysa_1_1JsonDocument.html#ab3a7e9632195d2822905ce78a94d7ac9", null ],
+            [ "operator=", "classlysa_1_1JsonDocument.html#aa4dc75d61c15c09575101831aa3130ca", null ],
+            [ "parse", "classlysa_1_1JsonDocument.html#aaa856daa0ecdab2af4badbfce2de48ae", null ],
+            [ "save", "classlysa_1_1JsonDocument.html#a329669d0e0dad87360b8df8b2c8541e3", null ],
+            [ "save", "classlysa_1_1JsonDocument.html#a1979c02ce6934f15d1d0c66935106fe1", null ]
+          ] ],
+          [ "JsonValue", "classlysa_1_1JsonValue.html", [
+            [ "JsonValue", "classlysa_1_1JsonValue.html#a476d30eca91d28324d014593aa79d1cd", null ],
+            [ "add", "classlysa_1_1JsonValue.html#aead7434efde3bdf0ad35a27a46111bf0", null ],
+            [ "add", "classlysa_1_1JsonValue.html#a123546c70e66b51450f3382f23e28b97", null ],
+            [ "add", "classlysa_1_1JsonValue.html#aa2b805a79dda1038f58db0c946799e08", null ],
+            [ "add", "classlysa_1_1JsonValue.html#af1f462e1e8f3db77f4dffffcf4736d05", null ],
+            [ "add", "classlysa_1_1JsonValue.html#a39107a1f745b9d5b1294c22d1a56ea44", null ],
+            [ "add", "classlysa_1_1JsonValue.html#a11576e14ab5bf3a2291aa93d3409df95", null ],
+            [ "add", "classlysa_1_1JsonValue.html#add0378c31d3262d4fa6fa3e2fe0ca561", null ],
+            [ "add", "classlysa_1_1JsonValue.html#ac622b99158f0d887a58708dd6b044698", null ],
+            [ "add", "classlysa_1_1JsonValue.html#ac622b99158f0d887a58708dd6b044698", null ],
+            [ "addArray", "classlysa_1_1JsonValue.html#a0ff2d303a7378cb202c2d7cf8c07e825", null ],
+            [ "addNull", "classlysa_1_1JsonValue.html#ac5778230265eecb687432a49a9016fc4", null ],
+            [ "addObject", "classlysa_1_1JsonValue.html#a3851a32aa00e47452dceaa773ba7c4fb", null ],
+            [ "clear", "classlysa_1_1JsonValue.html#adf1d9633e64d0de6a36e0af17ccd8163", null ],
+            [ "contains", "classlysa_1_1JsonValue.html#a693a07a13830c25c86dd9a4f2cf45c80", null ],
+            [ "getBoolean", "classlysa_1_1JsonValue.html#a67482c19451ffc9489b590b1592e277c", null ],
+            [ "getBoolean", "classlysa_1_1JsonValue.html#aacff1621a9ebf2394fd22e6700ad64d3", null ],
+            [ "getDouble", "classlysa_1_1JsonValue.html#aac3d4e90c7510a4383132bacf204df41", null ],
+            [ "getDouble", "classlysa_1_1JsonValue.html#a96df2f33bb4496358aa4b9db03f2435b", null ],
+            [ "getFloat", "classlysa_1_1JsonValue.html#a44ce8a0e9bab4fc946303f7bc8b0a3e1", null ],
+            [ "getFloat", "classlysa_1_1JsonValue.html#a447c4dc0c57f1ffb5e4b70528fdf2f2d", null ],
+            [ "getFloat2", "classlysa_1_1JsonValue.html#ad6c68e9ae50a0821306e56715bee8f8a", null ],
+            [ "getFloat2", "classlysa_1_1JsonValue.html#a4de37dc6b220ef5cc597fef4be7a9977", null ],
+            [ "getFloat3", "classlysa_1_1JsonValue.html#a9cba3d438d03e81dec04ed161ff09f0a", null ],
+            [ "getFloat3", "classlysa_1_1JsonValue.html#ab6518e2f15507f6500ada1c0614dd760", null ],
+            [ "getFloat4", "classlysa_1_1JsonValue.html#a18979aed5d4aaac8eaabe0fe70f10dc2", null ],
+            [ "getFloat4", "classlysa_1_1JsonValue.html#ac3c8074a52246b14127c81940927a3b5", null ],
+            [ "getInteger", "classlysa_1_1JsonValue.html#a020dac7123cd23338b0dddccf0b9cfe7", null ],
+            [ "getInteger", "classlysa_1_1JsonValue.html#a169bf51525065e1d77f154c7b8e311a4", null ],
+            [ "getKeys", "classlysa_1_1JsonValue.html#a80c1c7e632dc2a992f9f53ad21a5cb62", null ],
+            [ "getQuaternion", "classlysa_1_1JsonValue.html#a7196adb49b07f5b01ee08ea7a481f421", null ],
+            [ "getQuaternion", "classlysa_1_1JsonValue.html#a8e6f34f3c15400bf895bda312cd36fe1", null ],
+            [ "getSize", "classlysa_1_1JsonValue.html#a3940a24de61ee09a3de13f3512180b6f", null ],
+            [ "getString", "classlysa_1_1JsonValue.html#afc883e32c8bf5611e79b3143b0c1291a", null ],
+            [ "getString", "classlysa_1_1JsonValue.html#a5e3227677fd1a71432aaf339ded407f9", null ],
+            [ "getType", "classlysa_1_1JsonValue.html#a2f5524297e464303c914252c7259a80f", null ],
+            [ "getValues", "classlysa_1_1JsonValue.html#a81880875d585f8ba80c971afe0b090a3", null ],
+            [ "isArray", "classlysa_1_1JsonValue.html#aefe7cc24045c3560d7550ba662375ce4", null ],
+            [ "isBoolean", "classlysa_1_1JsonValue.html#af683563e3b72d88858665c3f19df2d50", null ],
+            [ "isNull", "classlysa_1_1JsonValue.html#abada6dfb33f4cbafe1e443a5cf8dc8d0", null ],
+            [ "isNumber", "classlysa_1_1JsonValue.html#a1680baf2428512b1a45060f52f3ade28", null ],
+            [ "isObject", "classlysa_1_1JsonValue.html#a13b605b2c9876ab317e21637b8646def", null ],
+            [ "isString", "classlysa_1_1JsonValue.html#abc9dc0708ec1aae2309621664fa8e5a4", null ],
+            [ "isValid", "classlysa_1_1JsonValue.html#a5bc2a781be2586924afce4e4a4ea6697", null ],
+            [ "operator[]", "classlysa_1_1JsonValue.html#a706a0bff8efbc6533f7c23298367812c", null ],
+            [ "operator[]", "classlysa_1_1JsonValue.html#a738ea6ebe981819d10ff1f73f662d25c", null ],
+            [ "remove", "classlysa_1_1JsonValue.html#a31267cb531527194c222caa595049332", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a87dd71aea869bfd75f4f72863f16a3ef", null ],
+            [ "set", "classlysa_1_1JsonValue.html#ac099927455d2cd41deab6dcbe308f1b6", null ],
+            [ "set", "classlysa_1_1JsonValue.html#aad8157d93315230b3ed1ee3c51ccec38", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a4bc52351f91662a8bc5503d9872a0773", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a3c60c0141cf28af3c9d2c65b96874163", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a9e79d18c0c1f44a25e10a2e612e00c8d", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a80024bb18ca14210b235610765c2af12", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a7c996f9c68713d81c9e0f73eeca59b28", null ],
+            [ "set", "classlysa_1_1JsonValue.html#a7c996f9c68713d81c9e0f73eeca59b28", null ],
+            [ "setArray", "classlysa_1_1JsonValue.html#ad5c93cdd4ae216f7a88c133a5a3214fd", null ],
+            [ "setNull", "classlysa_1_1JsonValue.html#aec36f96787ae6fe842fa1ed0e3d034c2", null ],
+            [ "setObject", "classlysa_1_1JsonValue.html#a55c99ed048d3f2af259d0aa670d90621", null ],
+            [ "JsonDocument", "classlysa_1_1JsonValue.html#a00ef1e7d46f2a60bf12559b143197d83", null ]
           ] ],
           [ "LayerCollideWith", "structlysa_1_1LayerCollideWith.html", [
             [ "collideWith", "structlysa_1_1LayerCollideWith.html#ad1177c71baaf237435d53cb77b924238", null ],
@@ -917,6 +1079,7 @@ var NAVTREE =
             [ "setLocale", "classlysa_1_1Locale.html#a81b590f0ab82a5befc15c52cae9a1198", null ]
           ] ],
           [ "Log", "classlysa_1_1Log.html", [
+            [ "LogCallback", "classlysa_1_1Log.html#a7f53da89631c9f37bfad8ec802086428", null ],
             [ "Log", "classlysa_1_1Log.html#a98637c2ff982bd4f06b014149736ea38", null ],
             [ "critical", "classlysa_1_1Log.html#aa7ce9ebe6fbfc20a8fe362c6e65b3bf9", null ],
             [ "debug", "classlysa_1_1Log.html#aa17fcbe02dd86707114642aee8d6f3bc", null ],
@@ -928,6 +1091,7 @@ var NAVTREE =
             [ "init", "classlysa_1_1Log.html#ae31f4bdbd9374c87ee0ca3f78a9b17a2", null ],
             [ "isLoggingEnabled", "classlysa_1_1Log.html#ac9e6bab6a6e66a51bbf9cfb989dc8e66", null ],
             [ "log", "classlysa_1_1Log.html#a9115f68bc2438b98fb686d95f27228f5", null ],
+            [ "setLogCallback", "classlysa_1_1Log.html#a6616803869d132e2e1638360274e563a", null ],
             [ "shutdown", "classlysa_1_1Log.html#a62d41be4b41bfdb31fb9d8b017c5363a", null ],
             [ "trace", "classlysa_1_1Log.html#af340aa45ac5733b4e4c506726d3a88af", null ],
             [ "warning", "classlysa_1_1Log.html#a173ed5dd0eef2a7aa859b0a2c63ce401", null ],
@@ -950,10 +1114,10 @@ var NAVTREE =
             [ "~Lysa", "classlysa_1_1Lysa.html#ae78f49461563d2179305aa663c4424eb", null ],
             [ "run", "classlysa_1_1Lysa.html#a13a43e6d814de94978c515cb084873b1", null ]
           ] ],
-          [ "MainLoopEvent", "structlysa_1_1MainLoopEvent.html", [
-            [ "PHYSICS_PROCESS", "structlysa_1_1MainLoopEvent.html#a2804eebd4dfaa07a52514c2ecff666b9", null ],
-            [ "PROCESS", "structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd", null ],
-            [ "QUIT", "structlysa_1_1MainLoopEvent.html#a0a17b698f9af9e35bf140eb0edfe27f3", null ]
+          [ "MainLoopSignal", "structlysa_1_1MainLoopSignal.html", [
+            [ "PHYSICS_PROCESS", "structlysa_1_1MainLoopSignal.html#a2804eebd4dfaa07a52514c2ecff666b9", null ],
+            [ "PROCESS", "structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd", null ],
+            [ "QUIT", "structlysa_1_1MainLoopSignal.html#a0a17b698f9af9e35bf140eb0edfe27f3", null ]
           ] ],
           [ "ManagedResource", "structlysa_1_1ManagedResource.html", [
             [ "ManagedResource", "structlysa_1_1ManagedResource.html#a212a0e2d745e0248d5912424c0d6a3f2", null ],
@@ -1003,9 +1167,6 @@ var NAVTREE =
             [ "roughnessTexture", "structlysa_1_1MaterialData.html#af57db87cbc89340c9515ad1c3fadc748", null ],
             [ "transparency", "structlysa_1_1MaterialData.html#a461e984e1aa59a77334843735aec9035", null ]
           ] ],
-          [ "MaterialEvent", "structlysa_1_1MaterialEvent.html", [
-            [ "CREATED", "structlysa_1_1MaterialEvent.html#ad4fac2ea6726f0266bf2cd6262879205", null ]
-          ] ],
           [ "MaterialManager", "classlysa_1_1MaterialManager.html", [
             [ "MaterialManager", "classlysa_1_1MaterialManager.html#a8c161aca26f432ce4e7862f3d256e6b3", null ],
             [ "create", "classlysa_1_1MaterialManager.html#af29cfaaab346af5321a8298ac5a0cec8", null ],
@@ -1016,25 +1177,37 @@ var NAVTREE =
             [ "destroy", "classlysa_1_1MaterialManager.html#a302a77e54daed01654e40121a1061fe8", null ],
             [ "destroy", "classlysa_1_1MaterialManager.html#ade65968803d4576e725b00ed121cd621", null ],
             [ "flush", "classlysa_1_1MaterialManager.html#adac116554b543b7c4228c018a85882f5", null ],
+            [ "flush", "classlysa_1_1MaterialManager.html#a5668fe746660d966f4f1b0e61263923c", null ],
             [ "getBuffer", "classlysa_1_1MaterialManager.html#a2f138490c598e86a9a822957703b9a82", null ],
             [ "getParametersBuffer", "classlysa_1_1MaterialManager.html#ae125f9de2bf9f42c0cd629a221b9bae3", null ],
             [ "upload", "classlysa_1_1MaterialManager.html#a23366617eb522279375fa4fb0000d25d", null ],
             [ "uploadParameters", "classlysa_1_1MaterialManager.html#aea188cc7230bed40fa648f8ba42e5f88", null ]
           ] ],
+          [ "MaterialSignal", "structlysa_1_1MaterialSignal.html", [
+            [ "CREATED", "structlysa_1_1MaterialSignal.html#ad4fac2ea6726f0266bf2cd6262879205", null ]
+          ] ],
           [ "MemoryArray", "classlysa_1_1MemoryArray.html", [
+            [ "RetiredBlock", "structlysa_1_1MemoryArray_1_1RetiredBlock.html", [
+              [ "block", "structlysa_1_1MemoryArray_1_1RetiredBlock.html#aaac2720c162a1bc8000b249848373ffe", null ],
+              [ "guards", "structlysa_1_1MemoryArray_1_1RetiredBlock.html#af53ac34f8a92cd44fd43c09969883c2f", null ]
+            ] ],
             [ "~MemoryArray", "classlysa_1_1MemoryArray.html#addb00bfc62aac950264e864f0c76b6e9", null ],
             [ "MemoryArray", "classlysa_1_1MemoryArray.html#accb16035d91aad5b188d4b2b9255177a", null ],
             [ "MemoryArray", "classlysa_1_1MemoryArray.html#a30a3cfaafe885634fa6c0ef70a65e34a", null ],
             [ "alloc", "classlysa_1_1MemoryArray.html#a6d74d7b020647fc7df2d9e150d63c284", null ],
+            [ "collectRetired", "classlysa_1_1MemoryArray.html#a01c7a09622f8eae4cd5b8400637e7975", null ],
             [ "copyTo", "classlysa_1_1MemoryArray.html#ac9f80d58c66de9ddc141026cee6c7d71", null ],
             [ "free", "classlysa_1_1MemoryArray.html#adec0909092618ed7b1a8aa2fc6eec9ca", null ],
+            [ "freeUnlocked", "classlysa_1_1MemoryArray.html#a2c320d41f426e8ee2655fbd3d7a7f591", null ],
             [ "getBuffer", "classlysa_1_1MemoryArray.html#a2f138490c598e86a9a822957703b9a82", null ],
             [ "operator=", "classlysa_1_1MemoryArray.html#a99fae849160b3092558d882253fb58c0", null ],
+            [ "retire", "classlysa_1_1MemoryArray.html#af087146fad5ebe91ec207c72245d78e3", null ],
             [ "buffer", "classlysa_1_1MemoryArray.html#a93d75b05a70a8649d234779e9e08a210", null ],
             [ "freeBlocs", "classlysa_1_1MemoryArray.html#a894abb6d80fec17aff3c65e9a3f1de4b", null ],
             [ "instanceSize", "classlysa_1_1MemoryArray.html#a7da523bc3f0e4b69a4a8a904f938d70b", null ],
             [ "mutex", "classlysa_1_1MemoryArray.html#a1be3f7fa26e4521098de5f1ec0f865f3", null ],
             [ "name", "classlysa_1_1MemoryArray.html#ac673bc430bdc3fdaa09f7becf98ef267", null ],
+            [ "retiredBlocks", "classlysa_1_1MemoryArray.html#a8eacbe752a51c93804f2c50c03efc365", null ],
             [ "vireo", "classlysa_1_1MemoryArray.html#a952a3db971ae6131c8c27a5ee577a381", null ]
           ] ],
           [ "MemoryBlock", "structlysa_1_1MemoryBlock.html", [
@@ -1121,6 +1294,7 @@ var NAVTREE =
             [ "destroy", "classlysa_1_1MeshManager.html#ace0d9328ddab16800bb0a61eb8e5ac8f", null ],
             [ "destroy", "classlysa_1_1MeshManager.html#ade65968803d4576e725b00ed121cd621", null ],
             [ "flush", "classlysa_1_1MeshManager.html#adac116554b543b7c4228c018a85882f5", null ],
+            [ "flush", "classlysa_1_1MeshManager.html#a5668fe746660d966f4f1b0e61263923c", null ],
             [ "getIndexBuffer", "classlysa_1_1MeshManager.html#a5b2d47f3d8475c41dad0942a535ad3c9", null ],
             [ "getMeshBuffer", "classlysa_1_1MeshManager.html#a003db0f795ee9cfd99e2ab608125c9c9", null ],
             [ "getMeshSurfaceBuffer", "classlysa_1_1MeshManager.html#ad3ec98ecea4d4fd3478454ce006edcb9", null ],
@@ -1149,7 +1323,7 @@ var NAVTREE =
             [ "ShouldCollide", "classlysa_1_1ObjectVsBroadPhaseLayerFilterImpl.html#ae2580462e38fa97104062a2fda227ecd", null ]
           ] ],
           [ "PhysXPhysicsEngine", "classlysa_1_1PhysXPhysicsEngine.html", [
-            [ "PhysXPhysicsEngine", "classlysa_1_1PhysXPhysicsEngine.html#a8d66b62d1c656ca038abc5a812e262d7", null ],
+            [ "PhysXPhysicsEngine", "classlysa_1_1PhysXPhysicsEngine.html#ac96b670ced11b72d8fe828b1540ecd93", null ],
             [ "~PhysXPhysicsEngine", "classlysa_1_1PhysXPhysicsEngine.html#a6e7c3e6f3f3c67d1a4caf8cdc48284b2", null ],
             [ "createMaterial", "classlysa_1_1PhysXPhysicsEngine.html#a66af6f47e86334910653bc4f8f8e701f", null ],
             [ "createScene", "classlysa_1_1PhysXPhysicsEngine.html#ac6de4a2f5bee368f62eaf94dcacc2e3a", null ],
@@ -1174,15 +1348,21 @@ var NAVTREE =
             [ "getConfiguration", "classlysa_1_1PhysicsDebugRenderer.html#af146c443c91497a2b887e55f10afa6b8", null ]
           ] ],
           [ "PhysicsEngine", "classlysa_1_1PhysicsEngine.html", [
+            [ "PhysicsEngine", "classlysa_1_1PhysicsEngine.html#af45ac1ef60869183493dc7733b02ec2c", null ],
             [ "~PhysicsEngine", "classlysa_1_1PhysicsEngine.html#ad5258fde9a8908478782af5abb168500", null ],
             [ "create", "classlysa_1_1PhysicsEngine.html#ae0645ad08062d573d18b8c8b7bcc6012", null ],
             [ "createMaterial", "classlysa_1_1PhysicsEngine.html#aa485cfa3a022c5fc325568909f1f2dac", null ],
             [ "createScene", "classlysa_1_1PhysicsEngine.html#ac3d067949cb3d44df1db9a6b06f0e8a0", null ],
             [ "duplicateMaterial", "classlysa_1_1PhysicsEngine.html#a35f8c949fba0b395f24843e97b39e404", null ],
             [ "getEngineType", "classlysa_1_1PhysicsEngine.html#a54ce85ff2332b895b5d19c1b3b53c438", null ],
-            [ "setRestitutionCombineMode", "classlysa_1_1PhysicsEngine.html#a0159898a1944664e40537e597bcb4bbd", null ]
+            [ "setRestitutionCombineMode", "classlysa_1_1PhysicsEngine.html#a0159898a1944664e40537e597bcb4bbd", null ],
+            [ "config", "classlysa_1_1PhysicsEngine.html#a52be3d159b2b18df8385e6f93ce27706", null ]
           ] ],
           [ "PhysicsEngineConfiguration", "structlysa_1_1PhysicsEngineConfiguration.html", [
+            [ "joltMaxBodies", "structlysa_1_1PhysicsEngineConfiguration.html#a9363bc7859dbd8e3a1822d28f2ff2c22", null ],
+            [ "joltMaxBodyPairs", "structlysa_1_1PhysicsEngineConfiguration.html#aa1e57a889693bfd7d38658dbfb795f6c", null ],
+            [ "joltMaxContactConstraints", "structlysa_1_1PhysicsEngineConfiguration.html#af1570d9fcb83361a8e0840916208fe1b", null ],
+            [ "joltNumBodyMutexes", "structlysa_1_1PhysicsEngineConfiguration.html#a10aa5a3f1e839f74d8aff5f9f1df6056", null ],
             [ "layerCollisionTable", "structlysa_1_1PhysicsEngineConfiguration.html#ad6579a2ef997c22313af2a27f34a816a", null ]
           ] ],
           [ "PhysicsWorld", "classlysa_1_1PhysicsWorld.html", [
@@ -1197,6 +1377,18 @@ var NAVTREE =
             [ "thick", "structlysa_1_1PredefinedFontParams.html#a3fd408bd901b51b3160acb065e70a494", null ],
             [ "thicker", "structlysa_1_1PredefinedFontParams.html#a60ea024ca5b284e967c76cb46d1fdc3e", null ]
           ] ],
+          [ "ProcessRunner", "classlysa_1_1ProcessRunner.html", [
+            [ "ExitCallback", "classlysa_1_1ProcessRunner.html#a429596f7b1849fe6d2e9014d1ee6dab0", null ],
+            [ "LineCallback", "classlysa_1_1ProcessRunner.html#a4640c4399f027cd51f35ff89870bf9eb", null ],
+            [ "ProcessRunner", "classlysa_1_1ProcessRunner.html#a8f96535fa152a4cc8ac5cb749b882824", null ],
+            [ "~ProcessRunner", "classlysa_1_1ProcessRunner.html#a1af7fa4fd63a095ca44cd3e871f5f2d7", null ],
+            [ "ProcessRunner", "classlysa_1_1ProcessRunner.html#a66b4534a0f58398bfd261d93ff4feec9", null ],
+            [ "isRunning", "classlysa_1_1ProcessRunner.html#ad619b8b51adc7874204abd71080cd90e", null ],
+            [ "operator=", "classlysa_1_1ProcessRunner.html#ae64fdc9d4d9b19a5378d6d993c11794a", null ],
+            [ "terminate", "classlysa_1_1ProcessRunner.html#ac53489da3516e99783981b43c65bb4eb", null ],
+            [ "KILL_TIMEOUT", "classlysa_1_1ProcessRunner.html#a58ed5227cc526a2866ced10287e782cf", null ],
+            [ "TERMINATE_TIMEOUT", "classlysa_1_1ProcessRunner.html#ab2457c6e40fa0a645a0ef92b24211eea", null ]
+          ] ],
           [ "PropertyTween", "classlysa_1_1PropertyTween.html", [
             [ "PropertyTween", "classlysa_1_1PropertyTween.html#a7fdd135172091da1c3282ffcba19ba01", null ],
             [ "getOverflow", "classlysa_1_1PropertyTween.html#ab95aa74b09f6736b4c9cb9644877ca3b", null ],
@@ -1204,6 +1396,13 @@ var NAVTREE =
           ] ],
           [ "QuadMesh", "classlysa_1_1QuadMesh.html", [
             [ "QuadMesh", "classlysa_1_1QuadMesh.html#a2dc275c1897b754986a50ec8f6f92490", null ]
+          ] ],
+          [ "QueuedEvent", "classlysa_1_1QueuedEvent.html", [
+            [ "QueuedEvent", "classlysa_1_1QueuedEvent.html#a4f3867e821549082fc7f86b92f5a605e", null ],
+            [ "push", "classlysa_1_1QueuedEvent.html#a026f5469d44b6f8002e72a361c671765", null ],
+            [ "subscribe", "classlysa_1_1QueuedEvent.html#a8f55765afc6ea0bd6034ef3ed6fe5909", null ],
+            [ "subscribe", "classlysa_1_1QueuedEvent.html#a076e9be0c1c2627a11eda016807e3489", null ],
+            [ "subscribe", "classlysa_1_1QueuedEvent.html#aab2f478b9c0baf2378eedade0322c5ca", null ]
           ] ],
           [ "Ray", "structlysa_1_1Ray.html", [
             [ "Ray", "structlysa_1_1Ray.html#a00190f44cbdb7a8449fddcd00e7306da", null ],
@@ -1248,6 +1447,7 @@ var NAVTREE =
             [ "contains", "structlysa_1_1Rect.html#a2086e142648d3ef1b8ec896f17133e5a", null ],
             [ "contains", "structlysa_1_1Rect.html#a31daf1c7fc8d7ab37144c069b6b15a7b", null ],
             [ "intersect", "structlysa_1_1Rect.html#a00ee3010d853c5f8f347c7c2942dba3c", null ],
+            [ "intersects", "structlysa_1_1Rect.html#ae0e23361083615a1d6a1adb199807aa9", null ],
             [ "operator=", "structlysa_1_1Rect.html#a6044a3172628aed84fb9faa8a31a2b11", null ],
             [ "operator==", "structlysa_1_1Rect.html#a61f136ab792489e2f49ad6165091b53e", null ],
             [ "height", "structlysa_1_1Rect.html#a48083b65ac9a863566dc3e3fff09a5b4", null ],
@@ -1385,6 +1585,7 @@ var NAVTREE =
             [ "getRect", "classlysa_1_1RenderingWindow.html#a97bf58597e84a86861d4beaa5207b34d", null ],
             [ "getRenderTarget", "classlysa_1_1RenderingWindow.html#a07c9da2c454a4870a80f6c57b5d66fc6", null ],
             [ "getRenderTarget", "classlysa_1_1RenderingWindow.html#a0779b454d3b74f758f5b9c47902359ee", null ],
+            [ "isMaximized", "classlysa_1_1RenderingWindow.html#a28e910de88f3ff5419710b0b0a03c2bb", null ],
             [ "isMinimized", "classlysa_1_1RenderingWindow.html#a14e6f95fa2c9ec543caa7f16f30c53d6", null ],
             [ "isMouseHidden", "classlysa_1_1RenderingWindow.html#aaece2721a182b451fba05dd1b814d059", null ],
             [ "isPaused", "classlysa_1_1RenderingWindow.html#a48ffb22c4b73bf70c93e036abeab81f2", null ],
@@ -1409,6 +1610,7 @@ var NAVTREE =
           [ "RenderingWindowEvent", "structlysa_1_1RenderingWindowEvent.html", [
             [ "CLOSING", "structlysa_1_1RenderingWindowEvent.html#ab431a9d7e66da10edeb29d376c7fb9d8", null ],
             [ "INPUT", "structlysa_1_1RenderingWindowEvent.html#a9750834ba5ad1377d3f6c9e681e33572", null ],
+            [ "MOVED", "structlysa_1_1RenderingWindowEvent.html#a3348e73e9020e053b5828085cb7a1811", null ],
             [ "READY", "structlysa_1_1RenderingWindowEvent.html#a77cd7e6193bac4c8f0923fe050ee07a5", null ]
           ] ],
           [ "Renderpass", "classlysa_1_1Renderpass.html", [
@@ -1418,9 +1620,9 @@ var NAVTREE =
             [ "destroyShaderModules", "classlysa_1_1Renderpass.html#a4a25f88f4d1b3f29559391de19d81e16", null ],
             [ "init", "classlysa_1_1Renderpass.html#a5e53855481dad7a91a6ac0eafbf01725", null ],
             [ "init", "classlysa_1_1Renderpass.html#a5319b2e4e5d93f77bcbd0642b54203d4", null ],
-            [ "initCompute", "classlysa_1_1Renderpass.html#aec780a4f1804b5965ee7824244f39d31", null ],
+            [ "initCompute", "classlysa_1_1Renderpass.html#a92722c0bc0a22df46612a902b508da3d", null ],
             [ "initForScene", "classlysa_1_1Renderpass.html#a9a0138f87c75f518f8d57dfa9db5258a", null ],
-            [ "initRendering", "classlysa_1_1Renderpass.html#afe480d668a238c2b81f7b7ce7431ef39", null ],
+            [ "initRendering", "classlysa_1_1Renderpass.html#a15e0b084a6fc1d270d0339fc5450451d", null ],
             [ "loadShader", "classlysa_1_1Renderpass.html#adbbf5771ef5bf6d490b1b6546631be5d", null ],
             [ "operator=", "classlysa_1_1Renderpass.html#aa0bfccfca606cc033a3f76902ec24c37", null ],
             [ "resize", "classlysa_1_1Renderpass.html#a08719e90e3f87072f6792606fce9ab2a", null ],
@@ -1441,6 +1643,7 @@ var NAVTREE =
             [ "images", "structlysa_1_1ResourcesCapacity.html#a6ca14d96ba169f49d9e1c2abe25d8893", null ],
             [ "indices", "structlysa_1_1ResourcesCapacity.html#a2f73903b44bd263271e3c2ddfc0f7e26", null ],
             [ "material", "structlysa_1_1ResourcesCapacity.html#ac4e8eb0e49d9578da05db8836f6360bc", null ],
+            [ "maxImages", "structlysa_1_1ResourcesCapacity.html#a556eff3ef680a6075ffc55299525af28", null ],
             [ "meshes", "structlysa_1_1ResourcesCapacity.html#a334a9544351600a8e6cb7e98c15fec52", null ],
             [ "samplers", "structlysa_1_1ResourcesCapacity.html#a414bd7d792ea11b4300d1b448bbb6c2a", null ],
             [ "shaderMaterialParameters", "structlysa_1_1ResourcesCapacity.html#aa564392aec8057ff194e0165012c5a0b", null ],
@@ -1448,18 +1651,22 @@ var NAVTREE =
             [ "vectorRendererMaxDraws", "structlysa_1_1ResourcesCapacity.html#af2c81550a96ad258abd4e9396499f6c0", null ],
             [ "vectorRendererMaxFonts", "structlysa_1_1ResourcesCapacity.html#a1fca22eafdb80493a79c86bd32b04d8f", null ],
             [ "vectorRendererMaxImages", "structlysa_1_1ResourcesCapacity.html#abaea92c5d01acdb9057290eac4c38110", null ],
+            [ "vectorRendererMaxSdfSegments", "structlysa_1_1ResourcesCapacity.html#a0472ada063ab9e7125350ec2655faf4c", null ],
             [ "vectorRendererMaxVertices", "structlysa_1_1ResourcesCapacity.html#a601be8b9877a2308de4672ff9a2c88d7", null ],
             [ "vertices", "structlysa_1_1ResourcesCapacity.html#a6d08ccf3eb948789c8491a1ba033cde5", null ]
           ] ],
           [ "ResourcesManager", "classlysa_1_1ResourcesManager.html", [
+            [ "UsageGuards", "classlysa_1_1ResourcesManager.html#aa870d6d45bfb6ebb1c6238e2b108306c", null ],
             [ "~ResourcesManager", "classlysa_1_1ResourcesManager.html#a71c9fac8fc62d22c6ae7ba54d0f96202", null ],
             [ "ResourcesManager", "classlysa_1_1ResourcesManager.html#a36e04cb183ffa1ae4884a6be834afacb", null ],
             [ "ResourcesManager", "classlysa_1_1ResourcesManager.html#a01aa4113a620e3e0b8bfb98941042929", null ],
             [ "allocate", "classlysa_1_1ResourcesManager.html#addf748610c97dda598936271566c86e7", null ],
+            [ "collectRetired", "classlysa_1_1ResourcesManager.html#a01c7a09622f8eae4cd5b8400637e7975", null ],
             [ "create", "classlysa_1_1ResourcesManager.html#af83610b28d5b815800a120f70be91cef", null ],
             [ "destroy", "classlysa_1_1ResourcesManager.html#acb90269f968a0deda5589c5be2e3b5ed", null ],
             [ "destroy", "classlysa_1_1ResourcesManager.html#a469f814de32da1b209a51e32d977ec37", null ],
             [ "destroy", "classlysa_1_1ResourcesManager.html#a5f50f448277782f9464ce9de370f4c07", null ],
+            [ "enableGrowth", "classlysa_1_1ResourcesManager.html#ae746b64ac20d796dc4b706c0d7afe1b2", null ],
             [ "forEach", "classlysa_1_1ResourcesManager.html#a4e556e468ad52c822ee81ac8f095253b", null ],
             [ "forEach", "classlysa_1_1ResourcesManager.html#a140ca1c7e442e0a7a0fd5267cc420f30", null ],
             [ "getCapacity", "classlysa_1_1ResourcesManager.html#ae2797c6a9412c0116b6a43ed6ae146df", null ],
@@ -1468,9 +1675,11 @@ var NAVTREE =
             [ "operator=", "classlysa_1_1ResourcesManager.html#a7f843a7cc052ad6193766aae40413527", null ],
             [ "operator[]", "classlysa_1_1ResourcesManager.html#aca76a80f81b0375e7688c68fb04aacb0", null ],
             [ "operator[]", "classlysa_1_1ResourcesManager.html#a2f09445c3b9f905a035fe60c7ed37738", null ],
+            [ "requireAvailable", "classlysa_1_1ResourcesManager.html#aafb2683c2b8b970768843a8e594f0226", null ],
+            [ "setRetirementProvider", "classlysa_1_1ResourcesManager.html#a037387e20dffbb6de3d08ac21360a459", null ],
             [ "use", "classlysa_1_1ResourcesManager.html#aeffde4221876fb03643fc2eb906320f7", null ],
             [ "resources", "classlysa_1_1ResourcesManager.html#a5e5d59a8271a57913274425722b21143", null ],
-            [ "resourcesMutex", "classlysa_1_1ResourcesManager.html#a7a37d6ec919f1a898f569f2d9c4fc44b", null ]
+            [ "resourcesMutex", "classlysa_1_1ResourcesManager.html#a0a70257f20903b3e5847cbe19eb73e37", null ]
           ] ],
           [ "ResourcesPack", "classlysa_1_1ResourcesPack.html", [
             [ "Entry", "structlysa_1_1ResourcesPack_1_1Entry.html", [
@@ -1526,6 +1735,32 @@ var NAVTREE =
             [ "render", "classlysa_1_1SSAOPass.html#abe48a78dc8b508097986741bd8eca977", null ],
             [ "resize", "classlysa_1_1SSAOPass.html#a6f872b3ab1e81f18ffa9038e26952242", null ]
           ] ],
+          [ "SVG", "classlysa_1_1SVG.html", [
+            [ "Paint", "structlysa_1_1SVG_1_1Paint.html", [
+              [ "color", "structlysa_1_1SVG_1_1Paint.html#a6af02d84432aeac3e78ac4244019a9fa", null ],
+              [ "currentColor", "structlysa_1_1SVG_1_1Paint.html#aa7e4c3be863d4598a342631e6e8db201", null ],
+              [ "shape", "structlysa_1_1SVG_1_1Paint.html#ab2f31fa3e3c898c9040c7effb6ea2bcd", null ]
+            ] ],
+            [ "Segment", "structlysa_1_1SVG_1_1Segment.html", [
+              [ "x0", "structlysa_1_1SVG_1_1Segment.html#a3c9556645d92e863376a4063a3ad7001", null ],
+              [ "x1", "structlysa_1_1SVG_1_1Segment.html#a3389d8b95846602e8f94cc15f41e48e9", null ],
+              [ "y0", "structlysa_1_1SVG_1_1Segment.html#adf19b8ba42d497d3093c3a51b1a32cca", null ],
+              [ "y1", "structlysa_1_1SVG_1_1Segment.html#a9fe80bf4738047a31d7c162807ed85f0", null ]
+            ] ],
+            [ "SVG", "classlysa_1_1SVG.html#ac131014cb5c36657b7f137028198400c", null ],
+            [ "getAspectRatio", "classlysa_1_1SVG.html#a9e59a36ae756e1480d52e51e42dff96b", null ],
+            [ "getFillRule", "classlysa_1_1SVG.html#af46ac63f99324c0ea04edc30aa1757a8", null ],
+            [ "getPaints", "classlysa_1_1SVG.html#a776e1f72d2d7be93f0216e1280c4d9c7", null ],
+            [ "getSegments", "classlysa_1_1SVG.html#afb3bd0f8bdd86acb12c9d360d5e1fef1", null ],
+            [ "getStrokeWidth", "classlysa_1_1SVG.html#acdf5194a0eecf4203ec6cbbc6fcd4281", null ],
+            [ "isEmpty", "classlysa_1_1SVG.html#a0d015b0b4d93d3cbfe3262d8dd38e601", null ],
+            [ "load", "classlysa_1_1SVG.html#ad4b9f6824f331d78c16a4659ddbfaf71", null ],
+            [ "DEFAULT_STROKE_WIDTH", "classlysa_1_1SVG.html#a50edcdd1d7603a03ab92b67c6d9cb43a", null ],
+            [ "DEFAULT_TOLERANCE", "classlysa_1_1SVG.html#a2b77c2bc9b10492ea4f6f967ed226b84", null ],
+            [ "MAX_STROKE_WIDTH", "classlysa_1_1SVG.html#a2dca7e37e8385368a9f12ffdff4a1850", null ],
+            [ "MIN_STROKE_WIDTH", "classlysa_1_1SVG.html#abb405f11e63ebc1869d985338a0efedb", null ],
+            [ "STROKE_WIDTH_GRID", "classlysa_1_1SVG.html#a8928adc4e084d3d233bac4067ebf7d4a", null ]
+          ] ],
           [ "Samplers", "classlysa_1_1Samplers.html", [
             [ "SamplerInfo", "structlysa_1_1Samplers_1_1SamplerInfo.html", [
               [ "operator==", "structlysa_1_1Samplers_1_1SamplerInfo.html#ac93a798e78c14a0ff0f6be9db011aff2", null ],
@@ -1575,10 +1810,10 @@ var NAVTREE =
           ] ],
           [ "SceneConfiguration", "structlysa_1_1SceneConfiguration.html", [
             [ "asyncObjectUpdatesPerFrame", "structlysa_1_1SceneConfiguration.html#a3671107e75f1d34098b7965ef9edbdad", null ],
-            [ "maxLights", "structlysa_1_1SceneConfiguration.html#abdbcf48d0e16f686f6e0ee4738bf59d8", null ],
-            [ "maxMeshInstances", "structlysa_1_1SceneConfiguration.html#a2ef83a2b6e383434c18fdffa1d287ed6", null ],
-            [ "maxMeshSurfacePerPipeline", "structlysa_1_1SceneConfiguration.html#ae4709e6b2190125b100f4c685f1f0623", null ],
-            [ "maxPipelines", "structlysa_1_1SceneConfiguration.html#a1663ab8e6152bfaf57d7fac2e608c8f7", null ],
+            [ "initialLights", "structlysa_1_1SceneConfiguration.html#ac5c1dc9ceb8d5e76ad835bcb8f52faf3", null ],
+            [ "initialMeshInstances", "structlysa_1_1SceneConfiguration.html#abbb028ae244838ee40748d0a7d111051", null ],
+            [ "initialSurfaceInstances", "structlysa_1_1SceneConfiguration.html#a5178bc69e2bcd47d4e900ae79c44aeed", null ],
+            [ "initialSurfaceInstancesPerPipeline", "structlysa_1_1SceneConfiguration.html#a5d6f563b9a99971d4df269c32e7b777c", null ],
             [ "preCreatePipelines", "structlysa_1_1SceneConfiguration.html#aaa72ff39fb4ff7fa45c0640b4d70d12e", null ]
           ] ],
           [ "SceneData", "structlysa_1_1SceneData.html", [
@@ -1602,7 +1837,7 @@ var NAVTREE =
             [ "InstanceIndexConstant", "structlysa_1_1SceneFrameData_1_1InstanceIndexConstant.html", [
               [ "instanceIndex", "structlysa_1_1SceneFrameData_1_1InstanceIndexConstant.html#a59da17c9bc55adfe1bc4790537ef6fdf", null ]
             ] ],
-            [ "SceneFrameData", "classlysa_1_1SceneFrameData.html#af96f83196d589696846b8db7748b19e6", null ],
+            [ "SceneFrameData", "classlysa_1_1SceneFrameData.html#abddce9008858eec02b320052a34bfb6d", null ],
             [ "~SceneFrameData", "classlysa_1_1SceneFrameData.html#a28155aa7eae6a3a70d35e4f8c0f4bb18", null ],
             [ "SceneFrameData", "classlysa_1_1SceneFrameData.html#a092e012916fd5bb13515f8dc333ba362", null ],
             [ "addOperation", "classlysa_1_1SceneFrameData.html#a802365f9a9eb45297325ea439cf90836", null ],
@@ -1618,19 +1853,24 @@ var NAVTREE =
             [ "drawTransparentModels", "classlysa_1_1SceneFrameData.html#a362b0c0d79ad256a41c927332fc4de76", null ],
             [ "getCurrentSceneData", "classlysa_1_1SceneFrameData.html#a2324e596dc291b7dc6b6b52ff332d3d7", null ],
             [ "getDescriptorSet", "classlysa_1_1SceneFrameData.html#a3c1e0c5a30819b145999c19e350a7cea", null ],
+            [ "getGlobalResources", "classlysa_1_1SceneFrameData.html#a9bdb1a5472fbbfb9a9a3dc8281c400b4", null ],
             [ "getPipelineIds", "classlysa_1_1SceneFrameData.html#a239be8345eeb316571c97ee323a9e7ed", null ],
             [ "getShadowMapRenderers", "classlysa_1_1SceneFrameData.html#ad5eabb06925f76a829823b39c4e52d45", null ],
             [ "isMaterialsUpdated", "classlysa_1_1SceneFrameData.html#a124f43d6d93ed2813dbece4198dccf99", null ],
             [ "operator=", "classlysa_1_1SceneFrameData.html#af23fd7f9666258b2bd039a02b94e4607", null ],
             [ "processOperations", "classlysa_1_1SceneFrameData.html#a21496ca060f6c7a4521f4a836e530495", null ],
             [ "resetMaterialsUpdated", "classlysa_1_1SceneFrameData.html#ab5661a58e871773676c843492f53edd2", null ],
+            [ "retainResources", "classlysa_1_1SceneFrameData.html#a9740a4410de47a88108cd64da43a763e", null ],
+            [ "trackSubmission", "classlysa_1_1SceneFrameData.html#a23c4e654bc56beb237f36a317b3f2905", null ],
             [ "update", "classlysa_1_1SceneFrameData.html#a6d2cc75cd5e388d73958a39027c5a860", null ],
+            [ "waitForReuse", "classlysa_1_1SceneFrameData.html#aa0f4d6e07b1366e58b7cf1e4d664d433", null ],
             [ "BINDING_INSTANCES", "classlysa_1_1SceneFrameData.html#ab4769d1ff865933c7d9515e4ae0dc929", null ],
             [ "BINDING_LIGHTS", "classlysa_1_1SceneFrameData.html#a17d5ea27840994b7b8cb7e2d982ad005", null ],
             [ "BINDING_MODELS", "classlysa_1_1SceneFrameData.html#a2dd8faf4efddd9fb43cefe2b8e04699e", null ],
             [ "BINDING_SCENE", "classlysa_1_1SceneFrameData.html#a5710e60228b6dcab8656bef7f09121d5", null ],
             [ "BINDING_SHADOW_MAP_TRANSPARENCY_COLOR", "classlysa_1_1SceneFrameData.html#ad6d8261486558deea1b8bb81a269504e", null ],
             [ "BINDING_SHADOW_MAPS", "classlysa_1_1SceneFrameData.html#aaedaa39645c8fdf1617c6e372188793e", null ],
+            [ "globalResources", "classlysa_1_1SceneFrameData.html#a28c0c3a9f7fdc42cfbbb989d08246075", null ],
             [ "instanceIndexConstantDesc", "classlysa_1_1SceneFrameData.html#aa120a3f47b350f5ceeac713baeb7e359", null ],
             [ "sceneDescriptorLayout", "classlysa_1_1SceneFrameData.html#a24f11aa0b94d0b69636fe12422c08c92", null ],
             [ "scenePipelinesResources", "classlysa_1_1SceneFrameData.html#ac63ae8dd353eab62a88d9127b11a259f", null ]
@@ -1664,7 +1904,7 @@ var NAVTREE =
             [ "updatePipelines", "classlysa_1_1ShaderMaterialPass.html#a592cf08a0077906af2a384e738b17013", null ]
           ] ],
           [ "ShadowMapPass", "classlysa_1_1ShadowMapPass.html", [
-            [ "ShadowMapPass", "classlysa_1_1ShadowMapPass.html#a108dd8ac00cb4900ec41cea1d7103884", null ],
+            [ "ShadowMapPass", "classlysa_1_1ShadowMapPass.html#a0fcf0fd06bbb4ee0c085a0272954e7ca", null ],
             [ "computeCulling", "classlysa_1_1ShadowMapPass.html#a6dae3f4ee0552aa445bff6b4ca811837", null ],
             [ "getCascadeSplitDepth", "classlysa_1_1ShadowMapPass.html#a320ec5ab6b663e133497742247151f2b", null ],
             [ "getLightSpace", "classlysa_1_1ShadowMapPass.html#a77afb50173f4e657b20c7a7f2d502d26", null ],
@@ -1676,8 +1916,29 @@ var NAVTREE =
             [ "update", "classlysa_1_1ShadowMapPass.html#aac5965965f94aeee2855ac31115f12a8", null ],
             [ "updatePipeline", "classlysa_1_1ShadowMapPass.html#a8808a939131e74c288aa889582c300bb", null ]
           ] ],
+          [ "Signal", "structlysa_1_1Signal.html", [
+            [ "handlerId", "structlysa_1_1Signal.html#ad5784135cb5b501195d6ca7e4c6b74d9", null ],
+            [ "payload", "structlysa_1_1Signal.html#a733aa42ca76a8eedae51624126147336", null ],
+            [ "type", "structlysa_1_1Signal.html#ad88d290b93da5206c65cea414e04163d", null ]
+          ] ],
+          [ "SignalHandler", "structlysa_1_1SignalHandler.html", [
+            [ "fn", "structlysa_1_1SignalHandler.html#a81e4aedbb350f1bcaf26c85455f49d35", null ],
+            [ "id", "structlysa_1_1SignalHandler.html#a50ec11076cfd84d4b445d29738c3e02c", null ]
+          ] ],
+          [ "SignalManager", "classlysa_1_1SignalManager.html", [
+            [ "fire", "classlysa_1_1SignalManager.html#aa9615ac401cdddc462f4d38d301f8428", null ],
+            [ "subscribe", "classlysa_1_1SignalManager.html#a9da18070b2b589d459e32a48e89858ad", null ]
+          ] ],
           [ "SphereCollisionShape", "classlysa_1_1SphereCollisionShape.html", [
             [ "SphereCollisionShape", "classlysa_1_1SphereCollisionShape.html#ab3c88f83854b549a73a1aaba99964858", null ]
+          ] ],
+          [ "StagingPool", "classlysa_1_1StagingPool.html", [
+            [ "StagingPool", "classlysa_1_1StagingPool.html#af72abfe8623be32aad3319caa0d78d76", null ],
+            [ "StagingPool", "classlysa_1_1StagingPool.html#a74bbddc5bffee0008fd28ace648f5069", null ],
+            [ "acquire", "classlysa_1_1StagingPool.html#aef5579654173ef5d68c5218eb64a4ee9", null ],
+            [ "acquire", "classlysa_1_1StagingPool.html#a420e18b6e6d8d65de9b4051448b404db", null ],
+            [ "operator=", "classlysa_1_1StagingPool.html#a1519c196391cc089532b211891f08236", null ],
+            [ "trim", "classlysa_1_1StagingPool.html#a268ae12a22c9f97b84833e4c39fb2278", null ]
           ] ],
           [ "StandardMaterial", "classlysa_1_1StandardMaterial.html", [
             [ "TextureInfo", "structlysa_1_1StandardMaterial_1_1TextureInfo.html", [
@@ -1792,6 +2053,7 @@ var NAVTREE =
             [ "update", "classlysa_1_1Tweens.html#a8296825074ecbb991106c4158f854452", null ]
           ] ],
           [ "TypeRegistry", "structlysa_1_1TypeRegistry.html", [
+            [ "isTypeRegistered", "structlysa_1_1TypeRegistry.html#a7fae0ece9af2dd7d89d7170174f238d7", null ],
             [ "makeShared", "structlysa_1_1TypeRegistry.html#abc4da6a83308ee79d8f81c9c77e856a8", null ],
             [ "registerType", "structlysa_1_1TypeRegistry.html#a7eab75dba9eb32a5bf77e6dffc2f332e", null ],
             [ "typeMap", "structlysa_1_1TypeRegistry.html#a72d6e0d6287dd1d483b293c27c1f5401", null ]
@@ -1801,17 +2063,30 @@ var NAVTREE =
             [ "UniqueResource", "classlysa_1_1UniqueResource.html#abb4bf5e4d3eb906a87d81685ed0afdeb", null ],
             [ "operator=", "classlysa_1_1UniqueResource.html#a22d85dc7926af6b0ebeed1e49788d417", null ]
           ] ],
+          [ "UnknownClassTypeException", "classlysa_1_1UnknownClassTypeException.html", [
+            [ "UnknownClassTypeException", "classlysa_1_1UnknownClassTypeException.html#a63653c2959edf1151e95a8b1c044e4dd", null ]
+          ] ],
           [ "UnmanagedResource", "classlysa_1_1UnmanagedResource.html", [
             [ "UnmanagedResource", "classlysa_1_1UnmanagedResource.html#a38c6369ef84ad5ca03cba0463d28f365", null ],
             [ "UnmanagedResource", "classlysa_1_1UnmanagedResource.html#ac945b0666df653a0f52f92da1b66e538", null ]
           ] ],
           [ "Vector2DRenderer", "classlysa_1_1Vector2DRenderer.html", [
             [ "Vector2DRenderer", "classlysa_1_1Vector2DRenderer.html#a2c27147c87c6be0637a0500d37b68b07", null ],
-            [ "drawFilledRect", "classlysa_1_1Vector2DRenderer.html#ad7408676d6bddcbb3bca15574d7dcece", null ],
-            [ "drawFilledRect", "classlysa_1_1Vector2DRenderer.html#ae393d120fe06b0c064f23e5c0a37a34b", null ],
-            [ "drawFilledRect", "classlysa_1_1Vector2DRenderer.html#a0c9bab47c8432e1e81fb3d885d44f31a", null ],
+            [ "drawCircle", "classlysa_1_1Vector2DRenderer.html#a79d6014b21738dbcfe61dc36fd046c90", null ],
+            [ "drawCircle", "classlysa_1_1Vector2DRenderer.html#ae053a37e2eeb6e4d56f590867c3f93c5", null ],
+            [ "drawClippedImage", "classlysa_1_1Vector2DRenderer.html#a5851f75669cddf6793489e491a988bdd", null ],
             [ "drawLine", "classlysa_1_1Vector2DRenderer.html#a0800de2d71d40d5291db74eff839618a", null ],
-            [ "drawText", "classlysa_1_1Vector2DRenderer.html#af5d6520ba4b40ccaff927109583a7b33", null ],
+            [ "drawLine", "classlysa_1_1Vector2DRenderer.html#a9d15ca1f6d6fd60a8a62638b9db913e3", null ],
+            [ "drawRect", "classlysa_1_1Vector2DRenderer.html#aa1a2f673bc2cbcf27bab011c583f0e39", null ],
+            [ "drawRect", "classlysa_1_1Vector2DRenderer.html#ab1b83c2cca6ffa2fa34c63e7e2c44b45", null ],
+            [ "drawRect", "classlysa_1_1Vector2DRenderer.html#a4754707e7bc524a78daa637d13fe7010", null ],
+            [ "drawRoundedRect", "classlysa_1_1Vector2DRenderer.html#ac3d926151c6a48791b733224b58f3625", null ],
+            [ "drawRoundedRect", "classlysa_1_1Vector2DRenderer.html#a5598a22ed19f11dd3782e981b1deb0fb", null ],
+            [ "drawRoundedRect", "classlysa_1_1Vector2DRenderer.html#ac2302281dc441c8c2f37c8eae63bcfef", null ],
+            [ "drawSVG", "classlysa_1_1Vector2DRenderer.html#a86cae27ed62c571fd3a52aec678434d8", null ],
+            [ "drawSVG", "classlysa_1_1Vector2DRenderer.html#a2df5cdc2f6c698e7acc987d40f7f5964", null ],
+            [ "drawText", "classlysa_1_1Vector2DRenderer.html#a117417be1a3ab7ec5901ef1fb21ead43", null ],
+            [ "drawText", "classlysa_1_1Vector2DRenderer.html#a15fcac4d9b0496bcad936bbb1ccc5ae6", null ],
             [ "getAspectRatio", "classlysa_1_1Vector2DRenderer.html#a9e59a36ae756e1480d52e51e42dff96b", null ],
             [ "setPenColor", "classlysa_1_1Vector2DRenderer.html#aa697b240af10d71820c46ce188b03f82", null ],
             [ "setTranslate", "classlysa_1_1Vector2DRenderer.html#a7dd29e556874bb56309d3e4b87bdd28e", null ],
@@ -1828,18 +2103,23 @@ var NAVTREE =
             [ "addFont", "classlysa_1_1Vector3DRenderer.html#a9d9e0ea24ad2cdf44e5176fae2feb743", null ],
             [ "addFontAtlas", "classlysa_1_1Vector3DRenderer.html#ae7be3a1aa945b64e34352276974fecc8", null ],
             [ "addImage", "classlysa_1_1Vector3DRenderer.html#abfb26a0fc0dfcfc67fcef3498699d755", null ],
-            [ "beginDraw", "classlysa_1_1Vector3DRenderer.html#adf22266789600961f5fe3173bfe4e1ef", null ],
+            [ "addSVG", "classlysa_1_1Vector3DRenderer.html#aef04c31ab963cecf3994177274808b88", null ],
+            [ "beginDraw", "classlysa_1_1Vector3DRenderer.html#a775c08c1b0dfff6e2d150b2568c0911a", null ],
             [ "clearSession", "classlysa_1_1Vector3DRenderer.html#a8083d894e922974a21683e75c378bfe8", null ],
             [ "commitPrimitive", "classlysa_1_1Vector3DRenderer.html#aa820bd9f62a41c30d50312ec4bf9d72c", null ],
+            [ "drawCircle", "classlysa_1_1Vector3DRenderer.html#ae0f24931295191f27dac24293f768a40", null ],
             [ "drawImage", "classlysa_1_1Vector3DRenderer.html#a358f3cc7af7eaebfdeb985bd36996612", null ],
             [ "drawLine", "classlysa_1_1Vector3DRenderer.html#a3b72cb67006b69d2971bff2ddf7721f6", null ],
+            [ "drawQuad", "classlysa_1_1Vector3DRenderer.html#ad7dcf0b5287466f1eac696b42e146c5f", null ],
+            [ "drawRoundedQuad", "classlysa_1_1Vector3DRenderer.html#a78e1a3620789e69cb15ca4b6da6a8413", null ],
             [ "drawSpline", "classlysa_1_1Vector3DRenderer.html#adaaeaf88a398828b5b14a3c2dd2be5e2", null ],
+            [ "drawSVG", "classlysa_1_1Vector3DRenderer.html#ae6d0c1e11ee6381315caf92e06740bd4", null ],
             [ "drawText", "classlysa_1_1Vector3DRenderer.html#a9f70d396b00e6f4bf5ae695a6e856135", null ],
             [ "drawTriangle", "classlysa_1_1Vector3DRenderer.html#a36cf2f51bf8e38a6395091ea0a0d7fa0", null ],
             [ "endDraw", "classlysa_1_1Vector3DRenderer.html#aca0a43412c6d957fdbd9a63ccefb090c", null ],
             [ "isUseCamera", "classlysa_1_1Vector3DRenderer.html#afc0f92b4df331c6309227e0e42190529", null ],
             [ "operator=", "classlysa_1_1Vector3DRenderer.html#ab51b3630e02ac9b09854fbed08bb6d3b", null ],
-            [ "render", "classlysa_1_1Vector3DRenderer.html#adf086c5eb14fcf8148c553796bfaffbc", null ],
+            [ "render", "classlysa_1_1Vector3DRenderer.html#ad306b42884e94e726df6fb1260dbea6a", null ],
             [ "resize", "classlysa_1_1Vector3DRenderer.html#a46c9250c47456cfb4b801c75f71ea9d7", null ],
             [ "restart", "classlysa_1_1Vector3DRenderer.html#a22ee094ca3f45aa4156b97d34fe678bf", null ],
             [ "setGammaCorrectionParameters", "classlysa_1_1Vector3DRenderer.html#af13b43273bb94cbc33569dc325abfd56", null ],
@@ -1854,14 +2134,19 @@ var NAVTREE =
             [ "maxFonts", "classlysa_1_1Vector3DRenderer.html#a8674726e0229456c01dcac98f58c2ecf", null ],
             [ "maxImages", "classlysa_1_1Vector3DRenderer.html#ad6e57b04df83152d1edce166a03bcbad", null ],
             [ "maxParams", "classlysa_1_1Vector3DRenderer.html#a19bd8b8d70f2053aee0ad4e5e87dea3e", null ],
+            [ "maxSdfSegments", "classlysa_1_1Vector3DRenderer.html#a6ed3bcfdabd25ad777c62f0ffbed1794", null ],
             [ "maxVertices", "classlysa_1_1Vector3DRenderer.html#a39a35bbc748c6679e83375e76702a641", null ],
             [ "name", "classlysa_1_1Vector3DRenderer.html#ac673bc430bdc3fdaa09f7becf98ef267", null ],
             [ "nextParamOffset", "classlysa_1_1Vector3DRenderer.html#a9d8512c1bc5a5561b886b2d0994989b4", null ],
+            [ "nextSdfSegmentOffset", "classlysa_1_1Vector3DRenderer.html#a32d3179268724d792f3cca516cd219da", null ],
             [ "nextVertexOffset", "classlysa_1_1Vector3DRenderer.html#a1d0c81330b72e81755b4cfff282e399b", null ],
             [ "params", "classlysa_1_1Vector3DRenderer.html#ada294977b49d4061cfadc552ec0825f2", null ],
+            [ "sdfSegments", "classlysa_1_1Vector3DRenderer.html#a81c6b750cad303cb8be689f6450fd3b0", null ],
+            [ "sdfSegmentsRanges", "classlysa_1_1Vector3DRenderer.html#a6a99c74b122adb8437a6c5947aa038ae", null ],
             [ "triGlyphCount", "classlysa_1_1Vector3DRenderer.html#a91fb20d9690319d3a5b3b258afad7a4a", null ],
             [ "triImageCount", "classlysa_1_1Vector3DRenderer.html#a3173370191522af2e0f6b66c5ad979e8", null ],
             [ "triPlainCount", "classlysa_1_1Vector3DRenderer.html#a4130b526f730bfb35f497054dc15f24a", null ],
+            [ "typeCounts", "classlysa_1_1Vector3DRenderer.html#afc5a56cce70303bd97174669362948cb", null ],
             [ "vertices", "classlysa_1_1Vector3DRenderer.html#a3c2ae39ce2906ea0921096f416f80b96", null ]
           ] ],
           [ "VectorDrawCommand", "structlysa_1_1VectorDrawCommand.html", [
@@ -1888,25 +2173,29 @@ var NAVTREE =
             [ "directoryExists", "classlysa_1_1VirtualFS.html#a736156d647a764e8d19b202f98740f7f", null ],
             [ "fileExists", "classlysa_1_1VirtualFS.html#a44e3b2ebc81d5f0b7387694b304e3d21", null ],
             [ "forEachDirectoryEntry", "classlysa_1_1VirtualFS.html#a4c6218780a9287dd385f11eee46fbd63", null ],
+            [ "getConfiguration", "classlysa_1_1VirtualFS.html#af146c443c91497a2b887e55f10afa6b8", null ],
             [ "getCurrentDirectory", "classlysa_1_1VirtualFS.html#adb56f9db42aa54ce602203ada5fba887", null ],
             [ "getLuaScriptsDirectory", "classlysa_1_1VirtualFS.html#ab2512ccaaa8048878dc944446bac30fb", null ],
             [ "getLuaScriptsURI", "classlysa_1_1VirtualFS.html#a02e199229976d9e8f16054550cc80649", null ],
             [ "getLuaScriptURI", "classlysa_1_1VirtualFS.html#a42d98693b1b0792f22d44e94a02e4d10", null ],
             [ "getPath", "classlysa_1_1VirtualFS.html#aedc9235bab820622f1554a737e4bbda7", null ],
+            [ "isDirectory", "classlysa_1_1VirtualFS.html#a38b2fb3d4c2f273f023b31d4f1eff114", null ],
             [ "loadBinaryData", "classlysa_1_1VirtualFS.html#a857ccc7940276c3ce5d45052b0272e4f", null ],
             [ "loadImage", "classlysa_1_1VirtualFS.html#a12ab7511a600b5ee107b6cca85751dcb", null ],
+            [ "loadImageFromMemory", "classlysa_1_1VirtualFS.html#a6eff2a93c8632195ecb2c56f781f217b", null ],
             [ "loadLuaScript", "classlysa_1_1VirtualFS.html#af320e4290a3500d3669d00b0c911f57d", null ],
             [ "loadShader", "classlysa_1_1VirtualFS.html#a2a96c60e2038d15c07b9df05ff24be43", null ],
             [ "loadString", "classlysa_1_1VirtualFS.html#af6469fd9804f9744f569bdbaf17b6253", null ],
             [ "openReadStream", "classlysa_1_1VirtualFS.html#aa27cba86056f71895ad2d0d884874900", null ],
             [ "openWriteStream", "classlysa_1_1VirtualFS.html#a6b4e9fc25324713a2bbdd6293aa2ea42", null ],
             [ "parentPath", "classlysa_1_1VirtualFS.html#a8978f35abb9e47d85ef5c40c37e593b2", null ],
+            [ "setConfiguration", "classlysa_1_1VirtualFS.html#aaa0afbfe301fa0501e49faebd8124f72", null ],
             [ "setResourcesPack", "classlysa_1_1VirtualFS.html#a71818f2e8bf55ab9594e8b94cd5798be", null ],
             [ "stripAppURI", "classlysa_1_1VirtualFS.html#a0e3be911051757f1f43e43240315db0f", null ],
             [ "stripUserURI", "classlysa_1_1VirtualFS.html#a5621dacd22909c7ce6fd879a529408e0", null ],
             [ "useResourcesPack", "classlysa_1_1VirtualFS.html#a63da251a3390a7d29726aa609d227dc7", null ],
-            [ "APP_URI", "classlysa_1_1VirtualFS.html#afba7e09754308ab77b33f0e2eebfad63", null ],
-            [ "USER_URI", "classlysa_1_1VirtualFS.html#aa1148824b94c5edb1593381ce47e7d94", null ]
+            [ "APP_URI", "classlysa_1_1VirtualFS.html#a11e653719b9b332dc83b23ca1d8f2131", null ],
+            [ "USER_URI", "classlysa_1_1VirtualFS.html#a3dad9627f522c22698310f46f18e47db", null ]
           ] ],
           [ "VirtualFSConfiguration", "structlysa_1_1VirtualFSConfiguration.html", [
             [ "appDirectory", "structlysa_1_1VirtualFSConfiguration.html#aabc0fb4a3185315f6c8df905abea3009", null ],
@@ -1920,6 +2209,12 @@ var NAVTREE =
       ] ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", [
+        [ "EventManager< Event >", "classlysa_1_1EventManager.html", [
+          [ "QueuedEvent", "classlysa_1_1QueuedEvent.html", null ]
+        ] ],
+        [ "EventManager< Signal >", "classlysa_1_1EventManager.html", [
+          [ "SignalManager", "classlysa_1_1SignalManager.html", null ]
+        ] ],
         [ "JPH::BroadPhaseLayerInterface", null, [
           [ "BPLayerInterfaceImpl", "classlysa_1_1BPLayerInterfaceImpl.html", null ]
         ] ],
@@ -1964,17 +2259,15 @@ var NAVTREE =
         [ "DrawCommand", "structlysa_1_1DrawCommand.html", null ],
         [ "DrawParam", "structlysa_1_1DrawParam.html", null ],
         [ "DrawSession", "structlysa_1_1DrawSession.html", null ],
-        [ "Event", "structlysa_1_1Event.html", [
-          [ "DirectoryWatcherEvent", "structlysa_1_1DirectoryWatcherEvent.html", null ],
-          [ "FontEvent", "structlysa_1_1FontEvent.html", null ],
-          [ "ImageEvent", "structlysa_1_1ImageEvent.html", null ],
-          [ "MainLoopEvent", "structlysa_1_1MainLoopEvent.html", null ],
-          [ "MaterialEvent", "structlysa_1_1MaterialEvent.html", null ]
-        ] ],
+        [ "Event", "structlysa_1_1Event.html", null ],
         [ "EventHandler", "structlysa_1_1EventHandler.html", null ],
-        [ "EventManager", "classlysa_1_1EventManager.html", null ],
+        [ "EventManager< Message >", "classlysa_1_1EventManager.html", null ],
+        [ "HandlerLists", "structlysa_1_1EventManager_1_1HandlerLists.html", null ],
+        [ "Caret", "structlysa_1_1Font_1_1Caret.html", null ],
         [ "GlyphBounds", "structlysa_1_1Font_1_1GlyphBounds.html", null ],
         [ "GlyphInfo", "structlysa_1_1Font_1_1GlyphInfo.html", null ],
+        [ "ShapedGlyph", "structlysa_1_1Font_1_1ShapedGlyph.html", null ],
+        [ "TextRun", "structlysa_1_1Font_1_1TextRun.html", null ],
         [ "FontParams", "structlysa_1_1FontParams.html", null ],
         [ "Frustum", "structlysa_1_1Frustum.html", null ],
         [ "Plane", "structlysa_1_1Frustum_1_1Plane.html", null ],
@@ -1984,6 +2277,7 @@ var NAVTREE =
         [ "GenerateDrawCommands", "classlysa_1_1GenerateDrawCommands.html", null ],
         [ "GenerateVectorDrawCommands", "classlysa_1_1GenerateVectorDrawCommands.html", null ],
         [ "GlobalDescriptorSet", "classlysa_1_1GlobalDescriptorSet.html", null ],
+        [ "GlobalResourcesGeneration", "structlysa_1_1GlobalResourcesGeneration.html", null ],
         [ "GraphicPipelineData", "structlysa_1_1GraphicPipelineData.html", null ],
         [ "Input", "classlysa_1_1Input.html", null ],
         [ "InputAction", "structlysa_1_1InputAction.html", null ],
@@ -1995,6 +2289,9 @@ var NAVTREE =
         [ "InputEventMouseMotion", "structlysa_1_1InputEventMouseMotion.html", null ],
         [ "InputEventTextInput", "structlysa_1_1InputEventTextInput.html", null ],
         [ "InstanceData", "structlysa_1_1InstanceData.html", null ],
+        [ "InstanceGroupData", "structlysa_1_1InstanceGroupData.html", null ],
+        [ "JsonDocument", "classlysa_1_1JsonDocument.html", null ],
+        [ "JsonValue", "classlysa_1_1JsonValue.html", null ],
         [ "LayerCollideWith", "structlysa_1_1LayerCollideWith.html", null ],
         [ "LayerCollisionTable", "structlysa_1_1LayerCollisionTable.html", null ],
         [ "LightData", "structlysa_1_1LightData.html", null ],
@@ -2007,6 +2304,7 @@ var NAVTREE =
           [ "DeviceMemoryArray", "classlysa_1_1DeviceMemoryArray.html", null ],
           [ "HostVisibleMemoryArray", "classlysa_1_1HostVisibleMemoryArray.html", null ]
         ] ],
+        [ "RetiredBlock", "structlysa_1_1MemoryArray_1_1RetiredBlock.html", null ],
         [ "MemoryBlock", "structlysa_1_1MemoryBlock.html", null ],
         [ "MeshData", "structlysa_1_1MeshData.html", null ],
         [ "MeshInstanceData", "structlysa_1_1MeshInstanceData.html", null ],
@@ -2022,6 +2320,7 @@ var NAVTREE =
           [ "PhysXPhysicsWorld", "classlysa_1_1PhysXPhysicsWorld.html", null ]
         ] ],
         [ "PredefinedFontParams", "structlysa_1_1PredefinedFontParams.html", null ],
+        [ "ProcessRunner", "classlysa_1_1ProcessRunner.html", null ],
         [ "Ray", "structlysa_1_1Ray.html", null ],
         [ "RayHit", "structlysa_1_1RayHit.html", [
           [ "RayCastHit", "structlysa_1_1RayCastHit.html", null ]
@@ -2091,6 +2390,7 @@ var NAVTREE =
             [ "Light", "structlysa_1_1Light.html", null ],
             [ "RayCast", "classlysa_1_1RayCast.html", null ],
             [ "RenderView", "structlysa_1_1RenderView.html", null ],
+            [ "SVG", "classlysa_1_1SVG.html", null ],
             [ "UniqueResource", "classlysa_1_1UniqueResource.html", [
               [ "MeshInstance", "classlysa_1_1MeshInstance.html", null ],
               [ "RenderingWindow", "classlysa_1_1RenderingWindow.html", null ],
@@ -2112,7 +2412,18 @@ var NAVTREE =
         [ "SceneFrameData", "classlysa_1_1SceneFrameData.html", null ],
         [ "InstanceIndexConstant", "structlysa_1_1SceneFrameData_1_1InstanceIndexConstant.html", null ],
         [ "SceneOperation", "structlysa_1_1SceneOperation.html", null ],
+        [ "Signal", "structlysa_1_1Signal.html", [
+          [ "DirectoryWatcherSignal", "structlysa_1_1DirectoryWatcherSignal.html", null ],
+          [ "FontSignal", "structlysa_1_1FontSignal.html", null ],
+          [ "ImageSignal", "structlysa_1_1ImageSignal.html", null ],
+          [ "MainLoopSignal", "structlysa_1_1MainLoopSignal.html", null ],
+          [ "MaterialSignal", "structlysa_1_1MaterialSignal.html", null ]
+        ] ],
+        [ "SignalHandler", "structlysa_1_1SignalHandler.html", null ],
+        [ "StagingPool", "classlysa_1_1StagingPool.html", null ],
         [ "TextureInfo", "structlysa_1_1StandardMaterial_1_1TextureInfo.html", null ],
+        [ "Paint", "structlysa_1_1SVG_1_1Paint.html", null ],
+        [ "Segment", "structlysa_1_1SVG_1_1Segment.html", null ],
         [ "TextureInfoData", "structlysa_1_1TextureInfoData.html", null ],
         [ "Timer", "classlysa_1_1Timer.html", null ],
         [ "Timers", "classlysa_1_1Timers.html", null ],
@@ -2145,7 +2456,9 @@ var NAVTREE =
           [ "Font", "classlysa_1_1Font.html", null ]
         ] ],
         [ "std::exception", null, [
-          [ "Exception", "classlysa_1_1Exception.html", null ]
+          [ "Exception", "classlysa_1_1Exception.html", [
+            [ "UnknownClassTypeException", "classlysa_1_1UnknownClassTypeException.html", null ]
+          ] ]
         ] ],
         [ "std::ostream", null, [
           [ "LogStream", "classlysa_1_1LogStream.html", null ]
@@ -2164,12 +2477,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about.html",
-"classlysa_1_1FullScreenCompute.html#abf65502d1bfe621b13a4ca1332f14002",
-"classlysa_1_1MeshManager.html#a1f468fcf67fa14c0c634721bf9b60b69",
-"classlysa_1_1Samplers.html#aac144ba8d515860b0332e4ab2ad0b4b7",
-"classlysa_1_1VirtualFS.html#a5621dacd22909c7ce6fd879a529408e0",
-"structlysa_1_1ContextConfiguration.html#a93daadb22841c84342bdfd4cdab83d7e",
-"structlysa_1_1PredefinedFontParams.html#a60ea024ca5b284e967c76cb46d1fdc3e"
+"classlysa_1_1FullScreenCompute.html#a66833fd973b907e7c75dc7bfd1876826",
+"classlysa_1_1Material.html",
+"classlysa_1_1Renderer.html#a2adb14e3c6e6555d79d180ba18139452",
+"classlysa_1_1StagingPool.html",
+"manual_003_howto.html#howto_window",
+"structlysa_1_1EventManager_1_1HandlerLists.html#a8babdb6860fb88ec794714c46c8c9ee4",
+"structlysa_1_1PredefinedFontParams.html#a7ab91f4ca4644c2994189ac7d04823b7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

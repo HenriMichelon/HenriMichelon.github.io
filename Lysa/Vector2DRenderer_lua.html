@@ -62,15 +62,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:lua_draw_line"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_line">draw_line</a> (start: <a class="el" href="float2_lua.html">float2</a>, end: <a class="el" href="float2_lua.html">float2</a>)</td></tr>
 <tr class="memdesc:lua_draw_line"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a line between two 2-D screen-space points using the current pen color. <a href="#lua_draw_line">More...</a><br /></td></tr>
 <tr class="separator:lua_draw_line"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>)</td></tr>
-<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a filled rectangle using the current pen color. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
-<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>, texture: integer)</td></tr>
-<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
-<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:lua_draw_filled_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_filled_rect">draw_filled_rect</a> (x: number, y: number, w: number, h: number, texture: integer)</td></tr>
-<tr class="memdesc:lua_draw_filled_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle from x, y, w, h. <a href="#lua_draw_filled_rect">More...</a><br /></td></tr>
-<tr class="separator:lua_draw_filled_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rect">draw_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>)</td></tr>
+<tr class="memdesc:lua_draw_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a filled rectangle using the current pen color. <a href="#lua_draw_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rect">draw_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>, texture: integer)</td></tr>
+<tr class="memdesc:lua_draw_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle. <a href="#lua_draw_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rect">draw_rect</a> (x: number, y: number, w: number, h: number, texture: integer)</td></tr>
+<tr class="memdesc:lua_draw_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured filled rectangle from x, y, w, h. <a href="#lua_draw_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_circle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_circle">draw_circle</a> (center: <a class="el" href="float2_lua.html">float2</a>, radius: number, borderWidth: number?)</td></tr>
+<tr class="memdesc:lua_draw_circle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a circle using the current pen color. borderWidth defaults to 0, which fills the disc, otherwise only a border of that width is drawn. Rasterized by the fragment shader with an antialiased edge, the horizontal radius being corrected by the aspect ratio so the shape stays circular. <a href="#lua_draw_circle">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_circle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_circle"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_circle">draw_circle</a> (x: number, y: number, radius: number, borderWidth: number?)</td></tr>
+<tr class="memdesc:lua_draw_circle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a circle centered on x, y. <a href="#lua_draw_circle">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_circle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rounded_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rounded_rect">draw_rounded_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>, cornerRadius: number, borderWidth: number?)</td></tr>
+<tr class="memdesc:lua_draw_rounded_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangle with rounded corners using the current pen color. cornerRadius and borderWidth are clamped to half of the smallest side; borderWidth defaults to 0, which fills the rectangle. The corners stay circular whatever the aspect ratio. <a href="#lua_draw_rounded_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rounded_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rounded_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rounded_rect">draw_rounded_rect</a> (rect: <a class="el" href="Rect_lua.html">Rect</a>, texture: integer, cornerRadius: number, borderWidth: number?)</td></tr>
+<tr class="memdesc:lua_draw_rounded_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a textured rectangle with rounded corners. <a href="#lua_draw_rounded_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rounded_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_draw_rounded_rect"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_draw_rounded_rect">draw_rounded_rect</a> (x: number, y: number, w: number, h: number, cornerRadius: number, borderWidth: number?, texture: integer?)</td></tr>
+<tr class="memdesc:lua_draw_rounded_rect"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangle with rounded corners from x, y, w, h, optionally textured. <a href="#lua_draw_rounded_rect">More...</a><br /></td></tr>
+<tr class="separator:lua_draw_rounded_rect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:lua_set_pen_color"><td class="memItemLeft" align="right" valign="top">nil&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_set_pen_color">set_pen_color</a> (color: <a class="el" href="float4_lua.html">float4</a>)</td></tr>
 <tr class="memdesc:lua_set_pen_color"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current pen color (RGBA) used by subsequent draw calls. <a href="#lua_set_pen_color">More...</a><br /></td></tr>
 <tr class="separator:lua_set_pen_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +133,7 @@ Properties</h2></td></tr>
     <tr><td class="paramname">end</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
   </table></dd></dl>
 </div></div>
-<a class="anchor" id="lua_draw_filled_rect"></a>
+<a class="anchor" id="lua_draw_rect"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -126,7 +141,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="memname">nil draw_rect </td><td>(</td>
           <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
           <td class="paramname">rect</td><td>)</td>
           <td></td>
@@ -142,7 +157,7 @@ Properties</h2></td></tr>
     <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
   </table></dd></dl>
 </div></div>
-<a class="anchor" id="lua_draw_filled_rect"></a>
+<a class="anchor" id="lua_draw_rect"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -150,7 +165,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="memname">nil draw_rect </td><td>(</td>
           <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
           <td class="paramname">rect</td><td>,</td>
           <td></td>
@@ -173,7 +188,7 @@ Properties</h2></td></tr>
     <tr><td class="paramname">texture</td><td>integer</td></tr>
   </table></dd></dl>
 </div></div>
-<a class="anchor" id="lua_draw_filled_rect"></a>
+<a class="anchor" id="lua_draw_rect"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -181,7 +196,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">nil draw_filled_rect </td><td>(</td>
+          <td class="memname">nil draw_rect </td><td>(</td>
           <td class="paramtype">number&#160;</td>
           <td class="paramname">x</td><td>,</td>
           <td></td>
@@ -223,6 +238,238 @@ Properties</h2></td></tr>
     <tr><td class="paramname">w</td><td>number</td></tr>
     <tr><td class="paramname">h</td><td>number</td></tr>
     <tr><td class="paramname">texture</td><td>integer</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_circle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_circle </td><td>(</td>
+          <td class="paramtype"><a class="el" href="float2_lua.html">float2</a>&#160;</td>
+          <td class="paramname">center</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">radius</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number?&#160;</td>
+          <td class="paramname">borderWidth</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a circle using the current pen color. borderWidth defaults to 0, which fills the disc, otherwise only a border of that width is drawn. Rasterized by the fragment shader with an antialiased edge, the horizontal radius being corrected by the aspect ratio so the shape stays circular.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td><a class="el" href="float2_lua.html">float2</a></td></tr>
+    <tr><td class="paramname">radius</td><td>number</td></tr>
+    <tr><td class="paramname">borderWidth</td><td>number?</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_circle"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_circle </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">radius</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number?&#160;</td>
+          <td class="paramname">borderWidth</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a circle centered on x, y.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">radius</td><td>number</td></tr>
+    <tr><td class="paramname">borderWidth</td><td>number?</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_rounded_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_rounded_rect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
+          <td class="paramname">rect</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">cornerRadius</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number?&#160;</td>
+          <td class="paramname">borderWidth</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a rectangle with rounded corners using the current pen color. cornerRadius and borderWidth are clamped to half of the smallest side; borderWidth defaults to 0, which fills the rectangle. The corners stay circular whatever the aspect ratio.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
+    <tr><td class="paramname">cornerRadius</td><td>number</td></tr>
+    <tr><td class="paramname">borderWidth</td><td>number?</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_rounded_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_rounded_rect </td><td>(</td>
+          <td class="paramtype"><a class="el" href="Rect_lua.html">Rect</a>&#160;</td>
+          <td class="paramname">rect</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer&#160;</td>
+          <td class="paramname">texture</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">cornerRadius</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number?&#160;</td>
+          <td class="paramname">borderWidth</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a textured rectangle with rounded corners.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td><a class="el" href="Rect_lua.html">Rect</a></td></tr>
+    <tr><td class="paramname">texture</td><td>integer</td></tr>
+    <tr><td class="paramname">cornerRadius</td><td>number</td></tr>
+    <tr><td class="paramname">borderWidth</td><td>number?</td></tr>
+  </table></dd></dl>
+</div></div>
+<a class="anchor" id="lua_draw_rounded_rect"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw_rounded_rect </td><td>(</td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">x</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">y</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">w</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">h</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number&#160;</td>
+          <td class="paramname">cornerRadius</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">number?&#160;</td>
+          <td class="paramname">borderWidth</td><td>,</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="memname"></td><td></td>
+          <td class="paramtype">integer?&#160;</td>
+          <td class="paramname">texture</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws a rectangle with rounded corners from x, y, w, h, optionally textured.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>number</td></tr>
+    <tr><td class="paramname">y</td><td>number</td></tr>
+    <tr><td class="paramname">w</td><td>number</td></tr>
+    <tr><td class="paramname">h</td><td>number</td></tr>
+    <tr><td class="paramname">cornerRadius</td><td>number</td></tr>
+    <tr><td class="paramname">borderWidth</td><td>number?</td></tr>
+    <tr><td class="paramname">texture</td><td>integer?</td></tr>
   </table></dd></dl>
 </div></div>
 <a class="anchor" id="lua_set_pen_color"></a>
@@ -312,7 +559,7 @@ Properties</h2></td></tr>
     <ul>
             <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
     <li class="navelem"><a class="el" href="Vector2DRenderer_lua.html">Vector2DRenderer</a></li>
-        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+        <li class="footer">Generated on Tue Oct 06 2026 20:19:06 for Lysa &nbsp; by
             gen_lua_docs.py</li>
     </ul>
 </div>

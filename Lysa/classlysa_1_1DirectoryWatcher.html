@@ -75,13 +75,14 @@ $(document).ready(function(){initNavTree('classlysa_1_1DirectoryWatcher.html',''
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Monitors a directory for changes and emits events when files are modified.</p>
-<p>This class runs a background thread that uses OS-specific APIs to watch for file changes. A <a class="el" href="structlysa_1_1DirectoryWatcherEvent.html#a04ba7f2dd242aac7e128ce9b2c44e12b">DirectoryWatcherEvent::FILE_CHANGED</a> event is emmitted when a file of the directory is modified. </p>
+<div class="textblock"><p>Monitors a directory for changes and emits events when its content is modified. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c1ee2d59e611d41a6a5f509791b87ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DirectoryWatcher.html#a1c1ee2d59e611d41a6a5f509791b87ac">DirectoryWatcher</a> (const std::string &amp;uri, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> debounceTimer=100)</td></tr>
-<tr class="separator:a1c1ee2d59e611d41a6a5f509791b87ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283b4341ec4ca870cebbde145f703f0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DirectoryWatcher.html#a283b4341ec4ca870cebbde145f703f0f">DirectoryWatcher</a> (const std::string &amp;uri, const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> debounceTimer=100)</td></tr>
+<tr class="separator:a283b4341ec4ca870cebbde145f703f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc61f7dd59c3396230c1799ba2ce8378"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DirectoryWatcher.html#acc61f7dd59c3396230c1799ba2ce8378">DirectoryWatcher</a> (const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;fs, const std::string &amp;uri, <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> debounceTimer=100)</td></tr>
+<tr class="separator:acc61f7dd59c3396230c1799ba2ce8378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3bb34d16f8cab260d4483e82772d5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DirectoryWatcher.html#adf3bb34d16f8cab260d4483e82772d5d">~DirectoryWatcher</a> ()</td></tr>
 <tr class="separator:adf3bb34d16f8cab260d4483e82772d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60de64d75454385b23995437f1d72669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1DirectoryWatcher.html#a60de64d75454385b23995437f1d72669">start</a> ()</td></tr>
@@ -90,13 +91,60 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aba28ee97ffe6d508e26f534ec7e62f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1c1ee2d59e611d41a6a5f509791b87ac"></a>
+<a class="anchor" id="a283b4341ec4ca870cebbde145f703f0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DirectoryWatcher </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td>
+          <td class="paramname"><em>debounceTimer</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a> and starts it </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>The URI of the directory to watch. </td></tr>
+    <tr><td class="paramname">debounceTimer</td><td>The time to wait (in milliseconds) before emitting an event after a change is detected for the same file as the previous detected change. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acc61f7dd59c3396230c1799ba2ce8378"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">DirectoryWatcher </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlysa_1_1VirtualFS.html">VirtualFS</a> &amp;&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>uri</em>, </td>
         </tr>
@@ -115,6 +163,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a <a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a> and starts it. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">fs</td><td>The virtual file system resolving the URI. </td></tr>
     <tr><td class="paramname">uri</td><td>The URI of the directory to watch. </td></tr>
     <tr><td class="paramname">debounceTimer</td><td>The time to wait (in milliseconds) before emitting an event after a change is detected for the same file as the previous detected change. </td></tr>
   </table>
@@ -186,7 +235,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1DirectoryWatcher.html">DirectoryWatcher</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

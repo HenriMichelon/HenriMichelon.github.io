@@ -68,6 +68,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1Font.html',''); initResiz
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classlysa_1_1Font-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">Font Class Reference</div>
@@ -76,8 +77,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1Font.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classlysa_1_1Font.html">Font</a> resource used to render text.</p>
-<p>A font is defined by a font file and a size. Glyphs are packed into an atlas and common metrics (ascender, descender, line height) are exposed for text layout. </p>
+<div class="textblock"><p><a class="el" href="classlysa_1_1Font.html">Font</a> resource used to render text. </p>
 </div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Font:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -93,15 +93,23 @@ $(document).ready(function(){initNavTree('classlysa_1_1Font.html',''); initResiz
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Font_1_1Caret.html">Caret</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Font_1_1GlyphBounds.html">GlyphBounds</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Font_1_1GlyphInfo.html">GlyphInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Font_1_1ShapedGlyph.html">ShapedGlyph</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Font_1_1TextRun.html">TextRun</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8861e1c8247b6bdb1fff33fbeb86912a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a8861e1c8247b6bdb1fff33fbeb86912a">Font</a> (const std::string &amp;path)</td></tr>
 <tr class="separator:a8861e1c8247b6bdb1fff33fbeb86912a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231627189bedfe0feae21f09de1595a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a231627189bedfe0feae21f09de1595a3">Font</a> (std::span&lt; const char &gt; fontData, std::string_view atlasMetadata, std::span&lt; const char &gt; atlasImage, const std::string &amp;name)</td></tr>
+<tr class="separator:a231627189bedfe0feae21f09de1595a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaba585e70687e58e69b185f8f0100058"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#aaba585e70687e58e69b185f8f0100058">Font</a> (const Font &amp;font)</td></tr>
 <tr class="separator:aaba585e70687e58e69b185f8f0100058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a40ec4a0d59bc3c7977312763a7e941"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a8a40ec4a0d59bc3c7977312763a7e941">~Font</a> () override</td></tr>
@@ -110,8 +118,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae4e1bfe04e6236cd35fcf8e268b76ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab263c2c4acc9dfedd1fd9a1b6501d926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#ab263c2c4acc9dfedd1fd9a1b6501d926">getSize</a> (const std::string &amp;text, float fontScale, float &amp;width, float &amp;height)</td></tr>
 <tr class="separator:ab263c2c4acc9dfedd1fd9a1b6501d926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dab83b08ba3098c5453867c265eb74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a35dab83b08ba3098c5453867c265eb74">getSize</a> (const std::string &amp;text, float fontScale, float &amp;width, float &amp;height, <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> direction)</td></tr>
+<tr class="separator:a35dab83b08ba3098c5453867c265eb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f1098b843d887d60addf6d44a47fcc4"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a9f1098b843d887d60addf6d44a47fcc4">getSize</a> (const std::string &amp;text, float fontScale)</td></tr>
 <tr class="separator:a9f1098b843d887d60addf6d44a47fcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7e650a22b9140815ff8e0ac6e9dfcf"><td class="memItemLeft" align="right" valign="top">float2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#aef7e650a22b9140815ff8e0ac6e9dfcf">getSize</a> (const std::string &amp;text, float fontScale, <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> direction)</td></tr>
+<tr class="separator:aef7e650a22b9140815ff8e0ac6e9dfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd5aecacc9c38590ccc0855165781d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlysa_1_1Font_1_1ShapedGlyph.html">ShapedGlyph</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#aedd5aecacc9c38590ccc0855165781d8">shape</a> (const std::string &amp;text, <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> direction=TextDirection::AUTO) const</td></tr>
+<tr class="separator:aedd5aecacc9c38590ccc0855165781d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f47bd4780f8d0378602e690ba4a257"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlysa_1_1Font_1_1Caret.html">Caret</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a73f47bd4780f8d0378602e690ba4a257">caretPositions</a> (const std::string &amp;text, <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> direction=TextDirection::AUTO) const</td></tr>
+<tr class="separator:a73f47bd4780f8d0378602e690ba4a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6308c4e9bee9d681ed54681d61178b5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#af6308c4e9bee9d681ed54681d61178b5">getWidth</a> (char c, float fontScale)</td></tr>
 <tr class="separator:af6308c4e9bee9d681ed54681d61178b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2505fef6b05bb52b556d1fed14b60c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#ae2505fef6b05bb52b556d1fed14b60c8">getFontSize</a> () const</td></tr>
@@ -187,6 +203,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ba796a55775270b8061646a07519a3c inherit pub_methods_structlysa_1_1Resource"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1Resource.html#a7ba796a55775270b8061646a07519a3c">~Resource</a> () = default</td></tr>
 <tr class="separator:a7ba796a55775270b8061646a07519a3c inherit pub_methods_structlysa_1_1Resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a67e92b09e84e5408e087312a96f59334"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="structlysa_1_1Font_1_1TextRun.html">TextRun</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a67e92b09e84e5408e087312a96f59334">visualRuns</a> (const std::string &amp;text, <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> direction=TextDirection::AUTO)</td></tr>
+<tr class="separator:a67e92b09e84e5408e087312a96f59334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1faffbe58193e82aa5174a2240f223fb"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a1faffbe58193e82aa5174a2240f223fb">textBoundaries</a> (const std::string &amp;text)</td></tr>
+<tr class="separator:a1faffbe58193e82aa5174a2240f223fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8937e59b12ae0e8c046e75515b3ab2da"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Font.html#a8937e59b12ae0e8c046e75515b3ab2da">localeDirection</a> (const std::string &amp;locale)</td></tr>
+<tr class="separator:a8937e59b12ae0e8c046e75515b3ab2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_structlysa_1_1Resource"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structlysa_1_1Resource')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structlysa_1_1Resource.html">Resource</a></td></tr>
@@ -210,6 +235,53 @@ Additional Inherited Members</h2></td></tr>
 <p>Construct a font resource from a font file. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td><a class="el" href="classlysa_1_1Font.html">Font</a> file path, relative to the application working directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a231627189bedfe0feae21f09de1595a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Font </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; const char &gt;&#160;</td>
+          <td class="paramname"><em>fontData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>atlasMetadata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const char &gt;&#160;</td>
+          <td class="paramname"><em>atlasImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a font resource from data in memory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontData</td><td>Content of the TTF or OTF file. </td></tr>
+    <tr><td class="paramname">atlasMetadata</td><td>Content of the JSON atlas description generated by msdf-atlas-gen. </td></tr>
+    <tr><td class="paramname">atlasImage</td><td>Content of the PNG file holding the glyph atlas. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the font, used to identify the atlas image and in error messages. </td></tr>
   </table>
   </dd>
 </dl>
@@ -256,6 +328,33 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a73f47bd4780f8d0378602e690ba4a257"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structlysa_1_1Font_1_1Caret.html">Caret</a>&gt; caretPositions </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>TextDirection::AUTO</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns caret positions </p>
+
+</div>
+</div>
 <a class="anchor" id="ae4e1bfe04e6236cd35fcf8e268b76ee0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -779,6 +878,84 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a35dab83b08ba3098c5453867c265eb74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getSize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fontScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes the size on a ext. </p>
+
+</div>
+</div>
+<a class="anchor" id="aef7e650a22b9140815ff8e0ac6e9dfcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float2 getSize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fontScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes the size with an explicit Unicode paragraph direction. </p>
+
+</div>
+</div>
 <a class="anchor" id="af6308c4e9bee9d681ed54681d61178b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -825,6 +1002,31 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8937e59b12ae0e8c046e75515b3ab2da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a> localeDirection </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>locale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resolves a locale's default writing direction </p>
 
 </div>
 </div>
@@ -994,13 +1196,100 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aedd5aecacc9c38590ccc0855165781d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structlysa_1_1Font_1_1ShapedGlyph.html">ShapedGlyph</a>&gt; shape </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>TextDirection::AUTO</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Applies Unicode bidi ordering, script itemization and HarfBuzz shaping </p>
+
+</div>
+</div>
+<a class="anchor" id="a1faffbe58193e82aa5174a2240f223fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt;<a class="el" href="namespacelysa.html#a8f95e75e58492e87412191fabadd8ca8">uint32</a>&gt; textBoundaries </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns UTF-8 byte offsets of extended grapheme boundaries </p>
+
+</div>
+</div>
+<a class="anchor" id="a67e92b09e84e5408e087312a96f59334"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt;<a class="el" href="structlysa_1_1Font_1_1TextRun.html">TextRun</a>&gt; visualRuns </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a1227460955e8a4f0bb75e779c057da93">TextDirection</a>&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>TextDirection::AUTO</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Resolves Unicode bidi runs without changing the logical text </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.1.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Font.html">Font</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

@@ -68,6 +68,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysicsEngine.html',''); 
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classlysa_1_1PhysicsEngine-members.html">List of all members</a>  </div>
   <div class="headertitle">
     <div class="title">PhysicsEngine Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
@@ -92,6 +93,8 @@ $(document).ready(function(){initNavTree('classlysa_1_1PhysicsEngine.html',''); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af45ac1ef60869183493dc7733b02ec2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#af45ac1ef60869183493dc7733b02ec2c">PhysicsEngine</a> (const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;config)</td></tr>
+<tr class="separator:af45ac1ef60869183493dc7733b02ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3d067949cb3d44df1db9a6b06f0e8a0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classlysa_1_1PhysicsWorld.html">PhysicsWorld</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#ac3d067949cb3d44df1db9a6b06f0e8a0">createScene</a> (const DebugConfiguration &amp;debugConfig) = 0</td></tr>
 <tr class="separator:ac3d067949cb3d44df1db9a6b06f0e8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa485cfa3a022c5fc325568909f1f2dac"><td class="memItemLeft" align="right" valign="top">virtual PhysicsMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#aa485cfa3a022c5fc325568909f1f2dac">createMaterial</a> (float friction=0.5f, float restitution=0.0f) const = 0</td></tr>
@@ -109,8 +112,37 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae0645ad08062d573d18b8c8b7bcc6012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ce85ff2332b895b5d19c1b3b53c438"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacelysa.html#a769a94a48b5e0161e77c388a5fb42bed">PhysicsEngineType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a54ce85ff2332b895b5d19c1b3b53c438">getEngineType</a> ()</td></tr>
 <tr class="separator:a54ce85ff2332b895b5d19c1b3b53c438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a52be3d159b2b18df8385e6f93ce27706"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1PhysicsEngine.html#a52be3d159b2b18df8385e6f93ce27706">config</a></td></tr>
+<tr class="separator:a52be3d159b2b18df8385e6f93ce27706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af45ac1ef60869183493dc7733b02ec2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PhysicsEngine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad5258fde9a8908478782af5abb168500"></a>
 <div class="memitem">
 <div class="memproto">
@@ -318,13 +350,34 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a52be3d159b2b18df8385e6f93ce27706"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlysa_1_1PhysicsEngineConfiguration.html">PhysicsEngineConfiguration</a>&amp; config</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- Generated by DoxyPress 2.1.0 -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1PhysicsEngine.html">PhysicsEngine</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

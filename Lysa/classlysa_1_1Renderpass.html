@@ -135,10 +135,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5e53855481dad7a91a6ac0eafbf01725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a0138f87c75f518f8d57dfa9db5258a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a9a0138f87c75f518f8d57dfa9db5258a">initForScene</a> (vireo::GraphicPipelineConfiguration &amp;pipelineConfig, vireo::RenderingConfiguration &amp;renderingConfig, bool withStencil) const</td></tr>
 <tr class="separator:a9a0138f87c75f518f8d57dfa9db5258a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe480d668a238c2b81f7b7ce7431ef39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#afe480d668a238c2b81f7b7ce7431ef39">initRendering</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const std::shared_ptr&lt; vireo::GraphicPipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet)</td></tr>
-<tr class="separator:afe480d668a238c2b81f7b7ce7431ef39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec780a4f1804b5965ee7824244f39d31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#aec780a4f1804b5965ee7824244f39d31">initCompute</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const std::shared_ptr&lt; vireo::ComputePipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet)</td></tr>
-<tr class="separator:aec780a4f1804b5965ee7824244f39d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e0b084a6fc1d270d0339fc5450451d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a15e0b084a6fc1d270d0339fc5450451d">initRendering</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const std::shared_ptr&lt; vireo::GraphicPipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet, const std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt; &amp;globalResources)</td></tr>
+<tr class="separator:a15e0b084a6fc1d270d0339fc5450451d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92722c0bc0a22df46612a902b508da3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1Renderpass.html#a92722c0bc0a22df46612a902b508da3d">initCompute</a> (const std::shared_ptr&lt; vireo::CommandList &gt; &amp;commandList, const std::shared_ptr&lt; vireo::ComputePipeline &gt; &amp;pipeline, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;sceneDescriptorSet, const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;descriptorSet, const std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt; &amp;globalResources)</td></tr>
+<tr class="separator:a92722c0bc0a22df46612a902b508da3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -345,7 +345,7 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec780a4f1804b5965ee7824244f39d31"></a>
+<a class="anchor" id="a92722c0bc0a22df46612a902b508da3d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -374,7 +374,13 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;&#160;</td>
-          <td class="paramname"><em>descriptorSet</em>&#160;</td>
+          <td class="paramname"><em>descriptorSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>globalResources</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -431,7 +437,7 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe480d668a238c2b81f7b7ce7431ef39"></a>
+<a class="anchor" id="a15e0b084a6fc1d270d0339fc5450451d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -460,7 +466,13 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::shared_ptr&lt; vireo::DescriptorSet &gt; &amp;&#160;</td>
-          <td class="paramname"><em>descriptorSet</em>&#160;</td>
+          <td class="paramname"><em>descriptorSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>globalResources</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -676,7 +688,7 @@ Static Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1Renderpass.html">Renderpass</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

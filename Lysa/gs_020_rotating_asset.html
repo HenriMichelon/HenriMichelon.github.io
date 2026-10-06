@@ -111,11 +111,11 @@ A rotating crate</div></div>
 <tr>
 <th>Event </th><th>Payload </th><th>Rate  </th></tr>
 <tr>
-<td><code><a class="el" href="structlysa_1_1MainLoopEvent.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopEvent::PHYSICS_PROCESS</a></code> </td><td><code>double delta</code> (seconds) </td><td>Fixed, default 1/60 s per step (configurable via <code><a class="el" href="structlysa_1_1ContextConfiguration.html">lysa::ContextConfiguration</a></code>), fired multiple times per frame if needed </td></tr>
+<td><code><a class="el" href="structlysa_1_1MainLoopSignal.html#a2804eebd4dfaa07a52514c2ecff666b9" title="Fired multiple times per frame with the fixed delta time. ">lysa::MainLoopSignal::PHYSICS_PROCESS</a></code> </td><td><code>double delta</code> (seconds) </td><td>Fixed, default 1/60 s per step (configurable via <code><a class="el" href="structlysa_1_1ContextConfiguration.html">lysa::ContextConfiguration</a></code>), fired multiple times per frame if needed </td></tr>
 <tr>
-<td><code><a class="el" href="structlysa_1_1MainLoopEvent.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopEvent::PROCESS</a></code> </td><td><code>double alpha</code> (seconds) </td><td>Once per rendered frame, variable </td></tr>
+<td><code><a class="el" href="structlysa_1_1MainLoopSignal.html#af623856a5ae5b7ec9244d2396815fddd" title="Fired on time per frame after the physics with the remaining frame time. ">lysa::MainLoopSignal::PROCESS</a></code> </td><td><code>double alpha</code> (seconds) </td><td>Once per rendered frame, variable </td></tr>
 <tr>
-<td><code><a class="el" href="structlysa_1_1MainLoopEvent.html#a0a17b698f9af9e35bf140eb0edfe27f3" title="Fired just after the main loop exit, but before resources destruction&#39;s. ">lysa::MainLoopEvent::QUIT</a></code> </td><td>none </td><td>Once, just before resources are destroyed </td></tr>
+<td><code><a class="el" href="structlysa_1_1MainLoopSignal.html#a0a17b698f9af9e35bf140eb0edfe27f3" title="Fired just after the main loop exit, but before resources destruction&#39;s. ">lysa::MainLoopSignal::QUIT</a></code> </td><td>none </td><td>Once, just before resources are destroyed </td></tr>
 </table>
 <p><code>PHYSICS_PROCESS</code> uses a fixed timestep so that physics simulations remain deterministic regardless of frame rate. <code>PROCESS</code> receives the remaining fractional time and is where you advance game logic and submit the frame.</p>
 <h2>Source files</h2>
@@ -155,7 +155,7 @@ A rotating crate</div></div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="getting_started.html">Getting Started</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

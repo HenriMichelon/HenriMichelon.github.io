@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="DoxyPress 2.1.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lysa: EventManager Class Reference</title>
+<title>Lysa: EventManager&lt; Message &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,141 +66,191 @@ $(document).ready(function(){initNavTree('classlysa_1_1EventManager.html',''); i
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#typedefs">Protected Typedefs</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classlysa_1_1EventManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-    <div class="title">EventManager Class Reference</div>
+    <div class="title">EventManager&lt; Message &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>
   </div>
   <div class="clear-floats"></div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple event manager.</p>
-<p>Supports both C++ and Lua handlers. Events are queued via <a class="el" href="classlysa_1_1EventManager.html#a9725dc01db9979cb32b39329bc478b15">push</a> and delivered in FIFO order each frame. The C++ handlers are called before the Lua ones. </p>
+<div class="textblock"><h3>template&lt;typename Message&gt;<br />
+class lysa::EventManager&lt; Message &gt;</h3>
+
+<p>Shared handler identities, unsubscription and delivery for events and signals. </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlysa_1_1EventManager_1_1HandlerLists.html">HandlerLists</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9725dc01db9979cb32b39329bc478b15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a9725dc01db9979cb32b39329bc478b15">push</a> (const <a class="el" href="structlysa_1_1Event.html">Event</a> &amp;e)</td></tr>
-<tr class="separator:a9725dc01db9979cb32b39329bc478b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab2f478b9c0baf2378eedade0322c5ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#aab2f478b9c0baf2378eedade0322c5ca">subscribe</a> (const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;type, <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> id, <a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a> callback)</td></tr>
-<tr class="separator:aab2f478b9c0baf2378eedade0322c5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f55765afc6ea0bd6034ef3ed6fe5909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a8f55765afc6ea0bd6034ef3ed6fe5909">subscribe</a> (const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;type, const std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt; &amp;ids, <a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a> callback)</td></tr>
-<tr class="separator:a8f55765afc6ea0bd6034ef3ed6fe5909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a076e9be0c1c2627a11eda016807e3489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a076e9be0c1c2627a11eda016807e3489">subscribe</a> (const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;type, <a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a> callback)</td></tr>
-<tr class="separator:a076e9be0c1c2627a11eda016807e3489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c7a8fa610b0921504983648eaf9915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> id)</td></tr>
 <tr class="separator:a84c7a8fa610b0921504983648eaf9915"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f4c9df4a7174db91b4296496c96d04c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a5f4c9df4a7174db91b4296496c96d04c">fire</a> (<a class="el" href="structlysa_1_1Event.html">Event</a> &amp;event)</td></tr>
-<tr class="separator:a5f4c9df4a7174db91b4296496c96d04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74bcb4cf5eeb21342407b1d45c15b23d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a74bcb4cf5eeb21342407b1d45c15b23d">EventManager</a> (<a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a> reservedCapacity)</td></tr>
-<tr class="separator:a74bcb4cf5eeb21342407b1d45c15b23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6f7cfff424f94b0c62344041cf8bbe3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#ac6f7cfff424f94b0c62344041cf8bbe3">~EventManager</a> ()</td></tr>
-<tr class="separator:ac6f7cfff424f94b0c62344041cf8bbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6238f2391e79ce731b44b8d079b0fb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a5e6238f2391e79ce731b44b8d079b0fb">~EventManager</a> () = default</td></tr>
+<tr class="separator:a5e6238f2391e79ce731b44b8d079b0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedefs"></a>
+Protected Typedefs</h2></td></tr>
+<tr class="memitem:aa7ac517c4149e54a3fab4a279e381902"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902">Callback</a> = std::conditional_t&lt; std::is_same_v&lt; Message, <a class="el" href="structlysa_1_1Event.html">Event</a> &gt;, <a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a>, <a class="el" href="namespacelysa.html#a1970340740f5cfa0fc84f14f1fed9f95">SignalHandlerCallback</a> &gt;</td></tr>
+<tr class="separator:aa7ac517c4149e54a3fab4a279e381902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a9eb5caf4a05bbb18b0129b62d8952"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952">Handler</a> = std::conditional_t&lt; std::is_same_v&lt; Message, <a class="el" href="structlysa_1_1Event.html">Event</a> &gt;, <a class="el" href="structlysa_1_1EventHandler.html">EventHandler</a>, <a class="el" href="structlysa_1_1SignalHandler.html">SignalHandler</a> &gt;</td></tr>
+<tr class="separator:a10a9eb5caf4a05bbb18b0129b62d8952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa0fb3bc46cacedaede01c9de3740121d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#aa0fb3bc46cacedaede01c9de3740121d">EventManager</a> () = default</td></tr>
+<tr class="separator:aa0fb3bc46cacedaede01c9de3740121d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7c58d17cea830a7a23bc24c5578615"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952">Handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a8f7c58d17cea830a7a23bc24c5578615">createHandler</a> (<a class="el" href="classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902">Callback</a> callback)</td></tr>
+<tr class="separator:a8f7c58d17cea830a7a23bc24c5578615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac102cc215f2f4986027943faf774ab92"><td class="memTemplParams" colspan="2">template&lt;typename Lookup &gt; </td></tr>
+<tr class="memitem:ac102cc215f2f4986027943faf774ab92"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#ac102cc215f2f4986027943faf774ab92">dispatch</a> (Message &amp;message, const Lookup &amp;lookup)</td></tr>
+<tr class="separator:ac102cc215f2f4986027943faf774ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90534cb52fbc86a51dc30a149f9bfd5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a90534cb52fbc86a51dc30a149f9bfd5d">removeHandler</a> (<a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> id) = 0</td></tr>
+<tr class="separator:a90534cb52fbc86a51dc30a149f9bfd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1855aac95582ee902fa89649825a0f7f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1EventManager.html#a1855aac95582ee902fa89649825a0f7f">eraseHandler</a> (<a class="el" href="structlysa_1_1EventManager_1_1HandlerLists.html">HandlerLists</a> &amp;callbacks, <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> id)</td></tr>
+<tr class="separator:a1855aac95582ee902fa89649825a0f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a74bcb4cf5eeb21342407b1d45c15b23d"></a>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aa7ac517c4149e54a3fab4a279e381902"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">EventManager </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#a801d6a451a01953ef8cbae6feb6a3638">size_t</a>&#160;</td>
-          <td class="paramname"><em>reservedCapacity</em></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902">Callback</a> =  std::conditional_t&lt;std::is_same_v&lt;Message, <a class="el" href="structlysa_1_1Event.html">Event</a>&gt;, <a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a>, <a class="el" href="namespacelysa.html#a1970340740f5cfa0fc84f14f1fed9f95">SignalHandlerCallback</a>&gt;</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Creates an <a class="el" href="classlysa_1_1EventManager.html">EventManager</a> with an initial capacity for the event queue. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">reservedCapacity</td><td>The initial number of events to reserve space for. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a class="anchor" id="ac6f7cfff424f94b0c62344041cf8bbe3"></a>
+<a class="anchor" id="a10a9eb5caf4a05bbb18b0129b62d8952"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">~EventManager </td>
+          <td class="memname">using <a class="el" href="classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952">Handler</a> =  std::conditional_t&lt;std::is_same_v&lt;Message, <a class="el" href="structlysa_1_1Event.html">Event</a>&gt;, <a class="el" href="structlysa_1_1EventHandler.html">EventHandler</a>, <a class="el" href="structlysa_1_1SignalHandler.html">SignalHandler</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5e6238f2391e79ce731b44b8d079b0fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~EventManager </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa0fb3bc46cacedaede01c9de3740121d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EventManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5f4c9df4a7174db91b4296496c96d04c"></a>
+<a class="anchor" id="a8f7c58d17cea830a7a23bc24c5578615"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fire </td>
+          <td class="memname"><a class="el" href="classlysa_1_1EventManager.html#a10a9eb5caf4a05bbb18b0129b62d8952">Handler</a> createHandler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlysa_1_1Event.html">Event</a> &amp;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classlysa_1_1EventManager.html#aa7ac517c4149e54a3fab4a279e381902">Callback</a>&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Immediately deliver an event to all interested handlers. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td>The event to fire. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a class="anchor" id="a9725dc01db9979cb32b39329bc478b15"></a>
+<a class="anchor" id="ac102cc215f2f4986027943faf774ab92"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void push </td>
+          <td class="memname">void dispatch </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlysa_1_1Event.html">Event</a> &amp;&#160;</td>
-          <td class="paramname"><em>e</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enqueue an event to be delivered on next processing. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">e</td><td>The event to push into the queue. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a8f55765afc6ea0bd6034ef3ed6fe5909"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> subscribe </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">Message &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ids</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
+          <td class="paramtype">const Lookup &amp;&#160;</td>
+          <td class="paramname"><em>lookup</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,72 +258,33 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Subscribe a C++ handler to a given event type and multiple target ids. All ids share the same handler id; a single <a class="el" href="classlysa_1_1EventManager.html#a84c7a8fa610b0921504983648eaf9915">unsubscribe()</a> call removes all of them. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The event kind to listen to. </td></tr>
-    <tr><td class="paramname">ids</td><td>The target ids to filter on. </td></tr>
-    <tr><td class="paramname">callback</td><td>Reference to a callable receiving the event. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
-<a class="anchor" id="a076e9be0c1c2627a11eda016807e3489"></a>
+<a class="anchor" id="a1855aac95582ee902fa89649825a0f7f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> subscribe </td>
+          <td class="memname">static void eraseHandler </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Subscribe a C++ handler to a given global event type. Subscribers are called in order of subscription. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The event kind to listen to. </td></tr>
-    <tr><td class="paramname">callback</td><td>Reference to a callable receiving the event. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aab2f478b9c0baf2378eedade0322c5ca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a> subscribe </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacelysa.html#a614b66e89ce0ef8f63998dc3155111f9">event_type</a> &amp;&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype"><a class="el" href="structlysa_1_1EventManager_1_1HandlerLists.html">HandlerLists</a> &amp;&#160;</td>
+          <td class="paramname"><em>callbacks</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelysa.html#aac3aaea5dbfbbf354c81853b4eede68e">EventHandlerCallback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,15 +292,36 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Subscribe a C++ handler to a given event type and target id. Subscribers are called in order of subscription. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The event kind to listen to. </td></tr>
-    <tr><td class="paramname">id</td><td>The specific target id to filter on. </td></tr>
-    <tr><td class="paramname">callback</td><td>Reference to a callable receiving the event. </td></tr>
-  </table>
-  </dd>
-</dl>
+
+</div>
+</div>
+<a class="anchor" id="a90534cb52fbc86a51dc30a149f9bfd5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void removeHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacelysa.html#a8fc30a1b85f70d554d4f0c5d1249ab88">unique_id</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -306,12 +338,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unsubscribe a C++ handler to a given global event type </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>Previously registered handler </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Remove every registration associated with a handler identifier. </p>
 
 </div>
 </div>
@@ -321,7 +348,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1EventManager.html">EventManager</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>

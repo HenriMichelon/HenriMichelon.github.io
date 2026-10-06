@@ -58,8 +58,11 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:lua_key"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_key">key</a></td></tr>
-<tr class="memdesc:lua_key"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key code (see lysa.Key).<br /></td></tr>
+<tr class="memdesc:lua_key"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key code (see lysa.Key), position-based (QWERTY layout).<br /></td></tr>
 <tr class="separator:lua_key"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:lua_value"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_value">value</a></td></tr>
+<tr class="memdesc:lua_value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character produced by the key on the active keyboard layout (value-based), e.g. "z". Empty if not printable.<br /></td></tr>
+<tr class="separator:lua_value"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:lua_pressed"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#lua_pressed">pressed</a></td></tr>
 <tr class="memdesc:lua_pressed"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the key was pressed, false if released.<br /></td></tr>
 <tr class="separator:lua_pressed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -77,7 +80,15 @@ Properties</h2></td></tr>
     <td class="memname">integer key</td>
   </tr></table>
 </div><div class="memdoc">
-<p>Key code (see lysa.Key).</p>
+<p>Key code (see lysa.Key), position-based (QWERTY layout).</p>
+</div></div>
+<a class="anchor" id="lua_value"></a>
+<div class="memitem"><div class="memproto">
+  <table class="memname"><tr>
+    <td class="memname">string value</td>
+  </tr></table>
+</div><div class="memdoc">
+<p>Character produced by the key on the active keyboard layout (value-based), e.g. "z". Empty if not printable.</p>
 </div></div>
 <a class="anchor" id="lua_pressed"></a>
 <div class="memitem"><div class="memproto">
@@ -109,7 +120,7 @@ Properties</h2></td></tr>
     <ul>
             <li class="navelem"><a class="el" href="namespacelysa_lua.html">lysa</a></li>
     <li class="navelem"><a class="el" href="InputEventKey_lua.html">InputEventKey</a></li>
-        <li class="footer">Generated on Mon Aug 03 2026 22:41:19 for Lysa &nbsp; by
+        <li class="footer">Generated on Tue Oct 06 2026 20:19:06 for Lysa &nbsp; by
             gen_lua_docs.py</li>
     </ul>
 </div>

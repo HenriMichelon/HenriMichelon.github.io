@@ -76,8 +76,7 @@ $(document).ready(function(){initNavTree('classlysa_1_1GlobalDescriptorSet.html'
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Global descriptor set for GPU-ready shared resources.</p>
-<p>This class manages a descriptor set that provides access to global resources such as materials, mesh surfaces, and textures, which are shared across multiple pipelines. </p>
+<div class="textblock"><p>Global GPU resources </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -91,6 +90,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8e6fab1589fa8ebd295842293b5a8634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
 <tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831fb4ff19f376345989fbd0e08d9209"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#a831fb4ff19f376345989fbd0e08d9209">capture</a> ()</td></tr>
+<tr class="separator:a831fb4ff19f376345989fbd0e08d9209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca32b2cfc6e89a29a9051963fae24a85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::weak_ptr&lt; const void &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#aca32b2cfc6e89a29a9051963fae24a85">retirementGuards</a> () const</td></tr>
+<tr class="separator:aca32b2cfc6e89a29a9051963fae24a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ca7b0e2dafe8aaab09e09bcde97c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#a31ca7b0e2dafe8aaab09e09bcde97c79">trackFrame</a> (const std::shared_ptr&lt; vireo::Fence &gt; &amp;fence, const std::vector&lt; std::shared_ptr&lt; vireo::CommandList &gt;&gt; &amp;commands)</td></tr>
+<tr class="separator:a31ca7b0e2dafe8aaab09e09bcde97c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac766c5df1e59fa88f785ab04b905ffa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#ac766c5df1e59fa88f785ab04b905ffa0">collect</a> ()</td></tr>
+<tr class="separator:ac766c5df1e59fa88f785ab04b905ffa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7be8ca25c653b370e41c6929ae7525"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html#a0f7be8ca25c653b370e41c6929ae7525">releaseFrame</a> (const std::shared_ptr&lt; vireo::Fence &gt; &amp;fence)</td></tr>
+<tr class="separator:a0f7be8ca25c653b370e41c6929ae7525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -118,7 +127,6 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a new <a class="el" href="classlysa_1_1GlobalDescriptorSet.html">GlobalDescriptorSet</a>. </p>
 
 </div>
 </div>
@@ -134,11 +142,42 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destroys the <a class="el" href="classlysa_1_1GlobalDescriptorSet.html">GlobalDescriptorSet</a>. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a831fb4ff19f376345989fbd0e08d9209"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="structlysa_1_1GlobalResourcesGeneration.html">GlobalResourcesGeneration</a>&gt; capture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Capture a snapshot </p>
+
+</div>
+</div>
+<a class="anchor" id="ac766c5df1e59fa88f785ab04b905ffa0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void collect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clean completed command lists (including frames of suspended targets). </p>
+
+</div>
+</div>
 <a class="anchor" id="a8e6fab1589fa8ebd295842293b5a8634"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +191,6 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the global descriptor set layout. </p>
 
 </div>
 </div>
@@ -169,7 +207,66 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the global descriptor set that exposes resources to shaders. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f7be8ca25c653b370e41c6929ae7525"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void releaseFrame </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Fence &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Called after acquire() waits for a slot before its fence/allocator is reused. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca32b2cfc6e89a29a9051963fae24a85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::weak_ptr&lt;const void&gt; &gt; retirementGuards </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>GPU users that must finish before an allocation or resource ID can be reused. </p>
+
+</div>
+</div>
+<a class="anchor" id="a31ca7b0e2dafe8aaab09e09bcde97c79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trackFrame </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; vireo::Fence &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::shared_ptr&lt; vireo::CommandList &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>commands</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Track the final fence and all command lists of one target frame. </p>
 
 </div>
 </div>
@@ -185,7 +282,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Updates the global descriptor set if needed. </p>
+<p>Publish a new immutable generation when buffer handles or image slots change. </p>
 
 </div>
 </div>
@@ -207,7 +304,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding index for the textures array/sampled images. </p>
 
 </div>
 </div>
@@ -228,7 +324,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding index for the materials buffer. </p>
 
 </div>
 </div>
@@ -249,7 +344,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding index for the meshes buffer. </p>
 
 </div>
 </div>
@@ -270,7 +364,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding index for the shader material parameters SSBO. </p>
 
 </div>
 </div>
@@ -291,7 +384,6 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Descriptor binding index for the meshes surfaces buffer. </p>
 
 </div>
 </div>
@@ -301,7 +393,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelysa.html">lysa</a></li><li class="navelem"><a class="el" href="classlysa_1_1GlobalDescriptorSet.html">GlobalDescriptorSet</a></li>
-    <li class="footer">Generated on dim. août 9 2026 10:57:48 for Lysa &nbsp; by
+    <li class="footer">Generated on mar. oct. 6 2026 20:17:14 for Lysa &nbsp; by
     <a href="https://www.copperspice.com/documentation-doxypress.html">
     <img class="footer" src="doxypress.png" alt="DoxyPress"/></a> 2.1.0 </li>
   </ul>
